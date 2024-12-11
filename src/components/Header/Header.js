@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
-import BarsIcon from '../icons/BarsIcon/BarsIcon'
+import BarsIcon from '../Icons/BarsIcon/BarsIcon'
 
 const Header = () => {
   const [context, dispatch] = useContext(Context)
