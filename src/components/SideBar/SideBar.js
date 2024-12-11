@@ -8,12 +8,12 @@ import server from '@sswahn/server'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 const Camera = lazy(() => import('../Camera/Camera'))
-import BarsIcon from '../icons/BarsIcon/BarsIcon'
-import CameraIcon from '../icons/CameraIcon/CameraIcon'
-import BellIcon from '../icons/BellIcon/BellIcon'
-import UserPlusIcon from '../icons/UserPlusIcon/UserPlusIcon'
-import RightFromBracketIcon from '../icons/RightFromBracketIcon/RightFromBracketIcon'
-import RightToBracketIcon from '../icons/RightToBracketIcon/RightToBracketIcon'
+import BarsIcon from '../Icons/BarsIcon/BarsIcon'
+import CameraIcon from '../Icons/CameraIcon/CameraIcon'
+import BellIcon from '../Icons/BellIcon/BellIcon'
+import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon'
+import RightFromBracketIcon from '../Icons/RightFromBracketIcon/RightFromBracketIcon'
+import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 
 const SideBar = () => {
   const [context, dispatch] = useContext(Context)
