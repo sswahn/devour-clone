@@ -9,6 +9,7 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import SubmitButton from '../SubmitButton/SubmitButton'
 import ArrowLeftIcon from '../icons/ArrowLeftIcon/ArrowLeftIcon'
 
+
 export default function SubmitPost({ modalRef }) {
   const [location, setLocation] = useState('')
   const [options, setOptions] = useState([])
