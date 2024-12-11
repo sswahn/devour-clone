@@ -1,11 +1,11 @@
 import { useContext, useState, useEffect, useRef, memo } from 'react'
 import { Context } from '../../Provider'
-import ChevronLeftIcon from '../icons/ChevronLeftIcon/ChevronLeftIcon'
-import ChevronRightIcon from '../icons/ChevronRightIcon/ChevronRightIcon'
-import PlayIcon from '../icons/PlayIcon/PlayIcon'
-import PauseIcon from '../icons/PauseIcon/PauseIcon'
-import VolumeHighIcon from '../icons/VolumeHighIcon/VolumeHighIcon'
-import VolumeXIcon from '../icons/VolumeXIcon/VolumeXIcon'
+import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
+import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
+import PlayIcon from '../Icons/PlayIcon/PlayIcon'
+import PauseIcon from '../Icons/PauseIcon/PauseIcon'
+import VolumeHighIcon from '../Icons/VolumeHighIcon/VolumeHighIcon'
+import VolumeXIcon from '../Icons/VolumeXIcon/VolumeXIcon'
 
 const Video = memo(({ index, setIndex, videoURLs, videoEditorStyles }) => {    // try using context for setting index to remove this prop dependency?
   const [context, dispatch] = useContext(Context)
