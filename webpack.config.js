@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(process.cwd(), 'build'),
-    publicPath: '/',
+    publicPath: '/devour-clone/',
   },
     
   module: {
