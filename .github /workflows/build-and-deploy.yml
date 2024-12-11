@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: webpack --config webpack.config.js
 
       - name: Verify Build Output
         run: ls -la ./build
