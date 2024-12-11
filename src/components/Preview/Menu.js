@@ -5,11 +5,11 @@ import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 import MediaEditor from '../MediaEditor/MediaEditor'
 import CaptionInput from '../CaptionInput/CaptionInput'
-import CircleXIcon from '../icons/CircleXIcon/CircleXIcon'
-import CircleCheckIcon from '../icons/CircleCheckIcon/CircleCheckIcon'
-import CommentIcon from '../icons/CommentIcon/CommentIcon'
-import PenToSquareIcon from '../icons/PenToSquareIcon/PenToSquareIcon'
-import SlidersIcon from '../icons/SlidersIcon/SlidersIcon'
+import CircleXIcon from '../Icons/CircleXIcon/CircleXIcon'
+import CircleCheckIcon from '../Icons/CircleCheckIcon/CircleCheckIcon'
+import CommentIcon from '../Icons/CommentIcon/CommentIcon'
+import PenToSquareIcon from '../Icons/PenToSquareIcon/PenToSquareIcon'
+import SlidersIcon from '../Icons/SlidersIcon/SlidersIcon'
 
 export default function Menu({ type, index, setIndex, closeModal }) {
   const [context, dispatch] = useContext(Context)
