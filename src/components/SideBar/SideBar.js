@@ -1,7 +1,7 @@
 import { useContext, lazy } from 'react'
 import { Context } from '../../Provider'
 import { config } from '../../config'
-import { Search, Sidebar } from '@sswahn/components' // add Modal here
+import { Search, Sidebar } from '@sswahn/components'
 import { Avatar } from '@sswahn/social'
 import { navigateTo } from '@sswahn/router'
 import server from '@sswahn/server'
