@@ -5,7 +5,6 @@ import AppRouter from './AppRouter'
 import Header from './components/Header/Header'
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
 const SideBar = lazy(() => import('./components/SideBar/SideBar'))
-const LoginSystem = lazy(() => import('./components/LoginSystem/LoginSystem'))
 import './index.css'
 
 export default () =>
@@ -16,7 +15,6 @@ export default () =>
         <Router />
         <Suspense fallback={<LoadingSpinner />}>
           <SideBar />
-          <LoginSystem />
         </Suspense>
       </Provider> 
     </ErrorBoundary> 
