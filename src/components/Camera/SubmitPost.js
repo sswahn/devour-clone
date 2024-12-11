@@ -7,7 +7,7 @@ import database from '@sswahn/database'
 //import { debounce } from '../../utilities/Debounce'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import SubmitButton from '../SubmitButton/SubmitButton'
-import ArrowLeftIcon from '../icons/ArrowLeftIcon/ArrowLeftIcon'
+import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 
 
 export default function SubmitPost({ modalRef }) {
