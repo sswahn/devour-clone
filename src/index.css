@@ -1,0 +1,184 @@
+/* css global classes */
+
+:root {
+  --dark-mode-background: black;
+  --dark-mode-color: white;
+
+  --light-mode-background: white;
+  --light-mode-color: black;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-mode-background);
+    color: var(--dark-mode-color);
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--light-mode-background);
+    color: var(--light-mode-color);
+  }
+}
+
+*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  background: none;
+  position: fixed;
+  width: 100%;
+}
+
+.icon-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  height: 45px;
+  position: relative;
+  width: 45px; 
+}
+
+.icon-btn:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-btn {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 22px; 
+  height: 45px;
+  margin: 6px 8px 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 45px; 
+}
+
+.sidebar-btn:hover .tooltip,
+.icon-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  background-color: #575a62;
+  border-radius: 5px;
+  bottom: -30px;
+  font-size: 12px;
+  left: 0px;
+  opacity: 0;
+  padding: 4px 8px;
+  position: absolute;
+  transition: opacity 0.3s, visibility 0.3s;
+  visibility: hidden;
+}
+
+.sidebar {
+  /* need to get overlay in the lib going */
+}
+
+.search {
+  border-radius: 3px;
+  float: left;
+  font-size: 15px;
+  margin: 15px 0 10px 15px;
+  padding: 4px 8px;
+  width: 425px;
+}
+
+.sidebar-avatar {
+  font-size: 10px;
+}
+
+.navigation {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 0 20px 20px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.navigation:hover {
+  background-color: #faf9f6;
+}
+
+.navigation:first-of-type {
+  border-top: 1px solid black;
+  margin-top: 5px;
+}
+
+.navigation span {
+  margin-left: 30px;
+}
+
+.notifications-badge {
+  background-color: darkorange;
+  border-radius: 50%;
+  height: 8px;
+  left: 30px;
+  position: absolute;
+  top: 15px;
+  width: 8px;
+}
+
+.modal {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px !important;
+  width: 500px;
+}
+
+.auth-form {
+  border: 0 !important;
+}
+
+
+@media (max-width: 500px) {
+  .modal {
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
