@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from 'react'
 import { Context } from '../../Provider'
-import ChevronLeftIcon from '../icons/ChevronLeftIcon/ChevronLeftIcon'
-import ChevronRightIcon from '../icons/ChevronRightIcon/ChevronRightIcon'
+import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
+import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
 
 export default function Images({ index, setIndex, imageURLs, imageEditorStyles }) {
   const [context, dispatch] = useContext(Context)
