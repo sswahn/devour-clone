@@ -175,10 +175,12 @@ html, body {
   background-color: #faf9f6;
 }
 
-.navigation:first-of-type {      /* should be a container for the buttons with this styling, not on the button itself*/
+/* should be a container for the buttons with this styling, not on the button itself 
+.navigation:first-of-type {       
   border-top: 1px solid black;
   margin-top: 5px;
 }
+*/
 
 .navigation span {
   margin-left: 30px;
