@@ -18,6 +18,11 @@
   margin: 26.5px auto;
   position: static !important;
   width: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*!*****************************************************************!*\
