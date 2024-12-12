@@ -153,7 +153,7 @@ const Camera = () => {
   }
   
   useEffect(() => {
-    if (!context.stream && !videoRef.current) {
+    if (!videoRef.current && !context.stream) {
       startCamera()
       loadFromStorage()      // <== load media from storage
     }
