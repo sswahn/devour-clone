@@ -35,6 +35,9 @@ const Camera = () => {
   const startCamera = async () => {
     try {
       const stream = await camera.on()
+      
+      console.log('stream: ', stream)
+      
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
     } catch (error) {
