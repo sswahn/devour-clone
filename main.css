@@ -185,7 +185,8 @@ html, body {
 
 .sidebar-btn-container {
   border-top: 1px solid black;
-
+  margin-top: 10px;
+  padding-top: 0;
 }
 
 .navigation span {
