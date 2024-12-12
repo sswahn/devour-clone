@@ -41,6 +41,14 @@ const SideBar = () => {
     //context.dialog.showModal()
     setModal({ isOpen: true, content: <Camera /> })
   }
+
+  const handleCloseCamera = () => {
+    setModal({ isOpen: false, content: <></> })
+  }
+
+  const handleCloseModal = () => {
+    handleCloseCamera()
+  }
   
   const handleNotifications = event => {
     
