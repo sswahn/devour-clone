@@ -1,7 +1,7 @@
 import { useContext, lazy } from 'react'
 import { Context } from '../../Provider'
 import { config } from '../../config'
-import { Search, Sidebar } from '@sswahn/components'
+import { Modal, Search, Sidebar } from '@sswahn/components'
 import { Avatar } from '@sswahn/social'
 import { navigateTo } from '@sswahn/router'
 import server from '@sswahn/server'
@@ -110,6 +110,9 @@ const SideBar = () => {
           </button>
         </div>
       )}
+      <Modal className="custom-modal" open={isOpen} onClose={handleCloseModal}>
+        {/* state.modalContent */}
+      </Modal>
     </Sidebar>
   )
 }
