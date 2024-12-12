@@ -155,8 +155,6 @@ html, body {
 
 .navigation span {
   margin-left: 30px;
-
-  border: 1px dashed red;
 }
 
 .notifications-badge {
