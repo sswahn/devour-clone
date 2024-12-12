@@ -41,7 +41,7 @@ const Camera = () => {
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
     } catch (error) {
-      console.error('Error accessing camera.')
+      console.error('Error accessing camera.' + error)
     }
   }
   
