@@ -145,10 +145,11 @@ html, body {
 
 .sidebar-avatar {
 
-  border: 1px dashed orange;
+  border: 1px dashed red;
   
   font-size: 10px;
   padding: 0;
+  margin: 0;
 }
 
 .navigation {  
