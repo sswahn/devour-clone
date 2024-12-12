@@ -77,7 +77,7 @@ const SideBar = () => {
   return (
     <Sidebar className="sidebar" open={context.sidebar} onClose={handleCloseSidebar}>
       <nav>
-        <div>
+        <div className="sidebar-header">
           <Search className="search" placeholder="Search" onChange={handleSearch} />
           <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
             <BarsIcon />
