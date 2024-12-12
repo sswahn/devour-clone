@@ -77,11 +77,13 @@ const SideBar = () => {
   return (
     <Sidebar className="sidebar" open={context.sidebar} onClose={handleCloseSidebar}>
       <nav>
-        <Search className="search" placeholder="Search" onChange={handleSearch} />
-        <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
-          <BarsIcon />
-          <div className="tooltip" role="tooltip">Menu</div>
-        </button>
+        <div>
+          <Search className="search" placeholder="Search" onChange={handleSearch} />
+          <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
+            <BarsIcon />
+            <div className="tooltip" role="tooltip">Menu</div>
+          </button>
+        </div>
         {!context.session ? (
           <div className="sidebar-btn-container">
             <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
