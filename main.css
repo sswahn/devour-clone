@@ -165,23 +165,27 @@ html, body {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   width: 100%;
-
-
-  
-  border: 1px dashed red;
 }
 
 .navigation:hover {
   background-color: #faf9f6;
 }
 
-.navigation:first-of-type {
+.navigation:first-of-type {      /* should be a container for the buttons with this styling, not on the button itself*/
   border-top: 1px solid black;
   margin-top: 5px;
 }
 
+
+.navigation:first-child {
+  border: 1px dashed red;
+}
+
+
 .navigation span {
   margin-left: 30px;
+
+  border: 1px dashed red;
 }
 
 .notifications-badge {
