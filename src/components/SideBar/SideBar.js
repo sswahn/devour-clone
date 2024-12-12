@@ -15,26 +15,6 @@ import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon'
 import RightFromBracketIcon from '../Icons/RightFromBracketIcon/RightFromBracketIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 
-const UserIcon = ({ size }) => {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" height={size || '40px'} viewBox="0 0 512 512" role="img" aria-label="User Icon">
-      {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
-      <path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/>
-    </svg>
-  )
-}
-
-const TestAvatar = ({ className, image, username, onClick, size }) => {
-  return (
-    <div className={`${className || ''}`} onClick={onClick} aria-label={`${username}'s avatar`}>
-      {image 
-        ? <img src={image} alt={`${username}'s avatar`} width={size || '40px'} height={size || '40px'} />
-        : <UserIcon size={size} />
-      }
-    </div>
-  )
-}
-
 const SideBar = () => {
   const [context, dispatch] = useContext(Context)
   const [camera, setCamera] = useState({ isOpen: false, content: <></> })
@@ -107,8 +87,6 @@ const SideBar = () => {
         <div>
           <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
             <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="20px" />
-            <TestAvatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="20px" />
-        
             <span>{context.user.username || 'sswahn'}</span>
           </button>
           <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
