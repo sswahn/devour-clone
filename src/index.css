@@ -118,7 +118,7 @@ html, body {
   width: 425px;
 }
 
-.sidebar-avatar {
+.sidebar-avatar { /* trying to remove the space above and below the Avatar */
 
   border: 1px dashed red;
   
