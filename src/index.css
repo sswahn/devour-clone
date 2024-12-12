@@ -123,6 +123,7 @@ html, body {
   border: 1px dashed orange;
   
   font-size: 10px;
+  padding: 0;
 }
 
 .navigation {  
@@ -150,12 +151,6 @@ html, body {
   border-top: 1px solid black;
   margin-top: 5px;
 }
-
-
-.navigation:first-child {
-  border: 1px dashed red;
-}
-
 
 .navigation span {
   margin-left: 30px;
