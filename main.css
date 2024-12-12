@@ -144,10 +144,16 @@ html, body {
 }
 
 .sidebar-avatar {
+
+  border: 1px dashed orange;
+  
   font-size: 10px;
 }
 
 .navigation {
+
+  border: 1px dashed red;
+  
   background: none;
   border: 0;
   border-bottom: 1px solid black;
