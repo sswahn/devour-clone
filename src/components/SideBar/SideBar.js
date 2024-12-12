@@ -39,7 +39,7 @@ const SideBar = () => {
   const handleOpenCamera = event => {
     dispatch({ type: 'sidebar', payload: false })
     //context.dialog.showModal()
-    setModal({ isOpen: true, content: <Camera /> })
+    setCamera({ isOpen: true, content: <Camera /> })
   }
 
   const handleCloseCamera = () => {
