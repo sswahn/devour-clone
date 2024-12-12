@@ -37,6 +37,8 @@ const Camera = () => {
       const stream = await camera.on()
       
       console.log('stream: ', stream)
+
+      console.log('videoRef.current: ', videoRef.current)
       
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
