@@ -83,7 +83,7 @@ const SideBar = () => {
         <BarsIcon />
         <div className="tooltip" role="tooltip">Menu</div>
       </button>
-      {context.session ? (
+      {!context.session ? (
         <div>
           <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
             <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="20px" />
