@@ -169,6 +169,11 @@ html, body {
   width: 500px;
 }
 
+.camera-modal {
+  height: 100%;
+  width: 100%;
+}
+
 .auth-form {
   border: 0 !important;
 }
