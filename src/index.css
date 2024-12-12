@@ -125,10 +125,7 @@ html, body {
   font-size: 10px;
 }
 
-.navigation {
-
-  border: 1px dashed red;
-  
+.navigation {  
   background: none;
   border: 0;
   border-bottom: 1px solid black;
@@ -143,6 +140,10 @@ html, body {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   width: 100%;
+
+
+  
+  border: 1px dashed red;
 }
 
 .navigation:hover {
