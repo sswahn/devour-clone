@@ -185,6 +185,7 @@ html, body {
 
 .sidebar-btn-container {
   border-top: 1px solid black;
+  clear: both;
   margin-top: 12px;
   padding-top: 0;
 }
