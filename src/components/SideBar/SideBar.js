@@ -1,4 +1,4 @@
-import { useContext, lazy } from 'react'
+import { useContext, useState, lazy } from 'react'
 import { Context } from '../../Provider'
 import { config } from '../../config'
 import { Modal, Search, Sidebar } from '@sswahn/components'
@@ -17,6 +17,7 @@ import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 
 const SideBar = () => {
   const [context, dispatch] = useContext(Context)
+  const [modal, setModal] = useState({ isOpen: false, content: <></> })
   const db = database()
   
   const handleSidebar = event => {
@@ -38,7 +39,7 @@ const SideBar = () => {
   const handleOpenCamera = event => {
     dispatch({ type: 'sidebar', payload: false })
     //context.dialog.showModal()
-    dispatch({ type: 'modal', payload: <Camera /> })
+    setModal({ isOpen: true, content: <Camera /> })
   }
   
   const handleNotifications = event => {
@@ -110,8 +111,8 @@ const SideBar = () => {
           </button>
         </div>
       )}
-      <Modal className="custom-modal" open={isOpen} onClose={handleCloseModal}>
-        {/* state.modalContent */}
+      <Modal className="custom-modal" open={modal.isOpen} onClose={handleCloseModal}>
+        {modal.content}
       </Modal>
     </Sidebar>
   )
