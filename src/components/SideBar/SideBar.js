@@ -17,7 +17,7 @@ import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 
 const SideBar = () => {
   const [context, dispatch] = useContext(Context)
-  const [modal, setModal] = useState({ isOpen: false, content: <></> })
+  const [camera, setCamera] = useState({ isOpen: false, content: <></> })
   const db = database()
   
   const handleSidebar = event => {
@@ -43,11 +43,7 @@ const SideBar = () => {
   }
 
   const handleCloseCamera = () => {
-    setModal({ isOpen: false, content: <></> })
-  }
-
-  const handleCloseModal = () => {
-    handleCloseCamera()
+    setCamera({ isOpen: false, content: <></> })
   }
   
   const handleNotifications = event => {
@@ -119,8 +115,8 @@ const SideBar = () => {
           </button>
         </div>
       )}
-      <Modal className="custom-modal" open={modal.isOpen} onClose={handleCloseModal}>
-        {modal.content}
+      <Modal className="camera-modal" open={camera.isOpen} onClose={handleCloseCamera}>
+        {camera.content}
       </Modal>
     </Sidebar>
   )
