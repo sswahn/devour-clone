@@ -180,12 +180,6 @@ html, body {
   margin-left: 30px;
 }
 
-.navigation span:first-of-type {
-  padding-top: 2px;
-
-  border: 1px dashed red;
-}
-
 .notifications-badge {
   background-color: darkorange;
   border-radius: 50%;
