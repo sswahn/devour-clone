@@ -118,11 +118,9 @@ html, body {
   width: 425px;
 }
 
-.sidebar-avatar { /* trying to remove the space above and below the Avatar */
-
-  border: 1px dashed red;
-  
-  font-size: inherit !important; /* originally 10px*/
+.sidebar-avatar {
+  /* these overrides might need to be changed, if sswahn/social css changes */
+  font-size: inherit !important; 
   padding: 0 !important;
   position: static !important;
 }
