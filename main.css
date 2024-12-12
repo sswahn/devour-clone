@@ -150,6 +150,10 @@ html, body {
   position: static !important;
 }
 
+.sidebar-user {
+  padding-top: 3px;
+}
+
 .navigation {  
   background: none;
   border: 0;
