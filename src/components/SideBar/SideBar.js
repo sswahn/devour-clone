@@ -87,7 +87,7 @@ const SideBar = () => {
         <div>
           <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
             <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="20px" />
-            <span style={{paddingTop: '3px'}}>{context.user.username || 'sswahn'}</span>
+            <span className="sidebar-user">{context.user.username || 'sswahn'}</span>
           </button>
           <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
             <CameraIcon />
