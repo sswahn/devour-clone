@@ -124,7 +124,7 @@ html, body {
   
   font-size: 0px; /* originally 10px*/
   padding: 0 !important;
-
+  position: static !important;
 }
 
 .navigation {  
