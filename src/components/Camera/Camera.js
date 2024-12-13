@@ -153,9 +153,7 @@ const Camera = () => {
   }
   
   useEffect(() => {
-    if (videoRef.current !== null && !context.stream) {
-      console.log('videoRef.current !== null: ', videoRef.current !== null)
-      console.log('videoRef.current inside null condition: ', videoRef.current)
+    if (!context.stream) {
       startCamera()
       loadFromStorage()      // <== load media from storage
     }
@@ -185,7 +183,7 @@ const Camera = () => {
 
   return (
     <div className="card" aria-label="camera viewport">
-      {!context.stream ?  <LoadingSpinner /> : (
+      
         <>
           <div className="card-header">
             <button className="camera-light" onClick={handleTurnOnLight} type="button" aria-label="camera light">
@@ -222,7 +220,7 @@ const Camera = () => {
             </div>
           </div>
         </>
-      )}
+      
     </div>
   )
 }
