@@ -202,6 +202,250 @@ html, body {
 }
 
 
+/* Card */
+
+.card {
+  max-width: 500px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.card-header {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  height: 60px;
+  left: 50%;
+  max-width: 500px;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 9999;
+}
+
+.card-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.card-actions {
+  bottom: 0; 
+  left: 0; 
+  padding: 0; 
+  position: absolute; 
+  width: 100%;
+}
+
+.camera-light {
+  background: none;
+  border: 0;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 9999;
+}
+
+.camera { 
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.camera-button-container { 
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  margin: 0 auto 25px auto;
+  padding: 10px;
+  width: 78px;
+}
+
+.camera-button {
+  background-color: #e5e4e2;
+  border: 3px solid white;
+  border-radius: 50px;
+  color: white;
+  height: 56px;
+  padding: 0 26px; 
+}
+
+.camera-button:hover {
+  background-color: #f2f3f4;
+}
+
+.camera-navigation {
+  background: none; 
+  border-radius: 10px; 
+  bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  height: 250px; 
+  justify-content: space-between; 
+  padding: 20px 0; 
+  position: absolute; 
+  right: 10px; 
+  width: 50px; 
+  z-index: 9999;
+}
+
+.video-mute {
+  bottom: 20px;
+  left: 10px;
+  padding: 5px 10px; 
+  position: absolute;
+  z-index: 9999;
+}
+
+.video-timer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white; 
+  font-size: 24px;
+  font-weight: bold;
+  left: 50%;
+  top: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.post-form {
+  background-color: #202124; 
+  height: 100%; 
+  max-height: 100%;  
+  max-width: 500px; 
+  width: 100%;
+}
+
+.post-form-submit {
+  position: absolute; 
+  bottom: 0;
+}
+
+.user-header {
+  align-items: center;
+  color: white;
+  display: flex;
+  padding: 10px 0 0 10px;
+}
+
+.header-text {
+  font-size: 15px; 
+  font-weight: bold;
+  margin-left: 1px;
+}
+
+.header-text > div:last-child {
+  color: var(--dark-color-secondary);
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.media-component {
+  height: 100%;
+  overflow-x: scroll; 
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.video-controls {
+  display: flex; 
+  position: absolute; 
+  top: 5px; 
+  right: 45px; 
+  z-index: 9999;
+}
+
+.video-controls button {
+  font-size: 16px;
+}
+
+.media-item {
+  display: inline-block;
+  height: 100%;
+  pointer-events: none;
+  scroll-snap-align: center;
+  width: 100%;
+}
+
+.cheveron-right {
+  position: absolute; 
+  right: 0; 
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.cheveron-left {
+  position: absolute; 
+  left: 0; 
+  top: 50%; 
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 5px;
+  list-style: none;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  width: 200px;
+  z-index: 99999;
+}
+
+
+.dropdown-menu button {
+  background: none;
+  border: 0;
+  color: var(--dark-color);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 0 15px 15px;
+  position: relative;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: var(--dark-background-color-tertiary);
+}
+
+
+.dropdown-menu span {
+  margin-left: 15px;
+}
+
+.preview-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+}
+
+.save-btn:hover {
+  color: green;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+
+/* End Card */
+
+
 @media (max-width: 500px) {
   .modal {
     border: 0;
