@@ -35,15 +35,10 @@ const Camera = () => {
   const startCamera = async () => {
     try {
       const stream = await camera.on()
-      
-      console.log('stream: ', stream)
-
-      console.log('videoRef.current: ', videoRef.current)
-      
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
     } catch (error) {
-      console.error('Error accessing camera.' + error)
+      console.error('Error accessing camera.')
     }
   }
   
