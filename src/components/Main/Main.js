@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
+import Modal from '../Modal/Modal'
 
 const Main = () => {
   const [context, dispatch] = useContext(Context)
