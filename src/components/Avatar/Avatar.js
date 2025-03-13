@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import UserIcon from './UserIcon.js'
+import UserIcon from '../Icons/UserIcon/UserIcon.js'
 import styles from './styles.module.css'
 
 const Avatar = ({ className, image, username, onClick, size }) => {
