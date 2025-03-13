@@ -106,7 +106,7 @@ html, body {
 
 .icon-btn:hover .tooltip {
   
-  margin-right: 5px;
+  right: 20px;
   
   visibility: visible;
   opacity: 1;
