@@ -37,7 +37,7 @@ const SideBar = () => {
   
   const handleOpenCamera = event => {
     dispatch({ type: 'sidebar', payload: false })
-    dispatch({ type: 'modal', payload: { isOpen: true, content <Camera /> } })
+    dispatch({ type: 'modal', payload: { isOpen: true, content: <Camera /> } })
   }
   
   const handleNotifications = event => {
