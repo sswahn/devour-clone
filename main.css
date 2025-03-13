@@ -47,11 +47,39 @@
 :root {
   --dark-mode-background: black;
   --dark-mode-color: white;
+  --dark-mode-background-secondary: #111;
+  --dark-mode-background-tertiary: #222;
+  --dark-mode-background-quaternary: #333;
+  --dark-mode-border-color: white;
+
+  
 
   --light-mode-background: white;
   --light-mode-color: black;
+
+  
 }
 
+
+:root {
+  --light-contrast: black;
+  --light-background-color: white;
+  --light-background-color-secondary: #eee;
+  --light-background-color-tertiary: #ccc;
+  --light-background-color-quaternary: #999;
+  --light-border-color: #888;
+  --light-color: black;
+  --light-color-secondary: #222;
+  
+  --dark-contrast: white;
+  --dark-background-color: #000;
+  --dark-background-color-secondary: #111;
+  --dark-background-color-tertiary: #222;
+  --dark-background-color-quaternary: #333;
+  --dark-border-color: #444;
+  --dark-color: white;
+  --dark-color-secondary: #ccc; 
+}
 
 @font-face {
   font-family: 'Roboto';
@@ -495,7 +523,7 @@ html, body {
   }
 
   .sidebar {
-    background-color: red !important;
+    background-color: var(--dark-mode-background-secondary) !important;
   }
 }
 
