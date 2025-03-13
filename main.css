@@ -523,7 +523,8 @@ html, body {
   }
 
   .sidebar {
-    background-color: var(--dark-mode-background-secondary) !important;
+    background-color: var(--dark-mode-background-tertiary) !important;
+    color: var(--dark-mode-color) !important;
   }
 }
 
