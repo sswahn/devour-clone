@@ -105,9 +105,6 @@ html, body {
 }
 
 .icon-btn:hover .tooltip {
-  
-  right: 20px;
-  
   visibility: visible;
   opacity: 1;
 }
