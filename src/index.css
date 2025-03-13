@@ -120,15 +120,9 @@ html, body {
 }
 
 .sidebar-avatar {
-  /* these overrides might need to be changed, if sswahn/social css changes  */
   display: flex;
   font-size: inherit !important; 
   padding: 0 !important;
-  position: static !important;
-  
-
-  
-  border: 1px dashed red;
 }
 
 /*
