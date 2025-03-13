@@ -74,6 +74,9 @@ html, body {
 }
 
 .icon-btn:hover .tooltip {
+  
+  margin-right: 5px;
+  
   visibility: visible;
   opacity: 1;
 }
