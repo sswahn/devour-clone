@@ -117,6 +117,8 @@ const SideBar = () => {
           </div>
         )}
       </nav>
+
+{/* move Modal and functions to modal component and call in Main compoennt */}
       <Modal className="camera-modal" open={camera.isOpen} onClose={handleCloseCamera}>
         {camera.content}
       </Modal>
