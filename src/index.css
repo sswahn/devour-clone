@@ -78,6 +78,17 @@ html, body {
   opacity: 1;
 }
 
+.badge {
+  background-color: darkorange;
+  border-radius: 50%;
+  font-size: 12px;
+  height: 15px;
+  left: 25px;
+  position: absolute;
+  top: 10px;
+  width: 15px;
+}
+
 .sidebar-btn {
   background: none;
   border: 0;
