@@ -122,6 +122,8 @@ html, body {
 
 .sidebar {
   /* need to get overlay in the lib going */
+
+  background-color: red;
 }
 
 .search {
@@ -457,6 +459,21 @@ html, body {
 
 
 /* End Card */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-mode-background);
+    color: var(--dark-mode-color);
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--light-mode-background);
+    color: var(--light-mode-color);
+  }
+}
 
 
 @media (max-width: 500px) {
