@@ -53,22 +53,6 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--dark-mode-background);
-    color: var(--dark-mode-color);
-  }
-}
-
-
-@media (prefers-color-scheme: light) {
-  body {
-    background: var(--light-mode-background);
-    color: var(--light-mode-color);
-  }
-}
-
-
 @font-face {
   font-family: 'Roboto';
   src: url(/devour-clone/fc2b5060f7accec5cf74.ttf) format('truetype');
@@ -167,7 +151,7 @@ html, body {
 .sidebar {
   /* need to get overlay in the lib going */
 
-  background-color: red;
+  background-color: red !important;
 }
 
 .search {
@@ -506,15 +490,19 @@ html, body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--dark-mode-background);
+    background-color: var(--dark-mode-background);
     color: var(--dark-mode-color);
+  }
+
+  .sidebar {
+    background-color: red !important;
   }
 }
 
 
 @media (prefers-color-scheme: light) {
   body {
-    background: var(--light-mode-background);
+    background-color: var(--light-mode-background);
     color: var(--light-mode-color);
   }
 }
