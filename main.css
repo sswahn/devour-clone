@@ -30,7 +30,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
   \*****************************************************************/
 /* css global classes */
-/*
+
 :root {
   --dark-mode-background: black;
   --dark-mode-color: white;
@@ -39,27 +39,7 @@
   --light-mode-color: black;
 }
 
-*/
 
-:root {
-  --light-contrast: black;
-  --light-background-color: white;
-  --light-background-color-secondary: #eee;
-  --light-background-color-tertiary: #ccc;
-  --light-background-color-quaternary: #999;
-  --light-border-color: #888;
-  --light-color: black;
-  --light-color-secondary: #222;
-  
-  --dark-contrast: white;
-  --dark-background-color: #000;
-  --dark-background-color-secondary: #111;
-  --dark-background-color-tertiary: #222;
-  --dark-background-color-quaternary: #333;
-  --dark-border-color: #444;
-  --dark-color: white;
-  --dark-color-secondary: #ccc; 
-}
 
 /*
 @media (prefers-color-scheme: dark) {
@@ -252,6 +232,7 @@ html, body {
 /* Card */
 
 .card {
+  margin: 0 auto;
   max-width: 500px;
   height: 100%;
   overflow: hidden;
