@@ -285,7 +285,7 @@ html, body {
   background: none;
   border: 0;
   border-radius: 20px;
-  color: white;
+  fill: white;
   cursor: pointer;
   font-size: 18px;
   padding: 5px;
