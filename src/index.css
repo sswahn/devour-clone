@@ -124,6 +124,8 @@ html, body {
   font-size: inherit !important; 
   padding: 0 !important;
   position: static !important;
+
+  border: 1px dashed red;
 }
 
 .sidebar-user {
@@ -150,13 +152,6 @@ html, body {
 .navigation:hover {
   background-color: #faf9f6;
 }
-
-/* should be a container for the buttons with this styling, not on the button itself 
-.navigation:first-of-type {       
-  border-top: 1px solid black;
-  margin-top: 5px;
-}
-*/
 
 .sidebar-btn-container {
   border-top: 1px solid black;
