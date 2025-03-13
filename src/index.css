@@ -17,26 +17,6 @@
 }
 
 
-:root {
-  --light-contrast: black;
-  --light-background-color: white;
-  --light-background-color-secondary: #eee;
-  --light-background-color-tertiary: #ccc;
-  --light-background-color-quaternary: #999;
-  --light-border-color: #888;
-  --light-color: black;
-  --light-color-secondary: #222;
-  
-  --dark-contrast: white;
-  --dark-background-color: #000;
-  --dark-background-color-secondary: #111;
-  --dark-background-color-tertiary: #222;
-  --dark-background-color-quaternary: #333;
-  --dark-border-color: #444;
-  --dark-color: white;
-  --dark-color-secondary: #ccc; 
-}
-
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
@@ -481,6 +461,11 @@ html, body {
   .sidebar {
     background-color: var(--dark-mode-background-tertiary) !important;
     color: var(--dark-mode-color) !important;
+  }
+
+  .navigation {
+    border-bottom: var(--dark-mode-border-color);
+    color: var(--dark-mode-color);
   }
 }
 
