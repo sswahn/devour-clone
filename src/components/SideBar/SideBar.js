@@ -87,7 +87,7 @@ const SideBar = () => {
         {!context.session ? (
           <div className="sidebar-btn-container">
             <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
-              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="19px" />
+              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="18px" />
               <span className="sidebar-user">{context.user.username || 'sswahn'}</span>
             </button>
             <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
