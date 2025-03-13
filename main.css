@@ -172,7 +172,8 @@ html, body {
 }
 
 .search {
-  border-radius: 3px;
+  border: 1px solid gray;
+  border-radius: 5px; /* 3px */
   float: left;
   font-size: 15px;
   margin: 9px 0 15px 15px;
