@@ -7,7 +7,10 @@ export default function Provider({ children }) {
     auth: undefined,
     router: window.location.pathname || '/',
     dialog: undefined,
-    modal: undefined,
+    modal: {
+      isOpen: false,
+      content: <></>
+    },
     sidebar: false,
     video_duration: [],
     video: [],
