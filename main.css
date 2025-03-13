@@ -97,7 +97,7 @@ html, body {
 }
 
 .icon-btn svg {
-  color: white;
+  fill: white;
 }
 
 .icon-btn:active {
