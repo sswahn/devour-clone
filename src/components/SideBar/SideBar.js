@@ -1,7 +1,7 @@
 import { useContext, useState, lazy } from 'react'
 import { Context } from '../../Provider'
 import { config } from '../../config'
-import { Modal, Search, Sidebar } from '@sswahn/components'
+import { Search, Sidebar } from '@sswahn/components'
 import Avatar from '../Avatar/Avatar'
 import { navigateTo } from '@sswahn/router'
 import server from '@sswahn/server'
@@ -17,7 +17,6 @@ import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 
 const SideBar = () => {
   const [context, dispatch] = useContext(Context)
-  const [camera, setCamera] = useState({ isOpen: false, content: <></> })
   const db = database()
   
   const handleSidebar = event => {
@@ -38,12 +37,7 @@ const SideBar = () => {
   
   const handleOpenCamera = event => {
     dispatch({ type: 'sidebar', payload: false })
-    //context.dialog.showModal()
-    setCamera({ isOpen: true, content: <Camera /> })
-  }
-
-  const handleCloseCamera = () => {
-    setCamera({ isOpen: false, content: <></> })
+    dispatch({ type: 'modal', payload: { isOpen: true, content <Camera /> } })
   }
   
   const handleNotifications = event => {
@@ -117,11 +111,6 @@ const SideBar = () => {
           </div>
         )}
       </nav>
-
-{/* move Modal and functions to modal component and call in Main compoennt */}
-      <Modal className="camera-modal" open={camera.isOpen} onClose={handleCloseCamera}>
-        {camera.content}
-      </Modal>
     </Sidebar>
   )
 }
