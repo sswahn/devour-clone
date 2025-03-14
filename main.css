@@ -515,6 +515,10 @@ html, body {
     border-bottom: 1px solid var(--dark-mode-border-color);
     color: var(--dark-mode-color);
   }
+
+  .navigation svg {
+    fill: var(--dark-mode-color);
+  }
 }
 
 
