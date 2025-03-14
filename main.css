@@ -108,6 +108,7 @@ html, body {
 }
 
 .search-btn {
+  float: left;
   margin: 0 5px 0 20px;
 }
 
