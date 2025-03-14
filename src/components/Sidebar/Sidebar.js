@@ -31,10 +31,6 @@ const SideBar = () => {
     // filter through data for items related to value
   }
   
-  const handleCloseSidebar = () => {
-    dispatch({ type: 'sidebar', payload: false })
-  }
-  
   const handleOpenProfile = () => {
     navigateTo(`/profile/${context.user.username || 'sswahn'}`)
   }
@@ -78,7 +74,7 @@ const SideBar = () => {
   }
 
   const closeSidebar = () => {
-    onClose && onClose()
+    dispatch({ type: 'sidebar', payload: false })
     setIsOpen(false)
   }
   
