@@ -101,7 +101,7 @@ const SideBar = () => {
   
   return (
     <>
-      <nav className={`${styles.sidebar} ${'sidebar'} ${isOpen ? styles.open : styles.close}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
+      <nav className={`${'sidebar'} ${isOpen ? 'sidebar-open' : 'sidebar-close'}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
           <button className="sidebar-btn search-btn" type="button" aria-label="open search">
             <SearchIcon />
@@ -148,7 +148,7 @@ const SideBar = () => {
           </div>
         )}
       </nav>
-      <div className={`${styles.overlay} ${isOpen ? styles.openOverlay : styles.closeOverlay}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
+      <div className={`${'sidebar-overlay'} ${isOpen ? 'sidebar-openOverlay' : 'sidebar-closeOverlay'}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
     </>
   )
 }
