@@ -507,8 +507,8 @@ html, body {
     color: var(--dark-mode-color) !important;
   }
 
-  .sidebar-btn {
-    color: var(--dark-mode-color);
+  .sidebar-btn svg {
+    fill: var(--dark-mode-color);
   }
 
   .navigation {
