@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect, useRef, useCallback } from 'react'
-import camera from '@sswahn/camera'
+import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 import { Modal } from '@sswahn/components'
@@ -49,10 +49,6 @@ const Camera = () => {
   }, [light])
   
   const toggleMute = useCallback(event => {
-
-    console.log('currently this value - mute: ', mute)
-    console.log(' setting to this value - !mute: ', !mute)
-      
     !mute ? camera.mute(context.stream) : camera.unmute(context.stream)
     setMute(!mute)
   }, [mute])
