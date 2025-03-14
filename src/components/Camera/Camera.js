@@ -159,6 +159,9 @@ const Camera = () => {
       loadFromStorage()      // <== load media from storage
     }
     return () => {
+
+      console.log('modal closed, stopCamera() fires.')
+      
       stopCamera()
     }
   }, [])
