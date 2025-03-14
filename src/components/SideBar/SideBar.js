@@ -75,7 +75,7 @@ const SideBar = () => {
         <div className="sidebar-header">
           <button className="sidebar-btn search-btn" type="button" aria-label="open search">
             <SearchIcon />
-            <div className="tooltip" role="tooltip">Menu</div>
+            <div className="tooltip" role="tooltip">Search</div>
           </button>
     
           {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
