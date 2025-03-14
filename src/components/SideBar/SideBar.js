@@ -73,7 +73,7 @@ const SideBar = () => {
     <Sidebar className="sidebar" open={context.sidebar} onClose={handleCloseSidebar}>
       <nav>
         <div className="sidebar-header">
-          <button className="sidebar-btn" type="button" aria-label="open search">
+          <button className="sidebar-btn search-btn" type="button" aria-label="open search">
             <SearchIcon />
             <div className="tooltip" role="tooltip">Menu</div>
           </button>
