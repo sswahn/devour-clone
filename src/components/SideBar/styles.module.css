@@ -1,0 +1,46 @@
+/* Sidebar css */
+
+.sidebar {
+  background-color: white;
+  border-left: 1px solid gray;
+  height: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
+  width: 100%;
+  z-index: 999;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  opacity: 0;
+  max-width: 0; /* Set initial max-width to 0 */
+  transition: opacity 0.3s, max-width 0s 0.3s; /* Add delay to max-width transition on close */
+}
+
+.openOverlay {
+  opacity: 1;
+  max-width: 100%; /* Set max-width to 100% on open */
+  transition: opacity 0.3s;
+}
+
+.closedOverlay {
+  opacity: 0;
+}
+
+.open {
+  right: 0;
+  transform: translateX(0);
+}
+
+.close {
+  right: -500px;
+  transform: translateX(0);
+}
