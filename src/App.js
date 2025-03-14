@@ -4,7 +4,7 @@ import Provider from './Provider'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
-const SideBar = lazy(() => import('./components/SideBar/SideBar'))
+const Sidebar = lazy(() => import('./components/Sidebar/Sidebar'))
 import './index.css'
 
 export default () =>
@@ -14,7 +14,7 @@ export default () =>
         <Header />
         <Main />
         <Suspense fallback={<LoadingSpinner />}>
-          <SideBar />
+          <Sidebar />
         </Suspense>
       </Provider> 
     </ErrorBoundary> 
