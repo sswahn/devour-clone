@@ -464,6 +464,11 @@ html, body {
     color: var(--dark-mode-color) !important;
   }
 
+  .search {
+    background-color: var(--dark-mode-background-quaternary);
+    color: var(--dark-mode-color);
+  }
+
   .sidebar-btn-container {
     border-top: 1px solid var(--dark-mode-border-color) !important;
   }
