@@ -63,6 +63,10 @@ html, body {
   opacity: 1;
 }
 
+.search-btn {
+  float: left;
+}
+
 .tooltip {
   background-color: #575a62;
   border-radius: 5px;
