@@ -510,6 +510,10 @@ html, body {
     color: var(--dark-mode-color) !important;
   }
 
+  .sidebar-overlay {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
   .search {
     background-color: var(--dark-mode-background-quaternary);
     color: var(--dark-mode-color);
