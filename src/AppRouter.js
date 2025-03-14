@@ -7,8 +7,8 @@ import NotFound from './components/NotFound/NotFound'
 const AppRouter = () => {
   return (
     <Router>
-      <Route path="/" component={Main} />
-      <Route path="/camera" component={Camera} />
+      <Route path="/devour-clone/" component={Main} />
+      <Route path="/devour-clone/camera" component={Camera} />
       <Route component={NotFound} />
     </Router>
   )
