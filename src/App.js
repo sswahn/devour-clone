@@ -1,21 +1,22 @@
-import { lazy, Suspense } from 'react'
 import ErrorBoundary from './ErrorBoundary'
 import Provider from './Provider'
 import Header from './components/Header/Header'
-import Main from './components/Main/Main'
-import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
-const Sidebar = lazy(() => import('./components/Sidebar/Sidebar'))
+import AppRouter from './AppRouter'
+import Sidebar from './components/Sidebar/Sidebar'
 import './index.css'
 
-export default () =>
-  <React.StrictMode>
-    <ErrorBoundary>
-      <Provider>
-        <Header />
-        <Main />
-        <Suspense fallback={<LoadingSpinner />}>
+const App = () => {
+  return (
+    <React.StrictMode>
+      <ErrorBoundary>
+        <Provider>
+          <Header />
+          <AppRouter />
           <Sidebar />
-        </Suspense>
-      </Provider> 
-    </ErrorBoundary> 
-  </React.StrictMode>
+        </Provider> 
+      </ErrorBoundary> 
+    </React.StrictMode>
+  )
+}
+
+export default App
