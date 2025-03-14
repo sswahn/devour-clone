@@ -273,7 +273,7 @@ html, body {
   top: 0;
   transform: translateX(-50%);
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .card-content {
@@ -290,6 +290,7 @@ html, body {
   width: 100%;
 }
 
+.back-btn,
 .camera-light {
   background: none;
   border: 0;
@@ -302,6 +303,10 @@ html, body {
   right: 10px;
   top: 10px;
   z-index: 9999;
+}
+
+.back-btn {
+  left: 10px;
 }
 
 .camera { 
