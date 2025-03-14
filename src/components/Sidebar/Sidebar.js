@@ -100,53 +100,56 @@ const SideBar = () => {
   }, [])
   
   return (
-    <nav className={`${styles.sidebar} ${'sidebar'} ${isOpen ? styles.open : styles.close}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
-      <div className="sidebar-header">
-        <button className="sidebar-btn search-btn" type="button" aria-label="open search">
-          <SearchIcon />
-          <div className="tooltip" role="tooltip">Search</div>
-        </button>
-  
-        {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
-  
-        <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
-          <BarsIcon />
-          <div className="tooltip" role="tooltip">Menu</div>
-        </button>
-      </div>
-      {!context.session ? (
-        <div className="sidebar-btn-container">
-          <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
-            <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="18px" />
-            <span className="sidebar-user">{context.user.username || 'sswahn'}</span>
+    <>
+      <nav className={`${styles.sidebar} ${'sidebar'} ${isOpen ? styles.open : styles.close}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
+        <div className="sidebar-header">
+          <button className="sidebar-btn search-btn" type="button" aria-label="open search">
+            <SearchIcon />
+            <div className="tooltip" role="tooltip">Search</div>
           </button>
-          <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
-            <CameraIcon />
-            <span>Camera</span>
-          </button>
-          <button className="navigation" onClick={handleNotifications} type="button" aria-label="open notifications" aria-haspopup="dialog"> 
-            <BellIcon />
-            <div className="notifications-badge" role="status" aria-label="notification indicator" aria-hidden="false"></div>
-            <span>Notifications</span>
-          </button>
-          <button className="navigation" onClick={handleSignout} type="button" aria-label="sign out" aria-description="Click here to end your session.">
-            <RightFromBracketIcon />
-            <span>Sign Out</span>
+    
+          {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
+    
+          <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
+            <BarsIcon />
+            <div className="tooltip" role="tooltip">Menu</div>
           </button>
         </div>
-      ) : (
-        <div className="sidebar-btn-container">
-          <button className="navigation" onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
-            <RightToBracketIcon />
-            <span>Sign In</span>
-          </button>
-          <button className="navigation" onClick={handleSignup} type="button" aria-label="sign up" aria-description="Register a user account." aria-haspopup="dialog">
-            <UserPlusIcon />
-            <span>Sign Up</span>
-          </button>
-        </div>
-      )}
-    </nav>
+        {!context.session ? (
+          <div className="sidebar-btn-container">
+            <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
+              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="18px" />
+              <span className="sidebar-user">{context.user.username || 'sswahn'}</span>
+            </button>
+            <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
+              <CameraIcon />
+              <span>Camera</span>
+            </button>
+            <button className="navigation" onClick={handleNotifications} type="button" aria-label="open notifications" aria-haspopup="dialog"> 
+              <BellIcon />
+              <div className="notifications-badge" role="status" aria-label="notification indicator" aria-hidden="false"></div>
+              <span>Notifications</span>
+            </button>
+            <button className="navigation" onClick={handleSignout} type="button" aria-label="sign out" aria-description="Click here to end your session.">
+              <RightFromBracketIcon />
+              <span>Sign Out</span>
+            </button>
+          </div>
+        ) : (
+          <div className="sidebar-btn-container">
+            <button className="navigation" onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
+              <RightToBracketIcon />
+              <span>Sign In</span>
+            </button>
+            <button className="navigation" onClick={handleSignup} type="button" aria-label="sign up" aria-description="Register a user account." aria-haspopup="dialog">
+              <UserPlusIcon />
+              <span>Sign Up</span>
+            </button>
+          </div>
+        )}
+      </nav>
+      <div className={`${styles.overlay} ${isOpen ? styles.openOverlay : styles.closeOverlay}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
+    </>
   )
 }
 
