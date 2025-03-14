@@ -497,6 +497,7 @@ html, body {
 /* End Card */
 
 @media (prefers-color-scheme: dark) {
+  
   body {
     background-color: var(--dark-mode-background);
     color: var(--dark-mode-color);
@@ -516,9 +517,14 @@ html, body {
     color: var(--dark-mode-color);
   }
 
+  .navigation:hover {
+    background-color: var(--dark-mode-background-secondary);
+  }
+
   .navigation svg {
     fill: var(--dark-mode-color);
   }
+  
 }
 
 
