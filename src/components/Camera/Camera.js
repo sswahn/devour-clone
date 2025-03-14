@@ -6,6 +6,7 @@ import { Modal } from '@sswahn/components'
 import { Context } from '../../Provider'
 import SunIcon from '../Icons/SunIcon/SunIcon'
 import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
+import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import NavOverlay from './NavOverlay'
 import Preview from '../Preview/Preview'
@@ -146,6 +147,11 @@ const Camera = () => {
       alert('At least one photo or video is required.') // use a custom alert
     }
   }
+
+  const handleCloseCamera = event => {
+    stopCamera()
+    dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
+  }
   
   useEffect(() => {
     if (!context.stream) {
@@ -181,6 +187,9 @@ const Camera = () => {
       
         <>
           <div className="card-header">
+            <button className="back-btn" onClick={handleCloseCamera} type="button" aria-label="back button">
+              <ArrowLeftIcon />
+            </button>
             <button className="camera-light" onClick={handleTurnOnLight} type="button" aria-label="camera light">
               {light ? <DarkSunIcon /> : <SunIcon />}
               <div className="tooltip" role="tooltip">Light</div>
