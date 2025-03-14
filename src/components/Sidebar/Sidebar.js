@@ -15,9 +15,8 @@ import BellIcon from '../Icons/BellIcon/BellIcon'
 import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon'
 import RightFromBracketIcon from '../Icons/RightFromBracketIcon/RightFromBracketIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
-import styles from './styles.module.css'
 
-const SideBar = () => {
+const Sidebar = () => {
   const [context, dispatch] = useContext(Context)
   const [isOpen, setIsOpen] = useState()
   const sidebarRef = useRef(null)
@@ -153,4 +152,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default Sidebar
