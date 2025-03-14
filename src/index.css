@@ -115,7 +115,7 @@ html, body {
 .sidebar {
   /* need to get overlay in the lib going */
 
-  background-color: red !important;
+
 }
 
 .search {
@@ -463,8 +463,12 @@ html, body {
     color: var(--dark-mode-color) !important;
   }
 
+  .sidebar-btn {
+    color: var(--dark-mode-color);
+  }
+
   .navigation {
-    border-bottom: var(--dark-mode-border-color);
+    border-bottom: 1px solid var(--dark-mode-border-color);
     color: var(--dark-mode-color);
   }
 }
