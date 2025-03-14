@@ -9,7 +9,7 @@ const AppRouter = () => {
     <Router>
       <Route path="/" component={Main} />
       <Route path="/camera" component={Camera} />
-      <Route component={NotFound}
+      <Route component={NotFound} />
     </Router>
   )
 }
