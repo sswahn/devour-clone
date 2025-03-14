@@ -73,11 +73,9 @@ const SideBar = () => {
     <Sidebar className="sidebar" open={context.sidebar} onClose={handleCloseSidebar}>
       <nav>
         <div className="sidebar-header">
-    
-            <button className="navigation" type="button" aria-label="open search">
-              <SearchIcon />
-              <span>Search</span>
-            </button>
+          <button className="search-btn" type="button" aria-label="open search">
+            <SearchIcon />
+          </button>
     
           {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
     
