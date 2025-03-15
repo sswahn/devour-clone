@@ -29,14 +29,8 @@ const Camera = () => {
   
   const stopCamera = event => {
     if (streamRef.current) {
-
-      console.log('passed condition in stopCamera, turning off camera stream.')
-      
       camera.off(streamRef.current) 
       streamRef.current = null
-      
-      console.log('videoRef.current: ', videoRef.current)
-      
       dispatch({ type: 'stream', payload: undefined })
     }
   }
@@ -44,13 +38,7 @@ const Camera = () => {
   const startCamera = async () => {
     try {
       const stream = await camera.on()
-
-      console.log('Camera started stream: ', stream)
-
       streamRef.current = stream
-
-      console.log('streamRef.current: ', streamRef.current)
-      
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
     } catch (error) {
@@ -167,12 +155,6 @@ const Camera = () => {
     stopCamera()
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
   }
-
-  ///
-  useEffect(() => {
-    console.log("Context stream updated in useEffect: ", context.stream);
-  }, [context.stream])
-  ///
   
   useEffect(() => {
     if (!context.stream) {
@@ -180,9 +162,6 @@ const Camera = () => {
       loadFromStorage()      // <== load media from storage
     }
     return () => {
-
-      console.log('context.stream: ', context.stream)
-      console.log('Component unmounting: Calling stopCamera()...')
       stopCamera()
     }
   }, [])
