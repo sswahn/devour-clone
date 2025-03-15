@@ -321,6 +321,12 @@ html, body {
   z-index: 9999;
 }
 
+.camera-light-btn:hover .tooltip,
+.camera-back-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .camera { 
   object-fit: cover;
   height: 100%;
