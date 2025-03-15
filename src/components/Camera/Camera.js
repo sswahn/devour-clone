@@ -26,7 +26,7 @@ const Camera = () => {
   const locationModalRef = useRef(null)
   const db = database()
   
-  const stopCamera = event => {
+  const stopCamera = useCallback(event => {
     if (context.stream) {
 
       console.log('passed condition in stopCamera, turning off camera stream.')
@@ -35,7 +35,7 @@ const Camera = () => {
       videoRef.current.srcObject = null
       dispatch({ type: 'stream', payload: undefined })
     }
-  }
+  }, [context.stream])
   
   const startCamera = async () => {
     try {
