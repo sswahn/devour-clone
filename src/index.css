@@ -308,6 +308,10 @@ html, body {
   z-index: 9999;
 }
 
+.camera-light {
+  border: 1px dashed yellow;
+}
+
 .back-btn {
   left: 10px;
 
