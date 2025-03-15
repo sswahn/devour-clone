@@ -52,7 +52,7 @@ const Camera = () => {
   }, [light])
   
   const toggleMute = useCallback(event => {
-    !mute ? camera.mute(context.stream) : camera.unmute(context.stream)
+    !mute ? camera.mute(streamRef.current) : camera.unmute(streamRef.current)
     setMute(!mute)
   }, [mute])
   
