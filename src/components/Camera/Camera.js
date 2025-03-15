@@ -47,7 +47,7 @@ const Camera = () => {
   }
   
   const handleTurnOnLight = useCallback(event => {
-    camera.light(context.stream)
+    camera.light(streamRef.current)
     setLight(!light)
   }, [light])
   
@@ -96,7 +96,7 @@ const Camera = () => {
    //   return 
   //  }
     dispatch({ type: 'mode', payload: 'recording' })
-    const recorder = camera.startRecording(context.stream, framesRef.current)
+    const recorder = camera.startRecording(streamRef.current, framesRef.current)
     recorderRef.current = recorder
   }
 
@@ -155,7 +155,7 @@ const Camera = () => {
   }
   
   useEffect(() => {
-    if (!context.stream) {
+    if (!streamRef.current) {
       startCamera()
       loadFromStorage()      // <== load media from storage
     }
