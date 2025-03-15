@@ -35,7 +35,7 @@ const Camera = () => {
       camera.off(streamRef.current) 
       streamRef.current = null
       
-      console.log('videoRef.current.srcObject: ', videoRef.current.srcObject)
+      console.log('videoRef.current: ', videoRef.current)
       
       dispatch({ type: 'stream', payload: undefined })
     }
