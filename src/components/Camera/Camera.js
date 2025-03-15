@@ -28,9 +28,10 @@ const Camera = () => {
   
   const stopCamera = event => {
     if (context.stream) {
+
+      console.log('passed condition in stopCamera, turning off camera stream.')
+      
       camera.off(context.stream) 
-      // might need turn off videoRef.current too
-      camera.off(videoRef.current.srcObject)
       videoRef.current.srcObject = null
       dispatch({ type: 'stream', payload: undefined })
     }
@@ -162,9 +163,8 @@ const Camera = () => {
       loadFromStorage()      // <== load media from storage
     }
     return () => {
-
-      console.log('modal closed, stopCamera() fires.')
       
+      console.log('Component unmounting: Calling stopCamera()...')
       stopCamera()
     }
   }, [])
