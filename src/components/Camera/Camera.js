@@ -26,15 +26,7 @@ const Camera = () => {
   const previewModalRef = useRef(null)
   const locationModalRef = useRef(null)
   const db = database()
-  
-  const stopCamera = event => {
-    if (streamRef.current) {
-      camera.off(streamRef.current) 
-      streamRef.current = null
-      dispatch({ type: 'stream', payload: undefined })
-    }
-  }
-  
+
   const startCamera = async () => {
     try {
       const stream = await camera.on()
@@ -43,6 +35,14 @@ const Camera = () => {
       videoRef.current.srcObject = stream
     } catch (error) {
       console.error('Error accessing camera.')
+    }
+  }
+  
+  const stopCamera = event => {
+    if (streamRef.current) {
+      camera.off(streamRef.current) 
+      streamRef.current = null
+      dispatch({ type: 'stream', payload: undefined })
     }
   }
   
