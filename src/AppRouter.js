@@ -8,7 +8,6 @@ const AppRouter = () => {
   return (
     <Router>
       <Route path="/devour-clone/" component={Main} />
-      <Route path="/devour-clone/camera" component={Camera} />
       <Route component={NotFound} />
     </Router>
   )
