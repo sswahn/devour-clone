@@ -190,6 +190,7 @@ const Camera = () => {
           <div className="card-header">
             <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera button">
               <ArrowLeftIcon />
+              <div className="tooltip" role="tooltip">Back</div>
             </button>
             <button className="camera-light-btn" onClick={handleTurnOnLight} type="button" aria-label="camera light button">
               {light ? <DarkSunIcon /> : <SunIcon />}
