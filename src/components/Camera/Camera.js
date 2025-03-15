@@ -18,6 +18,7 @@ const Camera = () => {
   const [mute, setMute] = useState(false)
   const [type, setType] = useState(undefined)
   const [context, dispatch] = useContext(Context)
+  const streamRef = useRef(null)
   const videoRef = useRef(null)
   const recorderRef = useRef(null)
   const timerRef = useRef(timer)
@@ -26,22 +27,27 @@ const Camera = () => {
   const locationModalRef = useRef(null)
   const db = database()
   
-  const stopCamera = useCallback(event => {
-    if (context.stream) {
+  const stopCamera = event => {
+    if (streamRef.current) {
 
       console.log('passed condition in stopCamera, turning off camera stream.')
       
-      camera.off(context.stream) 
+      camera.off(streamRef.current) 
+      streamRef.current = null
       videoRef.current.srcObject = null
       dispatch({ type: 'stream', payload: undefined })
     }
-  }, [context.stream])
+  }
   
   const startCamera = async () => {
     try {
       const stream = await camera.on()
 
       console.log('Camera started stream: ', stream)
+
+      streamRef.current = stream
+
+      console.log('streamRef.current: ', streamRef.current)
       
       dispatch({ type: 'stream', payload: stream })
       videoRef.current.srcObject = stream
