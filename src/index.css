@@ -293,6 +293,7 @@ html, body {
 .camera-light-btn {
   background: none;
   border: 0;
+  color: white;
   fill: white;
   cursor: pointer;
   font-size: 18px;
@@ -308,6 +309,7 @@ html, body {
   background: none;
   border: 0;
   left: 0px;
+  color: white;
   fill: white;
   cursor: pointer;
   font-size: 18px;
