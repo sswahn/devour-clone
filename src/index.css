@@ -293,7 +293,7 @@ html, body {
   width: 100%;
 }
 
-.camera-light {
+.camera-light-btn {
   background: none;
   border: 0;
   fill: white;
@@ -305,11 +305,9 @@ html, body {
   top: 0px;
   width: 50px;
   z-index: 9999;
-
-  border: 1px dashed yellow;
 }
 
-.back-btn {
+.camera-back-btn {
   background: none;
   border: 0;
   left: 0px;
@@ -321,8 +319,6 @@ html, body {
   top: 0px;
   width: 50px;
   z-index: 9999;
-  
-  border: 1px dashed orange;
 }
 
 .camera { 
