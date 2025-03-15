@@ -31,6 +31,7 @@ const Camera = () => {
       camera.off(context.stream) 
       // might need turn off videoRef.current too
       camera.off(videoRef.current.srcObject)
+      videoRef.current.srcObject = null
       dispatch({ type: 'stream', payload: undefined })
     }
   }
