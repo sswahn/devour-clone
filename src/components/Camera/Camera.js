@@ -28,7 +28,7 @@ const Camera = () => {
   
   const stopCamera = event => {
     if (context.stream) {
-      camera.off(context.stream)
+      camera.off(context.stream) // might need turn off videoRef.current too
       dispatch({ type: 'stream', payload: undefined })
     }
   }
