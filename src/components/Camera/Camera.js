@@ -31,7 +31,7 @@ const Camera = () => {
     try {
       const stream = await camera.on()
       streamRef.current = stream
-      dispatch({ type: 'stream', payload: stream })
+      dispatch({ type: 'stream', payload: stream }) // consider removing in favor of streamRef.current
       videoRef.current.srcObject = stream
     } catch (error) {
       console.error('Error accessing camera.')
