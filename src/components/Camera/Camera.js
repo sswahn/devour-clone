@@ -163,7 +163,8 @@ const Camera = () => {
       loadFromStorage()      // <== load media from storage
     }
     return () => {
-      
+
+      console.log('context.stream: ', context.stream)
       console.log('Component unmounting: Calling stopCamera()...')
       stopCamera()
     }
