@@ -682,7 +682,6 @@ html, body {
   width: 100%;
 }
 
-.back-btn,
 .camera-light {
   background: none;
   border: 0;
@@ -690,22 +689,30 @@ html, body {
   fill: white;
   cursor: pointer;
   font-size: 18px;
+  height: 100%;
   padding: 5px;
   position: absolute;
   right: 10px;
   top: 10px;
+  width: 50px;
   z-index: 9999;
-}
 
-.camera-light {
   border: 1px dashed yellow;
 }
 
 .back-btn {
-  left: 10px;
-
+  background: none;
+  border: 0;
+  left: 0px;
+  fill: white;
+  cursor: pointer;
+  font-size: 18px;
   height: 100%;
-  width: 40px;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+  z-index: 9999;
   
   border: 1px dashed orange;
 }
