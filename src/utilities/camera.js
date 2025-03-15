@@ -98,6 +98,7 @@ const camera = {
     })
   },
   mute(stream) {
+    console.log('stream: ', stream)
     console.log('typeof stream: ', typeof stream)
     console.log('stream instanceof MediaStream: ', stream instanceof MediaStream)
     
