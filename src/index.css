@@ -310,6 +310,8 @@ html, body {
 
 .back-btn {
   left: 10px;
+
+  border: 1px dashed orange;
 }
 
 .camera { 
