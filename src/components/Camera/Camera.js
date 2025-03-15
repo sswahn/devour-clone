@@ -144,11 +144,9 @@ const Camera = () => {
   }
   
   const handleOpenLocationModal = event => {
-    if (context.images.length || context.video.length) {
-      locationModalRef.current.showModal()
-    } else {
-      alert('At least one photo or video is required.') // use a custom alert
-    }
+    context.images.length || context.video.length
+     ? locationModalRef.current.showModal()
+     : alert('At least one photo or video is required.') // use a custom alert
   }
 
   const handleCloseCamera = event => {
