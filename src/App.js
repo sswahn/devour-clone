@@ -7,8 +7,8 @@ import './index.css'
 
 const App = () => {
   return (
-    {/*  <React.StrictMode> */}
     <>
+    {/*  <React.StrictMode> */}
       <ErrorBoundary>
         <Provider>
           <Header />
@@ -16,8 +16,8 @@ const App = () => {
           <Sidebar />
         </Provider> 
       </ErrorBoundary> 
-    </>
   {/*  </React.StrictMode> */}
+  </>
   )
 }
 
