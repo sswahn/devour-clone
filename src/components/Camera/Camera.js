@@ -159,6 +159,12 @@ const Camera = () => {
     stopCamera()
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
   }
+
+  ///
+  useEffect(() => {
+    console.log("Context stream updated in useEffect: ", context.stream);
+  }, [context.stream])
+  ///
   
   useEffect(() => {
     if (!context.stream) {
