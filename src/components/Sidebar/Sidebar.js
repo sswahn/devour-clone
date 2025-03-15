@@ -31,14 +31,13 @@ const Sidebar = () => {
   }
   
   const handleOpenProfile = () => {
+    //dispatch({ type: 'sidebar', payload: false })
     navigateTo(`/devour-clone/profile/${context.user.username || 'sswahn'}`)
   }
   
   const handleOpenCamera = event => {
     dispatch({ type: 'sidebar', payload: false })
-    navigateTo('/devour-clone/camera')
-    
-    //dispatch({ type: 'modal', payload: { isOpen: true, content: <Camera /> } })
+    dispatch({ type: 'modal', payload: { isOpen: true, content: <Camera /> } })
   }
   
   const handleNotifications = event => {
