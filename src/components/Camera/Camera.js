@@ -27,14 +27,14 @@ const Camera = () => {
   const db = database()
   
   const stopCamera = event => {
-    if (context.stream) {
+   // if (context.stream) {
 
       console.log('passed condition in stopCamera, turning off camera stream.')
       
       camera.off(context.stream) 
       videoRef.current.srcObject = null
       dispatch({ type: 'stream', payload: undefined })
-    }
+  //  }
   }
   
   const startCamera = async () => {
