@@ -92,7 +92,9 @@ const Images = memo({ index, setIndex, imageURLs, imageEditorStyles }) => {
           style={{
             border: imageEditorStyles[index]?.border || 0,
             filter: imageEditorStyles[index]?.filter || 'none'
-          }} />
+          }} 
+          aria-label={`preview image ${i}`}
+          />
       )}
     </div>
   )
