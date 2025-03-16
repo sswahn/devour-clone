@@ -88,7 +88,7 @@ const Camera = () => {
     if (context.images.length >= 5) {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
-    const image = camera.takePhoto(videoRef.current)
+    const image = await camera.takePhoto(videoRef.current)
 
     console.log('image: ', image)
     console.log('typeof image: ', typeof image)
