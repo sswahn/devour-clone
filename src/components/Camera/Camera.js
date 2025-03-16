@@ -85,7 +85,7 @@ const Camera = () => {
 
   const triggerFlash = () => {
     setIsFlashing(true)
-    setTimeout(() => setIsFlashing(false), 300) // Remove class after animation
+    setTimeout(() => setIsFlashing(false), 50) // Remove class after animation
   }
   
   const handleTakePhoto = async () => {
