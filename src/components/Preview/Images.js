@@ -68,6 +68,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
       threshold: 0.5, 
     }
     const observer = new IntersectionObserver(handleIntersection, options)
+
+    console.log('imageRefs.current: ', imageRefs.current)
+    
     imageRefs.current.forEach(img => observer.observe(img))
     return () => {
       observer.disconnect()
