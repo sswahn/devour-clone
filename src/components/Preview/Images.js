@@ -3,7 +3,7 @@ import { Context } from '../../Provider'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
 import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
 
-export default function Images({ index, setIndex, imageURLs, imageEditorStyles }) {
+const Images = ({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const [context, dispatch] = useContext(Context)
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
@@ -42,8 +42,12 @@ export default function Images({ index, setIndex, imageURLs, imageEditorStyles }
   
   const handleIntersection = entries => {
     entries.forEach(entry => {
+      
+      let id = entry.target.id.split('image-preview-')[1]
+      console.log('id: ', id)
+      
       if (entry.isIntersecting) {
-        setIndex(entry.target.id)
+        setIndex(id)
       }
     })
   }
@@ -80,7 +84,7 @@ export default function Images({ index, setIndex, imageURLs, imageEditorStyles }
       {imageURLs.map((item, i) => 
         <img 
           key={item.id} 
-          id={i} 
+          id={`image-preview-${i}`} 
           className="media-item" 
           ref={ref => imageRefs.current[i] = ref} 
           src={item.url} 
@@ -93,3 +97,5 @@ export default function Images({ index, setIndex, imageURLs, imageEditorStyles }
     </div>
   )
 }
+
+export default Images
