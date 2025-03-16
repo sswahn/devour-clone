@@ -89,8 +89,15 @@ const Camera = () => {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
     const image = camera.takePhoto(videoRef.current)
+
+    console.log('image: ', image)
+    console.log('typeof image: ', typeof image)
+    
     //new Audio(effects).play() 
     const images = [ ...context.images, image ]
+
+    console.log('images: ', images)
+    
     dispatch({ type: 'images', payload: images }) 
     db.put({ id: 'images', images })
   }
