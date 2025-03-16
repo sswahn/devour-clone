@@ -601,6 +601,7 @@ html, body {
   width: 500px;
 }
 
+.preview-modal,
 .camera-modal {
   background: none;
   border: 0;
