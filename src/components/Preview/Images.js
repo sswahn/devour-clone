@@ -73,7 +73,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
           </button>
         </div>
       )}
-      {index > 0 && (
+      {Number(index) > 0 && (
         <div className="cheveron-left">
           <button className="icon-btn-alt" onClick={handleScrollLeft} type="button">
             <ChevronLeftIcon />
