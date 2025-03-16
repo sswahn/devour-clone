@@ -643,6 +643,26 @@ html, body {
   opacity: 1;
 }
 
+.icon-btn-alt {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  height: 45px;
+  position: relative;
+  width: 45px; 
+}
+
+.icon-btn-alt:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
 .auth-form {
   border: 0 !important;
 }
