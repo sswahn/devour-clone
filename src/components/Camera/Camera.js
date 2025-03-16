@@ -191,7 +191,7 @@ const Camera = () => {
 
   return (
     <div className="card" aria-label="camera viewport">
-      
+      <div id="flash-overlay"></div>
         <>
           <div className="card-header">
             <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera button">
