@@ -82,6 +82,9 @@ const Camera = () => {
   }
   
   const handleTakePhoto = async () => {
+
+    console.log('taking photo.')
+    
     if (context.images.length >= 5) {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
