@@ -9,6 +9,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageRefs = useRef([])
   
   const handleScrollRight = event => {
+
+    console.log('next index: ', index)
+    
     if (imageContainerRef.current) {
       const scrollWidth = imageContainerRef.current.scrollWidth
       const scrollLeft = imageContainerRef.current.scrollLeft
@@ -41,16 +44,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   const handleIntersection = entries => {
-
-    console.log('handleIntersection "entries": ', entries)
-    
     entries.forEach(entry => {
-      
-      let id = entry.target.id.split('image-preview-')[1]
-      console.log('id: ', id)
-      
       if (entry.isIntersecting) {
-        setIndex(id)
+        setIndex(entry.target.id.split('image-preview-')[1])
       }
     })
   }
@@ -70,6 +66,8 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
       observer.disconnect()
     }
   }, [imageRefs.current])
+
+  console.log('index: ', index)
   
   return (
     <div className="media-component" ref={imageContainerRef}>
