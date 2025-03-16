@@ -41,6 +41,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   const handleIntersection = entries => {
+
+    console.log('handleIntersection "entries": ', entries)
+    
     entries.forEach(entry => {
       
       let id = entry.target.id.split('image-preview-')[1]
