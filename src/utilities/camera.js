@@ -10,6 +10,8 @@ const camera = {
       },
       video: {
         facingMode: 'environment',
+        width: { ideal: 1920 }, // Suggest Full HD
+        height: { ideal: 1080 },
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
         }
