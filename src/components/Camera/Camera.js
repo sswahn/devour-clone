@@ -19,6 +19,7 @@ const Camera = () => {
   const [mute, setMute] = useState(false)
   const [type, setType] = useState(undefined)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
+  const [isFlashing, setIsFlashing] = useState(false)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
   const recorderRef = useRef(null)
@@ -81,16 +82,23 @@ const Camera = () => {
     storage.local.set(captionStylesType, captionStyles)
     storage.local.set(editorStylesType, editorStyles)
   }
+
+  const triggerFlash = () => {
+    setIsFlashing(true)
+    setTimeout(() => setIsFlashing(false), 300) // Remove class after animation
+  }
   
   const handleTakePhoto = async () => {
     if (context.images.length >= 5) {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
+    triggerFlash()
     const image = await camera.takePhoto(videoRef.current)
     //new Audio(effects).play() 
     const images = [ ...context.images, image ]
     dispatch({ type: 'images', payload: images }) 
     db.put({ id: 'images', images })
+    
   }
   
   const handleRecordVideo = () => {
@@ -191,7 +199,7 @@ const Camera = () => {
 
   return (
     <div className="card" aria-label="camera viewport">
-      <div className="flash-overlay"></div>
+      <div className={`flash-overlay ${isFlashing ? 'flash' : ''}`}></div>
         <>
           <div className="card-header">
             <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera button">
