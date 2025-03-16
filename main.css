@@ -743,6 +743,10 @@ html, body {
   background-color: #f2f3f4;
 }
 
+.camera-button:active {
+  background-color: #cb4154;
+}
+
 .camera-navigation {
   background: none; 
   border-radius: 10px; 
