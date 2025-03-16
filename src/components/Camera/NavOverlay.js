@@ -79,14 +79,18 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
       */}
       
         {!!context.images.length && (
-          <button id="images" className="icon-btn" onClick={previewFiles} type="button" aria-label="preview and edit images" aria-haspopup="dialog">
+          <button id="images" className="icon-btn" onClick={previewFiles} type="button" aria-label="preview and edit images" aria-haspopup="dialog" style={{ 
+            border: context.mode === 'camera' ? '1px solid white' : '0' 
+          }}>
             <ImageIcon />
             <div className="badge" role="status" aria-label="video count">{context.images.length}</div>
             <div className="tooltip" role="tooltip">Images</div>
           </button>
         )}
         {!!context.video.length && (
-          <button id="video" className="icon-btn" onClick={previewFiles} type="button" aria-label="preview and edit video" aria-haspopup="dialog">
+          <button id="video" className="icon-btn" onClick={previewFiles} type="button" aria-label="preview and edit video" aria-haspopup="dialog" style={{ 
+            border: context.mode === 'video' ? '1px solid white' : '0' 
+          }}>
             <FileVideoIcon />
             <div className="badge" role="status" aria-label="video count">{context.video.length}</div>
             <div className="tooltip" role="tooltip">Video</div>
