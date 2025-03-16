@@ -1,9 +1,9 @@
 import { useState, useContext, useEffect, useRef, useCallback } from 'react'
+import { Context } from '../../Provider'
 import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
-import { Modal } from '@sswahn/components'
-import { Context } from '../../Provider'
+import Modal from '../Modal/Modal'
 import SunIcon from '../Icons/SunIcon/SunIcon'
 import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
@@ -13,11 +13,12 @@ import Preview from '../Preview/Preview'
 import SubmitPost from './SubmitPost'
 
 const Camera = () => {
+  const [context, dispatch] = useContext(Context)
   const [light, setLight] = useState(false)
   const [timer, setTimer] = useState(300)
   const [mute, setMute] = useState(false)
   const [type, setType] = useState(undefined)
-  const [context, dispatch] = useContext(Context)
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
   const recorderRef = useRef(null)
@@ -82,22 +83,12 @@ const Camera = () => {
   }
   
   const handleTakePhoto = async () => {
-
-    console.log('taking photo.')
-    
     if (context.images.length >= 5) {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
     const image = await camera.takePhoto(videoRef.current)
-
-    console.log('image: ', image)
-    console.log('typeof image: ', typeof image)
-    
     //new Audio(effects).play() 
     const images = [ ...context.images, image ]
-
-    console.log('images: ', images)
-    
     dispatch({ type: 'images', payload: images }) 
     db.put({ id: 'images', images })
   }
@@ -151,7 +142,7 @@ const Camera = () => {
 
   const handlePreviewFiles = event => {
     setType(event.currentTarget.id)
-    setIsPreviewOpen()
+    setIsPreviewOpen(prevState => !prevState)
   }
   
   const handleOpenLocationModal = event => {
@@ -160,6 +151,10 @@ const Camera = () => {
      : alert('At least one photo or video is required.') // use a custom alert
   }
 
+  const handleClosePreview = event => {
+    setIsPreviewOpen(false)
+  }
+  
   const handleCloseCamera = event => {
     stopCamera()
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
@@ -213,14 +208,16 @@ const Camera = () => {
             <video ref={videoRef} className="camera" autoPlay muted aria-label="camera feed" aria-live="assertive"></video>
             <NavOverlay timer={timer} previewFiles={handlePreviewFiles} openSubmit={handleOpenLocationModal} toggleMute={toggleMute} mute={mute} />
 
-            {/*
-            <Modal open={isPreviewOpen}>
-              <Preview type={type} closeModal={closeModal} />
+            
+            <Modal className="preview-modal" open={isPreviewOpen} onClose={handleClosePreview} >
+              <Preview type={type} closeModal={handleClosePreview} />
             </Modal>
+    
+           {/*
             <Modal open={isSubmitPostOpen}>
               <SubmitPost modalRef={locationModalRef} /> 
             </Modal>
-            */}
+           */}
           </div>
           
           <div className="card-actions">
