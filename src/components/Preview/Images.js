@@ -44,16 +44,19 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   const handleIntersection = entries => {
+
+    console.log('entries: ', entries)
+    
     entries.forEach(entry => {
 
       console.log('entry.isIntersecting: ', entry.isIntersecting)
 
-      console.log('id: ', Number(entry.target.id.split('image-preview-')[1]))
+      console.log('id: ', entry.target.id)
 
       // index is NOT updating for some reason
       if (entry.isIntersecting) {
         console.log('passed condition and should update')
-        setIndex(Number(entry.target.id.split('image-preview-')[1]) + 1)
+        setIndex(Number(entry.target.id.split('image-preview-')[1]))
       }
     })
   }
