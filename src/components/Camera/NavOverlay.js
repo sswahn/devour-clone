@@ -98,7 +98,7 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
           type="button"
           aria-label="camera mode"
           aria-selected={context.mode === 'camera'}>
-          <CameraIcon style={{ color: context.mode === 'camera' ? 'white' : 'gray' }} />
+          <CameraIcon style={{ fill: context.mode === 'camera' ? 'white' : 'gray' }} />
           <div className="tooltip" role="tooltip">Camera</div>
         </button>
         <button 
@@ -108,7 +108,7 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
           aria-label="video mode"
           aria-selected={context.mode === 'video' || context.mode === 'recording'}
           aria-controls="mute-video">
-          <VideoIcon style={{ color: context.mode === 'video' || context.mode === 'recording' ? 'white' : 'gray' }} />
+          <VideoIcon style={{ fill: context.mode === 'video' || context.mode === 'recording' ? 'white' : 'gray' }} />
           <div className="tooltip" role="tooltip">Video</div>
         </button>
         <button className="icon-btn" onClick={openSubmit} type="button" aria-label="add your location" aria-haspopup="dialog">
