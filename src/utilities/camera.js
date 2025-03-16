@@ -95,6 +95,16 @@ const camera = {
       const ctx = canvas.getContext('2d')
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
       canvas.toBlob(blob => blob ? resolve(blob) : reject('Failed to create blob from canvas.'), 'image/webp', 1)
+
+      /* // Improved Version Using OffscreenCanvas:
+        const bitmap = await createImageBitmap(videoElement);
+        const canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(bitmap, 0, 0);
+
+        // Attempt lossless WebP
+        return await canvas.convertToBlob({ type: "image/webp" });
+      */
     })
   },
   mute(stream) {
