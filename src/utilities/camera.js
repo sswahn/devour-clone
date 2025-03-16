@@ -99,10 +99,9 @@ const camera = {
       /* // Improved Version Using OffscreenCanvas:
         const canvas = new OffscreenCanvas(videoElement.videoWidth, videoElement.videoHeight)
         const ctx = canvas.getContext("2d")
-        ctx.drawImage(bitmap, 0, 0)
+        ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height)
 
-        // Attempt lossless WebP
-        return await canvas.convertToBlob({ type: "image/webp" })
+        return await canvas.convertToBlob({ type: "image/webp" }) // Attempt lossless WebP
       */
     })
   },
