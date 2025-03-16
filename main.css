@@ -627,7 +627,6 @@ html, body {
 
 .icon-btn svg {
   fill: white;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -655,8 +654,12 @@ html, body {
   width: 45px; 
 }
 
-.icon-btn-alt svg {
+.icon-btn-alt svg { /* consider only getting rid of -alt and only using .icon-btn for all icon buttons */
   fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .icon-btn-alt:hover .tooltip {
