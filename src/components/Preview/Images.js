@@ -46,7 +46,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const handleIntersection = entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setIndex(entry.target.id.split('image-preview-')[1])
+        setIndex(Number(entry.target.id.split('image-preview-')[1]))
       }
     })
   }
