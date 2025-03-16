@@ -62,6 +62,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   useEffect(() => {
+
+    // problem might be with how the modal is mounted
+    
     console.log('imageRefs.current: ', imageRefs.current)
     
     if (imageRefs.current.length === 0) {
