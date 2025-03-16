@@ -1,9 +1,9 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, memo } from 'react'
 import { Context } from '../../Provider'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
 import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
 
-const Images = ({ index, setIndex, imageURLs, imageEditorStyles }) => {
+const Images = memo({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const [context, dispatch] = useContext(Context)
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
@@ -96,6 +96,6 @@ const Images = ({ index, setIndex, imageURLs, imageEditorStyles }) => {
       )}
     </div>
   )
-}
+})
 
 export default Images
