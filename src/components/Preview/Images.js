@@ -57,17 +57,12 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
       rootMargin: '0px',
       threshold: 0.5, 
     }
-
-    console.log('imageRefs.current: ', imageRefs.current)
-    
     const observer = new IntersectionObserver(handleIntersection, options)
     imageRefs.current.forEach(img => observer.observe(img))
     return () => {
       observer.disconnect()
     }
   }, [imageRefs.current])
-
-  console.log('index: ', index)
   
   return (
     <div className="media-component" ref={imageContainerRef}>
