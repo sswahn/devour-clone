@@ -62,14 +62,18 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   useEffect(() => {
+    console.log('imageRefs.current: ', imageRefs.current)
+    
+    if (imageRefs.current.length === 0) {
+      return
+    }
+    
     const options = {
       root: null, 
       rootMargin: '0px',
       threshold: 0.5, 
     }
     const observer = new IntersectionObserver(handleIntersection, options)
-
-    console.log('imageRefs.current: ', imageRefs.current)
     
     imageRefs.current.forEach(img => observer.observe(img))
     return () => {
