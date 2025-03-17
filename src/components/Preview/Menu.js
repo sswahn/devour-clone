@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { Context } from '../../Provider'
-import { Dropdown } from '@sswahn/components' // use this instead once it has icon functionality
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
+import Dropdown from '../Dropdown/Dropdown'
 import MediaEditor from '../MediaEditor/MediaEditor'
 import CaptionInput from '../CaptionInput/CaptionInput'
 import CircleXIcon from '../Icons/CircleXIcon/CircleXIcon'
@@ -11,7 +11,7 @@ import CommentIcon from '../Icons/CommentIcon/CommentIcon'
 import PenToSquareIcon from '../Icons/PenToSquareIcon/PenToSquareIcon'
 import SlidersIcon from '../Icons/SlidersIcon/SlidersIcon'
 
-export default function Menu({ type, index, setIndex, closeModal }) {
+const Menu = ({ type, index, setIndex, closeModal }) => {
   const [context, dispatch] = useContext(Context)
   const [displayMenu, setDisplayMenu] = useState(false)
   const [displayEditor, setDisplayEditor] = useState(false)
@@ -133,3 +133,5 @@ export default function Menu({ type, index, setIndex, closeModal }) {
     </>
   )
 }
+
+export default Menu
