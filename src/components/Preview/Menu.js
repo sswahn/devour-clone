@@ -110,7 +110,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   return (
     <>
       <Dropdown
-        className="icon-btn-alt caption-btn dropdown-menu"
+        className="icon-btn-alt caption-btn"
         icon={PenToSquareIcon}
         text="Select an option"
         options={dropdownOptions}
