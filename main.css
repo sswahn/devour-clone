@@ -695,6 +695,10 @@ html, body {
   padding: 10px 0 0 10px;
 }
 
+.user-header svg {
+  fill: white;
+}
+
 .header-text button {
   background: none;
   border: 0;
