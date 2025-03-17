@@ -506,9 +506,7 @@ html, body {
 }
 
 .media-item {
-
   object-fit: cover;
-  
   display: inline-block;
   height: 100%;
   pointer-events: none;
@@ -542,7 +540,6 @@ html, body {
   width: 200px;
   z-index: 99999;
 }
-
 
 .dropdown-menu button {
   background: none;
@@ -579,6 +576,78 @@ html, body {
 
 .delete-btn:hover {
   color: red;
+}
+
+
+
+
+.caption-btn {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.caption-btn > .tooltip {
+  z-index: 9999;
+}
+
+.caption-wrapper {
+  margin-top: 10px;
+  position: relative;
+  
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.caption-header {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+}
+
+.caption-header button {
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+
+.caption-container {
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+}
+
+.caption-input-empty:before {
+  color: gray;
+  content: 'Add a caption';
+}
+
+.caption-input {
+  background: rgba(0, 0, 0, .7);
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  padding: 15px 15px 5px 15px;
+  width: 100%;
+}
+
+.caption-input:focus {
+  outline: none;
+}
+
+.caption {
+  bottom: 0;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
 }
 
 
