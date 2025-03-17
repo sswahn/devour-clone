@@ -32,7 +32,7 @@ const Sidebar = () => {
   
   const handleOpenProfile = () => {
     //dispatch({ type: 'sidebar', payload: false })
-    navigateTo(`/devour-clone/profile/${context.user.username || 'sswahn'}`)
+    navigateTo(`/devour-clone/profile/${context.user.username}`)
   }
   
   const handleOpenCamera = event => {
@@ -118,8 +118,8 @@ const Sidebar = () => {
         {!context.session ? (
           <div className="sidebar-btn-container">
             <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
-              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username || 'sswahn'} onClick={() => {}} size="18px" />
-              <span className="sidebar-user">{context.user.username || 'sswahn'}</span>
+              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username} onClick={() => {}} size="18px" />
+              <span className="sidebar-user">{context.user.username}</span>
             </button>
             <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
               <CameraIcon />
