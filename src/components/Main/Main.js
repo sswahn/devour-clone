@@ -11,7 +11,12 @@ const Main = () => {
   
   return (
     <main>
-
+      <div className="card" aria-label="">  {/* break card out into its own component and reuse */}
+        <div className="card-header"></div>
+        <div className="card-content"></div>
+        <div className="card-actions"></div>
+      </div>
+      
       <Modal className="camera-modal" open={context.modal.isOpen} onClose={handleCloseModal}>
         {context.modal.content}
       </Modal>
