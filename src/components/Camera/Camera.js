@@ -218,7 +218,7 @@ const Camera = () => {
 
             
             <Modal className="preview-modal" open={isPreviewOpen} onClose={handleClosePreview} >
-              <Preview type={type} closeModal={handleClosePreview} />
+              {isPreviewOpen && <Preview type={type} closeModal={handleClosePreview} />}
             </Modal>
     
            {/*
