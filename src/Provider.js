@@ -28,7 +28,9 @@ export default function Provider({ children }) {
     field: undefined,
     turnstile: undefined,
     session: false,
-    user: {},
+    user: {
+      username: 'sswahn'
+    },
     email_verified: false
   }
   function reducer(state, action) {
