@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect, memo } from 'react'
 import { Context } from '../../Provider'
 import { navigateTo } from '@sswahn/router'
-import { Avatar } from '@sswahn/social'
 import storage from '@sswahn/storage'
+import Avatar from '../Avatar/Avatar'
 import Menu from './Menu'
 import Figure from './Figure'
 
@@ -37,7 +37,7 @@ const Preview = memo(({ type, closeModal }) => {
     <div className="card" aria-label={`${type} preview`}>
       <div className="card-header">
         <div className="user-header">
-          <Avatar image={context.user.avatar} username={context.user.username} />
+          <Avatar className="" image={context.user.avatar} username={context.user.username} />
           <div className="header-text">
             <a href={`/profile/${context.user.username}`} onClick={handleNavigation} aria-label={`${context.user.username}'s' profile`}>{context.user.username}</a> 
             <div>Preview</div>
