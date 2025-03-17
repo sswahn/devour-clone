@@ -49,6 +49,50 @@
   position: relative;
 }
 
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/styles.module.css ***!
+  \*********************************************************************************************/
+/* Dropdown css */
+
+.BenFiZ_eg7uUmffHIbvw button {
+  cursor: pointer;
+  display: flex;
+}
+
+.hDbts_Mt0Vm3zF1CfPZv {
+  margin-right: 10px;
+}
+
+.BenFiZ_eg7uUmffHIbvw menu {
+  border: 1px solid black;
+  list-style-type: none;
+  padding-left: 0;
+  width: 150px;
+}
+
+.dd8ImTIeZy1JpTI6jyMv {
+  display: block;
+}
+
+._jbaahJ9sY7rSUzB9unW {
+  display: none;
+}
+
+.BenFiZ_eg7uUmffHIbvw li {
+  border-top: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.BenFiZ_eg7uUmffHIbvw li:first-child {
+  border-top: 0;
+}
+
+.BenFiZ_eg7uUmffHIbvw li:hover {
+  background-color: #eee;
+}
+
 /*!***********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@sswahn/components/src/core/Checkbox/styles.module.css ***!
   \***********************************************************************************************************************/
