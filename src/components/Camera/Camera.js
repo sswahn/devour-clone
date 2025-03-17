@@ -213,7 +213,7 @@ const Camera = () => {
           </div>
           
           <div className="card-content">
-            <video ref={videoRef} className="camera" autoPlay muted aria-label="camera feed" aria-live="assertive"></video>
+            <video ref={videoRef} className="camera" autoPlay muted playsInline aria-label="camera feed" aria-live="assertive"></video>
             <NavOverlay timer={timer} previewFiles={handlePreviewFiles} openSubmit={handleOpenLocationModal} toggleMute={toggleMute} mute={mute} />
 
             
