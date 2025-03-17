@@ -695,14 +695,17 @@ html, body {
   padding: 10px 0 0 10px;
 }
 
-.header-text {
+.header-text button {
+  background: red;
+  border: 0;
+  color: white;
   font-size: 15px; 
   font-weight: bold;
   margin-left: 1px;
 }
 
 .header-text > div:last-child {
-  color: var(--dark-color-secondary);
+  color: gray;
   font-size: 12px;
   font-weight: normal;
   margin-left: 5px;
