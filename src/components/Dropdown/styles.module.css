@@ -1,0 +1,40 @@
+/* Dropdown css */
+
+.dropdown button {
+  cursor: pointer;
+  display: flex;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.dropdown menu {
+  border: 1px solid black;
+  list-style-type: none;
+  padding-left: 0;
+  width: 150px;
+}
+
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+.dropdown li {
+  border-top: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.dropdown li:first-child {
+  border-top: 0;
+}
+
+.dropdown li:hover {
+  background-color: #eee;
+}
