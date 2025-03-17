@@ -465,7 +465,7 @@ html, body {
 }
 
 .header-text button {
-  background: red;
+  background: none;
   border: 0;
   color: white;
   font-size: 15px; 
