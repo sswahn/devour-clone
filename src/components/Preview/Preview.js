@@ -11,9 +11,9 @@ const Preview = memo(({ type, closeModal }) => {
   const [index, setIndex] = useState(0)
 
   const handleNavigation = event => {
-    event.preventDefault()
     navigateTo(`/profile/${context.user.username}`)
   }
+
   
   const loadFromStorage = () => {
     if (type === 'video') {
@@ -39,7 +39,7 @@ const Preview = memo(({ type, closeModal }) => {
         <div className="user-header">
           <Avatar className="" image={context.user.avatar} username={context.user.username} />
           <div className="header-text">
-            <a href={`/profile/${context.user.username}`} onClick={handleNavigation} aria-label={`${context.user.username}'s' profile`}>{context.user.username}</a> 
+            <button onClick={handleNavigation} type="button" aria-label={`${context.user.username}'s' profile`}>{context.user.username}</button> 
             <div>Preview</div>
           </div>
         </div>
