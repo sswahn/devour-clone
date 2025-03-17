@@ -651,6 +651,8 @@ html, body {
 }
 
 
+/* not sure what the following does */
+
 .font-size-menu {
   align-items: center;
   background-color: white;
@@ -763,6 +765,59 @@ html, body {
 
 .caption-suggestions > div div:nth-of-type(2) {
   margin-left: 15px;
+}
+
+/*    */
+
+
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 5px;
+  list-style: none;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  width: 200px;
+  z-index: 99999;
+}
+
+
+.dropdown-menu button {
+  background: none;
+  border: 0;
+  color: var(--dark-color);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 0 15px 15px;
+  position: relative;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: var(--dark-background-color-tertiary);
+}
+
+
+.dropdown-menu span {
+  margin-left: 15px;
+}
+
+.preview-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+}
+
+.save-btn:hover {
+  color: green;
+}
+
+.delete-btn:hover {
+  color: red;
 }
 
 
