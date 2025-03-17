@@ -151,7 +151,7 @@ const Video = memo(({ index, setIndex, videoURLs, videoEditorStyles }) => {    /
             onPause={handleOnPause} 
             src={item.url} 
             loop 
-            {/* playsInline */}
+    
             style={{
               border: videoEditorStyles[index]?.border || 0,
               filter: videoEditorStyles[index]?.filter || 'none'
