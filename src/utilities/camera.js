@@ -26,13 +26,13 @@ const camera = {
       ...constraints
     }
     try {
+      /*
       const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
       const track = stream.getVideoTracks()[0];
       const capabilities = track.getCapabilities(); // Get device capabilities
-
       console.log("Camera Capabilities:", capabilities);
-
       return capabilities
+      */
       
       return navigator.mediaDevices.getUserMedia(finalConstraints)
     } catch (error) {
