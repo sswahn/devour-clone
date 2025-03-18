@@ -1,5 +1,14 @@
 const camera = {
-  // remove async
+  
+  getDeviceCapabilities = stream => {
+    const track = stream.getVideoTracks()[0]
+    const capabilities = track.getCapabilities() // Get device capabilities
+  
+    console.log('Camera Capabilities: ', capabilities)
+  
+    return capabilities
+  },
+  
   async on(constraints = {}) {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
       throw new TypeError('on: argument must be an object literal.')
