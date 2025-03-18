@@ -193,8 +193,6 @@ const Camera = () => {
       clearInterval(interval)
     }
   }, [timer, context.mode])
-  
-  // playsInline effects how video is displayed in mobile
 
   return (
     <div className="card" aria-label="camera viewport">
