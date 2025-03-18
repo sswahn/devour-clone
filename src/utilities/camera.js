@@ -53,49 +53,29 @@ const camera = {
     if (!(stream instanceof MediaStream)) {
       throw new TypeError('light: argument must be an instance of MediaStream.')
     }
-    let constraints = undefined
     const videoTracks = stream.getVideoTracks()
     if (!videoTracks.length) {
       throw new Error('No video tracks available.')
     }
-    const videoTrack = videoTracks[0]
-    // Check if the fillLightMode constraint is supported
-    if (videoTrack.getCapabilities().hasOwnProperty('fillLightMode')) {
-        constraints = { fillLightMode: 'flash' }
+    const constraints = {
+      fillLightMode: 'flash',
+      advanced: [{ torch: true }] 
     }
-    // Check if the torch constraint is supported
-    if (videoTrack.getCapabilities().hasOwnProperty('torch')) {
-        constraints = { advanced: [{ torch: true }] }
-    }
-    if (!constraints) {
-        throw new Error('This device has no torch.')
-    }
-    // Turn on the camera light
-    return videoTrack.applyConstraints(constraints)
+    return videoTracks[0].applyConstraints(constraints)
   },
   dark(stream) {
     if (!(stream instanceof MediaStream)) {
       throw new TypeError('dark: argument must be an instance of MediaStream.')
     }
-    let constraints = undefined
     const videoTracks = stream.getVideoTracks()
     if (!videoTracks.length) {
       throw new Error('No video tracks available.')
     }
-    const videoTrack = videoTracks[0]
-    // Check if the fillLightMode constraint is supported
-    if (videoTrack.getCapabilities().hasOwnProperty('fillLightMode')) {
-        constraints = { fillLightMode: 'off' }
+    const constraints = {
+      fillLightMode: 'off',
+      advanced: [{ torch: false }] 
     }
-    // Check if the torch constraint is supported
-    if (videoTrack.getCapabilities().hasOwnProperty('torch')) {
-        constraints = { advanced: [{ torch: false }] }
-    }
-    if (!constraints) {
-        throw new Error('This device has no torch.')
-    }
-    // Turn off the camera light
-    return videoTrack.applyConstraints(constraints)
+    return videoTracks[0].applyConstraints(constraints)
   },
   async takePhoto(stream) {
     if (!(stream instanceof MediaStream)) {
