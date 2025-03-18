@@ -93,12 +93,11 @@ const Camera = () => {
       return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
     }
     triggerFlash()
-    const image = await camera.takePhoto(videoRef.current)
+    const image = await camera.takePhoto(streamRef.current)
     //new Audio(effects).play() 
     const images = [ ...context.images, image ]
     dispatch({ type: 'images', payload: images }) 
     db.put({ id: 'images', images })
-    
   }
   
   const handleRecordVideo = () => {
