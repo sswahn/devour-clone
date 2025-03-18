@@ -6,7 +6,8 @@ const camera = {
     }
     const defaultConstraints = {
       audio: {
-        echoCancellation: true,
+        echoCancellation: false,
+        noiseSuppression: false,
         sampleRate: 48000
       },
       video: {
