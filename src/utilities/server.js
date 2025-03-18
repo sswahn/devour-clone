@@ -17,7 +17,7 @@ const handleResponse = async response => {
     throw new Error(`${response.status}: ${errorMessage}`)
   }
   if (!response.body) {
-    return null
+    return { success: true, message: 'No content' }
   }
   return response.json()
 }
