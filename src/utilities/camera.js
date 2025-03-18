@@ -87,6 +87,12 @@ const camera = {
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
+
+const capabilities = track.getCapabilities();
+
+console.log("Max Photo Resolution:", capabilities.imageWidth?.max, "x", capabilities.imageHeight?.max);
+console.log("Current Video Resolution:", track.getSettings().width, "x", track.getSettings().height)
+    
     return imageCapture.takePhoto(photoSettings)
       
     /*
