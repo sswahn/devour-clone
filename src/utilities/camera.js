@@ -44,7 +44,11 @@ const camera = {
       throw new TypeError('off: argument must be an instance of MediaStream.')
     }
     try {
-      stream.getTracks().forEach(track => track.stop())
+      stream.getTracks().forEach(track => {
+        if (track.readyState === 'live') {
+          track.stop()
+        }
+      })
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
     }
