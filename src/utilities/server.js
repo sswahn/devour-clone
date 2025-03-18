@@ -14,7 +14,10 @@ const typeCheck = (method, api, request = undefined, headers = {}) => {
 const handleResponse = async response => {
   if (!response.ok) {
     const errorMessage = await response.text()
-    throw new Error(`Status: ${response.status}, Message: ${errorMessage}`)
+    throw new Error(`${response.status}: ${errorMessage}`)
+  }
+  if (!response.body) {
+    return null
   }
   return response.json()
 }
