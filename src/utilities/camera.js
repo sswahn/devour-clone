@@ -91,7 +91,7 @@ const camera = {
 const capabilities = track.getCapabilities()
 
 console.log("Capabilities: ", capabilities)
-console.log("Max Photo Resolution:", capabilities.imageWidth?.max, "x", capabilities.imageHeight?.max)
+console.log("Max Photo Resolution:", capabilities.width.max, "x", capabilities.height.max)
 console.log("Current Video Resolution:", track.getSettings().width, "x", track.getSettings().height)
     
 if (capabilities.hdr && !settings.hdr) {
