@@ -25,6 +25,9 @@ const camera = {
       ...constraints
     }
     try {
+      
+      console.log(navigator.mediaDevices.getSupportedConstraints())
+
       return navigator.mediaDevices.getUserMedia(finalConstraints)
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
