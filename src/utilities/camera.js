@@ -1,6 +1,7 @@
 const camera = {
   
-  getDeviceCapabilities = stream => {
+  getDeviceCapabilities(stream) {
+    
     const track = stream.getVideoTracks()[0]
     const capabilities = track.getCapabilities() // Get device capabilities
   
