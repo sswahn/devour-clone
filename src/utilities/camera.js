@@ -12,6 +12,10 @@ const camera = {
       video: {
         facingMode: 'environment',
 
+        // remove quality optimizations
+        // and make a paid feature
+        // use browser defaults for all else...
+        
         width: { ideal: 99999 },
         height: { ideal: 99999 },
         frameRate: { ideal: 999 },
