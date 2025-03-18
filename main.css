@@ -656,6 +656,7 @@ html, body {
   height: 100%;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+  max-width: 100%;
   width: 100%;
 }
 
