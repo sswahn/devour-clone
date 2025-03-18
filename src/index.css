@@ -383,6 +383,9 @@ html, body {
   image-rendering: pixelated;
   max-width: 100%;
   width: 100%;
+
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 .camera-button-container { 
