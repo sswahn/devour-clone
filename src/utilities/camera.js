@@ -101,7 +101,7 @@ if (capabilities.hdr && !settings.hdr) {
 
     
     
-    return imageCapture.takePhoto(photoSettings)
+    return imageCapture.takePhoto()
       
     /*
     const canvas = new OffscreenCanvas(videoElement.videoWidth, videoElement.videoHeight)
