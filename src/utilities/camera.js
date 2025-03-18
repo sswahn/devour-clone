@@ -12,9 +12,9 @@ const camera = {
       video: {
         facingMode: 'environment',
 
-        width: { ideal: 3840 }, // 4K resolution
-        height: { ideal: 2160 },
-        frameRate: { ideal: 60, max: 60 }, // High frame rate
+        width: { ideal: 99999 },
+        height: { ideal: 99999 },
+        frameRate: { ideal: 999 },
         
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
