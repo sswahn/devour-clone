@@ -91,9 +91,9 @@ const camera = {
     // Turn off the camera light
     return videoTrack.applyConstraints(constraints)
   },
-  async takePhoto(videoElement) {
-    if (!(videoElement instanceof HTMLVideoElement)) {
-      throw new TypeError('takePhoto: argument must be an instance of HTMLVideoElement.')
+  async takePhoto(stream) {
+    if (!(stream instanceof MediaStream)) {
+      throw new TypeError('takePhoto: argument must be an instance of MediaStream.')
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
