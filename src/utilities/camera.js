@@ -90,6 +90,7 @@ const camera = {
 
 const capabilities = track.getCapabilities()
 
+console.log("Capabilities: ", capabilities)
 console.log("Max Photo Resolution:", capabilities.imageWidth?.max, "x", capabilities.imageHeight?.max)
 console.log("Current Video Resolution:", track.getSettings().width, "x", track.getSettings().height)
     
