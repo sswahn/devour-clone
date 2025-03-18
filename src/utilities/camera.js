@@ -87,7 +87,14 @@ const camera = {
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
-    return imageCapture.takePhoto()
+    
+    const capabilities = track.getCapabilities()
+    const photoSettings = {
+      imageWidth: capabilities.imageWidth?.max || 1920,
+      imageHeight: capabilities.imageHeight?.max || 1080
+    }
+    
+    return imageCapture.takePhoto(photoSettings)
       
     /*
     const canvas = new OffscreenCanvas(videoElement.videoWidth, videoElement.videoHeight)
