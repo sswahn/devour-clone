@@ -153,8 +153,8 @@ const camera = {
     }
     const options = {
       mimeType: 'video/webm; codecs=vp9,opus',
-      videoBitsPerSecond: 5000000, // High video quality
-      audioBitsPerSecond: 192000   // Force 192 kbps audio quality
+      videoBitsPerSecond: 10_000_000, // High video quality
+      audioBitsPerSecond: 320_000   // Force 192 kbps audio quality
     }
     const mediaRecorder = new MediaRecorder(stream, options)
     mediaRecorder.ondataavailable = event => {
