@@ -10,8 +10,11 @@ const camera = {
       },
       video: {
         facingMode: 'environment',
-       // width: { ideal: 1920 }, // Suggest Full HD
-     //   height: { ideal: 1080 },
+
+        width: { ideal: 3840 }, // 4K resolution
+        height: { ideal: 2160 },
+        frameRate: { ideal: 60, max: 60 }, // High frame rate
+        
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
         }
@@ -89,22 +92,16 @@ const camera = {
     if (!(videoElement instanceof HTMLVideoElement)) {
       throw new TypeError('takePhoto: argument must be an instance of HTMLVideoElement.')
     }
+    const track = stream.getVideoTracks()[0]
+    const imageCapture = new ImageCapture(track)
+    return imageCapture.takePhoto()
+      
     /*
-    return new Promise((resolve, reject) => {
-      const video = videoElement
-      const canvas = document.createElement('canvas')
-      canvas.width = video.videoWidth
-      canvas.height = video.videoHeight
-      const ctx = canvas.getContext('2d')
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
-      canvas.toBlob(blob => blob ? resolve(blob) : reject('Failed to create blob from canvas.'), 'image/webp', 1)
-    })
-    */
-    // Improved Version Using OffscreenCanvas:
     const canvas = new OffscreenCanvas(videoElement.videoWidth, videoElement.videoHeight)
     const ctx = canvas.getContext("2d")
     ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height)
     return canvas.convertToBlob({ type: "image/webp" }) // Attempt lossless WebP
+    */
   },
   mute(stream) {
     if (!(stream instanceof MediaStream)) {
