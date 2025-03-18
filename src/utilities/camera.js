@@ -143,7 +143,12 @@ const camera = {
     if (!Array.isArray(frames)) {
       throw new TypeError('startRecording: second argument must be an array.')
     }
-    const mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm; codecs=vp9,opus', videoBitsPerSecond: 5000000 })
+    const options = {
+      mimeType: 'video/webm; codecs=vp9,opus',
+      videoBitsPerSecond: 5000000, // High video quality
+      audioBitsPerSecond: 192000   // Force 192 kbps audio quality
+    }
+    const mediaRecorder = new MediaRecorder(stream, options)
     mediaRecorder.ondataavailable = event => {
       frames.push(event.data)
     }
