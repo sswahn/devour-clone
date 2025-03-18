@@ -87,24 +87,26 @@ const camera = {
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
+    const capabilities = track.getCapabilities()
+    const settings = track.getSettings()
+    const options = {
+      imageWidth: capabilities.width.max || settings.width,
+      imageHeight: capabilities.height.max || settings.height
+    }
 
-const capabilities = track.getCapabilities()
-const settings = track.getSettings()
+    console.log("Capabilities: ", capabilities)
+    console.log("Settings: ", settings)
+        
+    console.log("Max Photo Resolution:", capabilities.width.max, "x", capabilities.height.max)
+    console.log("Current Video Resolution:", track.getSettings().width, "x", track.getSettings().height)
+    console.log('Options: ', options)
+    
+    if (capabilities.hdr && !settings.hdr) {
+      console.log("Enabling HDR...")
+      await track.applyConstraints({ advanced: [{ hdr: true }] })
+    }
 
-console.log("Capabilities: ", capabilities)
-console.log("Settings: ", settings)
-    
-console.log("Max Photo Resolution:", capabilities.width.max, "x", capabilities.height.max)
-console.log("Current Video Resolution:", track.getSettings().width, "x", track.getSettings().height)
-    
-if (capabilities.hdr && !settings.hdr) {
-  console.log("Enabling HDR...")
-  await track.applyConstraints({ advanced: [{ hdr: true }] })
-}
-
-    
-    
-    return imageCapture.takePhoto()
+    return imageCapture.takePhoto(options)
       
     /*
     const canvas = new OffscreenCanvas(videoElement.videoWidth, videoElement.videoHeight)
