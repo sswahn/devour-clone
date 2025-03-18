@@ -16,19 +16,20 @@ const handleResponse = async response => {
     const errorMessage = await response.text()
     throw new Error(`Status: ${response.status}, Message: ${errorMessage}`)
   }
+  return response.json()
 }
 
 const server = {
   async get(api, headers = {}) {
     try {
       typeCheck('get', api, undefined, headers)
-      const response = await fetch(api, {
+      const options = {
         headers: {
           ...headers
         }
-      })
-      await handleResponse(response)
-      return response.json()
+      }
+      const response = await fetch(api, options)
+      return handleResponse(response)
     } catch (error) {
       throw new Error(`Failed to execute GET request. ${error}`)
     }
@@ -36,16 +37,16 @@ const server = {
   async post(api, request, headers = {}) {
     try {
       typeCheck('post', api, request, headers)
-      const response = await fetch(api, {
+      const options = {
         method: 'post',
         body: JSON.stringify(request),
         headers: {
           'Content-Type': 'application/json',
           ...headers
         }
-      })
-      await handleResponse(response)
-      return response.json()
+      }
+      const response = await fetch(api, options)
+      return handleResponse(response)
     } catch (error) {
       throw new Error(`Failed to execute POST request. ${error}`)
     }
@@ -53,16 +54,16 @@ const server = {
   async put(api, request, headers = {}) {
     try {
       typeCheck('put', api, request, headers)
-      const response = await fetch(api, {
+      const options = {
         method: 'put',
         body: JSON.stringify(request),
         headers: {
           'Content-Type': 'application/json',
           ...headers
         }
-      })
-      await handleResponse(response)
-      return response.json()
+      }
+      const response = await fetch(api, options)
+      return handleResponse(response)
     } catch (error) {
       throw new Error(`Failed to execute PUT request. ${error}`)
     }
@@ -70,15 +71,15 @@ const server = {
   async delete(api, headers = {}) {
     try {
       typeCheck('delete', api, undefined, headers)
-      const response = await fetch(api, {
+      const options = {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json',
           ...headers
         }
-      })
-      await handleResponse(response)
-      return response.json()
+      }
+      const response = await fetch(api, options)
+      return handleResponse(response)
     } catch (error) {
       throw new Error(`Failed to execute DELETE request. ${error}`)
     }
