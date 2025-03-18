@@ -165,6 +165,10 @@ const camera = {
       videoBitsPerSecond: 10_000_000, // High video quality
       audioBitsPerSecond: 320_000   // Force 192 kbps audio quality
     }
+    if (!MediaRecorder.isTypeSupported('video/webm; codecs=vp9')) {
+      console.log('VP9 codec unsupported by device. Falling back to VP8.')
+      options.mimeType = 'video/webm; codecs=vp8' // Fallback
+    }
     const mediaRecorder = new MediaRecorder(stream, options)
     mediaRecorder.ondataavailable = event => {
       frames.push(event.data)
