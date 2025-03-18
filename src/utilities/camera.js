@@ -87,13 +87,6 @@ const camera = {
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
-    
-    const capabilities = track.getCapabilities()
-    const photoSettings = {
-      imageWidth: capabilities.imageWidth?.max || 1920,
-      imageHeight: capabilities.imageHeight?.max || 1080
-    }
-    
     return imageCapture.takePhoto(photoSettings)
       
     /*
