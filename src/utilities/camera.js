@@ -1,4 +1,5 @@
 const camera = {
+  // remove async
   async on(constraints = {}) {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
       throw new TypeError('on: argument must be an object literal.')
@@ -25,9 +26,14 @@ const camera = {
       ...constraints
     }
     try {
-      
-      console.log(navigator.mediaDevices.getSupportedConstraints())
+      const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
+      const track = stream.getVideoTracks()[0];
+      const capabilities = track.getCapabilities(); // Get device capabilities
 
+      console.log("Camera Capabilities:", capabilities);
+
+      return capabilities
+      
       return navigator.mediaDevices.getUserMedia(finalConstraints)
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
