@@ -109,7 +109,7 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
 
       return new Promise((resolve, reject) => {
         transaction.oncomplete = () => {
-          resolve()
+          resolve(`Successfully added ${items.length} items to ${storeName}.`)
         }
         transaction.onerror = event => {
           reject(new Error(`Failed to add items to ${storeName}.`))
