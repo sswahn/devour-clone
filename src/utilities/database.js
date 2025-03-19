@@ -35,7 +35,7 @@ const openDatabase = async storeConfigs => {
       dbInstance = connection.result
       resolve(dbInstance)
     }
-    connection.onerror = event => {
+    connection.onerror = () => {
       reject(new Error(`Failed to open DB.`))
     }
   })
@@ -51,7 +51,7 @@ const executeRequest = async (storeConfigs, storeName, mode, operation, data) =>
     request.onsuccess = () => {
       resolve(request.result)
     }
-    request.onerror = event => {
+    request.onerror = () => {
       reject(new Error(`Failed to execute ${operation} on ${storeName}.`))
     }
   })
@@ -72,7 +72,7 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         request.onsuccess = () => {
           resolve(request.result)
         }
-        request.onerror = event => {
+        request.onerror = () => {
           reject(new Error(`Failed to retrieve all records from ${storeName}.`))
         }
       })
@@ -96,7 +96,7 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
           }
           resolve(`Database ${dbName} deleted successfully.`)
         }
-        request.onerror = event => {
+        request.onerror = () => {
           reject(new Error(`Failed to delete ${dbName}.`))
         }
       })
@@ -111,8 +111,11 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         transaction.oncomplete = () => {
           resolve(`Successfully added ${items.length} items to ${storeName}.`)
         }
-        transaction.onerror = event => {
+        transaction.onerror = () => {
           reject(new Error(`Failed to add items to ${storeName}.`))
+        }
+        transaction.onabort = () => {
+          reject(new Error(`Transaction aborted while adding items to ${storeName}.`))
         }
       })
     },
@@ -126,7 +129,7 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         request.onsuccess = () => {
           resolve(request.result)
         }
-        request.onerror = event => {
+        request.onerror = () => {
           reject(new Error(`Failed to retrieve count of records from ${storeName}.`))
         }
       })
