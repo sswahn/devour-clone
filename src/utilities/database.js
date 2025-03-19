@@ -11,6 +11,9 @@ const openDatabase = async storeConfigs => {
   if (dbInstance) {
     return dbInstance
   }
+  
+  storeConfigs = Array.isArray(storeConfigs) ? storeConfigs : [storeConfigs]
+
   const effectiveConfig = { 
     ...DEFAULT_CONFIG, 
     ...storeConfigs[0] 
