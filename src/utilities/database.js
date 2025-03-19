@@ -14,20 +14,20 @@ const openDatabase = async storeConfigs => {
   
   storeConfigs = Array.isArray(storeConfigs) ? storeConfigs : [storeConfigs]
 
-  const effectiveConfig = { 
+  const config = { 
     ...DEFAULT_CONFIG, 
     ...storeConfigs[0] 
   }
   return new Promise((resolve, reject) => {
     const connection = indexedDB.open(
-      effectiveConfig.dbName, 
-      effectiveConfig.dbVersion
+      config.dbName, 
+      config.dbVersion
     )
     connection.onupgradeneeded = event => {
       const db = event.target.result
       storeConfigs.forEach(storeConfig => {
         if (!db.objectStoreNames.contains(storeConfig.storeName)) {
-          const store = db.createObjectStore(storeConfig.storeName, { keyPath: storeConfig.keyPath || effectiveConfig.keyPath })
+          const store = db.createObjectStore(storeConfig.storeName, { keyPath: storeConfig.keyPath || config.keyPath })
           storeConfig.indexes && storeConfig.indexes.forEach(index => {
             store.createIndex(index.name, index.keyPath, { unique: index.unique })
           })
