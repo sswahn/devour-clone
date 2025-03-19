@@ -35,8 +35,8 @@ const openDatabase = async storeConfigs => {
       dbInstance = connection.result
       resolve(dbInstance)
     }
-    connection.onerror = () => {
-      reject(new Error(`Failed to open DB.`))
+    connection.onerror = ({ target: { error } }) => {
+      reject(new Error(`Failed to open DB: ${error}`))
     }
   })
 }
@@ -51,8 +51,8 @@ const executeRequest = async (storeConfigs, storeName, mode, operation, data) =>
     request.onsuccess = () => {
       resolve(request.result)
     }
-    request.onerror = () => {
-      reject(new Error(`Failed to execute ${operation} on ${storeName}.`))
+    request.onerror = ({ target: { error } }) => {
+      reject(new Error(`Failed to execute ${operation} on ${storeName}: ${error}`))
     }
   })
 }
@@ -72,8 +72,8 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         request.onsuccess = () => {
           resolve(request.result)
         }
-        request.onerror = () => {
-          reject(new Error(`Failed to retrieve all records from ${storeName}.`))
+        request.onerror = ({ target: { error } }) => {
+          reject(new Error(`Failed to retrieve all records from ${storeName}: ${error}`))
         }
       })
     },
@@ -96,8 +96,8 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
           }
           resolve(`Database ${dbName} deleted successfully.`)
         }
-        request.onerror = () => {
-          reject(new Error(`Failed to delete ${dbName}.`))
+        request.onerror = ({ target: { error } }) => {
+          reject(new Error(`Failed to delete ${dbName}: ${error}`))
         }
       })
     },
@@ -114,8 +114,8 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         transaction.onerror = () => {
           reject(new Error(`Failed to add items to ${storeName}.`))
         }
-        transaction.onabort = () => {
-          reject(new Error(`Transaction aborted while adding items to ${storeName}.`))
+        transaction.onabort = ({ target: { error } }) => {
+          reject(new Error(`Transaction aborted while adding items to ${storeName}: ${error}`))
         }
       })
     },
@@ -129,8 +129,8 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
         request.onsuccess = () => {
           resolve(request.result)
         }
-        request.onerror = () => {
-          reject(new Error(`Failed to retrieve count of records from ${storeName}.`))
+        request.onerror = ({ target: { error }}) => {
+          reject(new Error(`Failed to retrieve count of records from ${storeName}: ${error}`))
         }
       })
     },
