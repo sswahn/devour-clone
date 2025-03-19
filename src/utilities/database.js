@@ -19,10 +19,7 @@ const openDatabase = async storeConfigs => {
     ...storeConfigs[0] 
   }
   return new Promise((resolve, reject) => {
-    const connection = indexedDB.open(
-      config.dbName, 
-      config.dbVersion
-    )
+    const connection = indexedDB.open(config.dbName, config.dbVersion)
     connection.onupgradeneeded = event => {
       const db = event.target.result
       storeConfigs.forEach(storeConfig => {
