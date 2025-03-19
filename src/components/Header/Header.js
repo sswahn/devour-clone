@@ -6,6 +6,9 @@ const Header = () => {
   const [context, dispatch] = useContext(Context)
   
   const handleSidebar = event => {
+
+    alert('worked...')
+    
     dispatch({ type: 'sidebar', payload: true })
   }
 
