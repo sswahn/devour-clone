@@ -86,18 +86,18 @@ const database = (storeConfigs = [DEFAULT_CONFIG]) => {
     delete(key, storeName = DEFAULT_CONFIG.storeName) {
       return executeRequest(storeConfigs, storeName, 'readwrite', 'delete', key)
     },
-    destroy(database = DEFAULT_CONFIG.dbName) {
+    destroy(dbName = DEFAULT_CONFIG.dbName) {
       return new Promise((resolve, reject) => {
-        const request = indexedDB.deleteDatabase(database)
+        const request = indexedDB.deleteDatabase(dbName)
         request.onsuccess = () => {
           if (dbInstance) {
             dbInstance.close()
             dbInstance = null
           }
-          resolve(`Database ${database} deleted successfully.`)
+          resolve(`Database ${dbName} deleted successfully.`)
         }
         request.onerror = event => {
-          reject(new Error(`Failed to delete ${database}.`))
+          reject(new Error(`Failed to delete ${dbName}.`))
         }
       })
     },
