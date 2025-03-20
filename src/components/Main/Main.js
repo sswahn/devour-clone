@@ -10,6 +10,9 @@ const Main = () => {
   const db = database()
 
   const loadData = async () => {
+
+    console.log('loading data from indexedDB.')
+    
     const images = await db.get('images')
     const video = await db.get('video')
 
