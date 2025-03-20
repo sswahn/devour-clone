@@ -41,7 +41,7 @@ const Main = () => {
       {data.length && data.map(item =>
         <div key={item.id} className="card" aria-label="">
           <div className="card-header">{/* username, location */}</div>
-          <div className="card-content">{item.images}</div>
+          <div className="card-content">{item.images[0]}</div>
           <div className="card-actions"></div>
         </div>
       )}
