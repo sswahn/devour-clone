@@ -44,7 +44,7 @@ const Main = () => {
           <div className="card-content">{item.image}</div>
           <div className="card-actions"></div>
         </div>
-      }
+      )}
       <Modal className="camera-modal" open={context.modal.isOpen} onClose={handleCloseModal}>
         {context.modal.content}
       </Modal>
