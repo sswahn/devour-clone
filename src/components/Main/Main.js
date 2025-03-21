@@ -23,7 +23,7 @@ const Main = () => {
       id: 1,
       username: 'sswahn',
       location: 'Chiang Mai',
-      images: images.map(x => URL.createObjectURL(x)),
+      images: images.images.map(x => URL.createObjectURL(x)),
       video
     }])
   }
