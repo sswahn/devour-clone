@@ -23,7 +23,7 @@ const Main = () => {
       id: 1,
       username: 'sswahn',
       location: 'Chiang Mai',
-      images,
+      images: images.map(x => URL.createObjectURL(x)),
       video
     }])
   }
@@ -42,7 +42,7 @@ const Main = () => {
         <div key={item.id} className="card" aria-label="">
           <div className="card-header">{/* username, location */}</div>
           <div className="card-content">
-            <img src={URL.createObjectURL(item.images[0])} alt={'some image'} />
+            <img src={item.images[0]} alt={'some image'} />
           </div>
           <div className="card-actions"></div>
         </div>
