@@ -42,7 +42,7 @@ const Main = () => {
         <div key={item.id} className="card" aria-label="">
           <div className="card-header">{/* username, location */}</div>
           <div className="card-content">
-            <img src={item.images[0]} alt={'some image'} />
+            <img src={URL.createObjectURL(item.images[0])} alt={'some image'} />
           </div>
           <div className="card-actions"></div>
         </div>
