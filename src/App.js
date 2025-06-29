@@ -1,4 +1,4 @@
-import ErrorBoundary from './ErrorBoundary'
+//import ErrorBoundary from './ErrorBoundary'
 import Provider from './Provider'
 import Header from './components/Header/Header'
 import AppRouter from './AppRouter'
@@ -8,15 +8,15 @@ import './index.css'
 const App = () => {
   return (
     <>
-    {/*  <React.StrictMode> */}
-      <ErrorBoundary>
+{/* <React.StrictMode> 
+      <ErrorBoundary> */}
         <Provider>
           <Header />
           <AppRouter />
           <Sidebar />
         </Provider> 
-      </ErrorBoundary> 
-  {/*  </React.StrictMode> */}
+  {/* </ErrorBoundary> 
+    </React.StrictMode> */}
   </>
   )
 }
