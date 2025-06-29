@@ -33,8 +33,7 @@ export default function Provider({ children }) {
     },
     email_verified: false
   }
-  function reducer(state, action) {
-    // consider using hash instead of switch: return {...state, [action.type]: action.payload}
+  const reducer = (state, action) => {
     switch(action.type) {
       case 'auth':
         return { ...state, auth: action.payload }
