@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Preinstall Babel Runtime
-        run: npm install @babel/runtime --save
-
       - name: Install Dependencies
         run: npm install
 
