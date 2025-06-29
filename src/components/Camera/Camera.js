@@ -47,8 +47,9 @@ const Camera = () => {
   }
   
   const handleTurnOnLight = useCallback(event => {
-    camera.light(streamRef.current)
-    setLight(!light)
+    const setting = !light
+    setting ? camera.light(streamRef.current) : camera.dark(streamRef.current)
+    setLight(setting)
   }, [light])
   
   const toggleMute = useCallback(event => {
