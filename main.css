@@ -1142,6 +1142,7 @@ html, body {
   background: none;
   border: 0;
   border-radius: 5px;
+  cursor: pointer;
   color: white;
   font-size: 20px;
   height: 40px;
