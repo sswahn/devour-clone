@@ -594,6 +594,10 @@ html, body {
   top: 5px;
 }
 
+.caption-btn svg {
+  fill: white;
+}
+
 .caption-btn > .tooltip {
   z-index: 9999;
 }
