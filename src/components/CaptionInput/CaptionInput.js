@@ -68,7 +68,6 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
   }
   
   const handleFontWeightChange = event => {
-    // no initial value for fontWeight etc.
     const styles = [ ...captionStyles ]
     styles[index] = { ...styles[index], fontWeight: styles[index].fontWeight === 'normal' ? 'bold' : 'normal' }
     dispatch({ type: captionType, payload: styles })
