@@ -62,8 +62,6 @@
 }
 
 .hDbts_Mt0Vm3zF1CfPZv {
-  border: 1px dashed red;
-  
   margin-right: 10px;
   width: 20px;
 }
@@ -72,7 +70,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid black;
   list-style-type: none;
-  margin: 50px 0 0 -155px;
   padding-left: 0;
   width: 200px;
 }
