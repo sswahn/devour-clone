@@ -112,11 +112,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   
   return (
     <>
-      <Dropdown
-        className="icon-btn-alt caption-btn"
-        icon={PenToSquareIcon}
-        options={dropdownOptions}
-      />
+      <Dropdown icon={PenToSquareIcon} options={dropdownOptions} />
       {displayEditor && (
         <MediaEditor 
           index={index} 
