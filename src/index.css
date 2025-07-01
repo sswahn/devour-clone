@@ -862,6 +862,10 @@ html, body {
   width: 40px;
 }
 
+.media-editor svg {
+  fill: white;
+}
+
 .swap-segment-menu {
   justif-content: space-evenly;
 }
