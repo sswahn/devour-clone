@@ -11,6 +11,7 @@
 }
 
 .dropdown menu {
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid black;
   list-style-type: none;
   margin: 30px 50px 0 0;
