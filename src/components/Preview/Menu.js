@@ -30,7 +30,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
 
     console.log('handleDisplayEditor triggered. Editor display state: ', displayEditor)
     
-    setDisplayMenu(false)
+    setDisplayMenu(false) // dropdown needs attention how it opens/closes
     setDisplayEditor(prevState => !prevState)
   }
   
