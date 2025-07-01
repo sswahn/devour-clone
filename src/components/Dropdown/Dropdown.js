@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './styles.module.css'
 
 const Dropdown = ({ isOpen, setIsOpen, icon: ButtonIcon, options }) => {
-  //const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef(null)
   const menuRef = useRef(null)
   
