@@ -12,6 +12,7 @@ import SepiaIcon from '../Icons/SepiaIcon/SepiaIcon'
 import GrayscaleIcon from '../Icons/GrayscaleIcon/GrayscaleIcon'
 import InvertIcon from '../Icons/InvertIcon/InvertIcon'
 import ContrastIcon from '../Icons/ContrastIcon/ContrastIcon'
+import ScissorsIcon from '../Icons/ScissorsIcon/ScissorsIcon'
 
 const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const [context, dispatch] = useContext(Context)
@@ -220,11 +221,11 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   return (
     <div className="media-editor" ref={mediaEditorRef}>
       <div>
-      {/*
+
         <button id="edit-selection" onClick={handleActiveMenu} type="button" aria-label="edit a selection" aria-controls="selection-menu">
-          <FontAwesomeIcon icon={faScissors} />
+          <ScissorsIcon />
         </button>
-        */}
+        
         
         <button id="swap-segment" onClick={handleActiveMenu} type="button" aria-label="move current media item" aria-controls="swap-segment-menu">
           <ArrowLeftRightIcon />
