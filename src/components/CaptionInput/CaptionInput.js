@@ -174,7 +174,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
             id="strong" 
             onClick={handleFontWeightChange}
             type="button" 
-            style={{ background: captionStyles[index]?.fontWeight === 'bold' ? 'rgba(255, 255, 255, 0.1)' : 'none' }}
+            style={{ background: captionStyles[index]?.fontWeight === 'bold' ? 'rgba(255, 255, 255, 0.5)' : 'none' }}
             aria-label="bold button"
             aria-description="Make caption text bold"
             aria-pressed={captionStyles[index]?.fontWeight === 'bold' || false}>
