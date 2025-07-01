@@ -127,16 +127,16 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
     if (captionStyles[index] !== undefined) {
       switch (captionStyles[index].textAlign) {
         case 'left':
-          return AlignLeftIcon
+          return <AlignLeftIcon />
         case 'center':
-          return AlignCenterIcon
+          return <AlignCenterIcon />
         case 'right':
-          return AlignRightIcon
+          return <AlignRightIcon />
         default: 
-          return AlignLeftIcon
+          return <AlignLeftIcon />
       } 
     } else {
-      return AlignLeftIcon
+      return <AlignLeftIcon />
     }
   }
 
@@ -204,7 +204,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
             <TextHeightIcon />
           </button>
           <button id="text-align" onClick={handleActiveMenu} type="button" aria-label="change text alignment" aria-controls="text-align-menu">
-            <AlignLeftIcon />
+            {displayAlignment()}
           </button>
           <button id="color" onClick={handleActiveMenu} type="button" aria-label="change font color" aria-controls="color-menu">
             <PaletteIcon />
