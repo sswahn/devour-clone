@@ -13,6 +13,9 @@ import GrayscaleIcon from '../Icons/GrayscaleIcon/GrayscaleIcon'
 import InvertIcon from '../Icons/InvertIcon/InvertIcon'
 import ContrastIcon from '../Icons/ContrastIcon/ContrastIcon'
 import ScissorsIcon from '../Icons/ScissorsIcon/ScissorsIcon'
+import SwatchbookIcon from '../Icons/SwatchbookIcon/SwatchbookIcon'
+import BorderAllIcon from '../Icons/BorderAllIcon/BorderAllIcon'
+import ScrewdriverWrenchIcon from '../Icons/ScrewdriverWrenchIcon/ScrewdriverWrenchIcon'
 
 const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const [context, dispatch] = useContext(Context)
@@ -232,17 +235,17 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           {/* how about tooltips for these? */}
         </button>
         
-        {/*
+        
         <button id="filters" onClick={handleActiveMenu} type="button" aria-label="add a filter" aria-controls="filters-menu">
-          <FontAwesomeIcon icon={faSwatchbook} />
+          <SwatchbookIcon />
         </button>
         <button id="borders" onClick={handleActiveMenu} type="button" aria-label="add borders" aria-controls="borders-menu">
-          <FontAwesomeIcon icon={faBorderAll} />
+          <BorderAllIcon />
         </button> 
         <button id="tools" onClick={handleActiveMenu} type="button" aria-label="editor tools" aria-controls="tools-menu">
-          <FontAwesomeIcon icon={faScrewdriverWrench} />
+          <ScrewdriverWrenchIcon />
         </button>
-        */}
+        
       </div>
       <div>
         <div id="swap-segment-menu" className="swap-segment-menu" style={{ display: activeMenu === 'swap-segment-menu' ? 'flex' : 'none' }}>
