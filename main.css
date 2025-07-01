@@ -55,6 +55,7 @@
 /* Dropdown css */
 
 .BenFiZ_eg7uUmffHIbvw button {
+  border: 0;
   cursor: pointer;
   display: flex;
 }
