@@ -39,71 +39,6 @@
   height: 100%;
 }
 
-/*!*******************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Avatar/styles.module.css ***!
-  \*******************************************************************************************/
-
-.RTGieKjV1a9U28aim8Yf {
-  font-size: 35px;
-  padding-right: 5px;
-  position: relative;
-}
-
-/*!*********************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/styles.module.css ***!
-  \*********************************************************************************************/
-/* Dropdown css */
-
-.BenFiZ_eg7uUmffHIbvw button {
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  margin: 3px 10px 0 0;
-}
-
-.hDbts_Mt0Vm3zF1CfPZv {
-  margin-right: 10px;
-  width: 20px;
-}
-
-.hDbts_Mt0Vm3zF1CfPZv svg {
-  fill: white;
-}
-
-.BenFiZ_eg7uUmffHIbvw menu {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid black;
-  color: white;
-  list-style-type: none;
-  padding-left: 0;
-  position: absolute;
-  right: 10px;
-  width: 200px;
-}
-
-.dd8ImTIeZy1JpTI6jyMv {
-  display: block;
-}
-
-._jbaahJ9sY7rSUzB9unW {
-  display: none;
-}
-
-.BenFiZ_eg7uUmffHIbvw li {
-  border-top: 1px solid black;
-  cursor: pointer;
-  display: flex;
-  padding: 10px 20px;
-}
-
-.BenFiZ_eg7uUmffHIbvw li:first-child {
-  border-top: 0;
-}
-
-.BenFiZ_eg7uUmffHIbvw li:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
 /*!***********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@sswahn/components/src/core/Checkbox/styles.module.css ***!
   \***********************************************************************************************************************/
@@ -279,6 +214,71 @@
 .UNtbvMSda6b4bndc7dJE section {
   padding: 10px;
   border: 1px solid #ddd;
+}
+
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Avatar/styles.module.css ***!
+  \*******************************************************************************************/
+
+.RTGieKjV1a9U28aim8Yf {
+  font-size: 35px;
+  padding-right: 5px;
+  position: relative;
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/styles.module.css ***!
+  \*********************************************************************************************/
+/* Dropdown css */
+
+.BenFiZ_eg7uUmffHIbvw button {
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  margin: 3px 10px 0 0;
+}
+
+.hDbts_Mt0Vm3zF1CfPZv {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.hDbts_Mt0Vm3zF1CfPZv svg {
+  fill: white;
+}
+
+.BenFiZ_eg7uUmffHIbvw menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+  color: white;
+  list-style-type: none;
+  padding-left: 0;
+  position: absolute;
+  right: 10px;
+  width: 200px;
+}
+
+.dd8ImTIeZy1JpTI6jyMv {
+  display: block;
+}
+
+._jbaahJ9sY7rSUzB9unW {
+  display: none;
+}
+
+.BenFiZ_eg7uUmffHIbvw li {
+  border-top: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.BenFiZ_eg7uUmffHIbvw li:first-child {
+  border-top: 0;
+}
+
+.BenFiZ_eg7uUmffHIbvw li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*!*****************************************************************!*\
