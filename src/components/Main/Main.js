@@ -11,7 +11,7 @@ const Main = () => {
 
   const loadData = async () => {
 
-    console.log('loading data from indexedDB.')
+    console.log('in <Main />, loading data from indexedDB.')
     
     const images = await db.get('images')
     const video = await db.get('video')
@@ -38,11 +38,11 @@ const Main = () => {
       
   return (
     <main>
-      {data.length && data.map(item =>
+      {data.length && data.map((item, index) =>
         <div key={item.id} className="card" aria-label="">
           <div className="card-header">{/* username, location */}</div>
           <div className="card-content">
-            <img className="media-item" src={item.images[0]} alt={'some image'} />
+            {item.images.length && <img className="media-item" src={item.images[index]} alt={'some image'} />}
           </div>
           <div className="card-actions"></div>
         </div>
