@@ -204,7 +204,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
             <TextHeightIcon />
           </button>
           <button id="text-align" onClick={handleActiveMenu} type="button" aria-label="change text alignment" aria-controls="text-align-menu">
-            <FontAwesomeIcon icon={displayAlignment()} />
+            <AlignLeftIcon />
           </button>
           <button id="color" onClick={handleActiveMenu} type="button" aria-label="change font color" aria-controls="color-menu">
             <PaletteIcon />
