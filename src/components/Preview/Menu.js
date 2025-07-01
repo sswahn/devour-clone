@@ -112,7 +112,6 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
       <Dropdown
         className="icon-btn-alt caption-btn"
         icon={PenToSquareIcon}
-        text="Select an option"
         options={dropdownOptions}
       />
       {displayEditor && (
