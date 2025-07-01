@@ -1117,6 +1117,43 @@ html, body {
 
 /* End Card */
 
+
+/**
+ * Media Editor
+ */
+
+.media-editor {
+  background: rgba(0, 0, 0, .7);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  margin: 10px auto;
+  padding: 5px 15px;
+  position: relative;
+  width: 95%;
+}
+
+.media-editor div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.media-editor button {
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.swap-segment-menu {
+  justif-content: space-evenly;
+}
+
+
+
 @media (prefers-color-scheme: dark) {
   
   body {
