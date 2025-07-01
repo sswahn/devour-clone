@@ -26,11 +26,12 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   }
   
   const handleDisplayEditor = event => {
+    event.stopPropagation()
 
     console.log('handleDisplayEditor triggered. Editor display state: ', displayEditor)
     
     setDisplayMenu(false)
-    setDisplayEditor(!displayEditor)
+    setDisplayEditor(prevState => !prevState)
   }
   
   const handleDisplayCaptionInput = event => {
