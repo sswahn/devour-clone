@@ -14,9 +14,6 @@ import SlidersIcon from '../Icons/SlidersIcon/SlidersIcon'
 const Menu = ({ type, index, setIndex, closeModal }) => {
   const [context, dispatch] = useContext(Context)
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
-  
-  const [displayMenu, setDisplayMenu] = useState(false) // remove
-  
   const [displayEditor, setDisplayEditor] = useState(false)
   const [displayCaptionInput, setDisplayCaptionInput] = useState(false)
   const mediaEditorRef = useRef(null)
@@ -30,9 +27,6 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   
   const handleDisplayEditor = event => {
     event.stopPropagation()
-
-    console.log('handleDisplayEditor triggered. Editor display state: ', displayEditor)
-    
     setDropdownIsOpen(false)
     setDisplayEditor(prevState => !prevState)
   }
