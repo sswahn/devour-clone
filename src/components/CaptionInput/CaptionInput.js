@@ -69,7 +69,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
   
   const handleFontWeightChange = event => {
     const styles = [ ...captionStyles ]
-    styles[index] = { ...styles[index], fontWeight: styles[index].fontWeight === 'normal' ? 'bold' : 'normal' } // these functions can be combined use a function with a switch statement
+    styles[index] = { ...styles[index], fontWeight: styles[index]?.fontWeight === 'normal' ? 'bold' : 'normal' }
     dispatch({ type: captionType, payload: styles })
     storage.local.set(captionType, styles)
   }
