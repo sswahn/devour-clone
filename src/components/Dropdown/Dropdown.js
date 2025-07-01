@@ -30,12 +30,16 @@ const Dropdown = ({ className, icon: ButtonIcon, text = '', options }) => {
         {text && <div>{text}</div>}
       </button>
       <menu className={isOpen ? styles.open : styles.closed} ref={menuRef} aria-hidden={!isOpen}>
-        {options.map(({ icon: Icon, label, onClick }, index) => (
+        {options.map(({ icon: Icon, label, onClick }, index) => {
+          console.log('onClick: ', onClick)
+          return (
           <li key={index} onClick={onClick} role="menuitem">
             {Icon && <div className={styles.icon}><Icon /></div>} 
             <div>{label}</div>
           </li>
-        ))}
+        )
+     }          
+        )}
       </menu>
     </div>
   )
