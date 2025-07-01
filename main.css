@@ -880,10 +880,6 @@ html, body {
   top: 5px;
 }
 
-.caption-btn svg {
-  fill: white;
-}
-
 .caption-btn > .tooltip {
   z-index: 9999;
 }
@@ -912,6 +908,10 @@ html, body {
   color: white;
   height: 40px;
   width: 40px;
+}
+
+.caption-header button svg {
+  fill: white;
 }
 
 .caption-container {
