@@ -68,8 +68,9 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
   }
   
   const handleFontWeightChange = event => {
+    // no initial value for fontWeight etc.
     const styles = [ ...captionStyles ]
-    styles[index] = { ...styles[index], fontWeight: styles[index]?.fontWeight === 'normal' ? 'bold' : 'normal' }
+    styles[index] = { ...styles[index], fontWeight: styles[index].fontWeight === 'normal' ? 'bold' : 'normal' }
     dispatch({ type: captionType, payload: styles })
     storage.local.set(captionType, styles)
   }
@@ -174,7 +175,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
             id="strong" 
             onClick={handleFontWeightChange}
             type="button" 
-            style={{ background: captionStyles[index]?.fontWeight === 'bold' ? 'rgba(255, 255, 255, 0.5)' : 'none' }}
+            style={{ background: captionStyles[index]?.fontWeight === 'bold' ? 'rgba(255, 255, 255, 0.1)' : 'none' }}
             aria-label="bold button"
             aria-description="Make caption text bold"
             aria-pressed={captionStyles[index]?.fontWeight === 'bold' || false}>
