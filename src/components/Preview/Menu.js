@@ -21,13 +21,6 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   const captionInputRef = useRef(null) 
   const db = database() 
   
-  const dropdownOptions = [
-    {icon: SlidersIcon, label: 'Open editor', onClick: handleDisplayEditor},
-    {icon: CommentIcon, label: 'Add a caption', onClick: handleDisplayCaptionInput},
-    {icon: CircleCheckIcon, label: 'Save', onClick: handleSave},
-    {icon: CircleXIcon, label: 'Delete', onClick: handleDiscard}
-  ]
-  
   const handlePreviewMenu = event => {
     setDisplayMenu(prevState => !prevState)
   }
@@ -102,6 +95,13 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
       setDisplayCaptionInput(false) 
     }
   }
+
+  const dropdownOptions = [
+    {icon: SlidersIcon, label: 'Open editor', onClick: handleDisplayEditor},
+    {icon: CommentIcon, label: 'Add a caption', onClick: handleDisplayCaptionInput},
+    {icon: CircleCheckIcon, label: 'Save', onClick: handleSave},
+    {icon: CircleXIcon, label: 'Delete', onClick: handleDiscard}
+  ]
   
   useEffect(() => {
     document.addEventListener('click', handleCloseMenu)
