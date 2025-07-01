@@ -274,7 +274,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
           </div>
         </div>
         <div id="emoji-menu" className="caption-emoji-menu" style={{ display: activeMenu === 'emoji-menu' ? 'block' : 'none' }}>
-          <Emoji insertEmoji={handleInsertEmoji} />
+        {/* <Emoji insertEmoji={handleInsertEmoji} /> */}
         </div>
         
         {showHashTagSuggestions && (
