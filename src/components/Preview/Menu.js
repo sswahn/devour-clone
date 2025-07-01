@@ -13,7 +13,10 @@ import SlidersIcon from '../Icons/SlidersIcon/SlidersIcon'
 
 const Menu = ({ type, index, setIndex, closeModal }) => {
   const [context, dispatch] = useContext(Context)
-  const [displayMenu, setDisplayMenu] = useState(false)
+  const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
+  
+  const [displayMenu, setDisplayMenu] = useState(false) // remove
+  
   const [displayEditor, setDisplayEditor] = useState(false)
   const [displayCaptionInput, setDisplayCaptionInput] = useState(false)
   const mediaEditorRef = useRef(null)
@@ -22,7 +25,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   const db = database() 
   
   const handlePreviewMenu = event => {
-    setDisplayMenu(prevState => !prevState)
+    setDropdownIsOpen(prevState => !prevState)
   }
   
   const handleDisplayEditor = event => {
@@ -30,19 +33,19 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
 
     console.log('handleDisplayEditor triggered. Editor display state: ', displayEditor)
     
-    setDisplayMenu(false) // dropdown needs attention how it opens/closes
+    setDropdownIsOpen(false)
     setDisplayEditor(prevState => !prevState)
   }
   
   const handleDisplayCaptionInput = event => {
     event.stopPropagation()
-    setDisplayMenu(false)
+    setDropdownIsOpen(false)
     setDisplayCaptionInput(prevState => !prevState)
   }
   
   const handleSave = event => {
     setIndex(0)
-    setDisplayMenu(false)
+    setDropdownIsOpen(false)
     setDisplayCaptionInput(false)
     setDisplayEditor(false)
     closeModal()
@@ -55,7 +58,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
     dispatch({ type: 'images', payload: images }) 
     db.put({ id: 'images', images })
     
-    setDisplayMenu(false)
+    setDropdownIsOpen(false)
     setDisplayCaptionInput(false)
     setDisplayEditor(false)
     if (images.length < 1) {
@@ -73,7 +76,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
     dispatch({ type: 'video_duration', payload: duration }) 
     db.put({ id: 'video', video, duration })
 
-    setDisplayMenu(false)
+    setDropdownIsOpen(false)
     setDisplayCaptionInput(false)
     setDisplayEditor(false)
     if (video.length < 1) {
@@ -113,7 +116,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   
   return (
     <>
-      <Dropdown icon={PenToSquareIcon} options={dropdownOptions} />
+      <Dropdown isOpen={dropdownIsOpen} setIsOpen={setDropdownIsOpen} icon={PenToSquareIcon} options={dropdownOptions} />
       {displayEditor && (
         <MediaEditor 
           index={index} 
