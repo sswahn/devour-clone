@@ -24,22 +24,18 @@ const Dropdown = ({ className, icon: ButtonIcon, text = '', options }) => {
   }, [])
   
   return (
-    <div className={`${styles.dropdown} ${className || ''}`}>
-      <button type="button" onClick={toggleDropdown} ref={dropdownRef} aria-label="dropdown button" aria-haspopup="true" aria-expanded={isOpen}>
+    <div className={styles.dropdown}>
+      <button className="icon-btn-alt caption-btn" type="button" onClick={toggleDropdown} ref={dropdownRef} aria-label="dropdown button" aria-haspopup="true" aria-expanded={isOpen}>
         {ButtonIcon && <div className={styles.icon}><ButtonIcon /></div>} 
         {text && <div>{text}</div>}
       </button>
       <menu className={isOpen ? styles.open : styles.closed} ref={menuRef} aria-hidden={!isOpen}>
-        {options.map(({ icon: Icon, label, onClick }, index) => {
-          console.log('onClick: ', onClick)
-          return (
+        {options.map(({ icon: Icon, label, onClick }, index) => (
           <li key={index} onClick={onClick} role="menuitem">
             {Icon && <div className={styles.icon}><Icon /></div>} 
             <div>{label}</div>
           </li>
-        )
-     }          
-        )}
+        ))}
       </menu>
     </div>
   )
