@@ -879,6 +879,9 @@ html, body {
 
 .filters-menu button {
   display: block;
+  width: 200px;
+  
+  border: 1px dashed red;
 }
 
 .filters-menu button svg {
