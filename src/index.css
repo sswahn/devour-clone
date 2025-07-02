@@ -876,6 +876,9 @@ html, body {
   justif-content: space-evenly;
 }
 
+.filters-menu {
+  padding-left: 20px;
+}
 
 .filters-menu button {
   display: block;
