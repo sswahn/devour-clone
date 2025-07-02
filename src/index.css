@@ -892,10 +892,8 @@ html, body {
   margin-right: 20px;
 }
 
-.filters-menu div:last-child {
+.filters-menu div {
   margin-top: 10px;
-
-  border: 1px dashed red;
 }
 
 
