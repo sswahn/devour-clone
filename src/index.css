@@ -881,6 +881,10 @@ html, body {
   display: block;
 }
 
+.filters-menu input {
+  display: inline-block;
+}
+
 
 @media (prefers-color-scheme: dark) {
   
