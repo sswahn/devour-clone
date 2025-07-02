@@ -268,18 +268,23 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           
           <button type="button" onClick={handleRestFilters}>
             <ResetIcon /> {/* need text label with these icons? */}
+            <span>Reset</span>
           </button>
           <button id="sepia" type="button" onClick={handleFilter}>
             <SepiaIcon />
+            <span>Sepia</span>
           </button>
           <button id="grayscale" type="button" onClick={handleFilter}>
             <GrayscaleIcon /> {/* questionable icon */}
+            <span>Grayscale</span>
           </button>
           <button id="invert" type="button" onClick={handleFilter}>
             <InvertIcon /> {/* this icon is no good */}
+            <span>Invert</span>
           </button>
           <button id="contrast" type="button" onClick={handleFilter}>
             <ContrastIcon /> {/* this icon is questionable */}
+            <span>Contrast</span>
           </button>
         
           <input id="saturation" type="range" min="5" max="100" value={saturate} onChange={handleFilterSaturate} />
