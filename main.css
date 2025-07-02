@@ -1167,6 +1167,10 @@ html, body {
   display: block;
 }
 
+.filters-menu button svg {
+  margin-right: 10px;
+}
+
 .filters-menu input {
   display: inline-block;
 }
