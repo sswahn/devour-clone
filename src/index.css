@@ -881,8 +881,6 @@ html, body {
   display: block;
   text-align: left;
   width: 200px;
-  
-  border: 1px dashed red;
 }
 
 .filters-menu button svg {
