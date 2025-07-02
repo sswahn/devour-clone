@@ -1175,7 +1175,7 @@ html, body {
 }
 
 .filters-menu input {
-  display: inline-block;
+  margin-right: 20px;
 }
 
 
