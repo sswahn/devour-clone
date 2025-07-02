@@ -877,6 +877,10 @@ html, body {
 }
 
 
+.filters-menu button {
+  display: block;
+}
+
 
 @media (prefers-color-scheme: dark) {
   
