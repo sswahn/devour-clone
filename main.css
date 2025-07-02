@@ -1165,6 +1165,7 @@ html, body {
 
 .filters-menu button {
   display: block;
+  padding-left: 0px;
   width: 200px;
   
   border: 1px dashed red;
