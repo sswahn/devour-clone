@@ -289,9 +289,9 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           <label htmlFor="brightness">Brightness</label>
         </div>
         
-        {/*<div id="borders-menu" className="borders-menu" style={{ display: activeMenu === 'borders-menu' ? 'block' : 'none' }}>
+        <div id="borders-menu" className="borders-menu" style={{ display: activeMenu === 'borders-menu' ? 'block' : 'none' }}>
           <button onClick={handleSetBorder} type="button">border</button>
-        </div> */}
+        </div>
       </div>
     </div>
   )
