@@ -272,6 +272,9 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
             <label htmlFor="stroke-color-input">Stroke color:</label>
             <input id="stroke-color-input" type="color" value={captionStyles[index]?.strokeColor || '#000000'} onChange={handleStrokeColorChange} />
           </div>
+
+          {/* add feature dropshadow */}
+              
         </div>
         <div id="emoji-menu" className="caption-emoji-menu" style={{ display: activeMenu === 'emoji-menu' ? 'block' : 'none' }}>
         {/* <Emoji insertEmoji={handleInsertEmoji} /> */}
