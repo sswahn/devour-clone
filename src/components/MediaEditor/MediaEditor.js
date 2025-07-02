@@ -286,12 +286,15 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
             <ContrastIcon /> {/* this icon is questionable */}
             <span>Contrast</span>
           </button>
-        
-          <input id="saturation" type="range" min="5" max="100" value={saturate} onChange={handleFilterSaturate} />
-          <label htmlFor="saturation">Saturation</label>
-   
-          <input id="brightness" type="range" min="20" max="200" value={brightness} onChange={handleFilterBrightness} />
-          <label htmlFor="brightness">Brightness</label>
+          
+          <div>
+            <input id="saturation" type="range" min="5" max="100" value={saturate} onChange={handleFilterSaturate} />
+            <label htmlFor="saturation">Saturation</label>
+          </div>
+          <div>
+            <input id="brightness" type="range" min="20" max="200" value={brightness} onChange={handleFilterBrightness} />
+            <label htmlFor="brightness">Brightness</label>
+          </div>
         </div>
         
         <div id="borders-menu" className="borders-menu" style={{ display: activeMenu === 'borders-menu' ? 'block' : 'none' }}>
