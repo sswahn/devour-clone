@@ -5,4 +5,5 @@ const BorderLeftIcon = () => {
     </svg>
   )
 }
+
 export default BorderLeftIcon
