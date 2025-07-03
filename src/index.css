@@ -964,19 +964,7 @@ main {
 @media (max-width: 500px) {
 
   main {
-    height: 100%;
-    width: 100%;
     margin-top: 0;
-
-    border: 1px dashed red;
-  }
-
-  .card img, .card video {
-
-    object-fit: cover;
-    
-    height: 100vh;
-    width: 100vw;
   }
   
   .modal {
