@@ -97,7 +97,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
 
     console.log('editorStyles[index][borderType] ', editorStyles[index][borderType])
 
-    const border = editorStyles[index][borderType] === undefined || editorStyles[index][borderType] === 'none' ? '10px solid gray' : 'none'
+    const border = editorStyles[index][borderType] === 'none' ? '10px solid gray' : 'none'
     
     //const border = editorStyles[index].border === 'none' ? '10px solid gray' : 'none'
     
