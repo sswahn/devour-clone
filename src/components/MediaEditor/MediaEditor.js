@@ -68,14 +68,14 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
 
 
   useEffect(() => {
-    const filters = storage.local.get('image_editor_styles')//[0].filter
+    const filters = storage.local.get('image_editor_styles')[0].filter
 
-    console.log('filters from storage: ', filters[0].filter)
+    //console.log('filters from storage: ', filters[0].filter)
     
-    if (filter.includes('brightness')) {
+    if (filters.includes('brightness')) {
       const value = filters.split('brightness(').at(0).slice(0, 1)
-      
-      console.log('load brightness: ', brightness)
+
+      console.log('brightness value: ', value)
       
       setBrightness(value)
     }    
