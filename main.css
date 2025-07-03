@@ -331,7 +331,7 @@ html, body {
 
 
 main {
-  border-top: 1px dashed red;
+  border: 1px dashed red;
   margin-top: 50px;
 }
 
