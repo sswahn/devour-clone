@@ -308,12 +308,6 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
             border outer
           </button>
         </div>
-
-
-    import BorderLeftIcon from '../Icons/BorderLeftIcon/BorderLeftIcon'
-import BorderTopIcon from '../Icons/BorderTopIcon/BorderTopIcon'
-import BorderRightIcon from '../Icons/BorderRightIcon/BorderRightIcon'
-import BorderBottomIcon from '../Icons/BorderBottomIcon/BorderBottomIcon'
       </div>
     </div>
   )
