@@ -118,7 +118,12 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
           src={item.url} 
           alt={`Preview image ${i}`}
           style={{
-            border: imageEditorStyles[index]?.border || 0,
+            borderTop: imageEditorStyles[index]?.borderTop || 0,
+            borderRight: imageEditorStyles[index]?.borderRight || 0,
+            borderBottom: imageEditorStyles[index]?.borderBottom || 0,
+            borderLeft: imageEditorStyles[index]?.borderLeft || 0,
+      
+          //  border: imageEditorStyles[index]?.border || 0,
             filter: imageEditorStyles[index]?.filter || 'none'
           }} 
           aria-label={`preview image ${i}`}
