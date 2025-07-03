@@ -94,7 +94,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const handleSetBorder = event => {
     const id = event.currentTarget.id
     const borderType = id.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
-    const border = editorStyles[index][borderType] === 'none' ? '10px solid gray' : 'none'
+    const border = editorStyles[index][borderType] === 'none' ? `10px solid gray` : 'none'
     let styles = [ ...editorStyles ]
     styles[index] = { ...styles[index], [borderType]: border }
     dispatch({ type: editorType, payload: styles })
@@ -342,10 +342,14 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           <button id="border-outer" type="button" onClick={handleSetBorder}>
             <BorderOuterIcon />
           </button>
+
+       {/*
           <div>
             <input id="border-width" type="range" min="0" max="20" value={borderWidth} onChange={handleBorderWidth} />
             <label htmlFor="border-width">Border width</label>
           </div>
+       */}
+
         </div>
       </div>
     </div>
