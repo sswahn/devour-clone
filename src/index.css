@@ -44,8 +44,6 @@ html, body {
   z-index: 999;
 }
 
-
-
 .sidebar {
   background-color: white;
   border-left: 1px solid gray;
@@ -289,6 +287,24 @@ html, body {
   border: 0 !important;
 }
 
+
+/* List */
+
+.list {
+  
+}
+
+.list-header {
+  
+}
+
+.list-content {
+  
+}
+
+.list-actions {
+  
+}
 
 /* Card */
 
