@@ -91,14 +91,8 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   }
   
   const handleSetBorder = event => {
-    const borderType = event.currentTarget.id
-
-    // add or remove borderType to/from existing borders
-    console.log('borderType ', borderType)
-
-    const b = borderType.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
-
-    console.log('b ', b)
+    const id = event.currentTarget.id
+    const borderType = id.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
     
     console.log('editorStyles[index][borderType] ', editorStyles[index][borderType])
 
