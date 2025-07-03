@@ -28,6 +28,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const [editorType, setEditorType] = useState([])
   const [saturate, setSaturate] = useState('100')
   const [brightness, setBrightness] = useState('100')
+  const [borderWidth, setBorderWidth] = useState(0)
   //const [hasBorder, setHasBorder] = useState(false)
   const [activeMenu, setActiveMenu] = useState(undefined)
   
@@ -93,14 +94,17 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const handleSetBorder = event => {
     const id = event.currentTarget.id
     const borderType = id.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
-    
-    console.log('editorStyles[index][borderType] ', editorStyles[index][borderType])
-
     const border = editorStyles[index][borderType] === 'none' ? '10px solid gray' : 'none'
     let styles = [ ...editorStyles ]
     styles[index] = { ...styles[index], [borderType]: border }
     dispatch({ type: editorType, payload: styles })
     storage.local.set(editorType, styles)
+  }
+
+  const handleBorderWidth = event => {
+    const value = event.target.value
+    console.log('value: ', value)
+    setBorderWidth(value)
   }
   
   const handleActiveMenu = event => {
@@ -338,6 +342,10 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           <button id="border-outer" type="button" onClick={handleSetBorder}>
             <BorderOuterIcon />
           </button>
+          <div>
+            <input id="border-width" type="range" min="0" max="20" value={borderWidth} onChange={handleBorderWidth} />
+            <label htmlFor="border-width">Border width</label>
+          </div>
         </div>
       </div>
     </div>
