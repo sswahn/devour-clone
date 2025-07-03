@@ -20,6 +20,7 @@ import BorderLeftIcon from '../Icons/BorderLeftIcon/BorderLeftIcon'
 import BorderTopIcon from '../Icons/BorderTopIcon/BorderTopIcon'
 import BorderRightIcon from '../Icons/BorderRightIcon/BorderRightIcon'
 import BorderBottomIcon from '../Icons/BorderBottomIcon/BorderBottomIcon'
+import BorderOuterIcon from '../Icons/BorderOuterIcon/BorderOuterIcon'
 
 const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const [context, dispatch] = useContext(Context)
@@ -81,9 +82,25 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
     dispatch({ type: editorType, payload: styles })
     storage.local.set(editorType, styles) 
   }
+
+  const getBorder = borderType => {
+    switch (borderType) {
+      case 'border-top':
+        return '10px 0 0 0'
+    }
+  }
   
   const handleSetBorder = event => {
-    const border = editorStyles[index].border === 'none' ? '10px solid gray' : 'none'
+    const borderType = event.target.id
+
+    // add or remove borderType to/from existing borders
+
+    console.log('editorStyles[index][borderType] ', editorStyles[index][borderType])
+    
+    const border = editorStyles[index][borderType] === 'none' ? '10px solid gray' : 'none'
+
+    //const border = editorStyles[index].border === 'none' ? '10px solid gray' : 'none'
+    
     let styles = [ ...editorStyles ]
     styles[index] = { ...styles[index], border }
     dispatch({ type: editorType, payload: styles })
@@ -323,7 +340,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
             <BorderBottomIcon />
           </button>
           <button id="border-outer" type="button" onClick={handleSetBorder}>
-            border outer
+            <BorderOuterIcon />
           </button>
         </div>
       </div>
