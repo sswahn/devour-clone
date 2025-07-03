@@ -46,6 +46,8 @@ html, body {
 
 main {
   border: 1px dashed red;
+  
+  height: 100%;
   margin-top: 50px;
 }
 
