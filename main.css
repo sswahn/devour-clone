@@ -327,17 +327,13 @@ html, body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
-
 main {
-  border: 1px dashed red;
-  
   height: calc(100vh - 50px);
   margin-top: 50px;
 }
-
-
 
 .sidebar {
   background-color: white;
@@ -1252,6 +1248,12 @@ main {
 
 
 @media (max-width: 500px) {
+
+  main {
+    height: 100vh;
+    margin-top: 0;
+  }
+  
   .modal {
     border: 0;
     border-radius: 0;
