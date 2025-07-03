@@ -224,18 +224,13 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   return (
     <div className="media-editor" ref={mediaEditorRef}>
       <div>
-
         <button id="edit-selection" onClick={handleActiveMenu} type="button" aria-label="edit a selection" aria-controls="selection-menu">
           <ScissorsIcon />
         </button>
-        
-        
         <button id="swap-segment" onClick={handleActiveMenu} type="button" aria-label="move current media item" aria-controls="swap-segment-menu">
           <ArrowLeftRightIcon />
           {/* how about tooltips for these? */}
         </button>
-        
-        
         <button id="filters" onClick={handleActiveMenu} type="button" aria-label="add a filter" aria-controls="filters-menu">
           <SwatchbookIcon />
         </button>
@@ -245,7 +240,6 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
         <button id="tools" onClick={handleActiveMenu} type="button" aria-label="editor tools" aria-controls="tools-menu">
           <ScrewdriverWrenchIcon />
         </button>
-        
       </div>
       <div>
         <div id="swap-segment-menu" className="swap-segment-menu" style={{ display: activeMenu === 'swap-segment-menu' ? 'flex' : 'none' }}>
@@ -263,11 +257,8 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
           </button>
         </div>
         <div id="filters-menu" className="filters-menu" style={{ display: activeMenu === 'filters-menu' ? 'block' : 'none' }}>
-        
-          {/* style these buttons (maybe 100% width, with top/bottom borders, text centered or indented, perhaps with icons like the sidebar menu) */}
-          
           <button type="button" onClick={handleRestFilters}>
-            <ResetIcon /> {/* need text label with these icons? */}
+            <ResetIcon />
             <span>Reset</span>
           </button>
           <button id="sepia" type="button" onClick={handleFilter}>
@@ -286,7 +277,6 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
             <ContrastIcon /> {/* this icon is questionable */}
             <span>Contrast</span>
           </button>
-          
           <div>
             <input id="saturation" type="range" min="5" max="100" value={saturate} onChange={handleFilterSaturate} />
             <label htmlFor="saturation">Saturation</label>
