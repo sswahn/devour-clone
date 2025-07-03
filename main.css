@@ -318,6 +318,7 @@
 html, body {
   height: 100%;
   overflow-x: hidden;
+  margin-top: 50px;
   position: relative;
   width: 100%;
 }
@@ -328,10 +329,6 @@ html, body {
   width: 100%;
 }
 
-main {
-  boder-top: 1px dashed red;
-  margin-top: 50px;
-}
 
 .sidebar {
   background-color: white;
