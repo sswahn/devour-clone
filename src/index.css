@@ -44,10 +44,7 @@ html, body {
   z-index: 999;
 }
 
-main {
-  height: 100%;
-  width: 100%;
-}
+
 
 .sidebar {
   background-color: white;
@@ -962,10 +959,6 @@ main {
 
 
 @media (max-width: 500px) {
-
-  main {
-    margin-top: 0;
-  }
   
   .modal {
     border: 0;
