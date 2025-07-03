@@ -73,7 +73,10 @@ const Camera = () => {
       strokeColor: '#000000'
     }]
     const editorStyles = [ ...context[editorStylesType], {
-      border: 'none',
+      borderTop: 'none',
+      borderRight: 'none',
+      borderBottom: 'none',
+      borderLeft: 'none',
       filter: 'none',
     }]
     dispatch({ type: captionsType, payload: captions })
@@ -120,7 +123,7 @@ const Camera = () => {
     dispatch({ type: 'video_duration', payload: duration })
     dispatch({ type: 'video', payload: video }) 
     db.put({ id: 'video', video, duration })
-    createDefaults()
+    //createDefaults()
   }
   
   const loadFromStorage = async () => {
@@ -171,7 +174,8 @@ const Camera = () => {
   useEffect(() => {
     if (!streamRef.current) {
       startCamera()
-      loadFromStorage()      // <== load media from storage
+      loadFromStorage()
+      createDefaults()
     }
     return () => {
       stopCamera()
