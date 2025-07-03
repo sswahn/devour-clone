@@ -289,6 +289,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
         
         <div id="borders-menu" className="borders-menu" style={{ display: activeMenu === 'borders-menu' ? 'block' : 'none' }}>
           <button onClick={handleSetBorder} type="button">border</button>
+          {/* use border left, border right, border top, border bottom, border all */}
         </div>
       </div>
     </div>
