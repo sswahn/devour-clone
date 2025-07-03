@@ -39,12 +39,12 @@ const Main = () => {
   return (
     <main>
       {!!data.length && data.map((item, index) =>
-        <div key={item.id} className="card" aria-label="">
-          <div className="card-header">{/* username, location */}</div>
-          <div className="card-content">
-            {item.images.length && <img className="media-item" src={item.images[index]} alt={'some image'} />}
+        <div key={item.id} className="list" aria-label="">
+          <div className="list-header">{/* username, location */}</div>
+          <div className="list-content">
+            {!!item.images.length && <img className="media-item" src={item.images[index]} alt={'some image'} />}
           </div>
-          <div className="card-actions"></div>
+          <div className="list-actions"></div>
         </div>
       )}
       <Modal className="camera-modal" open={context.modal.isOpen} onClose={handleCloseModal}>
