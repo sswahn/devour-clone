@@ -102,7 +102,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
     //const border = editorStyles[index].border === 'none' ? '10px solid gray' : 'none'
     
     let styles = [ ...editorStyles ]
-    styles[index] = { ...styles[index], border }
+    styles[index] = { ...styles[index], [borderType]: border }
     dispatch({ type: editorType, payload: styles })
     storage.local.set(editorType, styles)
   }
