@@ -94,7 +94,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const handleSetBorder = event => {
     const id = event.currentTarget.id
     const borderType = id.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
-    const border = editorStyles[index][borderType] === 'none' ? `10px solid gray` : 'none'
+    const border = editorStyles[index][borderType] === 'none' ? `10px solid gray` : 'none' // make border size and color changeable
     let styles = [ ...editorStyles ]
     styles[index] = { ...styles[index], [borderType]: border }
     dispatch({ type: editorType, payload: styles })
