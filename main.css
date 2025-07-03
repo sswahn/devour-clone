@@ -1254,6 +1254,10 @@ main {
     width: 100%;
     margin-top: 0;
   }
+
+  .card img, .card video {
+    width: 100%;
+  }
   
   .modal {
     border: 0;
