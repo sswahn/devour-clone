@@ -38,7 +38,7 @@ const Main = () => {
       
   return (
     <main>
-      {data.length && data.map((item, index) =>
+      {!!data.length && data.map((item, index) =>
         <div key={item.id} className="card" aria-label="">
           <div className="card-header">{/* username, location */}</div>
           <div className="card-content">
