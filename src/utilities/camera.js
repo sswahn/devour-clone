@@ -12,6 +12,9 @@ const camera = {
       },
       video: {
         facingMode: 'environment',
+        width: { ideal: 99999 },
+        height: { ideal: 99999 },
+        frameRate: { ideal: 999 },
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
         }
@@ -22,19 +25,7 @@ const camera = {
       video: { ...defaultConstraints.video, ...constraints.video }
     }
     try {
-      const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
-      const track = stream.getVideoTracks()[0]
-      const capabilities = track.getCapabilities()
-
-      console.log('Camera capabilities:', capabilities)
-
-      await track.applyConstraints({
-        width: { ideal: capabilities.width.max },
-        height: { ideal: capabilities.height.max },
-        frameRate: { ideal: capabilities.frameRate.max }
-      })
-
-      return stream
+      return navigator.mediaDevices.getUserMedia(finalConstraints)
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
     }
