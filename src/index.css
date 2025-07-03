@@ -45,7 +45,7 @@ html, body {
 }
 
 main {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 25px);
   margin-top: 25px;
 }
 
