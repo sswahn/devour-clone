@@ -82,12 +82,8 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   useEffect(() => {
     const filters = storage.local.get('image_editor_styles')[0].filter
     if (filters.includes('saturate')) {
-      const value = filters.split('saturate(').at(-1).slice(0, -2)
-      
-      console.log('saturate value: ', value)
-      
-      setBrightness(
-       value 
+      setSaturate(
+        filters.split('saturate(').at(-1).slice(0, -2) 
       )
     }    
   }, [saturate])
