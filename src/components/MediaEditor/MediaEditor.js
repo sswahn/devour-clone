@@ -14,8 +14,12 @@ import InvertIcon from '../Icons/InvertIcon/InvertIcon'
 import ContrastIcon from '../Icons/ContrastIcon/ContrastIcon'
 import ScissorsIcon from '../Icons/ScissorsIcon/ScissorsIcon'
 import SwatchbookIcon from '../Icons/SwatchbookIcon/SwatchbookIcon'
-import BorderAllIcon from '../Icons/BorderAllIcon/BorderAllIcon'
 import ScrewdriverWrenchIcon from '../Icons/ScrewdriverWrenchIcon/ScrewdriverWrenchIcon'
+import BorderAllIcon from '../Icons/BorderAllIcon/BorderAllIcon'
+import BorderLeftIcon from '../Icons/BorderLeftIcon/BorderLeftIcon'
+import BorderTopIcon from '../Icons/BorderTopIcon/BorderTopIcon'
+import BorderRightIcon from '../Icons/BorderRightIcon/BorderRightIcon'
+import BorderBottomIcon from '../Icons/BorderBottomIcon/BorderBottomIcon'
 
 const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   const [context, dispatch] = useContext(Context)
@@ -288,9 +292,28 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
         </div>
         
         <div id="borders-menu" className="borders-menu" style={{ display: activeMenu === 'borders-menu' ? 'block' : 'none' }}>
-          <button onClick={handleSetBorder} type="button">border</button>
-          {/* use border left, border right, border top, border bottom, border all */}
+          <button id="border-left" type="button" onClick={handleSetBorder}>
+            <BorderLeftIcon />
+          </button>
+          <button id="border-top" type="button" onClick={handleSetBorder}>
+            <BorderTopIcon />
+          </button>
+          <button id="border-right" type="button" onClick={handleSetBorder}>
+            <BorderRightIcon />
+          </button>
+          <button id="border-bottom" type="button" onClick={handleSetBorder}>
+            <BorderBottomIcon />
+          </button>
+          <button id="border-outer" type="button" onClick={handleSetBorder}>
+            border outer
+          </button>
         </div>
+
+
+    import BorderLeftIcon from '../Icons/BorderLeftIcon/BorderLeftIcon'
+import BorderTopIcon from '../Icons/BorderTopIcon/BorderTopIcon'
+import BorderRightIcon from '../Icons/BorderRightIcon/BorderRightIcon'
+import BorderBottomIcon from '../Icons/BorderBottomIcon/BorderBottomIcon'
       </div>
     </div>
   )
