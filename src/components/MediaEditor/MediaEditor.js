@@ -73,7 +73,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
     //console.log('filters from storage: ', filters[0].filter)
     
     if (filters.includes('brightness')) {
-      const value = filters.split('brightness(').at(0).slice(0, 1)
+      const value = filters.split('brightness(').at(-1).slice(0, 1)
 
       console.log('brightness value: ', value)
       
