@@ -67,20 +67,31 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   }
 
 
+  // dont know if brightness or saturate are set first
+  // so need to check length of array when splitting before slicing 
+
   useEffect(() => {
     const filters = storage.local.get('image_editor_styles')[0].filter
-
-    //console.log('filters from storage: ', filters[0].filter)
-    
     if (filters.includes('brightness')) {
-      const value = filters.split('brightness(').at(-1).slice(0, -2)
-
-      console.log('brightness value: ', value)
-      
-      setBrightness(value)
+      setBrightness(
+        filters.split('brightness(').at(-1).slice(0, -2)
+      )
     }    
   }, [brightness])
+
+  useEffect(() => {
+    const filters = storage.local.get('image_editor_styles')[0].filter
+    if (filters.includes('saturate')) {
+      const value = filters.split('saturate(').at(-1).split(')').at(0).slice(0, -2)
+      console.log('saturate value: ', value)
+      setBrightness(
+       value 
+      )
+    }    
+  }, [saturate])
   
+
+
   
   const handleFilterBrightness = event => {
     const value = event.target.value
