@@ -227,7 +227,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
         filters.split('brightness(').at(-1).slice(0, -2)
       )
     }    
-  }, [brightness])
+  }, [])
 
   useEffect(() => {
     const filters = storage.local.get('image_editor_styles')[0].filter
@@ -236,7 +236,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
         filters.split('saturate(').at(-1).slice(0, -2) 
       )
     }    
-  }, [saturate])
+  }, [])
   
   useEffect(() => {
     setEditorStyles(type === 'video' ? context.video_editor_styles : context.image_editor_styles)
