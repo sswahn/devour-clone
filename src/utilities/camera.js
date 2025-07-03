@@ -1,15 +1,5 @@
 const camera = {
   
-  getDeviceCapabilities(stream) {
-    
-    const track = stream.getVideoTracks()[0]
-    const capabilities = track.getCapabilities() // Get device capabilities
-  
-    console.log('Camera Capabilities: ', capabilities)
-  
-    return capabilities
-  },
-  
   async on(constraints = {}) {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
       throw new TypeError('on: argument must be an object literal.')
@@ -22,34 +12,29 @@ const camera = {
       },
       video: {
         facingMode: 'environment',
-
-        // remove quality optimizations
-        // and make a paid feature
-        // use browser defaults for all else...
-        
-        width: { ideal: 99999 },
-        height: { ideal: 99999 },
-        frameRate: { ideal: 999 },
-        
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
         }
       }
     }
     const finalConstraints = {
-      ...defaultConstraints,
-      ...constraints
+      audio: { ...defaultConstraints.audio, ...constraints.audio },
+      video: { ...defaultConstraints.video, ...constraints.video }
     }
     try {
-      /*
       const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
-      const track = stream.getVideoTracks()[0];
-      const capabilities = track.getCapabilities(); // Get device capabilities
-      console.log("Camera Capabilities:", capabilities);
-      return capabilities
-      */
-      
-      return navigator.mediaDevices.getUserMedia(finalConstraints)
+      const track = stream.getVideoTracks()[0]
+      const capabilities = track.getCapabilities()
+
+      console.log('Camera capabilities:', capabilities)
+
+      await track.applyConstraints({
+        width: { ideal: capabilities.width.max },
+        height: { ideal: capabilities.height.max },
+        frameRate: { ideal: capabilities.frameRate.max }
+      })
+
+      return stream
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
     }
