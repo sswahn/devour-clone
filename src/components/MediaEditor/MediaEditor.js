@@ -65,31 +65,6 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
     dispatch({ type: editorType, payload: styles })
     storage.local.set(editorType, styles)
   }
-
-
-  // dont know if brightness or saturate are set first
-  // so need to check length of array when splitting before slicing 
-
-  useEffect(() => {
-    const filters = storage.local.get('image_editor_styles')[0].filter
-    if (filters.includes('brightness')) {
-      setBrightness(
-        filters.split('brightness(').at(-1).slice(0, -2)
-      )
-    }    
-  }, [brightness])
-
-  useEffect(() => {
-    const filters = storage.local.get('image_editor_styles')[0].filter
-    if (filters.includes('saturate')) {
-      setSaturate(
-        filters.split('saturate(').at(-1).slice(0, -2) 
-      )
-    }    
-  }, [saturate])
-  
-
-
   
   const handleFilterBrightness = event => {
     const value = event.target.value
@@ -244,6 +219,24 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
     const direction = event.currentTarget.id
     return type === 'video' ? swapVideoToEnd(direction) : swapImagesToEnd(direction)
   }
+
+  useEffect(() => {
+    const filters = storage.local.get('image_editor_styles')[0].filter
+    if (filters.includes('brightness')) {
+      setBrightness(
+        filters.split('brightness(').at(-1).slice(0, -2)
+      )
+    }    
+  }, [brightness])
+
+  useEffect(() => {
+    const filters = storage.local.get('image_editor_styles')[0].filter
+    if (filters.includes('saturate')) {
+      setSaturate(
+        filters.split('saturate(').at(-1).slice(0, -2) 
+      )
+    }    
+  }, [saturate])
   
   useEffect(() => {
     setEditorStyles(type === 'video' ? context.video_editor_styles : context.image_editor_styles)
