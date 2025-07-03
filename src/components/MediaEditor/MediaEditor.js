@@ -91,7 +91,7 @@ const MediaEditor = memo(({ index, type, mediaEditorRef }) => {
   }
   
   const handleSetBorder = event => {
-    const borderType = event.target.id
+    const borderType = event.currentTarget.id
 
     // add or remove borderType to/from existing borders
     console.log('borderType ', borderType)
