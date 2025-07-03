@@ -1257,7 +1257,7 @@ main {
 
   .card img, .card video {
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
   }
   
   .modal {
