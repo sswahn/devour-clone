@@ -9,9 +9,6 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageRefs = useRef([])
   
   const handleScrollRight = event => {
-
-    console.log('next index: ', index)
-    
     if (imageContainerRef.current) {
       const scrollWidth = imageContainerRef.current.scrollWidth
       const scrollLeft = imageContainerRef.current.scrollLeft
@@ -44,45 +41,23 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }
   
   const handleIntersection = entries => {
-
-    console.log('entries: ', entries)
-    
     entries.forEach(entry => {
-
-      console.log('entry.isIntersecting: ', entry.isIntersecting)
-
-      console.log('id: ', entry.target.id)
-
-      // index is NOT updating for some reason
       if (entry.isIntersecting) {
-        console.log('passed condition and should update')
         setIndex(Number(entry.target.id.split('image-preview-')[1]))
       }
     })
   }
   
   useEffect(() => {
-
-    // problem might be with how the modal is mounted
-    
-    console.log('imageRefs.current: ', imageRefs.current)
-    
     if (imageRefs.current.length === 0) {
       return
     }
-    
     const options = {
       root: null, 
       rootMargin: '0px',
       threshold: 0.5, 
     }
-
-    console.log('options: ', options)
-    
     const observer = new IntersectionObserver(handleIntersection, options)
-
-    console.log('observer: ', observer)
-    
     imageRefs.current.forEach(img => {
       console.log('img: ', img)
       observer.observe(img)
