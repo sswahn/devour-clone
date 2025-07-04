@@ -16,7 +16,7 @@ const cache = {
         await cache.delete(request)
         return null
       }
-      return response.json()
+      return response
     } catch (error) {
       throw new Error(`Failed to retrieve from cache ${name}.`)
     }
