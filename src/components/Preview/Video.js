@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect, useRef, memo } from 'react'
 import { Context } from '../../Provider'
+import { convertMedia } from '../../../utilities'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
 import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
 import PlayIcon from '../Icons/PlayIcon/PlayIcon'
