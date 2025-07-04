@@ -8,9 +8,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
 
-  const renderVisibleImage = async imgElement => {
-    const rect = imgElement.getBoundingClientRect()
-    const style = getComputedStyle(imgElement)
+  const renderVisibleImage = async mediaElement => {
+    const rect = mediaElement.getBoundingClientRect()
+    const style = getComputedStyle(mediaElement)
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
   
@@ -21,32 +21,32 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     ctx.filter = style.filter || 'none'
   
     const fit = style.objectFit || 'fill'
-    const imgWidth = imgElement.naturalWidth
-    const imgHeight = imgElement.naturalHeight
+    const mediaWidth = mediaElement.naturalWidth
+    const mediaHeight = mediaElement.naturalHeight
     const canvasWidth = canvas.width
     const canvasHeight = canvas.height
-    const imgRatio = imgWidth / imgHeight
+    const mediaRatio = mediaWidth / mediaHeight
     const canvasRatio = canvasWidth / canvasHeight
   
     // Draw image with object-fit logic
     if (fit === 'contain') {
-      const scale = Math.min(canvasWidth / imgWidth, canvasHeight / imgHeight)
-      const drawWidth = imgWidth * scale
-      const drawHeight = imgHeight * scale
+      const scale = Math.min(canvasWidth / mediaWidth, canvasHeight / mediaHeight)
+      const drawWidth = mediaWidth * scale
+      const drawHeight = mediaHeight * scale
       const dx = (canvasWidth - drawWidth) / 2
       const dy = (canvasHeight - drawHeight) / 2
-      ctx.drawImage(imgElement, 0, 0, imgWidth, imgHeight, dx, dy, drawWidth, drawHeight)
+      ctx.drawImage(mediaElement, 0, 0, mediaWidth, mediaHeight, dx, dy, drawWidth, drawHeight)
     } else {
       // Default to "cover" style behavior
-      let sx = 0, sy = 0, sw = imgWidth, sh = imgHeight
-      if (canvasRatio > imgRatio) {
-        sh = imgWidth / canvasRatio
-        sy = (imgHeight - sh) / 2
+      let sx = 0, sy = 0, sw = mediaWidth, sh = mediaHeight
+      if (canvasRatio > mediaRatio) {
+        sh = mediaWidth / canvasRatio
+        sy = (mediaHeight - sh) / 2
       } else {
-        sw = imgHeight * canvasRatio
-        sx = (imgWidth - sw) / 2
+        sw = mediaHeight * canvasRatio
+        sx = (mediaWidth - sw) / 2
       }
-      ctx.drawImage(imgElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
+      ctx.drawImage(mediaElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
     }
   
     // Reset filter before drawing overlays
