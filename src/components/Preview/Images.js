@@ -9,8 +9,6 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
 
-  // on ubmit trigger a value that fire ueEffect with convertMedia
-  
   const handleScrollRight = event => {
     if (imageContainerRef.current) {
       const scrollWidth = imageContainerRef.current.scrollWidth
