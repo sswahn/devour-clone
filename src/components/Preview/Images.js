@@ -77,6 +77,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     return blob
   }
 
+  // on submit use function above to commit images/video
 
   
   const handleScrollRight = event => {
