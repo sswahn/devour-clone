@@ -51,7 +51,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
     //const newCap = caption[index].replace(metions.at(-1), mentionSuggestion)
     // so need to store mentions, and mentionSuggetions
   }
-  
+  /*
   const onChange = event => {
     const captions = type === 'video' ? context.video_captions : context.image_captions
     const captionsType = type === 'video' ? 'video_captions' : 'image_captions'
@@ -60,7 +60,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
     dispatch({ type: captionsType, payload: captionsArr })
     storage.local.set(captionsType, captionsArr)
   }
-  
+  */
   const handleInsertEmoji = event => {
     const emoji = event.target.textContent
     captionInputRef.current.value += emoji
@@ -141,7 +141,14 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
   }
 
   const handleOnInput = event => {
-    setError(undefined)
+    const captions = type === 'video' ? context.video_captions : context.image_captions
+    const captionsType = type === 'video' ? 'video_captions' : 'image_captions'
+    const captionsArr = [ ...captions ]
+    captionsArr[index] = findMentions(findHashTags(captionInputRef.current.value))
+    dispatch({ type: captionsType, payload: captionsArr })
+    storage.local.set(captionsType, captionsArr)
+    
+    // setError(undefined)
   }
 
   const handleOnInvalid = ({ target }) => {
@@ -165,7 +172,7 @@ const CaptionInput = memo(({ index, type, captionInputContainerRef, captionInput
           maxLength="150"
           ref={captionInputRef}
           value={type === 'video' ? context.video_captions[index] || '' : context.image_captions[index] || ''}
-          onChange={onChange}
+         /* onChange={onChange} */
           onInput={handleOnInput}
           onInvalid={handleOnInvalid}
           aria-label="add a caption" />
