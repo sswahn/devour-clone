@@ -9,78 +9,72 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageRefs = useRef([])
 
   const renderVisibleImage = imgElement => {
-    // Get visible size and position
     const rect = imgElement.getBoundingClientRect()
-  
-    // Create offscreen canvas at visible pixel resolution
+    const style = getComputedStyle(imgElement)
     const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+  
     canvas.width = rect.width
     canvas.height = rect.height
   
-    const ctx = canvas.getContext('2d')
+    // Apply CSS filter to canvas
+    ctx.filter = style.filter || 'none'
   
-    // Match CSS filter
-    ctx.filter = getComputedStyle(imgElement).filter || 'none'
+    const fit = style.objectFit || 'fill'
+    const imgWidth = imgElement.naturalWidth
+    const imgHeight = imgElement.naturalHeight
+    const canvasWidth = canvas.width
+    const canvasHeight = canvas.height
+    const imgRatio = imgWidth / imgHeight
+    const canvasRatio = canvasWidth / canvasHeight
   
-    // Calculate how to draw the image based on object-fit
-    const fit = getComputedStyle(imgElement).objectFit || 'fill'
-  
-    // Determine how the image is scaled within its box
-  
-    const imgRatio = imgElement.naturalWidth / imgElement.naturalHeight
-    const canvasRatio = canvas.width / canvas.height
-
-    let sx = 0, sy = 0, sw = imgElement.naturalWidth, sh = imgElement.naturalHeight
-
-    if (fit === 'cover') {
+    // Draw image with object-fit logic
+    if (fit === 'contain') {
+      const scale = Math.min(canvasWidth / imgWidth, canvasHeight / imgHeight)
+      const drawWidth = imgWidth * scale
+      const drawHeight = imgHeight * scale
+      const dx = (canvasWidth - drawWidth) / 2
+      const dy = (canvasHeight - drawHeight) / 2
+      ctx.drawImage(imgElement, 0, 0, imgWidth, imgHeight, dx, dy, drawWidth, drawHeight)
+    } else {
+      // Default to "cover" style behavior
+      let sx = 0, sy = 0, sw = imgWidth, sh = imgHeight
       if (canvasRatio > imgRatio) {
-        sh = imgElement.naturalWidth / canvasRatio
-        sy = (imgElement.naturalHeight - sh) / 2
+        sh = imgWidth / canvasRatio
+        sy = (imgHeight - sh) / 2
       } else {
-        sw = imgElement.naturalHeight * canvasRatio
-        sx = (imgElement.naturalWidth - sw) / 2
+        sw = imgHeight * canvasRatio
+        sx = (imgWidth - sw) / 2
       }
-    } else if (fit === 'contain') {
-      const scale = Math.min(
-        canvas.width / imgElement.naturalWidth,
-        canvas.height / imgElement.naturalHeight
-      )
-      const w = imgElement.naturalWidth * scale
-      const h = imgElement.naturalHeight * scale
-      const dx = (canvas.width - w) / 2
-      const dy = (canvas.height - h) / 2
-      ctx.drawImage(imgElement, 0, 0, imgElement.naturalWidth, imgElement.naturalHeight, dx, dy, w, h)
-      return
+      ctx.drawImage(imgElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
     }
-
-    ctx.drawImage(imgElement, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height)
-
   
-    // Reset filter
+    // Reset filter before drawing overlays
     ctx.filter = 'none'
   
-    // Add border
+    // Draw white border
     const borderThickness = 10
     ctx.lineWidth = borderThickness
     ctx.strokeStyle = 'white'
     ctx.strokeRect(
       borderThickness / 2,
       borderThickness / 2,
-      canvas.width - borderThickness,
-      canvas.height - borderThickness
+      canvasWidth - borderThickness,
+      canvasHeight - borderThickness
     )
   
-    // Add text
+    // Draw overlay text
     ctx.font = 'bold 40px sans-serif'
     ctx.fillStyle = 'white'
     ctx.shadowColor = 'black'
     ctx.shadowBlur = 6
     ctx.textAlign = 'center'
     ctx.textBaseline = 'bottom'
-    ctx.fillText('Overlay Text', canvas.width / 2, canvas.height - 20)
+    ctx.fillText('Overlay Text', canvasWidth / 2, canvasHeight - 20)
   
     return canvas.toDataURL('image/png')
   }
+
 
   
   const handleScrollRight = event => {
