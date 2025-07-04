@@ -8,7 +8,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
 
-  const renderVisibleImage = imgElement => {
+  const renderVisibleImage = async imgElement => {
     const rect = imgElement.getBoundingClientRect()
     const style = getComputedStyle(imgElement)
     const canvas = document.createElement('canvas')
