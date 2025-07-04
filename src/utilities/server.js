@@ -1,3 +1,4 @@
+import cache from './cache'
 
 const typeCheck = (method, api, request = undefined, headers = {}) => {
   if (typeof api !== 'string') {
@@ -16,7 +17,8 @@ const handleResponse = async response => {
     const errorMessage = await response.text()
     throw new Error(`${response.status}: ${errorMessage}`)
   }
-  if (!response.body) {
+  // Handle 204 No Content or empty body
+  if (response.status === 204 || response.headers.get('Content-Length') === '0') {
     return { success: true, message: 'No content' }
   }
   return response.json()
@@ -26,12 +28,16 @@ const server = {
   async get(api, headers = {}) {
     try {
       typeCheck('get', api, undefined, headers)
-      const options = {
-        headers: {
-          ...headers
-        }
+      const request = new Request(api, {
+        method: 'get',
+        headers: { ...headers }
+      })
+      const cachedResponse = await cache.get('main', request)
+      if (cachedResponse) {
+        return handleResponse(cachedResponse)
       }
-      const response = await fetch(api, options)
+      const response = await fetch(request)
+      await cache.set('main', request, response)
       return handleResponse(response)
     } catch (error) {
       throw new Error(`Failed to execute GET request. ${error}`)
