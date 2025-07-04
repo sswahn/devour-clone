@@ -72,7 +72,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     ctx.textBaseline = 'bottom'
     ctx.fillText('Overlay Text', canvasWidth / 2, canvasHeight - 20)
   
-    return canvas.toDataURL('image/png')
+    //return canvas.toDataURL('image/png')
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png', 0.9))
+    return blob
   }
 
 
