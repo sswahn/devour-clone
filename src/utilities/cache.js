@@ -33,11 +33,17 @@ const cache = {
     }
     try {
       const cache = await caches.open(name)
-      const responseWithCacheControl = new Response(response.body, {
-        headers: {
-          'Cache-Control': `max-age=${maxAgeSeconds}`,
-          ...response.headers
-        }
+      const clonedBody = await response.clone().blob()
+      // Merge headers safely
+      const originalHeaders = Object.fromEntries(response.headers.entries())
+      const headersWithCacheControl = {
+        ...originalHeaders,
+        'Cache-Control': `max-age=${maxAgeSeconds}`
+      }
+      const responseWithCacheControl = new Response(clonedBody, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: headersWithCacheControl
       })
       await cache.put(request, responseWithCacheControl)
     } catch (error) {
