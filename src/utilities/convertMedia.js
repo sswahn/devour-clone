@@ -131,6 +131,8 @@ export const convertMedia = async (mediaElement, {
     if (currentLine) lines.push(currentLine)
   })
 
+  const lineSpacing = 4
+  const captionPadding = 20
   const totalHeight = lines.length * (fontSize + lineSpacing) - lineSpacing
   const baseY = canvasHeight - captionPadding - totalHeight + fontSize
 
