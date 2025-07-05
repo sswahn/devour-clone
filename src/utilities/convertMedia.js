@@ -107,18 +107,24 @@ export const convertMedia = async (mediaElement, {
   ctx.font = `${fontStyle} ${fontWeight} ${fontSize}px sans-serif`
   ctx.textAlign = textAlign 
   ctx.textBaseline = 'bottom'
-  ctx.shadowColor = 'black'
-  ctx.shadowBlur = 6
+ // ctx.shadowColor = 'black'
+ // ctx.shadowBlur = 6
 
-  if (stroke > 0) {
-    ctx.lineWidth = stroke
-    ctx.strokeStyle = strokeColor
-    ctx.strokeText(caption, x, canvasHeight - 20)
-  }
-  
-  ctx.fillStyle = fontColor
-  ctx.fillText(caption, x, canvasHeight - 20)
-  
+  const lines = caption.split('\n')
+  const totalHeight = lines.length * (fontSize + lineSpacing) - lineSpacing
+  const baseY = canvasHeight - captionPadding - totalHeight + fontSize // adjust baseline to top line
+
+  lines.forEach((line, i) => {
+    const y = baseY + i * (fontSize + lineSpacing)
+    if (stroke > 0) {
+      ctx.lineWidth = stroke
+      ctx.strokeStyle = strokeColor
+      ctx.strokeText(line, x, y)
+    }
+    ctx.fillStyle = fontColor
+    ctx.fillText(line, x, y)
+  })
+
   // Output as Blob
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 0.92))
   return blob
