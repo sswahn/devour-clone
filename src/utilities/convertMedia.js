@@ -24,7 +24,7 @@ export const convertMedia = async (mediaElement, {
   canvas.height = rect.height
 
   // Apply CSS filters
-  ctx.filter = style.filter || 'none'
+  ctx.filter = filter
 
   const fit = style.objectFit || 'fill'
   const isVideo = mediaElement instanceof HTMLVideoElement
@@ -59,13 +59,10 @@ export const convertMedia = async (mediaElement, {
     ctx.drawImage(mediaElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
   }
 
-  // Reset filter for overlays
-  ctx.filter = 'none'
-
   // Draw border
   const borderThickness = 10
   ctx.lineWidth = borderThickness
-  ctx.strokeStyle = borderColor
+  // ctx.strokeStyle = borderColor
   ctx.strokeRect(
     borderThickness / 2,
     borderThickness / 2,
@@ -73,15 +70,55 @@ export const convertMedia = async (mediaElement, {
     canvasHeight - borderThickness
   )
 
+  const borderSize = 4 // customizable
+
+  if (borderTop !== 'none') {
+    ctx.fillStyle = borderTop
+    ctx.fillRect(0, 0, canvasWidth, borderSize)
+  }
+  
+  if (borderRight !== 'none') {
+    ctx.fillStyle = borderRight
+    ctx.fillRect(canvasWidth - borderSize, 0, borderSize, canvasHeight)
+  }
+  
+  if (borderBottom !== 'none') {
+    ctx.fillStyle = borderBottom
+    ctx.fillRect(0, canvasHeight - borderSize, canvasWidth, borderSize)
+  }
+  
+  if (borderLeft !== 'none') {
+    ctx.fillStyle = borderLeft
+    ctx.fillRect(0, 0, borderSize, canvasHeight)
+  }
+
+  // Get text alignment
+  const padding = 10 // consistent margin from edge
+  let x
+  if (textAlign === 'left') {
+    x = padding
+  } else if (textAlign === 'right') {
+    x = canvasWidth - padding
+  } else {
+    x = canvasWidth / 2
+  }
+  
   // Draw text
-  ctx.font = `bold ${fontSize}px sans-serif`
-  ctx.fillStyle = 'white'
+  ctx.font = `${fontStyle} ${fontWeight} ${fontSize}px sans-serif`
+  ctx.textAlign = textAlign 
+  ctx.textBaseline = 'bottom'
   ctx.shadowColor = 'black'
   ctx.shadowBlur = 6
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'bottom'
-  ctx.fillText(caption, canvasWidth / 2, canvasHeight - 20)
 
+  if (stroke > 0) {
+    ctx.lineWidth = stroke
+    ctx.strokeStyle = strokeColor
+    ctx.strokeText(caption, x, canvasHeight - 20)
+  }
+  
+  ctx.fillStyle = fontColor
+  ctx.fillText(caption, x, canvasHeight - 20)
+  
   // Output as Blob
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 0.92))
   return blob
