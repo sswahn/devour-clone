@@ -16,9 +16,7 @@ export const convertMedia = async (mediaElement, {
   filter = 'none'
 } = {}) => {
   
-  // const rect = mediaElement.getBoundingClientRect()
- // const style = getComputedStyle(mediaElement)
-  
+
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
   
@@ -32,42 +30,13 @@ export const convertMedia = async (mediaElement, {
   // Apply CSS filters
   ctx.filter = filter
 
-  // const fit = style.objectFit || 'fill'
-
   const canvasWidth = canvas.width
   const canvasHeight = canvas.height
-  const mediaRatio = mediaWidth / mediaHeight
-  const canvasRatio = canvasWidth / canvasHeight
 
   // Draw media at full native size (no cropping/scaling)
   ctx.drawImage(mediaElement, 0, 0)
 
-  /* Draw media based on object-fit
-  if (fit === 'contain') {
-    const scale = Math.min(canvasWidth / mediaWidth, canvasHeight / mediaHeight)
-    const drawWidth = mediaWidth * scale
-    const drawHeight = mediaHeight * scale
-    const dx = (canvasWidth - drawWidth) / 2
-    const dy = (canvasHeight - drawHeight) / 2
-    ctx.drawImage(mediaElement, 0, 0, mediaWidth, mediaHeight, dx, dy, drawWidth, drawHeight)
-  } else {
-    // Default to "cover"
-    let sx = 0, sy = 0, sw = mediaWidth, sh = mediaHeight
-
-    if (canvasRatio > mediaRatio) {
-      sh = mediaWidth / canvasRatio
-      sy = (mediaHeight - sh) / 2
-    } else {
-      sw = mediaHeight * canvasRatio
-      sx = (mediaWidth - sw) / 2
-    }
-
-    ctx.drawImage(mediaElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
-  }
-  */
-
   // Draw border
-
   const borderSize = 4 // customizable
 
   if (borderTop !== 'none') {
@@ -132,7 +101,7 @@ export const convertMedia = async (mediaElement, {
   const lineSpacing = 4
   const captionPadding = 20
   const totalHeight = lines.length * (fontSize + lineSpacing) - lineSpacing
-  const baseY = canvasHeight - captionPadding - totalHeight + fontSize
+  const baseY = canvasHeight - captionPadding // - totalHeight + fontSize
 
   lines.forEach((line, i) => {
     const y = baseY + i * (fontSize + lineSpacing)
