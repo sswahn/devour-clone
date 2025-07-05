@@ -14,39 +14,13 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     const caption = storage.local.get('image_captions')
     const image_caption_styles = storage.local.get('image_caption_styles')
     const image_editor_styles = storage.local.get('image_editor_styles')
-
-
-    console.log('image_caption_styles: ', image_caption_styles)
-    console.log('image_editor_styles: ', image_editor_styles)
-    
-    
-    const image = imageRefs.current[index]
-    
-    console.log('image to be converted: ', image)
-
-    console.log('index: ', index)
-
-    console.log('caption: ', caption)
-
-    console.log('caption: ', caption[index])
-
-    console.log('image_caption_styles: ', image_caption_styles[index])
-
-    console.log('image_editor_styles: ', image_editor_styles[index])
-
-    const params = { 
+    const blob = await convertMedia(imageRefs.current[index], { 
       caption: caption[index], 
       ...image_caption_styles[index], 
       ...image_editor_styles[index] 
-    }
-
-    console.log('params: ', params)
-    
-    const blob = await convertMedia(image, params)
-    
-    console.log('blob: ', blob)
-    
+    })
     dispatch({ type: 'convert_image', payload: false })
+
     
     dispatch({ type: 'test_image', payload: blob }) // remove
   }
