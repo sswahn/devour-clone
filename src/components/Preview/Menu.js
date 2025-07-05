@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { Context } from '../../Provider'
 import storage from '@sswahn/storage'
-import database from '../../../utilities'
+import database from '../../utilities/database'
 import Dropdown from '../Dropdown/Dropdown'
 import MediaEditor from '../MediaEditor/MediaEditor'
 import CaptionInput from '../CaptionInput/CaptionInput'
