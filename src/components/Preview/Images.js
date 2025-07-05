@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef, memo } from 'react'
 import { Context } from '../../Provider'
 import { convertMedia } from '../../utilities/convertMedia'
+import storage from '@sswahn/storage'
 import ChevronLeftIcon from '../Icons/ChevronLeftIcon/ChevronLeftIcon'
 import ChevronRightIcon from '../Icons/ChevronRightIcon/ChevronRightIcon'
 
@@ -10,11 +11,15 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageRefs = useRef([])
 
   const convertImage = async () => {
+    const caption = storage.local.get('image_caption')
+    const image_caption_styles = storage.local.get('image_caption_styles')
+    const image_editor_styles = storage.local.get('image_editor_styles')
+    
     const image = imageRefs.current[index]
     
     console.log('image to be converted: ', image)
     
-    const blob = await convertMedia(image)
+    const blob = await convertMedia(image, caption[index], { ...image_caption_styles, ...image_editor_styles })
     
     console.log('blob: ', blob)
     
