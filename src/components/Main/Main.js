@@ -42,7 +42,10 @@ const Main = () => {
         <div key={item.id} className="list" aria-label="">
           <div className="list-header">{/* username, location */}</div>
           <div className="list-content">
-            {!!item.images.length && <img className="media-item" src={item.images[index]} alt={'some image'} />}
+            {/*!!item.images.length && */ <img className="media-item" src={
+              context.test_image
+             // item.images[index]
+            } alt={'some image'} />}
           </div>
           <div className="list-actions"></div>
         </div>
