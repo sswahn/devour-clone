@@ -23,13 +23,16 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     const image = imageRefs.current[index]
     
     console.log('image to be converted: ', image)
+
+    console.log('index: ', index)
     
     const blob = await convertMedia(image, caption[index], { ...image_caption_styles[index], ...image_editor_styles[index] })
     
     console.log('blob: ', blob)
     
     dispatch({ type: 'convert_image', payload: false })
-    dispatch({ type: 'test_image', payload: blob })
+    
+    dispatch({ type: 'test_image', payload: blob }) // remove
   }
 
   const handleScrollRight = event => {
