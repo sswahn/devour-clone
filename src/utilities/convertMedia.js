@@ -23,8 +23,11 @@ export const convertMedia = async (mediaElement, {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
 
-  canvas.width = rect.width
-  canvas.height = rect.height
+  const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
+  const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
+
+  canvas.width = mediaWidth // rect.width
+  canvas.height = mediaHeight // rect.height
 
   // Apply CSS filters
   ctx.filter = filter
@@ -32,8 +35,8 @@ export const convertMedia = async (mediaElement, {
   const fit = style.objectFit || 'fill'
   const isVideo = mediaElement instanceof HTMLVideoElement
 
-  const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
-  const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
+  //const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
+  //const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
   const canvasWidth = canvas.width
   const canvasHeight = canvas.height
   const mediaRatio = mediaWidth / mediaHeight
