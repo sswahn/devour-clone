@@ -5,6 +5,7 @@ import database from '../../utilities'
 import Dropdown from '../Dropdown/Dropdown'
 import MediaEditor from '../MediaEditor/MediaEditor'
 import CaptionInput from '../CaptionInput/CaptionInput'
+import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import CircleXIcon from '../Icons/CircleXIcon/CircleXIcon'
 import CircleCheckIcon from '../Icons/CircleCheckIcon/CircleCheckIcon'
 import CommentIcon from '../Icons/CommentIcon/CommentIcon'
@@ -104,7 +105,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
     {icon: CommentIcon, label: 'Add a caption', onClick: handleDisplayCaptionInput},
     {icon: CircleCheckIcon, label: 'Save', onClick: handleSave},
     {icon: CircleXIcon, label: 'Delete', onClick: handleDiscard},
-    {icon: CloseIcon, label: 'Close', onClick: handleClose}
+    {icon: ArrowLeftIcon, label: 'Close', onClick: handleClose}
   ]
   
   useEffect(() => {
