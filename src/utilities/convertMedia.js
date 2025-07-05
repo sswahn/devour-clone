@@ -62,7 +62,7 @@ export const convertMedia = async (mediaElement, {
   // Draw border
   const borderThickness = 10
   ctx.lineWidth = borderThickness
-  // ctx.strokeStyle = borderColor
+  ctx.strokeStyle =  'red' //borderColor
   ctx.strokeRect(
     borderThickness / 2,
     borderThickness / 2,
