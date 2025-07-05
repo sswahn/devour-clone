@@ -38,7 +38,7 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   }
 
   const handleSave = event => {
-    dispatch({ type: 'convertMedia', payload: true })
+    dispatch({ type: 'convert_media', payload: true })
   }
   
   const handleClose = event => {
