@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from 'react'
 import { Context } from '../../Provider'
+import storage from '@sswahn/storage'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Modal from '../Modal/Modal'
 import database from '@sswahn/database'
@@ -41,7 +42,7 @@ const Main = () => {
   }, [])
 
   useEffect(() => {
-    setImage(context.test_image)
+    setImage(context.test_image ? context.test_image : storage.local.get('test_image').test_image)
   }, [context.test_image])
       
   return (
