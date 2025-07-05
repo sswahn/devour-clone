@@ -15,6 +15,7 @@ const Provider = ({ children }) => {
     video_duration: [],
     video: [],
     images: [],
+    convert_media: false,
     video_captions: [],
     image_captions: [],
     video_caption_styles: [],
@@ -51,6 +52,8 @@ const Provider = ({ children }) => {
         return { ...state, video: action.payload }
       case 'images':
         return { ...state, images: action.payload }
+      case 'video_captions':
+        return { ...state, convert_media: action.payload }
       case 'video_captions':
         return { ...state, video_captions: action.payload }
       case 'image_captions':
