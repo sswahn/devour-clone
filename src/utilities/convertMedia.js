@@ -1,10 +1,19 @@
 
 export const convertMedia = async (mediaElement, {
-  fontSize = 40,
-  borderColor = 'white',
-  fileType = 'image/png',
-  quality = 0.92, // for JPEG/WebP
-  overlayText = 'Overlay Text'
+  caption = '',
+  fontWeight = 'normal',
+  fontStyle = 'normal',
+  textDecoration = 'none',
+  fontSize = 14,
+  textAlign = 'left',
+  fontColor = '#ffffff',
+  stroke = 0,
+  strokeColor = '#000000',
+  borderTop = 'none',
+  borderRight = 'none',
+  borderBottom = 'none',
+  borderLeft = 'none',
+  filter = 'none'
 } = {}) => {
   const rect = mediaElement.getBoundingClientRect()
   const style = getComputedStyle(mediaElement)
@@ -71,9 +80,9 @@ export const convertMedia = async (mediaElement, {
   ctx.shadowBlur = 6
   ctx.textAlign = 'center'
   ctx.textBaseline = 'bottom'
-  ctx.fillText(overlayText, canvasWidth / 2, canvasHeight - 20)
+  ctx.fillText(caption, canvasWidth / 2, canvasHeight - 20)
 
   // Output as Blob
-  const blob = await new Promise(resolve => canvas.toBlob(resolve, fileType, quality))
+  const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 0.92))
   return blob
 }
