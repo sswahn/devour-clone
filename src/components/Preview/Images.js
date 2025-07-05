@@ -11,10 +11,14 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
 
   const convertImage = async () => {
     const image = imageRefs.current[index]
+    
     console.log('image to be converted: ', image)
+    
     const blob = await convertMedia(image)
+    
     console.log('blob: ', blob)
-    dispatch({ type: '', payload: false })
+    
+    dispatch({ type: 'convert_image', payload: false })
   }
 
   const handleScrollRight = event => {
@@ -79,7 +83,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
 
   useEffect(() => {
     convertImage()
-  }, [context.convert_media])
+  }, [context.convert_image])
   
   return (
     <div className="media-component" ref={imageContainerRef}>
