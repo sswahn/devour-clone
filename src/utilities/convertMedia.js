@@ -15,14 +15,13 @@ export const convertMedia = async (mediaElement, {
   borderLeft = 'none',
   filter = 'none'
 } = {}) => {
-
-  console.log('in convertMedia function.')
   
-  const rect = mediaElement.getBoundingClientRect()
-  const style = getComputedStyle(mediaElement)
+  // const rect = mediaElement.getBoundingClientRect()
+ // const style = getComputedStyle(mediaElement)
+  
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
-
+  
   const isVideo = mediaElement instanceof HTMLVideoElement
   const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
   const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
@@ -33,17 +32,17 @@ export const convertMedia = async (mediaElement, {
   // Apply CSS filters
   ctx.filter = filter
 
-  const fit = style.objectFit || 'fill'
-  // const isVideo = mediaElement instanceof HTMLVideoElement
+  // const fit = style.objectFit || 'fill'
 
-  //const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
-  //const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
   const canvasWidth = canvas.width
   const canvasHeight = canvas.height
   const mediaRatio = mediaWidth / mediaHeight
   const canvasRatio = canvasWidth / canvasHeight
 
-  // Draw media based on object-fit
+  // Draw media at full native size (no cropping/scaling)
+  ctx.drawImage(mediaElement, 0, 0)
+
+  /* Draw media based on object-fit
   if (fit === 'contain') {
     const scale = Math.min(canvasWidth / mediaWidth, canvasHeight / mediaHeight)
     const drawWidth = mediaWidth * scale
@@ -65,6 +64,7 @@ export const convertMedia = async (mediaElement, {
 
     ctx.drawImage(mediaElement, sx, sy, sw, sh, 0, 0, canvasWidth, canvasHeight)
   }
+  */
 
   // Draw border
 
