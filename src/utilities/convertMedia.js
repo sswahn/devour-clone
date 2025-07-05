@@ -23,6 +23,7 @@ export const convertMedia = async (mediaElement, {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
 
+  const isVideo = mediaElement instanceof HTMLVideoElement
   const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
   const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
 
@@ -33,7 +34,7 @@ export const convertMedia = async (mediaElement, {
   ctx.filter = filter
 
   const fit = style.objectFit || 'fill'
-  const isVideo = mediaElement instanceof HTMLVideoElement
+  // const isVideo = mediaElement instanceof HTMLVideoElement
 
   //const mediaWidth = isVideo ? mediaElement.videoWidth : mediaElement.naturalWidth
   //const mediaHeight = isVideo ? mediaElement.videoHeight : mediaElement.naturalHeight
@@ -144,6 +145,8 @@ export const convertMedia = async (mediaElement, {
     ctx.fillText(line, x, y)
   })
 
+  console.log({ mediaWidth, mediaHeight, canvasWidth: canvas.width, canvasHeight: canvas.height }) // debug log in convertMedia
+  
   // Output as Blob
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 1.0))
   return blob
