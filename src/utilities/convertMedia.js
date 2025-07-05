@@ -110,6 +110,8 @@ export const convertMedia = async (mediaElement, {
  // ctx.shadowColor = 'black'
  // ctx.shadowBlur = 6
 
+  const lineSpacing = 4
+  const captionPadding = 20
   const lines = caption.split('\n')
   const totalHeight = lines.length * (fontSize + lineSpacing) - lineSpacing
   const baseY = canvasHeight - captionPadding - totalHeight + fontSize // adjust baseline to top line
