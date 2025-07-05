@@ -142,6 +142,6 @@ export const convertMedia = async (mediaElement, {
   })
 
   // Output as Blob
-  const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 0.92))
+  const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 1.0))
   return blob
 }
