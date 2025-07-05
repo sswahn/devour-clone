@@ -110,33 +110,29 @@ export const convertMedia = async (mediaElement, {
  // ctx.shadowColor = 'black'
  // ctx.shadowBlur = 6
 
-  // if caption line becomes too long for screen width cause line break
+  // Auto wrap + \n support
   const maxTextWidth = canvasWidth - 2 * padding
-  const words = caption.split(/\s+/)
   const lines = []
-  let currentLine = ''
-  
-  for (let i = 0; i < words.length; i++) {
-    const testLine = currentLine ? currentLine + ' ' + words[i] : words[i]
-    const { width: testWidth } = ctx.measureText(testLine)
-    if (testWidth <= maxTextWidth) {
-      currentLine = testLine
-    } else {
-      if (currentLine) {
-        lines.push(currentLine)
+
+  const paragraphs = caption.split('\n')
+  paragraphs.forEach(paragraph => {
+    const words = paragraph.split(/\s+/)
+    let currentLine = ''
+    for (let word of words) {
+      const testLine = currentLine ? currentLine + ' ' + word : word
+      const { width: testWidth } = ctx.measureText(testLine)
+      if (testWidth <= maxTextWidth) {
+        currentLine = testLine
+      } else {
+        if (currentLine) lines.push(currentLine)
+        currentLine = word
       }
-      currentLine = words[i]
     }
-  }
-  if (currentLine) {
-    lines.push(currentLine)
-  }
-  
-  const lineSpacing = 4
-  const captionPadding = 20
-  const lines = caption.split('\n')
+    if (currentLine) lines.push(currentLine)
+  })
+
   const totalHeight = lines.length * (fontSize + lineSpacing) - lineSpacing
-  const baseY = canvasHeight - captionPadding - totalHeight + fontSize // adjust baseline to top line
+  const baseY = canvasHeight - captionPadding - totalHeight + fontSize
 
   lines.forEach((line, i) => {
     const y = baseY + i * (fontSize + lineSpacing)
