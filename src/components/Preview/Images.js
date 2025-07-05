@@ -100,7 +100,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   }, [imageRefs.current])
 
   useEffect(() => {
-    if (!!context.convert_image) {
+    if (context.convert_image) {
       convertImage()
     }
   }, [context.convert_image])
