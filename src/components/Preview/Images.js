@@ -14,6 +14,11 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     const caption = storage.local.get('image_caption')
     const image_caption_styles = storage.local.get('image_caption_styles')
     const image_editor_styles = storage.local.get('image_editor_styles')
+
+
+    console.log('image_caption_styles: ', image_caption_styles)
+    console.log('image_editor_styles: ', image_editor_styles)
+    
     
     const image = imageRefs.current[index]
     
