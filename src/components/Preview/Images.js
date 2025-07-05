@@ -26,6 +26,14 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
 
     console.log('index: ', index)
 
+    console.log('caption: ', caption)
+
+    console.log('caption: ', caption[index])
+
+    console.log('image_caption_styles: ', image_caption_styles[index])
+
+    console.log('image_editor_styles: ', image_editor_styles[index])
+
     const params = { 
       caption: caption[index], 
       ...image_caption_styles[index], 
