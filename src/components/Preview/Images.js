@@ -21,6 +21,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     })
     dispatch({ type: 'convert_image', payload: false })
 
+    storage.local.set('test_image', { test_image: blob })
     
     dispatch({ type: 'test_image', payload: blob }) // remove
   }
