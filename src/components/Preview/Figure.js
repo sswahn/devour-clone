@@ -5,6 +5,9 @@ import Images from './Images'
 
 const Figure = memo(({ type, index, setIndex }) => {
   const [context, dispatch] = useContext(Context)
+
+  // Blob URLs stay in memory until you manually revoke them via URL.revokeObjectURL(blobUrl)
+  // Failure to do this can lead to memory leaks, especially in single-page applications (SPAs)
   
   const videoURLs = useMemo(() => {
     return context.video.map(file => ({ id: crypto.randomUUID(), url: URL.createObjectURL(file) })) 
