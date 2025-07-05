@@ -11,7 +11,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageRefs = useRef([])
 
   const convertImage = async () => {
-    const caption = storage.local.get('image_caption')
+    const caption = storage.local.get('image_captions')
     const image_caption_styles = storage.local.get('image_caption_styles')
     const image_editor_styles = storage.local.get('image_editor_styles')
 
