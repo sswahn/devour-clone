@@ -4,6 +4,9 @@ export const Context = createContext([])
 
 const Provider = ({ children }) => {
   const data = {
+    
+    test_image: undefined,
+    
     auth: undefined,
     router: window.location.pathname || '/',
     dialog: undefined,
@@ -37,6 +40,10 @@ const Provider = ({ children }) => {
   }
   const reducer = (state, action) => {
     switch(action.type) {
+        
+      case 'test_image':
+        return { ...state, test_image: action.payload }
+        
       case 'auth':
         return { ...state, auth: action.payload }
       case 'router':
