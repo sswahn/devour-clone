@@ -9,6 +9,14 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
   const imageContainerRef = useRef(null)
   const imageRefs = useRef([])
 
+  const convertImage = async () => {
+    const image = imageRefs.current[index]
+    console.log('image to be converted: ', image)
+    const blob = await convertMedia(image)
+    console.log('blob: ', blob)
+    dispatch({ type: '', payload: false })
+  }
+
   const handleScrollRight = event => {
     if (imageContainerRef.current) {
       const scrollWidth = imageContainerRef.current.scrollWidth
@@ -68,6 +76,10 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
       observer.disconnect()
     }
   }, [imageRefs.current])
+
+  useEffect(() => {
+    convertImage()
+  }, [context.convert_media])
   
   return (
     <div className="media-component" ref={imageContainerRef}>
