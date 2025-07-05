@@ -51,7 +51,7 @@ const Main = () => {
           <div className="list-header">{/* username, location */}</div>
           <div className="list-content">
             {/*!!item.images.length && */ <img className="media-item" src={
-              URL.createObjectURL(image)
+             image ? URL.createObjectURL(image) : ''
              // item.images[index]
             } alt={'some image'} />}
           </div>
