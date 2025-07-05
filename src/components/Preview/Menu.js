@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { Context } from '../../Provider'
 import storage from '@sswahn/storage'
-import database from '@sswahn/database'
+import database from '../../utilities'
 import Dropdown from '../Dropdown/Dropdown'
 import MediaEditor from '../MediaEditor/MediaEditor'
 import CaptionInput from '../CaptionInput/CaptionInput'
@@ -36,8 +36,12 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
     setDropdownIsOpen(false)
     setDisplayCaptionInput(prevState => !prevState)
   }
-  
+
   const handleSave = event => {
+    dispatch({ type: 'convertMedia', payload: true })
+  }
+  
+  const handleClose = event => {
     setIndex(0)
     setDropdownIsOpen(false)
     setDisplayCaptionInput(false)
@@ -98,7 +102,8 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
     {icon: SlidersIcon, label: 'Open editor', onClick: handleDisplayEditor},
     {icon: CommentIcon, label: 'Add a caption', onClick: handleDisplayCaptionInput},
     {icon: CircleCheckIcon, label: 'Save', onClick: handleSave},
-    {icon: CircleXIcon, label: 'Delete', onClick: handleDiscard}
+    {icon: CircleXIcon, label: 'Delete', onClick: handleDiscard},
+    {icon: CloseIcon, label: 'Close', onClick: handleClose}
   ]
   
   useEffect(() => {
