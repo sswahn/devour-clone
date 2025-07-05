@@ -26,7 +26,11 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
 
     console.log('index: ', index)
     
-    const blob = await convertMedia(image, caption[index], { ...image_caption_styles[index], ...image_editor_styles[index] })
+    const blob = await convertMedia(image, { 
+      caption: caption[index], 
+      ...image_caption_styles[index], 
+      ...image_editor_styles[index] 
+    })
     
     console.log('blob: ', blob)
     
