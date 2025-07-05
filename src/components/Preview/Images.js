@@ -19,6 +19,7 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
     console.log('blob: ', blob)
     
     dispatch({ type: 'convert_image', payload: false })
+    dispatch({ type: 'test_image', payload: blob })
   }
 
   const handleScrollRight = event => {
