@@ -7,8 +7,12 @@ import database from '@sswahn/database'
 const Main = () => {
   const [context, dispatch] = useContext(Context)
   const [data, setData] = useState([])
+
+ const [image, setImage] = useState(null)
+  
   const db = database()
 
+  
   const loadData = async () => {
 
     console.log('in <Main />, loading data from indexedDB.')
@@ -35,6 +39,10 @@ const Main = () => {
   useEffect(() => {
     loadData()
   }, [])
+
+  useEffect(() => {
+    setImage(context.test_image)
+  }, [context.test_image])
       
   return (
     <main>
@@ -43,7 +51,7 @@ const Main = () => {
           <div className="list-header">{/* username, location */}</div>
           <div className="list-content">
             {/*!!item.images.length && */ <img className="media-item" src={
-              context.test_image
+              image
              // item.images[index]
             } alt={'some image'} />}
           </div>
