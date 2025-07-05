@@ -15,6 +15,9 @@ export const convertMedia = async (mediaElement, {
   borderLeft = 'none',
   filter = 'none'
 } = {}) => {
+
+  console.log('in convertMedia function.')
+  
   const rect = mediaElement.getBoundingClientRect()
   const style = getComputedStyle(mediaElement)
   const canvas = document.createElement('canvas')
