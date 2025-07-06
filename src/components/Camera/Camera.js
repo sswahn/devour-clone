@@ -172,7 +172,10 @@ const Camera = () => {
   }
 
   useEffect(() => {
-    createDefaults() // this should only fire once and deleted when image deleted/submitted
+    const data = storage.local.get('image_caption_styles') || storage.local.get('image_editor_styles')
+    if (!data.length) {
+      createDefaults()
+    }
   }, [])
   
   useEffect(() => {
