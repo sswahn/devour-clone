@@ -114,7 +114,7 @@ export const convertMedia = async (mediaElement, {
     ctx.fillText(line, x, y)
   })
 
-  console.log({ mediaWidth, mediaHeight, canvasWidth: canvas.width, canvasHeight: canvas.height }) // debug log in convertMedia
+  console.log('debug log in convertMedia: ', { mediaWidth, mediaHeight, canvasWidth: canvas.width, canvasHeight: canvas.height }) 
   
   // Output as Blob
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', 1.0))
