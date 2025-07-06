@@ -8,7 +8,7 @@ const Main = () => {
   const [context, dispatch] = useContext(Context)
   const [data, setData] = useState([])
 
- const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null)
   
   const db = database()
 
