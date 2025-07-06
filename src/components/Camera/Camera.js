@@ -20,6 +20,7 @@ const Camera = () => {
   const [type, setType] = useState(undefined)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [isFlashing, setIsFlashing] = useState(false)
+  const [defaults, setDefaults] = useState(storage.local.get('image_caption_styles') || storage.local.get('image_editor_styles'))
   const streamRef = useRef(null)
   const videoRef = useRef(null)
   const recorderRef = useRef(null)
@@ -170,12 +171,15 @@ const Camera = () => {
     stopCamera()
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
   }
+
+  useEffect(() => {
+    createDefaults() // this should only fire once and deleted when image deleted/submitted
+  }, [defaults])
   
   useEffect(() => {
     if (!streamRef.current) {
       startCamera()
       loadFromStorage()
-      createDefaults()
     }
     return () => {
       stopCamera()
