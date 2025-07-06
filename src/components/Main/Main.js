@@ -41,7 +41,7 @@ const Main = () => {
   }, [])
 
   useEffect(() => {
-    setImage(context.test_image)
+    //setImage(context.test_image)
   }, [context.test_image])
       
   return (
