@@ -173,7 +173,7 @@ const Camera = () => {
 
   useEffect(() => {
     const data = storage.local.get('image_caption_styles') || storage.local.get('image_editor_styles')
-    if (!data.length) {
+    if (!data) {
       createDefaults()
     }
   }, [])
