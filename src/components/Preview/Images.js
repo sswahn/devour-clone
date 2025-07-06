@@ -19,6 +19,9 @@ const Images = memo(({ index, setIndex, imageURLs, imageEditorStyles }) => {
       ...image_caption_styles[index], 
       ...image_editor_styles[index] 
     })
+
+    console.log('blob: ', blob)
+    
     dispatch({ type: 'convert_image', payload: false })
 
     
