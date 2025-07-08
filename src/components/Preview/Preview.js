@@ -5,6 +5,7 @@ import storage from '@sswahn/storage'
 import Avatar from '../Avatar/Avatar'
 import Menu from './Menu'
 import Figure from './Figure'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 
 const Preview = memo(({ type, closeModal }) => {
   const [context, dispatch] = useContext(Context)
@@ -49,7 +50,10 @@ const Preview = memo(({ type, closeModal }) => {
       
       
       <div className="card-actions">
-        
+
+      </div>
+      <div className="loading-overlay" style={{ display: context.loading ? 'flex' : 'none' }}>
+        <LoadingSpinner />
       </div>
     </div>
   )
