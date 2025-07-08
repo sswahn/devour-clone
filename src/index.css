@@ -44,19 +44,6 @@ html, body {
   z-index: 999;
 }
 
-.loading-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-}
-
 .sidebar {
   background-color: white;
   border-left: 1px solid gray;
@@ -931,6 +918,20 @@ html, body {
 .filters-menu div {
   font-size: 16px;
   margin-top: 10px;
+}
+
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
 }
 
 
