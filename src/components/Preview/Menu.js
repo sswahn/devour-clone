@@ -39,8 +39,10 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   }
 
   const handleSave = event => {
+    dispatch({ type: 'loading', payload: true })
     const media = type === 'video' ? 'convert_video' : 'convert_image'
     dispatch({ type: media, payload: true })
+    dispatch({ type: 'loading', payload: false })
   }
   
   const handleClose = event => {
