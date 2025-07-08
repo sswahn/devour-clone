@@ -60,6 +60,9 @@ const Main = () => {
       <Modal className="camera-modal" open={context.modal.isOpen} onClose={handleCloseModal}>
         {context.modal.content}
       </Modal>
+      <div className="loading-overlay" style={{ display: context.loading ? 'block' : 'none' }}>
+        <LoadingSpinner />
+      </div>
     </main>
   )
 }
