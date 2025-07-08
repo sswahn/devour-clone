@@ -39,12 +39,17 @@ const Menu = ({ type, index, setIndex, closeModal }) => {
   }
 
   const handleSave = event => {
-    dispatch({ type: 'loading', payload: true })
-    console.log('loading: ', context.loading)
-    const media = type === 'video' ? 'convert_video' : 'convert_image'
-    dispatch({ type: media, payload: true })
-    dispatch({ type: 'loading', payload: false })
-    console.log('loading: ', context.loading)
+    new Promise(resolve => {
+      dispatch({ type: 'loading', payload: true })
+    }).then(x => {
+      console.log('loading: ', context.loading)
+      const media = type === 'video' ? 'convert_video' : 'convert_image'
+      dispatch({ type: media, payload: true })
+    }).then(x => {
+      dispatch({ type: 'loading', payload: false })
+    }).then(x => {
+      console.log('loading: ', context.loading)
+    })
   }
   
   const handleClose = event => {
