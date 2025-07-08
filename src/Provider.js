@@ -6,7 +6,8 @@ const Provider = ({ children }) => {
   const data = {
     
     test_image: undefined,
-    
+
+    loading: false,
     auth: undefined,
     router: window.location.pathname || '/',
     dialog: undefined,
@@ -44,6 +45,8 @@ const Provider = ({ children }) => {
       case 'test_image':
         return { ...state, test_image: action.payload }
         
+      case 'loading':
+        return { ...state, loading: action.payload }        
       case 'auth':
         return { ...state, auth: action.payload }
       case 'router':
