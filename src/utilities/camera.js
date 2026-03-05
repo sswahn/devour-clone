@@ -21,8 +21,8 @@ const camera = {
       }
     }
     const finalConstraints = {
-      audio: { ...defaultConstraints.audio, ...constraints.audio },
-      video: { ...defaultConstraints.video, ...constraints.video }
+      audio: { ...defaultConstraints.audio, ...(constraints.audio || {}) },
+      video: { ...defaultConstraints.video, ...(constraints.video || {}) }
     }
     try {
       return navigator.mediaDevices.getUserMedia(finalConstraints)
