@@ -12,9 +12,9 @@ const camera = {
       },
       video: {
         facingMode: 'environment',
-        width: { ideal: 99999 },
-        height: { ideal: 99999 },
-        frameRate: { ideal: 999 },
+        width: { ideal: 3840 },
+        height: { ideal: 2160 },
+        frameRate: { ideal: 60 },
         aspectRatio: {
           ideal: window.innerWidth / window.innerHeight
         }
