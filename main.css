@@ -603,8 +603,10 @@ html, body {
   width: 100%;
 }
 
-.card-landscape-mode {
-  max-width: 100%;
+@media (orientation: landscape) {
+  .card {
+    max-width: none;
+  }
 }
 
 .flash-overlay {
