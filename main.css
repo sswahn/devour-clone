@@ -315,7 +315,7 @@
   padding: 0;
 }
 
-html, body, main {
+html, body, main, #root {
   height: 100%;
   overflow-x: hidden;
   position: relative;
