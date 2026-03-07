@@ -577,19 +577,38 @@ html, body {
 /* List */
 
 .list {
-  
+  margin: 0 auto;
+  max-width: 500px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .list-header {
-  
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  height: 60px;
+  /*left: 50%;*/
+  max-width: 500px;
+  position: fixed;
+  top: 0;
+ /* transform: translateX(-50%);*/
+  width: 100%;
+  z-index: 999;
 }
 
 .list-content {
-  
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .list-actions {
-  
+  bottom: 0; 
+  left: 0; 
+  padding: 0; 
+  position: absolute; 
+  width: 100%;
 }
 
 /* Card */
