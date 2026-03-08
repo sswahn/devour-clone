@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SuggestionsNode from './SuggestionsNode'
 import LoadMoreSentinel from './LoadMoreSentinel' // sentinel triggers infinite loading
+import styles from './feed.module.css'
 
 function Feed() {
   const [items, setItems] = useState([])
@@ -10,7 +11,7 @@ function Feed() {
   }
   
   return (
-    <div className="feed">
+    <div className={styles.feed}>
       <SuggestionsNode />
       {items.map(item => {
         <FeedNode key={item.id} item={item} />
