@@ -1,4 +1,4 @@
-import { useRef }
+import { useRef } from 'react'
 import styles from './feed.module.css'
 
 function FeedNode({ item }) {
