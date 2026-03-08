@@ -1,8 +1,10 @@
 
+import styles from './feed.module.css'
+
 function FeedNode({ item }) {
 
   return (
-    <>{item}</>
+    <div className={styles.feed_node}>{item}</div>
   )
 }
 
