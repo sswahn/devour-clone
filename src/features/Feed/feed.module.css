@@ -1,0 +1,19 @@
+/* Feed */
+
+.feed {
+  height: 100dvh;
+  overflow-y: auto;
+
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+}
+
+.feed_node {
+  height: 100dvh;
+  width: 100%;
+  scroll-snap-align: start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
