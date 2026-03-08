@@ -11,7 +11,7 @@ export function createMultiObserver({ root = null, rootMargin = '0px', threshold
   }, { root, rootMargin, threshold })
 
   const observe = (element, callback) => {
-    elementCallbacks.set(elemet, callback)
+    elementCallbacks.set(element, callback)
     observer.observe(element)
   }
 
