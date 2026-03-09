@@ -4,19 +4,19 @@ import LoadMoreSentinel from './LoadMoreSentinel' // sentinel triggers infinite 
 import styles from './feed.module.css'
 
 function Feed() {
-  const [items, setItems] = useState([])
+  const [data, setData] = useState([])
 
-  const loadMore = () => {
+  const loadMoreData = () => {
     // fetch next batch from server
   }
   
   return (
-    <div className={styles.feed}>
+    <section className={styles.feed} role="feed">
       <SuggestionsNode />
-      {items.map((item, index) => {
+      {data.map((item, index) => {
         <FeedNode key={item.id} item={item} index={idex + 1} count={items.length} />
       })}
-      <LoadMoreSentinel onVisible={loadMore} />
-    </div>
+      <LoadMoreSentinel onVisible={loadMoreData} />
+    </section>
   )
 }
