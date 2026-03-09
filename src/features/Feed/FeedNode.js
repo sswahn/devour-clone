@@ -7,7 +7,10 @@ function FeedNode({ item, index, count }) {
   
   return (
     <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count}>
-      <header>{/* user icon name etc. maybe the location should be the title <h2>? */}</header>
+      <header>
+        <AuthorButton />
+        <LocationButton />
+      </header>
         <figure>
           <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />
           {item.caption ?? <figcaption>{item.caption}</figcaption>}
@@ -15,8 +18,8 @@ function FeedNode({ item, index, count }) {
       <footer>
         {/* likes, comments, views etc. */}
         <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
-        <Comments /> {item.commentCount}
-        <Views /> {item.viewCount}
+        <CommentsButton /> {item.commentCount}
+        <ShareButton />
       </footer>
     </article>
   )
