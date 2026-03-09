@@ -3,9 +3,8 @@ import server from '../../utilitles/server'
 import config from '../../config'
 // import icons
 
-function LikeButton({ initialCount }) {
+function LikeButton({ initialLikeState }) {
   const [liked, setLiked] = useState(false)
-  const [likeCount, setLikeCount] = useState()
   const [loading, setLoading] = useState(false)
 
   const onClick = async event => {
@@ -15,8 +14,12 @@ function LikeButton({ initialCount }) {
       return alert(response.error)
     }
     setLiked(!liked)
-    // setLikeCount()
+    setLoading(false)
   }
+
+  useEffect() {
+    setState(initialLikeState) 
+  }, [initialLikeState])
   
   return (
     <button type="button" onClick={onClick} disabled={loading} aria-label="Like" aria-pressed={liked}>
