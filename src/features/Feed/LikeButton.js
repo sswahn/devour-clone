@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import server from '../../utilitles/server'
 import config from '../../config'
 // import icons
 
-function LikeButton() {
+function LikeButton({ initialCount }) {
   const [liked, setLiked] = useState(false)
-  const [likeCount, setLikeCount] = useState() // set the total count
+  const [likeCount, setLikeCount] = useState()
   const [loading, setLoading] = useState(false)
 
   const onClick = async event => {
