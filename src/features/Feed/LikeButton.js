@@ -3,7 +3,7 @@ import server from '../../utilitles/server'
 import config from '../../config'
 // import icons
 
-function LikeButton({ initialLikeState }) {
+function LikeButton({ initialButtonState }) {
   const [liked, setLiked] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -18,8 +18,8 @@ function LikeButton({ initialLikeState }) {
   }
 
   useEffect() {
-    setState(initialLikeState) 
-  }, [initialLikeState])
+    setState(initialButtonState) 
+  }, [initialButtonState])
   
   return (
     <button type="button" onClick={onClick} disabled={loading} aria-label="Like" aria-pressed={liked}>
