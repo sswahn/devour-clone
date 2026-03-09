@@ -14,7 +14,9 @@ function FeedNode({ item, index, count }) {
         </figure>
       <footer>
         {/* likes, comments, views etc. */}
-        <LikeButton likedByUser={item.likedByUser} />
+        <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
+        <Comments /> {item.commentCount}
+        <Views /> {item.viewCount}
       </footer>
     </article>
   )
