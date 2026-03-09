@@ -6,7 +6,7 @@ function FeedNode({ item, index, count }) {
   
   return (
     <article className={styles.feedNode} aria-posinset={index} aria-setsize={count}>
-      <header>{/* user icon name etc. */}</header>
+      <header>{/* user icon name etc. maybe the location should be the title <h2>? */}</header>
         <figure>
           <video ref={ref} src={item.video} preload="metadata" muted playsInline loop />
           {item.caption ?? <figcaption>{item.caption}</figcaption>}
