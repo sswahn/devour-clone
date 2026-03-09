@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import SuggestionsNode from './SuggestionsNode'
-import LoadMoreSentinel from './LoadMoreSentinel' // sentinel triggers infinite loading
+import FeedNode from './FeedNode'
+import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
@@ -12,11 +12,10 @@ function Feed() {
   
   return (
     <section className={styles.feed} role="feed">
-      <SuggestionsNode />
       {data.map((item, index) => {
         <FeedNode key={item.id} item={item} index={idex + 1} count={items.length} />
       })}
-      <LoadMoreSentinel onVisible={loadMoreData} />
+      <Sentinel onVisible={loadMoreData} />
     </section>
   )
 }
