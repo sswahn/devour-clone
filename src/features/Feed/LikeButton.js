@@ -1,15 +1,25 @@
 import { useState } from 'react'
+import server from '../../utilitles/server'
+import config from '../../config'
 // import icons
 
 function LikeButton() {
   const [liked, setLiked] = useState(false)
+  const [likeCount, setLikeCount] = useState() // set the total count
+  const [loading, setLoading] = useState(false)
 
-  const onClick = event => {
-    // handle like
+  const onClick = async event => {
+    setLoading(true)
+    const response = await server.post(config.post.like)
+    if (response.error) {
+      return alert(response.error)
+    }
+    setLiked(!liked)
+    // setLikeCount()
   }
   
   return (
-    <button type="button" aria-label="Like" aria-pressed={liked}>
+    <button type="button" onClick={onClick} disabled={loading} aria-label="Like" aria-pressed={liked}>
       {liked ? 'liked icon' : 'like icon' }
     </button>
   )
