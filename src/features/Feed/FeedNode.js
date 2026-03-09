@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import LikeButton from './LikeButton'
 import styles from './feed.module.css'
 
 function FeedNode({ item, index, count }) {
@@ -13,7 +14,7 @@ function FeedNode({ item, index, count }) {
         </figure>
       <footer>
         {/* likes, comments, views etc. */}
-        <button type="button" aria-label="Like" aria-pressed={false}>like</button>
+        <LikeButton />
       </footer>
     </article>
   )
