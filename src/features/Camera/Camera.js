@@ -86,28 +86,9 @@ const Camera = () => {
     storage.local.set(captionStylesType, captionStyles)
     storage.local.set(editorStylesType, editorStyles)
   }
-
-  const triggerFlash = () => {
-    setIsFlashing(true)
-    setTimeout(() => setIsFlashing(false), 50) // Remove class after animation
-  }
-  
-  const handleTakePhoto = async () => {
-    if (context.images.length >= 5) {
-      return alert('Please, only 5 photos per submission.') // consider a custom alert popup. check mui.
-    }
-    triggerFlash()
-    const image = await camera.takePhoto(streamRef.current)
-    //new Audio(effects).play() 
-    const images = [ ...context.images, image ]
-    dispatch({ type: 'images', payload: images }) 
-    db.put({ id: 'images', images })
-  }
   
   const handleRecordVideo = () => {
-   // if (context.video.length && !confirm('You are about to overwrite an existing video. Do you wish to continue?') ) { // make custom popup
-   //   return 
-  //  }
+    // check remaining time?
     dispatch({ type: 'mode', payload: 'recording' })
     const recorder = camera.startRecording(streamRef.current, framesRef.current)
     recorderRef.current = recorder
@@ -140,8 +121,8 @@ const Camera = () => {
   
   const handleCamera = event => {
     switch (context.mode) {
-      case 'camera':
-        return handleTakePhoto()
+     // case 'camera':
+     //   return handleTakePhoto()
       case 'video':
         return handleRecordVideo()
       case 'recording':
