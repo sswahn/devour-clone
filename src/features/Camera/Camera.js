@@ -121,8 +121,6 @@ const Camera = () => {
   
   const handleCamera = event => {
     switch (context.mode) {
-     // case 'camera':
-     //   return handleTakePhoto()
       case 'video':
         return handleRecordVideo()
       case 'recording':
