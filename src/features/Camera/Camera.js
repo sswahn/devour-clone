@@ -116,18 +116,15 @@ const Camera = () => {
       setTimer(300 - totalDuration) 
     }
   }
-  
-  const handleCamera = event => {
-    switch (context.mode) {
-      case 'video':
-        return handleRecordVideo()
-      case 'recording':
-        return handleStopRecordVideo()
-      default:
-        return
-    }
+
+  const handleCameraButton = event => {
+    context.mode === 'recording'
+      ? handleStopRecordVideo()
+      : handleRecordVideo()
   }
 
+  // modals previews and location shouldnt be in camera
+  
   const handlePreviewFiles = event => {
     setType(event.currentTarget.id)
     setIsPreviewOpen(prevState => !prevState)
@@ -224,7 +221,7 @@ const Camera = () => {
             <div className="camera-button-container">
               <button 
                 className="camera-button" 
-                onClick={handleCamera} 
+                onClick={handleCameraButton} 
                 type="button" 
                 aria-label="camera button"
                 style={{
