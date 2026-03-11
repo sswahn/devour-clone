@@ -108,10 +108,8 @@ const Camera = () => {
   }
   
   const loadFromStorage = async () => {
-    const images = await db.get('images')
     const video = await db.get('video')
     const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
-    dispatch({ type: 'images', payload: images?.images || [] })
     dispatch({ type: 'video', payload: video?.video || [] })
     dispatch({ type: 'video_duration', payload: video?.duration || [] })
     if (totalDuration) {
