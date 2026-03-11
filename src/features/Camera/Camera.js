@@ -72,7 +72,6 @@ const Camera = () => {
     dispatch({ type: 'video_duration', payload: duration })
     dispatch({ type: 'video', payload: video }) 
     db.put({ id: 'video', video, duration })
-    //createDefaults()
   }
   
   const loadFromStorage = async () => {
