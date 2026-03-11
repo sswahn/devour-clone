@@ -55,36 +55,6 @@ const Camera = () => {
     setMute(!mute)
   }, [mute])
   
-  const createDefaults = () => {
-    const captionsType = context.mode === 'video' ? 'video_captions' : 'image_captions'
-    const captionStylesType = context.mode === 'video' ? 'video_caption_styles' : 'image_caption_styles'
-    const editorStylesType = context.mode === 'video' ? 'video_editor_styles' : 'image_editor_styles'
-    const captions = [ ...context[captionsType], '' ]
-    const captionStyles = [ ...context[captionStylesType], {
-      fontWeight: 'normal',
-      fontStyle: 'normal',
-      textDecoration: 'none',
-      fontSize: 14,
-      textAlign: 'left',
-      fontColor: '#ffffff',
-      stroke: 0,
-      strokeColor: '#000000'
-    }]
-    const editorStyles = [ ...context[editorStylesType], {
-      borderTop: 'none',
-      borderRight: 'none',
-      borderBottom: 'none',
-      borderLeft: 'none',
-      filter: 'none',
-    }]
-    dispatch({ type: captionsType, payload: captions })
-    dispatch({ type: captionStylesType, payload: captionStyles }) 
-    dispatch({ type: editorStylesType, payload: editorStyles })
-    storage.local.set(captionsType, captions)
-    storage.local.set(captionStylesType, captionStyles)
-    storage.local.set(editorStylesType, editorStyles)
-  }
-  
   const handleRecordVideo = () => {
     // check remaining time?
     dispatch({ type: 'mode', payload: 'recording' })
@@ -126,13 +96,17 @@ const Camera = () => {
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
   }
 
-  // could probably create defaults outside camera
-  useEffect(() => {
-    const data = storage.local.get('image_caption_styles') || storage.local.get('image_editor_styles')
-    if (!data) {
-      createDefaults()
+  const createInterval = () => {
+    if (context.mode === 'recording') {
+      return setInterval(() => {
+        if (timer < 1) {
+          clearInterval(interval)
+          return handleStopRecordVideo()
+        }
+        setTimer(timer - 1)
+      }, 1000)
     }
-  }, [])
+  }
   
   useEffect(() => {
     if (!streamRef.current) {
@@ -143,19 +117,9 @@ const Camera = () => {
       stopCamera()
     }
   }, [])
-
+      
   useEffect(() => {
-    if (context.mode !== 'recording') {
-     return 
-    }
-    let interval = setInterval(() => {
-      if (timer < 1) {
-        clearInterval(interval)
-        return handleStopRecordVideo()
-      }
-      setTimer(timer - 1)
-    }, 1000)
-    
+    let interval = createInterval()
     return () => {
       clearInterval(interval)
     }
