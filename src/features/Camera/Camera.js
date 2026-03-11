@@ -184,6 +184,13 @@ const Camera = () => {
     }
   }, [timer, context.mode])
 
+  // consider nav overlay as all navigation elements 
+  // (including close camera, and toggle light buttons, and camera button)
+  // move those to navOverlay.js
+  // move modals out as well.
+  // make the parent component <Camera />
+  // and it would contain, <ViewPort /> (this current component), and <NavOverlay />
+  
   return (
     <div className="card" aria-label="camera viewport">
       <div className={`flash-overlay ${isFlashing ? 'flash' : ''}`}></div>
