@@ -3,13 +3,11 @@ import { Context } from '../../Provider'
 import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
-import Modal from '../Modal/Modal'
 import SunIcon from '../Icons/SunIcon/SunIcon'
 import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import NavOverlay from './NavOverlay'
-import Preview from '../Preview/Preview'
 import SubmitPost from './SubmitPost'
 
 const Camera = () => {
@@ -122,29 +120,13 @@ const Camera = () => {
       ? handleStopRecordVideo()
       : handleRecordVideo()
   }
-
-  // modals previews and location shouldnt be in camera
-  
-  const handlePreviewFiles = event => {
-    setType(event.currentTarget.id)
-    setIsPreviewOpen(prevState => !prevState)
-  }
-  
-  const handleOpenLocationModal = event => {
-    context.images.length || context.video.length
-     ? locationModalRef.current.showModal()
-     : alert('At least one photo or video is required.') // use a custom alert
-  }
-
-  const handleClosePreview = event => {
-    setIsPreviewOpen(false)
-  }
   
   const handleCloseCamera = event => {
     stopCamera()
     dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
   }
 
+  // could probably create defaults outside camera
   useEffect(() => {
     const data = storage.local.get('image_caption_styles') || storage.local.get('image_editor_styles')
     if (!data) {
@@ -204,17 +186,6 @@ const Camera = () => {
           <div className="card-content">
             <video ref={videoRef} className="camera" autoPlay muted playsInline aria-label="camera feed" aria-live="assertive"></video>
             <NavOverlay timer={timer} previewFiles={handlePreviewFiles} openSubmit={handleOpenLocationModal} toggleMute={toggleMute} mute={mute} />
-
-            
-            <Modal className="preview-modal" open={isPreviewOpen} onClose={handleClosePreview} >
-              {isPreviewOpen && <Preview type={type} closeModal={handleClosePreview} />}
-            </Modal>
-    
-           {/*
-            <Modal open={isSubmitPostOpen}>
-              <SubmitPost modalRef={locationModalRef} /> 
-            </Modal>
-           */}
           </div>
           
           <div className="card-actions">
