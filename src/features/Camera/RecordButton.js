@@ -2,7 +2,8 @@ import { useState, useContext, useRef } from 'react'
 import { Context } from '../../Provider'
 
 function RecordButton({ streamRef }) {
-
+  const framesRef = useRef([])
+  
   const handleRecordVideo = () => {
     // check remaining time?
     dispatch({ type: 'mode', payload: 'recording' })  // narrow down this 'mode' thing and maybe dont use it anymore
