@@ -12,10 +12,6 @@ import LocationButton from './LocationButton'
 const NavOverlay = ({ openSubmit }) => {
   const [context, dispatch] = useContext(Context)
   
-  const handleOpenLocation = event => {
-    dispatch({ type: 'field', payload: context.field === 'location' ? undefined : 'location' })
-  }
-  
   function blobsToBase64(blobs) {
     return Promise.all(blobs.map(blob => {
       return new Promise((resolve, reject) => {
