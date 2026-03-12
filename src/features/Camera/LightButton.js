@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import SunIcon from '../Icons/SunIcon/SunIcon'
+import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
 
 function LightButton({ streamRef }) {
   const [light, setLight] = useState(false)
