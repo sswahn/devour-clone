@@ -24,7 +24,9 @@ function RecordTimer() {
   }, [timer, context.mode])
 
   return (
-    <></>
+    <div className="video-timer">
+      {`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}
+    </div>
   )
 }
 
