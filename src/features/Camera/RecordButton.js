@@ -4,6 +4,7 @@ import database from '@sswahn/database'
 
 function RecordButton({ streamRef }) {
   const framesRef = useRef([])
+  const db = database()
   
   const handleRecordVideo = () => {
     // check remaining time?
