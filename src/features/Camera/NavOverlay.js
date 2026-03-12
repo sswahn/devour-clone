@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
-import FileVideoIcon from '../Icons/FileVideoIcon/FileVideoIcon'
-
+import ViewPort from './ViewPort'
 import BackButton from './BackButton'
 import RecordTimer from './RecordTimer'
 import LightButton from './LightButton'
 import MuteButton from './MuteButton'
 import RecordButton from './RecordButton'
 import LocationButton from './LocationButton'
+import styles from './camera.module.css'
 
 const NavOverlay = ({ openSubmit }) => {
   const [context, dispatch] = useContext(Context)
@@ -54,11 +54,11 @@ const NavOverlay = ({ openSubmit }) => {
   }, [])
   
   return (
-    <section className="camera-navigation">
+    <section className={styles.camera}>
       <BackButton stopCamera={stopCamera} />
       <RecordTimer />
       <LightButton streamRef={streamRef} />
-      
+      <ViewPort />
       <MuteButton streamRef={streamRef} />
       <RecordButton />
       <LocationButton />
