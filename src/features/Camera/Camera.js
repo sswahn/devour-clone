@@ -80,11 +80,7 @@ const Camera = () => {
     }
   }
 
-  const handleCameraButton = event => {
-    context.mode === 'recording'
-      ? handleStopRecordVideo()
-      : handleRecordVideo()
-  }
+
   
   const handleCloseCamera = event => {
     stopCamera()
