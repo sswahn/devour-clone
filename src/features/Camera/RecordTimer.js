@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function RecordTimer() {
-
+ const [timer, setTimer] = useState(300)
+  
   const createInterval = () => {
     if (context.mode === 'recording') {
       return setInterval(() => {
