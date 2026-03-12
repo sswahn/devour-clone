@@ -4,15 +4,12 @@ import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 
-
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import NavOverlay from './NavOverlay'
-import SubmitPost from './SubmitPost'
 
 const Camera = () => {
   const [context, dispatch] = useContext(Context)
 
-  const [type, setType] = useState(undefined)
   const [isFlashing, setIsFlashing] = useState(false)
   
   const streamRef = useRef(null)
@@ -56,28 +53,17 @@ const Camera = () => {
     }
   }, [])
 
-  // consider nav overlay as all navigation elements 
-  // (including close camera, and toggle light buttons, and camera button)
-  // move those to navOverlay.js
-  // move modals out as well.
-  // make the parent component <Camera />
-  // and it would contain, <ViewPort /> (this current component), and <NavOverlay />
+  // move the rest of this into componet into NavOverlay and make NavOverlay into Camera
   
   return (
     <div className="card" aria-label="camera viewport">
       <div className={`flash-overlay ${isFlashing ? 'flash' : ''}`}></div>
         <>
-          <div className="card-header">
-            <BackButton stopCamera={stopCamera} />
-            <LightButton streamRef={streamRef} />
-          </div>
-          
           <div className="card-content">
             <video ref={videoRef} className="camera" autoPlay muted playsInline aria-label="camera feed" aria-live="assertive"></video>
-            <NavOverlay timer={timer} previewFiles={handlePreviewFiles} openSubmit={handleOpenLocationModal} toggleMute={toggleMute} mute={mute} />
+            <NavOverlay />
           </div>
         </>
-      
     </div>
   )
 }
