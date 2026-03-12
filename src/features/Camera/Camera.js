@@ -14,7 +14,7 @@ const Camera = () => {
   const [context, dispatch] = useContext(Context)
   const [light, setLight] = useState(false)
   const [timer, setTimer] = useState(300)
-  const [mute, setMute] = useState(false)
+
   const [type, setType] = useState(undefined)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [isFlashing, setIsFlashing] = useState(false)
@@ -50,10 +50,6 @@ const Camera = () => {
     setLight(setting)
   }, [light])
   
-  const toggleMute = useCallback(event => {
-    !mute ? camera.mute(streamRef.current) : camera.unmute(streamRef.current)
-    setMute(!mute)
-  }, [mute])
   
   const handleRecordVideo = () => {
     // check remaining time?
