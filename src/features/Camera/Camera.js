@@ -58,7 +58,7 @@ function Camera() {
       <BackButton stopCamera={stopCamera} />
       <RecordTimer />
       <LightButton streamRef={streamRef} />
-      <ViewPort />
+      <ViewPort videoRef={videoRef} />
       <MuteButton streamRef={streamRef} />
       <RecordButton />
       <LocationButton />
