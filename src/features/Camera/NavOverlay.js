@@ -48,37 +48,24 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
   }
   
   return (
-    <>
-      <div className="camera-navigation">
-      
-      {/*
-        <button id="swap-segment" onClick={handleSubmitTest} type="button">
-          Test
-        </button>
-      */}
-      
-        {!!context.video.length && (
-          <button id="video" className="icon-btn" onClick={previewFiles} type="button" aria-label="preview and edit video" aria-haspopup="dialog">
-            <FileVideoIcon />
-            <div className="badge" role="status" aria-label="video count">{context.video.length}</div>
-            <div className="tooltip" role="tooltip">Video</div>
-          </button>
-        )}
-            
-        <button className="icon-btn" onClick={openSubmit} type="button" aria-label="add your location" aria-haspopup="dialog">
-          <LocationIcon />
-          <div className="tooltip" role="tooltip">Location</div>
-        </button>
-      </div>
-      
-      {context.mode === 'recording' && (
+    <section className="camera-navigation">
+      <header className="card-header">
+        <BackButton stopCamera={stopCamera} />
+  
         <div className="video-timer">
           {`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}
         </div>
-      )}
-     
+
+        <LightButton streamRef={streamRef} />
+      </header>
+          
+      <button className="icon-btn" onClick={openSubmit} type="button" aria-label="add your location" aria-haspopup="dialog">
+        <LocationIcon />
+        <div className="tooltip" role="tooltip">Location</div>
+      </button>
+
       <MuteButton streamRef={streamRef} />
-    </>
+    </section>
   )
 }
 
