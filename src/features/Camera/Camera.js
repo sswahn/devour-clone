@@ -22,7 +22,7 @@ const Camera = () => {
   const videoRef = useRef(null)
   const recorderRef = useRef(null)
   const timerRef = useRef(timer)
-  const framesRef = useRef([])
+  
   const previewModalRef = useRef(null)
   const locationModalRef = useRef(null)
   const db = database()
