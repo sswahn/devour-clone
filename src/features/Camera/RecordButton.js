@@ -2,10 +2,28 @@ import { useState } from 'react'
 
 function RecordButton() {
 
+  const handleRecordVideo = () => {
+    // check remaining time?
+    dispatch({ type: 'mode', payload: 'recording' })
+    
+    const recorder = camera.startRecording(streamRef.current, framesRef.current)
+    recorderRef.current = recorder
+  }
+
+  const handleStopRecordVideo = async () => {
+    dispatch({ type: 'mode', payload: 'video' })
+    timerRef.current = timer
+    const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
+    const video = [ ...context.video, blob ]
+    const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
+    const duration = [ ...context.video_duration, 300 - timerRef.current - currentDuration ]
+    dispatch({ type: 'video_duration', payload: duration })
+    dispatch({ type: 'video', payload: video }) 
+    db.put({ id: 'video', video, duration })
+  }
+  
   const handleRecordButton = event => {
-    context.mode === 'recording'
-      ? handleStopRecordVideo()
-      : handleRecordVideo()
+    context.mode === 'recording' ? handleStopRecordVideo() : handleRecordVideo()
   }
   
   return (
