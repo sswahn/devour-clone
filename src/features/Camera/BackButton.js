@@ -1,7 +1,6 @@
-
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 
-function BackButton() {
+function BackButton({ stopCamera }) {
   
   const handleCloseCamera = event => {
     stopCamera()
