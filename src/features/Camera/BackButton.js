@@ -10,7 +10,7 @@ function BackButton() {
   }
 
   return (
-    <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera button">
+    <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera">
       <ArrowLeftIcon />
       <div className="tooltip" role="tooltip">Back</div>
     </button>
