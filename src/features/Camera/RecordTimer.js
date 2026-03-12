@@ -16,6 +16,13 @@ function RecordTimer() {
     }
   }
 
+  useEffect(() => {
+    let interval = createInterval()
+    return () => {
+      clearInterval(interval)
+    }
+  }, [timer, context.mode])
+
   return (
     <></>
   )
