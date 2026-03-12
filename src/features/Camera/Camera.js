@@ -12,26 +12,6 @@ const Camera = () => {
 
   const [isFlashing, setIsFlashing] = useState(false)
   
-  const streamRef = useRef(null)
-  const videoRef = useRef(null)
-  const db = database()
-
-  const startCamera = async () => {
-    try {
-      const stream = await camera.on()
-      streamRef.current = stream
-      videoRef.current.srcObject = stream
-    } catch (error) {
-      console.error('Error accessing camera.')
-    }
-  }
-  
-  const stopCamera = event => {
-    if (streamRef.current) {
-      camera.off(streamRef.current) 
-      streamRef.current = null
-    }
-  }
   
   const loadFromStorage = async () => {
     const video = await db.get('video')
