@@ -146,20 +146,6 @@ const Camera = () => {
             <video ref={videoRef} className="camera" autoPlay muted playsInline aria-label="camera feed" aria-live="assertive"></video>
             <NavOverlay timer={timer} previewFiles={handlePreviewFiles} openSubmit={handleOpenLocationModal} toggleMute={toggleMute} mute={mute} />
           </div>
-          
-          <div className="card-actions">
-            <div className="camera-button-container">
-              <button 
-                className="camera-button" 
-                onClick={handleCameraButton} 
-                type="button" 
-                aria-label="camera button"
-                style={{
-                  backgroundColor: context.mode === 'recording' ? '#cb4154' : '#e5e4e2', 
-                  borderColor: context.mode === 'recording' ? '#eb4c42' : 'white'
-              }}></button>
-            </div>
-          </div>
         </>
       
     </div>
