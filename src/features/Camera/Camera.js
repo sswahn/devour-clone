@@ -11,7 +11,7 @@ import SubmitPost from './SubmitPost'
 
 const Camera = () => {
   const [context, dispatch] = useContext(Context)
-  const [light, setLight] = useState(false)
+ 
   const [timer, setTimer] = useState(300)
 
   const [type, setType] = useState(undefined)
@@ -42,12 +42,6 @@ const Camera = () => {
       streamRef.current = null
     }
   }
-  
-  const handleTurnOnLight = useCallback(event => {
-    const setting = !light
-    setting ? camera.light(streamRef.current) : camera.dark(streamRef.current)
-    setLight(setting)
-  }, [light])
   
   const loadFromStorage = async () => {
     const video = await db.get('video')
@@ -109,10 +103,7 @@ const Camera = () => {
               <ArrowLeftIcon />
               <div className="tooltip" role="tooltip">Back</div>
             </button>
-            <button className="camera-light-btn" onClick={handleTurnOnLight} type="button" aria-label="camera light button">
-              {light ? <DarkSunIcon /> : <SunIcon />}
-              <div className="tooltip" role="tooltip">Light</div>
-            </button>
+            <LightButton streamRef={streamRef} />
           </div>
           
           <div className="card-content">
