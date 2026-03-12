@@ -31,19 +31,10 @@ function Camera() {
       streamRef.current = null
     }
   }
-
-  const loadFromStorage = async () => {
-    const video = await db.get('video')
-    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
-    if (totalDuration) {
-      setTimer(300 - totalDuration) // fix this with RecordTimer
-    }
-  }
   
   useEffect(() => {
     if (!streamRef.current) {
       startCamera()
-      // loadFromStorage()
     }
     return () => {
       stopCamera()
