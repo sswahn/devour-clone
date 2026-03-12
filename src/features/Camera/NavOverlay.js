@@ -1,9 +1,13 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
 import FileVideoIcon from '../Icons/FileVideoIcon/FileVideoIcon'
-import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
-import MicrophoneSlashIcon from '../Icons/MicrophoneIcon/MicrophoneSlashIcon'
+
+import BackButton from './BackButton'
+import RecordTimer from './RecordTimer'
+import LightButton from './LightButton'
 import MuteButton from './MuteButton'
+import RecordButton from './RecordButton'
+import LocationButton from './LocationButton'
 
 const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
   const [context, dispatch] = useContext(Context)
