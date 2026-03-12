@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useRef, useCallback } from 'react'
+import { useState, useContext } from 'react'
 import { Context } from '../../Provider'
 import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
@@ -13,25 +13,7 @@ const Camera = () => {
   const [isFlashing, setIsFlashing] = useState(false)
   
   
-  const loadFromStorage = async () => {
-    const video = await db.get('video')
-    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
-    dispatch({ type: 'video', payload: video?.video || [] })
-    dispatch({ type: 'video_duration', payload: video?.duration || [] })
-    if (totalDuration) {
-      setTimer(300 - totalDuration) 
-    }
-  }
-  
-  useEffect(() => {
-    if (!streamRef.current) {
-      startCamera()
-      loadFromStorage()
-    }
-    return () => {
-      stopCamera()
-    }
-  }, [])
+
 
   // move the rest of this into componet into NavOverlay and make NavOverlay into Camera
   
