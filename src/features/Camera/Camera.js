@@ -71,7 +71,7 @@ const Camera = () => {
       <div className={`flash-overlay ${isFlashing ? 'flash' : ''}`}></div>
         <>
           <div className="card-header">
-            <BackButton />
+            <BackButton stopCamera={stopCamera} />
             <LightButton streamRef={streamRef} />
           </div>
           
