@@ -13,13 +13,10 @@ const Camera = () => {
   const [context, dispatch] = useContext(Context)
 
   const [type, setType] = useState(undefined)
-  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [isFlashing, setIsFlashing] = useState(false)
+  
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  
-  const previewModalRef = useRef(null)
-  const locationModalRef = useRef(null)
   const db = database()
 
   const startCamera = async () => {
