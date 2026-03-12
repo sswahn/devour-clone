@@ -1,5 +1,5 @@
 
-function ViewPort() {
+function ViewPort({ videoRef }) {
 
   return (
     <video ref={videoRef} className="camera" autoPlay muted playsInline aria-label="camera feed" aria-live="assertive"></video>
