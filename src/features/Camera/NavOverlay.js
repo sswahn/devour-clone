@@ -51,20 +51,18 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
     <section className="camera-navigation">
       <header className="card-header">
         <BackButton stopCamera={stopCamera} />
-  
-        <div className="video-timer">
-          {`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}
-        </div>
-
+        <RecordTimer />
         <LightButton streamRef={streamRef} />
       </header>
-          
+    
+      <MuteButton streamRef={streamRef} />
+      <RecordButton />
+    
       <button className="icon-btn" onClick={openSubmit} type="button" aria-label="add your location" aria-haspopup="dialog">
         <LocationIcon />
         <div className="tooltip" role="tooltip">Location</div>
       </button>
-
-      <MuteButton streamRef={streamRef} />
+    
     </section>
   )
 }
