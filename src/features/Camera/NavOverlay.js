@@ -9,7 +9,7 @@ import MuteButton from './MuteButton'
 import RecordButton from './RecordButton'
 import LocationButton from './LocationButton'
 
-const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
+const NavOverlay = ({ openSubmit }) => {
   const [context, dispatch] = useContext(Context)
   
   const handleOpenLocation = event => {
