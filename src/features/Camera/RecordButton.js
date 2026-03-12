@@ -3,7 +3,9 @@ import { Context } from '../../Provider'
 import database from '@sswahn/database'
 
 function RecordButton({ streamRef }) {
+  const [context, dispatch] = useContext(Context)
   const framesRef = useRef([])
+  const recorderRef = useRef(null)
   const db = database()
   
   const handleRecordVideo = () => {
