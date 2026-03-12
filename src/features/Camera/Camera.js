@@ -9,7 +9,7 @@ import RecordButton from './RecordButton'
 import LocationButton from './LocationButton'
 import styles from './camera.module.css'
 
-const Camera = ({ openSubmit }) => {
+function Camera() {
   const [context, dispatch] = useContext(Context)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
