@@ -4,7 +4,7 @@ import camera from '../../utilities/camera'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 
-import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
+
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import NavOverlay from './NavOverlay'
 import SubmitPost from './SubmitPost'
@@ -71,10 +71,7 @@ const Camera = () => {
       <div className={`flash-overlay ${isFlashing ? 'flash' : ''}`}></div>
         <>
           <div className="card-header">
-            <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera button">
-              <ArrowLeftIcon />
-              <div className="tooltip" role="tooltip">Back</div>
-            </button>
+            <BackButton />
             <LightButton streamRef={streamRef} />
           </div>
           
