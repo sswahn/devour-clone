@@ -1,10 +1,12 @@
+import { useState } from 'react'
 
 function MuteButton({ streamRef }) {
-
-  const toggleMute = useCallback(event => {
+  const [mute, setMute] = useState(false)
+  
+  const toggleMute = event => {
     !mute ? camera.mute(streamRef.current) : camera.unmute(streamRef.current)
     setMute(!mute)
-  }, [mute])
+  }
   
   return (
       <div id="mute-video" className="video-mute" aria-hidden="false">
