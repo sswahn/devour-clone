@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
+import MicrophoneSlashIcon from '../Icons/MicrophoneIcon/MicrophoneSlashIcon'
 
 function MuteButton({ streamRef }) {
   const [mute, setMute] = useState(false)
