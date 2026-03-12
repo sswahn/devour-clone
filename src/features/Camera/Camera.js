@@ -20,7 +20,7 @@ const Camera = () => {
   const [isFlashing, setIsFlashing] = useState(false)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  const recorderRef = useRef(null)
+  
   const timerRef = useRef(timer)
   
   const previewModalRef = useRef(null)
