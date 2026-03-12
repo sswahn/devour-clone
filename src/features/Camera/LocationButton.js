@@ -1,4 +1,4 @@
-
+import LocationIcon from '../Icons/LocationIcon/LocationIcon'
 
 function LocationButton() {
 
