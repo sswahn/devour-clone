@@ -39,7 +39,7 @@ function RecordButton({ streamRef }) {
       <div className="camera-button-container">
         <button 
           className="camera-button" 
-          onClick={handleCameraButton} 
+          onClick={handleRecordButton} 
           type="button" 
           aria-label="camera button"
           style={{
