@@ -1,7 +1,10 @@
 
-function MuteButton() {
+function MuteButton({ streamRef }) {
 
-
+  const toggleMute = useCallback(event => {
+    !mute ? camera.mute(streamRef.current) : camera.unmute(streamRef.current)
+    setMute(!mute)
+  }, [mute])
   
   return (
       <div id="mute-video" className="video-mute" aria-hidden="false">
