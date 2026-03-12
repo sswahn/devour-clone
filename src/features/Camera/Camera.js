@@ -11,16 +11,12 @@ import SubmitPost from './SubmitPost'
 
 const Camera = () => {
   const [context, dispatch] = useContext(Context)
- 
-  const [timer, setTimer] = useState(300)
 
   const [type, setType] = useState(undefined)
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [isFlashing, setIsFlashing] = useState(false)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  
-  const timerRef = useRef(timer)
   
   const previewModalRef = useRef(null)
   const locationModalRef = useRef(null)
@@ -53,23 +49,6 @@ const Camera = () => {
     }
   }
   
-  const handleCloseCamera = event => {
-    stopCamera()
-    dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
-  }
-
-  const createInterval = () => {
-    if (context.mode === 'recording') {
-      return setInterval(() => {
-        if (timer < 1) {
-          clearInterval(interval)
-          return handleStopRecordVideo()
-        }
-        setTimer(timer - 1)
-      }, 1000)
-    }
-  }
-  
   useEffect(() => {
     if (!streamRef.current) {
       startCamera()
@@ -79,13 +58,6 @@ const Camera = () => {
       stopCamera()
     }
   }, [])
-      
-  useEffect(() => {
-    let interval = createInterval()
-    return () => {
-      clearInterval(interval)
-    }
-  }, [timer, context.mode])
 
   // consider nav overlay as all navigation elements 
   // (including close camera, and toggle light buttons, and camera button)
