@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
 import FileVideoIcon from '../Icons/FileVideoIcon/FileVideoIcon'
-import LocationIcon from '../Icons/LocationIcon/LocationIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import MicrophoneSlashIcon from '../Icons/MicrophoneIcon/MicrophoneSlashIcon'
 import MuteButton from './MuteButton'
@@ -57,12 +56,7 @@ const NavOverlay = ({ timer, previewFiles, openSubmit, toggleMute, mute }) => {
     
       <MuteButton streamRef={streamRef} />
       <RecordButton />
-    
-      <button className="icon-btn" onClick={openSubmit} type="button" aria-label="add your location" aria-haspopup="dialog">
-        <LocationIcon />
-        <div className="tooltip" role="tooltip">Location</div>
-      </button>
-    
+      <LocationButton />
     </section>
   )
 }
