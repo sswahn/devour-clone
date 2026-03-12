@@ -1,5 +1,6 @@
 import { useState, useContext, useRef } from 'react'
 import { Context } from '../../Provider'
+import database from '@sswahn/database'
 
 function RecordButton({ streamRef }) {
   const framesRef = useRef([])
