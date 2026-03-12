@@ -9,10 +9,18 @@ function RecordTimer() {
       return setInterval(() => {
         if (timer < 1) {
           clearInterval(interval)
-          return handleStopRecordVideo()
+          return handleStopRecordVideo() // fix: handle out of time
         }
         setTimer(timer - 1)
       }, 1000)
+    }
+  }
+
+  const loadFromStorage = async () => {
+    const video = await db.get('video')
+    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
+    if (totalDuration) {
+      setTimer(300 - totalDuration)
     }
   }
 
@@ -23,8 +31,12 @@ function RecordTimer() {
     }
   }, [timer, context.mode])
 
+  useEffect(() => {
+    loadFromStorage()
+  }, [])
+
   return (
-    <div className="video-timer">
+    <div className="recordTimer">
       {`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}
     </div>
   )
