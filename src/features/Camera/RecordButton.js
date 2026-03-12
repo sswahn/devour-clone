@@ -2,6 +2,12 @@ import { useState } from 'react'
 
 function RecordButton() {
 
+  const handleRecordButton = event => {
+    context.mode === 'recording'
+      ? handleStopRecordVideo()
+      : handleRecordVideo()
+  }
+  
   return (
     <div className="card-actions">
       <div className="camera-button-container">
