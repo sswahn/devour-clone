@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-function Timer() {
+function RecordTimer() {
 
   const createInterval = () => {
     if (context.mode === 'recording') {
@@ -19,4 +19,4 @@ function Timer() {
   )
 }
 
-export default Timer
+export default RecordTimer
