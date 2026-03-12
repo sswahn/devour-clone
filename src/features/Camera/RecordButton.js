@@ -1,17 +1,19 @@
 import { useState } from 'react'
 
-function RecordButton() {
+function RecordButton({ streamRef }) {
 
   const handleRecordVideo = () => {
     // check remaining time?
-    dispatch({ type: 'mode', payload: 'recording' })
+    dispatch({ type: 'mode', payload: 'recording' })  // narrow down this 'mode' thing and maybe dont use it anymore
     
     const recorder = camera.startRecording(streamRef.current, framesRef.current)
     recorderRef.current = recorder
   }
 
   const handleStopRecordVideo = async () => {
-    dispatch({ type: 'mode', payload: 'video' })
+    
+    dispatch({ type: 'mode', payload: 'video' }) // or at least change mode from video to recording/not recording
+    
     timerRef.current = timer
     const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
     const video = [ ...context.video, blob ]
