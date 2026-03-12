@@ -4,9 +4,8 @@ function LightButton({ streamRef }) {
   const [light, setLight] = useState(false)
 
   const handleTurnOnLight = event => {
-    const setting = !light
-    setting ? camera.light(streamRef.current) : camera.dark(streamRef.current)
-    setLight(setting)
+    light ? camera.dark(streamRef.current) : camera.light(streamRef.current)
+    setLight(!light)
   }
   
   return (
