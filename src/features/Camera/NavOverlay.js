@@ -31,6 +31,27 @@ const NavOverlay = ({ openSubmit }) => {
       streamRef.current = null
     }
   }
+
+  const loadFromStorage = async () => {
+    const video = await db.get('video')
+    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
+    dispatch({ type: 'video', payload: video?.video || [] })
+    dispatch({ type: 'video_duration', payload: video?.duration || [] })
+    
+    if (totalDuration) {
+      setTimer(300 - totalDuration) 
+    }
+  }
+  
+  useEffect(() => {
+    if (!streamRef.current) {
+      startCamera()
+      loadFromStorage()
+    }
+    return () => {
+      stopCamera()
+    }
+  }, [])
   
   return (
     <section className="camera-navigation">
