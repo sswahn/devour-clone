@@ -9,7 +9,7 @@ import RecordButton from './RecordButton'
 import LocationButton from './LocationButton'
 import styles from './camera.module.css'
 
-const NavOverlay = ({ openSubmit }) => {
+const Camera = ({ openSubmit }) => {
   const [context, dispatch] = useContext(Context)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
@@ -39,7 +39,7 @@ const NavOverlay = ({ openSubmit }) => {
     dispatch({ type: 'video_duration', payload: video?.duration || [] })
     
     if (totalDuration) {
-      setTimer(300 - totalDuration) 
+      setTimer(300 - totalDuration) // fix this with RecordTimer
     }
   }
   
@@ -66,4 +66,4 @@ const NavOverlay = ({ openSubmit }) => {
   )
 }
 
-export default NavOverlay
+export default Camera
