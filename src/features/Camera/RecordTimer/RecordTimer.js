@@ -2,16 +2,15 @@ import { useState, useContext, useEffect, useRef } from 'react'
 import { Context } from '../../../Provider'
 import styles from './recordtimer.module.css'
 
-function RecordTimer({ timerRef }) {
+function RecordTimer({ timer, setTimer }) {
  const [context, provider] = useContext(Context)
- const [timer, setTimer] = useState(300)
-  
+
   const createInterval = () => {
     if (context.recording) {
       return setInterval(() => {
         if (timer < 1) {
           clearInterval(interval)
-          return handleStopRecordVideo() // fix: handle out of time
+          return handleStopRecordVideo() // fix: this function is not available here, maybe dispatch recording false
         }
         setTimer(timer - 1)
       }, 1000)
@@ -32,12 +31,6 @@ function RecordTimer({ timerRef }) {
       clearInterval(interval)
     }
   }, [timer, context.recording])
-
-  useEffect(() => {
-    if (!context.recording) {
-      timerRef.current = timer
-    }
-  }, [context.recording])
 
   useEffect(() => {
     loadFromStorage()
