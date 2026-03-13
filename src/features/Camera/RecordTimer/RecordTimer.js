@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useContext, useEffect, useRef } from 'react'
+import { Context } from '../../../Provider'
 import styles from './recordtimer.module.css'
 
 function RecordTimer() {
+ const [context, provider] = useContext(Context)
  const [timer, setTimer] = useState(300)
  const timerRef = useRef(timer)
   
@@ -34,7 +36,7 @@ function RecordTimer() {
 
   useEffect(() => {
     if (!context.recording) {
-      timerRef.current = timer
+      dispatch({ type: 'timer', payload: timer })
     }
   }, [context.recording])
 
