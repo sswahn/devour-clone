@@ -10,7 +10,7 @@ function RecordTimer({ timer, setTimer }) {
       return setInterval(() => {
         if (timer < 1) {
           clearInterval(interval)
-          return handleStopRecordVideo() // fix: this function is not available here, maybe dispatch recording false
+          return handleStopRecordVideo() // fix: this function is not available here, maybe dispatch recording false or modal message
         }
         setTimer(timer - 1)
       }, 1000)
