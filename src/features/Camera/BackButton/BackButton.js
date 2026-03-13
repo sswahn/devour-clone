@@ -1,4 +1,4 @@
-import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
+import ArrowLeftIcon from '../../../components/Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './backbutton.module.css'
 
 function BackButton({ stopCamera }) {
