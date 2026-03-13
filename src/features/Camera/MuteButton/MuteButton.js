@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import MicrophoneIcon from '../../components/Icons/MicrophoneIcon/MicrophoneIcon'
-import MicrophoneSlashIcon from '../../components/Icons/MicrophoneIcon/MicrophoneSlashIcon'
+import MicrophoneIcon from '../../../components/Icons/MicrophoneIcon/MicrophoneIcon'
+import MicrophoneSlashIcon from '../../../components/Icons/MicrophoneIcon/MicrophoneSlashIcon'
 import styles from './mutebutton.module.css'
 
 function MuteButton({ streamRef }) {
