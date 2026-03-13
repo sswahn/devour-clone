@@ -11,7 +11,7 @@ import styles from './camera.module.css'
 function Camera() {
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  const timerRef = useRef(timer)
+  const timerRef = useRef(0)
 
   const startCamera = async () => {
     try {
