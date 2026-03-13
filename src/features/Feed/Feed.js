@@ -6,15 +6,16 @@ import styles from './feed.module.css'
 
 function Feed() {
   const [data, setData] = useState([])
-  const [batch, setBatch] = useState(0)
+  const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
 
   const loadMoreData = async event => {
-    const response = await server.get(`${config.api.feed}/${bach}`)
+    const response = await server.get(`${config.api.feed}/${batchNumber}`)
     if (!response.error) {
       return alert(response.error)
     }
     
+    setBatchNumber(response.message.batchNumber)
     setData({ ...data, ...response.message })
   }
   
