@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import SunIcon from '../Icons/SunIcon/SunIcon'
-import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
+import SunIcon from '../../../components/Icons/SunIcon/SunIcon'
+import DarkSunIcon from '../../../components/Icons/SunIcon/DarkSunIcon'
 import styles from './lightbutton.module.css'
 
 function LightButton({ streamRef }) {
