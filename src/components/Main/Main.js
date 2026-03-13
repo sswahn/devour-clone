@@ -1,16 +1,23 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect, Suspense, lazy } from 'react'
 import { Context } from '../../Provider'
-import Portal from './Portal/Portal'
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
-import Modal from '../Modal/Modal'
 import database from '@sswahn/database'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
+import Portal from './Portal/Portal'
+const Camera = lazy(() => import('./features/Camera/Camera')
+
+import Modal from '../Modal/Modal'
+
+
 
 const Main = () => {
   const [context, dispatch] = useContext(Context)
+  const [cameraOpen, setCameraOpen] = useState(false)
       
   return (
     <main>
-
+      <Portal>
+        {cameraOpen && <Camera />}
+      </Portal>
     </main>
   )
 }
