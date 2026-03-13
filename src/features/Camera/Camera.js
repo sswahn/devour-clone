@@ -11,7 +11,7 @@ import styles from './camera.module.css'
 function Camera() {
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  const timerRef = useRef(0)
+  const [timer, setTimer] = useState(300)
 
   const startCamera = async () => {
     try {
@@ -42,11 +42,11 @@ function Camera() {
   return (
     <section className={styles.camera}>
       <BackButton stopCamera={stopCamera} />
-      <RecordTimer timerRef={timerRef} />
+      <RecordTimer timer={timer} setTimer={setTimer} />
       <LightButton streamRef={streamRef} />
       <ViewPort videoRef={videoRef} />
       <MuteButton streamRef={streamRef} />
-      <RecordButton streamRef={streamRef} timerRef={timerRef} />
+      <RecordButton streamRef={streamRef} timer={timer} />
       <LocationButton />
     </section>
   )
