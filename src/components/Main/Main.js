@@ -2,7 +2,7 @@ import { useState, useContext, useEffect, Suspense, lazy } from 'react'
 import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Portal from './Portal/Portal'
-const Camera = lazy(() => import('./features/Camera/Camera')
+const Camera = lazy(() => import('./features/Camera/Camera'))
 
 import Modal from '../Modal/Modal'
 
