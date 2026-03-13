@@ -28,7 +28,7 @@ const Provider = ({ children }) => {
     stream: undefined,
    // mode: 'camera',
     recording: false,
-    timer: 0,
+    
     preview: true,
     field: undefined,
     turnstile: undefined,
@@ -82,8 +82,6 @@ const Provider = ({ children }) => {
         return { ...state, mode: action.payload }
       case 'recording':
         return { ...state, recording: action.payload }
-      case 'timer':
-        return { ...state, timer: action.payload }
       case 'preview':
         return { ...state, preview: action.payload }
       case 'turnstile':
