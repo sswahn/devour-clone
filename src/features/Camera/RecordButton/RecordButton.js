@@ -1,6 +1,7 @@
 import { useState, useContext, useRef } from 'react'
 import { Context } from '../../Provider'
 import database from '@sswahn/database'
+import styles from './recordbutton.module.css'
 
 function RecordButton({ streamRef }) {
   const [context, dispatch] = useContext(Context)
@@ -35,7 +36,7 @@ function RecordButton({ streamRef }) {
   }
   
   return (
-    <div className="card-actions">
+    <div className={styles.recordButton}>
       <div className="camera-button-container">
         <button 
           className="camera-button" 
