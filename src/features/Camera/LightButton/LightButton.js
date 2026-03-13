@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SunIcon from '../Icons/SunIcon/SunIcon'
 import DarkSunIcon from '../Icons/SunIcon/DarkSunIcon'
+import styles from './lightbutton.module.css'
 
 function LightButton({ streamRef }) {
   const [light, setLight] = useState(false)
@@ -11,7 +12,7 @@ function LightButton({ streamRef }) {
   }
   
   return (
-    <button className="camera-light-btn" onClick={handleTurnOnLight} type="button" aria-label="camera light button">
+    <button className={styles.lightButton} onClick={handleTurnOnLight} type="button" aria-label="camera light button">
       {light ? <DarkSunIcon /> : <SunIcon />}
       <div className="tooltip" role="tooltip">Light</div>
     </button>
