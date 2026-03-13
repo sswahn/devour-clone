@@ -1,5 +1,21 @@
 /* Camera Location Button CSS Module*/
 
-icon-btn
+.locationButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  height: 45px;
+  position: relative;
+  width: 45px; 
+}
 
-.locationButton {}
+.locationButton svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
