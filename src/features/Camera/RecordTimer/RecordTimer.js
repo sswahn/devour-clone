@@ -30,7 +30,13 @@ function RecordTimer() {
     return () => {
       clearInterval(interval)
     }
-  }, [timer, context.mode])
+  }, [timer, context.recording])
+
+  useEffect(() => {
+    if (!context.recording) {
+      timerRef.current = timer
+    }
+  }, [context.recording])
 
   useEffect(() => {
     loadFromStorage()
