@@ -25,7 +25,7 @@ function RecordButton({ streamRef }) {
 
     console.log('context.timer: ', context.timer)
     
-    const duration = [ ...context.video_duration, 300 - context.timer - currentDuration ]
+    const duration = [ ...context.video_duration, 300 - timerRef.current - currentDuration ]
     
     dispatch({ type: 'video_duration', payload: duration })
     dispatch({ type: 'video', payload: video })
