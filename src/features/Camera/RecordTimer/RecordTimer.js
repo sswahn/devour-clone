@@ -6,7 +6,7 @@ function RecordTimer() {
  const timerRef = useRef(timer)
   
   const createInterval = () => {
-    if (context.mode === 'recording') {
+    if (context.recording) {
       return setInterval(() => {
         if (timer < 1) {
           clearInterval(interval)
