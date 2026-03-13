@@ -4,9 +4,6 @@ export const Context = createContext([])
 
 const Provider = ({ children }) => {
   const data = {
-    
-    test_image: undefined,
-
     loading: false,
     auth: undefined,
     router: window.location.pathname || '/',
@@ -31,6 +28,7 @@ const Provider = ({ children }) => {
     stream: undefined,
    // mode: 'camera',
     recording: false,
+    timer: 0,
     preview: true,
     field: undefined,
     turnstile: undefined,
@@ -42,10 +40,6 @@ const Provider = ({ children }) => {
   }
   const reducer = (state, action) => {
     switch(action.type) {
-        
-      case 'test_image':
-        return { ...state, test_image: action.payload }
-        
       case 'loading':
         return { ...state, loading: action.payload }        
       case 'auth':
@@ -86,6 +80,10 @@ const Provider = ({ children }) => {
         return { ...state, stream: action.payload }
       case 'mode':
         return { ...state, mode: action.payload }
+      case 'recording':
+        return { ...state, recording: action.payload }
+      case 'timer':
+        return { ...state, timer: action.payload }
       case 'preview':
         return { ...state, preview: action.payload }
       case 'turnstile':
