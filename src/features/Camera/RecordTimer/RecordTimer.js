@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import styles from './recordtimer.module.css'
 
 function RecordTimer() {
  const [timer, setTimer] = useState(300)
@@ -36,7 +37,7 @@ function RecordTimer() {
   }, [])
 
   return (
-    <div className="recordTimer">
+    <div className={styles.recordTimer}>
       {`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}
     </div>
   )
