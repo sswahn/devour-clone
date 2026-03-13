@@ -2,10 +2,9 @@ import { useState, useContext, useEffect, useRef } from 'react'
 import { Context } from '../../../Provider'
 import styles from './recordtimer.module.css'
 
-function RecordTimer() {
+function RecordTimer({ timerRef }) {
  const [context, provider] = useContext(Context)
  const [timer, setTimer] = useState(300)
- const timerRef = useRef(timer)
   
   const createInterval = () => {
     if (context.recording) {
@@ -36,7 +35,7 @@ function RecordTimer() {
 
   useEffect(() => {
     if (!context.recording) {
-      dispatch({ type: 'timer', payload: timer })
+      timerRef.current = timer
     }
   }, [context.recording])
 
