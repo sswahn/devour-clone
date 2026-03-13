@@ -22,6 +22,8 @@ function RecordButton({ streamRef, timerRef }) {
     const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
     const video = [ ...context.video, blob ]
     const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
+
+    // it may be more reliable to set timer in parent component instead of timerRef
     
     const duration = [ ...context.video_duration, 300 - timerRef.current - currentDuration ]
     
