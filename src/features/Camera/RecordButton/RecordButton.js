@@ -11,15 +11,14 @@ function RecordButton({ streamRef }) {
   
   const handleRecordVideo = () => {
     // check remaining time?
-    dispatch({ type: 'mode', payload: 'recording' })  // narrow down this 'mode' thing and maybe dont use it anymore
-    
+    dispatch({ type: 'mode', payload: 'recording' })
     const recorder = camera.startRecording(streamRef.current, framesRef.current)
     recorderRef.current = recorder
   }
 
   const handleStopRecordVideo = async () => {
     
-    dispatch({ type: 'mode', payload: 'video' }) // or at least change mode from video to recording/not recording
+    dispatch({ type: 'mode', payload: 'video' }) // change mode from video to recording true/false
     
     timerRef.current = timer
     const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
@@ -36,18 +35,11 @@ function RecordButton({ streamRef }) {
   }
   
   return (
-    <div className={styles.recordButton}>
-      <div className="camera-button-container">
-        <button 
-          className="camera-button" 
-          onClick={handleRecordButton} 
-          type="button" 
-          aria-label="camera button"
-          style={{
-            backgroundColor: context.mode === 'recording' ? '#cb4154' : '#e5e4e2', 
-            borderColor: context.mode === 'recording' ? '#eb4c42' : 'white'
-        }}></button>
-      </div>
+    <div className={styles.recordButtonContainer}>
+      <button className={styles.recordButton} onClick={handleRecordButton} type="button" aria-label="record button" style={{
+        backgroundColor: context.mode === 'recording' ? '#cb4154' : '#e5e4e2', 
+        borderColor: context.mode === 'recording' ? '#eb4c42' : 'white'
+      }}></button>
     </div>
   )
 }
