@@ -3,14 +3,16 @@ import { Context } from '../../Provider'
 import database from '@sswahn/database'
 import styles from './recordbutton.module.css'
 
-function RecordButton({ streamRef, timerRef }) {
+function RecordButton({ streamRef, timer }) {
   const [context, dispatch] = useContext(Context)
   const framesRef = useRef([])
   const recorderRef = useRef(null)
   const db = database()
   
   const handleRecordVideo = () => {
-    // check remaining time
+    if (timer < 1) {
+      return alert('No recording time remaining.') // should be custom modal
+    }
     dispatch({ type: 'recording', payload: true })
     const recorder = camera.startRecording(streamRef.current, framesRef.current)
     recorderRef.current = recorder
@@ -25,7 +27,7 @@ function RecordButton({ streamRef, timerRef }) {
 
     // it may be more reliable to set timer in parent component instead of timerRef
     
-    const duration = [ ...context.video_duration, 300 - timerRef.current - currentDuration ]
+    const duration = [ ...context.video_duration, 300 - timer - currentDuration ]
     
     dispatch({ type: 'video_duration', payload: duration })
     dispatch({ type: 'video', payload: video })
