@@ -7,14 +7,14 @@ const Camera = lazy(() => import('./features/Camera/Camera')
 
 import Modal from '../Modal/Modal'
 
-
-
 const Main = () => {
   const [context, dispatch] = useContext(Context)
   const [cameraOpen, setCameraOpen] = useState(false)
       
   return (
     <main>
+      <Feed />
+      {/* <Drawer /> */}
       <Portal>
         {cameraOpen && <Camera />}
       </Portal>
