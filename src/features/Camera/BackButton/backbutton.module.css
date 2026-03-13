@@ -1,1 +1,16 @@
-/* BackButton */
+/* Camera BackButton CSS Module */
+
+.backButton {
+  background: none;
+  border: 0;
+  left: 0px;
+  color: white;
+  fill: white;
+  cursor: pointer;
+  font-size: 18px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+  z-index: 9999;
+}
