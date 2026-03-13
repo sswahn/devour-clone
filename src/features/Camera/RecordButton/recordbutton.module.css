@@ -1,9 +1,6 @@
 /* Camera Record Button CSS Module */
 
-.recordButton {}
-
-
-.camera-button-container { 
+.recordButtonContainer { 
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50px;
   margin: 0 auto 25px auto;
@@ -11,7 +8,7 @@
   width: 78px;
 }
 
-.camera-button {
+.recordButton {
   background-color: #e5e4e2;
   border: 3px solid white;
   border-radius: 50px;
@@ -19,4 +16,12 @@
   cursor: pointer;
   height: 56px;
   padding: 0 26px; 
+}
+
+.recordButton:hover {
+  background-color: #f2f3f4;
+}
+
+.camera-button:active {
+  background-color: #cb4154;
 }
