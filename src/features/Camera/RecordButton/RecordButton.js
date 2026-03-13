@@ -3,7 +3,7 @@ import { Context } from '../../Provider'
 import database from '@sswahn/database'
 import styles from './recordbutton.module.css'
 
-function RecordButton({ streamRef }) {
+function RecordButton({ streamRef, timerRef }) {
   const [context, dispatch] = useContext(Context)
   const framesRef = useRef([])
   const recorderRef = useRef(null)
