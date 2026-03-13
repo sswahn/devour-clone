@@ -5,9 +5,7 @@ function BackButton({ stopCamera }) {
   
   const handleCloseCamera = event => {
     stopCamera()
-    
-    // this is no longer a modal so remove this type of dispatch
-    dispatch({ type: 'modal', payload: { isOpen: false, content: <></> } })
+    dispatch({ type: 'camera', payload: false })
   }
 
   return (
