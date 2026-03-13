@@ -1,19 +1,16 @@
-import { useContext } from 'react'
-import { Context } from '../../Provider'
-import ViewPort from './ViewPort'
-import BackButton from './BackButton'
-import RecordTimer from './RecordTimer'
-import LightButton from './LightButton'
-import MuteButton from './MuteButton'
-import RecordButton from './RecordButton'
-import LocationButton from './LocationButton'
+import { useRef } from 'react'
+import ViewPort from './ViewPort/ViewPort'
+import BackButton from './BackButton/BackButton'
+import RecordTimer from './RecordTimer/RecordTimer'
+import LightButton from './LightButton/LightButton'
+import MuteButton from './MuteButton/MuteButton'
+import RecordButton from './RecordButton/RecordButton'
+import LocationButton from './LocationButton/LocationButton'
 import styles from './camera.module.css'
 
 function Camera() {
-  const [context, dispatch] = useContext(Context)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  const db = database()
 
   const startCamera = async () => {
     try {
