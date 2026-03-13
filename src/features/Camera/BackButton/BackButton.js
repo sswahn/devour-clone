@@ -1,4 +1,5 @@
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
+import styles from './backbutton.module.css'
 
 function BackButton({ stopCamera }) {
   
@@ -10,7 +11,7 @@ function BackButton({ stopCamera }) {
   }
 
   return (
-    <button className="camera-back-btn" onClick={handleCloseCamera} type="button" aria-label="close camera">
+    <button className={styles.backButton} onClick={handleCloseCamera} type="button" aria-label="close camera">
       <ArrowLeftIcon />
       <div className="tooltip" role="tooltip">Back</div>
     </button>
