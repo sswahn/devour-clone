@@ -22,6 +22,9 @@ function RecordButton({ streamRef }) {
     const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
     const video = [ ...context.video, blob ]
     const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
+
+    console.log('context.timer: ', context.timer)
+    
     const duration = [ ...context.video_duration, 300 - context.timer - currentDuration ]
     
     dispatch({ type: 'video_duration', payload: duration })
