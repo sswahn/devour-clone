@@ -15,8 +15,7 @@ function Main() {
       
   return (
     <main className={styles.main}>
-      <span>Main Component</span>
-  {/* <Feed /> */}
+      <Feed />
     
       {/* <Drawer /> */}
 
