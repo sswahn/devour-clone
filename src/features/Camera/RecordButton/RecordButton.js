@@ -1,4 +1,4 @@
-import { useState, useContext, useRef } from 'react'
+import { useContext, useRef } from 'react'
 import { Context } from '../../../Provider'
 import database from '@sswahn/database'
 import styles from './recordbutton.module.css'
