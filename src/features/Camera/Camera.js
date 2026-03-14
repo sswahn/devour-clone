@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
 import ViewPort from './ViewPort/ViewPort'
 import BackButton from './BackButton/BackButton'
 import RecordTimer from './RecordTimer/RecordTimer'
@@ -9,9 +9,10 @@ import LocationButton from './LocationButton/LocationButton'
 import styles from './camera.module.css'
 
 function Camera() {
+  const [timer, setTimer] = useState(300)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
-  const [timer, setTimer] = useState(300)
+ 
 
   const startCamera = async () => {
     try {
