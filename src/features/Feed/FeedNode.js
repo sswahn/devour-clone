@@ -8,8 +8,10 @@ function FeedNode({ item, index, count }) {
   return (
     <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count}>
       <header>
+{/*
         <AuthorButton />
         <LocationButton />
+*/}
       </header>
         <figure>
           <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />
@@ -18,8 +20,10 @@ function FeedNode({ item, index, count }) {
       <footer>
         {/* likes, comments, views etc. */}
         <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
+{/*
         <CommentsButton /> {item.commentCount}
         <ShareButton />
+*/}
       </footer>
     </article>
   )
