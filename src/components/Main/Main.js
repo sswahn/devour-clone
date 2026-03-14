@@ -11,7 +11,7 @@ import Modal from '../Modal/Modal'
 
 function Main() {
   const [context, dispatch] = useContext(Context)
-  const [cameraOpen, setCameraOpen] = useState(false)
+  //const [cameraOpen, setCameraOpen] = useState(false)
 
 //  useEffect(() => {
     
@@ -19,13 +19,16 @@ function Main() {
   
   return (
     <main className={styles.main}>
+      
       <Feed />
-    
-      {/* <Drawer /> */}
 
       <Portal>
-        <Suspense fallback={loading}>
+        <Suspense fallback={<LoadingSpinner />}>
           {context.camera && <Camera />}
+        </Suspense>
+
+        <Suspense fallback={<LoadingSpinner />}>
+          {context.drawer && <Drawer />}
         </Suspense>
       </Portal>
     </main>
