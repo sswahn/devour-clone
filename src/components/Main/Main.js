@@ -1,4 +1,4 @@
-import { useState, useContext, Suspense, lazy } from 'react'
+import { useState, useContext, useEffect, Suspense, lazy } from 'react'
 import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Feed from '../../features/Feed/Feed'
@@ -12,20 +12,22 @@ import Modal from '../Modal/Modal'
 function Main() {
   const [context, dispatch] = useContext(Context)
   const [cameraOpen, setCameraOpen] = useState(false)
-      
+
+//  useEffect(() => {
+    
+//  }, [context.camera])
+  
   return (
     <main className={styles.main}>
       <Feed />
     
       {/* <Drawer /> */}
 
-{/*
       <Portal>
         <Suspense fallback={loading}>
-          {cameraOpen && <Camera />}
+          {context.camera && <Camera />}
         </Suspense>
       </Portal>
-*/}
     </main>
   )
 }
