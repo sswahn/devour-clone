@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import ViewPort from './ViewPort/ViewPort'
 import BackButton from './BackButton/BackButton'
 import RecordTimer from './RecordTimer/RecordTimer'
