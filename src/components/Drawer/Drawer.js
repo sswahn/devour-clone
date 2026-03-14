@@ -23,10 +23,10 @@ function Drawer() {
   
   return (
     <nav className={styles.drawer}>
-      <button type="button" onClick={handleOpenProfile}>Profile<button>
-      <button type="button" onClick={handleOpenCamera}>Camera<button>
-      <button type="button" onClick={handleShowNotifications}>Notifications<button>
-      <button type="button" onClick={handleLogout}>Logout<button>
+      <button type="button" onClick={handleOpenProfile}>Profile</button>
+      <button type="button" onClick={handleOpenCamera}>Camera</button>
+      <button type="button" onClick={handleShowNotifications}>Notifications</button>
+      <button type="button" onClick={handleLogout}>Logout</button>
     </nav>
   )
 }
