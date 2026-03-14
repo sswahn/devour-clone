@@ -1,3 +1,41 @@
 /* Drawer Navigation */
 
 .drawer {}
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+}
+
+.drawer {
+  width: 280px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 0 20px rgba(0,0,0,0.2);
+
+  transform: translateX(0);
+  animation: drawer-slide 0.25s ease;
+}
+
+@keyframes drawer-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drawer-nav a {
+  text-decoration: none;
+  font-size: 18px;
+}
