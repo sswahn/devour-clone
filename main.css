@@ -31,7 +31,13 @@
   \***************************************************************************************/
 /* Main */
 
-.Z5pv5a_NKshg9J2UQIDv {}
+.Z5pv5a_NKshg9J2UQIDv {
+  height: 100dvh;
+  max-width: 500px;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
 
 /*!******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Modal/styles.module.css ***!
