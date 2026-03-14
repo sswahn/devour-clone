@@ -14,7 +14,7 @@ function Main() {
       
   return (
     <main className={styles.main}>
-  {/* <Feed /> */}
+      <Feed />
       {/* <Drawer /> */}
 
 {/*
