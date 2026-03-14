@@ -16,9 +16,12 @@ const Main = () => {
     <main className={styles.main}>
       <Feed />
       {/* <Drawer /> */}
+
+{/*
       <Portal>
         {cameraOpen && <Camera />}
       </Portal>
+*/}
     </main>
   )
 }
