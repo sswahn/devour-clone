@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect, Suspense, lazy } from 'react'
+import { useState, useContext, Suspense, lazy } from 'react'
 import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Feed from '../../features/Feed/Feed'
 import Portal from '../Portal/Portal'
-const Camera = lazy(() => import('../../features/Camera/Camera'))
+//const Camera = lazy(() => import('../../features/Camera/Camera'))
 import styles from './main.module.css'
 
 import Modal from '../Modal/Modal'
@@ -15,11 +15,14 @@ function Main() {
   return (
     <main className={styles.main}>
       <Feed />
+    
       {/* <Drawer /> */}
 
 {/*
       <Portal>
-        {cameraOpen && <Camera />}
+        <Suspense fallback={loading}>
+          {cameraOpen && <Camera />}
+        </Suspense>
       </Portal>
 */}
     </main>
