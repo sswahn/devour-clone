@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import server from '../../../../utilitles/server'
+import server from '../../../utilitles/server'
 import config from '../../../config'
 // import icons
 
