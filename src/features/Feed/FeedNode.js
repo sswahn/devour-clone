@@ -14,13 +14,12 @@ function FeedNode({ item, index, count }) {
 */}
       </header>
         <figure>
-          <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />
+          {item.videoUrl && <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />}
           {item.caption ?? <figcaption>{item.caption}</figcaption>}
         </figure>
       <footer>
-        {/* likes, comments, views etc. */}
-        <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
 {/*
+        <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
         <CommentsButton /> {item.commentCount}
         <ShareButton />
 */}
