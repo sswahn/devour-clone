@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
+import styles from './drawer.module.css'
 
 function Drawer() {
   const [context, dispatch] = useContext(Context)
@@ -21,7 +22,7 @@ function Drawer() {
   }
   
   return (
-    <nav>
+    <nav className={styles.drawer}>
       <button type="button" onClick={handleOpenProfile}>Profile<button>
       <button type="button" onClick={handleOpenCamera}>Camera<button>
       <button type="button" onClick={handleShowNotifications}>Notifications<button>
