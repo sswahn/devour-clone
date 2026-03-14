@@ -30,3 +30,5 @@ function Feed() {
     </section>
   )
 }
+
+export default Feed
