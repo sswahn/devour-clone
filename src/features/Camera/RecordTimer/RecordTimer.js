@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect } from 'react'
 import { Context } from '../../../Provider'
 import styles from './recordtimer.module.css'
 
