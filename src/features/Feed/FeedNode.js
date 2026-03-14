@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import LikeButton from './LikeButton'
+import LikeButton from './LikeButton/LikeButton'
 import styles from './feed.module.css'
 
 function FeedNode({ item, index, count }) {
