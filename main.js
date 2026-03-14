@@ -1116,7 +1116,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nfunction Sentinel() {\n  // used for infinite scrolling:\n  // on visible load more data\n  return /*#__PURE__*/React.createElement(React.Fragment, null);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sentinel);\n\n//# sourceURL=webpack://devour-clone/./src/features/Feed/Sentinel.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nfunction Sentinel() {\n  // used for infinite scrolling:\n  // on visible load more data\n  return /*#__PURE__*/React.createElement(\"div\", null);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sentinel);\n\n//# sourceURL=webpack://devour-clone/./src/features/Feed/Sentinel.js?\n}");
 
 /***/ },
 
