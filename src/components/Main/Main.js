@@ -8,13 +8,13 @@ import styles from './main.module.css'
 
 import Modal from '../Modal/Modal'
 
-const Main = () => {
+function Main() {
   const [context, dispatch] = useContext(Context)
   const [cameraOpen, setCameraOpen] = useState(false)
       
   return (
     <main className={styles.main}>
-      <Feed />
+  {/* <Feed /> */}
       {/* <Drawer /> */}
 
 {/*
