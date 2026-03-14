@@ -1,6 +1,7 @@
 import ErrorBoundary from './ErrorBoundary'
 import Provider from './Provider'
 import Header from './components/Header/Header'
+import Main from './componets/Main/Main'
 import AppRouter from './AppRouter'
 import Sidebar from './components/Sidebar/Sidebar'
 import './index.css'
@@ -11,7 +12,7 @@ const App = () => {
       <ErrorBoundary> 
         <Provider>
           <Header />
-          <AppRouter />
+          <Main />
           <Sidebar />
         </Provider> 
       </ErrorBoundary> 
