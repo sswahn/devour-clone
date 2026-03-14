@@ -17,7 +17,7 @@ function LikeButton({ likedByUser }) {
     setLoading(false)
   }
 
-  useEffect() {
+  useEffect(() => {
     setLiked(likedByUser) 
   }, [likedByUser])
   
