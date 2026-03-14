@@ -3,6 +3,7 @@ import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Portal from '../Portal/Portal'
 const Camera = lazy(() => import('../../features/Camera/Camera'))
+import styles from './main.module.css'
 
 import Modal from '../Modal/Modal'
 
@@ -11,7 +12,7 @@ const Main = () => {
   const [cameraOpen, setCameraOpen] = useState(false)
       
   return (
-    <main>
+    <main className={styles.main}>
       <Feed />
       {/* <Drawer /> */}
       <Portal>
