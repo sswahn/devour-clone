@@ -5,6 +5,7 @@ import styles from './recordtimer.module.css'
 
 function RecordTimer({ timer, setTimer }) {
  const [context, provider] = useContext(Context)
+ const db = database()
 
   const createInterval = () => {
     if (context.recording) {
