@@ -24,9 +24,8 @@ const Provider = ({ children }) => {
     image_caption_styles: [],
     video_editor_styles: [],
     image_editor_styles: [],
-    camera: undefined,
+    camera: false,
     stream: undefined,
-   // mode: 'camera',
     recording: false,
     
     preview: true,
@@ -78,8 +77,6 @@ const Provider = ({ children }) => {
         return { ...state, camera: action.payload }
       case 'stream':
         return { ...state, stream: action.payload }
-      case 'mode':
-        return { ...state, mode: action.payload }
       case 'recording':
         return { ...state, recording: action.payload }
       case 'preview':
