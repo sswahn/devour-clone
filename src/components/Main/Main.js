@@ -3,6 +3,7 @@ import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Feed from '../../features/Feed/Feed'
 import Portal from '../Portal/Portal'
+const Drawer = lazy(() => import('../../components/Drawer/Drawer'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
 import styles from './main.module.css'
 
