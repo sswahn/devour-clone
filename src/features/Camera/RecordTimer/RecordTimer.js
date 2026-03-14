@@ -5,7 +5,6 @@ import styles from './recordtimer.module.css'
 
 function RecordTimer({ timer, setTimer }) {
  const [context, provider] = useContext(Context)
- const db = database()
 
   const createInterval = () => {
     if (context.recording) {
@@ -20,6 +19,7 @@ function RecordTimer({ timer, setTimer }) {
   }
 
   const loadFromStorage = async () => {
+    const db = database()
     const video = await db.get('video')
     const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
     if (totalDuration) {
