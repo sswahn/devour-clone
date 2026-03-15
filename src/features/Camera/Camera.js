@@ -30,6 +30,10 @@ function Camera() {
       
     } catch (error) {
       console.error('Error accessing camera.')
+
+      console.error(error.name, error.message)
+      console.error('whole error: ', error)
+      
     }
   }
   
