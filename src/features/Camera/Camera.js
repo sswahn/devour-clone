@@ -33,7 +33,7 @@ function Camera() {
   
   useEffect(() => {
     if (!streamRef.current) {
-      startCamera()
+      //startCamera()
     }
     return () => {
       stopCamera()
