@@ -1,6 +1,9 @@
 const camera = {
   
   async on(constraints = {}) {
+
+    console.log('test test.')
+    
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
       throw new TypeError('on: argument must be an object literal.')
     }
