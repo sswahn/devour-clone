@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { Context } from '../../Provider'
 import BarsIcon from '../Icons/BarsIcon/BarsIcon'
+import styles from './header.module.css'
 
 const Header = () => {
   const [context, dispatch] = useContext(Context)
@@ -10,7 +11,7 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
         <BarsIcon />
         <div className="tooltip" role="tooltip">Menu</div>
