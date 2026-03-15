@@ -1,15 +1,8 @@
 const camera = {
-  
-  async on(constraints = {}) {
-
-    console.log('test test.')
-    
+  on(constraints = {}) {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
-      throw new TypeError('on: argument must be an object literal.')
+      throw new TypeError('camera.on: argument must be an object literal.')
     }
-
-    console.log('in camera.on util')
-    
     const defaultConstraints = {
       audio: {
         echoCancellation: false,
@@ -26,29 +19,15 @@ const camera = {
         }
       }
     }
-
-    console.log('step 2')
-    
     const finalConstraints = {
       audio: { ...defaultConstraints.audio, ...(constraints.audio || {}) },
       video: { ...defaultConstraints.video, ...(constraints.video || {}) }
     }
-
-    console.log('step 3')
-    
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
-      console.log('stream in camera util:', stream)
-      return stream
-    } catch (error) {
-      console.error(error.name, error.message)
-      console.error('whole error: ', error)
-      throw new Error(`Error accessing camera. ${error}`)
-    }
+    return navigator.mediaDevices.getUserMedia(finalConstraints)
   },
   off(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('off: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.off: argument must be an instance of MediaStream.')
     }
     try {
       stream.getTracks().forEach(track => {
@@ -62,7 +41,7 @@ const camera = {
   },
   light(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('light: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.light: argument must be an instance of MediaStream.')
     }
     const videoTracks = stream.getVideoTracks()
     if (!videoTracks.length) {
@@ -76,7 +55,7 @@ const camera = {
   },
   dark(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('dark: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.dark: argument must be an instance of MediaStream.')
     }
     const videoTracks = stream.getVideoTracks()
     if (!videoTracks.length) {
@@ -90,7 +69,7 @@ const camera = {
   },
   async takePhoto(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('takePhoto: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.takePhoto: argument must be an instance of MediaStream.')
     }
     const track = stream.getVideoTracks()[0]
     const imageCapture = new ImageCapture(track)
@@ -124,7 +103,7 @@ const camera = {
   },
   mute(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('mute: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.mute: argument must be an instance of MediaStream.')
     }
     const audioTracks = stream.getAudioTracks()
     if (audioTracks.length === 0) {
@@ -136,7 +115,7 @@ const camera = {
   },
   unmute(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('unmute: argument must be an instance of MediaStream.')
+      throw new TypeError('camera.unmute: argument must be an instance of MediaStream.')
     }
     const audioTracks = stream.getAudioTracks()
     if (audioTracks.length === 0) {
@@ -148,10 +127,10 @@ const camera = {
   },
   startRecording(stream, frames) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('startRecording: first argument must be an instance of MediaStream.')
+      throw new TypeError('camera.startRecording: first argument must be an instance of MediaStream.')
     }
     if (!Array.isArray(frames)) {
-      throw new TypeError('startRecording: second argument must be an array.')
+      throw new TypeError('camera.startRecording: second argument must be an array.')
     }
     const options = {
       mimeType: 'video/webm; codecs=vp9,opus',
@@ -171,10 +150,10 @@ const camera = {
   },
   stopRecording(mediaRecorder, frames) {
     if (!(mediaRecorder instanceof MediaRecorder)) {
-      throw new TypeError('stopRecording: first argument must be an instance of MediaRecorder.')
+      throw new TypeError('camera.stopRecording: first argument must be an instance of MediaRecorder.')
     }
     if (!Array.isArray(frames)) {
-      throw new TypeError('stopRecording: second argument must be an array.')
+      throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
     return new Promise((resolve, reject) => {
       try {
