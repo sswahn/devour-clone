@@ -16,6 +16,9 @@ function Main() {
 //  useEffect(() => {
     
 //  }, [context.camera])
+
+// context updates rerender all components consuming any value in Context...
+  // refactor context
   
   return (
     <main className={styles.main}>
