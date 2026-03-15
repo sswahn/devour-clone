@@ -16,25 +16,12 @@ function Camera() {
  
 
   const startCamera = async () => {
-
-    console.log('in startCamera. executing camera.on() next.')
     try {
       const stream = await camera.on()
-
-      console.log('camera.on() executed. stream aquired: ', stream)
-      
-      
       streamRef.current = stream
       videoRef.current.srcObject = stream
-
-      console.log('startCamera() function complete.')
-      
     } catch (error) {
-      console.error('Error accessing camera.')
-
-      console.error(error.name, error.message)
-      console.error('whole error: ', error)
-      
+      console.error('Error accessing camera: ', error)
     }
   }
   
