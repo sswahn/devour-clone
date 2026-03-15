@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import camera from '../../../utilities/camera'
+import camera from '../../utilities/camera'
 import ViewPort from './ViewPort/ViewPort'
 import BackButton from './BackButton/BackButton'
 import RecordTimer from './RecordTimer/RecordTimer'
