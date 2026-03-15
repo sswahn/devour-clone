@@ -1,11 +1,15 @@
 /* camera */
 
 .camera {
+  height: 100dvh;
+  left: 0;
   max-width: 500px;
+  
+  margin: 0 auto;
   
   position: absolute;
   top: 0;
-  left: 0;
+  
 
   border: 1px dashed red;
 }
