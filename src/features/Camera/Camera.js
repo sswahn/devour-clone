@@ -16,6 +16,9 @@ function Camera() {
 
   const startCamera = async () => {
     try {
+
+      console.log('should not see this text. startCamera isnt accessible.')
+      
       const stream = await camera.on()
       streamRef.current = stream
       videoRef.current.srcObject = stream
