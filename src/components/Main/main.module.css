@@ -2,6 +2,7 @@
 
 .main {
   height: 100dvh;
+  margin: 0 auto;
   max-width: 500px;
   overflow-x: hidden;
   position: relative;
