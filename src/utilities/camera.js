@@ -38,6 +38,8 @@ const camera = {
       console.log('stream in camera util:', stream)
       return stream
     } catch (error) {
+      console.error(error.name, error.message)
+      console.error('whole error: ', error)
       throw new Error(`Error accessing camera. ${error}`)
     }
   },
