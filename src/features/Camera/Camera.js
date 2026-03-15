@@ -16,9 +16,6 @@ function Camera() {
 
   const startCamera = async () => {
     try {
-
-      console.log('should not see this text. startCamera isnt accessible.')
-      
       const stream = await camera.on()
       streamRef.current = stream
       videoRef.current.srcObject = stream
@@ -36,7 +33,7 @@ function Camera() {
   
   useEffect(() => {
     if (!streamRef.current) {
-      //startCamera()
+      startCamera()
     }
     return () => {
       stopCamera()
