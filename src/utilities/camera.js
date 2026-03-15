@@ -4,6 +4,9 @@ const camera = {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
       throw new TypeError('on: argument must be an object literal.')
     }
+
+    console.log('in camera.on util')
+    
     const defaultConstraints = {
       audio: {
         echoCancellation: false,
@@ -20,12 +23,20 @@ const camera = {
         }
       }
     }
+
+    console.log('step 2')
+    
     const finalConstraints = {
       audio: { ...defaultConstraints.audio, ...(constraints.audio || {}) },
       video: { ...defaultConstraints.video, ...(constraints.video || {}) }
     }
+
+    console.log('step 3')
+    
     try {
-      return navigator.mediaDevices.getUserMedia(finalConstraints)
+      const stream = await navigator.mediaDevices.getUserMedia(finalConstraints)
+      console.log('stream in camera util:', stream)
+      return stream
     } catch (error) {
       throw new Error(`Error accessing camera. ${error}`)
     }
