@@ -36,6 +36,8 @@ const Sidebar = () => {
   }
   
   const handleOpenCamera = event => {
+    console.log('this is the correct sidebar component')
+    
     dispatch({ type: 'sidebar', payload: false })
     dispatch({ type: 'camera', payload: true })
   }
