@@ -1,3 +1,16 @@
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/header.module.css ***!
+  \*******************************************************************************************/
+/* Primary Header */
+
+.bnYxWOI7rVu9DhyiioVA {
+  background: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/LoadingSpinner/styles.module.css ***!
   \***************************************************************************************************/
