@@ -1,1 +1,8 @@
 /* camera */
+
+.camera {
+  max-width: 500px;
+  position: relative;
+
+  border: 1px dashed red;
+}
