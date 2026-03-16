@@ -132,6 +132,9 @@
   margin: 0 auto 25px auto;
   padding: 10px;
   width: 78px;
+  z-index: 4;
+
+  border: 1px dashed red;
 }
 
 .a04sK3kPpe_weYYEkKGQ {
