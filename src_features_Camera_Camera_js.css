@@ -173,8 +173,9 @@
   height: 45px;
   position: relative;
   width: 45px; 
-
   z-index: 4;
+
+  border: 1px dashed red;
 }
 
 .x0rVinpmgIALQbVh1IO6 svg {
