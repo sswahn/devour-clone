@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
+      <button onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
         <BarsIcon />
         <div className="tooltip" role="tooltip">Menu</div>
       </button>
