@@ -182,11 +182,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   border: 0;
   border-radius: 50%;
+  bottom: 0;
   color: white;
   cursor: pointer;
   font-size: 22px; 
   height: 45px;
-  position: relative;
+  left: 0;
+  position: absolute;
   width: 45px; 
   z-index: 4;
 
