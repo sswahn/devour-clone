@@ -115,11 +115,11 @@
   bottom: 0; /* 20px */
   color: white;
   cursor: pointer;
-  right: 0;
   font-size: 22px; 
   height: 45px;
   padding: 5px 10px; 
   position: absolute;
+  right: 0;
   width: 45px; 
   z-index: 4;
 
