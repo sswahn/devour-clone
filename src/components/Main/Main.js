@@ -17,12 +17,18 @@ function Main() {
 
 // context updates rerender all components consuming any value in Context...
   // refactor context
+
+
   
   return (
     <main className={styles.main}>
       
       <Feed />
 
+        <Suspense fallback={<LoadingSpinner />}>
+          {context.camera && <Camera />}
+        </Suspense>
+    
       <Portal>
         <Suspense fallback={<LoadingSpinner />}>
           {context.camera && <Camera />}
