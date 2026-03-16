@@ -163,6 +163,8 @@
   cursor: pointer;
   height: 56px;
   padding: 0 26px; 
+
+  border: 1px dashed orange;
 }
 
 .a04sK3kPpe_weYYEkKGQ:hover {
