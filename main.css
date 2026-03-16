@@ -95,7 +95,9 @@
   margin: 0 auto;
   max-width: 500px;
   overflow-x: hidden;
+  /*
   position: relative;
+  */
   width: 100%;
 
   border: 1px dashed orange;
