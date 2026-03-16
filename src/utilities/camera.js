@@ -1,3 +1,6 @@
+//TODO: create a function that returns device camera capabilities
+// this will populate UI with buttons interacting with capabilities.
+
 const camera = {
   on(constraints = {}) {
     if (!(constraints instanceof Object) || Array.isArray(constraints)) {
