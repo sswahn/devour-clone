@@ -6,10 +6,11 @@
   
   /* 
   left: 0;
-  max-width: 500px; 
+
   margin: 0 auto;
   */
   
+  max-width: 500px; 
   position: absolute;
   right: 0;
   top: 0;
