@@ -1237,7 +1237,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"header\":\"bnYxWOI7rVu9DhyiioVA\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Header/header.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"header\":\"bnYxWOI7rVu9DhyiioVA\",\"muteButton\":\"Gr4VFCOSchNToxYf51oI\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Header/header.module.css?\n}");
 
 /***/ },
 
