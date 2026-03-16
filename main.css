@@ -393,6 +393,9 @@
 }
 
 html, body {
+
+  height: 100dvh;
+  
   overflow-x: hidden;
   width: 100%;
   
