@@ -10,6 +10,21 @@
   width: 100%;
 }
 
+.bnYxWOI7rVu9DhyiioVA button {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 22px; 
+  height: 45px;
+  margin: 6px 8px 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 45px; 
+}
+
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/LoadingSpinner/styles.module.css ***!
   \***************************************************************************************************/
