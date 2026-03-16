@@ -7,6 +7,9 @@ const Header = () => {
   const [context, dispatch] = useContext(Context)
   
   const handleSidebar = event => {
+    console.log('hamburger clicked.')
+    alert('hamburger clicked.')
+    
     dispatch({ type: 'sidebar', payload: true })
   }
 
