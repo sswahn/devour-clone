@@ -20,5 +20,5 @@
 
 .camera * {
   border: 1px dashed magenta;
-  bottom: auto !important;
+  /* bottom: auto !important; */
 }
