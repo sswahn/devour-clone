@@ -10,7 +10,7 @@ import LocationButton from './LocationButton/LocationButton'
 import styles from './camera.module.css'
 
 function Camera() {
-  const [timer, setTimer] = useState(300)
+  const [timer, setTimer] = useState(60)
   const streamRef = useRef(null)
   const videoRef = useRef(null)
  
