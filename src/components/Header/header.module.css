@@ -6,3 +6,18 @@
   top: 0;
   width: 100%;
 }
+
+.header button {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 22px; 
+  height: 45px;
+  margin: 6px 8px 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 45px; 
+}
