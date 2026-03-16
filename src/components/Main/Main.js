@@ -25,14 +25,16 @@ function Main() {
       
       <Feed />
 
-        <Suspense fallback={<LoadingSpinner />}>
-          {context.camera && <Camera />}
-        </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        {context.camera && <Camera />}
+      </Suspense>
     
       <Portal>
+        {/*
         <Suspense fallback={<LoadingSpinner />}>
           {context.camera && <Camera />}
         </Suspense>
+        */}
 
         <Suspense fallback={<LoadingSpinner />}>
           {context.drawer && <Drawer />}
