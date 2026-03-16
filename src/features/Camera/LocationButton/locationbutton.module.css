@@ -13,8 +13,6 @@
   position: absolute;
   width: 45px; 
   z-index: 4;
-
-  border: 1px dashed red;
 }
 
 .locationButton svg {
