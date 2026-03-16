@@ -140,17 +140,13 @@
 .w89rbEAJsHlUCU9l6uRm { 
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50px;
-  /* margin: 0 auto 25px auto; */
   padding: 10px;
   width: 78px;
   z-index: 4;
-
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
-  border: 1px dashed red;
 }
 
 .a04sK3kPpe_weYYEkKGQ {
@@ -161,8 +157,6 @@
   cursor: pointer;
   height: 56px;
   padding: 0 26px; 
-
-  border: 1px dashed orange;
 }
 
 .a04sK3kPpe_weYYEkKGQ:hover {
