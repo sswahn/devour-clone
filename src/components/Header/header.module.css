@@ -22,7 +22,7 @@
   width: 45px; 
 }
 
-.muteButton svg {
+.header button svg {
   fill: white;
   position: absolute;
   top: 50%;
