@@ -27,7 +27,7 @@ const camera = {
   },
   off(stream) {
     if (!(stream instanceof MediaStream)) {
-      throw new TypeError('camera.off: argument must be an instance of MediaStream.')
+      throw new TypeError('Argument must be an instance of MediaStream.')
     }
     try {
       stream.getTracks().forEach(track => {
@@ -36,7 +36,7 @@ const camera = {
         }
       })
     } catch (error) {
-      throw new Error(`Error accessing camera. ${error}`)
+      throw new Error(error)
     }
   },
   light(stream) {
