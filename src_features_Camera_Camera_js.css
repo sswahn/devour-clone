@@ -147,6 +147,11 @@
   width: 78px;
   z-index: 4;
 
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+
   border: 1px dashed red;
 }
 
