@@ -10,7 +10,8 @@
 
   position: absolute;
   bottom: 0;
-  left: calc(50% - 39px);
+  left: 50%;
+  transform: translateX(-50%);
 
   border: 1px dashed red;
 }
