@@ -44,7 +44,7 @@ function Camera() {
   return (
     <section className={styles.camera}>
       <BackButton stopCamera={stopCamera} />
-  {/*  <RecordTimer timer={timer} setTimer={setTimer} /> */}
+      <RecordTimer timer={timer} setTimer={setTimer} />
       <LightButton streamRef={streamRef} />
       <ViewPort videoRef={videoRef} />
   {/*
