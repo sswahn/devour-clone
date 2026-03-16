@@ -8,15 +8,10 @@
   height: 100dvh;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-  
   width: 100%;
-
   will-change: transform, opacity;
   transform: translateZ(0);
-
   z-index: 3;
-
-  border: 1px dashed green;
 }
 
 /*!********************************************************************************************************!*\
