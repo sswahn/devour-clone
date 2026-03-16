@@ -12,7 +12,7 @@
   height: 45px;
   padding: 5px 10px; 
 
-  position: relative;
+  position: absolute;
   width: 45px; 
   z-index: 4;
 
