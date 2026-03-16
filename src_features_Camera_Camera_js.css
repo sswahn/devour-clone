@@ -167,6 +167,8 @@
   height: 45px;
   position: relative;
   width: 45px; 
+
+  z-index: 4;
 }
 
 .x0rVinpmgIALQbVh1IO6 svg {
