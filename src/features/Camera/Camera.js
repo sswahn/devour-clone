@@ -48,10 +48,11 @@ function Camera() {
       <LightButton streamRef={streamRef} />
       
      
-    {/*    <MuteButton streamRef={streamRef} />
-    */}
+    {/*    
+      <MuteButton streamRef={streamRef} />
       <RecordButton streamRef={streamRef} timer={timer} />
       <LocationButton /> 
+      */}
       <ViewPort videoRef={videoRef} />
     </section>
   )
