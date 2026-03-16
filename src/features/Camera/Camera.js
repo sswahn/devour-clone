@@ -47,9 +47,11 @@ function Camera() {
       <RecordTimer timer={timer} setTimer={setTimer} />
       <LightButton streamRef={streamRef} />
       <ViewPort videoRef={videoRef} />
+  {/*
       <MuteButton streamRef={streamRef} />
       <RecordButton streamRef={streamRef} timer={timer} />
       <LocationButton />
+      */}
     </section>
   )
 }
