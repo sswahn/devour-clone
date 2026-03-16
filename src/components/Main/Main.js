@@ -34,11 +34,12 @@ function Main() {
         <Suspense fallback={<LoadingSpinner />}>
           {context.camera && <Camera />}
         </Suspense>
-        */}
+        
 
         <Suspense fallback={<LoadingSpinner />}>
           {context.drawer && <Drawer />}
         </Suspense>
+        */}
       </Portal>
     </main>
   )
