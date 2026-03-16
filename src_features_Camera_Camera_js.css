@@ -78,18 +78,28 @@
 /* Camera Light Button CSS Module */
 
 .MTUqodLc4vgQcRBbnX_w {
-  background: none;
+  background-color: rgba(0, 0, 0, 0.5);;
   border: 0;
+  border-radius: 50%;
   color: white;
-  fill: white;
+  cursor: pointer;
+  font-size: 22px; 
   cursor: pointer;
   font-size: 18px;
-  height: 100%;
+  height: 45px;
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 50px;
+  width: 45px;
   z-index: 4;
+}
+
+.MTUqodLc4vgQcRBbnX_w svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*!********************************************************************************************************!*\
