@@ -24,6 +24,8 @@
   cursor: pointer;
   height: 56px;
   padding: 0 26px; 
+
+  border: 1px dashed orange;
 }
 
 .recordButton:hover {
