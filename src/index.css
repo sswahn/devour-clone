@@ -8,12 +8,8 @@
   --dark-mode-background-quaternary: #333;
   --dark-mode-border-color: white;
 
-  
-
   --light-mode-background: white;
-  --light-mode-color: black;
-
-  
+  --light-mode-color: black;  
 }
 
 
@@ -30,22 +26,11 @@
 }
 
 html, body {
-
   height: 100dvh;
-  
   overflow-x: hidden;
   width: 100%;
-  
-  border: 1px dashed pink;
 }
 
-.header {
-  background: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
 
 .sidebar {
   background-color: white;
