@@ -104,7 +104,6 @@ const Sidebar = () => {
   
   return (
     <>
-  {isOpen && <>
       <nav className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : styles.sidebarClose}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
   
@@ -156,7 +155,6 @@ const Sidebar = () => {
         )}
       </nav>
       <div className={`${styles.sidebarOverlay} ${isOpen ? styles.sidebarOpenOverlay : styles.sidebarCloseOverlay}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
-    </>}
     </>
   )
 }
