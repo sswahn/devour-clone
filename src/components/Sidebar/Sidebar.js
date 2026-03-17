@@ -36,8 +36,6 @@ const Sidebar = () => {
   }
   
   const handleOpenCamera = event => {
-    console.log('this is the correct sidebar component')
-    
     dispatch({ type: 'sidebar', payload: false })
     dispatch({ type: 'camera', payload: true })
   }
@@ -61,16 +59,15 @@ const Sidebar = () => {
   }
 
   const handleSignin = event => {
-    dispatch({ type: 'auth', payload: 'login' })
     dispatch({ type: 'sidebar', payload: false })
+    dispatch({ type: 'auth', payload: 'login' })
   }
   
   const handleSignup = event => {
-    dispatch({ type: 'auth', payload: 'register' })
     dispatch({ type: 'sidebar', payload: false })
+    dispatch({ type: 'auth', payload: 'register' })
   }
 
-  
   const openSidebar = () => {
     setIsOpen(true)
   }
@@ -91,6 +88,9 @@ const Sidebar = () => {
   }
  
   useEffect(() => {
+    
+    console.log('this is the correct sidebar component')
+    
     toggleSidebar()
   }, [context.sidebar])
 
