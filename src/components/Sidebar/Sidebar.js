@@ -106,7 +106,9 @@ const Sidebar = () => {
     <>
       <nav className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : styles.sidebarClose}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
-{/* consolidate this to one class for search button */}
+  
+         {/* consolidate this to one class for search button */}
+  
           <button className={`${styles.sidebarButton} ${styles.searchButton}`} type="button" aria-label="open search">
             <SearchIcon />
             <div className="tooltip" role="tooltip">Search</div>
@@ -121,31 +123,31 @@ const Sidebar = () => {
         </div>
         {!context.session ? (
           <div className={styles.sidebarButtonContainer}>
-            <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
+            <button className={styles.sidebarNavigation} onClick={handleOpenProfile} type="button" aria-label="open profile">
               <Avatar className={styles.sidebarAvatar} image={context.user.avatar} username={context.user.username} onClick={() => {}} size="18px" />
               <span className="sidebar-user">{context.user.username}</span>
             </button>
-            <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
+            <button className={styles.sidebarNavigation} onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
               <CameraIcon />
               <span>Camera</span>
             </button>
-            <button className="navigation" onClick={handleNotifications} type="button" aria-label="open notifications" aria-haspopup="dialog"> 
+            <button className={styles.sidebarNavigation} onClick={handleNotifications} type="button" aria-label="open notifications" aria-haspopup="dialog"> 
               <BellIcon />
               <div className="notifications-badge" role="status" aria-label="notification indicator" aria-hidden="false"></div>
               <span>Notifications</span>
             </button>
-            <button className="navigation" onClick={handleSignout} type="button" aria-label="sign out" aria-description="Click here to end your session.">
+            <button className={styles.sidebarNavigation} onClick={handleSignout} type="button" aria-label="sign out" aria-description="Click here to end your session.">
               <RightFromBracketIcon />
               <span>Sign Out</span>
             </button>
           </div>
         ) : (
           <div className={styles.sidebarButtonContainer}>
-            <button className="navigation" onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
+            <button className={styles.sidebarNavigation} onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
               <RightToBracketIcon />
               <span>Sign In</span>
             </button>
-            <button className="navigation" onClick={handleSignup} type="button" aria-label="sign up" aria-description="Register a user account." aria-haspopup="dialog">
+            <button className={styles.sidebarNavigation} onClick={handleSignup} type="button" aria-label="sign up" aria-description="Register a user account." aria-haspopup="dialog">
               <UserPlusIcon />
               <span>Sign Up</span>
             </button>
