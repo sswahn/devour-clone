@@ -36,9 +36,16 @@ const Sidebar = () => {
     navigateTo(`/devour-clone/profile/${context.user.username}`)
   }
   
-  const handleOpenCamera = event => {
-    dispatch({ type: 'sidebar', payload: false })
-    dispatch({ type: 'camera', payload: true })
+  const handleOpenCamera = async event => {
+    try {
+      console.error('Requesting fullscreen.')
+      await document.documentElement.requestFullscreen()
+    } catch (error) {
+      console.error('Fullscreen failed:', error)
+    } finally {
+      dispatch({ type: 'sidebar', payload: false })
+      dispatch({ type: 'camera', payload: true })
+    }
   }
   
   const handleNotifications = event => {
