@@ -10,7 +10,7 @@ function BackButton({ stopCamera }) {
     stopCamera()
     dispatch({ type: 'camera', payload: false })
     if (document.fullscreenElement) {
-      await document.exitFullscreen();
+      document.exitFullscreen()
     }
   }
 
