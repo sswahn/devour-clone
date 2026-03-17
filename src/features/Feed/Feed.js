@@ -21,17 +21,20 @@ function Feed() {
 
   const loadFromStorage = async () => {
     const video = await db.get('video')
-    alert(video)
+    
+    alert(video?.video)
     
     setData(video?.video)
   }
 
   useEffect(() => {
+    alert('test.')
     loadFromStorage()
   }, [])
   
   return (
     <section className={styles.feed} role="feed" aria-busy={loading}>
+     <span>Here</span>
 {/*
       {data.map((item, index) => {
         <FeedNode key={item.id} item={item} index={idex + 1} count={items.length} />
