@@ -31,77 +31,23 @@ html, body, #root {
   width: 100dvw;
 }
 
-
-.sidebar {
-  background-color: white;
-  border-left: 1px solid gray;
-  height: 100dvh;
-  max-width: 500px;
-  position: absolute;
-  top: 0;
-  transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
-  width: 100%;
-  z-index: 9999;
+html {
+  border: 1px dashed red;
 }
 
-.sidebar-open {
-  right: 0;
-  transform: translateX(0);
+body {
+  border: 1px dashed yellow;
 }
 
-.sidebar-close {
-  right: -500px;
-  transform: translateX(0);
+#root {
+  border: 1px dashed green;
 }
 
-.sidebar-overlay {
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 100dvh;
-  right: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 998;
-  opacity: 0;
-  max-width: 0; /* Set initial max-width to 0 */
-  transition: opacity 0.3s, max-width 0s 0.3s; /* Add delay to max-width transition on close */
+main {
+  border: 1px dashed blue;
 }
 
-.sidebar-openOverlay {
-  opacity: 1;
-  max-width: 100%; /* Set max-width to 100% on open */
-  transition: opacity 0.3s;
-}
 
-.sidebar-closeOverlay {
-  opacity: 0;
-}
-
-.sidebar-btn {
-  background: none;
-  border: 0;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 22px; 
-  height: 45px;
-  margin: 6px 8px 0 auto;
-  padding-top: 5px;
-  position: relative;
-  width: 45px; 
-}
-
-.sidebar-btn:hover .tooltip,
-.icon-btn:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
-.search-btn {
-  float: left;
-  margin: 0 5px 0 5px;
-}
 
 .tooltip {
   background-color: #575a62;
@@ -118,30 +64,8 @@ html, body, #root {
 
 
 
-.search {
-  border: 1px solid black;
-  border-radius: 5px; 
-  float: left; /* consider using margin: auto instead of float */
-  font-size: 15px;
-  height: 29px;
-  margin: 9px 0 15px 15px;
-  padding: 4px 8px;
-  width: 425px;
-  max-width: 425px;
-}
 
-.sidebar-btn-container {
-  border-top: 1px solid black;
-  clear: both;
-  margin-top: 12px;
-  padding-top: 0;
-}
 
-.sidebar-avatar {
-  display: flex;
-  font-size: inherit !important; 
-  padding: 0 !important;
-}
 
 /*
 .sidebar-user {
@@ -149,30 +73,6 @@ html, body, #root {
 }
 */
 
-.navigation {  
-  background: none;
-  border: 0;
-  border-bottom: 1px solid black;
-  color: black;
-  cursor: pointer;
-  display: flex;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 20px 0 20px 20px;
-  position: relative;
-  text-align: left;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-.navigation:hover {
-  background-color: #faf9f6;
-}
-
-.navigation span {
-  margin-left: 30px;
-}
 
 .badge {
   background-color: darkorange;
