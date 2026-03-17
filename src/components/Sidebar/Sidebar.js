@@ -133,7 +133,7 @@ const Sidebar = () => {
             </button>
             <button className={styles.sidebarNavigation} onClick={handleNotifications} type="button" aria-label="open notifications" aria-haspopup="dialog"> 
               <BellIcon />
-              <div className="notifications-badge" role="status" aria-label="notification indicator" aria-hidden="false"></div>
+              <div className={styles.notificationsBadge} role="status" aria-label="notification indicator" aria-hidden="false"></div>
               <span>Notifications</span>
             </button>
             <button className={styles.sidebarNavigation} onClick={handleSignout} type="button" aria-label="sign out" aria-description="Click here to end your session.">
