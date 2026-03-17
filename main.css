@@ -353,6 +353,82 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Sidebar/sidebar.module.css ***!
+  \*********************************************************************************************/
+/* Sidebar Navigation */
+
+.MFD1nARSSBQvZfrlSdZg {
+  background-color: white;
+  border-left: 1px solid gray;
+  height: 100dvh;
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
+  width: 100%;
+  z-index: 9999;
+}
+
+.vVdDBINCyGLCVYTp987C {
+  right: 0;
+  transform: translateX(0);
+}
+
+._1egaiV4ULho6DeHF5SO0 {
+  right: -500px;
+  transform: translateX(0);
+}
+
+.LZmeOehOFbR9_twbkE23 {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100dvh;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  opacity: 0;
+  max-width: 0; /* Set initial max-width to 0 */
+  transition: opacity 0.3s, max-width 0s 0.3s; /* Add delay to max-width transition on close */
+}
+
+.kkBUWvlxzfcqCaaaEsdM {
+  opacity: 1;
+  max-width: 100%; /* Set max-width to 100% on open */
+  transition: opacity 0.3s;
+}
+
+.QHRmA3WKq4sdx2Wf8yo8 {
+  opacity: 0;
+}
+
+.UyOhcWkctzxjgcE_MlDu {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 22px; 
+  height: 45px;
+  margin: 6px 8px 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 45px; 
+}
+
+.UyOhcWkctzxjgcE_MlDu:hover .vlVLGj3LUwrUbhXiiC7l,
+.FDjHf6ExRVZUhHX13h0K:hover .vlVLGj3LUwrUbhXiiC7l {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nTxDRdws56yXdR_jrD0F {
+  float: left;
+  margin: 0 5px 0 5px;
+}
+
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
   \*****************************************************************/
