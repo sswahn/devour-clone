@@ -130,3 +130,42 @@
   top: 15px;
   width: 8px;
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .sidebar {
+    background-color: var(--dark-mode-background-tertiary) !important;
+    color: var(--dark-mode-color) !important;
+  }
+
+  .sidebarOverlay {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .searchInput {
+    background-color: var(--dark-mode-background-quaternary);
+    color: var(--dark-mode-color);
+  }
+
+  .sidebarButtonContainer {
+    border-top: 1px solid var(--dark-mode-border-color) !important;
+  }
+  
+  .sidebarButton svg {
+    fill: var(--dark-mode-color) !important;
+  }
+
+  .sidebarNavigation {
+    border-bottom: 1px solid var(--dark-mode-border-color);
+    color: var(--dark-mode-color);
+  }
+
+  .sidebarNavigation:hover {
+    background-color: var(--dark-mode-background-secondary);
+  }
+
+  .sidebarNavigation svg {
+    fill: var(--dark-mode-color);
+  }
+  
+}
