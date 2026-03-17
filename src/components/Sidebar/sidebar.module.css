@@ -70,3 +70,28 @@
   float: left;
   margin: 0 5px 0 5px;
 }
+
+.searchInput {
+  border: 1px solid black;
+  border-radius: 5px; 
+  float: left; /* consider using margin: auto instead of float */
+  font-size: 15px;
+  height: 29px;
+  margin: 9px 0 15px 15px;
+  padding: 4px 8px;
+  width: 425px;
+  max-width: 425px;
+}
+
+.sidebarButtonContainer {
+  border-top: 1px solid black;
+  clear: both;
+  margin-top: 12px;
+  padding-top: 0;
+}
+
+.sidebarAvatar {
+  display: flex;
+  font-size: inherit !important; 
+  padding: 0 !important;
+}
