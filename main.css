@@ -454,6 +454,31 @@
   padding: 0 !important;
 }
 
+.YvhCMyCSsg9YyKtHWbYH {  
+  background: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 0 20px 20px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.YvhCMyCSsg9YyKtHWbYH:hover {
+  background-color: #faf9f6;
+}
+
+.YvhCMyCSsg9YyKtHWbYH span {
+  margin-left: 30px;
+}
+
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
   \*****************************************************************/
