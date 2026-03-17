@@ -7,3 +7,9 @@
   overflow-x: hidden;
   width: 100%;
 }
+
+@media (max-width: 500px) {
+  .main {
+    margin: 0;
+  }
+}
