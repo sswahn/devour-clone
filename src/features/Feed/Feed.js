@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import server from '../../utilities/server'
+import database from '@sswahn/database'
 import FeedNode from './FeedNode'
 import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
@@ -20,6 +21,7 @@ function Feed() {
   }
 
   const loadFromStorage = async () => {
+    const db = database()
     const video = await db.get('video')
     
     alert(video?.video)
