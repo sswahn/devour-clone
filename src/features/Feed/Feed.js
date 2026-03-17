@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import server from '../../utilities/server'
 import FeedNode from './FeedNode'
 import Sentinel from './Sentinel' // sentinel triggers infinite loading
@@ -21,10 +21,14 @@ function Feed() {
 
   const loadFromStorage = async () => {
     const video = await db.get('video')
-    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
-    dispatch({ type: 'video', payload: video?.video || [] })
-    setData({ data: video?.video })
+    console.log('video: ', video)
+    
+    setData(video?.video)
   }
+
+  useEffect(() => {
+    loadFromStorage()
+  }, [])
   
   return (
     <section className={styles.feed} role="feed" aria-busy={loading}>
