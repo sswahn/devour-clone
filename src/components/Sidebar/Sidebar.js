@@ -15,6 +15,7 @@ import BellIcon from '../Icons/BellIcon/BellIcon'
 import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon'
 import RightFromBracketIcon from '../Icons/RightFromBracketIcon/RightFromBracketIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
+import styles from './sidebar.module.css'
 
 const Sidebar = () => {
   const [context, dispatch] = useContext(Context)
@@ -103,7 +104,7 @@ const Sidebar = () => {
   
   return (
     <>
-      <nav className={`${'sidebar'} ${isOpen ? 'sidebar-open' : 'sidebar-close'}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
+      <nav className={styles.sidebar isOpen ? styles.sidebarOpen : styles.sidebarClose} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
           <button className="sidebar-btn search-btn" type="button" aria-label="open search">
             <SearchIcon />
