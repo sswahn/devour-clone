@@ -104,7 +104,7 @@ const Sidebar = () => {
   
   return (
     <>
-      <nav className={styles.sidebar isOpen ? styles.sidebarOpen : styles.sidebarClose} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
+      <nav className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : styles.sidebarClose}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
           <button className="sidebar-btn search-btn" type="button" aria-label="open search">
             <SearchIcon />
