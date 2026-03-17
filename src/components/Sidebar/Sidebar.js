@@ -106,14 +106,15 @@ const Sidebar = () => {
     <>
       <nav className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : styles.sidebarClose}`} ref={sidebarRef} aria-label="sidebar" aria-hidden={!isOpen}>
         <div className="sidebar-header">
-          <button className="sidebar-btn search-btn" type="button" aria-label="open search">
+{/* consolidate this to one class for search button */}
+          <button className={`${styles.sidebarButton} ${styles.searchButton}`} type="button" aria-label="open search">
             <SearchIcon />
             <div className="tooltip" role="tooltip">Search</div>
           </button>
     
           {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
     
-          <button className="sidebar-btn" onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
+          <button className={styles.sidebarButton} onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
             <BarsIcon />
             <div className="tooltip" role="tooltip">Menu</div>
           </button>
@@ -151,7 +152,7 @@ const Sidebar = () => {
           </div>
         )}
       </nav>
-      <div className={`${'sidebar-overlay'} ${isOpen ? 'sidebar-openOverlay' : 'sidebar-closeOverlay'}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
+      <div className={`${styles.sidebarOverlay} ${isOpen ? styles.sidebarOpenOverlay : styles.sidebarCloseOverlay}`} onClick={closeSidebar} aria-label="sidebar overlay" aria-hidden={!isOpen}></div>
     </>
   )
 }
