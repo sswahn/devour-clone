@@ -489,6 +489,45 @@
   width: 8px;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .MFD1nARSSBQvZfrlSdZg {
+    background-color: var(--dark-mode-background-tertiary) !important;
+    color: var(--dark-mode-color) !important;
+  }
+
+  .LZmeOehOFbR9_twbkE23 {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .oS8NYlJaU1VcRpi0cSf7 {
+    background-color: var(--dark-mode-background-quaternary);
+    color: var(--dark-mode-color);
+  }
+
+  .ZV67k0g65B_Qc3awSiX8 {
+    border-top: 1px solid var(--dark-mode-border-color) !important;
+  }
+  
+  .UyOhcWkctzxjgcE_MlDu svg {
+    fill: var(--dark-mode-color) !important;
+  }
+
+  .YvhCMyCSsg9YyKtHWbYH {
+    border-bottom: 1px solid var(--dark-mode-border-color);
+    color: var(--dark-mode-color);
+  }
+
+  .YvhCMyCSsg9YyKtHWbYH:hover {
+    background-color: var(--dark-mode-background-secondary);
+  }
+
+  .YvhCMyCSsg9YyKtHWbYH svg {
+    fill: var(--dark-mode-color);
+  }
+  
+}
+
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
   \*****************************************************************/
