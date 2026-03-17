@@ -31,20 +31,8 @@ body, #root {
   width: 100%;
 }
 
-html {
-  border: 1px dashed red;
-}
-
 body {
-  border: 1px dashed yellow;
-}
-
-#root {
-  border: 1px dashed green;
-}
-
-main {
-  border: 1px dashed blue;
+  padding-top: env(safe-area-inset-top);
 }
 
 
