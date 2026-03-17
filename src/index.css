@@ -71,7 +71,7 @@ main {
 .sidebar-user {
   padding-top: 4px;
 }
-*/
+
 
 
 .badge {
@@ -155,7 +155,12 @@ main {
   width: 45px; 
 }
 
-.icon-btn-alt svg { /* consider only getting rid of -alt and only using .icon-btn for all icon buttons */
+*/
+
+/* consider only getting rid of -alt and only using .icon-btn for all icon buttons */
+
+/*
+.icon-btn-alt svg { 
   fill: white;
   position: absolute;
   top: 50%;
@@ -176,7 +181,7 @@ main {
 }
 
 
-/* List */
+
 
 .list {
   margin: 0 auto;
@@ -188,6 +193,8 @@ main {
 
   border: 1px dashed red;
 }
+
+*/
 
 .list-header {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
@@ -201,6 +208,8 @@ main {
   z-index: 999;
 }
 
+
+/*
 .list-content {
   position: relative;
   height: 100%;
@@ -215,7 +224,7 @@ main {
   width: 100%;
 }
 
-/* Card */
+
 
 .card {
   margin: 0 auto;
@@ -242,12 +251,14 @@ main {
   opacity: 0;
   pointer-events: none;
   z-index: 9999;
-  transition: opacity 50ms linear; /* Fast transition */
+  transition: opacity 50ms linear;
 }
 
 .flash {
   opacity: 1;
 }
+
+*/
 
 .card-header {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
@@ -260,6 +271,8 @@ main {
   width: 100%;
   z-index: 999;
 }
+
+/*
 
 .camera-light-btn {
   background: none;
@@ -596,8 +609,11 @@ main {
   width: 100%;
 }
 
+*/
 
 /* not sure what the following does */
+
+/*
 
 .font-size-menu {
   align-items: center;
@@ -713,7 +729,6 @@ main {
   margin-left: 15px;
 }
 
-/*    */
 
 
 
@@ -769,7 +784,7 @@ main {
 
 
 
-/* End Card */
+*/
 
 
 /**
