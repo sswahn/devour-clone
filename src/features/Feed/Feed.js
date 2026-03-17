@@ -21,7 +21,7 @@ function Feed() {
 
   const loadFromStorage = async () => {
     const video = await db.get('video')
-    console.log('video: ', video)
+    alert('video: ', video)
     
     setData(video?.video)
   }
