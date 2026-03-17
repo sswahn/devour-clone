@@ -12,17 +12,17 @@
   z-index: 9999;
 }
 
-.sidebar-open {
+.sidebarOpen {
   right: 0;
   transform: translateX(0);
 }
 
-.sidebar-close {
+.sidebarClose {
   right: -500px;
   transform: translateX(0);
 }
 
-.sidebar-overlay {
+.sidebarOverlay {
   background-color: rgba(0, 0, 0, 0.1);
   height: 100dvh;
   right: 0;
@@ -35,13 +35,38 @@
   transition: opacity 0.3s, max-width 0s 0.3s; /* Add delay to max-width transition on close */
 }
 
-.sidebar-openOverlay {
+.sidebarOpenOverlay {
   opacity: 1;
   max-width: 100%; /* Set max-width to 100% on open */
   transition: opacity 0.3s;
 }
 
-.sidebar-closeOverlay {
+.sidebarCloseOverlay {
   opacity: 0;
 }
 
+.sidebarButton {
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 22px; 
+  height: 45px;
+  margin: 6px 8px 0 auto;
+  padding-top: 5px;
+  position: relative;
+  width: 45px; 
+}
+
+.sidebarButton:hover .tooltip,
+.icon-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.searchButton {
+  float: left;
+  margin: 0 5px 0 5px;
+}
