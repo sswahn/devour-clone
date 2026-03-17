@@ -112,7 +112,7 @@ const Sidebar = () => {
             <div className="tooltip" role="tooltip">Search</div>
           </button>
     
-          {/* <Search className="search" placeholder="Search" onChange={handleSearch} /> */}
+          {/* <Search className={styles.searchInput} placeholder="Search" onChange={handleSearch} /> */}
     
           <button className={styles.sidebarButton} onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
             <BarsIcon />
@@ -120,9 +120,9 @@ const Sidebar = () => {
           </button>
         </div>
         {!context.session ? (
-          <div className="sidebar-btn-container">
+          <div className={styles.sidebarButtonContainer}>
             <button className="navigation" onClick={handleOpenProfile} type="button" aria-label="open profile">
-              <Avatar className="sidebar-avatar" image={context.user.avatar} username={context.user.username} onClick={() => {}} size="18px" />
+              <Avatar className={styles.sidebarAvatar} image={context.user.avatar} username={context.user.username} onClick={() => {}} size="18px" />
               <span className="sidebar-user">{context.user.username}</span>
             </button>
             <button className="navigation" onClick={handleOpenCamera} type="button" aria-label="open camera" aria-haspopup="dialog">
@@ -140,7 +140,7 @@ const Sidebar = () => {
             </button>
           </div>
         ) : (
-          <div className="sidebar-btn-container">
+          <div className="sidebarButtonContainer">
             <button className="navigation" onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
               <RightToBracketIcon />
               <span>Sign In</span>
