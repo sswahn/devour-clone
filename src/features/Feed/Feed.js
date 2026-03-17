@@ -18,6 +18,13 @@ function Feed() {
     setBatchNumber(response.message.batchNumber)
     setData({ ...data, ...response.message })
   }
+
+  const loadFromStorage = async () => {
+    const video = await db.get('video')
+    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
+    dispatch({ type: 'video', payload: video?.video || [] })
+    setData({ data: video?.video })
+  }
   
   return (
     <section className={styles.feed} role="feed" aria-busy={loading}>
