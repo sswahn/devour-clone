@@ -140,7 +140,7 @@ const Sidebar = () => {
             </button>
           </div>
         ) : (
-          <div className="sidebarButtonContainer">
+          <div className={styles.sidebarButtonContainer}>
             <button className="navigation" onClick={handleSignin} type="button" aria-label="sign out" aria-description="Click here to sign in with your username and password." aria-haspopup="dialog">
               <RightToBracketIcon />
               <span>Sign In</span>
