@@ -18,12 +18,7 @@ function Main() {
 
 // context updates rerender all components consuming any value in Context...
   // refactor context
-  const loadFromStorage = async () => {
-    const video = await db.get('video')
-    const totalDuration = video?.duration.reduce((acc, val) => acc + val, 0)
-    dispatch({ type: 'video', payload: video?.video || [] })
-    setData(video?.video)
-  }
+
 
   
   return (
