@@ -8,7 +8,7 @@ import server from '@sswahn/server'
 import storage from '@sswahn/storage'
 import database from '@sswahn/database'
 import Camera from '../Camera/Camera'
-import BarsIcon from '../Icons/BarsIcon/BarsIcon'
+import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import CameraIcon from '../Icons/CameraIcon/CameraIcon'
 import BellIcon from '../Icons/BellIcon/BellIcon'
@@ -124,7 +124,7 @@ const Sidebar = () => {
           {/* <Search className={styles.searchInput} placeholder="Search" onChange={handleSearch} /> */}
     
           <button className={styles.sidebarButton} onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
-            <BarsIcon />
+            <XmarkIcon />
             <div className="tooltip" role="tooltip">Menu</div>
           </button>
         </div>
