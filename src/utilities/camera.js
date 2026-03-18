@@ -163,8 +163,8 @@ const camera = {
         return reject(new Error('MediaRecorder is already stopped.'));
       }
       const cleanup = () => {
-        mediaRecorder.onstop = undefined
-        mediaRecorder.onerror = undefined
+        mediaRecorder.onstop = null
+        mediaRecorder.onerror = null
       }
       mediaRecorder.onstop = async () => {
         const blob = new Blob(frames, { type: 'video/webm' })
@@ -174,7 +174,7 @@ const camera = {
       }
       mediaRecorder.onerror = event => {
         cleanup()
-        reject(new Error(event.error))
+        reject(event.error)
       }
       mediaRecorder.stop()
     })
