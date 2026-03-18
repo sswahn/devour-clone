@@ -161,6 +161,10 @@
     background-color: #333;
   }
 
+  .sidebarNavigation:active {
+    background-color: #222;
+  }
+
   .sidebarNavigation svg {
     fill: white;
   }
