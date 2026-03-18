@@ -31,8 +31,18 @@ function Camera() {
       streamRef.current = null
     }
   }
+
+  const getCapabilities = () => {
+    const tracks = streamRef.current.getTracks()
+    const capabilities = tracks.at(0).getCapabilities()
+    
+    console.log('capabilities: ', capabilities)
+    
+  }
   
   useEffect(() => {
+    getCapabilities()
+    
     if (!streamRef.current) {
       startCamera()
     }
