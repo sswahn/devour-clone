@@ -7,7 +7,6 @@ function RecordButton({ streamRef, timer }) {
   const [context, dispatch] = useContext(Context)
   const framesRef = useRef([])
   const recorderRef = useRef(null)
-  const db = database()
   
   const handleRecordVideo = () => {
     if (timer < 1) {
@@ -19,19 +18,25 @@ function RecordButton({ streamRef, timer }) {
   }
 
   const handleStopRecordVideo = async () => {
-    dispatch({ type: 'recording', payload: false })
-    
-    const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
-    const video = [ ...context.video, blob ]
-    const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
-    const duration = [ ...context.video_duration, 300 - timer - currentDuration ]
-    
-    dispatch({ type: 'video_duration', payload: duration })
-    dispatch({ type: 'video', payload: video })
+    try {
+      dispatch({ type: 'recording', payload: false })
+      
+      const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
+      const video = [ ...context.video, blob ]
+      const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
+      const duration = [ ...context.video_duration, 300 - timer - currentDuration ]
+      
+      dispatch({ type: 'video_duration', payload: duration })
+      dispatch({ type: 'video', payload: video })
+  
+      alert('saving the following: video: ' + JSON.stringify(video) + 'and duration: ' + duration)
 
-    alert('saving the following: video: ' + JSON.stringify(video) + 'and duration: ' + duration)
-    
-    db.put({ id: 'video', video, duration })
+      const db = database()
+      db.put({ id: 'video', video, duration })
+        
+    } catch (error) {
+      alert(JSON.stringify(error))
+    }
   }
   
   const handleRecordButton = event => {
