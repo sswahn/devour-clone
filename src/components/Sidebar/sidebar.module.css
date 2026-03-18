@@ -115,6 +115,7 @@
 
 .sidebarNavigation:hover {
   background-color: #faf9f6;
+  border-radius: 10px;
 }
 
 .sidebarNavigation span {
@@ -134,7 +135,7 @@
 @media (prefers-color-scheme: dark) {
 
   .sidebar {
-    background-color: var(--dark-mode-background-tertiary) !important;
+    background-color: var(--dark-mode-background-primary) !important;
     color: var(--dark-mode-color) !important;
   }
 
@@ -147,21 +148,16 @@
     color: var(--dark-mode-color);
   }
 
-  .sidebarButtonContainer {
-   /* border-top: 1px solid var(--dark-mode-border-color) !important; */
-  }
-  
   .sidebarButton svg {
     fill: var(--dark-mode-color) !important;
   }
 
   .sidebarNavigation {
-    /* border-bottom: 1px solid var(--dark-mode-border-color); */
     color: var(--dark-mode-color);
   }
 
   .sidebarNavigation:hover {
-    background-color: var(--dark-mode-background-secondary);
+    background-color: var(--dark-mode-background-tertiary);
   }
 
   .sidebarNavigation svg {
