@@ -162,20 +162,16 @@ const camera = {
       if (mediaRecorder.state === 'inactive') {
         return reject(new Error('MediaRecorder is already stopped.'));
       }
-      const cleanup = () => {
-        mediaRecorder.onstop = null
-        mediaRecorder.onerror = null
-      }
-      mediaRecorder.onstop = async () => {
+      const handleStop = async () => {
         const blob = new Blob(frames, { type: 'video/webm' })
         frames.length = 0
-        cleanup()
         resolve(blob)
       }
-      mediaRecorder.onerror = event => {
-        cleanup()
+      const handleError = event => {
         reject(event.error)
       }
+      mediaRecorder.addEventListener('stop', handleStop, { once: true })
+      mediaRecorder.addEventListener('error', handleError, { once: true })
       mediaRecorder.stop()
     })
   }
