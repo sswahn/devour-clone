@@ -159,6 +159,9 @@ const camera = {
       throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
     return new Promise((resolve, reject) => {
+      if (mediaRecorder.state === 'inactive') {
+        return reject(new Error('MediaRecorder is already stopped.'));
+      }
       mediaRecorder.onstop = async () => {
         const blob = new Blob(frames, { type: 'video/webm' })
         frames.length = 0
