@@ -10,7 +10,7 @@ function RecordButton({ streamRef, timer }) {
   
   const handleRecordVideo = () => {
     if (timer < 1) {
-      return alert('No recording time remaining.') // should be custom modal
+      return alert('No recording time remaining.')
     }
     dispatch({ type: 'recording', payload: true })
     const recorder = camera.startRecording(streamRef.current, framesRef.current)
@@ -20,10 +20,18 @@ function RecordButton({ streamRef, timer }) {
   const handleStopRecordVideo = async () => {
     try {
       dispatch({ type: 'recording', payload: false })
+
+      alert('handlingStopVideo')
       
       const blob = await camera.stopRecording(recorderRef.current, framesRef.current)
+
+      alert('after blob')
+      
       const video = [ ...context.video, blob ]
       const currentDuration = context.video_duration.reduce((acc, val) => acc + val, 0)
+
+      alert('after currentDuration')
+      
       const duration = [ ...context.video_duration, 300 - timer - currentDuration ]
       
       dispatch({ type: 'video_duration', payload: duration })
