@@ -163,31 +163,26 @@ const camera = {
     }
     return new Promise((resolve, reject) => {
       let settled = false
-      const handleStop = () => {
+      const settle = (fn) => (...args) => {
         if (settled) {
           return
         }
         settled = true
+        fn(...args)
+      }
+      mediaRecorder.addEventListener('stop', settle(() => {
         const blob = new Blob(frames, { type: 'video/webm' })
         frames.length = 0
         resolve(blob)
-      }
-      const handleError = event => {
-        if (settled) {
-          return
-        }
-        settled = true
+      }), { once: true })
+      
+      mediaRecorder.addEventListener('error', settle(event => {
         reject(event?.error || new Error('Error on stopRecording'))
-      }
-      mediaRecorder.addEventListener('stop', handleStop, { once: true })
-      mediaRecorder.addEventListener('error', handleError, { once: true })
+      }), { once: true })
       try {
         mediaRecorder.stop()
       } catch (error) {
-        if (!settled) {
-          settled = true
-          reject(error)
-        }
+        settle(() => reject(error))()
       }
     })
   }
