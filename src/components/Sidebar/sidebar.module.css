@@ -145,7 +145,7 @@
   }
 
   .searchInput {
-    background-color: var(--dark-mode-background-quaternary);
+    background-color: var(--dark-mode-background);
     color: var(--dark-mode-color);
   }
 
@@ -158,7 +158,7 @@
   }
 
   .sidebarNavigation:hover {
-    background-color: var(--dark-mode-background-tertiary);
+    background-color: var(--dark-mode-background-quaternary);
   }
 
   .sidebarNavigation svg {
