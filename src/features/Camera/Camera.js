@@ -21,9 +21,8 @@ function Camera() {
       streamRef.current = stream
       videoRef.current.srcObject = stream
 
-      const caps = camera.getCapabilities(stream)
-
-      alert(JSON.stringify(caps))
+      // const caps = camera.getCapabilities(stream)
+      // alert(JSON.stringify(caps))
     
     } catch (error) {
       console.error('Error accessing camera: ', error)
