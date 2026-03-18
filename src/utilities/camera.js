@@ -168,7 +168,7 @@ const camera = {
         resolve(blob)
       }
       mediaRecorder.onerror = event => {
-        reject(`Recording error: ${event.error}`)
+        reject(new Error(event.error))
       }
       mediaRecorder.stop()
     })
