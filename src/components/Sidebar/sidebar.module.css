@@ -136,8 +136,8 @@
 @media (prefers-color-scheme: dark) {
 
   .sidebar {
-    background-color: var(--dark-mode-background) !important;
-    color: var(--dark-mode-color) !important;
+    background-color: black;
+    color: white;
   }
 
   .sidebarOverlay {
@@ -150,19 +150,19 @@
   }
 
   .sidebarButton svg {
-    fill: var(--dark-mode-color) !important;
+    fill: white;
   }
 
   .sidebarNavigation {
-    color: var(--dark-mode-color);
+    color: white;
   }
 
   .sidebarNavigation:hover {
-    background-color: var(--dark-mode-background-quaternary);
+    background-color: #333;
   }
 
   .sidebarNavigation svg {
-    fill: var(--dark-mode-color);
+    fill: white;
   }
   
 }
