@@ -157,7 +157,8 @@
     color: white;
   }
 
-  .sidebarNavigation:hover {
+  .sidebarNavigation:hover,
+  .sidebarNavigation:focus {
     background-color: #333;
   }
 
