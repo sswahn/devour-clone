@@ -24,13 +24,12 @@ function Feed() {
     const db = database()
     const video = await db.get('video')
     
-    alert(video?.video)
+    alert(JSON.stringify(video?.video))
     
     setData(video?.video)
   }
 
   useEffect(() => {
-    alert('test.')
     loadFromStorage()
   }, [])
   
