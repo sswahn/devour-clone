@@ -42,6 +42,13 @@ const camera = {
       throw new Error(error)
     }
   },
+  getCapabilities(stream) {
+    if (!(stream instanceof MediaStream)) {
+      throw new TypeError('Argument must be an instance of MediaStream.')
+    }
+    const track = stream.getVideoTracks().at(0)
+    return track?.getCapabilities()
+  },
   light(stream) {
     if (!(stream instanceof MediaStream)) {
       throw new TypeError('camera.light: argument must be an instance of MediaStream.')
