@@ -3,7 +3,7 @@
 .sidebar {
   background-color: white;
   border-left: 1px solid gray;
-  height: 100dvh;
+  height: 100%;
   max-width: 500px;
   padding: 0 8px;
   position: absolute;
@@ -25,7 +25,7 @@
 
 .sidebarOverlay {
   background-color: rgba(0, 0, 0, 0.1);
-  height: 100dvh;
+  height: 100%;
   right: 0;
   position: fixed;
   top: 0;
