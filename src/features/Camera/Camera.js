@@ -20,6 +20,9 @@ function Camera() {
       const stream = await camera.on()
       streamRef.current = stream
       videoRef.current.srcObject = stream
+
+      getCapabilities()
+    
     } catch (error) {
       console.error('Error accessing camera: ', error)
     }
@@ -41,8 +44,6 @@ function Camera() {
   }
   
   useEffect(() => {
-    getCapabilities()
-    
     if (!streamRef.current) {
       startCamera()
     }
