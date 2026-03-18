@@ -23,7 +23,7 @@ function Camera() {
 
       const caps = camera.getCapabilities(stream)
 
-      console.log('capabilities: ', caps)
+      alert(JSON.stringify(caps))
     
     } catch (error) {
       console.error('Error accessing camera: ', error)
