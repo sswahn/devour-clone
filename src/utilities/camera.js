@@ -163,7 +163,7 @@ const camera = {
         return reject(new Error('MediaRecorder is already stopped.'));
       }
       let settled = false
-      const handleStop = async () => {
+      const handleStop = () => {
         if (settled) {
           return
         }
@@ -177,14 +177,17 @@ const camera = {
           return
         }
         settled = true
-        reject(event.error)
+        reject(event?.error || new Error('Error on stopRecording'))
       }
       mediaRecorder.addEventListener('stop', handleStop, { once: true })
       mediaRecorder.addEventListener('error', handleError, { once: true })
       try {
         mediaRecorder.stop()
       } catch (error) {
-        reject(error)
+        if (!settled) {
+          settled = true
+          reject(error)
+        }
       }
     })
   }
