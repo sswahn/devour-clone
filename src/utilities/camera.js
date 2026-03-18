@@ -159,19 +159,15 @@ const camera = {
       throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
     return new Promise((resolve, reject) => {
-      try {
-        mediaRecorder.onstop = async () => {
-          const blob = new Blob(frames, { type: 'video/webm' })
-          frames.length = 0
-          resolve(blob)
-        }
-        mediaRecorder.onerror = event => {
-          reject(`Recording error: ${event.error}`)
-        }
-        mediaRecorder.stop()
-      } catch (error) {
-        throw new Error(`Error accessing camera. ${error}`)
+      mediaRecorder.onstop = async () => {
+        const blob = new Blob(frames, { type: 'video/webm' })
+        frames.length = 0
+        resolve(blob)
       }
+      mediaRecorder.onerror = event => {
+        reject(`Recording error: ${event.error}`)
+      }
+      mediaRecorder.stop()
     })
   }
 }
