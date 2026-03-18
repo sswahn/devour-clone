@@ -7,3 +7,5 @@ function XmarkIcon() {
     </svg>
   )
 }
+
+export default XmarkIcon
