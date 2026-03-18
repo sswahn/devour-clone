@@ -145,7 +145,7 @@
   }
 
   .searchInput {
-    background-color: var(--dark-mode-background);
+    background-color: var(--dark-mode-background-secondary);
     color: var(--dark-mode-color);
   }
 
