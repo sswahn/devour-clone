@@ -84,7 +84,7 @@
 }
 
 .sidebarButtonContainer {
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
   clear: both;
   margin-top: 12px;
   padding-top: 0;
@@ -99,7 +99,7 @@
 .sidebarNavigation {  
   background: none;
   border: 0;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   color: black;
   cursor: pointer;
   display: flex;
@@ -148,7 +148,7 @@
   }
 
   .sidebarButtonContainer {
-    border-top: 1px solid var(--dark-mode-border-color) !important;
+   /* border-top: 1px solid var(--dark-mode-border-color) !important; */
   }
   
   .sidebarButton svg {
@@ -156,7 +156,7 @@
   }
 
   .sidebarNavigation {
-    border-bottom: 1px solid var(--dark-mode-border-color);
+    /* border-bottom: 1px solid var(--dark-mode-border-color); */
     color: var(--dark-mode-color);
   }
 
