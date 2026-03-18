@@ -145,9 +145,9 @@ const camera = {
       options.mimeType = 'video/webm; codecs=vp8' // Fallback
     }
     const mediaRecorder = new MediaRecorder(stream, options)
-    mediaRecorder.ondataavailable = event => {
+    mediaRecorder.addEventListener('dataavailable', event => {
       frames.push(event.data)
-    }
+    })
     mediaRecorder.start()
     return mediaRecorder
   },
@@ -159,7 +159,7 @@ const camera = {
       throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
     if (mediaRecorder.state === 'inactive') {
-      return Promise.reject(new Error('MediaRecorder is already stopped.'));
+      return Promise.reject(new Error('camera.stopRecording: MediaRecorder is already stopped.'));
     }
     return new Promise((resolve, reject) => {
       let settled = false
