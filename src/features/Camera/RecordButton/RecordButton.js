@@ -28,6 +28,8 @@ function RecordButton({ streamRef, timer }) {
     
     dispatch({ type: 'video_duration', payload: duration })
     dispatch({ type: 'video', payload: video })
+
+    alert('saving the following: video: ' + JSON.stringify(video) + 'and duration: ' + duration)
     
     db.put({ id: 'video', video, duration })
   }
