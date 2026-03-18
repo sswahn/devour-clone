@@ -158,10 +158,10 @@ const camera = {
     if (!Array.isArray(frames)) {
       throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
+    if (mediaRecorder.state === 'inactive') {
+      return reject(new Error('MediaRecorder is already stopped.'));
+    }
     return new Promise((resolve, reject) => {
-      if (mediaRecorder.state === 'inactive') {
-        return reject(new Error('MediaRecorder is already stopped.'));
-      }
       let settled = false
       const handleStop = () => {
         if (settled) {
