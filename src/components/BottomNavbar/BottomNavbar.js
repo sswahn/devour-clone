@@ -20,7 +20,7 @@ function BottomNavbar() {
     const deltaY = currentScrollY - lastScrollY.current
     const deltaTime = currentTime - lastTime.current
 
-    const velocity = deltaY / deltaTime
+    const velocity = deltaTime > 0 ? deltaY / deltaTime : 0
 
     // Always show near top
     if (currentScrollY < 80) {
