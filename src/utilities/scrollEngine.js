@@ -41,6 +41,7 @@ function update() {
 
   previousScrollY = scrollY
   previousTime = time
+  previousVelocity = velocity
 }
 
 function onScroll() {
