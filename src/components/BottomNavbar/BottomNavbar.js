@@ -72,10 +72,9 @@ function BottomNavbar() {
 
   const snapNav = () => {
     const nav = navRef.current
-    if (!nav) {
+    if (!nav || window.scrollY < 80) {
       return
     }
-
     if (velocityRef.current > SNAP_HIDE) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
