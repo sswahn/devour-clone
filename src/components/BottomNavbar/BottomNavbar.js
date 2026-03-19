@@ -40,12 +40,16 @@ function BottomNavbar() {
       isHidden.current = false
     }
   }
+
+  const clearAllTimeouts = () => {
+    clearTimeout(scrollEndTimeout.current)
+    clearTimeout(lockTimeout.current)
+    clearTimeout(intentTimeout.current)
+  }
   
   const lockInteraction = () => {
     interactionLock.current = true
-    if (lockTimeout.current) {
-      clearTimeout(lockTimeout.current)
-    }
+    clearTimeout(lockTimeout.current)
     lockTimeout.current = setTimeout(() => {
       interactionLock.current = false
     }, INTERACTION_LOCK_MS)
@@ -53,9 +57,7 @@ function BottomNavbar() {
 
   const triggerIntent = () => {
     intentActive.current = true
-    if (intentTimeout.current) {
-      clearTimeout(intentTimeout.current)
-    }
+    clearTimeout(intentTimeout.current)
     intentTimeout.current = setTimeout(() => {
       intentActive.current = false
     }, 150) // short buffer
@@ -138,12 +140,6 @@ function BottomNavbar() {
   const handlePointerUp = () => {
     gestureActive.current = false
     setScrollEndTimeout()
-  }
-
-  const clearAllTimeouts = () => {
-    clearTimeout(scrollEndTimeout.current)
-    clearTimeout(lockTimeout.current)
-    clearTimeout(intentTimeout.current)
   }
 
   useEffect(() => {
