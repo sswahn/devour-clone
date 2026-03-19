@@ -33,11 +33,11 @@ function BottomNavbar() {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     } 
-    else if (!isHidden.current && velocity > 0.5) {
+    else if (!isHidden.current && velocity > 0.6) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
     }
-    else if (isHidden.current && velocity < -0.5) {
+    else if (isHidden.current && velocity < -0.3) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
