@@ -156,7 +156,7 @@ function BottomNavbar() {
     <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
       <button type="button" aria-label="home">
         <HomeIcon />  
-      <button/>
+      </button>
       <button type="button" aria-label="search">
         <SearchIcon />  
       </button>
