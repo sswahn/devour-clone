@@ -46,6 +46,13 @@ function BottomNavbar() {
       intentActive.current = false
     }, 150) // short buffer
   }
+
+  const setHidden = () => {
+    if (isHidden.current) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    }
+  }
   
   const updateNav = ({ scrollY, velocity, time }) => {
     const nav = navRef.current
@@ -55,17 +62,13 @@ function BottomNavbar() {
     
     // Interaction priority
     if (interactionLock.current) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
-      return
+      return setHidden()
     }
   
     // Always show near top
     if (scrollY < 80) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
       velocityRef.current = 0
-      return
+      return setHidden()
     }
   
     // Intent detection (AFTER velocity)
@@ -78,22 +81,18 @@ function BottomNavbar() {
 
     // Priority: Intent > Physics
     if (intentActive.current) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
-      return
+      return setHidden()
     } 
   
     // Update velocity AFTER using prev
     velocityRef.current = velocity
     scrollYRef.current = scrollY
 
-    else if (!isHidden.current && velocity > HIDE_VELOCITY) {
+    if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
-    } 
-    else if (isHidden.current && velocity < SHOW_VELOCITY) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
+    } else {
+      setHidden()
     }
     
     if (!gestureActive.current) {
