@@ -57,18 +57,15 @@ function BottomNavbar() {
       return
     }
     
-    const currentScrollY = window.scrollY
-    const currentTime = performance.now()
-    const deltaY = currentScrollY - lastScrollY.current
-    const deltaTime = currentTime - lastTime.current
+    const deltaY = scrollY - lastScrollY.current
+    const deltaTime = time - lastTime.current
 
     // If user is interacting, force nav visible
     if (interactionLock.current) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
-    
-      lastScrollY.current = currentScrollY
-      lastTime.current = currentTime
+      lastScrollY.current = scrollY
+      lastTime.current = time
       return
     }
 
@@ -77,14 +74,14 @@ function BottomNavbar() {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
       velocityRef.current = 0
-      lastScrollY.current = currentScrollY
-      lastTime.current = currentTime
+      lastScrollY.current = scrollY
+      lastTime.current = time
       return
     }
 
     if (Math.abs(deltaY) < MIN_DELTA_Y) {
-      lastScrollY.current = currentScrollY
-      lastTime.current = currentTime
+      lastScrollY.current = scrollY
+      lastTime.current = time
       return
     }
 
@@ -111,8 +108,8 @@ function BottomNavbar() {
       isHidden.current = false
     }
 
-    lastScrollY.current = currentScrollY
-    lastTime.current = currentTime
+    lastScrollY.current = scrollY
+    lastTime.current = time
   }
 
   const snapNav = () => {
