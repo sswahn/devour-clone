@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
-  const navRef = useRef()
-  const lastScrollYRef = useRef(0)
-  const timeoutRef = useRef(false)
+  const nav = useRef()
+  const lastScrollY = useRef(0)
+  const timeout = useRef(false)
   const lastTime = useRef(performance.now())
   const isHidden = useRef(false)
 
   const updateNav = () => {
-    const nav = navRef.current
+    const nav = nav.current
     if (!nav) {
       return
     }
@@ -40,12 +40,12 @@ function BottomNavbar() {
   }
 
   const throttleOnScroll = () => {
-    if (!timeoutRef.current) {
+    if (!timeout.current) {
       window.requestAnimationFrame(() => {
         updateNav()
-        timeoutRef.current = false
+        timeout.current = false
       })
-      timeoutRef.current = true
+      timeout.current = true
     }
   }
 
@@ -59,7 +59,7 @@ function BottomNavbar() {
   // break each button and their function out into components
   
   return (
-    <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
+    <nav ref={nav} className={styles.bottomNavbar} aria-label="primary navigation">
       <button type="button" aria-label="home">
       </button>
       <button type="button" aria-label="search">
