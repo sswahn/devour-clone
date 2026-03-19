@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import scroll from '../../utilities/scrollEngine'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import CameraIcon from '../Icons/CameraIcon/CameraIcon'
@@ -168,12 +169,11 @@ function BottomNavbar() {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', throttleOnScroll, { passive: true })
+    const unsubscribe = scroll.subscribe(handleScroll)
     window.addEventListener('pointerdown', handlePointerDown, { passive: true })
     window.addEventListener('pointerup', handlePointerUp, { passive: true })
-
     return () => {
-      window.removeEventListener('scroll', throttleOnScroll)
+      unsubscribe()
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('pointerup', handlePointerUp)
       if (scrollEndTimeout.current) {
