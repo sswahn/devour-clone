@@ -70,7 +70,8 @@ function BottomNavbar() {
     }
     if (velocityRef.current > SNAP_HIDE) {
       setHidden(nav)
-    } else if (velocityRef.current < SNAP_SHOW) {
+    }
+    if (velocityRef.current < SNAP_SHOW) {
       setVisible(nav)
     }
   }
@@ -87,7 +88,8 @@ function BottomNavbar() {
     }
     
     scrollYRef.current = scrollY // For snapNav()
-    
+
+    // Disrupt if user interacts
     if (interactionLock.current) {
       return setVisible(nav)
     }
@@ -107,16 +109,15 @@ function BottomNavbar() {
     if (isSlowing || isReversing) {
       triggerIntent()
     }
-
     if (intentActive.current) {
       return setVisible(nav)
     } 
     if (velocity > HIDE_VELOCITY) {
       setHidden(nav)
-    } else if (velocity < SHOW_VELOCITY) {
+    }
+    if (velocity < SHOW_VELOCITY) {
       setVisible(nav)
     }
-
     if (!gestureActive.current) {
       scheduleSnap()
     }
