@@ -21,7 +21,6 @@ function BottomNavbar() {
   const SHOW_VELOCITY = -0.3
   const MIN_DELTA_Y = 2
   const SCROLL_END_DELAY = 120 // ms
-  const PARALLAX_FACTOR = 15 // px max for button parallax
 
   const updateNav = () => {
     const nav = navRef.current
@@ -65,29 +64,8 @@ function BottomNavbar() {
       isHidden.current = false
     }
 
-    // Apply button parallax
-    const buttons = nav.querySelectorAll('button')
-    buttons.forEach((btn) => {
-      const offset = Math.max(
-        -PARALLAX_FACTOR,
-        Math.min(PARALLAX_FACTOR, -velocity * 100)
-      )
-      btn.style.transform = `translateY(${offset}px)`
-      btn.dataset.offset = offset
-    })
-
     lastScrollY.current = currentScrollY
     lastTime.current = currentTime
-  }
-
-  const resetButtonParallax = () => {
-    const nav = navRef.current
-    if (!nav) return
-    const buttons = nav.querySelectorAll('button')
-    buttons.forEach((btn) => {
-      btn.style.transform = 'translateY(0)'
-      btn.dataset.offset = 0
-    })
   }
 
   const snapNav = () => {
@@ -101,13 +79,6 @@ function BottomNavbar() {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
-
-    // Reset button parallax smoothly
-    const buttons = nav.querySelectorAll('button')
-    buttons.forEach((btn) => {
-      btn.style.transform = 'translateY(0)'
-      btn.dataset.offset = 0
-    })
   }
 
   const throttleOnScroll = () => {
