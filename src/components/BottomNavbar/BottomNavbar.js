@@ -71,13 +71,8 @@ function BottomNavbar() {
       setVisible(nav)
     }
   }
-
-  const scheduleSnap = () => {
-    clearTimeout(scrollEndTimeout.current)
-    scrollEndTimeout.current = setTimeout(snapNav, SCROLL_END_DELAY)
-  }
   
-  const updateNav = ({ scrollY, velocity }) => {
+  const updateNav = ({ scrollY, velocity, acceleration, isIdle }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -99,10 +94,10 @@ function BottomNavbar() {
     const prevVelocity = velocityRef.current
     velocityRef.current = velocity
   
-    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
     const isReversing = velocity < 0 && prevVelocity > 0
+    const isBraking = acceleration < INTENT_ACCELERATION
 
-    if (isSlowing || isReversing) {
+    if (isReversing || isBreaking) {
       triggerIntent()
     }
     if (intentActive.current) {
