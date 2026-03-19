@@ -56,7 +56,9 @@ function onScroll() {
 let started = false
 
 function start() {
-  if (started) return
+  if (started) {
+    return
+  }
   window.addEventListener('scroll', onScroll, { passive: true })
   started = true
 }
@@ -67,11 +69,14 @@ function stop() {
 }
 
 export function subscribe(fn) {
-  if (!started) start()
+  if (!started) {
+    start()
+  }
   subscribers.add(fn)
-
   return () => {
     subscribers.delete(fn)
-    if (subscribers.size === 0) stop()
+    if (subscribers.size === 0) {
+      stop()
+    }
   }
 }
