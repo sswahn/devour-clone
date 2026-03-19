@@ -53,15 +53,19 @@ function stop() {
   started = false
 }
 
-export function subscribe(fn) {
-  if (!started) {
-    start()
-  }
-  subscribers.add(fn)
-  return () => {
-    subscribers.delete(fn)
-    if (subscribers.size === 0) {
-      stop()
+const scroll = { 
+  subscribe(fn) {
+    if (!started) {
+      start()
+    }
+    subscribers.add(fn)
+    return () => {
+      subscribers.delete(fn)
+      if (subscribers.size === 0) {
+        stop()
+      }
     }
   }
 }
+
+export default scroll
