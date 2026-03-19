@@ -1,13 +1,11 @@
 // scrollEngine.js
 
 let subscribers = new Set()
-
+let started = false // Start engine once
 let lastScrollY = window.scrollY
 let lastTime = performance.now()
 let velocity = 0
-
 let ticking = false
-
 const SMOOTHING = 0.2
 
 function computeVelocity(deltaY, deltaTime, prevVelocity) {
@@ -51,9 +49,6 @@ function onScroll() {
     ticking = true
   }
 }
-
-// Start engine once
-let started = false
 
 function start() {
   window.addEventListener('scroll', onScroll, { passive: true })
