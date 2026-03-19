@@ -60,6 +60,28 @@ function BottomNavbar() {
       isHidden.current = false
     }
   }
+
+  const snapNav = () => {
+    const nav = navRef.current
+    if (!nav || scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
+      return
+    }
+    if (velocityRef.current > SNAP_HIDE) {
+      setHidden(nav)
+    } else if (velocityRef.current < SNAP_SHOW) {
+      setVisible(nav)
+    }
+  }
+  
+  const clearScrollEndTimeout = () => {
+    if (scrollEndTimeout.current) {
+      clearTimeout(scrollEndTimeout.current)
+    }
+  }
+
+  const setScrollEndTimeout = () => {
+    scrollEndTimeout.current = setTimeout(snapNav, SCROLL_END_DELAY)
+  }
   
   const updateNav = ({ scrollY, velocity }) => {
     const nav = navRef.current
@@ -103,39 +125,19 @@ function BottomNavbar() {
     }
     
     if (!gestureActive.current) {
-      if (scrollEndTimeout.current) {
-        clearTimeout(scrollEndTimeout.current)
-      }
-      scrollEndTimeout.current = setTimeout(() => {
-        snapNav()
-      }, SCROLL_END_DELAY)
-    }
-  }
-
-  const snapNav = () => {
-    const nav = navRef.current
-    if (!nav || scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
-      return
-    }
-    if (velocityRef.current > SNAP_HIDE) {
-      setHidden(nav)
-    } else if (velocityRef.current < SNAP_SHOW) {
-      setVisible(nav)
+      clearScrollEndTimeout()
+      setScrollEndTimeout()
     }
   }
 
   const handlePointerDown = () => {
     gestureActive.current = true
-    if (scrollEndTimeout.current) {
-      clearTimeout(scrollEndTimeout.current)
-    }
+    clearScrollEndTimeout()
   }
     
   const handlePointerUp = () => {
     gestureActive.current = false
-    scrollEndTimeout.current = setTimeout(() => {
-      snapNav()
-    }, SCROLL_END_DELAY)
+    setScrollEndTimeout()
   }
 
   useEffect(() => {
