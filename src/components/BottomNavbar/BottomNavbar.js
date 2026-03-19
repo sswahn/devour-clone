@@ -19,8 +19,8 @@ function BottomNavbar() {
   const intentTimeout = useRef(null)
   const interactionLock = useRef(false)
 
-  const HIDE_VELOCITY = 0.6
-  const SHOW_VELOCITY = -0.3
+  const HIDE_VELOCITY = 0.7
+  const SHOW_VELOCITY = -0.2
   const SCROLL_END_DELAY = 120 // ms
   const SNAP_HIDE = 0.3
   const SNAP_SHOW = -0.3
