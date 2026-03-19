@@ -54,7 +54,7 @@ function BottomNavbar() {
     }
   }
   
-  const updateNav = ({ scrollY, velocity, time }) => {
+  const updateNav = ({ scrollY, velocity }) => {
     const nav = navRef.current
     if (!nav) {
       return
