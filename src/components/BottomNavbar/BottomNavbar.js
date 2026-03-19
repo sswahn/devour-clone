@@ -5,19 +5,25 @@ function BottomNavbar() {
   const ref = useRef()
 
   const onScroll = () => {
+    if (!ref.current) {
+      return
+    }
     let lastScrollY = window.scrollY
-    const nav = document.querySelector('.bottom-nav')
+    if (currentScrollY < 80) {
+      ref.current.classList.remove(styles.hidden)
+      lastScrollY.current = currentScrollY
+      return
+    }
     
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY
-    
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        ref.current.classList.add('bottom-nav--hidden') // scrolling down
-      } else {
-        ref.current.classList.remove('bottom-nav--hidden') // scrolling up
-      }
-      lastScrollY = currentScrollY
-    })
+    const currentScrollY = window.scrollY
+  
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      ref.current.classList.add(styles.hidden) // scrolling down
+    } else {
+      ref.current.classList.remove(styles.hidden) // scrolling up
+    }
+    lastScrollY = currentScrollY
+
   }
 
   useEffect(() => {
