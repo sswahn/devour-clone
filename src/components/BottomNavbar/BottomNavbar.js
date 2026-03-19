@@ -116,7 +116,7 @@ function BottomNavbar() {
       setHidden(nav)
     }
     if (velocity < SHOW_VELOCITY) {
-      setVisible(nav)
+      setTimeout(() => setVisible(nav), 50)
     }
     if (!gestureActive.current) {
       scheduleSnap()
