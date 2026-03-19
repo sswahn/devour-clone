@@ -16,13 +16,12 @@ function BottomNavbar() {
   const SHOW_VELOCITY = -0.3
   const MIN_DELTA_Y = 2
   const SCROLL_END_DELAY = 120 // ms
+  const PARALLAX_FACTOR = 15 // px max for button parallax
 
   const updateNav = () => {
     const nav = navRef.current
-    if (!nav) {
-      return
-    }
-    
+    if (!nav) return
+
     const currentScrollY = window.scrollY
     const currentTime = performance.now()
 
@@ -33,13 +32,13 @@ function BottomNavbar() {
     if (currentScrollY < 80) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
+      velocityRef.current = 0
       lastScrollY.current = currentScrollY
       lastTime.current = currentTime
-      velocityRef.current = 0
+      resetButtonParallax()
       return
     }
-    
-    // Noise filtering
+
     if (Math.abs(deltaY) < MIN_DELTA_Y) {
       lastScrollY.current = currentScrollY
       lastTime.current = currentTime
@@ -52,7 +51,7 @@ function BottomNavbar() {
       velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
     velocityRef.current = velocity
 
-    // Gesture-aware, Velocity-based intent & Hysteresis (0.6 / -0.3 asymmetry) hide/show
+    // Hide/show nav based on velocity
     if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
@@ -61,16 +60,35 @@ function BottomNavbar() {
       isHidden.current = false
     }
 
+    // Apply button parallax
+    const buttons = nav.querySelectorAll('button')
+    buttons.forEach((btn) => {
+      const offset = Math.max(
+        -PARALLAX_FACTOR,
+        Math.min(PARALLAX_FACTOR, -velocity * 100)
+      )
+      btn.style.transform = `translateY(${offset}px)`
+      btn.dataset.offset = offset
+    })
+
     lastScrollY.current = currentScrollY
     lastTime.current = currentTime
   }
 
+  const resetButtonParallax = () => {
+    const nav = navRef.current
+    if (!nav) return
+    const buttons = nav.querySelectorAll('button')
+    buttons.forEach((btn) => {
+      btn.style.transform = 'translateY(0)'
+      btn.dataset.offset = 0
+    })
+  }
+
   const snapNav = () => {
     const nav = navRef.current
-    if (!nav) {
-      return
-    }
-    // Snap based on last velocity
+    if (!nav) return
+
     if (velocityRef.current > 0.2) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
@@ -78,17 +96,13 @@ function BottomNavbar() {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
-  }
 
-  const scrollEndDetection = () => {
-    if (!gestureActive.current) {
-      if (scrollEndTimeout.current) {
-        clearTimeout(scrollEndTimeout.current)
-      }
-      scrollEndTimeout.current = setTimeout(() => {
-        snapNav()
-      }, SCROLL_END_DELAY)
-    }
+    // Reset button parallax smoothly
+    const buttons = nav.querySelectorAll('button')
+    buttons.forEach((btn) => {
+      btn.style.transform = 'translateY(0)'
+      btn.dataset.offset = 0
+    })
   }
 
   const throttleOnScroll = () => {
@@ -96,7 +110,14 @@ function BottomNavbar() {
       requestAnimationFrame(() => {
         updateNav()
         ticking.current = false
-        scrollEndDetection()
+
+        // Scroll-end detection
+        if (!gestureActive.current) {
+          if (scrollEndTimeout.current) clearTimeout(scrollEndTimeout.current)
+          scrollEndTimeout.current = setTimeout(() => {
+            snapNav()
+          }, SCROLL_END_DELAY)
+        }
       })
       ticking.current = true
     }
@@ -105,14 +126,12 @@ function BottomNavbar() {
   useEffect(() => {
     window.addEventListener('scroll', throttleOnScroll, { passive: true })
 
-    // Gesture boundaries
     const handleTouchStart = () => {
       gestureActive.current = true
       if (scrollEndTimeout.current) clearTimeout(scrollEndTimeout.current)
     }
     const handleTouchEnd = () => {
       gestureActive.current = false
-      // Trigger snap after short delay (momentum)
       scrollEndTimeout.current = setTimeout(() => {
         snapNav()
       }, SCROLL_END_DELAY)
@@ -129,7 +148,11 @@ function BottomNavbar() {
   }, [])
 
   return (
-    <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
+    <nav
+      ref={navRef}
+      className={styles.bottomNavbar}
+      aria-label="primary navigation"
+    >
       <button type="button" aria-label="home" />
       <button type="button" aria-label="search" />
       <button type="button" aria-label="camera" />
