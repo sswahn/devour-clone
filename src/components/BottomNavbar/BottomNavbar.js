@@ -55,6 +55,9 @@ function BottomNavbar() {
     if (!nav) {
       return
     }
+    
+    const currentScrollY = window.scrollY
+    const currentTime = performance.now()
 
     // If user is interacting, force nav visible
     if (interactionLock.current) {
@@ -73,9 +76,6 @@ function BottomNavbar() {
     if (isSlowing || isReversing) {
       triggerIntent()
     }
-
-    const currentScrollY = window.scrollY
-    const currentTime = performance.now()
 
     const deltaY = currentScrollY - lastScrollY.current
     const deltaTime = currentTime - lastTime.current
