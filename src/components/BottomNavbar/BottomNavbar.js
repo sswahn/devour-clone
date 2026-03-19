@@ -39,7 +39,6 @@ function BottomNavbar() {
   }
 
   const clearAllTimeouts = () => {
-    clearTimeout(scrollEndTimeout.current)
     clearTimeout(lockTimeout.current)
     clearTimeout(intentTimeout.current)
   }
