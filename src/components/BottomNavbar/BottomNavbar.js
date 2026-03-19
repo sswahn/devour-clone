@@ -18,6 +18,7 @@ function BottomNavbar() {
   const lockTimeout = useRef(null)
   const intentActive = useRef(false)
   const intentTimeout = useRef(null)
+  const interactionLock = useRef(false)
 
   const SMOOTHING = 0.2
   const HIDE_VELOCITY = 0.6
