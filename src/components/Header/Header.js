@@ -10,6 +10,10 @@ const Header = () => {
     dispatch({ type: 'sidebar', payload: true })
   }
 
+  // remove sidebar button and functionality
+  // replace with searchbar functionality
+  // use home icon as a logo placeholder
+  
   return (
     <header className={styles.header}>
       <button onClick={handleSidebar} type="button" aria-label="open menu" aria-controls="sidebar" aria-expanded={context.sidebar}>
