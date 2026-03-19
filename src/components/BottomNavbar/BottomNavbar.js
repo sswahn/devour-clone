@@ -9,9 +9,6 @@ import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
   const navRef = useRef(null)
-  const lastScrollY = useRef(0)
-  const lastTime = useRef(performance.now())
-  const ticking = useRef(false)
   const isHidden = useRef(false)
   const velocityRef = useRef(0)
   const gestureActive = useRef(false)
@@ -21,10 +18,8 @@ function BottomNavbar() {
   const intentTimeout = useRef(null)
   const interactionLock = useRef(false)
 
-  const SMOOTHING = 0.2
   const HIDE_VELOCITY = 0.6
   const SHOW_VELOCITY = -0.3
-  const MIN_DELTA_Y = 2
   const SCROLL_END_DELAY = 120 // ms
   const SNAP_HIDE = 0.3
   const SNAP_SHOW = -0.3
