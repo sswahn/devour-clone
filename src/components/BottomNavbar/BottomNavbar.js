@@ -39,6 +39,16 @@ function BottomNavbar() {
       return
     }
 
+    // If user is interacting, force nav visible
+    if (interactionLock.current) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    
+      lastScrollY.current = currentScrollY
+      lastTime.current = currentTime
+      return
+    }
+
     const currentScrollY = window.scrollY
     const currentTime = performance.now()
 
