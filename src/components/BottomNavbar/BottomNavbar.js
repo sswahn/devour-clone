@@ -91,7 +91,7 @@ function BottomNavbar() {
 
   const snapNav = () => {
     const nav = navRef.current
-    if (!nav || window.scrollY < 80) {
+    if (!nav || window.scrollY < 80 || interactionLock.current) {
       return
     }
     if (velocityRef.current > SNAP_HIDE) {
