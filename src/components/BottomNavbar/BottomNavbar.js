@@ -74,12 +74,9 @@ function BottomNavbar() {
       setVisible(nav)
     }
   }
-  
-  const clearScrollEndTimeout = () => {
-    clearTimeout(scrollEndTimeout.current)
-  }
 
-  const setScrollEndTimeout = () => {
+  const scheduleSnap = () => {
+    clearTimeout(scrollEndTimeout.current)
     scrollEndTimeout.current = setTimeout(snapNav, SCROLL_END_DELAY)
   }
   
@@ -89,10 +86,8 @@ function BottomNavbar() {
       return
     }
     
-    // For snapNav()
-    scrollYRef.current = scrollY
+    scrollYRef.current = scrollY // For snapNav()
     
-    // Interaction priority
     if (interactionLock.current) {
       return setVisible(nav)
     }
@@ -113,31 +108,28 @@ function BottomNavbar() {
       triggerIntent()
     }
 
-    // Priority: Intent > Physics
     if (intentActive.current) {
       return setVisible(nav)
     } 
-
     if (velocity > HIDE_VELOCITY) {
       setHidden(nav)
     } else if (velocity < SHOW_VELOCITY) {
       setVisible(nav)
     }
-    
+
     if (!gestureActive.current) {
-      clearScrollEndTimeout()
-      setScrollEndTimeout()
+      scheduleSnap()
     }
   }
 
   const handlePointerDown = () => {
     gestureActive.current = true
-    clearScrollEndTimeout()
+    clearTimeout(scrollEndTimeout.current)
   }
     
   const handlePointerUp = () => {
     gestureActive.current = false
-    setScrollEndTimeout()
+    scheduleSnap()
   }
 
   useEffect(() => {
