@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
-  const nav = useRef(null)
+  const navRef = useRef(null)
   const lastScrollY = useRef(0)
   const timeout = useRef(false)
   const lastTime = useRef(performance.now())
   const isHidden = useRef(false)
 
   const updateNav = () => {
-    const nav = nav.current
+    const nav = navRef.current
     if (!nav) {
       return
     }
@@ -64,7 +64,7 @@ function BottomNavbar() {
   // break each button and their function out into components
   
   return (
-    <nav ref={nav} className={styles.bottomNavbar} aria-label="primary navigation">
+    <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
       <button type="button" aria-label="home">
       </button>
       <button type="button" aria-label="search">
