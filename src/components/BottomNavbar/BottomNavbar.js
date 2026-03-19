@@ -22,6 +22,10 @@ function BottomNavbar() {
 
     const velocity = deltaTime > 0 ? deltaY / deltaTime : 0
 
+    if (Math.abs(deltaY) < 2) {
+      return
+    }
+    
     // Always show near top
     if (currentScrollY < 80) {
       nav.classList.remove(styles.hidden)
