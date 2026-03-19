@@ -58,6 +58,8 @@ function BottomNavbar() {
     
     const currentScrollY = window.scrollY
     const currentTime = performance.now()
+    const deltaY = currentScrollY - lastScrollY.current
+    const deltaTime = currentTime - lastTime.current
 
     // If user is interacting, force nav visible
     if (interactionLock.current) {
@@ -68,9 +70,6 @@ function BottomNavbar() {
       lastTime.current = currentTime
       return
     }
-
-    const deltaY = currentScrollY - lastScrollY.current
-    const deltaTime = currentTime - lastTime.current
 
     // Always show near top
     if (currentScrollY < 80) {
