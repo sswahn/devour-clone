@@ -22,16 +22,21 @@ function update() {
   const deltaTime = Math.max(time - previousTime, 1) 
   const raw = deltaY / deltaTime
   velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
-  const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
   const acceleration = (velocity - previousVelocity) / deltaTime
   previousVelocity = velocity
-
+  const isScrolling = Math.abs(deltaY) > 0.5
+  const isIdle = Math.abs(velocity) < IDLE_THRESHOLD
+  const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
+  
   notify({
     scrollY,
     deltaY,
     velocity,
+    acceleration,
     direction,
-    time,
+    isScrolling,
+    isIdle,
+    time
   })
 
   previousScrollY = scrollY
