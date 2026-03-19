@@ -25,6 +25,7 @@ function Main() {
   return (
     <main className={styles.main}>
       <Feed />
+      <div style={{height: '2000px', border:'1px dashed red'}}>test div</div>
       <BottomNavbar />
 
       <Suspense fallback={<LoadingSpinner />}>
