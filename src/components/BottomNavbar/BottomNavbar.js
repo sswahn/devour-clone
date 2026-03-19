@@ -167,7 +167,7 @@ function BottomNavbar() {
         <BellIcon />  
       </button>
       <button type="button" aria-label="profile">
-        <UserIcon />  
+        <UserIcon size="1em" />  
       </button>
     </nav>
   )
