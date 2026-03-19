@@ -3,6 +3,7 @@ import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Feed from '../../features/Feed/Feed'
 import Portal from '../Portal/Portal'
+import BottomNavbar from '../../components/BottomNavbar/BottomNavbar'
 const Sidebar = lazy(() => import('../../components/Sidebar/Sidebar'))
 const Drawer = lazy(() => import('../../components/Drawer/Drawer'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
@@ -23,8 +24,8 @@ function Main() {
   
   return (
     <main className={styles.main}>
-      
       <Feed />
+      <BottomNavbar />
 
       <Suspense fallback={<LoadingSpinner />}>
         {context.camera && <Camera />}
