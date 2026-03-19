@@ -51,7 +51,7 @@ function BottomNavbar() {
     }, 150) // short buffer
   }
   
-  const updateNav = () => {
+  const updateNav = ({ scrollY, velocity, time }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -73,7 +73,7 @@ function BottomNavbar() {
     }
 
     // Always show near top
-    if (currentScrollY < 80) {
+    if (scrollY < 80) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
       velocityRef.current = 0
@@ -87,11 +87,6 @@ function BottomNavbar() {
       lastTime.current = currentTime
       return
     }
-
-    // Compute smoothed velocity
-    const rawVelocity = deltaTime > 16 ? deltaY / deltaTime : 0
-    const velocity = velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
-    velocityRef.current = velocity
 
     // Detect "user is slowing down / reversing"
     const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
