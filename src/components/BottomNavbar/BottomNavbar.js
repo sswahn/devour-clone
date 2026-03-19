@@ -25,6 +25,7 @@ function BottomNavbar() {
     // Always show near top
     if (currentScrollY < 80) {
       nav.classList.remove(styles.hidden)
+      isHidden.current = false
     } 
     else if (!isHidden.current && velocity > 0.5) {
       nav.classList.add(styles.hidden)
