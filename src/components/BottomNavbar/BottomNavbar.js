@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
-  const ref = useRef()
+  const navRef = useRef()
   const lastScrollY = useRef(0)
+  const timeout = useRef(false)
 
   const onScroll = () => {
-    if (!ref.current) {
+    if (!navRef.current) {
       return
     }
     
@@ -14,7 +15,7 @@ function BottomNavbar() {
     
     // always show at top
     if (currentScrollY < 80) {
-      ref.current.classList.remove(styles.hidden)
+      navRef.current.classList.remove(styles.hidden)
       lastScrollY.current = currentScrollY
       return
     }
@@ -22,25 +23,35 @@ function BottomNavbar() {
     const currentScrollY = window.scrollY
   
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      ref.current.classList.add(styles.hidden) // scrolling down
+      navRef.current.classList.add(styles.hidden) // scrolling down
     } else if (currentScrollY < lastScrollY.current - 10) {
-      ref.current.classList.remove(styles.hidden) // scrolling up
+      navRef.current.classList.remove(styles.hidden) // scrolling up
     }
     
     lastScrollY = currentScrollY
   }
 
+  const throttleOnScroll = () => {
+    if (!timeout.current) {
+      window.requestAnimationFrame(() => {
+        onScroll()
+        timeout.current = false
+      })
+      timeout.current = true
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('scroll', throttleOnScroll, { passive: true })
     return () => {
-      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', throttleOnScroll)
     }
   }, [])
   
   // break each button and their function out into components
   
   return (
-    <nav ref={ref} className={styles.bottomNavbar} aria-label="primary navigation">
+    <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
       <button type="button" aria-label="home">
       </button>
       <button type="button" aria-label="search">
