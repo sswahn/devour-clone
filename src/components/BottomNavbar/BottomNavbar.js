@@ -76,9 +76,7 @@ function BottomNavbar() {
   }
   
   const clearScrollEndTimeout = () => {
-    if (scrollEndTimeout.current) {
-      clearTimeout(scrollEndTimeout.current)
-    }
+    clearTimeout(scrollEndTimeout.current)
   }
 
   const setScrollEndTimeout = () => {
