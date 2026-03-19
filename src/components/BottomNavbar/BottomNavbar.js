@@ -5,28 +5,37 @@ function BottomNavbar() {
   const navRef = useRef()
   const lastScrollYRef = useRef(0)
   const timeoutRef = useRef(false)
+  const lastTime = useRef(performance.now())
+  const HIDE_VELOCITY = 0.5
+  const SHOW_VELOCITY = -0.5
 
   const onScroll = () => {
-    if (!navRef.current) {
+    const nav = navRef.current
+    if (!nav) {
       return
     }
     
     const currentScrollY = window.scrollY
-    
-    // always show at top
+    const currentTime = performance.now()
+
+    const deltaY = currentScrollY - lastScrollY.current
+    const deltaTime = currentTime - lastTime.current
+
+    const velocity = deltaY / deltaTime
+
+    // Always show near top
     if (currentScrollY < 80) {
-      navRef.current.classList.remove(styles.hidden)
-      lastScrollYRef.current = currentScrollY
-      return
+      nav.classList.remove(styles.hidden)
+    } 
+    else if (velocity > HIDE_VELOCITY) {
+      nav.classList.add(styles.hidden) // fast scroll down
+    } 
+    else if (velocity < SHOW_VELOCITY) {
+      nav.classList.remove(styles.hidden) // fast scroll up
     }
-  
-    if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
-      navRef.current.classList.add(styles.hidden) // scrolling down
-    } else if (currentScrollY < lastScrollYRef.current - 10) {
-      navRef.current.classList.remove(styles.hidden) // scrolling up
-    }
-    
-    lastScrollYRef.current = currentScrollY
+
+    lastScrollY.current = currentScrollY
+    lastTime.current = currentTime
   }
 
   const throttleOnScroll = () => {
