@@ -16,7 +16,7 @@ function update() {
   const currentScrollY = window.scrollY
   const currentTime = performance.now()
   const deltaY = currentScrollY - lastScrollY
-  const deltaTime = currentTime - lastTime
+  const deltaTime = Math.max(currentTime - lastTime, 1) 
   const raw = deltaTime > 16 ? deltaY / deltaTime : 0
   velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
   const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
