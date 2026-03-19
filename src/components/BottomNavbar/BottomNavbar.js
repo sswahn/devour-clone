@@ -75,16 +75,18 @@ function BottomNavbar() {
     if (isSlowing || isReversing) {
       triggerIntent()
     }
-  
-    // Update velocity AFTER using prev
-    velocityRef.current = velocity
-    scrollYRef.current = scrollY
-  
+
     // Priority: Intent > Physics
     if (intentActive.current) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
+      return
     } 
+  
+    // Update velocity AFTER using prev
+    velocityRef.current = velocity
+    scrollYRef.current = scrollY
+
     else if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
