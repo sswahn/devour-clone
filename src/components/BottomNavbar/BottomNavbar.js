@@ -70,12 +70,13 @@ function BottomNavbar() {
       velocityRef.current = 0
       return setVisible(nav)
     }
-  
-    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
-    const isReversing = velocity < 0 && velocityRef.current > 0
 
+    const prevVelocity = velocityRef.current
     velocityRef.current = velocity
     scrollYRef.current = scrollY
+  
+    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
+    const isReversing = velocity < 0 && prevVelocity > 0
 
     if (isSlowing || isReversing) {
       triggerIntent()
