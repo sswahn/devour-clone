@@ -15,6 +15,7 @@ function BottomNavbar() {
   const velocityRef = useRef(0)
   const gestureActive = useRef(false)
   const scrollEndTimeout = useRef(null)
+  const interactionLock = useRef(false)
 
   const SMOOTHING = 0.2
   const HIDE_VELOCITY = 0.6
@@ -23,6 +24,14 @@ function BottomNavbar() {
   const SCROLL_END_DELAY = 120 // ms
   const SNAP_HIDE = 0.3
   const SNAP_SHOW = -0.3
+  const INTERACTION_LOCK_MS = 300
+
+  const lockInteraction = () => {
+    interactionLock.current = true
+    setTimeout(() => {
+      interactionLock.current = false
+    }, INTERACTION_LOCK_MS)
+  }
 
   const updateNav = () => {
     const nav = navRef.current
