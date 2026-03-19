@@ -1,4 +1,9 @@
 import { useEffect, useRef } from 'react'
+import HomeIcon from '../Icons/HomeIcon/HomeIcon'
+import SearchIcon from '../Icons/SearchIcon/SearchIcon'
+import CameraIcon from '../Icons/CameraIcon/CameraIcon'
+import BellIcon from '../Icons/BellIcon/BellIcon'
+import UserIcon from '../Icons/UserIcon/UserIcon'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
@@ -148,16 +153,22 @@ function BottomNavbar() {
   }, [])
 
   return (
-    <nav
-      ref={navRef}
-      className={styles.bottomNavbar}
-      aria-label="primary navigation"
-    >
-      <button type="button" aria-label="home" />
-      <button type="button" aria-label="search" />
-      <button type="button" aria-label="camera" />
-      <button type="button" aria-label="notifications" />
-      <button type="button" aria-label="profile" />
+    <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
+      <button type="button" aria-label="home">
+        <HomeIcon />  
+      <button/>
+      <button type="button" aria-label="search">
+        <SearchIcon />  
+      </button>
+      <button type="button" aria-label="camera">
+        <CameraIcon />  
+      </button>
+      <button type="button" aria-label="notifications">
+        <BellIcon />  
+      </button>
+      <button type="button" aria-label="profile">
+        <UserIcon />  
+      </button>
     </nav>
   )
 }
