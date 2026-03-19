@@ -2,8 +2,8 @@
 
 let subscribers = new Set()
 let started = false // Start engine once
-let lastScrollY = window.scrollY
-let lastTime = performance.now()
+let previousScrollY = window.scrollY
+let previousTime = performance.now()
 let velocity = 0
 let ticking = false
 const SMOOTHING = 0.2
@@ -13,24 +13,24 @@ function notify(data) {
 }
 
 function update() {
-  const currentScrollY = window.scrollY
-  const currentTime = performance.now()
-  const deltaY = currentScrollY - lastScrollY
-  const deltaTime = Math.max(currentTime - lastTime, 1) 
+  const scrollY = window.scrollY
+  const time = performance.now()
+  const deltaY = scrollY - previousScrollY
+  const deltaTime = Math.max(time - previousTime, 1) 
   const raw = deltaY / deltaTime
   velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
   const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
 
   notify({
-    scrollY: currentScrollY,
+    scrollY,
     deltaY,
     velocity,
     direction,
-    time: currentTime,
+    time,
   })
 
-  lastScrollY = currentScrollY
-  lastTime = currentTime
+  previousScrollY = scrollY
+  previousTime = time
 }
 
 function onScroll() {
