@@ -17,6 +17,7 @@ function BottomNavbar() {
   const scrollEndTimeout = useRef(null)
   const lockTimeout = useRef(null)
   const intentActive = useRef(false)
+  const intentTimeout = useRef(null)
 
   const SMOOTHING = 0.2
   const HIDE_VELOCITY = 0.6
@@ -38,6 +39,16 @@ function BottomNavbar() {
     }, INTERACTION_LOCK_MS)
   }
 
+  const triggerIntent = () => {
+    intentActive.current = true
+    if (intentTimeout.current) {
+      clearTimeout(intentTimeout.current)
+    }
+    intentTimeout.current = setTimeout(() => {
+      intentActive.current = false
+    }, 150) // short buffer
+  }
+  
   const updateNav = () => {
     const nav = navRef.current
     if (!nav) {
@@ -59,9 +70,7 @@ function BottomNavbar() {
     const isReversing = velocity < 0 && velocityRef.current > 0
     
     if (isSlowing || isReversing) {
-      intentActive.current = true
-    } else {
-      intentActive.current = false
+      triggerIntent()
     }
 
     const currentScrollY = window.scrollY
