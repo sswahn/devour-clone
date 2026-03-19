@@ -56,9 +56,6 @@ function BottomNavbar() {
     if (!nav) {
       return
     }
-    
-    const deltaY = scrollY - lastScrollY.current
-    const deltaTime = time - lastTime.current
 
     // If user is interacting, force nav visible
     if (interactionLock.current) {
@@ -79,12 +76,11 @@ function BottomNavbar() {
       return
     }
 
-    if (Math.abs(deltaY) < MIN_DELTA_Y) {
-      lastScrollY.current = scrollY
-      lastTime.current = time
+    // what is this doing?
+    if (Math.abs(velocity) < 0.01) {
       return
     }
-
+    
     // Detect "user is slowing down / reversing"
     const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
     const isReversing = velocity < 0 && velocityRef.current > 0
