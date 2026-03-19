@@ -99,20 +99,22 @@ function BottomNavbar() {
     }
   }
 
+  const handleTouchStart = () => {
+    gestureActive.current = true
+    if (scrollEndTimeout.current) {
+      clearTimeout(scrollEndTimeout.current)
+    }
+  }
+    
+  const handleTouchEnd = () => {
+    gestureActive.current = false
+    scrollEndTimeout.current = setTimeout(() => {
+      snapNav()
+    }, SCROLL_END_DELAY)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', throttleOnScroll, { passive: true })
-
-    const handleTouchStart = () => {
-      gestureActive.current = true
-      if (scrollEndTimeout.current) clearTimeout(scrollEndTimeout.current)
-    }
-    const handleTouchEnd = () => {
-      gestureActive.current = false
-      scrollEndTimeout.current = setTimeout(() => {
-        snapNav()
-      }, SCROLL_END_DELAY)
-    }
-
     window.addEventListener('touchstart', handleTouchStart, { passive: true })
     window.addEventListener('touchend', handleTouchEnd, { passive: true })
 
