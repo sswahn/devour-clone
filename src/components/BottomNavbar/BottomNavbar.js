@@ -164,7 +164,7 @@ function BottomNavbar() {
   }
 
   useEffect(() => {
-    const unsubscribe = scroll.subscribe(handleScroll)
+    const unsubscribe = scroll.subscribe(updateNav)
     window.addEventListener('pointerdown', handlePointerDown, { passive: true })
     window.addEventListener('pointerup', handlePointerUp, { passive: true })
     return () => {
