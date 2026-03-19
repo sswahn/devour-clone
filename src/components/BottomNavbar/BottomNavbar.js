@@ -11,7 +11,7 @@ function BottomNavbar() {
       return
     }
     
-    lastScrollYRef.current = window.scrollY
+    const currentScrollY = window.scrollY
     
     // always show at top
     if (currentScrollY < 80) {
@@ -19,8 +19,6 @@ function BottomNavbar() {
       lastScrollYRef.current = currentScrollY
       return
     }
-    
-    const currentScrollY = window.scrollY
   
     if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
       navRef.current.classList.add(styles.hidden) // scrolling down
