@@ -91,7 +91,7 @@ function BottomNavbar() {
     if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
-    } else {
+    } else if (isHidden.current && velocity < SHOW_VELOCITY) {
       setVisible(nav)
     }
     
