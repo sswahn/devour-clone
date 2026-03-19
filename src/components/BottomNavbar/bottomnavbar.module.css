@@ -5,26 +5,26 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px; /* adjust to your UI */
+  height: 60px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: #fff;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* fade + slide */
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
   opacity: 1;
 }
 
 .bottomNavbar.hidden {
-  transform: translateY(100%); /* slide down out of view */
-  opacity: 0;                  /* fade out */
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .bottomNavbar:not(.hidden) {
-  transform: translateY(0);    /* visible */
-  opacity: 1;                  /* fully visible */
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .bottomNavbar button {
@@ -32,5 +32,6 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 24px; /* adjust icon size */
+  font-size: 24px;
+  transition: transform 0.3s ease; /* smooth parallax */
 }
