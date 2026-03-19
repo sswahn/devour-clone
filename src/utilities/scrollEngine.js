@@ -9,7 +9,9 @@ let ticking = false
 const SMOOTHING = 0.2
 
 function notify(data) {
-  subscribers.forEach((fn) => fn(data))
+  for (const fn of subscribers) {
+    fn(data)
+  }
 }
 
 function update() {
