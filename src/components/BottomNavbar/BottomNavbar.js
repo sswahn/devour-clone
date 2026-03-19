@@ -21,6 +21,8 @@ function BottomNavbar() {
     const deltaTime = currentTime - lastTime.current
 
     if (Math.abs(deltaY) < 2) {
+      lastScrollY.current = currentScrollY
+      lastTime.current = currentTime
       return
     }
 
