@@ -27,6 +27,10 @@ function BottomNavbar() {
   const INTERACTION_LOCK_MS = 300
   const INTENT_VELOCITY = 0.1
 
+  const timoutSetter = ref => {
+    ref.current = true
+  }
+  
   const lockInteraction = () => {
     interactionLock.current = true
     if (lockTimeout.current) {
