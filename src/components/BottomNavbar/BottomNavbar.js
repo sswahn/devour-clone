@@ -3,41 +3,41 @@ import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
   const navRef = useRef()
-  const lastScrollY = useRef(0)
-  const timeout = useRef(false)
+  const lastScrollYRef = useRef(0)
+  const timeoutRef = useRef(false)
 
   const onScroll = () => {
     if (!navRef.current) {
       return
     }
     
-    let lastScrollY = window.scrollY
+    lastScrollYRef.current = window.scrollY
     
     // always show at top
     if (currentScrollY < 80) {
       navRef.current.classList.remove(styles.hidden)
-      lastScrollY.current = currentScrollY
+      lastScrollYRef.current = currentScrollY
       return
     }
     
     const currentScrollY = window.scrollY
   
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
       navRef.current.classList.add(styles.hidden) // scrolling down
-    } else if (currentScrollY < lastScrollY.current - 10) {
+    } else if (currentScrollY < lastScrollYRef.current - 10) {
       navRef.current.classList.remove(styles.hidden) // scrolling up
     }
     
-    lastScrollY = currentScrollY
+    lastScrollYRef.current = currentScrollY
   }
 
   const throttleOnScroll = () => {
-    if (!timeout.current) {
+    if (!timeoutRef.current) {
       window.requestAnimationFrame(() => {
         onScroll()
-        timeout.current = false
+        timeoutRef.current = false
       })
-      timeout.current = true
+      timeoutRef.current = true
     }
   }
 
