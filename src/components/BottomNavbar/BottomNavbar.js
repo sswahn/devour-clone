@@ -7,6 +7,7 @@ function BottomNavbar() {
   const timeout = useRef(false)
   const lastTime = useRef(performance.now())
   const isHidden = useRef(false)
+  const velocityRef = useRef(0)
 
   const updateNav = () => {
     const nav = navRef.current
@@ -38,7 +39,11 @@ function BottomNavbar() {
     }
 
     // Frame normalization
-    const velocity = deltaTime > 16 ? deltaY / deltaTime : 0
+    const rawVelocity = deltaTime > 16 ? deltaY / deltaTime : 0
+    // Smooth velocity
+    const SMOOTHING = 0.2
+    const velocity = velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
+    velocityRef.current = velocity
     
     // Velocity-based intent & Hysteresis (0.6 / -0.3 asymmetry)
     else if (!isHidden.current && velocity > 0.6) {
