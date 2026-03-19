@@ -18,7 +18,7 @@ function update() {
   const deltaY = currentScrollY - lastScrollY
   const deltaTime = currentTime - lastTime
   const raw = deltaTime > 16 ? deltaY / deltaTime : 0
-  velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
+  velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
   const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
 
   notify({
