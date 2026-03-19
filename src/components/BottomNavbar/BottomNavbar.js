@@ -3,12 +3,16 @@ import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
   const ref = useRef()
+  const lastScrollY = useRef(0)
 
   const onScroll = () => {
     if (!ref.current) {
       return
     }
+    
     let lastScrollY = window.scrollY
+    
+    // always show at top
     if (currentScrollY < 80) {
       ref.current.classList.remove(styles.hidden)
       lastScrollY.current = currentScrollY
@@ -19,11 +23,11 @@ function BottomNavbar() {
   
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
       ref.current.classList.add(styles.hidden) // scrolling down
-    } else {
+    } else if (currentScrollY < lastScrollY.current - 10) {
       ref.current.classList.remove(styles.hidden) // scrolling up
     }
+    
     lastScrollY = currentScrollY
-
   }
 
   useEffect(() => {
