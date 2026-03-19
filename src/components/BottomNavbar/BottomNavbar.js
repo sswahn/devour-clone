@@ -24,7 +24,9 @@ function BottomNavbar() {
 
   const updateNav = () => {
     const nav = navRef.current
-    if (!nav) return
+    if (!nav) {
+      return
+    }
 
     const currentScrollY = window.scrollY
     const currentTime = performance.now()
@@ -39,7 +41,6 @@ function BottomNavbar() {
       velocityRef.current = 0
       lastScrollY.current = currentScrollY
       lastTime.current = currentTime
-      resetButtonParallax()
       return
     }
 
@@ -51,8 +52,7 @@ function BottomNavbar() {
 
     // Compute smoothed velocity
     const rawVelocity = deltaTime > 16 ? deltaY / deltaTime : 0
-    const velocity =
-      velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
+    const velocity = velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
     velocityRef.current = velocity
 
     // Hide/show nav based on velocity
@@ -70,7 +70,9 @@ function BottomNavbar() {
 
   const snapNav = () => {
     const nav = navRef.current
-    if (!nav) return
+    if (!nav) {
+      return
+    }
 
     if (velocityRef.current > 0.2) {
       nav.classList.add(styles.hidden)
@@ -89,7 +91,9 @@ function BottomNavbar() {
 
         // Scroll-end detection
         if (!gestureActive.current) {
-          if (scrollEndTimeout.current) clearTimeout(scrollEndTimeout.current)
+          if (scrollEndTimeout.current) {
+            clearTimeout(scrollEndTimeout.current)
+          }
           scrollEndTimeout.current = setTimeout(() => {
             snapNav()
           }, SCROLL_END_DELAY)
