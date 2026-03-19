@@ -8,11 +8,6 @@ let velocity = 0
 let ticking = false
 const SMOOTHING = 0.2
 
-function computeVelocity(deltaY, deltaTime, prevVelocity) {
-  const raw = deltaTime > 16 ? deltaY / deltaTime : 0
-  return prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
-}
-
 function notify(data) {
   subscribers.forEach((fn) => fn(data))
 }
@@ -20,12 +15,10 @@ function notify(data) {
 function update() {
   const currentScrollY = window.scrollY
   const currentTime = performance.now()
-
   const deltaY = currentScrollY - lastScrollY
   const deltaTime = currentTime - lastTime
-
-  velocity = computeVelocity(deltaY, deltaTime, velocity)
-
+  const raw = deltaTime > 16 ? deltaY / deltaTime : 0
+  velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
   const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
 
   notify({
