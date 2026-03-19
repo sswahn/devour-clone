@@ -91,6 +91,12 @@ function BottomNavbar() {
     const velocity = velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
     velocityRef.current = velocity
 
+    // If intent detected, favor showing nav
+    if (intentActive.current) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    }
+
     // Hide/show nav based on velocity
     if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
