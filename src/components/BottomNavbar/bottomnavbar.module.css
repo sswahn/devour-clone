@@ -1,0 +1,32 @@
+/* Bottom Mobile Navbar */
+
+.bottomNavbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-top: 1px solid #ddd;
+
+  /* Smooth animation */
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+
+  /* iOS safe area */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottomNavbar button {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 22px;
+}
+
