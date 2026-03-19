@@ -107,26 +107,6 @@ function BottomNavbar() {
     }
   }
 
-  const throttleOnScroll = () => {
-    if (!ticking.current) {
-      requestAnimationFrame(() => {
-        updateNav()
-        ticking.current = false
-
-        // Scroll-end detection
-        if (!gestureActive.current) {
-          if (scrollEndTimeout.current) {
-            clearTimeout(scrollEndTimeout.current)
-          }
-          scrollEndTimeout.current = setTimeout(() => {
-            snapNav()
-          }, SCROLL_END_DELAY)
-        }
-      })
-      ticking.current = true
-    }
-  }
-
   const handlePointerDown = () => {
     gestureActive.current = true
     if (scrollEndTimeout.current) {
