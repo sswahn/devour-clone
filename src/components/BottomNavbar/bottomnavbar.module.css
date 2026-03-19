@@ -22,6 +22,10 @@
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+.hidden {
+  transform: translateY(100%);
+}
+
 .bottomNavbar button {
   flex: 1;
   height: 100%;
