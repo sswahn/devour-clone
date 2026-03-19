@@ -56,9 +56,6 @@ function onScroll() {
 let started = false
 
 function start() {
-  if (started) {
-    return
-  }
   window.addEventListener('scroll', onScroll, { passive: true })
   started = true
 }
