@@ -140,6 +140,12 @@ function BottomNavbar() {
     setScrollEndTimeout()
   }
 
+  const clearAllTimeouts = () => {
+    clearTimeout(scrollEndTimeout.current)
+    clearTimeout(lockTimeout.current)
+    clearTimeout(intentTimeout.current)
+  }
+
   useEffect(() => {
     const unsubscribe = scroll.subscribe(updateNav)
     window.addEventListener('pointerdown', handlePointerDown, { passive: true })
@@ -148,9 +154,7 @@ function BottomNavbar() {
       unsubscribe()
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('pointerup', handlePointerUp)
-      clearTimeout(scrollEndTimeout.current)
-      clearTimeout(lockTimeout.current)
-      clearTimeout(intentTimeout.current)
+      clearAllTimeouts()
     }
   }, [])
 
