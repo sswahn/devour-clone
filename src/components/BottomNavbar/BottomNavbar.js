@@ -6,10 +6,8 @@ function BottomNavbar() {
   const lastScrollYRef = useRef(0)
   const timeoutRef = useRef(false)
   const lastTime = useRef(performance.now())
-  const HIDE_VELOCITY = 0.5
-  const SHOW_VELOCITY = -0.5
 
-  const onScroll = () => {
+  const updateNav = () => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -27,11 +25,11 @@ function BottomNavbar() {
     if (currentScrollY < 80) {
       nav.classList.remove(styles.hidden)
     } 
-    else if (velocity > HIDE_VELOCITY) {
-      nav.classList.add(styles.hidden) // fast scroll down
+    else if (velocity > 0.5) {
+      nav.classList.add(styles.hidden) // scroll down
     } 
-    else if (velocity < SHOW_VELOCITY) {
-      nav.classList.remove(styles.hidden) // fast scroll up
+    else if (velocity < -0.5) {
+      nav.classList.remove(styles.hidden) // scroll up
     }
 
     lastScrollY.current = currentScrollY
@@ -41,7 +39,7 @@ function BottomNavbar() {
   const throttleOnScroll = () => {
     if (!timeoutRef.current) {
       window.requestAnimationFrame(() => {
-        onScroll()
+        updateNav()
         timeoutRef.current = false
       })
       timeoutRef.current = true
