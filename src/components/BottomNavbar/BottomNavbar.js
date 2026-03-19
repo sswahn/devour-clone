@@ -95,6 +95,15 @@ function BottomNavbar() {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
+    
+    if (!gestureActive.current) {
+      if (scrollEndTimeout.current) {
+        clearTimeout(scrollEndTimeout.current)
+      }
+      scrollEndTimeout.current = setTimeout(() => {
+        snapNav()
+      }, SCROLL_END_DELAY)
+    }
   }
 
   const snapNav = () => {
