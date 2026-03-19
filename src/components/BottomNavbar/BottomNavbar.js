@@ -144,19 +144,19 @@ function BottomNavbar() {
 
   return (
     <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
-      <button type="button" aria-label="home">
+      <button onPointerDown={lockInteraction} type="button" aria-label="home">
         <HomeIcon />  
       </button>
-      <button type="button" aria-label="search">
+      <button onPointerDown={lockInteraction} type="button" aria-label="search">
         <SearchIcon size="1em" />  
       </button>
-      <button type="button" aria-label="camera">
+      <button onPointerDown={lockInteraction} type="button" aria-label="camera">
         <CameraIcon />  
       </button>
-      <button type="button" aria-label="notifications">
+      <button onPointerDown={lockInteraction} type="button" aria-label="notifications">
         <BellIcon />  
       </button>
-      <button type="button" aria-label="profile">
+      <button onPointerDown={lockInteraction} type="button" aria-label="profile">
         <UserIcon size="1em" />  
       </button>
     </nav>
