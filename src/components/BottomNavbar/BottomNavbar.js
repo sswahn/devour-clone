@@ -26,6 +26,20 @@ function BottomNavbar() {
   const SNAP_SHOW = -0.3
   const INTERACTION_LOCK_MS = 300
   const INTENT_VELOCITY = 0.1
+
+  const setHidden = nav => {
+    if (!isHidden.current) {
+      nav.classList.add(styles.hidden)
+      isHidden.current = true
+    }
+  }
+
+  const setVisible = nav => {
+    if (isHidden.current) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    }
+  }
   
   const lockInteraction = () => {
     interactionLock.current = true
@@ -45,20 +59,6 @@ function BottomNavbar() {
     intentTimeout.current = setTimeout(() => {
       intentActive.current = false
     }, 150) // short buffer
-  }
-
-  const setHidden = nav => {
-    if (!isHidden.current) {
-      nav.classList.add(styles.hidden)
-      isHidden.current = true
-    }
-  }
-
-  const setVisible = nav => {
-    if (isHidden.current) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
-    }
   }
 
   const snapNav = () => {
