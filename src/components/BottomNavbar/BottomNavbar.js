@@ -6,6 +6,7 @@ function BottomNavbar() {
   const lastScrollYRef = useRef(0)
   const timeoutRef = useRef(false)
   const lastTime = useRef(performance.now())
+  const isHidden = useRef(false)
 
   const updateNav = () => {
     const nav = navRef.current
@@ -25,11 +26,13 @@ function BottomNavbar() {
     if (currentScrollY < 80) {
       nav.classList.remove(styles.hidden)
     } 
-    else if (velocity > 0.5) {
-      nav.classList.add(styles.hidden) // scroll down
-    } 
-    else if (velocity < -0.5) {
-      nav.classList.remove(styles.hidden) // scroll up
+    else if (!isHidden.current && velocity > 0.5) {
+      nav.classList.add(styles.hidden)
+      isHidden.current = true
+    }
+    else if (isHidden.current && velocity < -0.5) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
     }
 
     lastScrollY.current = currentScrollY
