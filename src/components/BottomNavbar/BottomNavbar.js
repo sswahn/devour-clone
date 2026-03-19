@@ -60,7 +60,7 @@ function BottomNavbar() {
     clearTimeout(intentTimeout.current)
     intentTimeout.current = setTimeout(() => {
       intentActive.current = false
-    }, 150) // short buffer
+    }, 150)
   }
 
   const snapNav = () => {
