@@ -154,9 +154,10 @@ function BottomNavbar() {
       unsubscribe()
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('pointerup', handlePointerUp)
-      if (scrollEndTimeout.current) {
-        clearTimeout(scrollEndTimeout.current)
-      }
+      clearTimeout(scrollEndTimeout.current)
+      clearTimeout(scrollEndTimeout.current)
+      clearTimeout(lockTimeout.current)
+      clearTimeout(intentTimeout.current)
     }
   }, [])
 
