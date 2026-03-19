@@ -97,7 +97,10 @@ const scroll = {
       scrollY: previousScrollY,
       deltaY: 0,
       velocity,
+      acceleration: 0,
       direction: 'idle',
+      isScrolling: false,
+      isIdle: true,
       time: previousTime,
     })
     
