@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
-  const nav = useRef()
+  const nav = useRef(null)
   const lastScrollY = useRef(0)
   const timeout = useRef(false)
   const lastTime = useRef(performance.now())
