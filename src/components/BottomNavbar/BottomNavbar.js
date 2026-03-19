@@ -60,6 +60,9 @@ function BottomNavbar() {
       return
     }
     
+    // For snapNav()
+    scrollYRef.current = scrollY
+    
     // Interaction priority
     if (interactionLock.current) {
       return setVisible(nav)
@@ -73,7 +76,6 @@ function BottomNavbar() {
 
     const prevVelocity = velocityRef.current
     velocityRef.current = velocity
-    scrollYRef.current = scrollY
   
     const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
     const isReversing = velocity < 0 && prevVelocity > 0
