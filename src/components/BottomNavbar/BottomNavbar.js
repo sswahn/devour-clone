@@ -115,8 +115,7 @@ function BottomNavbar() {
       nav.classList.add(styles.hidden)
       isHidden.current = true
     } else if (velocityRef.current < SNAP_SHOW) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
+      setVisible(nav)
     }
   }
 
