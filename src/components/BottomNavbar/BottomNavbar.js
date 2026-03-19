@@ -4,7 +4,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const lastScrollY = useRef(0)
-  const timeout = useRef(false)
+  const ticking = useRef(false)
   const lastTime = useRef(performance.now())
   const isHidden = useRef(false)
   const velocityRef = useRef(0)
@@ -60,12 +60,12 @@ function BottomNavbar() {
   }
 
   const throttleOnScroll = () => {
-    if (!timeout.current) {
+    if (!ticking.current) {
       window.requestAnimationFrame(() => {
         updateNav()
-        timeout.current = false
+        ticking.current = false
       })
-      timeout.current = true
+      ticking.current = true
     }
   }
 
