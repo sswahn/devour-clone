@@ -47,6 +47,13 @@ function BottomNavbar() {
     }, 150) // short buffer
   }
 
+  const setHidden = nav => {
+    if (!isHidden.current) {
+      nav.classList.add(styles.hidden)
+      isHidden.current = true
+    }
+  }
+
   const setVisible = nav => {
     if (isHidden.current) {
       nav.classList.remove(styles.hidden)
@@ -89,10 +96,9 @@ function BottomNavbar() {
       return setVisible(nav)
     } 
 
-    if (!isHidden.current && velocity > HIDE_VELOCITY) {
-      nav.classList.add(styles.hidden)
-      isHidden.current = true
-    } else if (isHidden.current && velocity < SHOW_VELOCITY) {
+    if (velocity > HIDE_VELOCITY) {
+      setHidden(nav)
+    } else if (velocity < SHOW_VELOCITY) {
       setVisible(nav)
     }
     
@@ -112,8 +118,7 @@ function BottomNavbar() {
       return
     }
     if (velocityRef.current > SNAP_HIDE) {
-      nav.classList.add(styles.hidden)
-      isHidden.current = true
+      setHidden(nav)
     } else if (velocityRef.current < SNAP_SHOW) {
       setVisible(nav)
     }
