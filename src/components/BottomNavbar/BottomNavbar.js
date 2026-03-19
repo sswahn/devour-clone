@@ -130,7 +130,6 @@ function BottomNavbar() {
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('pointerup', handlePointerUp)
       clearTimeout(scrollEndTimeout.current)
-      clearTimeout(scrollEndTimeout.current)
       clearTimeout(lockTimeout.current)
       clearTimeout(intentTimeout.current)
     }
