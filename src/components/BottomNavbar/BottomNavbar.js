@@ -21,6 +21,8 @@ function BottomNavbar() {
   const SHOW_VELOCITY = -0.3
   const MIN_DELTA_Y = 2
   const SCROLL_END_DELAY = 120 // ms
+  const SNAP_HIDE = 0.3
+  const SNAP_SHOW = -0.3
 
   const updateNav = () => {
     const nav = navRef.current
@@ -74,10 +76,10 @@ function BottomNavbar() {
       return
     }
 
-    if (velocityRef.current > 0.2) {
+    if (velocityRef.current > SNAP_HIDE) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
-    } else if (velocityRef.current < -0.2) {
+    } else if (velocityRef.current < SNAP_SHOW) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
