@@ -158,7 +158,7 @@ function BottomNavbar() {
         <HomeIcon />  
       </button>
       <button type="button" aria-label="search">
-        <SearchIcon />  
+        <SearchIcon size="1em" />  
       </button>
       <button type="button" aria-label="camera">
         <CameraIcon />  
