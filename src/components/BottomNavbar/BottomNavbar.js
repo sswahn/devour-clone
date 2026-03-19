@@ -126,6 +126,9 @@ function BottomNavbar() {
       window.removeEventListener('scroll', throttleOnScroll)
       window.removeEventListener('touchstart', handleTouchStart)
       window.removeEventListener('touchend', handleTouchEnd)
+      if (scrollEndTimeout.current) {
+        clearTimeout(scrollEndTimeout.current)
+      }
     }
   }, [])
 
