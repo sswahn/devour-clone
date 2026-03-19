@@ -4,6 +4,7 @@ let subscribers = new Set()
 let started = false // Start engine once
 let previousScrollY = window.scrollY
 let previousTime = performance.now()
+let previousVelocity = 0
 let velocity = 0
 let ticking = false
 const SMOOTHING = 0.2
@@ -22,6 +23,8 @@ function update() {
   const raw = deltaY / deltaTime
   velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
   const direction = velocity > 0 ? 'down' : velocity < 0 ? 'up' : 'idle'
+  const acceleration = (velocity - previousVelocity) / deltaTime
+  previousVelocity = velocity
 
   notify({
     scrollY,
