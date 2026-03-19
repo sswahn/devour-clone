@@ -16,6 +16,7 @@ function BottomNavbar() {
   const gestureActive = useRef(false)
   const scrollEndTimeout = useRef(null)
   const lockTimeout = useRef(null)
+  const intentActive = useRef(false)
 
   const SMOOTHING = 0.2
   const HIDE_VELOCITY = 0.6
@@ -25,6 +26,7 @@ function BottomNavbar() {
   const SNAP_HIDE = 0.3
   const SNAP_SHOW = -0.3
   const INTERACTION_LOCK_MS = 300
+  const INTENT_VELOCITY = 0.1
 
   const lockInteraction = () => {
     interactionLock.current = true
@@ -50,6 +52,16 @@ function BottomNavbar() {
       lastScrollY.current = currentScrollY
       lastTime.current = currentTime
       return
+    }
+
+    // Detect "user is slowing down / reversing"
+    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
+    const isReversing = velocity < 0 && velocityRef.current > 0
+    
+    if (isSlowing || isReversing) {
+      intentActive.current = true
+    } else {
+      intentActive.current = false
     }
 
     const currentScrollY = window.scrollY
