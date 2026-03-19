@@ -109,19 +109,17 @@ function BottomNavbar() {
     if (velocity < SHOW_VELOCITY) {
       setTimeout(() => setVisible(nav), 50)
     }
-    if (!gestureActive.current) {
-      scheduleSnap()
+    if (isIdle) {
+      snapNav(nav)
     }
   }
 
   const handlePointerDown = () => {
     gestureActive.current = true
-    clearTimeout(scrollEndTimeout.current)
   }
     
   const handlePointerUp = () => {
     gestureActive.current = false
-    scheduleSnap()
   }
 
   useEffect(() => {
