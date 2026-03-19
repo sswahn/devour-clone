@@ -56,56 +56,46 @@ function BottomNavbar() {
     if (!nav) {
       return
     }
-
-    // If user is interacting, force nav visible
+    
+    // Interaction priority
     if (interactionLock.current) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
-      lastScrollY.current = scrollY
-      lastTime.current = time
       return
     }
-
+  
     // Always show near top
     if (scrollY < 80) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
       velocityRef.current = 0
-      lastScrollY.current = scrollY
-      lastTime.current = time
       return
     }
-
-    // what is this doing?
-    if (Math.abs(velocity) < 0.01) {
-      return
-    }
-    
-    // Detect "user is slowing down / reversing"
+  
+    // Intent detection (AFTER velocity)
     const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
     const isReversing = velocity < 0 && velocityRef.current > 0
-    
+  
     if (isSlowing || isReversing) {
       triggerIntent()
     }
-
-    // If intent detected, favor showing nav
+  
+    // Update velocity AFTER using prev
+    velocityRef.current = velocity
+  
+    // Priority: Intent > Physics
     if (intentActive.current) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
-    }
-
-    // Hide/show nav based on velocity
-    if (!isHidden.current && velocity > HIDE_VELOCITY) {
+    } 
+    else if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
-    } else if (isHidden.current && velocity < SHOW_VELOCITY) {
+    } 
+    else if (isHidden.current && velocity < SHOW_VELOCITY) {
       nav.classList.remove(styles.hidden)
       isHidden.current = false
     }
-
-    lastScrollY.current = scrollY
-    lastTime.current = time
   }
 
   const snapNav = () => {
