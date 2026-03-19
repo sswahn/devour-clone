@@ -105,14 +105,14 @@ function BottomNavbar() {
     }
   }
 
-  const handleTouchStart = () => {
+  const handlePointerDown = () => {
     gestureActive.current = true
     if (scrollEndTimeout.current) {
       clearTimeout(scrollEndTimeout.current)
     }
   }
     
-  const handleTouchEnd = () => {
+  const handlePointerUp = () => {
     gestureActive.current = false
     scrollEndTimeout.current = setTimeout(() => {
       snapNav()
@@ -121,13 +121,13 @@ function BottomNavbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', throttleOnScroll, { passive: true })
-    window.addEventListener('touchstart', handleTouchStart, { passive: true })
-    window.addEventListener('touchend', handleTouchEnd, { passive: true })
+    window.addEventListener('pointerdown', handlePointerDown, { passive: true })
+    window.addEventListener('pointerup', handlePointerUp, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', throttleOnScroll)
-      window.removeEventListener('touchstart', handleTouchStart)
-      window.removeEventListener('touchend', handleTouchEnd)
+      window.removeEventListener('pointerdown', handlePointerDown)
+      window.removeEventListener('pointerup', handlePointerUp)
       if (scrollEndTimeout.current) {
         clearTimeout(scrollEndTimeout.current)
       }
