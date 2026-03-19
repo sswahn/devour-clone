@@ -17,22 +17,30 @@ function BottomNavbar() {
     const currentScrollY = window.scrollY
     const currentTime = performance.now()
 
+    // Always show near top (run this first)
+    if (currentScrollY < 80) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    
+      lastScrollY.current = currentScrollY
+      lastTime.current = currentTime
+      return
+    }
+    
     const deltaY = currentScrollY - lastScrollY.current
     const deltaTime = currentTime - lastTime.current
 
+    // Noise filtering
     if (Math.abs(deltaY) < 2) {
       lastScrollY.current = currentScrollY
       lastTime.current = currentTime
       return
     }
 
+    // Frame normalization
     const velocity = deltaTime > 16 ? deltaY / deltaTime : 0
     
-    // Always show near top
-    if (currentScrollY < 80) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
-    } 
+    // Velocity-based intent & Hysteresis (0.6 / -0.3 asymmetry)
     else if (!isHidden.current && velocity > 0.6) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
