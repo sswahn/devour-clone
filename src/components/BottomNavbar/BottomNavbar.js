@@ -70,11 +70,14 @@ function BottomNavbar() {
       velocityRef.current = 0
       return setVisible(nav)
     }
+
+    const prevVelocity = velocityRef.current
+    velocityRef.current = velocity
+    scrollYRef.current = scrollY
   
-    // Intent detection (AFTER velocity)
     const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
-    const isReversing = velocity < 0 && velocityRef.current > 0
-  
+    const isReversing = velocity < 0 && prevVelocity > 0
+
     if (isSlowing || isReversing) {
       triggerIntent()
     }
@@ -83,10 +86,6 @@ function BottomNavbar() {
     if (intentActive.current) {
       return setVisible(nav)
     } 
-  
-    // Update velocity AFTER using prev
-    velocityRef.current = velocity
-    scrollYRef.current = scrollY
 
     if (!isHidden.current && velocity > HIDE_VELOCITY) {
       nav.classList.add(styles.hidden)
