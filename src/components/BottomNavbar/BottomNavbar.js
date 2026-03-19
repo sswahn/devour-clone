@@ -69,14 +69,6 @@ function BottomNavbar() {
       return
     }
 
-    // Detect "user is slowing down / reversing"
-    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
-    const isReversing = velocity < 0 && velocityRef.current > 0
-    
-    if (isSlowing || isReversing) {
-      triggerIntent()
-    }
-
     const deltaY = currentScrollY - lastScrollY.current
     const deltaTime = currentTime - lastTime.current
 
@@ -100,6 +92,14 @@ function BottomNavbar() {
     const rawVelocity = deltaTime > 16 ? deltaY / deltaTime : 0
     const velocity = velocityRef.current * (1 - SMOOTHING) + rawVelocity * SMOOTHING
     velocityRef.current = velocity
+
+    // Detect "user is slowing down / reversing"
+    const isSlowing = Math.abs(velocity) < INTENT_VELOCITY
+    const isReversing = velocity < 0 && velocityRef.current > 0
+    
+    if (isSlowing || isReversing) {
+      triggerIntent()
+    }
 
     // If intent detected, favor showing nav
     if (intentActive.current) {
