@@ -10,6 +10,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
+  const scrollYRef = useRef(0)
   const velocityRef = useRef(0)
   const gestureActive = useRef(false)
   const scrollEndTimeout = useRef(null)
@@ -77,6 +78,7 @@ function BottomNavbar() {
   
     // Update velocity AFTER using prev
     velocityRef.current = velocity
+    scrollYRef.current = scrollY
   
     // Priority: Intent > Physics
     if (intentActive.current) {
@@ -95,7 +97,7 @@ function BottomNavbar() {
 
   const snapNav = () => {
     const nav = navRef.current
-    if (!nav || window.scrollY < 80 || interactionLock.current) {
+    if (!nav || scrollYRef.current < 80 || interactionLock.current) {
       return
     }
     if (velocityRef.current > SNAP_HIDE) {
