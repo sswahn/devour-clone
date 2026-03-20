@@ -67,7 +67,7 @@ const navRef = useRef(null)
       <button type="button" aria-label="home">
         <HomeIcon />
       </button>
-      <button onClick={handleSearchbar} type="button" aria-label="open search bar" aria-controls="search bar" aria-expanded={context.searchbar}>
+      <button type="button" aria-label="open search bar" aria-controls="search bar" aria-expanded={context.searchbar}>
         <SearchIcon />
       </button>
     </header>
