@@ -10,14 +10,11 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
-  const scrollDownTimeout = useRef(null)
 
   const setHidden = nav => {
     if (!isHidden.current) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
-      clearTimeout(scrollDownTimeout.current)
-      scollDownTimeout.current = null
     }
   }
 
@@ -43,20 +40,6 @@ function BottomNavbar() {
     if (direction === 'up') {
       return setVisible(nav)
     }
-
-    /*
-    if (direction === 'down' && !scrollDownTimeout.current) {
-      console.log('distance down: ', distance)
-      scrollDownTimeout.current = setTimeout(() => setHidden(nav), 200)
-      return
-    }
-
-    if (direction === 'up') {
-      clearTimeout(scrollDownTimeout.current)
-      scrollDownTimeout.current = null
-      return setVisible(nav)
-    }
-    */
   }
 
   useEffect(() => {
