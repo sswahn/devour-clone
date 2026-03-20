@@ -28,21 +28,18 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ scrollY, deltaY }) => {
+  const updateNav = ({ scrollY, direction }) => {
     const nav = navRef.current
     if (!nav) {
       return
     }
 
-    const isScrollingDown = deltaY > 0
-    const isScrollingUp = deltaY < 0
-
-    if (isScrollingDown && !scrollDownTimeout.current) {
+    if (direction === 'down' && !scrollDownTimeout.current) {
       scrollDownTimeout.current = setTimeout(() => setHidden(nav), 300)
       return
     }
 
-    if (isScrollingUp) {
+    if (direction === 'up') {
       clearTimeout(scrollDownTimeout.current)
       scrollDownTimeout.current = null
       return setVisible(nav)
