@@ -71,6 +71,14 @@ function BottomNavbar() {
       setVisible(nav)
     }
   }
+
+  const curveVelocity = v => {
+    const sign = Math.sign(v)
+    const mag = Math.abs(v)
+
+    // cubic curve → softer small movement, stronger large movement
+    return sign * Math.pow(mag, 1.3)
+  }
   
   const updateNav = ({ scrollY, velocity, acceleration, isIdle }) => {
     const nav = navRef.current
