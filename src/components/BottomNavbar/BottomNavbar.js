@@ -111,22 +111,10 @@ function BottomNavbar() {
     }
   }
 
-  const handlePointerDown = () => {
-    interactionLock.current = true
-  }
-    
-  const handlePointerUp = () => {
-    interactionLock.current = false
-  }
-
   useEffect(() => {
     const unsubscribe = scroll.subscribe(updateNav)
-    window.addEventListener('pointerdown', handlePointerDown, { passive: true })
-    window.addEventListener('pointerup', handlePointerUp, { passive: true })
     return () => {
       unsubscribe()
-      window.removeEventListener('pointerdown', handlePointerDown)
-      window.removeEventListener('pointerup', handlePointerUp)
       clearAllTimeouts()
     }
   }, [])
