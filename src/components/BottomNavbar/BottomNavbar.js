@@ -51,7 +51,7 @@ function BottomNavbar() {
       return setHidden(nav)
     }
 
-    if (direction === 'up' && Math.abs(distance) > 30) {
+    if (direction === 'up' && Math.abs(distance) > 230) {
       scrollStart.current = scrollY
       return setVisible(nav)
     }
