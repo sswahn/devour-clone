@@ -24,6 +24,9 @@ function Main() {
   
   return (
     <main className={styles.main}>
+
+      <div style={{height: '800px', border: '1px dashed red'}}></div>
+    
       <Feed />
       <BottomNavbar />
 
