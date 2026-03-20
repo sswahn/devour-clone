@@ -35,6 +35,8 @@ function BottomNavbar() {
     
     const distance = scrollY - scrollStart.current
 
+    console.log('distance: ', distance)
+
     if (velocity < 0.05) {
       scrollSpeed.current = false
     }
@@ -49,7 +51,7 @@ function BottomNavbar() {
       return setHidden(nav)
     }
 
-    if (direction === 'up') {
+    if (direction === 'up' && distance > 10) {
       scrollStart.current = scrollY
       return setVisible(nav)
     }
