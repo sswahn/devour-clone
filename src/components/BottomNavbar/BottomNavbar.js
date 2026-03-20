@@ -65,8 +65,7 @@ function BottomNavbar() {
     }
     if (velocityRef.current > SNAP_HIDE) {
       setHidden(nav)
-    }
-    if (velocityRef.current < SNAP_SHOW) {
+    } else if (velocityRef.current < SNAP_SHOW) {
       setVisible(nav)
     }
   }
@@ -104,8 +103,7 @@ function BottomNavbar() {
     } 
     if (velocity > HIDE_VELOCITY) {
       setHidden(nav)
-    }
-    else if (velocity < SHOW_VELOCITY) {
+    } else if (velocity < SHOW_VELOCITY) {
       setTimeout(() => setVisible(nav), 50)
     }
     if (isIdle) {
