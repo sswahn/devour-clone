@@ -35,6 +35,8 @@ function BottomNavbar() {
     
     const distance = scrollY - scrollStart.current
 
+    console.log('direction: ', direction)
+
     if (scrollSpeed.current && direction !== 'idle') {
       return
     } else {
