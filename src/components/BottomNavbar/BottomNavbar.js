@@ -104,7 +104,7 @@ function BottomNavbar() {
     if (velocity > HIDE_VELOCITY) {
       setHidden(nav)
     } else if (velocity < SHOW_VELOCITY) {
-      setTimeout(() => setVisible(nav), 50)
+      setVisible(nav)
     }
     if (isIdle) {
       snapNav(nav)
