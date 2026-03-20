@@ -6,16 +6,64 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import styles from './header.module.css'
 
 const Header = () => {
-  const [context, dispatch] = useContext(Context)
-  
-  const handleSearchbar = event => {
-    dispatch({ type: 'searchbar', payload: true })
+const navRef = useRef(null)
+  const isHidden = useRef(false)
+  const scrollStart = useRef(0)
+  const scrollSpeed = useRef(false)
+
+  const setHidden = nav => {
+    if (!isHidden.current) {
+      nav.classList.add(styles.hidden)
+      isHidden.current = true
+    }
   }
 
-  // use home icon as a logo placeholder
+  const setVisible = nav => {
+    if (isHidden.current) {
+      nav.classList.remove(styles.hidden)
+      isHidden.current = false
+    }
+  }
+
+  const updateNav = ({ direction, scrollY, velocity }) => {
+    const nav = navRef.current
+    if (!nav) {
+      return
+    }
+    
+    const distance = scrollY - scrollStart.current
+
+    console.log('distance: ', distance)
+
+    if (velocity < 0.05) {
+      scrollSpeed.current = false
+    }
+
+    if (direction === 'down' && velocity > 5) {
+      scrollSpeed.current = true
+      scrollStart.current = scrollY
+      return setVisible(nav)
+    }
+    
+    if (direction === 'down' && distance > 200 && !scrollSpeed.current) {
+      return setHidden(nav)
+    }
+
+    if (direction === 'up') {
+      scrollStart.current = scrollY
+      return setVisible(nav)
+    }
+  }
+
+  useEffect(() => {
+    const unsubscribe = scroll.subscribe(updateNav)
+    return () => {
+      unsubscribe()
+    }
+  }, [])
   
   return (
-    <header className={styles.header}>
+    <header ref={navRef} className={styles.header}>
       <button type="button" aria-label="home">
         <HomeIcon />
       </button>
