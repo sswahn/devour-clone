@@ -30,7 +30,7 @@ function Feed() {
   }
 
   useEffect(() => {
-    loadFromStorage()
+    // loadFromStorage()
   }, [])
   
   return (
