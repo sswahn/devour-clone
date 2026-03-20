@@ -36,6 +36,15 @@ function BottomNavbar() {
 
     console.log('distance: ', distance)
 
+    if (direction === 'down' && distance > 1) {
+      return setHidden(nav)
+    }
+
+    if (direction === 'up') {
+      return setVisible(nav)
+    }
+
+    /*
     if (direction === 'down' && !scrollDownTimeout.current) {
       console.log('distance down: ', distance)
       scrollDownTimeout.current = setTimeout(() => setHidden(nav), 200)
@@ -47,6 +56,7 @@ function BottomNavbar() {
       scrollDownTimeout.current = null
       return setVisible(nav)
     }
+    */
   }
 
   useEffect(() => {
