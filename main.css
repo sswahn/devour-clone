@@ -138,10 +138,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   display: flex;
   align-items: center; /* Vertically center */
-  
   height: 60px;
   background: #fff;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
@@ -161,15 +159,12 @@
 }
 
 .B5WSjkcfdXhkN7EZp0IH > div {
-  align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 500px;
   padding: 0 8px;
   width: 100%;
-
-  border: 1px dashed red;
 }
 
 .B5WSjkcfdXhkN7EZp0IH button {
