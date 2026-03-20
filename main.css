@@ -5,7 +5,8 @@
 
 .bnYxWOI7rVu9DhyiioVA {
   background: none;
-  display: flexbox;
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   width: 100%;
