@@ -35,7 +35,7 @@ function BottomNavbar() {
     }
 
     if (direction === 'down' && !scrollDownTimeout.current) {
-      scrollDownTimeout.current = setTimeout(() => setHidden(nav), 300)
+      scrollDownTimeout.current = setTimeout(() => setHidden(nav), 200)
       return
     }
 
