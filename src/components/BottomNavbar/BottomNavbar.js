@@ -65,9 +65,9 @@ function BottomNavbar() {
     if (scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
       return
     }
-    if (velocityRef.current > SNAP_HIDE) {
+    if (velocityRef.current > HIDE_EXIT) {
       setHidden(nav)
-    } else if (velocityRef.current < SNAP_SHOW) {
+    } else if (velocityRef.current < SHOW_EXIT) {
       setVisible(nav)
     }
   }
