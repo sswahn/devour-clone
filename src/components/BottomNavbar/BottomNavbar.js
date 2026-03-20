@@ -25,14 +25,14 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ scrollY, velocity }) => {
+  const updateNav = ({ scrollY, deltaY }) => {
     const nav = navRef.current
     if (!nav) {
       return
     }
 
-    const isScrollingDown = velocity > 0
-    const isScrollingUp = velocity < 0
+    const isScrollingDown = deltaY > 0
+    const isScrollingUp = deltaY < 0
 
     if (isScrollingUp) {
       return setVisible(nav)
