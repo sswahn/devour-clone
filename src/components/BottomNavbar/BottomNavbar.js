@@ -37,11 +37,7 @@ function BottomNavbar() {
     console.log('scrollY: ', scrollY)
     console.log('scrollStart.current: ', scrollStart.current)
     
-    if (scrollY > 275) { // initial setting of scrollStart
-      scrollStart.current = scrollY
-    }
-    
-    if (direction === 'down' && distance > 25) {
+    if (direction === 'down' && scrollY > 275 && distance > 25) {
       return setHidden(nav)
     }
 
