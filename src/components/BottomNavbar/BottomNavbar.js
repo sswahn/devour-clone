@@ -65,17 +65,11 @@ function BottomNavbar() {
     if (scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
       return
     }
-    if (velocityRef.current > 0.1) {
-      setHidden(nav)
-    } else if (velocityRef.current < -0.1) {
-      setVisible(nav)
-    }
-    /*
     if (velocityRef.current > HIDE_EXIT) {
       setHidden(nav)
     } else if (velocityRef.current < SHOW_EXIT) {
       setVisible(nav)
-    }*/
+    }
   }
 
   const curveVelocity = v => {
@@ -121,25 +115,10 @@ function BottomNavbar() {
     const isScrollingUp = curvedVelocity < 0
     const speed = Math.abs(curvedVelocity)
 
-    if (intentActive.current && isScrollingUp) {
+    if (intentActive.current) {
       return setVisible(nav)
     }
     
-    // --- DOWNWARD (reading) → HIDE ---
-    if (!isHidden.current && isScrollingDown) {
-      if (speed > 0.02) { // slow downward scroll = strong reading intent
-        setHidden(nav)
-      }
-    }
-
-    // --- UPWARD (navigation) → SHOW ---
-    if (isHidden.current && isScrollingUp) {
-      if (speed > 0.05) { // fast upward scroll = strong intent to access nav
-        setVisible(nav)
-      }
-    }
-    
-    /*
     if (!isHidden.current) {
       if (curvedVelocity > HIDE_ENTER) {
         setHidden(nav)
@@ -148,7 +127,7 @@ function BottomNavbar() {
       if (curvedVelocity < SHOW_EXIT) {
         setVisible(nav)
       }
-    } */
+    }
     
     if (isIdle) {
       snapNav(nav)
