@@ -100,7 +100,8 @@ function BottomNavbar() {
     }
 
     const prevVelocity = velocityRef.current
-    velocityRef.current = velocity
+    const curvedVelocity = curveVelocity(velocity)
+    velocityRef.current = curvedVelocity
   
     const isReversing = velocity < 0 && prevVelocity > 0
     const isBraking = acceleration != null && acceleration < INTENT_ACCELERATION
