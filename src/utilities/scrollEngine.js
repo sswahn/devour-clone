@@ -51,17 +51,13 @@ function onScroll() {
 }
 
 function start() {
-  if (!started) {
     window.addEventListener('scroll', onScroll, { passive: true })
     started = true
-  }
 }
 
 function stop() {
-  if (started) {
     window.removeEventListener('scroll', onScroll)
     started = false
-  }
 }
 
 const scroll = { 
