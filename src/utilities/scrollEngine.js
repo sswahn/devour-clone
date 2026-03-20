@@ -23,7 +23,7 @@ function update() {
   const velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
   const acceleration = (velocity - prevVelocity) / deltaTime
   const isScrolling = Math.abs(deltaY) > 0.5
-  const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : 'idle'
+  const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : undefined
   
   notify({
     acceleration,
