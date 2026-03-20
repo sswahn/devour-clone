@@ -13,7 +13,7 @@ function BottomNavbar() {
 
   // tune these based on your scrollEngine output
   const SPEED_FAST = 0.6
-  const SPEED_SLOW = 0.05
+  const SPEED_SLOW = 0.08
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -43,7 +43,7 @@ function BottomNavbar() {
     const speed = Math.abs(velocity)
 
     // ↑ ALWAYS SHOW
-    if (isScrollingUp) {
+    if (isScrollingUp && speed > SPEED_FAST && isHidden.current) {
       return setVisible(nav)
     }
 
