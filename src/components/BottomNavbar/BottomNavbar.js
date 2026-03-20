@@ -116,14 +116,14 @@ function BottomNavbar() {
     if (isReversing || isBraking || isDeceleratingFast) {
       triggerIntent()
     }
-    if (intentActive.current) {
-      return setVisible(nav)
-    } 
 
     const isScrollingDown = curvedVelocity > 0
     const isScrollingUp = curvedVelocity < 0
-    
     const speed = Math.abs(curvedVelocity)
+
+    if (intentActive.current && isScrollingUp) {
+      return setVisible(nav)
+    }
     
     // --- DOWNWARD (reading) → HIDE ---
     if (!isHidden.current && isScrollingDown) {
