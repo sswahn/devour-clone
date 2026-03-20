@@ -26,6 +26,16 @@
   opacity: 0;
 }
 
+.bottomNavbar > div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 8px;
+  width: 100%;
+}
+
 .bottomNavbar button {
   background: none;
   border: none;
