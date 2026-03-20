@@ -1,7 +1,7 @@
 // scrollEngine.js
 
 let subscribers = new Set()
-let started = false // Start engine once
+let started = false
 let prevScrollY = window.scrollY
 let prevTime = performance.now()
 let prevVelocity = 0
