@@ -30,10 +30,10 @@ function BottomNavbar() {
     if (!nav) {
       return
     }
-    
+    /*
     if (scrollY < 80) { // always show near top
       return setVisible(nav)
-    }
+    }*/
 
     const isScrollingDown = velocity > 0
     const isScrollingUp = velocity < 0
