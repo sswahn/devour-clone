@@ -34,12 +34,12 @@ function BottomNavbar() {
     const isScrollingDown = deltaY > 0
     const isScrollingUp = deltaY < 0
 
-    if (isScrollingUp) {
-      return setVisible(nav)
-    }
-
     if (isScrollingDown) {
       return setHidden(nav)
+    }
+
+    if (isScrollingUp) {
+      return setVisible(nav)
     }
   }
 
