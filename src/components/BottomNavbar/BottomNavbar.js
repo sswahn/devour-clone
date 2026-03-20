@@ -10,6 +10,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
+  const prevScrollY = useRef(0)
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -25,11 +26,14 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ direction, distance }) => {
+  const updateNav = ({ direction, scrollY }) => {
     const nav = navRef.current
     if (!nav) {
       return
     }
+    
+    const distance = scrollY - prevScrollY.current
+    prevScrollY.current = scrollY
 
     console.log('distance: ', distance)
 
