@@ -1,5 +1,6 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useRef  } from 'react'
 import { Context } from '../../Provider'
+import scroll from '../../utilities/scrollEngine'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import styles from './header.module.css'
