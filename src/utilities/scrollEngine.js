@@ -68,23 +68,6 @@ function stop() {
   }
 }
 
-
-subscribe(fn) {
-  if (!started) start()
-  subscribers.add(fn)
-
-  // immediate sync
-  fn({
-    scrollY: previousScrollY,
-    deltaY: 0,
-    velocity,
-    direction: 'idle',
-    time: previousTime,
-  })
-
-  return () => { ... }
-}
-
 const scroll = { 
   subscribe(fn) {
     if (!started) {
@@ -92,7 +75,6 @@ const scroll = {
     }
     subscribers.add(fn)
     
-    // immediate sync
     fn({
       scrollY: previousScrollY,
       deltaY: 0,
