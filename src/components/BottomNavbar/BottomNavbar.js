@@ -28,13 +28,14 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ direction }) => {
+  const updateNav = ({ direction, distance }) => {
     const nav = navRef.current
     if (!nav) {
       return
     }
 
     if (direction === 'down' && !scrollDownTimeout.current) {
+      console.log('distance: ', distance)
       scrollDownTimeout.current = setTimeout(() => setHidden(nav), 200)
       return
     }
