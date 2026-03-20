@@ -8,6 +8,7 @@ let previousVelocity = 0
 let velocity = 0
 let ticking = false
 const SMOOTHING = 0.35
+const IDLE_THRESHOLD = 0.02
 
 function notify(data) {
   for (const fn of subscribers) {
