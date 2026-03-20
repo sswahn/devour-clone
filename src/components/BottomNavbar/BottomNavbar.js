@@ -119,7 +119,7 @@ function BottomNavbar() {
         setHidden(nav)
       }
     } else {
-      if (curvedVelocity < SHOW_SHOW) {
+      if (curvedVelocity < SHOW_EXIT) {
         setVisible(nav)
       }
     }
