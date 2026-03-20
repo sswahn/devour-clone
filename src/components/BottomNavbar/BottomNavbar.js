@@ -10,7 +10,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
-  const prevScrollY = useRef(0)
+  const scrollStart = useRef(0)
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -32,13 +32,13 @@ function BottomNavbar() {
       return
     }
     
-    const distance = scrollY - prevScrollY.current
+    const distance = scrollY - scrollStart.current
 
     console.log('scrollY: ', scrollY)
-    console.log('prevScrollY.current: ', prevScrollY.current)
+    console.log('scrollStart.current: ', scrollStart.current)
     
-    if (scrollY > 250) { // initial setting of prevScrollY
-      prevScrollY.current = scrollY
+    if (scrollY > 275) { // initial setting of scrollStart
+      scrollStart.current = scrollY
     }
     
     if (direction === 'down' && distance > 25) {
@@ -46,7 +46,7 @@ function BottomNavbar() {
     }
 
     if (direction === 'up') {
-      prevScrollY.current = scrollY
+      scrollStart.current = 0
       return setVisible(nav)
     }
   }
