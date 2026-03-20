@@ -38,12 +38,7 @@ function BottomNavbar() {
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
-    if (scrollSpeed.current && velocity > 0.05) {
-      return
-    } else {
-      scrollSpeed.current = false
-      scrollStart.current = scrollY
-    }
+
 
     if (direction === 'down' && velocity > 5) {
       scrollSpeed.current = true
