@@ -42,7 +42,7 @@ function BottomNavbar() {
       scrollSpeed.current = false
     }
 
-    if (direction === 'down' && velocity > 6) {
+    if (direction === 'down' && velocity > 5) {
       scrollSpeed.current = true
       scrollStart.current = scrollY
       return setVisible(nav)
