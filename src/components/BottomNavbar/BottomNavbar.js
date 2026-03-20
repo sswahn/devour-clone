@@ -33,8 +33,11 @@ function BottomNavbar() {
     }
     
     const distance = scrollY - prevScrollY.current
+
+    console.log('scrollY: ', scrollY)
+    console.log('prevScrollY.current: ', prevScrollY.current)
     
-    if (scrollY > 25) { // initial setting of prevScrollY
+    if (scrollY > 250) { // initial setting of prevScrollY
       prevScrollY.current = scrollY
     }
     
