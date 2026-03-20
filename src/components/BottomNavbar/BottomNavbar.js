@@ -10,11 +10,13 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
+  const scrollDownTimeout = useRef()
 
   const setHidden = nav => {
     if (!isHidden.current) {
       nav.classList.add(styles.hidden)
       isHidden.current = true
+      clearTimeout(scrollDownTimeout.current)
     }
   }
 
@@ -35,7 +37,8 @@ function BottomNavbar() {
     const isScrollingUp = deltaY < 0
 
     if (isScrollingDown) {
-      return setTimeout(() => setHidden(nav), 500)
+      scrollDownTimeout.current = setTimeout(() => setHidden(nav), 500)
+      return
     }
 
     if (isScrollingUp) {
