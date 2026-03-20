@@ -5,7 +5,6 @@ let started = false // Start engine once
 let prevScrollY = window.scrollY
 let prevTime = performance.now()
 let prevVelocity = 0
-let velocity = 0
 let ticking = false
 const SMOOTHING = 0.35
 
