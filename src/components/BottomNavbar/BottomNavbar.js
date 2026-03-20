@@ -59,8 +59,7 @@ function BottomNavbar() {
     }, 150)
   }
 
-  const snapNav = () => {
-    const nav = navRef.current
+  const snapNav = nav => {
     if (!nav || scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
       return
     }
