@@ -43,21 +43,23 @@ function BottomNavbar() {
     const speed = Math.abs(velocity)
 
     // ↑ ALWAYS SHOW
-    if (isScrollingUp && isHidden.current) {
+    if (isScrollingUp) {
       return setVisible(nav)
     }
 
     // ↓ DOWN behavior
     if (isScrollingDown) {
+      return setHidden(nav)
+      /*
       // FAST → SHOW (user navigating)
       if (speed > SPEED_FAST) {
         return setVisible(nav)
-      }
+      } 
 
       // SLOW → HIDE (user reading)
       if (speed > SPEED_SLOW) {
         return setHidden(nav)
-      }
+      } */
     }
   }
 
