@@ -17,6 +17,8 @@ function BottomNavbar() {
   const interactionLock = useRef(false)
   const intentActive = useRef(false)
 
+  const SPEED_FAST = 0.5   // tweak
+  const SPEED_SLOW = 0.05  // tweak
   const HIDE_ENTER = 0.7
   const HIDE_EXIT = 0.4
   const SHOW_ENTER = -0.2
@@ -118,7 +120,26 @@ function BottomNavbar() {
     if (intentActive.current) {
       return setVisible(nav)
     }
+
+    // ↓ DOWNWARD behavior
+    if (direction > 0) {
+      // FAST downward → SHOW (user navigating)
+      if (speed > SPEED_FAST) {
+        return setVisible(nav)
+      }
     
+      // SLOW downward → HIDE (user reading)
+      if (speed > SPEED_SLOW) {
+        return setHidden(nav)
+      }
+    }
+
+    // ↑ UPWARD behavior → ALWAYS SHOW
+    if (direction < 0) {
+      return setVisible(nav)
+    }
+    
+    /*
     if (!isHidden.current) {
       if (curvedVelocity > HIDE_ENTER) {
         setHidden(nav)
@@ -127,7 +148,7 @@ function BottomNavbar() {
       if (curvedVelocity < SHOW_EXIT) {
         setVisible(nav)
       }
-    }
+    }*/
     
     if (isIdle) {
       snapNav(nav)
