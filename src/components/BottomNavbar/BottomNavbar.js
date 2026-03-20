@@ -38,7 +38,9 @@ function BottomNavbar() {
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
-
+    if (velocity < 0.05) {
+      scrollSpeed.current = false
+    }
 
     if (direction === 'down' && velocity > 5) {
       scrollSpeed.current = true
@@ -51,7 +53,6 @@ function BottomNavbar() {
     }
 
     if (direction === 'up') {
-      scrollSpeed.current = false
       scrollStart.current = scrollY
       return setVisible(nav)
     }
