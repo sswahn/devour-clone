@@ -114,7 +114,7 @@ function BottomNavbar() {
       return setVisible(nav)
     } 
 
-    if (isHidden.current) {
+    if (!isHidden.current) {
       if (velocity > HIDE_VELOCITY) {
         setHidden(nav)
       }
