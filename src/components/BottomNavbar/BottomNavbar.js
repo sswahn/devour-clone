@@ -11,6 +11,7 @@ function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
   const scrollStart = useRef(0)
+  const scrollSpeed = useRef(false)
 
   const setHidden = nav => {
     if (!isHidden.current) {
