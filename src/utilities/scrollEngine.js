@@ -8,7 +8,6 @@ let prevVelocity = 0
 let velocity = 0
 let ticking = false
 const SMOOTHING = 0.35
-const IDLE_THRESHOLD = 0.02
 
 function notify(data) {
   for (const fn of subscribers) {
@@ -22,18 +21,15 @@ function update() {
   const deltaY = scrollY - prevScrollY
   const deltaTime = Math.max(time - prevTime, 1) 
   const raw = deltaY / deltaTime
-  velocity =  velocity * (1 - SMOOTHING) + raw * SMOOTHING
+  const velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
   const acceleration = (velocity - prevVelocity) / deltaTime
-  prevVelocity = velocity
   const isScrolling = Math.abs(deltaY) > 0.5
-  const isIdle = Math.abs(velocity) < IDLE_THRESHOLD
   const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : 'idle'
   
   notify({
     acceleration,
     deltaY,
     direction,
-    isIdle,
     isScrolling,
     scrollY,
     time,
@@ -77,14 +73,13 @@ const scroll = {
     subscribers.add(fn)
     
     fn({
-      scrollY: prevScrollY,
-      deltaY: 0,
-      velocity,
       acceleration: 0,
-      direction: 'idle',
+      deltaY 0,
+      direction 'idle',
       isScrolling: false,
-      isIdle: true,
+      scrollY: prevScrollY,
       time: prevTime,
+      velocity: prevVelocity
     })
     
     return () => {
