@@ -121,6 +121,7 @@ function BottomNavbar() {
       return setVisible(nav)
     }
 
+    /*
     // ↓ DOWNWARD behavior
     if (direction > 0) {
       // FAST downward → SHOW (user navigating)
@@ -138,8 +139,8 @@ function BottomNavbar() {
     if (direction < 0) {
       return setVisible(nav)
     }
+    */
     
-    /*
     if (!isHidden.current) {
       if (curvedVelocity > HIDE_ENTER) {
         setHidden(nav)
@@ -148,7 +149,7 @@ function BottomNavbar() {
       if (curvedVelocity < SHOW_EXIT) {
         setVisible(nav)
       }
-    }*/
+    }
     
     if (isIdle) {
       snapNav(nav)
