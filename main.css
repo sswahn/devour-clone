@@ -4,13 +4,24 @@
 /* Primary Header */
 
 .bnYxWOI7rVu9DhyiioVA {
-  background: none;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
-  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  /* Smooth, buttery transitions */
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
 
   border: 1px dashed pink;
 }
