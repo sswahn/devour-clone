@@ -17,8 +17,10 @@ function BottomNavbar() {
   const interactionLock = useRef(false)
   const intentActive = useRef(false)
 
-  const HIDE_VELOCITY = 0.7
-  const SHOW_VELOCITY = -0.2
+  const HIDE_ENTER = 0.7
+  const HIDE_EXIT = 0.4
+  const SHOW_ENTER = -0.2
+  const SHOW_EXIT = -0.05
   const SNAP_HIDE = 0.3
   const SNAP_SHOW = -0.3
   const INTERACTION_LOCK_MS = 300
