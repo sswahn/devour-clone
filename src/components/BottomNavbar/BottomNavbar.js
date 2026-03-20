@@ -37,6 +37,7 @@ function BottomNavbar() {
     console.log('velocity: ', velocity)
 
     if (direction === 'down' && velocity > 5) {
+      scrollStart.current = scrollY
       return setVisible(nav)
     }
     
