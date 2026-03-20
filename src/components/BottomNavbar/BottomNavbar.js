@@ -33,7 +33,7 @@ function BottomNavbar() {
 
     console.log('distance: ', distance)
 
-    if (direction === 'down' && distance > 1) {
+    if (direction === 'down' && distance > 5) {
       return setHidden(nav)
     }
 
