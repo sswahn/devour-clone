@@ -34,9 +34,15 @@ function BottomNavbar() {
     
     const distance = scrollY - scrollStart.current
 
-    console.log('velocity: ', velocity)
+    if (scrollSpeed.current && direction !== 'idle') {
+      return
+    } else {
+      scrollSpeed.current = false
+      scrollStart.current = scrollY
+    }
 
     if (direction === 'down' && velocity > 5) {
+      scrollSpeed.current = true
       scrollStart.current = scrollY
       return setVisible(nav)
     }
