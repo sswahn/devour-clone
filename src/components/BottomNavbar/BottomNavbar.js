@@ -10,23 +10,10 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
-  const scrollYRef = useRef(0)
-  const velocityRef = useRef(0)
-  const lockTimeout = useRef(null)
-  const intentTimeout = useRef(null)
-  const interactionLock = useRef(false)
-  const intentActive = useRef(false)
 
-  const SPEED_FAST = 0.5   // tweak
-  const SPEED_SLOW = 0.05  // tweak
-  const HIDE_ENTER = 0.7
-  const HIDE_EXIT = 0.4
-  const SHOW_ENTER = -0.2
-  const SHOW_EXIT = -0.05
-  const SNAP_HIDE = 0.3
-  const SNAP_SHOW = -0.3
-  const INTERACTION_LOCK_MS = 300
-  const INTENT_ACCELERATION = -0.0005 // tweakable
+  // tune these based on your scrollEngine output
+  const SPEED_FAST = 0.6
+  const SPEED_SLOW = 0.05
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -42,117 +29,35 @@ function BottomNavbar() {
     }
   }
 
-  const clearAllTimeouts = () => {
-    clearTimeout(lockTimeout.current)
-    clearTimeout(intentTimeout.current)
-  }
-  
-  const lockInteraction = () => {
-    interactionLock.current = true
-    clearTimeout(lockTimeout.current)
-    lockTimeout.current = setTimeout(() => {
-      interactionLock.current = false
-    }, INTERACTION_LOCK_MS)
-  }
-
-  const triggerIntent = () => {
-    intentActive.current = true
-    clearTimeout(intentTimeout.current)
-    intentTimeout.current = setTimeout(() => {
-      intentActive.current = false
-    }, 150)
-  }
-
-  const snapNav = nav => {
-    if (scrollYRef.current < 80 || intentActive.current || interactionLock.current) {
-      return
-    }
-    if (velocityRef.current > HIDE_EXIT) {
-      setHidden(nav)
-    } else if (velocityRef.current < SHOW_EXIT) {
-      setVisible(nav)
-    }
-  }
-
-  const curveVelocity = v => {
-    const sign = Math.sign(v)
-    const mag = Math.abs(v)
-
-    // cubic curve → softer small movement, stronger large movement
-    return sign * Math.pow(mag, 1.3)
-  }
-  
-  const updateNav = ({ scrollY, velocity, acceleration, isIdle }) => {
+  const updateNav = ({ scrollY, velocity }) => {
     const nav = navRef.current
-    if (!nav) {
-      return
-    }
-    
-    scrollYRef.current = scrollY // For snapNav()
+    if (!nav) return
 
-    // Disrupt if user interacts
-    if (interactionLock.current) {
-      return setVisible(nav)
-    }
-  
-    // Always show near top
+    // always show near top
     if (scrollY < 80) {
-      velocityRef.current = 0
       return setVisible(nav)
     }
 
-    const prevVelocity = velocityRef.current
-    const curvedVelocity = curveVelocity(velocity)
-    velocityRef.current = curvedVelocity
-  
-    const isReversing = curvedVelocity < 0 && prevVelocity > 0
-    const isBraking = acceleration != null && acceleration < INTENT_ACCELERATION
-    const isDeceleratingFast = acceleration != null && acceleration < -0.001
+    const isScrollingDown = velocity > 0
+    const isScrollingUp = velocity < 0
+    const speed = Math.abs(velocity)
 
-    if (isReversing || isBraking || isDeceleratingFast) {
-      triggerIntent()
-    }
-
-    const isScrollingDown = curvedVelocity > 0
-    const isScrollingUp = curvedVelocity < 0
-    const speed = Math.abs(curvedVelocity)
-
-    if (intentActive.current) {
+    // ↑ ALWAYS SHOW
+    if (isScrollingUp) {
       return setVisible(nav)
     }
 
-    /*
-    // ↓ DOWNWARD behavior
-    if (direction > 0) {
-      // FAST downward → SHOW (user navigating)
+    // ↓ DOWN behavior
+    if (isScrollingDown) {
+      // FAST → SHOW (user navigating)
       if (speed > SPEED_FAST) {
         return setVisible(nav)
       }
-    
-      // SLOW downward → HIDE (user reading)
+
+      // SLOW → HIDE (user reading)
       if (speed > SPEED_SLOW) {
         return setHidden(nav)
       }
-    }
-
-    // ↑ UPWARD behavior → ALWAYS SHOW
-    if (direction < 0) {
-      return setVisible(nav)
-    }
-    */
-    
-    if (!isHidden.current) {
-      if (curvedVelocity > HIDE_ENTER) {
-        setHidden(nav)
-      }
-    } else {
-      if (curvedVelocity < SHOW_EXIT) {
-        setVisible(nav)
-      }
-    }
-    
-    if (isIdle) {
-      snapNav(nav)
     }
   }
 
@@ -160,25 +65,24 @@ function BottomNavbar() {
     const unsubscribe = scroll.subscribe(updateNav)
     return () => {
       unsubscribe()
-      clearAllTimeouts()
     }
   }, [])
 
   return (
     <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
-      <button onPointerDown={lockInteraction} type="button" aria-label="home">
+      <button type="button" aria-label="home">
         <HomeIcon />  
       </button>
-      <button onPointerDown={lockInteraction} type="button" aria-label="search">
+      <button type="button" aria-label="search">
         <SearchIcon size="1em" />  
       </button>
-      <button onPointerDown={lockInteraction} type="button" aria-label="camera">
+      <button type="button" aria-label="camera">
         <CameraIcon />  
       </button>
-      <button onPointerDown={lockInteraction} type="button" aria-label="notifications">
+      <button type="button" aria-label="notifications">
         <BellIcon />  
       </button>
-      <button onPointerDown={lockInteraction} type="button" aria-label="profile">
+      <button type="button" aria-label="profile">
         <UserIcon size="1em" />  
       </button>
     </nav>
