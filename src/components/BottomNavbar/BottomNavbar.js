@@ -115,11 +115,11 @@ function BottomNavbar() {
   }
 
   const handlePointerDown = () => {
-    gestureActive.current = true
+    interactionLock.current = true
   }
     
   const handlePointerUp = () => {
-    gestureActive.current = false
+    interactionLock.current = false
   }
 
   useEffect(() => {
