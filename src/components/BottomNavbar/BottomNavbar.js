@@ -40,6 +40,10 @@ function BottomNavbar() {
       return setHidden(nav)
     }
 
+    if (direction === 'down' && velocity > 5) {
+      return setVisible(nav)
+    }
+
     if (direction === 'up') {
       scrollStart.current = scrollY
       return setVisible(nav)
