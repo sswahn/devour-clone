@@ -35,7 +35,7 @@ function BottomNavbar() {
     const isScrollingUp = deltaY < 0
 
     if (isScrollingDown) {
-      return setHidden(nav)
+      return setTimeout(() => setHidden(nav), 500)
     }
 
     if (isScrollingUp) {
