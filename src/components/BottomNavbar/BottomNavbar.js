@@ -103,7 +103,7 @@ function BottomNavbar() {
     const curvedVelocity = curveVelocity(velocity)
     velocityRef.current = curvedVelocity
   
-    const isReversing = velocity < 0 && prevVelocity > 0
+    const isReversing = curvedVelocity < 0 && prevVelocity > 0
     const isBraking = acceleration != null && acceleration < INTENT_ACCELERATION
     const isDeceleratingFast = acceleration != null && acceleration < -0.001
 
@@ -115,11 +115,11 @@ function BottomNavbar() {
     } 
 
     if (!isHidden.current) {
-      if (velocity > HIDE_VELOCITY) {
+      if (curvedVelocity > HIDE_ENTER) {
         setHidden(nav)
       }
     } else {
-      if (velocity < SHOW_VELOCITY) {
+      if (curvedVelocity < SHOW_SHOW) {
         setVisible(nav)
       }
     }
