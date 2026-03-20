@@ -11,10 +11,6 @@ function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
 
-  // tune these based on your scrollEngine output
-  const SPEED_FAST = 0.6
-  const SPEED_SLOW = 0.08
-
   const setHidden = nav => {
     if (!isHidden.current) {
       nav.classList.add(styles.hidden)
@@ -31,35 +27,23 @@ function BottomNavbar() {
 
   const updateNav = ({ scrollY, velocity }) => {
     const nav = navRef.current
-    if (!nav) return
-
-    // always show near top
-    if (scrollY < 80) {
+    if (!nav) {
+      return
+    }
+    
+    if (scrollY < 80) { // always show near top
       return setVisible(nav)
     }
 
     const isScrollingDown = velocity > 0
     const isScrollingUp = velocity < 0
-    const speed = Math.abs(velocity)
 
-    // ↑ ALWAYS SHOW
     if (isScrollingUp) {
       return setVisible(nav)
     }
 
-    // ↓ DOWN behavior
     if (isScrollingDown) {
       return setHidden(nav)
-      /*
-      // FAST → SHOW (user navigating)
-      if (speed > SPEED_FAST) {
-        return setVisible(nav)
-      } 
-
-      // SLOW → HIDE (user reading)
-      if (speed > SPEED_SLOW) {
-        return setHidden(nav)
-      } */
     }
   }
 
