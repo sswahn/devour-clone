@@ -64,12 +64,14 @@ const navRef = useRef(null)
   
   return (
     <header ref={navRef} className={styles.header}>
-      <button type="button" aria-label="home">
-        <HomeIcon />
-      </button>
-      <button type="button" aria-label="open search bar" aria-controls="search bar" aria-expanded="false">
-        <SearchIcon />
-      </button>
+      <div>
+        <button type="button" aria-label="home">
+          <HomeIcon />
+        </button>
+        <button type="button" aria-label="open search bar" aria-controls="search bar" aria-expanded="false">
+          <SearchIcon />
+        </button>
+      </div>
     </header>
   )
 }
