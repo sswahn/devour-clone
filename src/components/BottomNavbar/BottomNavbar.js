@@ -28,7 +28,7 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ scrollY, direction }) => {
+  const updateNav = ({ direction }) => {
     const nav = navRef.current
     if (!nav) {
       return
