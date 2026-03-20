@@ -27,14 +27,12 @@ function update() {
   prevVelocity = velocity
   const isScrolling = Math.abs(deltaY) > 0.5
   const isIdle = Math.abs(velocity) < IDLE_THRESHOLD
-  const distance = scrollY - prevScrollY
   const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : 'idle'
   
   notify({
     acceleration,
     deltaY,
     direction,
-    distance,
     isIdle,
     isScrolling,
     scrollY,
