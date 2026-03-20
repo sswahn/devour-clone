@@ -46,7 +46,7 @@ function BottomNavbar() {
       return setVisible(nav)
     }
     
-    if (direction === 'down' && distance > 250) {
+    if (direction === 'down' && distance > 250 && !scrollSpeed.current) {
       return setHidden(nav)
     }
 
