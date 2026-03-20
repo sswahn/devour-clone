@@ -43,7 +43,7 @@ function BottomNavbar() {
     const speed = Math.abs(velocity)
 
     // ↑ ALWAYS SHOW
-    if (isScrollingUp && speed > SPEED_FAST && isHidden.current) {
+    if (isScrollingUp && isHidden.current) {
       return setVisible(nav)
     }
 
