@@ -7,7 +7,7 @@ let previousTime = performance.now()
 let previousVelocity = 0
 let velocity = 0
 let ticking = false
-const SMOOTHING = 0.2
+const SMOOTHING = 0.35
 
 function notify(data) {
   for (const fn of subscribers) {
