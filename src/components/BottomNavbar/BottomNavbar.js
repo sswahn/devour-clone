@@ -114,6 +114,26 @@ function BottomNavbar() {
       return setVisible(nav)
     } 
 
+    const isScrollingDown = curvedVelocity > 0
+    const isScrollingUp = curvedVelocity < 0
+    
+    const speed = Math.abs(curvedVelocity)
+    
+    // --- DOWNWARD (reading) → HIDE ---
+    if (!isHidden.current && isScrollingDown) {
+      if (speed > 0.02) { // slow downward scroll = strong reading intent
+        setHidden(nav)
+      }
+    }
+
+    // --- UPWARD (navigation) → SHOW ---
+    if (isHidden.current && isScrollingUp) {
+      if (speed > 0.05) { // fast upward scroll = strong intent to access nav
+        setVisible(nav)
+      }
+    }
+    
+    /*
     if (!isHidden.current) {
       if (curvedVelocity > HIDE_ENTER) {
         setHidden(nav)
@@ -122,7 +142,7 @@ function BottomNavbar() {
       if (curvedVelocity < SHOW_EXIT) {
         setVisible(nav)
       }
-    }
+    } */
     
     if (isIdle) {
       snapNav(nav)
