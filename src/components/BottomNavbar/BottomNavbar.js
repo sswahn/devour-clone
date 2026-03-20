@@ -113,11 +113,17 @@ function BottomNavbar() {
     if (intentActive.current) {
       return setVisible(nav)
     } 
-    if (velocity > HIDE_VELOCITY) {
-      setHidden(nav)
-    } else if (velocity < SHOW_VELOCITY) {
-      setVisible(nav)
+
+    if (isHidden.current) {
+      if (velocity > HIDE_VELOCITY) {
+        setHidden(nav)
+      }
+    } else {
+      if (velocity < SHOW_VELOCITY) {
+        setVisible(nav)
+      }
     }
+    
     if (isIdle) {
       snapNav(nav)
     }
