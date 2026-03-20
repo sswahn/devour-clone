@@ -34,8 +34,10 @@ function BottomNavbar() {
       return
     }
 
+    console.log('distance: ', distance)
+
     if (direction === 'down' && !scrollDownTimeout.current) {
-      console.log('distance: ', distance)
+      console.log('distance down: ', distance)
       scrollDownTimeout.current = setTimeout(() => setHidden(nav), 200)
       return
     }
