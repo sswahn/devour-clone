@@ -73,8 +73,8 @@ const scroll = {
     
     fn({
       acceleration: 0,
-      deltaY 0,
-      direction 'idle',
+      deltaY: 0,
+      direction: 'idle',
       isScrolling: false,
       scrollY: prevScrollY,
       time: prevTime,
