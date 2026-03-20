@@ -105,8 +105,9 @@ function BottomNavbar() {
   
     const isReversing = velocity < 0 && prevVelocity > 0
     const isBraking = acceleration != null && acceleration < INTENT_ACCELERATION
+    const isDeceleratingFast = acceleration != null && acceleration < -0.001
 
-    if (isReversing || isBraking) {
+    if (isReversing || isBraking || isDeceleratingFast) {
       triggerIntent()
     }
     if (intentActive.current) {
