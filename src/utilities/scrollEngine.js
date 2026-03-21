@@ -82,9 +82,9 @@ const scroll = {
     subscribers.add(fn)
     
     fn({
-      deltaY: 0,
-      scrollStart: 0,
-      scrollEnd: 0,
+      deltaY,
+      scrollStart,
+      scrollEnd,
       scrollDirection
     })
     
