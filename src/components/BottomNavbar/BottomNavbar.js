@@ -11,7 +11,6 @@ function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
   const scrollStart = useRef(0)
-  const scrollSpeed = useRef(false)
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -27,32 +26,26 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ direction, scrollY, velocity }) => {
+  const updateNav = ({ deltaY, scrollStart, scrollEnd, scrollDirection }) => {
     const nav = navRef.current
     if (!nav) {
       return
     }
+
+    // CHANGE: not using velocity, instead using distance.
+    // Its possible all i need is deltaY to calculate scroll leaps
+    // start/stop scroll variables might not be needed.
     
-    const distance = scrollY - scrollStart.current
-
-    console.log('distance: ', distance)
-
-    if (velocity < 0.05) {
-      scrollSpeed.current = false
-    }
-
-    if (direction === 'down' && velocity > 5) {
-      scrollSpeed.current = true
-      scrollStart.current = scrollY
-      return setVisible(nav)
-    }
+    console.log('deltaY: ', deltaY)
+    // console.log('scrollStart: ', scrollStart)
+    // console.log('scrollEnd: ', scrollEnd)
+    console.log('scrollDirection: ', scrollDirection)
     
-    if (direction === 'down' && distance > 200 && !scrollSpeed.current) {
+    if (scrollDirection === 'down' && deltaY > 200) {
       return setHidden(nav)
     }
 
-    if (direction === 'up') {
-      scrollStart.current = scrollY
+    if (scrollDirection === 'up') {
       return setVisible(nav)
     }
   }
