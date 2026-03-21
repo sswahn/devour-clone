@@ -10,6 +10,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
+  const velocityDisplay = useRef(false)
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -36,7 +37,16 @@ function BottomNavbar() {
     console.log('velocity: ', velocity)
 
     if (velocity > 8) {
+      velocityDisplay.current = true
       return setVisible(nav)
+    }
+
+    if (scrollStop) {
+      velocityDisplay.current = false
+    }
+
+    if (velocityDisplay.current) {
+      return
     }
 
     if (direction === 'down' && deltaY > 200) {
