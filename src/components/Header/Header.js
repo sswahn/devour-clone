@@ -29,7 +29,7 @@ const navRef = useRef(null)
       return
     }
     
-    if (direction === 'down' && deltaY > 200) {
+    if (direction === 'down' && deltaY > 500) {
       return setHidden(nav)
     }
 
