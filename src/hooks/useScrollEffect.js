@@ -3,23 +3,25 @@ import scroll from '../utilities/scrollEngine'
 
 function useScrollEffect() {
   const elementRef = useRef(null)
+  const stylesRef = useRef(null)
   const isHidden = useRef(false)
   const highVelocity = useRef(false)
 
-  const setElement = element => {
+  const setElement = (element, styles) => {
     elementRef.current = element
+    stylesRef.current = styles
   }
 
   const setHidden = element => {
     if (!isHidden.current) {
-      element.classList.add(styles.hidden)
+      element.classList.add(stylesRef.current.hidden)
       isHidden.current = true
     }
   }
 
   const setVisible = element => {
     if (isHidden.current) {
-      element.classList.remove(styles.hidden)
+      element.classList.remove(stylesRef.current.hidden)
       isHidden.current = false
     }
   }
