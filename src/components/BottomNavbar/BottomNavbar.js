@@ -26,7 +26,7 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ deltaY, direction, velocity, idle }) => {
+  const updateNav = ({ deltaY, direction, velocity }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -41,7 +41,7 @@ function BottomNavbar() {
       return setVisible(nav)
     }
 
-    if (idle) {
+    if (direction === 'idle') {
       velocityDisplay.current = false
     }
 
