@@ -33,8 +33,6 @@ const navRef = useRef(null)
     
     const distance = scrollY - scrollStart.current
 
-    console.log('distance: ', distance)
-
     if (velocity < 0.05) {
       scrollSpeed.current = false
     }
