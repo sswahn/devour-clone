@@ -1,12 +1,16 @@
 import { useContext, useEffect, useRef  } from 'react'
 import { Context } from '../../Provider'
+import useScrollEffect from '../../hooks/useScrollEffect'
 import scroll from '../../utilities/scrollEngine'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import styles from './header.module.css'
 
 const Header = () => {
-  const navRef = useRef(null)
+  const headerRef = useRef(null)
+  const { scrollEffect } = useScrollEffect()
+
+  /*
   const isHidden = useRef(false)
   const highVelocity = useRef(false)
   
@@ -59,9 +63,14 @@ const Header = () => {
       unsubscribe()
     }
   }, [])
+  */
+
+  useEffect(() => {
+    headerRef && scrollEffect(headerRef.current, styles.hidden)
+  }, [])
   
   return (
-    <header ref={navRef} className={styles.header}>
+    <header ref={headerRef} className={styles.header}>
       <div>
         <button type="button" aria-label="home">
           <HomeIcon />
