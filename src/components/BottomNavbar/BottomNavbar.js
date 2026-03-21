@@ -43,6 +43,7 @@ function BottomNavbar() {
 
     if (highVelocity.current && velocity === 0) {
       highVelocity.current = false
+      return
     }
 
     if (highVelocity.current) {
