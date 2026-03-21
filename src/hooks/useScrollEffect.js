@@ -7,7 +7,7 @@ function useScrollEffect() {
   const isHidden = useRef(false)
   const highVelocity = useRef(false)
 
-  const setElement = (element, style) => {
+  const scrollEffect = (element, style) => {
     elementRef.current = element
     styleRef.current = style
   }
@@ -63,7 +63,7 @@ function useScrollEffect() {
   }, [])
 
   return {
-    setElement
+    scrollEffect
   }
 }
 
