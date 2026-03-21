@@ -2,13 +2,13 @@
 
 let subscribers = new Set()
 let started = false
-let deltaY = 0
-let scrollStart = 0
-let direction = undefined
 let ticking = false
+let deltaY = 0
+let velocity = 0
+let direction = undefined
+let scrollStart = 0
 let prevScrollY = 0
 let prevTimestamp = performance.now()
-let velocity = 0
 
 function notify(data) {
   for (const fn of subscribers) {
