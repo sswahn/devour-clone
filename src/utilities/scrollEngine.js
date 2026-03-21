@@ -16,7 +16,7 @@ function notify(data) {
   }
 }
 
-function update() {
+function update(timestamp) {
   const scrollY = window.scrollY
 
   // Calculate change in Y
@@ -47,8 +47,8 @@ function update() {
 function onScroll(event) {
   // Throttle on scroll event
   if (!ticking) {
-    requestAnimationFrame(() => {
-      update()
+    requestAnimationFrame(timestamp => {
+      update(timestamp)
       ticking = false
     })
     ticking = true
