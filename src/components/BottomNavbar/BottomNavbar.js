@@ -26,7 +26,7 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ deltaY, scrollStart, scrollEnd, scrollDirection }) => {
+  const updateNav = ({ deltaY, scrollStart, scrollEnd, scrollDirection, scrollY, velocity }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -40,8 +40,11 @@ function BottomNavbar() {
     console.log('scrollStart: ', scrollStart)
     console.log('scrollEnd: ', scrollEnd)
     console.log('scrollDirection: ', scrollDirection)
+    console.log('velocity: ', velocity)
+
+    const distance = scrollY - scrollStart.current
     
-    if (scrollDirection === 'down' && deltaY > 200) {
+    if (scrollDirection === 'down' && distance > 200) {
       return setHidden(nav)
     }
 
