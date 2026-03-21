@@ -26,6 +26,10 @@ function BottomNavbar() {
     }
   }
 
+  // create a hook called useScrollEffect()
+  // returns a function: scrollEffect
+  // execute in useEffect: navRef && scrollEffect(navRef)
+  
   const updateNav = ({ deltaY, direction, velocity }) => {
     const nav = navRef.current
     if (!nav) {
