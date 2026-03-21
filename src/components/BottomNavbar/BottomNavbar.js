@@ -71,7 +71,7 @@ function BottomNavbar() {
   }, [])
   */
   useEffect(() => {
-    navRef && scrollEffect(navRef, styles.hidden)
+    navRef && scrollEffect(navRef.current, styles.hidden)
   }, [])
 
   return (
