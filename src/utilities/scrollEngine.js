@@ -6,6 +6,7 @@ let ticking = false
 let deltaY = 0
 let velocity = 0
 let direction = 'idle'
+let isIdle = true
 let scrollStart = 0
 let prevScrollY = 0
 let prevTimestamp = performance.now()
@@ -19,6 +20,8 @@ function notify(data) {
 function update(timestamp) {
   const scrollY = window.scrollY
 
+  isIdle = false
+  
   // Calculate change in Y
   deltaY = scrollY - scrollStart 
   
@@ -39,6 +42,7 @@ function update(timestamp) {
   notify({
     deltaY,
     direction,
+    isIdle,
     scrollY,
     velocity
   })
@@ -57,10 +61,12 @@ function onScroll(event) {
 
 function onScrollEnd(event) {
   scrollStart = window.scrollY
+  isIdel = true
   
   notify({
     deltaY,
     direction,
+    isIdle,
     scrollY: scrollStart,
     velocity: 0
   })
@@ -88,6 +94,7 @@ const scroll = {
     fn({
       deltaY,
       direction,
+      isIdel,
       scrollY: window.scrollY,
       velocity
     })
