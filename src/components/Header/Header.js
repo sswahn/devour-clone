@@ -6,7 +6,7 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import styles from './header.module.css'
 
 const Header = () => {
-const navRef = useRef(null)
+  const navRef = useRef(null)
   const isHidden = useRef(false)
   const highVelocity = useRef(false)
   
