@@ -5,8 +5,7 @@ let started = false
 let ticking = false
 let deltaY = 0
 let velocity = 0
-let direction = undefined
-let idle = true
+let direction = 'idle'
 let scrollStart = 0
 let prevScrollY = 0
 let prevTimestamp = performance.now()
@@ -25,7 +24,7 @@ function update(timestamp) {
   
   // Calculate current scroll direction
   const dY = scrollY - prevScrollY
-  direction = dY > 0 ? 'down' : dY < 0 ? 'up' : undefined
+  direction = dY > 0 ? 'down' : dY < 0 ? 'up' : 'idle'
 
   // Set prevScrollY for use in next frame
   prevScrollY = scrollY
@@ -41,8 +40,7 @@ function update(timestamp) {
     deltaY,
     direction,
     scrollY,
-    velocity,
-    idle
+    velocity
   })
 }
 
@@ -65,8 +63,7 @@ function onScrollEnd(event) {
     deltaY,
     direction: undefined,
     scrollY: scrollStart,
-    velocity: 0,
-    idle
+    velocity: 0
   })
 }
 
@@ -93,8 +90,7 @@ const scroll = {
       deltaY,
       direction,
       scrollY: window.scrollY,
-      velocity,
-      idle
+      velocity
     })
     
     return () => {
