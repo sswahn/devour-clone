@@ -35,7 +35,7 @@ function BottomNavbar() {
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
-    if (direction === 'down' && deltaY > 500) {
+    if (direction === 'down' && deltaY > 200) {
       return setHidden(nav)
     }
 
