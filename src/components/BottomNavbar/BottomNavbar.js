@@ -31,10 +31,6 @@ function BottomNavbar() {
     if (!nav) {
       return
     }
-    
-    // console.log('active deltaY: ', deltaY)
-    console.log('direction: ', direction)
-    console.log('velocity: ', velocity)
 
     if (!highVelocity.current && velocity > 70) {
       highVelocity.current = true
