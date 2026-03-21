@@ -1,11 +1,63 @@
 import { useRef, useEffect } from 'react'
 
 function useScrollEffect() {
-  const element = useRef(null)
+  const elementRef = useRef(null)
+  const isHidden = useRef(false)
+  const highVelocity = useRef(false)
 
-  const setElement = el => {
-    element.current = el
+  const setElement = element => {
+    elementRef.current = element
   }
+
+  const setHidden = element => {
+    if (!isHidden.current) {
+      element.classList.add(styles.hidden)
+      isHidden.current = true
+    }
+  }
+
+  const setVisible = element => {
+    if (isHidden.current) {
+      element.classList.remove(styles.hidden)
+      isHidden.current = false
+    }
+  }
+  
+  const updateElement = ({ deltaY, direction, velocity }) => {
+    const element = elementRef.current
+    if (!element) {
+      return
+    }
+
+    if (!highVelocity.current && velocity > 70) {
+      highVelocity.current = true
+      return setVisible(element)
+    }
+
+    if (highVelocity.current && velocity === 0) {
+      highVelocity.current = false
+      return
+    }
+
+    if (highVelocity.current) {
+      return
+    }
+
+    if (direction === 'down' && deltaY > 200) {
+      return setHidden(element)
+    }
+
+    if (direction === 'up') {
+      return setVisible(element)
+    }
+  }
+
+  useEffect(() => {
+    const unsubscribe = scroll.subscribe(updateElement)
+    return () => {
+      unsubscribe()
+    }
+  }, [])
 
   return {
     setElement
