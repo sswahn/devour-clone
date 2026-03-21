@@ -35,6 +35,10 @@ function BottomNavbar() {
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
+    if (velocity > 8) {
+      return setVisible(nav)
+    }
+
     if (direction === 'down' && deltaY > 200) {
       return setHidden(nav)
     }
