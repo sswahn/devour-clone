@@ -2,13 +2,11 @@
 
 let subscribers = new Set()
 let started = false
-let scrollEnd = undefined
+let deltaY = 0
 let scrollStart = 0
-let prevScrollY = window.scrollY
-let prevTime = performance.now()
-let prevVelocity = 0
+let scrollEnd = 0
 let ticking = false
-const SMOOTHING = 0.35
+let prevScrollY = 0
 
 function notify(data) {
   for (const fn of subscribers) {
@@ -18,32 +16,28 @@ function notify(data) {
 
 function update() {
   const scrollY = window.scrollY
-  const time = performance.now()
-  const deltaY = scrollY - prevScrollY
-  const deltaTime = Math.max(time - prevTime, 1) 
-  const raw = deltaY / deltaTime
-  const velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
-  const acceleration = (velocity - prevVelocity) / deltaTime
-  const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : undefined
+  
+  // Set scrollStart once
+  if (!scrollStart) {
+    scrollStart = scrollY
+  }
+  
+  // Calculate current scroll direction
+  const dY = scrollY - prevScrollY
+  scrollDirection = dY > 0 ? 'down' : dY < 0 ? 'up' : undefined
+
+  // Set prevScrollY for use in next frame
+  prevScrollY = scrollY
   
   notify({
-    direction,
+    deltaY,
+    scrollStart,
     scrollEnd,
-    scrollStart: scrollY,
-    scrollDistance: deltaY,
-    
-    acceleration,
-    scrollY,
-    time,
-    velocity
+    scrollDirection
   })
-
-  prevScrollY = scrollY
-  prevTime = time
-  prevVelocity = velocity
 }
 
-function onScroll() {
+function onScroll(event) {
   if (!ticking) {
     requestAnimationFrame(() => {
       update()
@@ -55,6 +49,16 @@ function onScroll() {
 
 function onScrollEnd(event) {
   scrollEnd = window.scrollY
+  deltaY = scrollEnd - scrollStart 
+  scrollStart = undefined
+  scrollDirection = undefined
+  
+  notify({
+    deltaY,
+    scrollStart,
+    scrollEnd,
+    scrollDirection
+  })
 }
 
 function start() {
@@ -77,13 +81,10 @@ const scroll = {
     subscribers.add(fn)
     
     fn({
-      acceleration: 0,
       deltaY: 0,
-      direction: 'idle',
-      isScrolling: false,
-      scrollY: prevScrollY,
-      time: prevTime,
-      velocity: prevVelocity
+      scrollStart: 0,
+      scrollEnd: 0,
+      scrollDirection: undefined
     })
     
     return () => {
