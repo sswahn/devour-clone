@@ -61,7 +61,7 @@ function onScroll(event) {
 
 function onScrollEnd(event) {
   scrollStart = window.scrollY
-  isIdel = true
+  isIdle = true
   
   notify({
     deltaY,
