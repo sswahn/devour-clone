@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react'
+import scroll from '../../utilities/scrollEngine'
 
 function useScrollEffect() {
   const elementRef = useRef(null)
