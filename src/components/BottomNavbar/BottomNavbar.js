@@ -71,7 +71,7 @@ function BottomNavbar() {
   }, [])
   */
   useEffect(() => {
-    navRef && setElement(navRef)
+    navRef && setElement(navRef, styles.hidden)
   }, [])
 
   return (
