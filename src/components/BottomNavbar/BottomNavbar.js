@@ -36,7 +36,7 @@ function BottomNavbar() {
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
-    if (!highVelocity.current && velocity > 10) {
+    if (!highVelocity.current && velocity > 50) {
       highVelocity.current = true
       return setVisible(nav)
     }
