@@ -18,11 +18,6 @@ function notify(data) {
 function update() {
   const scrollY = window.scrollY
   
-  // Set scrollStart once
-  if (!scrollStart) {
-    scrollStart = scrollY
-  }
-  
   // Calculate current scroll direction
   const dY = scrollY - prevScrollY
   scrollDirection = dY > 0 ? 'down' : dY < 0 ? 'up' : undefined
@@ -49,9 +44,14 @@ function onScroll(event) {
 }
 
 function onScrollEnd(event) {
+  // Scroll end point
   scrollEnd = window.scrollY
+  
+  // Calculate change in Y
   deltaY = scrollEnd - scrollStart 
-  scrollStart = undefined
+  
+  // Set new scroll start point
+  scrollStart = scrollEnd
   
   notify({
     deltaY,
