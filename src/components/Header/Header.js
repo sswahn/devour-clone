@@ -10,61 +10,6 @@ const Header = () => {
   const headerRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
 
-  /*
-  const isHidden = useRef(false)
-  const highVelocity = useRef(false)
-  
-  const setHidden = nav => {
-    if (!isHidden.current) {
-      nav.classList.add(styles.hidden)
-      isHidden.current = true
-    }
-  }
-
-  const setVisible = nav => {
-    if (isHidden.current) {
-      nav.classList.remove(styles.hidden)
-      isHidden.current = false
-    }
-  }
-
-  const updateNav = ({ deltaY, direction, velocity }) => {
-    const nav = navRef.current
-    if (!nav) {
-      return
-    }
-    
-   if (!highVelocity.current && velocity > 70) {
-      highVelocity.current = true
-      return setVisible(nav)
-    }
-
-    if (highVelocity.current && velocity === 0) {
-      highVelocity.current = false
-      return
-    }
-
-    if (highVelocity.current) {
-      return
-    }
-
-    if (direction === 'down' && deltaY > 200) {
-      return setHidden(nav)
-    }
-
-    if (direction === 'up') {
-      return setVisible(nav)
-    }
-  }
-
-  useEffect(() => {
-    const unsubscribe = scroll.subscribe(updateNav)
-    return () => {
-      unsubscribe()
-    }
-  }, [])
-  */
-
   useEffect(() => {
     headerRef && scrollEffect(headerRef.current, styles.hidden)
   }, [])
