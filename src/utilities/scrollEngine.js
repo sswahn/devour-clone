@@ -8,6 +8,8 @@ let scrollEnd = 0
 let scrollDirection = undefined
 let ticking = false
 let prevScrollY = 0
+let prevTimestamp = performance.now()
+let velocity = 0
 
 function notify(data) {
   for (const fn of subscribers) {
@@ -24,12 +26,21 @@ function update() {
 
   // Set prevScrollY for use in next frame
   prevScrollY = scrollY
+
+  // Calculate scroll velocity
+  const deltaTime = timestamp - prevTimestamp
+  velocity = deltaY / deltaTime
+
+  // Set prevTimestamp for use in next frame
+  prevTimestamp = timestamp
   
   notify({
     deltaY,
     scrollStart,
     scrollEnd,
-    scrollDirection
+    scrollDirection,
+    scrollY,
+    velocity
   })
 }
 
@@ -45,8 +56,10 @@ function onScroll(event) {
 }
 
 function onScrollEnd(event) {
+  const scrollY = window.scrollY
+  
   // Scroll end point
-  scrollEnd = window.scrollY
+  scrollEnd = scrollY
   
   // Calculate change in Y
   deltaY = scrollEnd - scrollStart 
@@ -58,7 +71,9 @@ function onScrollEnd(event) {
     deltaY,
     scrollStart,
     scrollEnd,
-    scrollDirection
+    scrollDirection,
+    scrollY,
+    velocity
   })
 }
 
@@ -85,7 +100,9 @@ const scroll = {
       deltaY,
       scrollStart,
       scrollEnd,
-      scrollDirection
+      scrollDirection,
+      scrollY: window.scrollY,
+      velocity
     })
     
     return () => {
