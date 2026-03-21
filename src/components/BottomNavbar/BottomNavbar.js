@@ -10,7 +10,7 @@ import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
   const navRef = useRef(null)
-  const { setElement } = useScrollEffect()
+  const { scrollEffect } = useScrollEffect()
 
   /*
   const isHidden = useRef(false)
@@ -71,7 +71,7 @@ function BottomNavbar() {
   }, [])
   */
   useEffect(() => {
-    navRef && setElement(navRef, styles.hidden)
+    navRef && scrollEffect(navRef, styles.hidden)
   }, [])
 
   return (
