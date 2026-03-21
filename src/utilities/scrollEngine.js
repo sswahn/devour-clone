@@ -4,7 +4,7 @@ let subscribers = new Set()
 let started = false
 let deltaY = 0
 let scrollStart = 0
-let scrollDirection = undefined
+let direction = undefined
 let ticking = false
 let prevScrollY = 0
 let prevTimestamp = performance.now()
@@ -67,7 +67,7 @@ function onScrollEnd(event) {
   
   notify({
     deltaY,
-    scrollDirection,
+    direction,
     scrollY,
     velocity
   })
@@ -94,7 +94,7 @@ const scroll = {
     
     fn({
       deltaY,
-      scrollDirection,
+      direction,
       scrollY: window.scrollY,
       velocity
     })
