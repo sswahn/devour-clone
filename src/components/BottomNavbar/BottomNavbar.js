@@ -10,7 +10,7 @@ import styles from './bottomnavbar.module.css'
 function BottomNavbar() {
   const navRef = useRef(null)
   const isHidden = useRef(false)
-  const scrollStart = useRef(0)
+  // const scrollStart = useRef(0)
 
   const setHidden = nav => {
     if (!isHidden.current) {
@@ -26,7 +26,7 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ deltaY, direction, scrollY, velocity }) => {
+  const updateNav = ({ deltaY, direction, velocity }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -36,18 +36,18 @@ function BottomNavbar() {
     // Its possible all i need is deltaY to calculate scroll leaps
     // start/stop scroll variables might not be needed.
     
-    console.log('deltaY: ', deltaY)
+    console.log('active deltaY: ', deltaY)
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
-    const distance = scrollY - scrollStart.current
+    //const distance = scrollY - scrollStart.current
     
-    if (scrollDirection === 'down' && distance > 200) {
+    if (scrollDirection === 'down' && deltaY > 200) {
       return setHidden(nav)
     }
 
     if (scrollDirection === 'up') {
-      scrollStart.current = scrollY
+    //  scrollStart.current = scrollY
       return setVisible(nav)
     }
   }
