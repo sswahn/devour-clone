@@ -37,8 +37,8 @@ function BottomNavbar() {
     // start/stop scroll variables might not be needed.
     
     console.log('deltaY: ', deltaY)
-    // console.log('scrollStart: ', scrollStart)
-    // console.log('scrollEnd: ', scrollEnd)
+    console.log('scrollStart: ', scrollStart)
+    console.log('scrollEnd: ', scrollEnd)
     console.log('scrollDirection: ', scrollDirection)
     
     if (scrollDirection === 'down' && deltaY > 200) {
