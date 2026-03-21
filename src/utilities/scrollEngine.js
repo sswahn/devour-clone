@@ -60,7 +60,7 @@ function onScrollEnd(event) {
   
   notify({
     deltaY,
-    direction: undefined,
+    direction,
     scrollY: scrollStart,
     velocity: 0
   })
