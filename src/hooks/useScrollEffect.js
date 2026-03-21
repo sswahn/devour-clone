@@ -51,6 +51,9 @@ function useScrollEffect() {
     }
 
     if (direction === 'down' && deltaY > 200) {
+
+      console.log('shouldnt have a .current: ', element)
+      
       return setHidden(element)
     }
 
