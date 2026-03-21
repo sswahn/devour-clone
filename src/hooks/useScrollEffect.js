@@ -32,7 +32,7 @@ function useScrollEffect() {
       return
     }
 
-    if (!highVelocity.current && velocity > 70) {
+    if (!highVelocity.current && velocity > 90) {
       highVelocity.current = true
       return setVisible(element)
     }
