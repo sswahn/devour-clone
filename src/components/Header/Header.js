@@ -8,7 +8,8 @@ import styles from './header.module.css'
 const Header = () => {
 const navRef = useRef(null)
   const isHidden = useRef(false)
-
+  const highVelocity = useRef(false)
+  
   const setHidden = nav => {
     if (!isHidden.current) {
       nav.classList.add(styles.hidden)
@@ -29,6 +30,20 @@ const navRef = useRef(null)
       return
     }
     
+   if (!highVelocity.current && velocity > 70) {
+      highVelocity.current = true
+      return setVisible(nav)
+    }
+
+    if (highVelocity.current && velocity === 0) {
+      highVelocity.current = false
+      return
+    }
+
+    if (highVelocity.current) {
+      return
+    }
+
     if (direction === 'down' && deltaY > 200) {
       return setHidden(nav)
     }
