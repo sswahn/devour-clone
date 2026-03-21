@@ -49,6 +49,7 @@ function BottomNavbar() {
     }
 
     if (scrollDirection === 'up') {
+      scrollStart.current = scrollY
       return setVisible(nav)
     }
   }
