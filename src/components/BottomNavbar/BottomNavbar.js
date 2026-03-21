@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import useScrollEffect from '../../hooks/useScrollEffect'
 import scroll from '../../utilities/scrollEngine'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
@@ -9,6 +10,9 @@ import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
   const navRef = useRef(null)
+  const { setElement } = useScrollEffect()
+
+  /*
   const isHidden = useRef(false)
   const highVelocity = useRef(false)
 
@@ -64,6 +68,10 @@ function BottomNavbar() {
     return () => {
       unsubscribe()
     }
+  }, [])
+  */
+  useEffect(() => {
+    navRef && setElement(navRef)
   }, [])
 
   return (
