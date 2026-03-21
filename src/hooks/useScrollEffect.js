@@ -13,6 +13,10 @@ function useScrollEffect() {
   }
 
   const setHidden = element => {
+
+    console.log('element: ', element)
+    console.log('element.classList: ', element.classList)
+    
     if (!isHidden.current) {
       element.classList.add(styleRef.current)
       isHidden.current = true
