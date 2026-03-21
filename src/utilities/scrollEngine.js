@@ -2,6 +2,8 @@
 
 let subscribers = new Set()
 let started = false
+let scrollEnd = undefined
+let scrollStart = 0
 let prevScrollY = window.scrollY
 let prevTime = performance.now()
 let prevVelocity = 0
@@ -22,14 +24,15 @@ function update() {
   const raw = deltaY / deltaTime
   const velocity =  prevVelocity * (1 - SMOOTHING) + raw * SMOOTHING
   const acceleration = (velocity - prevVelocity) / deltaTime
-  const isScrolling = Math.abs(deltaY) > 0.5
   const direction = deltaY > 0 ? 'down' : deltaY < 0 ? 'up' : undefined
   
   notify({
-    acceleration,
-    deltaY,
     direction,
-    isScrolling,
+    scrollEnd,
+    scrollStart: scrollY,
+    scrollDistance: deltaY,
+    
+    acceleration,
     scrollY,
     time,
     velocity
@@ -50,13 +53,19 @@ function onScroll() {
   }
 }
 
+function onScrollEnd(event) {
+  scrollEnd = window.scrollY
+}
+
 function start() {
   window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener("scrollend", onScrollEnd, { passive: true })
   started = true
 }
 
 function stop() {
   window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('scrollend', onScrollEnd)
   started = false
 }
 
