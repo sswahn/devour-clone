@@ -94,7 +94,7 @@ const scroll = {
     fn({
       deltaY,
       direction,
-      isIdel,
+      isIdle,
       scrollY: window.scrollY,
       velocity
     })
