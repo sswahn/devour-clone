@@ -56,20 +56,13 @@ function onScroll(event) {
 }
 
 function onScrollEnd(event) {
-  const scrollY = window.scrollY
-  
-  // Scroll end point (no use case atm)
-//  scrollEnd = scrollY
-  
-
-  // Set new scroll start point
-  scrollStart = scrollY
+  scrollStart = window.scrollY
   
   notify({
     deltaY,
-    direction,
-    scrollY,
-    velocity
+    direction: undefined,
+    scrollY: scrollStart,
+    velocity: 0
   })
 }
 
