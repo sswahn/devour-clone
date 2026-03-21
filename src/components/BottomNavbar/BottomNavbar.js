@@ -41,7 +41,7 @@ function BottomNavbar() {
       return setVisible(nav)
     }
 
-    if (highVelocity.current && velocity === 0) { // direction === 'idle' is unreliable
+    if (highVelocity.current && velocity === 0) {
       highVelocity.current = false
     }
 
