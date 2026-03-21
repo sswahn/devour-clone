@@ -51,7 +51,6 @@ function onScrollEnd(event) {
   scrollEnd = window.scrollY
   deltaY = scrollEnd - scrollStart 
   scrollStart = undefined
-  scrollDirection = undefined
   
   notify({
     deltaY,
