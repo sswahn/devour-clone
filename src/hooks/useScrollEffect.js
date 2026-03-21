@@ -64,10 +64,10 @@ function useScrollEffect() {
     return () => {
       unsubscribe()
     }
-  }, [elementRef.current])
+  }, [])
 
-  return {
-    scrollEffect
+  return { 
+    scrollEffect 
   }
 }
 
