@@ -26,7 +26,7 @@ function BottomNavbar() {
     }
   }
 
-  const updateNav = ({ deltaY, scrollStart, scrollEnd, scrollDirection, scrollY, velocity }) => {
+  const updateNav = ({ deltaY, direction, scrollY, velocity }) => {
     const nav = navRef.current
     if (!nav) {
       return
@@ -37,9 +37,7 @@ function BottomNavbar() {
     // start/stop scroll variables might not be needed.
     
     console.log('deltaY: ', deltaY)
-    console.log('scrollStart: ', scrollStart)
-    console.log('scrollEnd: ', scrollEnd)
-    console.log('scrollDirection: ', scrollDirection)
+    console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
     const distance = scrollY - scrollStart.current
