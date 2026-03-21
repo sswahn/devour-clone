@@ -34,6 +34,7 @@ function update() {
 }
 
 function onScroll(event) {
+  // throttle on scroll event
   if (!ticking) {
     requestAnimationFrame(() => {
       update()
