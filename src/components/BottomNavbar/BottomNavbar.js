@@ -41,7 +41,7 @@ function BottomNavbar() {
       return setVisible(nav)
     }
 
-    if (direction === 'idle') {
+    if (velocityDisplay.current && direction === 'idle') {
       velocityDisplay.current = false
     }
 
