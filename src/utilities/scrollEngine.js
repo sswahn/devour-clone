@@ -5,6 +5,7 @@ let started = false
 let deltaY = 0
 let scrollStart = 0
 let scrollEnd = 0
+let scrollDirection = undefined
 let ticking = false
 let prevScrollY = 0
 
@@ -83,7 +84,7 @@ const scroll = {
       deltaY: 0,
       scrollStart: 0,
       scrollEnd: 0,
-      scrollDirection: undefined
+      scrollDirection
     })
     
     return () => {
