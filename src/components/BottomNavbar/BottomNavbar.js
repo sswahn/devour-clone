@@ -32,7 +32,7 @@ function BottomNavbar() {
       return
     }
     
-    console.log('active deltaY: ', deltaY)
+    // console.log('active deltaY: ', deltaY)
     console.log('direction: ', direction)
     console.log('velocity: ', velocity)
 
