@@ -146,16 +146,24 @@
 /* Camera Button Bottom Nav */
 
 .ttWUEf9BWH6bUtBFQeVP {
+  background: orange;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  
 
   width: 60px;
   height: 60px;
   
-  background: orange;
-  border-radius: 50%;
-
-  z-index: 2000;
   
+  border-radius: 50%;
   border: 1px solid black;
+
+  z-index: 9999;
+  
+  
 }
 
 
