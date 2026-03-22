@@ -129,6 +129,17 @@
   justify-content: center;
 }
 
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/CameraButton/camerabutton.module.css ***!
+  \********************************************************************************************************************/
+/* Camera Button Bottom Nav */
+
+.ttWUEf9BWH6bUtBFQeVP {
+  border-radius: 50%;
+
+  border: 1px solid black;
+}
+
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/bottomnavbar.module.css ***!
   \*******************************************************************************************************/
