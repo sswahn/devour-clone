@@ -54,6 +54,7 @@
 @media (prefers-color-scheme: dark) {
   .header {
     background-color: var(--black);
+    color: var(--white);
   }
 }
   
