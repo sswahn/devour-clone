@@ -230,7 +230,7 @@
 /* css global classes */
 
 :root {
-  --dark-mode-background: black;
+  --dark-mode-background: #151b23;
   --dark-mode-color: white;
   --dark-mode-background-secondary: #111;
   --dark-mode-background-tertiary: #222;
