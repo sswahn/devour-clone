@@ -209,8 +209,8 @@
 
 .B5WSjkcfdXhkN7EZp0IH > div > div {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 166.67px;
+  justify-content: space-between;
+  max-width: 100px; /* 166.67px; */
   width: 100%;
 
   border: 1px dashed red;
