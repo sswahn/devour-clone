@@ -8,7 +8,8 @@
   display: flex;
   align-items: center; /* Vertically center */
   height: 60px;
-  background: #fff;
+  background-color: var(--white);
+  border-top: 1px solid #ffffff05;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 
@@ -50,3 +51,12 @@
   opacity: 0.7;
 }
 
+@media (prefers-color-scheme: dark) {
+  .bottomNavbar {
+    background-color: var(--black);
+  }
+
+  .bottomNavbar button svg {
+    fill: var(--white);
+  }
+}
