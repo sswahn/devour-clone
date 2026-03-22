@@ -1,7 +1,7 @@
 /* css global classes */
 
 :root {
-  --black: #151b23;
+  --black: #181818;
   --white: #f9fafb;
   --dark-mode-background: var(--black);
   --dark-mode-color: var(--white);
