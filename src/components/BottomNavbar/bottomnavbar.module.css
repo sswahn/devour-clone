@@ -38,7 +38,8 @@
 .bottomNavbar > div > div {
   display: flex;
   justify-content: space-between;
-
+  
+  
   border: 1px dashed red;
 }
 
