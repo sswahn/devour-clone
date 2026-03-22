@@ -38,7 +38,7 @@
 .bottomNavbar > div > div {
   display: flex;
   justify-content: space-between;
-  max-width: 128px; /* 166.67px; */
+  max-width: 118px; /* 166.67px; */
   width: 100%;
 }
 
