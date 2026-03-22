@@ -35,7 +35,13 @@
   width: 100%;
 }
 
-.bottomNavbar button {
+.bottomNavbar button:not(:nth-child(3)) {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 24px;
+
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
