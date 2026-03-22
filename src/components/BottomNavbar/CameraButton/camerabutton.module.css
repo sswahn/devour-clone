@@ -1,7 +1,10 @@
 /* Camera Button Bottom Nav */
 
 .cameraButton {
+  background: red;
   border-radius: 50%;
 
   border: 1px solid black;
 }
+
+
