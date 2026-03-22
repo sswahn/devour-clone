@@ -207,8 +207,15 @@
   width: 100%;
 }
 
+.B5WSjkcfdXhkN7EZp0IH > div > div {
+  display: flex;
+  justify-content: space-between;
 
-.B5WSjkcfdXhkN7EZp0IH button:not(:nth-child(3)) {
+  border: 1px dashed red;
+}
+
+
+.B5WSjkcfdXhkN7EZp0IH > div > div > button {
   background: none;
   border: none;
   padding: 0;
