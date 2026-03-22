@@ -35,7 +35,7 @@ function update(timestamp) {
 
   // Formula: (currentRawVelocity * smoothingFactor) + (PreviousSmoothedVelocity * (1 - Factor))
   // (smoothingFactor: 0 < factor <= 1. Smaller = smoother.
-  velocity = (rawVelocity * 0.2) + (velocity * (1 - smoothingFactor))
+  velocity = (rawVelocity * 0.2) + (velocity * (1 - 0.2))
 
   // Set prevTimestamp for use in next frame
   prevTimestamp = timestamp
