@@ -200,7 +200,7 @@
 
 .B5WSjkcfdXhkN7EZp0IH > div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 500px;
   padding: 0 16px;
@@ -210,8 +210,9 @@
 .B5WSjkcfdXhkN7EZp0IH > div > div {
   display: flex;
   justify-content: space-between;
-
-  width: 33.33%;
+  
+  max-width: 166.67px;
+  width: 100%;
   
   border: 1px dashed red;
 }
