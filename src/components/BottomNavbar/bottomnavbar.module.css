@@ -28,12 +28,13 @@
 
 .bottomNavbar > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 auto;
   max-width: 500px;
   padding: 0 16px;
   width: 100%;
 }
+
 
 .bottomNavbar button:not(:nth-child(3)) {
   background: none;
