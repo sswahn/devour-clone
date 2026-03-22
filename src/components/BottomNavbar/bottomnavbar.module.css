@@ -35,8 +35,15 @@
   width: 100%;
 }
 
+.bottomNavbar > div > div {
+  display: flex;
+  justify-content: space-between;
 
-.bottomNavbar button:not(:nth-child(3)) {
+  border: 1px dashed red;
+}
+
+
+.bottomNavbar > div > div > button) {
   background: none;
   border: none;
   padding: 0;
