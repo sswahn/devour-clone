@@ -208,26 +208,13 @@
 }
 
 .B5WSjkcfdXhkN7EZp0IH > div > div {
+  display: flex;
+  justify-content: space-evenly;
   max-width: 166.67px;
   width: 100%;
+
+  border: 1px dashed red;
 }
-
-.B5WSjkcfdXhkN7EZp0IH > div > div:first-child {
-    border: 1px dashed red;
-}
-
-.B5WSjkcfdXhkN7EZp0IH > div > div:first-child button:first-child {
-  margin-right: auto;
-
-    border: 1px dashed yellow;
-}
-
-.B5WSjkcfdXhkN7EZp0IH > div > div:first-child button:last-child {
-  margin: 0 auto;
-
-  border: 1px dashed magenta;
-}
-
 
 .B5WSjkcfdXhkN7EZp0IH > div > div > button {
   background: none;
