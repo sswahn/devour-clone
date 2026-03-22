@@ -32,10 +32,10 @@ function update(timestamp) {
   // Calculate scroll velocity
   const deltaTime = timestamp - prevTimestamp
   const rawVelocity = deltaY / deltaTime
-  const smoothingFactor = 0.2 // 0 < factor <= 1. Smaller = smoother.
 
-  // Formula: (currentRawVelocity * Factor) + (PreviousSmoothedVelocity * (1 - Factor))
-  velocity = (rawVelocity * smoothingFactor) + (velocity * (1 - smoothingFactor))
+  // Formula: (currentRawVelocity * smoothingFactor) + (PreviousSmoothedVelocity * (1 - Factor))
+  // (smoothingFactor: 0 < factor <= 1. Smaller = smoother.
+  velocity = (rawVelocity * 0.2) + (velocity * (1 - smoothingFactor))
 
   // Set prevTimestamp for use in next frame
   prevTimestamp = timestamp
