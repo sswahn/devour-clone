@@ -6,8 +6,6 @@
   max-width: 500px;
   overflow-x: hidden;
   width: 100%;
-
-  border: 1px dashed red;
 }
 
 @media (max-width: 500px) {
