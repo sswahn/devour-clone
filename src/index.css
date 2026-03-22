@@ -1,15 +1,17 @@
 /* css global classes */
 
 :root {
-  --dark-mode-background: #151b23;
-  --dark-mode-color: white;
+  --black: #151b23;
+  --white: #f9fafb;
+  --dark-mode-background: var(--black);
+  --dark-mode-color: var(--white);
   --dark-mode-background-secondary: #111;
   --dark-mode-background-tertiary: #222;
   --dark-mode-background-quaternary: #333;
   --dark-mode-border-color: white;
 
-  --light-mode-background: white;
-  --light-mode-color: black;  
+  --light-mode-background: var(--white);
+  --light-mode-color: var(--black);  
 }
 
 
