@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
-import CameraIcon from '../Icons/CameraIcon/CameraIcon'
+import CameraButton from './CameraButton/CameraButton'
 import BellIcon from '../Icons/BellIcon/BellIcon'
 import UserIcon from '../Icons/UserIcon/UserIcon'
 import styles from './bottomnavbar.module.css'
@@ -24,9 +24,7 @@ function BottomNavbar() {
         <button type="button" aria-label="search">
           <SearchIcon size="1em" />  
         </button>
-        <button type="button" aria-label="camera">
-          <CameraIcon />  
-        </button>
+        <CameraButton />
         <button type="button" aria-label="notifications">
           <BellIcon />  
         </button>
