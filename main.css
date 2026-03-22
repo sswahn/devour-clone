@@ -209,7 +209,7 @@
 
 .B5WSjkcfdXhkN7EZp0IH > div > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   
   max-width: 166.67px;
   width: 100%;
