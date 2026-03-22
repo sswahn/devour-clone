@@ -210,7 +210,8 @@
 .B5WSjkcfdXhkN7EZp0IH > div > div {
   display: flex;
   justify-content: space-between;
-
+  
+  
   border: 1px dashed red;
 }
 
