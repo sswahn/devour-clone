@@ -54,7 +54,10 @@
 @media (prefers-color-scheme: dark) {
   .header {
     background-color: var(--black);
-    color: var(--white);
+  }
+
+  .header button svg {
+    fill: var(--white);
   }
 }
   
