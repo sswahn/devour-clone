@@ -19,7 +19,7 @@
 
 .notificationsButton div {
   background-color: darkorange;
-  border: 1px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 50%;
   height: 10px;
   left: 14px;
