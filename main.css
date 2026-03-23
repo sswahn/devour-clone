@@ -213,13 +213,13 @@
   width: 100%;
 }
 
-.B5WSjkcfdXhkN7EZp0IH > div > div:not(:nth-of-type(3)) {
+.B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) {
   position: static;
 
   border: 1px dashed orange;
 }
 
-.B5WSjkcfdXhkN7EZp0IH > div > div > button:not(:nth-of-type(3)) {
+.B5WSjkcfdXhkN7EZp0IH button:not(:nth-of-type(3)) {
   background: none;
   border: none;
   padding: 0;
