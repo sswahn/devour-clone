@@ -161,6 +161,27 @@
 }
 
 /*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/SearchButton/searchbutton.module.css ***!
+  \********************************************************************************************************************/
+/* Bottom Nav Search Button */
+
+.QNXr3gLZIg51v1cLVlQX {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 24px;
+
+  /* Optional: subtle touch feedback */
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.QNXr3gLZIg51v1cLVlQX:active {
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+/*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/CameraButton/camerabutton.module.css ***!
   \********************************************************************************************************************/
 /* Camera Button Bottom Nav */
