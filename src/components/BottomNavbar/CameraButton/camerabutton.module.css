@@ -23,11 +23,12 @@
   border-bottom-color: transparent;
   border-right-color: transparent;
   transform: rotate(-45deg);
-  
-  
 }
 
-
+.cameraButton svg {
+  transform: rotate(45deg);
+  
+}
 
 .cameraButton svg path {
   filter: url(#inset-shadow);
