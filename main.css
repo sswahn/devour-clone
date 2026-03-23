@@ -189,7 +189,7 @@
 .ttWUEf9BWH6bUtBFQeVP {
   background: #663399;
   border-radius: 50%;
-  border: 5px solid #ffffff0d;
+  border: 5px solid var(--white); /* #ffffff0d; */
   cursor: pointer;
   font-size: 24px;
   padding: 0;
