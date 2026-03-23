@@ -2,10 +2,6 @@
 
 .cameraButton {
   background: #663399;
-  border: none;
-  border-top: 2px solid #ffffff20;
-  border-radius: 50%;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 24px;
   padding: 0;
@@ -20,6 +16,17 @@
 
   z-index: 9999;
 
+
+}
+
+.cameraButton:before {
+  border: none;
+  border-top: 2px solid #ffffff20;
+  border-radius: 50%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  content: "";
+  position: absolute;
+  inset: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
   transform: rotate(-45deg);
@@ -27,7 +34,7 @@
 
 .cameraButton svg {
   transform: rotate(45deg);
-  
+  z-index: 99999;
 }
 
 .cameraButton svg path {
