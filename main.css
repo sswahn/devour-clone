@@ -228,6 +228,8 @@
 
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
+
+  border: 1px dashed magenta;
 }
 
 .B5WSjkcfdXhkN7EZp0IH button:active {
