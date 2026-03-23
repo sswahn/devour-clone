@@ -22,6 +22,7 @@
   border: 1px solid var(--black);
   border-radius: 50%;
   height: 12px; /* 8px; */
+  width: 12px;
   left: 14px;
   position: absolute;
   top: 0;
