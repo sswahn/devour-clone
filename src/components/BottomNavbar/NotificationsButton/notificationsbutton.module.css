@@ -21,9 +21,9 @@
   background-color: darkorange;
   border: 1px solid var(--black);
   border-radius: 50%;
-  height: 12px;
+  height: 10px;
   left: 14px;
   position: absolute;
   top: 0;
-  width: 12px;
+  width: 10px;
 }
