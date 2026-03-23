@@ -2,7 +2,7 @@
 
 .cameraButton {
   background: #663399;
-  border-top: 2px solid #ffffff20;
+  border: 2px solid #ffffff20;
   
   /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); why does this make the element a square? */
   
