@@ -47,7 +47,7 @@
 }
 
 /* not selector not working on nth type */
-.bottomNavbar > div > div > button:not(:nth-of-type(3)) {
+.bottomNavbar button:not(:nth-of-type(3)) {
   background: none;
   border: none;
   padding: 0;
@@ -59,6 +59,8 @@
 
   border: 1px dashed magenta;
 }
+
+.bottomNavbar > div > div:nth-of-type(2) button:not(:nth-of-type(3)) {}
 
 .bottomNavbar button:active {
   transform: scale(0.85);
