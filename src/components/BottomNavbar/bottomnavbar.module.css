@@ -47,7 +47,8 @@
 
 .bottomNavbar > div > div:nth-of-type(2) {
   position: static;
-
+  flex-shrink: 0;
+  
   border: 1px dashed orange;
 }
 
