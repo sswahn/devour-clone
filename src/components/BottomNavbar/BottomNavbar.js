@@ -3,7 +3,7 @@ import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeButton from './HomeButton/HomeButton'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import CameraButton from './CameraButton/CameraButton'
-import BellIcon from '../Icons/BellIcon/BellIcon'
+import NotificationsButton from './NotificationsButton/NotificationsButton'
 import UserIcon from '../Icons/UserIcon/UserIcon'
 import styles from './bottomnavbar.module.css'
 
@@ -26,9 +26,7 @@ function BottomNavbar() {
           <CameraButton />
         </div>
         <div>
-          <button type="button" aria-label="notifications">
-            <BellIcon />  
-          </button>
+          <NotificationsButton />
           <button type="button" aria-label="profile">
             <UserIcon size="1em" />  
           </button>
