@@ -209,11 +209,12 @@
   border-bottom-color: transparent;
   border-right-color: transparent;
   transform: rotate(-45deg);
-  
-  
 }
 
-
+.ttWUEf9BWH6bUtBFQeVP svg {
+  transform: rotate(45deg);
+  
+}
 
 .ttWUEf9BWH6bUtBFQeVP svg path {
   filter: url(#inset-shadow);
