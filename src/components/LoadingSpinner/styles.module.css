@@ -15,7 +15,6 @@
   /* position: static !important; */
   width: 50px;
 
-  /* should break the following out to a global class and give access to mode color */
   fill: var(--white);
   position: absolute;
   top: 50%;
