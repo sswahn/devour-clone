@@ -312,30 +312,6 @@
   width: 136px;
 }
 
-/* move button styles into their own components */
-.B5WSjkcfdXhkN7EZp0IH button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 24px;
-
-  /* Optional: subtle touch feedback */
-  transition: transform 0.15s ease, opacity 0.15s ease;
-
-  border: 1px dashed magenta;
-}
-
-.B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) button{
-  border: 0;
-}
-
-
-.B5WSjkcfdXhkN7EZp0IH button:active {
-  transform: scale(0.85);
-  opacity: 0.7;
-}
-
 @media (prefers-color-scheme: dark) {
   .B5WSjkcfdXhkN7EZp0IH {
     background-color: var(--black);
