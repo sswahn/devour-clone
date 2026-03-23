@@ -188,8 +188,9 @@
 
 .ttWUEf9BWH6bUtBFQeVP {
   background: #663399;
-  border-radius: 50%;
+  border: none;
   border-top: 2px solid #ffffff20;
+  border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 24px;
