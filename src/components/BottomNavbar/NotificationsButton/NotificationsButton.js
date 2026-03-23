@@ -1,7 +1,6 @@
 import BellIcon from '../../Icons/BellIcon/BellIcon'
 import styles from './notificationsbutton.module.css'
 
-
 function NotificationsButton() {
 
   const onClick = event => {
