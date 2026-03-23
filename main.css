@@ -199,7 +199,7 @@
 
 .B5WSjkcfdXhkN7EZp0IH > div {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin: 0 auto;
   max-width: 500px;
   padding: 0 16px;
@@ -208,6 +208,7 @@
 
 .B5WSjkcfdXhkN7EZp0IH > div > div {
   display: flex;
+  flex: 1;
   justify-content: space-between;
   max-width: 108px; /* 166.67px; */
   width: 100%;
@@ -224,7 +225,6 @@
 .B5WSjkcfdXhkN7EZp0IH button:not(:nth-of-type(3)) {
   background: none;
   border: none;
-  flex: 1;
   padding: 0;
   cursor: pointer;
   font-size: 24px;
