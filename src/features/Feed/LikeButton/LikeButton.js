@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import server from '../../../utilities/server'
-import config from '../../../config'
+import { config } from '../../../config'
 // import icons
 
 function LikeButton({ likedByUser }) {
