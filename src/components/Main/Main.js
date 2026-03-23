@@ -26,6 +26,8 @@ function Main() {
     <main className={styles.main}>
 
       <div style={{ height: '8000px' }}></div>
+
+      <LoadingSpinner />
     
       <Feed />
       <BottomNavbar />
