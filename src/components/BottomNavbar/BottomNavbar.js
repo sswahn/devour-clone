@@ -20,10 +20,7 @@ function BottomNavbar() {
       <div>
         <div>
           <HomeButton />  
-      
-          <button type="button" aria-label="search">
-            <SearchIcon size="1em" />  
-          </button>
+          <SearchButton />
         </div>
         <div>
           <CameraButton />
