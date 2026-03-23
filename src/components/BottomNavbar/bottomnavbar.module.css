@@ -39,8 +39,10 @@
   display: flex;
   flex: 1;
   justify-content: space-between;
-  max-width: 108px; /* 166.67px; */
+  /*
+  max-width: 108px;
   width: 100%;
+  */
 
   border: 1px dashed red;
 }
@@ -48,6 +50,8 @@
 .bottomNavbar > div > div:nth-of-type(2) {
   position: static;
   flex-shrink: 0;
+
+  width: 108px;
   
   border: 1px dashed orange;
 }
