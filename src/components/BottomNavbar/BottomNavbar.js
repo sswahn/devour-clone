@@ -26,8 +26,9 @@ function BottomNavbar() {
             <SearchIcon size="1em" />  
           </button>
         </div>
-        <div></div>
-        <CameraButton />
+        <div>
+          <CameraButton />
+        </div>
         <div>
           <button type="button" aria-label="notifications">
             <BellIcon />  
