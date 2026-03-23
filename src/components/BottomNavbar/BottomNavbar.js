@@ -4,7 +4,7 @@ import HomeButton from './HomeButton/HomeButton'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import CameraButton from './CameraButton/CameraButton'
 import NotificationsButton from './NotificationsButton/NotificationsButton'
-import UserIcon from '../Icons/UserIcon/UserIcon'
+import ProfileButton from './ProfileButton/ProfileButton'
 import styles from './bottomnavbar.module.css'
 
 function BottomNavbar() {
@@ -27,9 +27,7 @@ function BottomNavbar() {
         </div>
         <div>
           <NotificationsButton />
-          <button type="button" aria-label="profile">
-            <UserIcon size="1em" />  
-          </button>
+          <ProfileButton />
         </div>
       </div>
     </nav>
