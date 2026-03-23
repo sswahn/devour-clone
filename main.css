@@ -110,7 +110,7 @@
   width: 50px;
 
   /* should break the following out to a global class and give access to mode color */
-  fill: #000000;
+  fill: var(--white);
   position: absolute;
   top: 50%;
   left: 50%;
