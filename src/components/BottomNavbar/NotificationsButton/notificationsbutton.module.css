@@ -15,3 +15,13 @@
   transform: scale(0.85);
   opacity: 0.7;
 }
+
+.notificationsButton div {
+  background-color: darkorange;
+  border-radius: 50%;
+  height: 8px;
+  left: 30px;
+  position: absolute;
+  top: 15px;
+  width: 8px;
+}
