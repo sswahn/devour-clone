@@ -26,6 +26,7 @@ function BottomNavbar() {
             <SearchIcon size="1em" />  
           </button>
         </div>
+        <div></div>
         <CameraButton />
         <div>
           <button type="button" aria-label="notifications">
