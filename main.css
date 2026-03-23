@@ -232,9 +232,10 @@
 
 .KACZHkvAGjrBlXXWUlEQ div {
   background-color: darkorange;
+  border: 1px solid var(--black);
   border-radius: 50%;
   height: 8px;
-  left: 18px;
+  left: 14px;
   position: absolute;
   top: 0;
   width: 8px;
