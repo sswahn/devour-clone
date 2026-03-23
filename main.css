@@ -218,7 +218,7 @@
 }
 
 /* not selector not working on nth type */
-.B5WSjkcfdXhkN7EZp0IH > div > div > button:not(:nth-of-type(3)) {
+.B5WSjkcfdXhkN7EZp0IH button:not(:nth-of-type(3)) {
   background: none;
   border: none;
   padding: 0;
@@ -230,6 +230,8 @@
 
   border: 1px dashed magenta;
 }
+
+.B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) button:not(:nth-of-type(3)) {}
 
 .B5WSjkcfdXhkN7EZp0IH button:active {
   transform: scale(0.85);
