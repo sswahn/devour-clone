@@ -50,7 +50,7 @@
   border: 1px dashed orange;
 }
 
-.bottomNavbar > div > div button:not(:nth-of-type(3)) {
+.bottomNavbar button:not(:nth-of-type(3)) {
   background: none;
   border: none;
   padding: 0;
