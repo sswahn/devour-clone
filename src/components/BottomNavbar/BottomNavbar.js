@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeButton from './HomeButton/HomeButton'
-import SearchIcon from '../Icons/SearchIcon/SearchIcon'
+import SearchButton from './SearchButton/SearchButton'
 import CameraButton from './CameraButton/CameraButton'
 import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
