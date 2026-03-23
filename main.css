@@ -234,7 +234,7 @@
   background-color: darkorange;
   border: 1px solid var(--black);
   border-radius: 50%;
-  height: 8px;
+  height: 12px; /* 8px; */
   left: 14px;
   position: absolute;
   top: 0;
