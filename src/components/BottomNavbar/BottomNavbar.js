@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
-import HomeIcon from '../Icons/HomeIcon/HomeIcon'
+import HomeButton from './HomeButton/HomeButton'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import CameraButton from './CameraButton/CameraButton'
 import BellIcon from '../Icons/BellIcon/BellIcon'
@@ -19,9 +19,8 @@ function BottomNavbar() {
     <nav ref={navRef} className={styles.bottomNavbar} aria-label="primary navigation">
       <div>
         <div>
-          <button type="button" aria-label="home">
-            <HomeIcon />  
-          </button>
+          <HomeButton />  
+      
           <button type="button" aria-label="search">
             <SearchIcon size="1em" />  
           </button>
