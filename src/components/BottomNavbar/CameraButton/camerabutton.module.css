@@ -19,8 +19,15 @@
   height: 64px;
 
   z-index: 9999;
+
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(-45deg);
+  
   
 }
+
+
 
 .cameraButton svg path {
   filter: url(#inset-shadow);
