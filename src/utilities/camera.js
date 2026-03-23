@@ -156,11 +156,14 @@ const camera = {
       throw new TypeError('camera.stopRecording: second argument must be an array.')
     }
     if (mediaRecorder.state === 'inactive') {
-      return Promise.reject(new Error('camera.stopRecording: MediaRecorder is already stopped.'));
+      throw new Error('camera.stopRecording: MediaRecorder is already stopped.')
     }
     return new Promise((resolve, reject) => {
       let settled = false
-      const settle = (fn) => (...args) => {
+
+      // test this with and without settled
+      // make sure this is working.
+      const settle = fn => (...args) => {
         if (settled) {
           return
         }
