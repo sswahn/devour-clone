@@ -211,6 +211,8 @@
   justify-content: space-between;
   max-width: 108px; /* 166.67px; */
   width: 100%;
+
+  border: 1px dashed red;
 }
 
 .B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) {
