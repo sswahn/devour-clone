@@ -27,7 +27,7 @@ function Main() {
 
       <div style={{ height: '8000px' }}></div>
 
-      <LoadingSpinner />
+      <LoadingSpinner size="2em" />
     
       <Feed />
       <BottomNavbar />
