@@ -5,7 +5,7 @@ function SearchButton() {
 
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(50)
+      navigator.vibrate(45)
     }
     
     return
