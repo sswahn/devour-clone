@@ -13,7 +13,7 @@ function SearchButton() {
   
   return (
     <button className={styles.searchButton} onClick={onClick} type="button" aria-label="search">
-      <SearchIcon size="1em" />  
+      <SearchIcon />  
     </button>
   )
 }
