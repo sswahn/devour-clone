@@ -45,8 +45,6 @@ body, #root {
 
 svg {
   shape-rendering: crispEdges;
-
-  border: 1px dashed yellow;
 }
 
 
