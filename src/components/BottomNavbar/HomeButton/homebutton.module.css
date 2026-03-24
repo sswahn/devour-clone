@@ -2,13 +2,15 @@
 
 .homeButton {
   background: none;
-  border: 1px solid red;
-  border-radius: 5px;
   padding: 0;
   cursor: pointer;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none; 
+
+  /* copy to active state: */
+  border: 1px solid red;
+  border-radius: 5px;
 }
 
 /* instead of scaling have the button inset as if being pressed */
