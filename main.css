@@ -146,7 +146,8 @@
 
 .sTcNuBJf94dy6VffWsvE {
   background: none;
-  border: none;
+  border: 1px solid red;
+  border-radius: 5px;
   padding: 0;
   cursor: pointer;
   /* Optional: subtle touch feedback */
