@@ -37,7 +37,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-body, #root {
+html, body, #root {
   height: 100%;
   overflow-x: hidden;
   width: 100%;
