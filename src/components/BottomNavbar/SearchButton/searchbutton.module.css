@@ -3,11 +3,14 @@
 .searchButton {
   background: none;
   border: none;
-  padding: 5px;
+  padding: 0;
   cursor: pointer;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none;
+
+  width: 30px;
+  height: 30px;
 
   /* copy to active state: */
   border: 1px solid red;
