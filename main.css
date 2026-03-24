@@ -371,16 +371,11 @@
 * {
   margin: 0;
   padding: 0;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-/*
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-*/
 
 html {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
