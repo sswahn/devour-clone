@@ -9,6 +9,10 @@
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none; 
+
+  /* copy to active state: */
+  border: 1px solid red;
+  border-radius: 5px;
 }
 
 .notificationsButton:active {
