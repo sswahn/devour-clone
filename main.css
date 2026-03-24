@@ -104,11 +104,7 @@
 .JSakJNmRTraPgvlafis2 {
   animation: hM4c7jIc3EU9mwjKA04L .7s linear infinite;
   display: block;
-  height: 30px;
-  margin: 0 auto;  /* 26.5px auto; */
-  /* position: static !important; */
-  width: 50px;
-
+  margin: 0 auto;
   fill: var(--white);
   position: absolute;
   top: 50%;
