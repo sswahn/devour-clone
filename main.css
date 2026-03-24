@@ -172,10 +172,12 @@
 /* Bottom Nav Search Button */
 
 .QNXr3gLZIg51v1cLVlQX {
+  align-items: center; 
   background: none;
-  border: none;
-  padding: 0;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
+  padding: 0;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none;
