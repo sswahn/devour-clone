@@ -4,6 +4,9 @@ import styles from './notificationsbutton.module.css'
 function NotificationsButton() {
 
   const onClick = event => {
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(45)
+    }
     return
   }
   
