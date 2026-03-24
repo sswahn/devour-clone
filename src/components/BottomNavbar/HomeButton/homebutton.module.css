@@ -2,7 +2,7 @@
 
 .homeButton {
   background: none;
-  padding: 5px 5px 0 5px;
+  padding: 0 5px;
   cursor: pointer;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
