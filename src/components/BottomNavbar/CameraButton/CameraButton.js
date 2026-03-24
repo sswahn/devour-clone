@@ -5,7 +5,7 @@ function CameraButton() {
 
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(45)
+      navigator.vibrate(50)
     }
     return
   }
