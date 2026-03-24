@@ -4,6 +4,9 @@ import styles from './profilebutton.module.css'
 function ProfileButton() {
 
   const onClick = event => {
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(45)
+    }
     return
   }
   
