@@ -3,7 +3,7 @@
 .searchButton {
   background: none;
   border: none;
-  padding: 0;
+  padding: 5px;
   cursor: pointer;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
