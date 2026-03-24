@@ -28,7 +28,8 @@
   border: 2px solid var(--black);
   border-radius: 50%;
   height: 10px;
-  left: 14px;
+  /* left: 14px; */
+  right: 0;
   position: absolute;
   top: 0;
   width: 10px;
