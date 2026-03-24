@@ -315,7 +315,7 @@
 .B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) {
   position: static;
   flex-shrink: 0;
-  width: 136px;
+  width: 152px;
 }
 
 @media (prefers-color-scheme: dark) {
