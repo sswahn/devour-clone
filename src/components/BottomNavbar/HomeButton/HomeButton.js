@@ -4,6 +4,10 @@ import styles from './homebutton.module.css'
 function HomeButton() {
 
   const onClick = event => {
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(100)
+    }
+    
     return
   }
   
