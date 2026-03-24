@@ -227,11 +227,14 @@
 /* Bottom Nav Notifications Button */
 
 .KACZHkvAGjrBlXXWUlEQ {
+  align-items: center; 
   background: none;
   border: none;
-  padding: 5px;
-  position: relative;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
+  padding: 0;
+  position: relative;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none; 
