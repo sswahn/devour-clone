@@ -253,8 +253,6 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 24px;
-
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none; 
