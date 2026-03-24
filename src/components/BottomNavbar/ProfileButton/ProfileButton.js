@@ -9,7 +9,7 @@ function ProfileButton() {
   
   return (
     <button className={styles.profileButton} onClick={onClick} type="button" aria-label="profile">
-      <UserIcon size="1em" />  
+      <UserIcon />  
     </button>
   )
 }
