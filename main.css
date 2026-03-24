@@ -406,9 +406,11 @@ body, #root {
   width: 100%;
 }
 
-
-
-
+/*
+svg {
+  shape-rendering: crispEdges;
+}
+*/
 
 .tooltip {
   background-color: #575a62;
