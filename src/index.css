@@ -40,6 +40,8 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   scroll-behavior: smooth;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 
