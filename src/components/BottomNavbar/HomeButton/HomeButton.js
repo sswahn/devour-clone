@@ -4,9 +4,10 @@ import styles from './homebutton.module.css'
 function HomeButton() {
 
   const onClick = event => {
-    // make hook?
+    // Try 50 if this is too high (last working value was 100)
+    // "10-20ms may be too subtle for most users."
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(75) // try 50 if this is too high (last working value was 100)
+      navigator.vibrate(75) 
     }
     
     return
