@@ -43,11 +43,12 @@ body, #root {
   width: 100%;
 }
 
-/*
 svg {
   shape-rendering: crispEdges;
+
+  border: 1px dashed yellow;
 }
-*/
+
 
 .tooltip {
   background-color: #575a62;
