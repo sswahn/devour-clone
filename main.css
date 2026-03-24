@@ -422,7 +422,9 @@ html, body, #root {
 }
 
 
-
+button {
+  touch-action: manipulation;
+}
 
 
 .tooltip {
