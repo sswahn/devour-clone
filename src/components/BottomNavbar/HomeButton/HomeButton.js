@@ -7,7 +7,7 @@ function HomeButton() {
     // Try 50 if this is too high (last working value was 100)
     // "10-20ms may be too subtle for most users."
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(75) 
+      navigator.vibrate(50) 
     }
     
     return
