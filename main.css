@@ -388,12 +388,6 @@ html {
   font-feature-settings: "cv11", "ss01";
 }
 
-body, #root {
-  height: 100%;
-  overflow-x: hidden;
-  width: 100%;
-}
-
 body {
   background-color: transparent;
   padding-top: env(safe-area-inset-top);
@@ -404,6 +398,14 @@ body {
 
   -webkit-tap-highlight-color: transparent;
 }
+
+body, #root {
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 
 
 
