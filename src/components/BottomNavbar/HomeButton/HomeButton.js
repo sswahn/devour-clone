@@ -6,7 +6,7 @@ function HomeButton() {
   const onClick = event => {
     // make hook?
     if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(75)
+      navigator.vibrate(75) // try 50 if this is too high (last working value was 100)
     }
     
     return
