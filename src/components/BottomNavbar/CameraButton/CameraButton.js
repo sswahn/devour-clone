@@ -4,7 +4,10 @@ import styles from './camerabutton.module.css'
 function CameraButton() {
 
   const onClick = event => {
-    // open camera
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(45)
+    }
+    return
   }
   
   return (
