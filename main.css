@@ -145,9 +145,12 @@
 /* Bottom Nav Home Button */
 
 .sTcNuBJf94dy6VffWsvE {
+  align-items: center; 
   background: none;
-  padding: 0 5px;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
+  padding: 0;
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
   user-select: none; 
