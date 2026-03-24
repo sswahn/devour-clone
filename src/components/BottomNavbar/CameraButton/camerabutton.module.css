@@ -3,7 +3,7 @@
 .cameraButton {
   background: #663399;
   border: 2px solid #ffffff20;
-  
+  border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   
   cursor: pointer;
