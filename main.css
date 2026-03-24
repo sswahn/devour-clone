@@ -252,9 +252,9 @@
   border-radius: 50%;
   height: 10px;
   /* left: 14px; */
-  right: 0;
+  right: 2px;
   position: absolute;
-  top: 0;
+  top: 5px;
   width: 10px;
 }
 
