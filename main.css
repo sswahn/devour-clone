@@ -268,10 +268,6 @@
   /* Optional: subtle touch feedback */
   transition: opacity 0.15s ease;
   user-select: none;
-
-  /* copy to active state: */
-  border: 1px solid red;
-  border-radius: 5px;
 }
 
 .Ydz37H441RIdjEsXI7vK:active {
