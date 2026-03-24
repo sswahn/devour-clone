@@ -10,6 +10,7 @@
 
   /* Optional: subtle touch feedback */
   transition: transform 0.15s ease, opacity 0.15s ease;
+  user-select: none; 
 }
 
 .notificationsButton:active {
