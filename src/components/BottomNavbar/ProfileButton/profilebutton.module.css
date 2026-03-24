@@ -3,6 +3,7 @@
 .profileButton {
   align-items: center; 
   background: none;
+  border: none;
   display: flex;
   justify-content: center;
   cursor: pointer;
