@@ -31,7 +31,7 @@
 .cameraButton::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -5px;
   border-radius: 50%;
   border: 5px solid #fff;
   
