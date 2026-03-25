@@ -4,7 +4,7 @@
   "description": "Share video and locations from the best dining experiences around the world.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
   "background_color": "#181818",
   "theme_color": "#181818",
