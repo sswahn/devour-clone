@@ -4,10 +4,15 @@ import styles from './camerabutton.module.css'
 function CameraButton() {
 
   const onClick = event => {
-    if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(50)
+    try {
+      console.error('Requesting fullscreen.')
+      await document.documentElement.requestFullscreen()
+      await screen.orientation.lock('portrait')
+      console.log('Locked to portrait.')
+      dispatch({ type: 'camera', payload: true })
+    } catch (error) {
+      console.error('Fullscreen failed:', error)
     }
-    return
   }
   
   return (
