@@ -185,11 +185,14 @@
 /* Camera Button Bottom Nav */
 
 .ttWUEf9BWH6bUtBFQeVP {
+  align-items: center; 
   background: #663399;
-  border: 2px solid #ffffff20;
+  /* border: 2px solid #ffffff20; */
   border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   /* outline: 1px solid white; */
   
@@ -206,6 +209,18 @@
 
   z-index: 9999;
   
+}
+
+
+.ttWUEf9BWH6bUtBFQeVP::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  
+  /* Only show top half */
+  clip-path: inset(0 0 50% 0);
 }
 
 /*!**********************************************************************************************************************************!*\
