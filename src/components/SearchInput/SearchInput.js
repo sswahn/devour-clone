@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
+import styles from './searchform.module.css'
 
-function SearchInput() {
+function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
@@ -21,10 +22,14 @@ function SearchInput() {
     // escape clears + closes if already cleared
     return
   }
+
+  const onSubmit = event => {
+    event.preventDefault()
+  }
   
 
   return (
-    <form>
+    <form className={styles.searchForm}>
       <input 
         ref={inputRef}
         type="search"
@@ -39,3 +44,5 @@ function SearchInput() {
     </form>
   )
 }
+
+export default SearchForm
