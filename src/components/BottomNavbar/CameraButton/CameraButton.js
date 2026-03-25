@@ -3,7 +3,7 @@ import styles from './camerabutton.module.css'
 
 function CameraButton() {
 
-  const onClick = event => {
+  const onClick = async event => {
     return
     try {
       console.error('Requesting fullscreen.')
