@@ -38,8 +38,12 @@ const Sidebar = () => {
   
   const handleOpenCamera = async event => {
     try {
+      
       console.error('Requesting fullscreen.')
       await document.documentElement.requestFullscreen()
+      await screen.orientation.lock('portrait')
+      console.log('Locked to portrait.')
+      
     } catch (error) {
       console.error('Fullscreen failed:', error)
     } finally {
