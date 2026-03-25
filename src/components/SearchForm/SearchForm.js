@@ -5,7 +5,8 @@ function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
-  const handleCloseInput = () => {
+  const clearCloseInput = () => {
+    // first click clears, second closes
     return
   }
   
@@ -20,6 +21,7 @@ function SearchForm() {
     // handle for enter key (prolly ignore it)
     // handle tab to suggestions
     // escape clears + closes if already cleared
+    // escape -> clearCloseInput()
     return
   }
 
@@ -40,7 +42,7 @@ function SearchForm() {
         disabled={disabled}
         aria-label="search input"  
       />
-      <button type="button" onClick={handleClearInput} aria-label="clear search">x</button>
+      <button type="button" onClick={clearCloseInput} aria-label="clear search">x</button>
     </form>
   )
 }
