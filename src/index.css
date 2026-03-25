@@ -5,6 +5,7 @@
   
   --black: #181818;
   --white: #f9fafb;
+  
   --dark-mode-background: var(--black);
   --dark-mode-color: var(--white);
   --dark-mode-background-secondary: #111;
@@ -21,11 +22,9 @@
   padding: 0;
 }
 
-/*
 *, *::before, *::after {
   box-sizing: border-box;
 }
-*/
 
 html {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -35,7 +34,8 @@ html {
 
 body {
   background-color: transparent;
-  
+
+  min-height: 0;
   /* min-height: 100dvh; */
   
   padding: 
