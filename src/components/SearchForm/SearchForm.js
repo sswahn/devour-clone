@@ -19,10 +19,20 @@ function SearchForm() {
   
   const onKeyDown = event => {
     // handle for enter key (prolly ignore it)
-    // handle tab to suggestions
-    // escape clears + closes if already cleared
+    if (event.key === 'Enter') {
+      return
+    }
+    
+    // handle key select of suggestions
+    // Tab and arrow keys
+    if (event.key === 'Tab') {}
+    if (event.key === 'ArrowDown') {}
+    if (event.key === 'ArrowUp') {}
+    
+    // escape clears input then closes if already cleared
     // escape -> clearCloseInput()
-    // arrow keys up and down suggestions
+    if (event.key === 'Escape') {}
+    
     
     return
   }
