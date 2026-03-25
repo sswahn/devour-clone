@@ -1,7 +1,7 @@
 {
   "name": "devour.social",
   "short_name": "devour",
-  "description": "A modern mobile web application.",
+  "description": "Share video and locations from the best dining experiences around the world.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
