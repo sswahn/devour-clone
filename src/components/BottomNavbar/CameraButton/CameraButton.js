@@ -4,6 +4,7 @@ import styles from './camerabutton.module.css'
 function CameraButton() {
 
   const onClick = event => {
+    return
     try {
       console.error('Requesting fullscreen.')
       await document.documentElement.requestFullscreen()
