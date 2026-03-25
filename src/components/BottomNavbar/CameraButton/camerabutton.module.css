@@ -4,12 +4,6 @@
   align-items: center; 
   background: #663399;
   /* border: 2px solid #ffffff20; */
-
-  border-top: 4px solid #fff;
-  border-left: 4px solid #fff;
-  border-right: 4px solid #fff;
-  border-bottom: 0; /* No border on the bottom */
-  
   border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -31,4 +25,16 @@
 
   z-index: 9999;
   
+}
+
+
+.cameraButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  
+  /* Only show top half */
+  clip-path: inset(0 0 50% 0);
 }
