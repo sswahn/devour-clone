@@ -212,15 +212,29 @@
 }
 
 
-.ttWUEf9BWH6bUtBFQeVP::before {
+.Z3D7efgkMhazZDgO3oRc::before {
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: calc(-1 * var(--border-width));
   border-radius: 50%;
-  border: 1px solid #fff;
+
+  background: conic-gradient(
+    white 0deg 180deg,
+    transparent 180deg 360deg
+  );
+
+  /* cut out the center to make it a ring */
+  -webkit-mask: radial-gradient(
+    closest-side,
+    transparent calc(100% - var(--border-width)),
+    black calc(100% - var(--border-width))
+  );
   
-  /* Only show top half */
-  clip-path: inset(0 0 50% 0);
+  mask: radial-gradient(
+    closest-side,
+    transparent calc(100% - var(--border-width)),
+    black calc(100% - var(--border-width))
+  );
 }
 
 /*!**********************************************************************************************************************************!*\
