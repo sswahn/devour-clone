@@ -19,9 +19,13 @@ const Header = () => {
         <button type="button" aria-label="home">
           <HomeIcon />
         </button>
+  
+      {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
+      {/*
         <button type="button" aria-label="open search bar" aria-controls="search bar" aria-expanded="false">
           <SearchIcon />
         </button>
+      */}
       </div>
     </header>
   )
