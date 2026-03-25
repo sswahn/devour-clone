@@ -187,9 +187,11 @@
 .ttWUEf9BWH6bUtBFQeVP {
   align-items: center; 
   background: #663399;
-  /* border: 2px solid #ffffff20; */
+  border: none;
+  border-bottom: 2px solid #fff; /* #ffffff20; */
+  border-right: 2px solid #fff; /* #ffffff20; */
   border-radius: 50%;
-  /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -201,7 +203,7 @@
   top: 0;
   left: 50%;
   right: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-45deg);
   user-select: none; 
 
   width: 64px;
@@ -211,30 +213,8 @@
   
 }
 
-
-.ttWUEf9BWH6bUtBFQeVP::before {
-  content: "";
-  position: absolute;
-  inset: calc(-1 * var(--border-width));
-  border-radius: 50%;
-
-  background: conic-gradient(
-    white 0deg 180deg,
-    transparent 180deg 360deg
-  );
-
-  /* cut out the center to make it a ring */
-  -webkit-mask: radial-gradient(
-    closest-side,
-    transparent calc(100% - var(--border-width)),
-    black calc(100% - var(--border-width))
-  );
+.ttWUEf9BWH6bUtBFQeVP svg {
   
-  mask: radial-gradient(
-    closest-side,
-    transparent calc(100% - var(--border-width)),
-    black calc(100% - var(--border-width))
-  );
 }
 
 /*!**********************************************************************************************************************************!*\
