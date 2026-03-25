@@ -22,6 +22,8 @@ function SearchForm() {
     // handle tab to suggestions
     // escape clears + closes if already cleared
     // escape -> clearCloseInput()
+
+    // arrow keys up and down suggestions
     return
   }
 
