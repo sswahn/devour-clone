@@ -14,6 +14,7 @@ function SearchForm() {
     // debounce
     //
     // store recent searches in locoalStorage
+    // avoid multiple http requests for the same query
     return
   }
   
