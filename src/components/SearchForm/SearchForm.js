@@ -55,7 +55,9 @@ function SearchForm() {
       />
       <button type="button" onClick={clearCloseInput} aria-label="clear search">x</button>
           
-      <div>Suggestions</div>
+      <datalist>
+          <option>Suggestions</option>
+      </datalist>
     </form>
   )
 }
