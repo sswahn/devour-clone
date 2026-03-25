@@ -186,6 +186,7 @@
 
 .ttWUEf9BWH6bUtBFQeVP {
   align-items: center; 
+  /* background: color-mix(in srgb, white 13%, transparent); */
   background: linear-gradient(to right, #663399, #8a2be2); /* #663399; */
   border: 1px solid #ffffff20;
   border-radius: 50%;
