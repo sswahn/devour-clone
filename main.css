@@ -215,9 +215,9 @@
 .ttWUEf9BWH6bUtBFQeVP::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -2px;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 2px solid #fff;
   
   /* Only show top half */
   clip-path: inset(0 0 50% 0);
