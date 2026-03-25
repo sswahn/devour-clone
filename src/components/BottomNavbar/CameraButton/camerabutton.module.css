@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
 
-  outline: 1px solid #ffffff20;
+  outline: 1px solid color-mix(in srgb, white 24%, transparent);
   
   padding: 0;
   position: absolute;
