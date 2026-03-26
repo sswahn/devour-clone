@@ -20,7 +20,7 @@ function SearchFormProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <SearchFormContext.Provider value={state}>
+    <SearchFormContext.Provider value={state.searchform}>
       <SearchFormDispatch.Provider value={dispatch}>
         {children}
       </SearchFormDispatch.Provider>
