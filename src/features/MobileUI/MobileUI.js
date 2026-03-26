@@ -8,10 +8,6 @@ function MobileUI() {
   const bottomsheet = useContext(BottomSheetContext)
   const searchform = useContext(SearchFormContext)
   const camera = useContext(CameraContext)
-  
-  const bottomSheetOpen = useBottomSheet()
-  const searchOpen = useSearch()
-  const cameraActive = useCamera()
 
   return createPortal(
       <section className={styles.mobileUi}>
