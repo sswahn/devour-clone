@@ -20,7 +20,7 @@ function CameraButton() {
   }
   
   return (
-    <button className={styles.cameraButton} onClick={onClick} type="button" aria-label="camera">
+    <button className={styles.cameraButton} onClick={onClick} type="button" aria-label="open camera">
       <CameraIcon size={32} />  
     </button>
   )
