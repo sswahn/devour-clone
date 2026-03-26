@@ -20,7 +20,7 @@ function CameraProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <CameraContext.Provider value={state}>
+    <CameraContext.Provider value={state.camera}>
       <CameraDispatch.Provider value={dispatch}>
         {children}
       </CameraDispatch.Provider>
