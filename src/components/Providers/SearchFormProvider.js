@@ -1,7 +1,7 @@
 import { createContext, useReducer } from 'react'
 
-const SearchFormContext = createContext(null)
-const SearchFormDispatch = createContext(null)
+export const SearchFormContext = createContext(null)
+export const SearchFormDispatch = createContext(null)
 
 const initialState = {
   searchform: false
