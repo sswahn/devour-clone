@@ -37,7 +37,7 @@ function Feed() {
     <section className={styles.feed} role="feed" aria-busy={loading}>
 
       {[1,2,3,4,5,6,7,8,9,10].map((item, index) => {
-        <FeedNode key={item.id} item={item} index={idex + 1} count={items.length} />
+        <FeedNode key={item.id} item={item} index={index + 1} count={items.length} />
       })}
 {/*
       {data.map((item, index) => {
