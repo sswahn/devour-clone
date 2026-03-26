@@ -13,13 +13,12 @@ function MobileUI() {
   const camera = useContext(CameraContext)
 
   return createPortal(
-      <section className={styles.mobileUi}>
-        {bottomsheet && <BottomSheet />}
-        {searchform && <SearchForm />}
-        {camera && <Camera />}
-      </section>, 
-      document.body
-    )
+    <section className={styles.mobileUi}>
+      {bottomsheet && <BottomSheet />}
+      {searchform && <SearchForm />}
+      {camera && <Camera />}
+    </section>, 
+    document.body
   )
 }
 
