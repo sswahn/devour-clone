@@ -16,7 +16,7 @@ function reducer(state, action) {
   }
 }
 
-export function BottomSheetProvider({ children }) {
+function BottomSheetProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
