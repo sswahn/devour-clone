@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef  } from 'react'
-import { Context } from '../../Provider'
+import { useEffect, useRef  } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
