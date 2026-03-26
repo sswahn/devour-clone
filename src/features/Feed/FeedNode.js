@@ -13,7 +13,7 @@ function FeedNode({ item, index, count }) {
         <LocationButton />
 */}
       </header>
-        <figure>
+        <figure style={{ height: '766px', width: '411px', border: '1px dashed red', borderRadius: '10px' }}>
           {item.videoUrl && <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />}
           {item.caption ?? <figcaption>{item.caption}</figcaption>}
         </figure>
