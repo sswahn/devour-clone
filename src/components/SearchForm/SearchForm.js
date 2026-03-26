@@ -12,7 +12,11 @@ function SearchForm() {
 
   // make a custom hook
   const speechRecognition = () => {
-    window.SpeechRecognition = window
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)()
+    recognition.continuous = true
+    recognition.interimResults = true
+    recognition.lang = 'en-US'
+    recognition.start()
   }
   
   const onChange = event => {
