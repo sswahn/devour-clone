@@ -9,6 +9,11 @@ function SearchForm() {
     // first click clears, second closes
     return
   }
+
+  // make a custom hook
+  const speechRecognition = () => {
+    window.SpeechRecognition = window
+  }
   
   const onChange = event => {
     // debounce
