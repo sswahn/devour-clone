@@ -7,7 +7,7 @@ function Providers({ children }) {
     <BottomSheetProvider>
       <SearchFormProvider>
         <CameraProvider>
-          {childern}
+          {children}
         </CameraProvider>
       </SearchFormProvider>
     </BottomSheetProvider>
