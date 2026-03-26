@@ -14,7 +14,7 @@
   background: var(--white);
   border-bottom: 1px solid #ffffff0d;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
 
   /* Smooth, buttery transitions */
   transform: translateY(0);
@@ -123,6 +123,7 @@
 
   scroll-snap-type: y mandatory;
   overscroll-behavior-y: contain;
+  z-index: 0;
 }
 
 .PJIQi5iK7sqS96kJ7VRv {
@@ -133,6 +134,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*!***************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Main/main.module.css ***!
+  \***************************************************************************************/
+/* Main */
+
+.Z5pv5a_NKshg9J2UQIDv {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .Z5pv5a_NKshg9J2UQIDv {
+    margin: 0;
+  }
 }
 
 /*!****************************************************************************************************************!*\
@@ -212,9 +232,9 @@
 }
 
 .ttWUEf9BWH6bUtBFQeVP svg {
-  color: var(--black);
-  fill: var(--black);
-  stroke: var(--black);
+  color: black;
+  fill: black;
+  stroke: black;
 }
 
 /*!**********************************************************************************************************************************!*\
@@ -290,7 +310,7 @@
   background-color: var(--white);
   border-top: 1px solid #ffffff0d;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
 
   /* Smooth, buttery transitions */
   transform: translateY(0);
@@ -336,25 +356,6 @@
   }
 }
 
-
-/*!***************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Main/main.module.css ***!
-  \***************************************************************************************/
-/* Main */
-
-.Z5pv5a_NKshg9J2UQIDv {
-  height: 100%;
-  margin: 0 auto;
-  max-width: 500px;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-@media (max-width: 500px) {
-  .Z5pv5a_NKshg9J2UQIDv {
-    margin: 0;
-  }
-}
 
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
