@@ -1,5 +1,5 @@
 import BottomSheetProvider from './components/Providers/BottomSheetProvider'
-import SearchProvider from './components/Providers/SearchFormProvider'
+import SearchFormProvider from './components/Providers/SearchFormProvider'
 import CameraProvider from './components/Providers/CameraProvider'
 
 function Providers({ children }) {
