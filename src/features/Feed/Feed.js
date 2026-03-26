@@ -6,7 +6,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
 
@@ -36,8 +36,8 @@ function Feed() {
   return (
     <section className={styles.feed} role="feed" aria-busy={loading}>
 
-      {[1,2,3,4,5,6,7,8,9,10].map((item, index) => {
-        <FeedNode key={item.id} item={item} index={index + 1} count={items.length} />
+      {data.map((item, index) => {
+        <FeedNode key={item.id} item={item} index={index + 1} count={data.length} />
       })}
 {/*
       {data.map((item, index) => {
