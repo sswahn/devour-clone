@@ -10,7 +10,7 @@ function Main() {
   useEffect(() => {
     alert(`width: ${window.innerWidth}`) 
     alert(`height: ${window.innerHeight}`)
-  })
+  }, [])
   
   return (
     <main className={styles.main}>
