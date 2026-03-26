@@ -4,7 +4,7 @@ import { SearchFormContext } from './Providers/SearchFormContext'
 import { CameraContext } from './Providers/CameraContext'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import SearchForm from './components/SearchForm/SearchForm'
-import Camera from './features/Camera/Camera'
+import Camera from '../Camera/Camera'
 import styles from './mobileui.module.css'
 
 function MobileUI() { 
