@@ -6,11 +6,13 @@ function MobileUI() {
   const cameraActive = useCamera()
 
   return createPortal(
-    <section className={styles.mobileUi}>
-      {bottomSheetOpen && <BottomSheet />}
-      {searchOpen && <SearchForm />}
-      {cameraActive && <Camera />}
-    </section>, document.body)
+      <section className={styles.mobileUi}>
+        {bottomSheetOpen && <BottomSheet />}
+        {searchOpen && <SearchForm />}
+        {cameraActive && <Camera />}
+      </section>, 
+      document.body
+    )
   )
        
     {/* the following should go in App 
