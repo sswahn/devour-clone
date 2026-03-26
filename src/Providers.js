@@ -1,15 +1,15 @@
-import BottomSheetProvider from './Providers/BottomSheetProvider'
-import SearchProvider from './Providers/SearchProvider'
-import CameraProvider from './Providers/CameraProvider'
+import BottomSheetProvider from './components/Providers/BottomSheetProvider'
+import SearchProvider from './components/Providers/SearchFormProvider'
+import CameraProvider from './components/Providers/CameraProvider'
 
 function Providers({ children }) {
   return (
     <BottomSheetProvider>
-      <SearchProvider>
+      <SearchFormProvider>
         <CameraProvider>
           {childern}
         </CameraProvider>
-      </SearchProvider>
+      </SearchFormProvider>
     </BottomSheetProvider>
   )
 }
