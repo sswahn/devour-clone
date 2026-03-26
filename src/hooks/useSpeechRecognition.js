@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 
+// move the logic to the utility
+// hook should be for component manipulation
+// tying the utility to the component.
+
 export default function useSpeechRecognition({
   continuous = true,
   interimResults = true,
