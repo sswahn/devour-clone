@@ -2,29 +2,20 @@ import { useState, useContext, useEffect, Suspense, lazy } from 'react'
 import { Context } from '../../Provider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import Feed from '../../features/Feed/Feed'
+const MobileUI = lazy(() => import('../MobileUI/MobileUI'))
 import styles from './main.module.css'
 
 function Main() {
-  const [context, dispatch] = useContext(Context)
-  //const [cameraOpen, setCameraOpen] = useState(false)
-
-//  useEffect(() => {
-    
-//  }, [context.camera])
-
-// context updates rerender all components consuming any value in Context...
-  // refactor context
-
-
   
   return (
     <main className={styles.main}>
-
+      <Feed />
+      
       <div style={{ height: '8000px' }}></div>
 
-  {/* <LoadingSpinner size="2em" /> */}
-    
-      <Feed />
+      <Suspense fallback={<LoadingSpinner />}>
+        <MobileUI />  
+      </Suspense>
     </main>
   )
 }
