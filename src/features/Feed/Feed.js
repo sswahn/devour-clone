@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
 import FeedNode from './FeedNode'
@@ -45,4 +45,4 @@ function Feed() {
   )
 }
 
-export default Feed
+export default memo(Feed)
