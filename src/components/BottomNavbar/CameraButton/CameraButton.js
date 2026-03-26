@@ -4,6 +4,9 @@ import styles from './camerabutton.module.css'
 function CameraButton() {
 
   const onClick = async event => {
+    if (window.navigator && window.navigator.vibrate) {
+      navigator.vibrate(50)
+    }
     return
     try {
       console.error('Requesting fullscreen.')
