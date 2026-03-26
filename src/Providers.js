@@ -2,7 +2,7 @@ import BottomSheetProvider from './Providers/BottomSheetProvider'
 import SearchProvider from './Providers/SearchProvider'
 import CameraProvider from './Providers/CameraProvider'
 
-function Provider({ children }) {
+function Providers({ children }) {
   return (
     <BottomSheetProvider>
       <SearchProvider>
@@ -14,4 +14,4 @@ function Provider({ children }) {
   )
 }
 
-export default Provider
+export default Providers
