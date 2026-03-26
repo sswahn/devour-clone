@@ -18,7 +18,7 @@ function Main() {
       
   {/* <div style={{ height: '8000px' }}></div> */}
 
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={null}>
         <MobileUI />  
       </Suspense>
     </main>
