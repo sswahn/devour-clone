@@ -8,10 +8,19 @@ function ProfileButton() {
       navigator.vibrate(50)
     }
     return
+    try {
+      console.error('Requesting fullscreen.')
+      await document.documentElement.requestFullscreen()
+      await screen.orientation.lock('portrait')
+      console.log('Locked to portrait.')
+      dispatch({ type: 'camera', payload: true })
+    } catch (error) {
+      console.error('Fullscreen failed:', error)
+    }
   }
   
   return (
-    <button className={styles.profileButton} onClick={onClick} type="button" aria-label="profile">
+    <button className={styles.profileButton} onClick={onClick} type="button" aria-label="open profile">
       <UserIcon />  
     </button>
   )
