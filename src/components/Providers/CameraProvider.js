@@ -1,7 +1,7 @@
 import { createContext, useReducer } from 'react'
 
-const CameraContext = createContext(null)
-const CameraDispatch = createContext(null)
+export const CameraContext = createContext(null)
+export const CameraDispatch = createContext(null)
 
 const initialState = {
   camera: false
