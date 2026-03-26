@@ -4,7 +4,6 @@ import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import MobileUI from './conponents/MobileUI/MobileUI'
 import BottomNavbar from './components/BottomNavbar/BottomNavbar'
-//const Drawer = lazy(() => import('../../components/Drawer/Drawer'))
 import './index.css'
 
 const App = () => {
