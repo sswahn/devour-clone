@@ -20,10 +20,10 @@ export function UIProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <UIContext.Provider value={state}>
-      <UIDispatch.Provider value={dispatch}>
+    <BottomSheetContext.Provider value={state}>
+      <BottomSheetDispatch.Provider value={dispatch}>
         {children}
-      </UIDispatch.Provider>
-    </UIContext.Provider>
+      </BottomSheetDispatch.Provider>
+    </BottomSheetContext.Provider>
   )
 }
