@@ -20,7 +20,7 @@ function BottomSheetProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <BottomSheetContext.Provider value={state}>
+    <BottomSheetContext.Provider value={state.bottomsheet}>
       <BottomSheetDispatch.Provider value={dispatch}>
         {children}
       </BottomSheetDispatch.Provider>
