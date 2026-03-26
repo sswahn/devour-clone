@@ -4,6 +4,11 @@ import styles from './feed.module.css'
 
 function FeedNode({ item, index, count }) {
   const ref = useRef()
+
+  const data = {
+    videoUrl: item.videoUrl || '',
+    caption: item.caption || ''
+  }
   
   return (
     <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count}>
@@ -11,11 +16,13 @@ function FeedNode({ item, index, count }) {
 {/*
         <AuthorButton />
         <LocationButton />
+
+        Change 'data' back to 'item'
 */}
       </header>
         <figure style={{ height: '766px', width: '411px', border: '1px dashed red', borderRadius: '10px' }}>
-          {item.videoUrl && <video ref={ref} src={item.videoUrl} preload="metadata" muted playsInline loop />}
-          {item.caption ?? <figcaption>{item.caption}</figcaption>}
+          {data.videoUrl && <video ref={ref} src={data.videoUrl} preload="metadata" muted playsInline loop />}
+          {data.caption ?? <figcaption>{data.caption}</figcaption>}
         </figure>
       <footer>
 {/*
