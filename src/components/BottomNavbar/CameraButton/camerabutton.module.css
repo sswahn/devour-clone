@@ -28,7 +28,7 @@
 }
 
 .cameraButton svg {
-  color: var(--black);
-  fill: var(--black);
-  stroke: var(--black);
+  color: black;
+  fill: black;
+  stroke: black;
 }
