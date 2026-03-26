@@ -1,7 +1,7 @@
 import { createContext, useReducer } from 'react'
 
-const BottomSheetContext = createContext(null)
-const BottomSheetDispatch = createContext(null)
+export const BottomSheetContext = createContext(null)
+export const BottomSheetDispatch = createContext(null)
 
 const initialState = {
   bottomsheet: false
