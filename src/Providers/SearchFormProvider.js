@@ -16,7 +16,7 @@ function reducer(state, action) {
   }
 }
 
-export function SearchFormProvider({ children }) {
+function SearchFormProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
