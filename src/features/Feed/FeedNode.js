@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, memo } from 'react'
 import LikeButton from './LikeButton/LikeButton'
 import styles from './feed.module.css'
 
@@ -28,4 +28,4 @@ function FeedNode({ item, index, count }) {
   )
 }
 
-export default FeedNode
+export default memo(FeedNode)
