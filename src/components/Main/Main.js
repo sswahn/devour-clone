@@ -8,8 +8,8 @@ import styles from './main.module.css'
 function Main() {
 
   useEffect(() => {
-    alert(`width: ${window.innerWidth}`) 
-    alert(`height: ${window.innerHeight}`)
+    //alert(`width: ${window.innerWidth}`) 
+    //alert(`height: ${window.innerHeight}`)
   }, [])
   
   return (
