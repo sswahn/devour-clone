@@ -20,7 +20,14 @@ function FeedNode({ item, index, count }) {
         Change 'data' back to 'item'
 */}
       </header>
-        <figure style={{ height: '766px', width: '411px', border: '1px dashed red', borderRadius: '10px' }}>
+        <figure style={{
+          background: '#888',
+          display: 'block', 
+          height: '766px', 
+          width: '411px', 
+          border: '1px dashed red', 
+          borderRadius: '10px' 
+        }}>
           {data.videoUrl && <video ref={ref} src={data.videoUrl} preload="metadata" muted playsInline loop />}
           {data.caption ?? <figcaption>{data.caption}</figcaption>}
         </figure>
