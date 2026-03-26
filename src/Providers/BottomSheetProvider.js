@@ -4,8 +4,7 @@ const BottomSheetContext = createContext(null)
 const BottomSheetDispatch = createContext(null)
 
 const initialState = {
-  bottomsheet: false,
-  modal: false
+  bottomsheet: false
 }
 
 function reducer(state, action) {
