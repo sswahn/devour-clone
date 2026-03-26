@@ -1,3 +1,4 @@
+import styles from './mobileui.module.css'
 
 function MobileUI() { 
   const bottomSheetOpen = useBottomSheet()
@@ -5,11 +6,11 @@ function MobileUI() {
   const cameraActive = useCamera()
 
   return createPortal(
-    <>
+    <section className={styles.mobileUi}>
       {bottomSheetOpen && <BottomSheet />}
       {searchOpen && <SearchForm />}
       {cameraActive && <Camera />}
-    </>, document.body)
+    </section>, document.body)
   )
        
     {/* the following should go in App 
