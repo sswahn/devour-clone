@@ -1,5 +1,5 @@
 import ErrorBoundary from './ErrorBoundary'
-import Provider from './Provider'
+import Providers from './Providers'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import './index.css'
@@ -8,10 +8,10 @@ const App = () => {
   return (
      <React.StrictMode> 
       <ErrorBoundary> 
-        <Provider>
+        <Providers>
           <Header />
           <Main />
-        </Provider> 
+        </Providers> 
       </ErrorBoundary> 
     </React.StrictMode>
   )
