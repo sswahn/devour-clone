@@ -3,7 +3,7 @@ import Providers from './Providers'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import MobileUI from './features/MobileUI/MobileUI'
-import BottomNav from './components/BottomNav/BottomNav'
+import BottomNavbar from './components/BottomNavbar/BottomNavbar'
 import './index.css'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
           <Header />
           <Main />
           <MobileUI />
-          <BottomNav />
+          <BottomNavbar />
         </Providers> 
       </ErrorBoundary> 
     </React.StrictMode>
