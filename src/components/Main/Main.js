@@ -7,7 +7,10 @@ import styles from './main.module.css'
 
 function Main() {
 
-  alert('width: ' + window.innerWidth, 'height: ' + window.innerHeight)
+  useEffect(() => {
+    alert(`width: ${window.innerWidth}`) 
+    alert(`height: ${window.innerHeight}`)
+  })
   
   return (
     <main className={styles.main}>
