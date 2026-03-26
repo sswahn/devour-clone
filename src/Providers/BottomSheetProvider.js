@@ -16,7 +16,7 @@ function reducer(state, action) {
   }
 }
 
-export function UIProvider({ children }) {
+export function BottomSheetProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
@@ -27,3 +27,5 @@ export function UIProvider({ children }) {
     </BottomSheetContext.Provider>
   )
 }
+
+export default BottomSheetProvider
