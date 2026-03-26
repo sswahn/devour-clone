@@ -2,7 +2,7 @@ import ErrorBoundary from './ErrorBoundary'
 import Providers from './Providers'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import MobileUI from './features/MobileUI/MobileUI'
+import MobileUI from './conponents/MobileUI/MobileUI'
 import BottomNavbar from './components/BottomNavbar/BottomNavbar'
 import './index.css'
 
