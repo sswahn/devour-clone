@@ -7,7 +7,7 @@ const initialState = {
   bottomsheet: false
 }
 
-// use useState instead
+// remove reducer and userReducer and use useState instead
 // change to getBottomSheetContext
 // change to setBottomSheetContext
 // this replaces the whole [context, dispatch] design
