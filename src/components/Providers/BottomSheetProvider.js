@@ -1,36 +1,24 @@
-import { createContext, useReducer } from 'react'
+import { useState, createContext } from 'react'
 
-export const BottomSheetContext = createContext(null)
-export const BottomSheetDispatch = createContext(null)
-
-const initialState = {
-  bottomsheet: false
-}
+const GetBottomSheetContext = createContext(null)
+const SetBottomSheetContext = createContext(null)
 
 // remove reducer and userReducer and use useState instead
 // change to getBottomSheetContext
 // change to setBottomSheetContext
 // this replaces the whole [context, dispatch] design
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'bottomsheet':
-      return { ...state, bottomsheet: action.payload }
-    default:
-      return state
-  }
-}
 
 function BottomSheetProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, setState] = useState(false)
 
   return (
-    <BottomSheetContext.Provider value={state.bottomsheet}>
-      <BottomSheetDispatch.Provider value={dispatch}>
+    <GetBottomSheetContext.Provider value={state}>
+      <SetBottomSheetContext.Provider value={setState}>
         {children}
-      </BottomSheetDispatch.Provider>
-    </BottomSheetContext.Provider>
+      </SetBottomSheetContext.Provider>
+    </GetBottomSheetContext.Provider>
   )
 }
 
-export default BottomSheetProvider
+export { GetBottomSheetContext, SetBottomSheetContext, BottomSheetProvider }
