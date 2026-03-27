@@ -1,9 +1,10 @@
 import { useContext } from 'react'
-//import { SetProfileContext } from '../../../ProfileProvider'
+//import { SetNotificationsContext } from '../Providers/NotificationsProvider'
 import BellIcon from '../../Icons/BellIcon/BellIcon'
 import styles from './notificationsbutton.module.css'
 
 function NotificationsButton() {
+  // const setNotificationsContext = useContext(SetNotificationsContext)
 
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
