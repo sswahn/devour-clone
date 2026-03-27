@@ -52,10 +52,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-main {
-  min-height: 100dvh;
-}
-
 button {
   touch-action: manipulation;
 }
