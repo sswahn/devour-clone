@@ -11,7 +11,11 @@ function FeedNode({ item, index, count }) {
   }
   
   return (
-    <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count}>
+    <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
+        background: '#888',
+        borderRadius: '10px',
+        marginBottom: '8px'
+    }}>
       <header>
 {/*
         <AuthorButton />
@@ -20,14 +24,7 @@ function FeedNode({ item, index, count }) {
         Change 'data' back to 'item'
 */}
       </header>
-        <figure style={{
-          background: '#888',
-          display: 'block', 
-          height: '766px', 
-          width: '411px',
-          borderRadius: '10px',
-          marginBottom: '8px'
-        }}>
+        <figure style={{ background: '#666', borderRadius: '10px', height: '766px', width: '411px' }}>
           {data.videoUrl && <video ref={ref} src={data.videoUrl} preload="metadata" muted playsInline loop />}
           {data.caption ?? <figcaption>{data.caption}</figcaption>}
         </figure>
