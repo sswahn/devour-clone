@@ -1,16 +1,16 @@
-import { BottomSheetProvider } from './components/Providers/BottomSheetProvider'
+import { ProfileProvider } from './components/Providers/ProfileProvider'
 import { SearchFormProvider } from './components/Providers/SearchFormProvider'
 import { CameraProvider } from './components/Providers/CameraProvider'
 
 function Providers({ children }) {
   return (
-    <BottomSheetProvider>
+    <ProfileProvider>
       <SearchFormProvider>
         <CameraProvider>
           {children}
         </CameraProvider>
       </SearchFormProvider>
-    </BottomSheetProvider>
+    </ProfileProvider>
   )
 }
 
