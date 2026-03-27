@@ -4,9 +4,11 @@
   
   overflow-y: auto;
   
-
+/*
   scroll-snap-type: y mandatory;
   overscroll-behavior-y: contain;
+*/
+  
   z-index: 0;
 }
 
