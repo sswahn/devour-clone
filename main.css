@@ -404,8 +404,6 @@
 * {
   margin: 0;
   padding: 0;
-
-  border: 1px dashed red;
 }
 
 *, *::before, *::after {
@@ -416,6 +414,8 @@ html, body, #root {
   height: 100%;
   overflow-x: hidden;
   width: 100%;
+
+    border: 1px dashed red;
 }
 
 html {
