@@ -24,8 +24,7 @@ function FeedNode({ item, index, count }) {
           background: '#888',
           display: 'block', 
           height: '766px', 
-          width: '411px', 
-          border: '1px dashed red', 
+          width: '411px',
           borderRadius: '10px',
           marginBottom: '8px'
         }}>
