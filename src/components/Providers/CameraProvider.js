@@ -1,31 +1,18 @@
-import { createContext, useReducer } from 'react'
+import { useState, createContext } from 'react'
 
-export const CameraContext = createContext(null)
-export const CameraDispatch = createContext(null)
-
-const initialState = {
-  camera: false
-}
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'camera':
-      return { ...state, camera: action.payload }
-    default:
-      return state
-  }
-}
+const GetCameraContext = createContext(null)
+const SetCameraContext = createContext(null)
 
 function CameraProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, setState] = useState(false)
 
   return (
-    <CameraContext.Provider value={state.camera}>
-      <CameraDispatch.Provider value={dispatch}>
+    <GetCameraContext.Provider value={state.camera}>
+      <SetCameraContext.Provider value={dispatch}>
         {children}
-      </CameraDispatch.Provider>
-    </CameraContext.Provider>
+      </SetCameraContext.Provider>
+    </GetCameraContext.Provider>
   )
 }
 
-export default CameraProvider
+export { GetCameraContext, SetCameraContext, CameraProvider }
