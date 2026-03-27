@@ -274,6 +274,10 @@
   width: 10px;
 }
 
+.KACZHkvAGjrBlXXWUlEQ svg {
+  color: var(--white);
+}
+
 /*!**********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/ProfileButton/profilebutton.module.css ***!
   \**********************************************************************************************************************/
