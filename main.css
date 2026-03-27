@@ -423,8 +423,6 @@ html {
 
 body {
   background-color: transparent;
-  min-height: 100dvh;
-
   
   padding: 
     env(safe-area-inset-top)
@@ -435,6 +433,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  min-height: 100dvh;
 }
 
 button {
