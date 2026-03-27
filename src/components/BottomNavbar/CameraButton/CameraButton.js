@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { SetCameraContext} from '../Providers/CameraProvider'
+import { SetCameraContext} from '../../Providers/CameraProvider'
 import CameraIcon from '../../Icons/CameraIcon/CameraIcon'
 import styles from './camerabutton.module.css'
 
