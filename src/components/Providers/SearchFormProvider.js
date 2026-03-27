@@ -1,31 +1,18 @@
-import { createContext, useReducer } from 'react'
+import { setState, createContext } from 'react'
 
-export const SearchFormContext = createContext(null)
-export const SearchFormDispatch = createContext(null)
-
-const initialState = {
-  searchform: false
-}
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'searchform':
-      return { ...state, searchform: action.payload }
-    default:
-      return state
-  }
-}
+const GetSearchFormContext = createContext(null)
+const SetSearchFormContext = createContext(null)
 
 function SearchFormProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, setState] = useState(false)
 
   return (
-    <SearchFormContext.Provider value={state.searchform}>
-      <SearchFormDispatch.Provider value={dispatch}>
+    <GetSearchFormContext.Provider value={state}>
+      <SetSearchFormContext.Provider value={setState}>
         {children}
-      </SearchFormDispatch.Provider>
-    </SearchFormContext.Provider>
+      </SetSearchFormContext.Provider>
+    </GetSearchFormContext.Provider>
   )
 }
 
-export default SearchFormProvider
+export { GetSearchFormContext, SetSearchFormContext, SearchFormProvider }
