@@ -1,23 +1,23 @@
 import { useContext } from 'react'
 import { createPortal } from 'react-dom'
-import { GetBottomSheetContext } from '../Providers/BottomSheetProvider'
-import { GetSearchFormContext } from '../Providers/SearchFormProvider'
 import { GetCameraContext } from '../Providers/CameraProvider'
-import BottomSheet from '../BottomSheet/BottomSheet'
-import SearchForm from '../SearchForm/SearchForm'
+import { GetProfileContext } from '../Providers/ProfileProvider'
+import { GetSearchFormContext } from '../Providers/SearchFormProvider'
 import Camera from '../../features/Camera/Camera'
+import BottomSheet from '../BottomSheet/BottomSheet' // Change to Profile Component
+import SearchForm from '../SearchForm/SearchForm'
 import styles from './mobileui.module.css'
 
 function MobileUI() { 
-  const getBottomSheet = useContext(GetBottomSheetContext)
-  const getSearchForm = useContext(GetSearchFormContext)
   const getCameraContext = useContext(GetCameraContext)
-
+  const getProfileContext = useContext(GetProfileContext)
+  const getSearchFormContext = useContext(GetSearchFormContext)
+  
   return createPortal(
     <section className={styles.mobileUi}>
-      {getBottomSheet && <BottomSheet />}
-      {getSearchForm && <SearchForm />}
       {getCameraContext && <Camera />}
+      {getProfileContext && <BottomSheet />} {/* Change to <Profile />*/}
+      {getSearchFormContext && <SearchForm />}
     </section>, 
     document.body
   )
