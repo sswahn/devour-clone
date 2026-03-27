@@ -26,7 +26,8 @@ function FeedNode({ item, index, count }) {
           height: '766px', 
           width: '411px', 
           border: '1px dashed red', 
-          borderRadius: '10px' 
+          borderRadius: '10px',
+          marginBottom: '8px'
         }}>
           {data.videoUrl && <video ref={ref} src={data.videoUrl} preload="metadata" muted playsInline loop />}
           {data.caption ?? <figcaption>{data.caption}</figcaption>}
