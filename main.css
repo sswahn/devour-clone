@@ -121,7 +121,7 @@
 
   border: 1px dashed yellow;
   
-  overflow-y: auto;
+  overflow: hidden;
   
 /*
   scroll-snap-type: y mandatory;
