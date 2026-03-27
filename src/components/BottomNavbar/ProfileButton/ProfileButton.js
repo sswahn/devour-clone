@@ -16,7 +16,7 @@ function ProfileButton() {
       await screen.orientation.lock('portrait')
       // setProfileContext(prevContext => !prevContext)
     } catch (error) {
-      console.error('Opening profile failed:', error)
+      console.error('Opening profile failed: ', error)
     }
   }
   
