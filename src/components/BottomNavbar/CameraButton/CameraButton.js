@@ -1,21 +1,22 @@
+import { useContext } from 'react'
+import { SetCameraContext} from '../Providers/CameraProvider'
 import CameraIcon from '../../Icons/CameraIcon/CameraIcon'
 import styles from './camerabutton.module.css'
 
 function CameraButton() {
-
+  const setCameraContext = useContext(SetCameraContext)
+  
   const onClick = async event => {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
     return
     try {
-      console.error('Requesting fullscreen.')
       await document.documentElement.requestFullscreen()
       await screen.orientation.lock('portrait')
-      console.log('Locked to portrait.')
-      dispatch({ type: 'camera', payload: true })
+      setCameraContext(prevContext => !prevContext)
     } catch (error) {
-      console.error('Fullscreen failed:', error)
+      console.error('Opening camera failed:', error)
     }
   }
   
