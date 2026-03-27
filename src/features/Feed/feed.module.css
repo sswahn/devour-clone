@@ -1,6 +1,7 @@
 /* Feed */
 
 .feed {
+  margin-top: 50px; /* remove this temp spacing */
   /*
   height: 100%;
   overflow-y: auto;
