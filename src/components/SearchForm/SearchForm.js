@@ -24,7 +24,7 @@ function SearchForm() {
   }
 
   const handleVoiceRecognition = event => {
-    
+    // set speech to searchValue
   }
   
   const onChange = event => {
