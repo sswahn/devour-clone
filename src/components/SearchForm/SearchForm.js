@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from './searchform.module.css'
 
+// bottom of page just above bottomnav
+
 function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
