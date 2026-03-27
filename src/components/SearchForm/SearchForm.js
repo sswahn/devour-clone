@@ -71,7 +71,7 @@ function SearchForm() {
         aria-label="search input"  
       />
       <SearchIcon />
-      {/* hook should return bool to check if speechRecognition exists, if so render button: */
+      {/* hook should return bool to check if speechRecognition exists, if so render button: */}
       <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
         <MicrophoneIcon />
       </button>
