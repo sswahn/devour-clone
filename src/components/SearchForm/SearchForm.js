@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
+import SearchIcon from './Icons/SearchIcon/SearchIcon'
+import MicrophoneIcon from './Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
 
-// bottom of page just above bottomnav
+//TODO: bottom of page just above bottomnav
 
 function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
@@ -12,13 +14,17 @@ function SearchForm() {
     return
   }
 
-  // make a custom hook
+  // make/use a custom hook
   const speechRecognition = () => {
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)()
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
     recognition.start()
+  }
+
+  const handleVoiceRecognition = event => {
+    
   }
   
   const onChange = event => {
@@ -64,11 +70,10 @@ function SearchForm() {
         disabled={false}
         aria-label="search input"  
       />
-      <button type="button" onClick={clearCloseInput} aria-label="clear search">x</button>
-          
-      <datalist>
-          <option>Suggestions</option>
-      </datalist>
+      <SearchIcon />
+      <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
+        <MicrophoneIcon />
+      </button>
     </form>
   )
 }
