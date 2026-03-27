@@ -1,7 +1,10 @@
+import { useContext } from 'react'
+// import { SetProfileContext } from '../Providers/ProfileProvider'
 import UserIcon from '../../Icons/UserIcon/UserIcon'
 import styles from './profilebutton.module.css'
 
 function ProfileButton() {
+  // const setProfileContext = useContext(SetProfileContext)
 
   const onClick = async event => {
     if (window.navigator && window.navigator.vibrate) {
@@ -9,13 +12,11 @@ function ProfileButton() {
     }
     return
     try {
-      console.error('Requesting fullscreen.')
       await document.documentElement.requestFullscreen()
       await screen.orientation.lock('portrait')
-      console.log('Locked to portrait.')
-      dispatch({ type: 'camera', payload: true })
+      // setProfileContext(prevContext => !prevContext)
     } catch (error) {
-      console.error('Fullscreen failed:', error)
+      console.error('Opening profile failed:', error)
     }
   }
   
