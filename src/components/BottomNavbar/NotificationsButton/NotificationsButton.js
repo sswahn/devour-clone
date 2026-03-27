@@ -10,8 +10,11 @@ function NotificationsButton() {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
+    try {
 
-    return
+    } catch (error) {
+      console.error('Opening notifications failed: ', error)
+    }
   }
   
   return (
