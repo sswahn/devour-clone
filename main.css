@@ -118,8 +118,10 @@
 /* Feed */
 
 .RyVp3_0BIz2rwivAL1Ei {
+  /*
   height: 100%;
   overflow-y: auto;
+  */
 
   scroll-snap-type: y mandatory;
   overscroll-behavior-y: contain;
