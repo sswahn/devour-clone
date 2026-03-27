@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context } from '../../../Provider'
+//import { SetProfileContext } from '../../../ProfileProvider'
 import BellIcon from '../../Icons/BellIcon/BellIcon'
 import styles from './notificationsbutton.module.css'
 
