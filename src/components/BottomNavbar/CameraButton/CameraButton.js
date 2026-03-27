@@ -16,7 +16,7 @@ function CameraButton() {
       await screen.orientation.lock('portrait')
       setCameraContext(prevContext => !prevContext)
     } catch (error) {
-      console.error('Opening camera failed:', error)
+      console.error('Opening camera failed: ', error)
     }
   }
   
