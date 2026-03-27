@@ -129,7 +129,8 @@
   z-index: 0;
 }
 
-.PJIQi5iK7sqS96kJ7VRv {
+/*
+.feedNode {
   height: 100dvh;
   width: 100%;
   scroll-snap-align: start;
@@ -138,6 +139,7 @@
   align-items: center;
   justify-content: center;
 }
+*/
 
 /*!***************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Main/main.module.css ***!
