@@ -7,6 +7,11 @@ const initialState = {
   bottomsheet: false
 }
 
+// use useState instead
+// change to getBottomSheetContext
+// change to setBottomSheetContext
+// this replaces the whole [context, dispatch] design
+
 function reducer(state, action) {
   switch (action.type) {
     case 'bottomsheet':
