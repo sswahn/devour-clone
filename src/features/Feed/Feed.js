@@ -75,7 +75,7 @@ function Feed() {
   }, [])
   
   return (
-    <section className={styles.feed} role="feed" aria-busy={loading}>
+    <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
 
       {data.map((item, index) => 
         <FeedNode key={index} nodeRef={nodeRef} item={item} index={index + 1} count={data.length} />
