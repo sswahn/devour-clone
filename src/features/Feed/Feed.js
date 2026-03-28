@@ -11,7 +11,7 @@ function Feed() {
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
-  const currentNodeIndex = useRef(0)
+  const nodeIndex = useRef(0)
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -34,8 +34,6 @@ function Feed() {
   
 
   const update = ({ deltaY, direction, velocity }) => {
-
-    console.log('velocity in feed: ', velocity)
     
     const container = feedRef.current
     if (!container && !container.children.length) {
@@ -43,23 +41,30 @@ function Feed() {
     }
     
     const nodes = Array.from(container.children)
-    const highVelocityThreshold = 3 // to be determined
+
+    console.log('nodes: ', nodes)
+
+    console.log('velocity in feed: ', velocity)
+    
+    const highVelocityThreshold = 20 // to be determined
     
     if (direction === 'down' && velocity > highVelocityThreshold) {
-      currentNodeIndex.current = currentNodeIndex.current + 3
+      nodeIdex.current = nodeIdex.current + 3
     }
     if (direction === 'down' && velocity < highVelocityThreshold) {
-      currentNodeIndex.current = currentNodeIndex.current + 1
+      nodeIdex.current = nodeIdex.current + 1
     }
     
     if (direction === 'up' && velocity > highVelocityThreshold) {
-      currentNodeIndex.current = currentNodeIndex.current - 3
+      nodeIdex.current = nodeIdex.current - 3
     }
     if (direction === 'up' && velocity < highVelocityThreshold) {
-      currentNodeIndex.current = currentNodeIndex.current - 1
+      nodeIdex.current = nodeIdex.current - 1
     }
 
-    const targetNode = nodes[currentNodeIndex.current]
+    const targetNode = nodes[nodeIdex.current]
+
+    console.log('targetNode: ', targetNode)
 
     container.scrollTo({
       top: targetNode.offsetTop,
