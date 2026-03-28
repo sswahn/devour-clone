@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, memo } from 'react'
-import { createMultiObserver } from '../../multiObserver'
+import { createObserver } from '../../observer'
 import scroll from '../../utilities/scrollEngine'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
@@ -13,7 +13,7 @@ function Feed() {
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
   const nodeIndex = useRef(0)
-  const multiObserver = createMultiObserver()
+  const observer = createObserver()
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -88,7 +88,7 @@ function Feed() {
     const nodes = Array.from(container.children)
 
     for (const element of nodes) {
-      multiObserver.observe(element, snapOnScroll)
+      observer.observe(element, snapOnScroll)
     }
     
    
@@ -99,7 +99,7 @@ function Feed() {
     const unsubscribe = scroll.subscribe(snapOnScroll)
     return () => {
       unsubscribe()
-      multiObserver.disconnect()
+      observer.disconnect()
     }
   }, [])
   
