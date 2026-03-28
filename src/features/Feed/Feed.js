@@ -31,7 +31,7 @@ function Feed() {
     setData(video?.video)
   }
 
-  const update = () => {
+  const update = ({ deltaY, direction, velocity }) => {
     return
   }
 
