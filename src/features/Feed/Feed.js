@@ -1,4 +1,4 @@
-import { useState, useEffect, memo } from 'react'
+import { useState, useRef, useEffect, memo } from 'react'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
 import scroll from '../../utilities/scrollEngine'
