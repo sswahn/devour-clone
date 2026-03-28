@@ -13,6 +13,7 @@ function FeedNode({ item, index, count }) {
     <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
         background: '#888',
         borderRadius: '10px',
+        maxWidth: '500px',
         marginBottom: '8px'
     }}>
       <header>
