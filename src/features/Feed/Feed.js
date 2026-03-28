@@ -78,9 +78,9 @@ function Feed() {
   }
 
   const observeNodes = () => {
-    const deltaY 
-    const direction
-    const velocity
+    const deltaY = undefined
+    const direction = undefined
+    const velocity = undefined
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
