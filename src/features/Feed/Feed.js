@@ -81,12 +81,22 @@ function Feed() {
 
     
     const nodes = Array.from(container.children)
+    const highVelocityThreshold = 3 // to be determined
+    const targetNode = null
     
-    // if velocity is high, set target node three+ away, 
-    // else set target node to next index
+    if (direction === 'down' && velocity > highVelocityThreshold) {
+      targetNode = nodes[index + 3]
+    }
+    if (direction === 'down' && velocity < highVelocityThreshold) {
+      targetNode = nodex[index + 1]
+    }
     
-    // if direction down, set targetNode index ahead
-    // if up set targetNode index behind
+    if (direction === 'up' && velocity > highVelocityThreshold) {
+      targetNode = nodes[index - 3]
+    }
+    if (direction === 'up' && velocity < highVelocityThreshold) {
+      targetNode = nodex[index - 1]
+    }
 
     container.scrollTo({
       top: targetNode.offsetTop,
