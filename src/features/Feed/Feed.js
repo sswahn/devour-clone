@@ -31,6 +31,44 @@ function Feed() {
     setData(video?.video)
   }
 
+
+  
+  const snapWithVelocity = (container, velocity) => {
+    if (!container) return;
+    const nodes = Array.from(container.children);
+    if (!nodes.length) return;
+
+    const scrollTop = container.scrollTop;
+    let nearestIndex = 0;
+    let minDistance = Math.abs(nodes[0].offsetTop - scrollTop);
+
+    nodes.forEach((node, i) => {
+      const distance = Math.abs(node.offsetTop - scrollTop - headerHeight);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestIndex = i;
+      }
+    })
+
+    // Determine target node based on velocity
+    let targetIndex = nearestIndex;
+    if (Math.abs(velocity) > velocityThreshold) {
+      const direction = velocity > 0 ? 1 : -1; // down or up
+      targetIndex = nearestIndex + direction * maxFlickNodes;
+
+      // Clamp to available nodes
+      targetIndex = Math.max(0, Math.min(nodes.length - 1, targetIndex));
+    }
+
+    const targetNode = nodes[targetIndex];
+    if (!targetNode) return;
+
+    container.scrollTo({
+      top: targetNode.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  }
+
   const update = ({ deltaY, direction, velocity }) => {
     return
   }
