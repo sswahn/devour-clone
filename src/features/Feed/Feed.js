@@ -51,12 +51,15 @@ function Feed() {
   }
 
   const connectObservers = () => {
-    const observer = createObserver()
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
     }
     const nodes = Array.from(container.children)
+    const observer = createObserver() /*({
+      root: container,
+      threshold: [0.25, 0.5, 0.75],
+    })*/
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
