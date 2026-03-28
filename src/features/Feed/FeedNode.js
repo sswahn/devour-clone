@@ -2,7 +2,7 @@ import { useRef, memo } from 'react'
 import LikeButton from './LikeButton/LikeButton'
 import styles from './feed.module.css'
 
-function FeedNode({ nodeRef, item, index, count }) {
+function FeedNode({ item, index, count }) {
 
   const data = {
     videoUrl: item.videoUrl || '',
@@ -10,7 +10,7 @@ function FeedNode({ nodeRef, item, index, count }) {
   }
   
   return (
-    <article ref={nodeRef} className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
+    <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
         background: '#888',
         borderRadius: '10px',
         marginBottom: '8px'
