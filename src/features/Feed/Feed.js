@@ -58,7 +58,7 @@ function Feed() {
     const nodes = Array.from(container.children)
     const observer = createObserver() /*({
       root: container,
-      threshold: [0.25, 0.5, 0.75],
+      threshold: 0.6
     })*/
     for (const element of nodes) {
       observer.observe(element, snapElement)
