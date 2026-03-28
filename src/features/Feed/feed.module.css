@@ -4,7 +4,7 @@
   overflow: hidden;
 
 
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   overscroll-behavior-y: contain;
 
   
