@@ -10,6 +10,7 @@ function Feed() {
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
+  const feedRef = useRef(null)
   const nodeRef = useRef(null)
 
   const loadMoreData = async event => {
@@ -70,7 +71,27 @@ function Feed() {
   }
 
   const update = ({ deltaY, direction, velocity }) => {
-    return
+    const container = feedRef.current
+
+    console.log('container.children.length: ', container.children.length)
+    
+    if (!container && !container.children.length) {
+      return
+    }
+
+    
+    const nodes = Array.from(container.children)
+    
+    // if velocity is high, set target node three+ away, 
+    // else set target node to next index
+    
+    // if direction down, set targetNode index ahead
+    // if up set targetNode index behind
+
+    container.scrollTo({
+      top: targetNode.offsetTop,
+      behavior: 'smooth',
+    })
   }
 
   useEffect(() => {
