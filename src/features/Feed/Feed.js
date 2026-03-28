@@ -79,6 +79,10 @@ function Feed() {
     })
   }
 
+  const snapElement = entry => {
+    
+  }
+
   const observeNodes = () => {
     const deltaY, direction, velocity
     const container = feedRef.current
@@ -88,7 +92,7 @@ function Feed() {
     const nodes = Array.from(container.children)
 
     for (const element of nodes) {
-      observer.observe(element, snapOnScroll)
+      observer.observe(element, snapElement)
     }
 
 
