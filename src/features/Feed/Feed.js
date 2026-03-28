@@ -80,7 +80,7 @@ function Feed() {
   }
 
   const snapElement = entry => {
-    
+    console.log('entry: ', entry)
   }
 
   const observeNodes = () => {
