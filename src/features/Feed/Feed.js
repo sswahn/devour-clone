@@ -11,7 +11,7 @@ function Feed() {
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
-  const nodeRef = useRef(null) // could use as an array if issue with container.children
+  const currentNodeIndex = useRef(0)
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -35,31 +35,32 @@ function Feed() {
 
   const update = ({ deltaY, direction, velocity }) => {
     const container = feedRef.current
-
-    console.log('container.children.length: ', container.children.length)
-    
     if (!container && !container.children.length) {
-      return
+      return console.warn('container or container.children do not exist.')
     }
-
     
     const nodes = Array.from(container.children)
     const highVelocityThreshold = 3 // to be determined
-    const targetNode = null
+
+    // need current node index to update from intermediate scroll point
+    // could set global (ref) to keep current node index
+    // then use current node index instead of index (raw index)
     
     if (direction === 'down' && velocity > highVelocityThreshold) {
-      targetNode = nodes[index + 3]
+      currentNodeIndex.current = currentNodeIndex.current + 3
     }
     if (direction === 'down' && velocity < highVelocityThreshold) {
-      targetNode = nodex[index + 1]
+      currentNodeIndex.current = currentNodeIndex.current + 1
     }
     
     if (direction === 'up' && velocity > highVelocityThreshold) {
-      targetNode = nodes[index - 3]
+      currentNodeIndex.current = currentNodeIndex.current - 3
     }
     if (direction === 'up' && velocity < highVelocityThreshold) {
-      targetNode = nodex[index - 1]
+      currentNodeIndex.current = currentNodeIndex.current - 1
     }
+
+    const targetNode = nodes[currentNodeIndex.current]
 
     container.scrollTo({
       top: targetNode.offsetTop,
