@@ -32,10 +32,6 @@ function useScrollEffect() {
       return
     }
 
-    console.log('element: ', element)
-    console.log('deltaY: ', deltaY)
-    console.log('velocity: ', velocity)
-
     if (!highVelocity.current && velocity > 90) {
       highVelocity.current = true
       return setVisible(element)
@@ -50,7 +46,7 @@ function useScrollEffect() {
       return
     }
 
-    if (direction === 'down' && deltaY > 5) { // 200
+    if (direction === 'down' && deltaY > 200) {
       return setHidden(element)
     }
 
