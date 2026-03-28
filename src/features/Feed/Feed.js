@@ -78,7 +78,9 @@ function Feed() {
   }
 
   const observeNodes = () => {
-    const deltaY, direction, velocity
+    const deltaY 
+    const direction
+    const velocity
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
@@ -88,7 +90,6 @@ function Feed() {
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
-
 
     return {
       scrollData(data) {
