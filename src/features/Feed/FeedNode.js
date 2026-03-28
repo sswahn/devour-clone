@@ -38,4 +38,4 @@ function FeedNode({ nodeRef, item, index, count }) {
   )
 }
 
-export default memo(FeedNode)
+export default FeedNode // memo(FeedNode)
