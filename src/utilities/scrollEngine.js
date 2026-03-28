@@ -69,8 +69,8 @@ function onScrollEnd(event) {
 }
 
 function start() {
-  window.addEventListener('scroll', onScroll, { passive: true })
-  window.addEventListener("scrollend", onScrollEnd, { passive: true })
+  window.addEventListener('scroll', onScroll) // { passive: true })
+  window.addEventListener("scrollend", onScrollEnd) //{ passive: true })
   started = true
 }
 
