@@ -41,9 +41,6 @@ function Feed() {
   // That’s it.
 
   const snapOnScroll = ({ deltaY, direction, velocity }) => {
-
-    console.log('deltaY: ', deltaY)
-    
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
@@ -69,9 +66,6 @@ function Feed() {
     }
 
     const targetNode = nodes[nodeIndex.current]
-
-    console.log('targetNode: ', targetNode)
-    console.log('targetNode.offsetTop: ', targetNode.offsetTop)
 
     container.scrollTo({
       top: targetNode.offsetTop,
