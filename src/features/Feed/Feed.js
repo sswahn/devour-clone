@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, memo } from 'react'
+import { createMultiObserver } from '../../multiObserver'
+import scroll from '../../utilities/scrollEngine'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
-import scroll from '../../utilities/scrollEngine'
 import FeedNode from './FeedNode'
 import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
