@@ -44,10 +44,6 @@ function Feed() {
     
     const nodes = Array.from(container.children)
     const highVelocityThreshold = 3 // to be determined
-
-    // need current node index to update from intermediate scroll point
-    // could set global (ref) to keep current node index
-    // then use current node index instead of index (raw index)
     
     if (direction === 'down' && velocity > highVelocityThreshold) {
       currentNodeIndex.current = currentNodeIndex.current + 3
