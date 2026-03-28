@@ -86,6 +86,8 @@ const scroll = {
       start()
     }
     subscribers.add(fn)
+
+    console.log('in scrollEngine.')
     
     fn({
       deltaY,
