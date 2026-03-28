@@ -1,13 +1,8 @@
 /* Feed */
 
 .feed {
-
-  border: 1px dashed yellow;
-  
   overflow: hidden;
 
-  
-  
 /*
   scroll-snap-type: y mandatory;
   overscroll-behavior-y: contain;
