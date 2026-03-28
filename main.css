@@ -128,17 +128,11 @@
   z-index: 0;
 }
 
-/*
-.feedNode {
-  height: 100dvh;
-  width: 100%;
-  scroll-snap-align: start;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.PJIQi5iK7sqS96kJ7VRv {
+  scroll-snap-align: start;
 }
-*/
+
 
 /*!***************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Main/main.module.css ***!
