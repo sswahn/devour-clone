@@ -78,7 +78,23 @@ function Feed() {
     })
   }
 
+  const observeNodes = () => {
+    const multiObserver = createMultiObserver()
+    const container = feedRef.current
+    if (!container && !container.children.length) {
+      return console.warn('container or container.children do not exist.')
+    }
+    const nodes = Array.from(container.children)
+
+    for (const element of nodes) {
+      multiObserver.observe(element, callback)
+    }
+    
+   
+  }
+
   useEffect(() => {
+    
     const unsubscribe = scroll.subscribe(snapOnScroll)
     return () => {
       unsubscribe()
