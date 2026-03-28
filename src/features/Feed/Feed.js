@@ -31,9 +31,14 @@ function Feed() {
     
     setData(video?.video)
   }
-  
 
-  const update = ({ deltaY, direction, velocity }) => {
+  // New Logic:
+  // 1. Let user scroll freely
+  // 2. Detect when scrolling stops
+  // 3. Snap to closest node
+  // That’s it.
+
+  const snapOnScroll = ({ deltaY, direction, velocity }) => {
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
@@ -70,7 +75,7 @@ function Feed() {
   }
 
   useEffect(() => {
-    const unsubscribe = scroll.subscribe(update)
+    const unsubscribe = scroll.subscribe(snapOnScroll)
     return () => {
       unsubscribe()
     }
