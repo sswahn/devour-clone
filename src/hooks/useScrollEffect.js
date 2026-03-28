@@ -50,7 +50,7 @@ function useScrollEffect() {
       return
     }
 
-    if (direction === 'down' && deltaY > 200) {
+    if (direction === 'down' && deltaY > 5) { // 200
       return setHidden(element)
     }
 
