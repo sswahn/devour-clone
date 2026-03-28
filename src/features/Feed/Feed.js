@@ -44,7 +44,7 @@ function Feed() {
 
     console.log('element.offsetTop: ', element.offsetTop)
     
-    container.scrollTo({
+    feedRef.current.scrollTo({
       top: element.offsetTop,
       behavior: 'smooth'
     })
