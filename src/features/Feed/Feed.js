@@ -87,7 +87,7 @@ function Feed() {
     const nodes = Array.from(container.children)
 
     for (const element of nodes) {
-      multiObserver.observe(element, callback)
+      multiObserver.observe(element, snapOnScroll)
     }
     
    
