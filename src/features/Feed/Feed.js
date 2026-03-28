@@ -49,20 +49,20 @@ function Feed() {
     const highVelocityThreshold = 20 // to be determined
     
     if (direction === 'down' && velocity > highVelocityThreshold) {
-      nodeIdex.current = nodeIdex.current + 3
+      nodeIndex.current = nodeIndex.current + 3
     }
     if (direction === 'down' && velocity < highVelocityThreshold) {
-      nodeIdex.current = nodeIdex.current + 1
+      nodeIndex.current = nodeIndex.current + 1
     }
     
     if (direction === 'up' && velocity > highVelocityThreshold) {
-      nodeIdex.current = nodeIdex.current - 3
+      nodeIndex.current = nodeIndex.current - 3
     }
     if (direction === 'up' && velocity < highVelocityThreshold) {
-      nodeIdex.current = nodeIdex.current - 1
+      nodeIndex.current = nodeIndex.current - 1
     }
 
-    const targetNode = nodes[nodeIdex.current]
+    const targetNode = nodes[nodeIndex.current]
 
     console.log('targetNode: ', targetNode)
 
