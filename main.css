@@ -203,7 +203,7 @@
 
 .ttWUEf9BWH6bUtBFQeVP {
   align-items: center; 
-  background: linear-gradient(to top, #663399, #8a2be2); /* #663399; */
+  background: var(--white); /* linear-gradient(to top, #663399, #8a2be2); /* #663399; */
   border: 1px solid color-mix(in srgb, var(--white) 13%, transparent);
   border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
@@ -229,7 +229,7 @@
 }
 
 .ttWUEf9BWH6bUtBFQeVP svg {
-  color: var(--white);
+  color: var(--black);
 }
 
 /*!**********************************************************************************************************************************!*\
