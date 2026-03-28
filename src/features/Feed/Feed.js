@@ -42,6 +42,9 @@ function Feed() {
   // JS decides which snap point
 
   const snapOnScroll = ({ deltaY, direction, velocity }) => {
+
+    console.log('deltaY: ', deltaY)
+    
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
