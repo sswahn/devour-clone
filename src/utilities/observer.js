@@ -1,4 +1,4 @@
-export function createMultiObserver({ root = null, rootMargin = '0px', threshold = 0 } = {}) {
+export function createObserver({ root = null, rootMargin = '0px', threshold = 0 } = {}) {
   const elementCallbacks = new Map()
 
   const observer = new IntersectionObserver(entries => {
