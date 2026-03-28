@@ -90,4 +90,4 @@ function Feed() {
   )
 }
 
-export default memo(Feed)
+export default Feed // memo(Feed)
