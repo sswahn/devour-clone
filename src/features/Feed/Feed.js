@@ -13,6 +13,7 @@ function Feed() {
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
   const nodeIndex = useRef(0)
+  const multiObserver = createMultiObserver()
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -79,7 +80,7 @@ function Feed() {
   }
 
   const observeNodes = () => {
-    const multiObserver = createMultiObserver()
+    
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
@@ -94,10 +95,11 @@ function Feed() {
   }
 
   useEffect(() => {
-    
+    observeNodes()
     const unsubscribe = scroll.subscribe(snapOnScroll)
     return () => {
       unsubscribe()
+      multiObserver.disconnect()
     }
   }, [])
   
