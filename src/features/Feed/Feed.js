@@ -80,7 +80,7 @@ function Feed() {
   }
 
   const observeNodes = () => {
-    
+    const deltaY, direction, velocity
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
@@ -90,13 +90,22 @@ function Feed() {
     for (const element of nodes) {
       observer.observe(element, snapOnScroll)
     }
+
+
+
     
-   
+    return {
+      scrollData(data) {
+        deltaY = data.deltaY 
+        direction = data.direction 
+        velocity = data.velocity
+      }
+    }
   }
 
   useEffect(() => {
-    observeNodes()
-    const unsubscribe = scroll.subscribe(snapOnScroll)
+    const { scrollData } = observeNodes()
+    const unsubscribe = scroll.subscribe(scrollData)
     return () => {
       unsubscribe()
       observer.disconnect()
