@@ -32,6 +32,7 @@ function useScrollEffect() {
       return
     }
 
+    console.log('element: ', element)
     console.log('velocity: ', velocity)
 
     if (!highVelocity.current && velocity > 90) {
