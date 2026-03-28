@@ -412,10 +412,14 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html, body {
   height: 100%;
   overflow-x: hidden;
   width: 100%;
+}
+
+#root {
+  max-width: 500px;
 }
 
 html {
