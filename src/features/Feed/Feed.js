@@ -13,7 +13,6 @@ function Feed() {
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
   const nodeIndex = useRef(0)
-  const observer = createObserver()
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -39,73 +38,37 @@ function Feed() {
   // 2. Detect when scrolling stops
   // 3. Snap to closest node
   // That’s it.
+ 
+  const snapElement = entry => {
+    const element = entry.target
 
-  const snapOnScroll = ({ deltaY, direction, velocity }) => {
-    const container = feedRef.current
-    if (!container && !container.children.length) {
-      return console.warn('container or container.children do not exist.')
-    }
-    const nodes = Array.from(container.children)
-
-    // console.log('velocity in feed: ', velocity)
+    console.log('element.offsetTop: ', element.offsetTop)
     
-    const highVelocityThreshold = 9 // to be determined
-    
-    if (direction === 'down' && deltaY > 350) { // && velocity > highVelocityThreshold) {
-      nodeIndex.current += 3
-    }
-    if (direction === 'down' && deltaY > 350) { // && velocity < highVelocityThreshold) {
-      nodeIndex.current += 1
-    }
-    
-    if (direction === 'up' && deltaY > 350) { // && velocity > highVelocityThreshold) {
-      nodeIndex.current -= 3
-    }
-    if (direction === 'up' && deltaY > 350) { // && velocity < highVelocityThreshold) {
-      nodeIndex.current -= 1
-    }
-
-    const targetNode = nodes[nodeIndex.current]
-
     container.scrollTo({
-      top: targetNode.offsetTop,
-      behavior: 'smooth',
+      top: element.offsetTop,
+      behavior: 'smooth'
     })
   }
 
-  const snapElement = entry => {
-    console.log('entry: ', entry)
-  }
-
-  const observeNodes = () => {
-    let deltaY = undefined
-    let direction = undefined
-    let velocity = undefined
+  const connectObservers = () => {
+    const observer = createObserver()
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
     }
     const nodes = Array.from(container.children)
-
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
-
-    return {
-      scrollData(data) {
-        deltaY = data.deltaY 
-        direction = data.direction 
-        velocity = data.velocity
-      }
+    return () => {
+      observer.disconnect()
     }
   }
 
   useEffect(() => {
-    const { scrollData } = observeNodes()
-    const unsubscribe = scroll.subscribe(scrollData)
+    const disconnectObservers = connectObservers()
     return () => {
-      unsubscribe()
-      observer.disconnect()
+      disconnectObservers()
     }
   }, [])
   
