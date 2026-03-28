@@ -46,19 +46,19 @@ function Feed() {
 
     // console.log('velocity in feed: ', velocity)
     
-    const highVelocityThreshold = 20 // to be determined
+    const highVelocityThreshold = 9 // to be determined
     
-    if (direction === 'down' && velocity > highVelocityThreshold) {
+    if (direction === 'down' && deltaY > 50 && velocity > highVelocityThreshold) {
       nodeIndex.current = nodeIndex.current + 3
     }
-    if (direction === 'down' && velocity < highVelocityThreshold) {
+    if (direction === 'down' && deltaY > 50 && velocity < highVelocityThreshold) {
       nodeIndex.current = nodeIndex.current + 1
     }
     
-    if (direction === 'up' && velocity > highVelocityThreshold) {
+    if (direction === 'up' && deltaY > 50 && velocity > highVelocityThreshold) {
       nodeIndex.current = nodeIndex.current - 3
     }
-    if (direction === 'up' && velocity < highVelocityThreshold) {
+    if (direction === 'up' && deltaY > 50 && velocity < highVelocityThreshold) {
       nodeIndex.current = nodeIndex.current - 1
     }
 
