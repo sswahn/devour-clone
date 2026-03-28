@@ -31,11 +31,14 @@ function Feed() {
     setData(video?.video)
   }
 
+  const update = () => {
+    return
+  }
+
   useEffect(() => {
-    // loadFromStorage()
-    const unsubscribe = scroll.subscribe(nodeRef.current)
+    const unsubscribe = scroll.subscribe(update)
     return () => {
-      unsubscribe(nodeRef.current)
+      unsubscribe()
     }
   }, [])
   
