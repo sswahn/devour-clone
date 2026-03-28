@@ -44,7 +44,7 @@ function Feed() {
 
     console.log('nodes: ', nodes)
 
-    console.log('velocity in feed: ', velocity)
+    // console.log('velocity in feed: ', velocity)
     
     const highVelocityThreshold = 20 // to be determined
     
@@ -65,6 +65,7 @@ function Feed() {
     const targetNode = nodes[nodeIndex.current]
 
     console.log('targetNode: ', targetNode)
+    console.log('targetNode.offsetTop: ', targetNode.offsetTop)
 
     container.scrollTo({
       top: targetNode.offsetTop,
