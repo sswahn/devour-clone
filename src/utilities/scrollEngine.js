@@ -49,6 +49,9 @@ function update(timestamp) {
 
 function onScroll(event) {
   // Throttle on scroll event
+
+  console.log('throttling requestAnimationFrame in onScroll event.')
+  
   if (!ticking) {
     requestAnimationFrame(timestamp => {
       update(timestamp)
