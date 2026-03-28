@@ -1,12 +1,7 @@
 /* Main */
 
 .main {
- /* margin: 0 auto;
-   max-width: 500px; */
-
   overflow-x: hidden;
-
- border: 1px dashed magenta;
 }
 
 @media (max-width: 500px) {
