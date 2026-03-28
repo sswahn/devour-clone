@@ -120,11 +120,9 @@
 .RyVp3_0BIz2rwivAL1Ei {
   overflow: hidden;
 
-
   scroll-snap-type: y mandatory;
-  overscroll-behavior-y: contain;
+ /* overscroll-behavior-y: contain; */
 
-  
   z-index: 0;
 }
 
