@@ -45,17 +45,17 @@ function Feed() {
     const highVelocityThreshold = 9 // to be determined
     
     if (direction === 'down' && deltaY > 350) { // && velocity > highVelocityThreshold) {
-      nodeIndex.current = nodeIndex.current + 3
+      nodeIndex.current += 3
     }
     if (direction === 'down' && deltaY > 350) { // && velocity < highVelocityThreshold) {
-      nodeIndex.current = nodeIndex.current + 1
+      nodeIndex.current += 1
     }
     
     if (direction === 'up' && deltaY > 350) { // && velocity > highVelocityThreshold) {
-      nodeIndex.current = nodeIndex.current - 3
+      nodeIndex.current -= 3
     }
     if (direction === 'up' && deltaY > 350) { // && velocity < highVelocityThreshold) {
-      nodeIndex.current = nodeIndex.current - 1
+      nodeIndex.current -= 1
     }
 
     const targetNode = nodes[nodeIndex.current]
