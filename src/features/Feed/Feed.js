@@ -37,6 +37,9 @@ function Feed() {
   // 2. Detect when scrolling stops
   // 3. Snap to closest node
   // That’s it.
+  // Try:
+  // CSS handles snap positioning
+  // JS decides which snap point
 
   const snapOnScroll = ({ deltaY, direction, velocity }) => {
     const container = feedRef.current
