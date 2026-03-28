@@ -34,6 +34,9 @@ function Feed() {
   
 
   const update = ({ deltaY, direction, velocity }) => {
+
+    console.log('velocity in feed: ', velocity)
+    
     const container = feedRef.current
     if (!container && !container.children.length) {
       return console.warn('container or container.children do not exist.')
