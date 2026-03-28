@@ -92,8 +92,6 @@ function Feed() {
     }
 
 
-
-    
     return {
       scrollData(data) {
         deltaY = data.deltaY 
