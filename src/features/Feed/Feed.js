@@ -11,7 +11,7 @@ function Feed() {
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
-  const nodeRef = useRef(null)
+  const nodeRef = useRef(null) // could use as an array if issue with container.children
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -78,11 +78,11 @@ function Feed() {
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
 
       {data.map((item, index) => 
-        <FeedNode key={index} nodeRef={nodeRef} item={item} index={index + 1} count={data.length} />
+        <FeedNode key={index} item={item} index={index + 1} count={data.length} />
       )}
 {/*
       {data.map((item, index) => {
-        <FeedNode key={item.id} nodeRef={nodeRef} item={item} index={idex + 1} count={items.length} />
+        <FeedNode key={item.id} item={item} index={idex + 1} count={items.length} />
       })}
       <Sentinel onVisible={loadMoreData} />
 */}
