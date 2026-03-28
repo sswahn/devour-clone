@@ -1,6 +1,7 @@
 import { useState, useEffect, memo } from 'react'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
+import scroll from '../../utilities/scrollEngine'
 import FeedNode from './FeedNode'
 import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
@@ -32,6 +33,10 @@ function Feed() {
 
   useEffect(() => {
     // loadFromStorage()
+    const unsubscribe = scroll.subscribe(nodeRef.current)
+    return () => {
+      unsubscribe(nodeRef.current)
+    }
   }, [])
   
   return (
