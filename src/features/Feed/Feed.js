@@ -40,17 +40,27 @@ function Feed() {
   // That’s it.
  
   const snapElement = entry => {
-    if (!entry.isIntersecting) {
+    if (!entry.isIntersecting || isSnapping) {
       return
     }
     const element = entry.target
 
     console.log('element.offsetTop: ', element.offsetTop)
+    console.log({
+      isIntersecting: entry.isIntersecting,
+      ratio: entry.intersectionRatio
+    })
+    
+    let isSnapping = true
     
     window.scrollTo({
       top: element.offsetTop,
       behavior: 'smooth'
     })
+
+    setTimeout(() => {
+      isSnapping = false
+    }, 60)
   }
 
   const connectObservers = () => {
