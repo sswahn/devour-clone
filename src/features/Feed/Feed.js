@@ -57,10 +57,10 @@ function Feed() {
       return console.warn('container or container.children do not exist.')
     }
     const nodes = Array.from(container.children)
-    const observer = createObserver() /*({
+    const observer = createObserver({
       root: container,
       threshold: 0.6
-    })*/
+    })
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
