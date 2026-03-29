@@ -32,25 +32,13 @@ function Feed() {
     
     setData(video?.video)
   }
-
-  // New Logic:
-  // 1. Let user scroll freely
-  // 2. Detect when scrolling stops
-  // 3. Snap to closest node
-  // That’s it.
  
   const snapElement = entry => {
     if (!entry.isIntersecting || isSnapping) {
       return
     }
-    const element = entry.target
-
-    console.log('element.offsetTop: ', element.offsetTop)
-    console.log({
-      isIntersecting: entry.isIntersecting,
-      ratio: entry.intersectionRatio
-    })
     
+    const element = entry.target
     let isSnapping = true
     
     window.scrollTo({
