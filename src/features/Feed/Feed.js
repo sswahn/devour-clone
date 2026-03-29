@@ -40,6 +40,9 @@ function Feed() {
   // That’s it.
  
   const snapElement = entry => {
+    if (!entry.isIntersecting) {
+      return
+    }
     const element = entry.target
 
     console.log('element.offsetTop: ', element.offsetTop)
