@@ -118,16 +118,14 @@
 /* Feed */
 
 .RyVp3_0BIz2rwivAL1Ei {
-  z-index: 0;
-}
-
-.RyVp3_0BIz2rwivAL1Ei section {
   height: 100dvh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
+  
+  z-index: 0;
 }
 
 
