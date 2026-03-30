@@ -67,6 +67,10 @@ function Feed() {
   }
 
   useEffect(() => {
+    if (feedRef.current) {
+      scroll.publish(feedRef.current)
+    }
+    
     //const disconnectObservers = connectObservers()
     return () => {
       //disconnectObservers()
