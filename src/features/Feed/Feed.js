@@ -79,6 +79,14 @@ function Feed() {
   return (
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
 
+      <div style={{
+        background: '#777',
+        color: 'white',
+        height: '50dvh',
+        width: '100dvw'
+      }}>suggestions</div>
+
+    
       {data.map((item, index) => 
         <FeedNode key={index} item={item} index={index + 1} count={data.length} />
       )}
