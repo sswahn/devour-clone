@@ -47,7 +47,7 @@ function Feed() {
 
     setTimeout(() => {
       isSnapping = false
-    }, 1400)
+    }, 2400)
   }
 
   const connectObservers = () => {
