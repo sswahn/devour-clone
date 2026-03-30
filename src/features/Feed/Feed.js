@@ -11,13 +11,7 @@ function Feed() {
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  const fullscreenRef = useRef(null)
-  const feedRef = useCallback(node => { 
-    if (node !== null) { 
-      scroll.setElement(node)
-      fullscreenRef.current = node
-    }
-  }, [])
+  const feedRef = useCallback(node => (node !== null) && scroll.setElement(node), [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -34,7 +28,6 @@ function Feed() {
     const video = await db.get('video')
     
     alert(JSON.stringify(video?.video))
-    
     setData(video?.video)
   }
 
@@ -44,10 +37,6 @@ function Feed() {
   // and for hiding the header and maybe the bottom nav on fullscreen
   
   const handleNodeClick = async event => {
-    console.log('fullscreenRef.current: ', fullscreenRef.current)
-    if (!fullscreenRef.current) {
-      return console.warn('feedRef.current not set.')
-    }
     try {
       await (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen)?.()
       await screen.orientation.lock('portrait')
