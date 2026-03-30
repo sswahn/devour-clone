@@ -1,3 +1,4 @@
+import scroll from '../../../utilities/scrollEngine'
 import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
@@ -7,13 +8,13 @@ function HomeButton() {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-
+    const element = scroll.getElement()
     // Need scrollElement for .scrollTop, and .scrollTo
     // import scroll from scrollEngine,
     // make a function that returns the scrollElement,
     // check with AI to see if this is performant compared to context.
-    if (window.scrollY !== 0) {
-      window.scrollTo({
+    if (element.scrollTop !== 0) {
+      element.scrollTo({
         behavior: 'smooth',
         top: 0
       })
