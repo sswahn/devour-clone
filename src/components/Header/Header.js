@@ -9,7 +9,9 @@ const Header = () => {
   const { scrollEffect } = useScrollEffect()
 
   useEffect(() => {
-    headerRef && scrollEffect(headerRef.current, styles.hidden)
+    console.log('window.scrollY: ', window.scrollY)
+    
+    // headerRef && scrollEffect(headerRef.current, styles.hidden)
   }, [])
   
   return (
