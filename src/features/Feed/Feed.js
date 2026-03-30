@@ -40,7 +40,7 @@ function Feed() {
     
     isSnapping.current = true
 
-    window.scrollTo({
+    window.scrollIntoView({
       top: entry.target.offsetTop,
       behavior: 'smooth'
     })
@@ -66,9 +66,9 @@ function Feed() {
   }
 
   useEffect(() => {
-   // const disconnectObservers = connectObservers()
+    const disconnectObservers = connectObservers()
     return () => {
-   //   disconnectObservers()
+      disconnectObservers()
     }
   }, [])
   
@@ -82,8 +82,7 @@ function Feed() {
         width: '100dvw',
         maxWidth: '500px',
         paddingTop: '100px',
-        margin: '0 auto 16px auto',
-        scrollSnapType: 'y mandatory'
+        margin: '0 auto 16px auto'
       }}>suggestions</div>
 
     
