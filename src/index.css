@@ -30,7 +30,8 @@ html, body, #root { /* remove this entirely */
   border: 1px dashed red;
 }
 
-main {
+html {
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
