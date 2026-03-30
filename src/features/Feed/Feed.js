@@ -14,6 +14,8 @@ function Feed() {
   const nodeIndex = useRef(0)
   const isSnapping = useRef(false)
    const feedRef = useCallback(node => {
+
+     console.log('callback ref element: ', node)
      if (node !== null) {
        scroll.publish(node)
      }
