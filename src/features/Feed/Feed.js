@@ -38,6 +38,7 @@ function Feed() {
     setData(video?.video)
   }
 
+  // must be a button to open fullscreen
   const handleNodeClick = async event => {
     console.log('fullscreenRef.current: ', fullscreenRef.current)
     if (!fullscreenRef.current) {
