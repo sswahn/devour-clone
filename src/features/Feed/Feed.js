@@ -42,7 +42,9 @@ function Feed() {
 
     window.scrollTo({
       top: entry.target.offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'start',
+    //  inline: 'nearest'
     })
 
     setTimeout(() => {
