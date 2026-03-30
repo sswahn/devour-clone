@@ -1,16 +1,14 @@
 /* Feed */
 
 .feed {
-  z-index: 0;
-}
-
-.feed section {
   height: 100dvh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
+  
+  z-index: 0;
 }
 
 
