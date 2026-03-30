@@ -74,7 +74,7 @@ function Feed() {
   
   return (
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
-
+    {/*
       <div style={{
         background: '#777',
         color: 'white',
@@ -84,7 +84,7 @@ function Feed() {
         paddingTop: '100px',
         margin: '0 auto 16px auto'
       }}>suggestions</div>
-
+    */}
     
       {data.map((item, index) => 
         <FeedNode key={index} item={item} index={index + 1} count={data.length} />
