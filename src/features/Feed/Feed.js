@@ -82,7 +82,8 @@ function Feed() {
         width: '100dvw',
         maxWidth: '500px',
         paddingTop: '100px',
-        margin: '0 auto 16px auto'
+        margin: '0 auto 16px auto',
+        scrollSnapType: 'y mandatory'
       }}>suggestions</div>
 
     
