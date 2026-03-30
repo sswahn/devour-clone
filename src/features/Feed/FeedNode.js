@@ -14,7 +14,9 @@ function FeedNode({ item, index, count }) {
         background: '#888',
         borderRadius: '10px',
         maxWidth: '500px',
-        margin: '0 auto 8px auto'
+        margin: '0 auto 8px auto',
+        height: '100dvh',
+        width: '100dvw'
     }}>
       <header>
 {/*
@@ -24,7 +26,7 @@ function FeedNode({ item, index, count }) {
         Change 'data' back to 'item'
 */}
       </header>
-        <figure style={{ background: '#666', borderRadius: '10px', height: '766px', width: '411px' }}>
+        <figure style={{ background: '#666', borderRadius: '10px', height: '100%', width: '100%' }}>
           {data.videoUrl && <video ref={ref} src={data.videoUrl} preload="metadata" muted playsInline loop />}
           {data.caption ?? <figcaption>{data.caption}</figcaption>}
         </figure>
