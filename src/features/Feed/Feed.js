@@ -32,6 +32,11 @@ function Feed() {
     setData(video?.video)
   }
 
+  const handleNodeClick = event => {
+    // request full screen
+    // make feedRef fullscreen
+  }
+
   return (
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
     {/*
@@ -47,7 +52,7 @@ function Feed() {
     */}
     
       {data.map((item, index) => 
-        <FeedNode key={index} item={item} index={index + 1} count={data.length} />
+        <FeedNode key={index} onClick={handleNodeClick} item={item} index={index + 1} count={data.length} />
       )}
 {/*
       {data.map((item, index) => {
