@@ -9,7 +9,7 @@ const Header = () => {
   const { scrollEffect } = useScrollEffect()
 
   useEffect(() => {
-    // headerRef && scrollEffect(headerRef.current, styles.hidden)
+    headerRef && scrollEffect(headerRef.current, styles.hidden)
   }, [])
   
   return (
