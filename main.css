@@ -137,7 +137,8 @@
 /* Main */
 
 .Z5pv5a_NKshg9J2UQIDv {
-  overflow-x: hidden;
+ /* overflow-x: hidden; */
+  overflow: hidden;
   scroll-snap-type: y mandatory;
 }
 
