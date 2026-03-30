@@ -1,7 +1,7 @@
 /* Main */
 
 .main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (max-width: 500px) {
