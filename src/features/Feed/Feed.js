@@ -39,6 +39,7 @@ function Feed() {
   }
 
   const handleNodeClick = async event => {
+    console.log('fullscreenRef.current: ', fullscreenRef.current)
     if (!fullscreenRef.current) {
       return console.warn('feedRef.current not set.')
     }
