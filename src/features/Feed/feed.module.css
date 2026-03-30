@@ -1,7 +1,7 @@
 /* Feed */
 
 .feed {
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 0;
 }
 
