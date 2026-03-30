@@ -120,6 +120,8 @@
 .RyVp3_0BIz2rwivAL1Ei {
   overflow: hidden;
 
+  scroll-snap-type: y mandatory;
+
   z-index: 0;
 }
 
