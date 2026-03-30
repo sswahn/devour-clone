@@ -10,7 +10,7 @@
 }
 
 
-.feedNode > article {
+.feed article {
   height: 100dvh;
   scroll-snap-align: start;
   width: 100dvw;
