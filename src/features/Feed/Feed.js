@@ -33,8 +33,8 @@ function Feed() {
   }
  
   const snapElement = entry => {
-    if (!entry.isIntersecting || isSnapping) {
-      return
+    if (isSnapping || !entry.isIntersecting) {
+      return console.log('isSnapping returned true, function blocked.')
     }
     
     const element = entry.target
