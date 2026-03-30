@@ -1,11 +1,11 @@
 /* Feed */
 
 .feed {
-  overflow-x: hidden;
   z-index: 0;
 }
 
 .feed section {
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 
