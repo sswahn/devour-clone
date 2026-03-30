@@ -47,7 +47,7 @@ function Feed() {
 
     setTimeout(() => {
       isSnapping = false
-    }, 400)
+    }, 200)
   }
 
   const connectObservers = () => {
@@ -56,10 +56,7 @@ function Feed() {
       return console.warn('container or container.children do not exist.')
     }
     const nodes = Array.from(container.children)
-    const observer = createObserver({
-   //   root: container,
-      threshold: 0.4
-    })
+    const observer = createObserver()
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
