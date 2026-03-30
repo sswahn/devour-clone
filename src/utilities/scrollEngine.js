@@ -26,9 +26,6 @@ function update(timestamp) {
   // Calculate current scroll direction
   const dY = scrollY - prevScrollY
   direction = dY > 0 ? 'down' : dY < 0 ? 'up' : 'idle'
-
-  console.log('scrollY: ', scrollY)
-  console.log('direction: ', direction)
   
   // Set prevScrollY for use in next frame
   prevScrollY = scrollY
@@ -74,9 +71,6 @@ function onScrollEnd(event) {
 
 function start() {
   if (element) {
-    
-    console.log('element in start function eventlistener is beig assigned to: ', element)
-    
     element.addEventListener('scroll', onScroll, { passive: true })
     element.addEventListener("scrollend", onScrollEnd, { passive: true })
     started = true
