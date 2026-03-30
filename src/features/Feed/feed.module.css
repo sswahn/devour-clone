@@ -3,7 +3,7 @@
 .feed {
   overflow: hidden;
 
-  scroll-snap-type: y mandatory;
+ 
 
   z-index: 0;
 }
