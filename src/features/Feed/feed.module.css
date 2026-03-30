@@ -14,5 +14,10 @@
   height: 100dvh;
   scroll-snap-align: start;
   width: 100dvw;
+
+  background: #888;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto 4px auto;
 }
 
