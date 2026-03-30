@@ -13,7 +13,7 @@ function FeedNode({ item, index, count }) {
         background: '#888',
         borderRadius: '10px',
         maxWidth: '500px',
-        margin: '0 auto 8px auto'
+        margin: '0 auto 4px auto'
     }}>
       <header>
 {/*
