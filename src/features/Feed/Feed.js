@@ -42,17 +42,19 @@ function Feed() {
     }
     
     isSnapping.current = true
-    const element = entry.target
-    
+
     window.scrollTo({
-      top: element.offsetTop,
+      top: entry.target.offsetTop,
       behavior: 'smooth'
     })
 
     console.log('before timeout.')
+    
     setTimeout(() => {
       isSnapping.current = false
+      
       console.log('within timeout.')
+      
     }, 1400)
   }
 
