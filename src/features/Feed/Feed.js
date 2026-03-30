@@ -11,8 +11,6 @@ function Feed() {
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  const nodeIndex = useRef(0)
-  const isSnapping = useRef(false)
   const feedRef = useCallback(node => (node !== null) && scroll.publish(node), [])
 
   const loadMoreData = async event => {
@@ -33,50 +31,7 @@ function Feed() {
     
     setData(video?.video)
   }
- 
-  const snapElement = entry => {
-    if (isSnapping.current || !entry.isIntersecting) {
-      return console.warn('isSnapping returned true, function blocked.')
-    }
-    
-    isSnapping.current = true
-    
-    window.scrollTo({
-      top: entry.target.offsetTop,
-      behavior: 'smooth'
-    })
 
-    setTimeout(() => {
-      isSnapping.current = false
-    }, 400)
-  }
-
-  const connectObservers = () => {
-    const container = feedRef.current
-    if (!container || !container.children.length) {
-      return console.warn('container or container.children do not exist.')
-    }
-    const nodes = Array.from(container.children)
-    const observer = createObserver()
-    for (const element of nodes) {
-      observer.observe(element, snapElement)
-    }
-    return () => {
-      observer.disconnect()
-    }
-  }
-/*
-  useEffect(() => {
-    if (feedRef.current) {
-      scroll.publish(feedRef.current)
-    }
-    
-    //const disconnectObservers = connectObservers()
-    return () => {
-      //disconnectObservers()
-    }
-  }, [])
-  */
   return (
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
     {/*
