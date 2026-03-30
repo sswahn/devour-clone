@@ -412,12 +412,6 @@
   box-sizing: border-box;
 }
 
-html, body, #root { /* remove this entirely */
-  border: 1px dashed red;
-}
-
-
-
 html {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-feature-settings: "cv11", "ss01";
