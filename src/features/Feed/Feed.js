@@ -83,7 +83,9 @@ function Feed() {
         background: '#777',
         color: 'white',
         height: '50dvh',
-        width: '100dvw'
+        width: '100dvw',
+        paddingTop: '100px',
+        marginBottom: '16px'
       }}>suggestions</div>
 
     
