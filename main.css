@@ -132,6 +132,7 @@
 
 
 .RyVp3_0BIz2rwivAL1Ei article {
+  contain: layout paint size;
   height: 100dvh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
