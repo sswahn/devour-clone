@@ -8,6 +8,6 @@
 
 
 .feedNode {
-  
+  scroll-snap-align: start;
 }
 
