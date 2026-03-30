@@ -1,15 +1,15 @@
 import { memo } from 'react'
 import LikeButton from './LikeButton/LikeButton'
 
-function FeedNode({ item, index, count }) {
-
+function FeedNode({ onClick, item, index, count }) {
+  
   const data = {
     videoUrl: item.videoUrl || '',
     caption: item.caption || ''
   }
   
   return (
-    <article tabIndex={index} aria-posinset={index} aria-setsize={count}>
+    <article onClick={onClick} tabIndex={index} aria-posinset={index} aria-setsize={count}>
       <header>
 {/*
         <AuthorButton />
