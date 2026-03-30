@@ -11,7 +11,13 @@ function Feed() {
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  const feedRef = useCallback(node => (node !== null) && scroll.setElement(node), [])
+  const fullscreenRef = useRef(null)
+  const feedRef = useCallback(node => { 
+    if (node !== null) { 
+      scroll.setElement(node)
+      fullscreenRef.current = node
+    }
+  }, [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -33,11 +39,11 @@ function Feed() {
   }
 
   const handleNodeClick = async event => {
-    if (!feedRef.current) {
+    if (!fullscreenRef.current) {
       return console.warn('feedRef.current not set.')
     }
     try {
-      await (feedRef.current.requestFullscreen || feedRef.current.webkitRequestFullscreen)?.()
+      await (fullscreenRef.current.requestFullscreen || fullscreenRef.current.webkitRequestFullscreen)?.()
       await screen.orientation.lock('portrait')
     } catch (error) {
       console.error(error)
