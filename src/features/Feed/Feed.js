@@ -12,6 +12,7 @@ function Feed() {
   const [loading, setLoading] = useState(false)
   const feedRef = useRef(null)
   const nodeIndex = useRef(0)
+  const isSnapping = useRef(false)
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -33,12 +34,15 @@ function Feed() {
   }
  
   const snapElement = entry => {
-    if (isSnapping || !entry.isIntersecting) {
+
+    console.log('isSnapping.current: ', isSnapping.current)
+
+    if (isSnapping.current || !entry.isIntersecting) {
       return console.warn('isSnapping returned true, function blocked.')
     }
     
+    isSnapping.current = true
     const element = entry.target
-    let isSnapping = true
     
     window.scrollTo({
       top: element.offsetTop,
@@ -47,9 +51,9 @@ function Feed() {
 
     console.log('before timeout.')
     setTimeout(() => {
-      isSnapping = false
+      isSnapping.current = false
       console.log('within timeout.')
-    }, 2400)
+    }, 1400)
   }
 
   const connectObservers = () => {
