@@ -39,17 +39,11 @@ function Feed() {
     }
     
     isSnapping.current = true
-
-    entry.target.scrollIntoView({
-      behavior: "smooth", 
-      block: "center" 
-    })
     
-    /*
     window.scrollTo({
       top: entry.target.offsetTop,
       behavior: 'smooth'
-    }) */
+    })
 
     setTimeout(() => {
       isSnapping.current = false
