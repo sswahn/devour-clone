@@ -18,7 +18,7 @@ function notify(data) {
 }
 
 function update(timestamp) {
-  const scrollY = window.scrollY
+  const scrollY = element.scrollY
   
   // Calculate change in Y
   deltaY = scrollY - scrollStart 
@@ -27,6 +27,9 @@ function update(timestamp) {
   const dY = scrollY - prevScrollY
   direction = dY > 0 ? 'down' : dY < 0 ? 'up' : 'idle'
 
+  console.log('scrollY: ', scrollY)
+  console.log('direction: ', direction)
+  
   // Set prevScrollY for use in next frame
   prevScrollY = scrollY
 
@@ -60,7 +63,7 @@ function onScroll(event) {
 }
 
 function onScrollEnd(event) {
-  scrollStart = window.scrollY
+  scrollStart = element.scrollY
   
   notify({
     deltaY,
@@ -71,7 +74,9 @@ function onScrollEnd(event) {
 
 function start() {
   if (element) {
+    
     console.log('element in start function eventlistener is beig assigned to: ', element)
+    
     element.addEventListener('scroll', onScroll, { passive: true })
     element.addEventListener("scrollend", onScrollEnd, { passive: true })
     started = true
