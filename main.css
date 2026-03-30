@@ -407,6 +407,7 @@ html {
 
 body {
   background-color: transparent;
+  scroll-snap-type: y mandatory;
   
   padding: 
     env(safe-area-inset-top)
