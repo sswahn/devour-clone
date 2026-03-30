@@ -566,7 +566,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"feed\":\"RyVp3_0BIz2rwivAL1Ei\",\"feedNode\":\"PJIQi5iK7sqS96kJ7VRv\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Feed/feed.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"feed\":\"RyVp3_0BIz2rwivAL1Ei\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Feed/feed.module.css?\n}");
 
 /***/ },
 
