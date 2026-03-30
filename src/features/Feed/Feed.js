@@ -45,8 +45,10 @@ function Feed() {
       behavior: 'smooth'
     })
 
+    console.log('before timeout.')
     setTimeout(() => {
       isSnapping = false
+      console.log('within timeout.')
     }, 2400)
   }
 
