@@ -125,6 +125,10 @@
   z-index: 0;
 }
 
+.RyVp3_0BIz2rwivAL1Ei section {
+  scroll-snap-type: y mandatory;
+}
+
 
 .PJIQi5iK7sqS96kJ7VRv {
   scroll-snap-align: start;
