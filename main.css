@@ -118,11 +118,11 @@
 /* Feed */
 
 .RyVp3_0BIz2rwivAL1Ei {
-  overflow-x: hidden;
   z-index: 0;
 }
 
 .RyVp3_0BIz2rwivAL1Ei section {
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 
