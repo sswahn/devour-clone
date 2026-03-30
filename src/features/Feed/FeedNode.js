@@ -16,7 +16,9 @@ function FeedNode({ item, index, count }) {
         maxWidth: '500px',
         margin: '0 auto 8px auto',
         height: '100dvh',
-        width: '100dvw'
+        width: '100dvw',
+        scrollSnapAlign: 'start',
+        scrollSnapStop: 'always'
     }}>
       <header>
 {/*
