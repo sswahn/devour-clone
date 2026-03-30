@@ -15,7 +15,7 @@
 .feed article {
   height: 100dvh;
   scroll-snap-align: start;
-  /* scroll-snap-stop: always; */
+  scroll-snap-stop: always;
   width: 100dvw;
 
   background: #888;
