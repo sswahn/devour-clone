@@ -2,6 +2,7 @@
 
 .main {
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 @media (max-width: 500px) {
