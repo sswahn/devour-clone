@@ -86,7 +86,10 @@ function stop() {
 }
 
 const scroll = {
-  publish(el) {
+  getElement() {
+    return element
+  },
+  setElement(el) {
     if (!(el instanceof HTMLElement)) {
       throw new TypeError('scroll.publish arugument must be instanceof HTMLElement.')
     }
