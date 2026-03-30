@@ -44,7 +44,7 @@ function Feed() {
       return console.warn('feedRef.current not set.')
     }
     try {
-      await (fullscreenRef.current.requestFullscreen || fullscreenRef.current.webkitRequestFullscreen)?.()
+      await (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen)?.()
       await screen.orientation.lock('portrait')
     } catch (error) {
       console.error(error)
