@@ -13,13 +13,7 @@ function Feed() {
   const [loading, setLoading] = useState(false)
   const nodeIndex = useRef(0)
   const isSnapping = useRef(false)
-   const feedRef = useCallback(node => {
-
-     console.log('callback ref element: ', node)
-     if (node !== null) {
-       scroll.publish(node)
-     }
-   }, [])
+   const feedRef = useCallback(node => (node !== null) && scroll.publish(node), [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
