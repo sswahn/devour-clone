@@ -1,6 +1,5 @@
 import { useRef, memo } from 'react'
 import LikeButton from './LikeButton/LikeButton'
-import styles from './feed.module.css'
 
 function FeedNode({ item, index, count }) {
 
@@ -10,13 +9,11 @@ function FeedNode({ item, index, count }) {
   }
   
   return (
-    <article className={styles.feedNode} tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
+    <article tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
         background: '#888',
         borderRadius: '10px',
         maxWidth: '500px',
-        margin: '0 auto 8px auto',
-        height: '100dvh',
-        width: '100dvw'
+        margin: '0 auto 8px auto'
     }}>
       <header>
 {/*
