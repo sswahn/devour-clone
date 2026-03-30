@@ -8,7 +8,8 @@ function HomeButton() {
       navigator.vibrate(50)
     }
 
-    // Need scrollElement for .scrollTop, and scrollTo
+    // Need scrollElement for .scrollTop,
+    // and .scrollTop = 0
     // import scroll from scrollEngine,
     // make a function that returns the scrollElement,
     // check with AI to see if this is performant compared to context.
