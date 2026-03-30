@@ -34,7 +34,7 @@ function Feed() {
 
   const handleNodeClick = async event => {
     try {
-      await document.documentElement.requestFullscreen()
+      await feedRef.current.requestFullscreen()
       await screen.orientation.lock('portrait')
     } catch (error) {
       console.error(error)
