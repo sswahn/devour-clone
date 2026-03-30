@@ -32,9 +32,13 @@ function Feed() {
     setData(video?.video)
   }
 
-  const handleNodeClick = event => {
-    // request full screen
-    // make feedRef fullscreen
+  const handleNodeClick = async event => {
+    try {
+      await document.documentElement.requestFullscreen()
+      await screen.orientation.lock('portrait')
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
