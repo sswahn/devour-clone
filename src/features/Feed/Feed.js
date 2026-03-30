@@ -42,7 +42,7 @@ function Feed() {
     
     window.scrollTo({
       top: entry.target.offsetTop,
-      behavior: 'smooth'
+      behavior: 'instant'
     })
 
     setTimeout(() => {
