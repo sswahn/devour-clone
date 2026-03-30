@@ -71,6 +71,7 @@ function onScrollEnd(event) {
 
 function start() {
   if (element) {
+    console.log('element in start function eventlistener is beig assigned to: ', element)
     element.addEventListener('scroll', onScroll, { passive: true })
     element.addEventListener("scrollend", onScrollEnd, { passive: true })
     started = true
