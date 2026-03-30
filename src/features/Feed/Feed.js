@@ -57,10 +57,10 @@ function Feed() {
       return console.warn('container or container.children do not exist.')
     }
     const nodes = Array.from(container.children)
-    const observer = createObserver({
-      root: container,
+    const observer = createObserver() // ({
+   //   root: container,
      // threshold: 0.6
-    })
+  //  })
     for (const element of nodes) {
       observer.observe(element, snapElement)
     }
@@ -84,6 +84,7 @@ function Feed() {
         color: 'white',
         height: '50dvh',
         width: '100dvw',
+        maxWidth: '500px',
         paddingTop: '100px',
         marginBottom: '16px'
       }}>suggestions</div>
