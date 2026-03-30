@@ -55,7 +55,7 @@ function Feed() {
       
       console.log('within timeout.')
       
-    }, 400)
+    }, 600)
   }
 
   const connectObservers = () => {
