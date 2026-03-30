@@ -1,4 +1,5 @@
 // scrollEngine.js
+
 let element = null
 let subscribers = new Set()
 let started = false
@@ -86,10 +87,12 @@ function stop() {
 
 const scroll = { 
   subscribe(el, fn) {
+    element = el
+    
     if (!started) {
       start()
     }
-    element = el
+   
     subscribers.add(fn)
     
     fn({
