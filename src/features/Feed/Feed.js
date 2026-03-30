@@ -42,9 +42,7 @@ function Feed() {
 
     window.scrollTo({
       top: entry.target.offsetTop,
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest'
+      behavior: 'smooth'
     })
 
     setTimeout(() => {
@@ -68,9 +66,9 @@ function Feed() {
   }
 
   useEffect(() => {
-    const disconnectObservers = connectObservers()
+   // const disconnectObservers = connectObservers()
     return () => {
-      disconnectObservers()
+   //   disconnectObservers()
     }
   }, [])
   
