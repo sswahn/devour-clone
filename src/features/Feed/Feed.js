@@ -39,6 +39,9 @@ function Feed() {
   }
 
   // must be a button to open fullscreen
+  //  make a Provider to handle the scrollRef element context
+  // and for hiding the header and maybe the bottom nav on fullscreen
+  
   const handleNodeClick = async event => {
     console.log('fullscreenRef.current: ', fullscreenRef.current)
     if (!fullscreenRef.current) {
