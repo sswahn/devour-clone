@@ -9,12 +9,7 @@ function FeedNode({ item, index, count }) {
   }
   
   return (
-    <article tabIndex={index} aria-posinset={index} aria-setsize={count} style={{
-        background: '#888',
-        borderRadius: '10px',
-        maxWidth: '500px',
-        margin: '0 auto 4px auto'
-    }}>
+    <article tabIndex={index} aria-posinset={index} aria-setsize={count}>
       <header>
 {/*
         <AuthorButton />
