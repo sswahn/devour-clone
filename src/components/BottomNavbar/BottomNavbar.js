@@ -12,7 +12,7 @@ function BottomNavbar() {
   const { scrollEffect } = useScrollEffect()
 
   useEffect(() => {
-    //navRef && scrollEffect(navRef.current, styles.hidden)
+    navRef && scrollEffect(navRef.current, styles.hidden)
   }, [])
 
   return (
