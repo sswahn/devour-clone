@@ -1,4 +1,4 @@
-import { useRef, memo } from 'react'
+import { memo } from 'react'
 import LikeButton from './LikeButton/LikeButton'
 
 function FeedNode({ item, index, count }) {
