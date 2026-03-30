@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, memo } from 'react'
+import { useState, useRef, useCallback, memo } from 'react'
 import { createObserver } from '../../utilities/observer'
 import scroll from '../../utilities/scrollEngine'
 import server from '../../utilities/server'
@@ -11,9 +11,13 @@ function Feed() {
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  const feedRef = useRef(null)
   const nodeIndex = useRef(0)
   const isSnapping = useRef(false)
+   const feedRef = useCallback(node => {
+     if (node !== null) {
+       scroll.publish(node)
+     }
+   }, [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
@@ -65,7 +69,7 @@ function Feed() {
       observer.disconnect()
     }
   }
-
+/*
   useEffect(() => {
     if (feedRef.current) {
       scroll.publish(feedRef.current)
@@ -76,7 +80,7 @@ function Feed() {
       //disconnectObservers()
     }
   }, [])
-  
+  */
   return (
     <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
     {/*
