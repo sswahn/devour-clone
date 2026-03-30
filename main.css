@@ -120,7 +120,7 @@
 .RyVp3_0BIz2rwivAL1Ei {
   height: 100dvh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
