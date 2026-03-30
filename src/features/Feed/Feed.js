@@ -34,9 +34,6 @@ function Feed() {
   }
  
   const snapElement = entry => {
-
-    console.log('isSnapping.current: ', isSnapping.current)
-
     if (isSnapping.current || !entry.isIntersecting) {
       return console.warn('isSnapping returned true, function blocked.')
     }
@@ -48,14 +45,9 @@ function Feed() {
       behavior: 'smooth'
     })
 
-    console.log('before timeout.')
-    
     setTimeout(() => {
       isSnapping.current = false
-      
-      console.log('within timeout.')
-      
-    }, 600)
+    }, 500)
   }
 
   const connectObservers = () => {
