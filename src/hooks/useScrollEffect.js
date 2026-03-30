@@ -46,7 +46,7 @@ function useScrollEffect() {
       return
     }
 
-    if (direction === 'down' && deltaY > 200) {
+    if (direction === 'down' && deltaY > 200) { // since css snap scrolling, timeout could be better here.
       return setHidden(element)
     }
 
