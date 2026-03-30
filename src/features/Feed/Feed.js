@@ -44,7 +44,7 @@ function Feed() {
       top: entry.target.offsetTop,
       behavior: 'smooth',
       block: 'start',
-    //  inline: 'nearest'
+      inline: 'nearest'
     })
 
     setTimeout(() => {
