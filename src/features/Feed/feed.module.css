@@ -5,14 +5,19 @@
 }
 
 .feed section {
+  height: 100dvh;
   overflow-x: hidden;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+
+  scroll-behavior: smooth; 
 }
 
 
 .feed article {
   height: 100dvh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   width: 100dvw;
 
   background: #888;
