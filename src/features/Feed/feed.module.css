@@ -8,6 +8,10 @@
   z-index: 0;
 }
 
+.feed section {
+  scroll-snap-type: y mandatory;
+}
+
 
 .feedNode {
   scroll-snap-align: start;
