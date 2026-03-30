@@ -413,6 +413,8 @@
 
 html, body, #root { /* remove this entirely */
   border: 1px dashed red;
+
+  overflow: hidden;
 }
 
 
