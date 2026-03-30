@@ -66,9 +66,9 @@ function Feed() {
   }
 
   useEffect(() => {
-    // const disconnectObservers = connectObservers()
+    const disconnectObservers = connectObservers()
     return () => {
-     // disconnectObservers()
+      disconnectObservers()
     }
   }, [])
   
