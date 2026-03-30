@@ -12,10 +12,6 @@ function HomeButton() {
     if (!element) {
       return console.warn('scroll element is null.')
     }
-    // Need scrollElement for .scrollTop, and .scrollTo
-    // import scroll from scrollEngine,
-    // make a function that returns the scrollElement,
-    // check with AI to see if this is performant compared to context.
     if (element.scrollTop !== 0) {
       element.scrollTo({
         behavior: 'smooth',
