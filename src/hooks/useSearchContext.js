@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { GetSearchContext } from '../components/Providers/SearchProvider'
 import { SetSearchContext } from '../components/Providers/SearchProvider'
   
-function useGetSearchContext() {
+function useSearchContext() {
   const context = useContext(GetSearchContext)
   if (!context) {
     throw new Error('useGetSearchContext must be used within appropriate context provider.')
@@ -10,4 +10,12 @@ function useGetSearchContext() {
   return context
 }
 
-export default useGetSearchContext
+function useSetSearchContext() {
+  const setContext = useContext(SetSearchContext)
+  if (!setContext) {
+    throw new Error('useSearchContext must be used within appropriate context provider.')
+  }
+  return setContext
+}
+
+export { useSearchContext, useSetSearchContext }
