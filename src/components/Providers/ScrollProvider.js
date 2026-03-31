@@ -1,10 +1,12 @@
-import { useRef, createContext } from 'react'
+import { useState, useCallback, createContext } from 'react'
 
 const ScrollContext = createContext(null)
 
 function ScrollProvider({ children }) {
-  const scrollRef = useRef(null)
- 
+  const [state, setState] = useState(null)
+  
+  const scrollRef = useCallback(node => (node !== null) && setState(node), [])
+  
   return (
     <ScrollContext.Provider value={scrollRef}>
       {children}
