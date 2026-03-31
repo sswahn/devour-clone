@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ScrollContext } from '../components/Providers/ScrollProvider'
 
 // check with AI about using provider/context/hook pattern
@@ -9,10 +9,20 @@ function useScrollContext(callback = undefined) {
   if (!ref) {
     throw new Error(`Error in useScrollContext. ref: ${ref}`)
   }
-  if (callback) {
-    callback(ref)
-    return ref
-  }
+
+  useEffect(() => {
+    console.log('useScrollContext useEffect rendered...')
+
+    if (!ref.current) {
+      return
+    }
+
+    if (callback) {
+      callback(ref)
+    }
+    
+  }, [ref, callback])
+
   return ref
 }
 
