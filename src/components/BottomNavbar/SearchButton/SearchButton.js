@@ -4,13 +4,13 @@ import SearchIcon from '../../Icons/SearchIcon/SearchIcon'
 import styles from './searchbutton.module.css'
 
 function SearchButton() {
-  const setSearchFormContext = useContext(SetSearchFormContext)
+  const setSearchContext = useContext(SetSearchContext)
   
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-    setSearchFormContext(prevContext => !prevContext)
+    setSearchContext()
   }
   
   return (
