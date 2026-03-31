@@ -65,6 +65,12 @@ function SearchForm() {
     event.preventDefault()
   }
 
+  // instead of isHidden, use context:
+  // if searchContext show
+  // if !searchContext hide
+  const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
+  const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
+
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
       <button type="button" onClick={handleCloseSearch} aria-label="close search">
