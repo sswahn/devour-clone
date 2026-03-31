@@ -1,10 +1,9 @@
-import { useContext } from 'react'
-import { SetSearchContext } from '../../Providers/SearchProvider'
+import useSetSearchContext from '../../../hooks/useSetSearchContext'
 import SearchIcon from '../../Icons/SearchIcon/SearchIcon'
 import styles from './searchbutton.module.css'
 
 function SearchButton() {
-  const setSearchContext = useContext(SetSearchContext)
+  const setSearchContext = useSetSearchContext()
   
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
