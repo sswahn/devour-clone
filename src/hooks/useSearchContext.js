@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { GetSearchContext } from '../components/Providers/SearchProvider'
+import { SetSearchContext } from '../components/Providers/SearchProvider'
   
 function useGetSearchContext() {
   const context = useContext(GetSearchContext)
