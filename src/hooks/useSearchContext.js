@@ -4,24 +4,16 @@ import { SetSearchContext } from '../components/Providers/SearchProvider'
   
 function useSearchContext() {
   const context = useContext(GetSearchContext)
-
-  console.log('context: ', context)
-  console.log('typeof context !== boolean', typeof context !== 'boolean')
-  
   if (typeof context !== 'boolean') {
-    throw new Error('useSearchContext: context must be used within appropriate context provider.')
+    throw new Error(`Error in useSearchContext hook. context: ${context}`)
   }
   return context
 }
 
 function useSetSearchContext() {
   const setContext = useContext(SetSearchContext)
-
-  console.log('setContext: ', setContext)
-  console.log('!setContext: ', !setContext)
-  
   if (!setContext) {
-    throw new Error('useSearchContext: setContext must be used within appropriate context provider.')
+    throw new Error(`Error in useSetSearchContext hook. setContext: ${setContext}`)
   }
   return setContext
 }
