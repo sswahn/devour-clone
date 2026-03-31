@@ -22,13 +22,15 @@
   background-color: #999;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  height: 26px;
+  padding: 8px;
 }
 
 .searchForm input {
   background-color: #999;
   border: 0;
 
-  padding: 0;
+  padding: 8px;
   margin: 0;
 
   width: calc(100% - 16px);
