@@ -16,6 +16,10 @@ function useSearchContext() {
 
 function useSetSearchContext() {
   const setContext = useContext(SetSearchContext)
+
+  console.log('setContext: ', setContext)
+  console.log('!setContext: ', !setContext)
+  
   if (!setContext) {
     throw new Error('useSearchContext: setContext must be used within appropriate context provider.')
   }
