@@ -1,4 +1,4 @@
-import useScrollContext from '../../../hooks/useScrollContext'
+import { useScrollContext } from '../../../hooks/useScrollContext'
 import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
