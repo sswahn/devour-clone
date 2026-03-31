@@ -207,8 +207,21 @@
 /* Search Form */
 
 .yMoa0P1h84myJgUPZbS_ {
+  background: var(--white);
+  
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 60px;
+  height: 60px;
+  width: 100%;
+  
+  z-index: 100;
+}
+
+.yMoa0P1h84myJgUPZbS_ input {
+  width: calc(100% - 16px);
+  height: 26px;
 }
 
 /*!***********************************************************************************************!*\
