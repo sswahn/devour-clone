@@ -1,13 +1,13 @@
 import { ProfileProvider } from './components/Providers/ProfileProvider'
 import { ScrollProvider } from './components/Providers/ScrollProvider'
-import { SearchFormProvider } from './components/Providers/SearchFormProvider'
+import { SearchProvider } from './components/Providers/SearchProvider'
 import { CameraProvider } from './components/Providers/CameraProvider'
 
 function Providers({ children }) {
   return (
     <ProfileProvider>
       <ScrollProvider>
-        <SearchFormProvider>
+        <SearchProvider>
           <CameraProvider>
             {children}
           </CameraProvider>
