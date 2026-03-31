@@ -65,7 +65,7 @@ function SearchForm() {
     event.preventDefault()
   }
 
-  // dont edit directly, use state to show/hide
+  // dont edit directly, use searchContext to show/hide
   const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
 
