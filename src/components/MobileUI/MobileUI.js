@@ -1,8 +1,11 @@
 import { useContext } from 'react'
 import { createPortal } from 'react-dom'
+
+// change to custom hook access of context
 import { GetCameraContext } from '../Providers/CameraProvider'
 import { GetProfileContext } from '../Providers/ProfileProvider'
-import { GetSearchFormContext } from '../Providers/SearchFormProvider'
+import { GetSearchContext } from '../Providers/SearchProvider'
+
 import Camera from '../../features/Camera/Camera'
 import BottomSheet from '../BottomSheet/BottomSheet' // Change to Profile Component
 import SearchForm from '../SearchForm/SearchForm'
