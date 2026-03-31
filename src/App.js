@@ -7,7 +7,7 @@ import './index.css'
 
 const App = () => {
   return (
-     <React.StrictMode> 
+    <React.StrictMode> 
       <ErrorBoundary> 
         <Providers>
           <Header />
