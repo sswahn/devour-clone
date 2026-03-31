@@ -62,6 +62,8 @@ function SearchForm() {
 
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
+      <XmarkIcon />
+  
       <SearchIcon />
   
       <input 
