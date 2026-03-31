@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 import { GetCameraContext } from '../Providers/CameraProvider'
 import { GetProfileContext } from '../Providers/ProfileProvider'
 
-import useGetSearchContext from '../../hooks/useGetSearchContext'
+import { useSearchContext } from '../../hooks/useSearchContext'
 
 import Camera from '../../features/Camera/Camera'
 import BottomSheet from '../BottomSheet/BottomSheet' // Change to Profile Component
@@ -15,7 +15,7 @@ import styles from './mobileui.module.css'
 function MobileUI() { 
   const getCameraContext = useContext(GetCameraContext)
   const getProfileContext = useContext(GetProfileContext)
-  const searchContext = useGetSearchContext()
+  const searchContext = useSearchContext()
   
   return createPortal(
     <section className={styles.mobileUi}>
