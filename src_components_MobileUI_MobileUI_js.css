@@ -206,8 +206,8 @@
   \***************************************************************************************************/
 /* Search Form */
 
-/*
-.searchForm {
+
+.yMoa0P1h84myJgUPZbS_ {
   background: var(--white);
 
   max-width: 500px;
@@ -220,15 +220,14 @@
   
   z-index: 100;
 }
-*/
-/*
-.searchForm > svg {
+
+.yMoa0P1h84myJgUPZbS_ > svg {
   background-color: #999;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
-.searchForm input {
+.yMoa0P1h84myJgUPZbS_ input {
   background-color: #999;
   border: 0;
 
@@ -238,7 +237,7 @@
   width: calc(100% - 16px);
   height: 26px;
 }
-*/
+
 .yMoa0P1h84myJgUPZbS_ input:focus {
   outline: none;
 }
