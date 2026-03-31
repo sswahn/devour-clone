@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, memo } from 'react'
-//import scroll from '../../utilities/scrollEngine'
-import useScrollContext from '../../hooks/useScrollContext'
+import { useScrollContext } from '../../hooks/useScrollContext'
+import scroll from '../../utilities/scrollEngine'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
 import FeedNode from './FeedNode'
@@ -12,7 +12,11 @@ function Feed() {
   const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  // const feedRef = useCallback(node => (node !== null) && scroll.setElement(node), [])
+  const feedRef = useCallback(node => {
+    if (node !== null) {
+      scroll.setElement(node) 
+    }
+  }, [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
