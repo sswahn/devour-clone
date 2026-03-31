@@ -66,7 +66,6 @@ function SearchForm() {
   
       <input 
         ref={inputRef}
-        className={styles.searchForm}
         type="search"
         value={searchValue}
         onChange={onChange}
