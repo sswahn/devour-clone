@@ -1,6 +1,6 @@
 /* Search Form */
 
-/*
+
 .searchForm {
   background: var(--white);
 
@@ -14,8 +14,7 @@
   
   z-index: 100;
 }
-*/
-/*
+
 .searchForm > svg {
   background-color: #999;
   border-top-left-radius: 15px;
@@ -32,7 +31,7 @@
   width: calc(100% - 16px);
   height: 26px;
 }
-*/
+
 .searchForm input:focus {
   outline: none;
 }
