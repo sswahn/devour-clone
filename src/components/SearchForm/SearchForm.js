@@ -62,8 +62,11 @@ function SearchForm() {
 
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
+      <SearchIcon />
+  
       <input 
         ref={inputRef}
+        className={styles.searchForm}
         type="search"
         value={searchValue}
         onChange={onChange}
@@ -72,7 +75,7 @@ function SearchForm() {
         disabled={false}
         aria-label="search input"  
       />
-      <SearchIcon />
+      
       {/* hook should return bool to check if speechRecognition exists, if so render button: */}
       <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
         <MicrophoneIcon />
