@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { SetSearchFormContext } from '../../Providers/SearchFormProvider'
+import { SetSearchContext } from '../../Providers/SearchProvider'
 import SearchIcon from '../../Icons/SearchIcon/SearchIcon'
 import styles from './searchbutton.module.css'
 
