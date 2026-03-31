@@ -11,7 +11,7 @@ function Providers({ children }) {
           <CameraProvider>
             {children}
           </CameraProvider>
-        </SearchFormProvider>
+        </SearchProvider>
       </ScrollProvider>
     </ProfileProvider>
   )
