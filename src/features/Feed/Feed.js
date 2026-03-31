@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, memo } from 'react'
-import { createObserver } from '../../utilities/observer'
-import scroll from '../../utilities/scrollEngine'
+//import scroll from '../../utilities/scrollEngine'
+import useScrollContext from '../../hooks/useScrollContext'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
 import FeedNode from './FeedNode'
@@ -8,6 +8,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
+  const scrollRef = useScrollContext()
   const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -46,7 +47,7 @@ function Feed() {
   }
 
   return (
-    <section ref={feedRef} className={styles.feed} role="feed" aria-busy={loading}>
+    <section ref={scrollRef} className={styles.feed} role="feed" aria-busy={loading}>
     {/*
       <div style={{
         background: '#777',
