@@ -8,7 +8,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const scrollRef = useScrollContext(ref => scroll.setElement(ref))
+  const scrollRef = useScrollContext(ref => ref.current && scroll.setElement(ref.current))
   const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
