@@ -4,7 +4,7 @@ import { ScrollContext } from '../components/Providers/ScrollProvider'
 function useScrollContext() {
   const ref = useContext(ScrollContext)
   if (!ref) {
-    throw new Error('useScrollContext must be used within appropriate context provider.')
+    throw new Error(`Error in useScrollContext. ref: ${ref}`)
   }
   return ref
 }
