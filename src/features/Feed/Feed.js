@@ -9,8 +9,8 @@ import styles from './feed.module.css'
 
 function Feed() {
   const scrollRef = useScrollContext(ref => {
-    console.log('scrollRef: ', ref)
-    console.log('scrollRef.current: ', ref.current)
+    console.log('in Feed - scrollRef: ', ref)
+    console.log('in Feed - scrollRef.current: ', ref.current)
     ref.current && scroll.setElement(ref.current)
   })
   const [data, setData] = useState([1,2,3])
