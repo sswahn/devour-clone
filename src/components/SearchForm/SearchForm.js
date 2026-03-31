@@ -14,7 +14,11 @@ function SearchForm() {
 
   const clearCloseInput = () => {
     // first click clears, second closes
-    return setSearchContext()
+   
+  }
+
+  const handleCloseSearch = event => {
+     setSearchContext()
   }
 
   // make/use a custom hook
@@ -63,7 +67,9 @@ function SearchForm() {
 
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
-      <XmarkIcon />
+      <button type="button" onClick={handleCloseSearch} aria-label="close search">
+        <XmarkIcon />
+      </button>
   
       <SearchIcon />
   
