@@ -70,6 +70,7 @@ function onScrollEnd(event) {
 }
 
 function start() {
+  console.log('scrollEngine start function: ', element)
   if (element) {
     element.addEventListener('scroll', onScroll, { passive: true })
     element.addEventListener("scrollend", onScrollEnd, { passive: true })
