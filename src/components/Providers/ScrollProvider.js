@@ -5,7 +5,11 @@ const ScrollContext = createContext(null)
 function ScrollProvider({ children }) {
   const [state, setState] = useState(null)
   
-  const scrollRef = useCallback(node => (node !== null) && setState(node), [])
+  const scrollRef = useCallback(node => {
+    if (node !== null) { 
+      setState(node)
+    }
+  }, [])
   
   return (
     <ScrollContext.Provider value={scrollRef}>
