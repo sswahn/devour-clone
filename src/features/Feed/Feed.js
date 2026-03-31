@@ -8,15 +8,10 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const scrollRef = useScrollContext()
+  const scrollRef = useScrollContext(ref => scroll.setElement(ref))
   const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
-  const feedRef = useCallback(node => {
-    if (node !== null) {
-      scroll.setElement(node) 
-    }
-  }, [])
 
   const loadMoreData = async event => {
     const response = await server.get(`${config.api.feed}/${batchNumber}`)
