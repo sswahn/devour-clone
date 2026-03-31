@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import useSetSearchContext from '../../hooks/useSetSearchContext'
+import { useSetSearchContext } from '../../hooks/useSearchContext'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
