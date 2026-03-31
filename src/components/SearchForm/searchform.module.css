@@ -2,7 +2,8 @@
 
 .searchForm {
   background: var(--white);
-  
+
+  max-width: 500px;
   display: flex;
   justify-content: center;
   position: absolute;
