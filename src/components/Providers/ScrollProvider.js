@@ -1,24 +1,15 @@
-import { useRef, useMemo, useCallback, createContext } from 'react'
+import { useRef, createContext } from 'react'
 
-const GetScrollContext = createContext(null)
+const ScrollContext = createContext(null)
 
-function SearchFormProvider({ children }) {
-  const scrollRef = useRef()
-  const [state, setState] = useState(false)
-
-  const context = useMemo(() => state, [state])
-
-  const setContext = useCallback(() => {
-    setState(prevState => !prevState)
-  }, [])
-
+function ScrollProvider({ children }) {
+  const scrollRef = useRef(null)
+ 
   return (
-    <GetSearchFormContext.Provider value={context}>
-      <SetSearchFormContext.Provider value={setContext}>
-        {children}
-      </SetSearchFormContext.Provider>
-    </GetSearchFormContext.Provider>
+    <ScrollContext.Provider value={scrollRef}>
+      {children}
+    </ScrollContext.Provider>
   )
 }
 
-export { GetSearchFormContext, SetSearchFormContext, SearchFormProvider }
+export { ScrollContext, ScrollProvider }
