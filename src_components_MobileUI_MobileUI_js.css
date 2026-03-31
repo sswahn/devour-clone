@@ -208,7 +208,9 @@
 
 
 .yMoa0P1h84myJgUPZbS_ {
+  align-items: ceter;
   background: var(--white);
+  border-top: 1px solid #ffffff0d;
   bottom: 60px;
   display: flex;
   height: 60px;
