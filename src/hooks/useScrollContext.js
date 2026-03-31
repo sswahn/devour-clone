@@ -13,4 +13,4 @@ function useScrollContext(callback = undefined) {
   return ref
 }
 
-export default useScrollContext
+export { useScrollContext }
