@@ -18,9 +18,6 @@ function notify(data) {
 }
 
 function update(timestamp) {
-
-  console.log('scrollEngine update function, element:', element)
-  
   const scrollY = element.scrollTop
   
   // Calculate change in Y
@@ -73,7 +70,6 @@ function onScrollEnd(event) {
 }
 
 function start() {
-  console.log('scrollEngine start function, element: ', element)
   if (element) {
     element.addEventListener('scroll', onScroll, { passive: true })
     element.addEventListener("scrollend", onScrollEnd, { passive: true })
