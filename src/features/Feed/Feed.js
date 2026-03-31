@@ -9,7 +9,7 @@ import styles from './feed.module.css'
 
 function Feed() {
   const scrollRef = useScrollContext()
-  const [data, setData] = useState([1,2,3,4,5,6,7,8,9,10])
+  const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
   const feedRef = useCallback(node => (node !== null) && scroll.setElement(node), [])
