@@ -1,6 +1,6 @@
 // scrollEngine.js
 
-let element = useScrollContext() 
+let element = null
 let subscribers = new Set()
 let started = false
 let ticking = false
