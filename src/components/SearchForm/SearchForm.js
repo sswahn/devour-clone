@@ -18,7 +18,7 @@ function SearchForm() {
   }
 
   const handleCloseSearch = event => {
-     setSearchContext()
+     setSearchContext(prevContext => !prevContext)
   }
 
   // make/use a custom hook
