@@ -16,13 +16,13 @@ function Main() {
   return (
     <main className={styles.main}>
       <Feed />
-      <MobileUI /> 
-  {/* <div style={{ height: '8000px' }}></div> 
+
+  {/* <div style={{ height: '8000px' }}></div> */}
 
       <Suspense fallback={null}>
         <MobileUI />  
       </Suspense>
-      */}
+      
     </main>
   )
 }
