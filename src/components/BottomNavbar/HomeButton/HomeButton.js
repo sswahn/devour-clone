@@ -1,14 +1,15 @@
-import scroll from '../../../utilities/scrollEngine'
+import useScrollContext from '../../../hooks/useScrollContext'
 import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
 function HomeButton() {
-
+  const scrollRef = useScrollContext()
+  
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-    const element = scroll.getElement()
+    const element = scrollRef?.current
     if (element?.scrollTop !== 0) {
       element.scrollTo({
         behavior: 'smooth',
