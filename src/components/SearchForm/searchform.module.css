@@ -3,13 +3,16 @@
 
 .searchForm {
   background: var(--white);
-
-  max-width: 500px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
   bottom: 60px;
+  display: flex;
   height: 60px;
+  justify-content: center;
+  left: 50%;
+  max-width: 500px;
+  position: absolute;
+  
+  transform: translate(-50%, -50%);
+  
   width: 100%;
   
   z-index: 100;
