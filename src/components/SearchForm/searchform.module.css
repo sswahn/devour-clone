@@ -16,8 +16,8 @@
 
 .searchForm > svg {
   background: #999;
-  border-radius: 0 0 10px 10px;
-  
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .searchForm input {
