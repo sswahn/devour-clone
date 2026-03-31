@@ -1,6 +1,6 @@
 // scrollEngine.js
 
-let element = null
+let element = useScrollContext() 
 let subscribers = new Set()
 let started = false
 let ticking = false
@@ -86,9 +86,6 @@ function stop() {
 }
 
 const scroll = {
-  getElement() {
-    return element
-  },
   setElement(el) {
     if (!(el instanceof HTMLElement)) {
       throw new TypeError('scroll.publish arugument must be instanceof HTMLElement.')
