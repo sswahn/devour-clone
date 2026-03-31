@@ -4,8 +4,11 @@ import { SetSearchContext } from '../components/Providers/SearchProvider'
   
 function useSearchContext() {
   const context = useContext(GetSearchContext)
+
+  console.log('context: ', context)
+  
   if (!context) {
-    throw new Error('useSearchContext must be used within appropriate context provider.')
+    throw new Error('useSearchContext: context must be used within appropriate context provider.')
   }
   return context
 }
@@ -13,7 +16,7 @@ function useSearchContext() {
 function useSetSearchContext() {
   const setContext = useContext(SetSearchContext)
   if (!setContext) {
-    throw new Error('useSearchContext must be used within appropriate context provider.')
+    throw new Error('useSearchContext: setContext must be used within appropriate context provider.')
   }
   return setContext
 }
