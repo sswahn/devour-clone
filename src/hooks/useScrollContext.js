@@ -21,7 +21,7 @@ function useScrollContext(callback = undefined) {
       callback(ref)
     }
     
-  }, [ref])
+  }, [ref, callback])
 
   return ref
 }
