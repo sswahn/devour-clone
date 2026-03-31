@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import useSetSearchContext from '../../../hooks/useSetSearchContext'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
@@ -6,12 +7,13 @@ import styles from './searchform.module.css'
 //TODO: bottom of page just above bottomnav
 
 function SearchForm() {
+  const setSearchContext = useSetSearchContext()
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
   const clearCloseInput = () => {
     // first click clears, second closes
-    return
+    return setSearchContext()
   }
 
   // make/use a custom hook
@@ -57,7 +59,7 @@ function SearchForm() {
   const onSubmit = event => {
     event.preventDefault()
   }
-  
+
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
       <input 
