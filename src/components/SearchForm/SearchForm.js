@@ -65,7 +65,7 @@ function SearchForm() {
     event.preventDefault()
   }
 
-  // dont edit directly, use searchContext to show/hide
+  // use searchContext to add/remove .hidden class so transition will show (or use useTransition?)
   const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
 
