@@ -4,6 +4,10 @@ import { SetSearchContext } from '../components/Providers/SearchProvider'
   
 function useSearchContext() {
   const context = useContext(GetSearchContext)
+
+  console.log('context: ', context)
+  console.log('typeof context !== boolean', typeof context !== 'boolean')
+  
   if (typeof context !== 'boolean') {
     throw new Error('useSearchContext: context must be used within appropriate context provider.')
   }
