@@ -1,10 +1,14 @@
 import { useContext } from 'react'
 import { ScrollContext } from '../components/Providers/ScrollProvider'
   
-function useScrollContext() {
+function useScrollContext(callback = undefined) {
   const ref = useContext(ScrollContext)
   if (!ref) {
     throw new Error(`Error in useScrollContext. ref: ${ref}`)
+  }
+  if (callback) {
+    callback(ref)
+    return ref
   }
   return ref
 }
