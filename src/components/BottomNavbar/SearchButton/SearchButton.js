@@ -1,4 +1,4 @@
-import useSetSearchContext from '../../../hooks/useSetSearchContext'
+import { useSetSearchContext } from '../../../hooks/useSearchContext'
 import SearchIcon from '../../Icons/SearchIcon/SearchIcon'
 import styles from './searchbutton.module.css'
 
