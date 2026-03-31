@@ -9,7 +9,7 @@ function SearchButton() {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-    setSearchContext()
+    setSearchContext(prevContext => !prevContext)
   }
   
   return (
