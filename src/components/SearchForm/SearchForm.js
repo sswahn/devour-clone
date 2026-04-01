@@ -6,8 +6,6 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
 
-//TODO: bottom of page just above bottomnav
-
 function SearchForm() {
   const setSearchContext = useSetSearchContext()
   const [searchValue, setSearchValue] = useState('')
