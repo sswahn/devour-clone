@@ -35,6 +35,19 @@ html {
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+
+  scroll-behavior: smooth;  
+  
+  overscroll-behavior-y: contain;
+
+  transform: translateZ(0);
+  will-change: scroll-position;
+  z-index: 0;
 }
 
 body {
