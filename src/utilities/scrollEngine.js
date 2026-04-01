@@ -86,12 +86,14 @@ function stop() {
 }
 
 const scroll = {
+  /*
   setElement(el) {
     if (!(el instanceof HTMLElement)) {
       throw new TypeError('scroll.publish arugument must be instanceof HTMLElement.')
     }
     element = el
   },
+  */
   subscribe(fn) {
     if (typeof fn !== 'function') {
       throw new TypeError('scroll.subscribe arugument must be of type "function".')
