@@ -10,6 +10,7 @@ function SearchButton() {
       navigator.vibrate(50)
     }
     await document.getElementById('portal').requestFullscreen()
+    await screen.orientation.lock('portrait')
     setSearchContext(prevContext => !prevContext)
   }
   
