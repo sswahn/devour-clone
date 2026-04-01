@@ -117,7 +117,8 @@
   \*************************************************************************************/
 /* Feed */
 
-.RyVp3_0BIz2rwivAL1Ei {
+/*
+.feed {
   height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -131,7 +132,7 @@
   will-change: scroll-position;
   z-index: 0;
 }
-
+*/
 
 .RyVp3_0BIz2rwivAL1Ei article {
   contain: layout paint size;
