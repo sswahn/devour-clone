@@ -219,14 +219,28 @@ mic icon to the right, is a button.
 
 .yMoa0P1h84myJgUPZbS_ {
   background: var(--black);
-  display: flex;
   height: 100dvh;
+  left: 0;
   padding: 16px 8px 0 8px;
   position: absolute;
   top: 0;
   width: 100%;
   
   z-index: 200;
+}
+
+.yMoa0P1h84myJgUPZbS_ header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.yMoa0P1h84myJgUPZbS_ header button {
+  background: none;
+  border: 0;
+  color: var(--white);
+  height: 26px;
+  margin-left: auto;
 }
 
 .yMoa0P1h84myJgUPZbS_ > svg {
