@@ -1,10 +1,7 @@
-import { useScrollContext } from '../../../hooks/useScrollContext'
 import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
 function HomeButton() {
-  
-  // const scrollRef = useScrollContext()
   
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
