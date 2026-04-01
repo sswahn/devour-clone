@@ -7,14 +7,27 @@ function LikeButton({ likedByUser }) {
   const [liked, setLiked] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const onClick = async event => {
-    setLoading(true)
+  const requestLikes = async () => {
+    const request = {}
     const response = await server.post(config.post.like)
+
+    // go in server and see about making this
+    // repeating condition go away. check for it there then throw the error
     if (response.error) {
       return alert(response.error)
     }
-    setLiked(!liked)
-    setLoading(false)
+    
+  }
+
+  const onClick = async event => {
+    try {
+      setLoading(true)
+      await requestLikes()
+      setLiked(!liked)
+      setLoading(false)
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 
   useEffect(() => {
