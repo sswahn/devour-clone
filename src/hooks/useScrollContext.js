@@ -7,6 +7,7 @@ function useScrollContext(callback = undefined) {
     throw new Error(`Error in useScrollContext. ref: ${ref}`)
   }
 
+  /*
   useEffect(() => {
     if (!ref.current) {
       return
@@ -17,7 +18,7 @@ function useScrollContext(callback = undefined) {
     }
     
   }, [ref, callback])
-
+*/
   return ref
 }
 
