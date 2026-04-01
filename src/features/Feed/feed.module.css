@@ -1,5 +1,6 @@
 /* Feed */
 
+/*
 .feed {
   height: 100dvh;
   overflow-x: hidden;
@@ -14,7 +15,7 @@
   will-change: scroll-position;
   z-index: 0;
 }
-
+*/
 
 .feed article {
   contain: layout paint size;
