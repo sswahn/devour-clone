@@ -65,7 +65,7 @@ function SearchForm() {
   const onChange = event => {
     // store recent searches in locoalStorage
     const value = event.target.value
-    setState(value)
+    setSearchValue(value)
     //storeLocally('searches', value)
     
     // debounce request, avoid multiple http requests for the same query
