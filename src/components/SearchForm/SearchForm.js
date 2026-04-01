@@ -88,11 +88,11 @@ function SearchForm() {
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
 
   useEffect(() => {
-    if (!deferredValue.trim()) {
+  //  if (!deferredValue.trim()) {
       console.log('defferedValue: ', deferredValue)
       
       //storeLocally('searches', deferredValue)
-    }
+    //}
   }, [deferredValue])
 
   
