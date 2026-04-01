@@ -8,4 +8,4 @@ function HomeIcon({ size = 24 }) {
   )
 }
 
-export default  HomeIcon
+export default HomeIcon
