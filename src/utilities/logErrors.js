@@ -6,7 +6,7 @@ context = {
 }
 */
 
-function logErrors(error, context) {
+function logErrors(error, context = {}) {
   const payload = {
     message: error.message,
     stack: error.stack,
