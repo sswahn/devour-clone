@@ -1,6 +1,5 @@
 import { useState, useRef, useCallback, memo } from 'react'
 import { useScrollContext } from '../../hooks/useScrollContext'
-//import scroll from '../../utilities/scrollEngine'
 import server from '../../utilities/server'
 import database from '@sswahn/database'
 import FeedNode from './FeedNode'
@@ -8,7 +7,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const scrollRef = useScrollContext() // (ref => scroll.setElement(ref.current))
+  const scrollRef = useScrollContext()
   const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -34,8 +33,8 @@ function Feed() {
   // must be a button to open fullscreen
   // add it to feedNode overlay nav
   
-  //  make a Provider to handle the scrollRef element context
-  // and for hiding the header and maybe the bottom nav on fullscreen
+  // handle the scrollRef context
+  // for hiding the header on fullscreen (maybe the bottom nav too)
   
   const handleNodeClick = async event => {
     try {
