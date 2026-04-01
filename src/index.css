@@ -40,7 +40,7 @@ html {
   margin: 0 auto;
 
   height: 100dvh;
-  overflow-y: auto;
+ /* overflow-y: auto; comment here what this changes */
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
@@ -65,10 +65,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-
-
-  /* trying to fix feed overflow */
-  overflow: hidden;
 }
 
 button {
