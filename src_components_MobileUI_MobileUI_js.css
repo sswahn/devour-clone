@@ -235,12 +235,21 @@ mic icon to the right, is a button.
   justify-content: center;
 }
 
+.TYu9xxiA93dMGBlCIky5 header h1 {
+  margin-right: 50%;
+
+  border: 1px dashed red;
+}
+
 .yMoa0P1h84myJgUPZbS_ header > button {
   background: blue;
   border: 0;
-  color: var(--white);
   height: 26px;
   margin-right: auto;
+}
+
+.yMoa0P1h84myJgUPZbS_ header > button svg {
+  fill: var(--white);
 }
 
 .yMoa0P1h84myJgUPZbS_ > svg {
