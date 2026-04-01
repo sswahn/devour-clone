@@ -30,12 +30,9 @@ html {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-feature-settings: "cv11", "ss01";
   text-rendering: optimizeLegibility;
-  overflow: hidden;
-
-
-  
+  overflow-x: hidden;
  
-  overflow-y: auto; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;  
   overscroll-behavior-y: contain;
