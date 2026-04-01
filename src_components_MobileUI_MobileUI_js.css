@@ -235,8 +235,8 @@ mic icon to the right, is a button.
   justify-content: center;
 }
 
-.yMoa0P1h84myJgUPZbS_ header button {
-  background: none;
+.yMoa0P1h84myJgUPZbS_ header > button {
+  background: blue;
   border: 0;
   color: var(--white);
   height: 26px;
@@ -256,6 +256,7 @@ mic icon to the right, is a button.
   background-color: #eee;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  color: var(--black);
   padding: 8px;
   margin: 0;
 
