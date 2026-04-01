@@ -29,8 +29,8 @@ mic icon to the right, is a button.
   justify-content: center;
 }
 
-.searchForm header button {
-  background: none;
+.searchForm header > button {
+  background: blue;
   border: 0;
   color: var(--white);
   height: 26px;
@@ -50,6 +50,7 @@ mic icon to the right, is a button.
   background-color: #eee;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  color: var(--black);
   padding: 8px;
   margin: 0;
 
