@@ -65,6 +65,9 @@ function SearchForm() {
   }
   
   const onKeyDown = event => {
+
+    return
+    
     switch(event.key) {
       case 'Enter':
         return console.log('Enter key') // handle for enter key (prolly ignore it)
@@ -90,6 +93,7 @@ function SearchForm() {
   useEffect(() => {
   //  if (!deferredValue.trim()) {
       console.log('defferedValue: ', deferredValue)
+      console.log('(!deferredValue.trim())', !deferredValue.trim())
       
       //storeLocally('searches', deferredValue)
     //}
