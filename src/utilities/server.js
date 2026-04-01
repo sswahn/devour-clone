@@ -21,6 +21,10 @@ const handleResponse = async response => {
   if (response.status === 204 || response.headers.get('Content-Length') === '0') {
     return { success: true, message: 'No content' }
   }
+  // Handle API response errors
+  if (response.error) {
+    throw new Error(response.error)
+  }
   return response.json()
 }
 
