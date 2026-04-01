@@ -7,7 +7,7 @@ context = {
 }
 */
 
-function logErrors(error, context = {}) {
+function logError(error, context = {}) {
   const payload = {
     message: error.message,
     stack: error.stack,
@@ -22,4 +22,4 @@ function logErrors(error, context = {}) {
   // make request to sentry
 }
 
-export default logErrors
+export default logError
