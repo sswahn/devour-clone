@@ -13,11 +13,6 @@ function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
-  const clearCloseInput = () => {
-    // first click clears, second closes
-   
-  }
-
   const handleCloseSearch = event => {
      setSearchContext(prevContext => !prevContext)
   }
