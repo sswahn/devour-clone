@@ -1,5 +1,7 @@
+import { Component } from 'react'
+import logError from './utilities/logError'
 
-class ErrorBoundary extends React.Component {
+class ErrorBoundary extends Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
@@ -10,23 +12,20 @@ class ErrorBoundary extends React.Component {
     return { hasError: true }
   }
 
-  componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
-    //logErrorToMyService(error, errorInfo);
-    
-    console.error('ErrorBoundary error: ', error)
-    console.error('ErrorBoundary errorInfo: ', errorInfo)
-    
+  componentDidCatch(error, info) {
+    logError(error, {
+      source: 'react.errorBoundary',
+      componentStack: info.componentStack
+    })
     this.setState({ hasError: true, error: error })
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
+      // render custom fallback UI
       return (
         <div>
           <h1>Something went wrong.</h1>
-          <p>{this.state.error}</p>
         </div>
       )
     }
