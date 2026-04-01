@@ -20,7 +20,7 @@ function notify(data) {
 function update(timestamp) {
 
   console.log('element: ', element)
-  console.log('window.scrollY: ', window.scrollY)
+  console.log('element.scrollY: ', element.scrollY)
   
   const scrollY = element.scrollY //.scrollTop
   
