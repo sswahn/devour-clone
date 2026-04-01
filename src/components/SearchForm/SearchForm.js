@@ -87,6 +87,7 @@ function SearchForm() {
 
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
+      <h1>Search</h1>
       <button type="button" onClick={handleCloseSearch} aria-label="close search">
         <XmarkIcon />
       </button>
