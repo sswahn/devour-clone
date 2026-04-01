@@ -10,9 +10,8 @@ function HomeButton() {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-    const element = scrollRef?.current
-    if (element?.scrollTop !== 0) {
-      element.scrollTo({
+    if (window.scrollY !== 0) {
+      window.scrollTo({
         behavior: 'smooth',
         top: 0
       })
