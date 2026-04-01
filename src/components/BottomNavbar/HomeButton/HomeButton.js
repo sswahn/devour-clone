@@ -11,7 +11,7 @@ function HomeButton() {
         top: 0
       })
     } catch (error) {
-      console.error(`Error using home button: ${error}`)
+      throw new Error(error)
     }
   }
   
