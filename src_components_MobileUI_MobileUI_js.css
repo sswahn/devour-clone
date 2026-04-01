@@ -241,7 +241,7 @@
   fill: var(--white);
 }
 
-.yMoa0P1h84myJgUPZbS_ > svg {
+.yMoa0P1h84myJgUPZbS_ div > svg {
   background-color: #eee;
   border: 1px solid #ccc;
   border-top-left-radius: 15px;
@@ -250,7 +250,7 @@
   padding: 2px;
 }
 
-.yMoa0P1h84myJgUPZbS_ input {
+.yMoa0P1h84myJgUPZbS_ div input {
   background-color: #eee;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
