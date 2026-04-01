@@ -65,6 +65,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+
+
+  /* trying to fix feed overflow */
+  overflow: hidden;
 }
 
 button {
