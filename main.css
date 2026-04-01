@@ -428,7 +428,7 @@ html {
 
   height: 100dvh;
   overflow-x: hidden;
-  overflow-y: auto;
+  
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
