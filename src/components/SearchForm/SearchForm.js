@@ -45,10 +45,12 @@ function SearchForm() {
   }
 
   const storeLocally = (key, value) => {
-    const existing = JSON.parse(localStorage.getItem(key)) || {}
-    if (!existing.includes(value)) {
+    try {
+      const existing = JSON.parse(localStorage.getItem(key) || '{}')
       const data = JSON.stringify({ ...existing, value })
       localStorage.setItem(key, data)
+    } catch (error) {
+      throw new Error(error)
     }
   }
 
