@@ -39,9 +39,9 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;  
   overscroll-behavior-y: contain;
-  transform: translateZ(0);
+/*  transform: translateZ(0); */
   -webkit-overflow-scrolling: touch; 
-  will-change: scroll-position;
+/*  will-change: scroll-position; */
   width: 100%;
   z-index: 0;
 }
