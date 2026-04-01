@@ -51,22 +51,15 @@ body {
 
 
 
-  border: 1px dashed red;
-
-
-  width: 100%;
-  margin: 0 auto;
 
   height: 100dvh;
   overflow-y: scroll; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
   scroll-snap-type: y mandatory;
-
   scroll-behavior: smooth;  
-  
   overscroll-behavior-y: contain;
-
   transform: translateZ(0);
   will-change: scroll-position;
+  width: 100%;
   z-index: 0;
 }
 
