@@ -8,7 +8,7 @@ function NotificationsButton() {
       navigator.vibrate(50)
       // open notifications
     } catch (error) {
-      console.error(`Error opening notifications: ${error}`)
+      throw new Error(error)
     }
   }
   
