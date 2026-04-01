@@ -14,6 +14,7 @@ function SearchForm() {
   const inputRef = useRef(null)
 
   const handleCloseSearch = event => {
+     document.exitFullscreen()
      setSearchContext(prevContext => !prevContext)
   }
 
