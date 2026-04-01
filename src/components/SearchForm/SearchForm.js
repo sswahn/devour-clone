@@ -68,23 +68,20 @@ function SearchForm() {
   }
   
   const onKeyDown = event => {
-    // handle for enter key (prolly ignore it)
-    if (event.key === 'Enter') {
-      return
+    switch(event.key) {
+      case 'Enter':
+        return console.log('Enter key') // handle for enter key (prolly ignore it)
+      case 'Escape':
+        return console.log('Escape key') // escape -> clearCloseInput()
+      case 'Tab':
+        return console.log('Tab key') // handle key select of suggestions (Tab and arrow keys)
+      case 'ArrowDown':
+        return console.log('ArrowDown key')
+      case 'ArrowUp':
+        return console.log('ArrowUp key')
+      default:
+        return console.log('key', event.key)
     }
-    
-    // handle key select of suggestions
-    // Tab and arrow keys
-    if (event.key === 'Tab') {}
-    if (event.key === 'ArrowDown') {}
-    if (event.key === 'ArrowUp') {}
-    
-    // escape clears input then closes if already cleared
-    // escape -> clearCloseInput()
-    if (event.key === 'Escape') {}
-    
-    
-    return
   }
 
   const onSubmit = event => {
