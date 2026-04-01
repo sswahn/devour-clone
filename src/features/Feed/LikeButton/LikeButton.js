@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import server from '../../../utilities/server'
 import { config } from '../../../config'
-// import icons
+import HeartIconFill from '../../../components/Icons/HeartIcon/HeartIconFill' 
+import HeartIconStroke from '../../../components/Icons/HeartIcon/HeartIconStroke' 
 
 function LikeButton({ likedByUser }) {
   const [liked, setLiked] = useState(false)
@@ -9,11 +10,14 @@ function LikeButton({ likedByUser }) {
 
   const onClick = async event => {
     try {
+      setLiked(prevState => !prevState)
+      return
+      
       setLoading(true)
       const request = {}
       const response = await server.post(config.post.like)
       
-      setLiked(!liked)
+      setLiked(prevState => !prevState)
       setLoading(false)
     } catch (error) {
       throw new Error(error)
@@ -26,7 +30,7 @@ function LikeButton({ likedByUser }) {
   
   return (
     <button type="button" onClick={onClick} disabled={loading} aria-label="Like" aria-pressed={liked}>
-      {liked ? 'liked icon' : 'like icon' }
+      {liked ? <HeartIconFill /> : <HeartIconStroke />}
     </button>
   )
 }
