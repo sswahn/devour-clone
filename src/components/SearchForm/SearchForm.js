@@ -91,7 +91,7 @@ function SearchForm() {
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
 
   useEffect(() => {
-  //  if (!deferredValue.trim()) {
+  //  if (deferredValue.trim()) {
       console.log('defferedValue: ', deferredValue)
       console.log('(!deferredValue.trim())', !deferredValue.trim())
       
