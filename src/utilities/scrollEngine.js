@@ -1,6 +1,5 @@
 // scrollEngine.js
 
-let element = window
 let subscribers = new Set()
 let started = false
 let ticking = false
@@ -18,11 +17,7 @@ function notify(data) {
 }
 
 function update(timestamp) {
-
-  console.log('element: ', element)
-  console.log('element.scrollY: ', element.scrollY)
-  
-  const scrollY = element.scrollY //.scrollTop
+  const scrollY = window.scrollY
   
   // Calculate change in Y
   deltaY = scrollY - scrollStart 
@@ -64,7 +59,7 @@ function onScroll(event) {
 }
 
 function onScrollEnd(event) {
-  scrollStart = element.scrollTop
+  scrollStart = window.scrollY
   
   notify({
     deltaY,
@@ -74,30 +69,18 @@ function onScrollEnd(event) {
 }
 
 function start() {
-  if (element) {
-    element.addEventListener('scroll', onScroll, { passive: true })
-    element.addEventListener("scrollend", onScrollEnd, { passive: true })
-    started = true
-  }
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener("scrollend", onScrollEnd, { passive: true })
+  started = true
 }
 
 function stop() {
-  if (element) {
-    element.removeEventListener('scroll', onScroll)
-    element.removeEventListener('scrollend', onScrollEnd)
-    started = false
-  }
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('scrollend', onScrollEnd)
+  started = false
 }
 
 const scroll = {
-  /*
-  setElement(el) {
-    if (!(el instanceof HTMLElement)) {
-      throw new TypeError('scroll.publish arugument must be instanceof HTMLElement.')
-    }
-    element = el
-  },
-  */
   subscribe(fn) {
     if (typeof fn !== 'function') {
       throw new TypeError('scroll.subscribe arugument must be of type "function".')
