@@ -221,7 +221,7 @@ mic icon to the right, is a button.
   background: var(--black);
   display: flex;
   height: 100dvh;
-
+  padding: 16px 8px 0 8px;
   position: absolute;
   top: 0;
   width: 100%;
