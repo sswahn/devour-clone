@@ -5,11 +5,11 @@ import styles from './searchbutton.module.css'
 function SearchButton() {
   const setSearchContext = useSetSearchContext()
   
-  const onClick = event => {
+  const onClick = async event => {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
-    // request full screen on #portal
+    await document.getElementById('portal').requestFullscreen()
     setSearchContext(prevContext => !prevContext)
   }
   
