@@ -50,6 +50,7 @@ body {
   background-color: transparent;
 
   height: 100dvh;
+  overflow: hidden;
   
   padding: 
     env(safe-area-inset-top)
