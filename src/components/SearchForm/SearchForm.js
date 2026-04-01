@@ -18,11 +18,15 @@ function SearchForm() {
 
   // make/use a custom hook
   const speechRecognition = () => {
-    const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
-    recognition.continuous = true
-    recognition.interimResults = true
-    recognition.lang = 'en-US'
-    recognition.start()
+    try {
+      const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
+      recognition.continuous = true
+      recognition.interimResults = true
+      recognition.lang = 'en-US'
+      recognition.start()
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 
   const handleVoiceRecognition = event => {
