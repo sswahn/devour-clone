@@ -92,6 +92,7 @@ function SearchForm() {
           <XmarkIcon />
         </button>
       </header>
+  
       <div>
         <SearchIcon />
   
