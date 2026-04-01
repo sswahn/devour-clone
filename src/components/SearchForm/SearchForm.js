@@ -18,7 +18,7 @@ function SearchForm() {
 
   // make/use a custom hook
   const speechRecognition = () => {
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)()
+    const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
