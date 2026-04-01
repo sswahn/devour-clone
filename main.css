@@ -437,6 +437,8 @@ html {
 
 body {
   background-color: transparent;
+
+  height: 100dvh;
   
   padding: 
     env(safe-area-inset-top)
