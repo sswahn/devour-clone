@@ -2,7 +2,8 @@
 /* 
 context = {
   component: 'HomeButton',
-  action: 'onClick'
+  action: 'onClick',
+  userId: context.user.id
 }
 */
 
