@@ -54,6 +54,9 @@ function SearchForm() {
   const onChange = event => {
     // store recent searches in locoalStorage
     const value = event.target.value
+
+    console.log('onChange value: ', value)
+    
     setSearchValue(value)
     
     
