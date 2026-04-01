@@ -23,6 +23,7 @@ function FeedNode({ onClick, item, index, count }) {
           {data.caption ?? <figcaption>{data.caption}</figcaption>}
         </figure>
       <footer>
+        <LikeButton likedByUser={false} />
 {/*
         <LikeButton likedByUser={item.likedByUser} /> {item.likeCount}
         <CommentsButton /> {item.commentCount}
