@@ -3,6 +3,7 @@ import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
 function HomeButton() {
+  /*
   const scrollRef = useScrollContext()
   
   const onClick = event => {
@@ -17,6 +18,7 @@ function HomeButton() {
       })
     }
   }
+  */
   
   return (
     <button className={styles.homeButton} onClick={onClick} type="button" aria-label="scroll to top">
