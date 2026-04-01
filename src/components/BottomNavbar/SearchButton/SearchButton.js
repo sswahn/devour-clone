@@ -12,7 +12,7 @@ function SearchButton() {
       await screen.orientation.lock('portrait')
       setSearchContext(prevContext => !prevContext)
     } catch (error) {
-      console.error(`Error using search button: ${error}`)
+      throw new Error(error)
     }
   }
   
