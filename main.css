@@ -420,25 +420,6 @@ html {
   font-feature-settings: "cv11", "ss01";
   text-rendering: optimizeLegibility;
   overflow: hidden;
-
-
-     border: 1px dashed red;
-
-
-  width: 100%;
-  margin: 0 auto;
-
-  height: 100dvh;
-  overflow-y: auto; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
-  scroll-snap-type: y mandatory;
-
-  scroll-behavior: smooth;  
-  
-  overscroll-behavior-y: contain;
-
-  transform: translateZ(0);
-  will-change: scroll-position;
-  z-index: 0;
 }
 
 body {
@@ -453,6 +434,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+
+
+
+
+
+
+  border: 1px dashed red;
+
+
+  width: 100%;
+  margin: 0 auto;
+
+  height: 100dvh;
+  overflow-y: scroll; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
+  scroll-snap-type: y mandatory;
+
+  scroll-behavior: smooth;  
+  
+  overscroll-behavior-y: contain;
+
+  transform: translateZ(0);
+  will-change: scroll-position;
+  z-index: 0;
 }
 
 button {
