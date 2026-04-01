@@ -29,12 +29,21 @@ mic icon to the right, is a button.
   justify-content: center;
 }
 
+.search header h1 {
+  margin-right: 50%;
+
+  border: 1px dashed red;
+}
+
 .searchForm header > button {
   background: blue;
   border: 0;
-  color: var(--white);
   height: 26px;
   margin-right: auto;
+}
+
+.searchForm header > button svg {
+  fill: var(--white);
 }
 
 .searchForm > svg {
