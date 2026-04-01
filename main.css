@@ -439,7 +439,7 @@ body {
 
 
   height: 100dvh;
-  overflow-y: scroll; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
+  overflow-y: auto; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;  
   overscroll-behavior-y: contain;
