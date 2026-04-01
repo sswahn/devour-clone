@@ -1,19 +1,14 @@
-import { useContext } from 'react'
-//import { SetNotificationsContext } from '../../Providers/NotificationsProvider'
 import BellIcon from '../../Icons/BellIcon/BellIcon'
 import styles from './notificationsbutton.module.css'
 
 function NotificationsButton() {
-  // const setNotificationsContext = useContext(SetNotificationsContext)
 
   const onClick = event => {
-    if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(50)
-    }
     try {
-
+      navigator.vibrate(50)
+      // open notifications
     } catch (error) {
-      console.error('Opening notifications failed: ', error)
+      console.error(`Error opening notifications: ${error}`)
     }
   }
   
