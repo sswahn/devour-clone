@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useSetSearchContext } from '../../hooks/useSearchContext'
+import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
@@ -33,11 +34,33 @@ function SearchForm() {
   const handleVoiceRecognition = event => {
     // set speech to searchValue
   }
+
+  const requestData = async value => {
+    const request = {
+      value
+    }
+    const response = await server.post(config.api.search, request)
+    if (response.error) {
+      return console.error(error)
+    }
+    setData(response.message)
+  }
+
+  const storeLocally = (key, value) => {
+    const existing = localStorage.getItem(key) || {}
+    const data = JSON.stringify({ ...existing, value })
+    localStorage.setItem(key, data)
+  }
   
   const onChange = event => {
-    // debounce
     // store recent searches in locoalStorage
+    const value = event.target.value
+    setState(value)
+    storeLocally('searches', value)
+    
+    // debounce request
     // avoid multiple http requests for the same query
+    
     return
   }
   
@@ -69,6 +92,7 @@ function SearchForm() {
   const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
 
+  
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
       <button type="button" onClick={handleCloseSearch} aria-label="close search">
