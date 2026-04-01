@@ -102,7 +102,7 @@ function SearchForm() {
       <input 
         ref={inputRef}
         type="search"
-        value={searchValue}
+       /* value={searchValue} */
         onChange={onChange}
         onKeyDown={onKeyDown}
         placeholder="Search"
