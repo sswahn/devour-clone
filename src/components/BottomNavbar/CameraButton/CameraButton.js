@@ -12,7 +12,7 @@ function CameraButton() {
     }
     return
     try {
-      await document.documentElement.requestFullscreen()
+      await document.getElementById('portal').requestFullscreen()
       await screen.orientation.lock('portrait')
       setCameraContext(prevContext => !prevContext)
     } catch (error) {
