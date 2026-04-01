@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { ScrollContext } from '../components/Providers/ScrollProvider'
 
 function useScrollContext(callback = undefined) {
@@ -6,19 +6,6 @@ function useScrollContext(callback = undefined) {
   if (!ref) {
     throw new Error(`Error in useScrollContext. ref: ${ref}`)
   }
-
-  /*
-  useEffect(() => {
-    if (!ref.current) {
-      return
-    }
-
-    if (callback) {
-      callback(ref)
-    }
-    
-  }, [ref, callback])
-*/
   return ref
 }
 
