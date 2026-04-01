@@ -1,6 +1,6 @@
 // scrollEngine.js
 
-let element = null
+let element = window
 let subscribers = new Set()
 let started = false
 let ticking = false
