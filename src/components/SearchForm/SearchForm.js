@@ -11,9 +11,13 @@ function SearchForm() {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
-  const handleCloseSearch = event => {
-     document.exitFullscreen()
+  const handleCloseSearch = async event => {
+    try {
+     await document.exitFullscreen()
      setSearchContext(prevContext => !prevContext)
+    } catch (error) {
+      throw new Error(error)
+    }
   }
 
   // make/use a custom hook
