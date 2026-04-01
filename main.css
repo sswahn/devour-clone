@@ -417,6 +417,9 @@ html {
   font-feature-settings: "cv11", "ss01";
   text-rendering: optimizeLegibility;
   overflow: hidden;
+
+  max-width: 500px;
+  width: 100%;
 }
 
 body {
