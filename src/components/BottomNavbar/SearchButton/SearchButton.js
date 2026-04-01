@@ -9,6 +9,7 @@ function SearchButton() {
     if (window.navigator && window.navigator.vibrate) {
       navigator.vibrate(50)
     }
+    // request full screen on #portal
     setSearchContext(prevContext => !prevContext)
   }
   
