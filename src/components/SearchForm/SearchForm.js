@@ -73,12 +73,10 @@ function SearchForm() {
         return console.log('Enter key') // handle for enter key (prolly ignore it)
       case 'Escape':
         return console.log('Escape key') // escape -> clearCloseInput()
-      case 'Tab':
-        return console.log('Tab key') // handle key select of suggestions (Tab and arrow keys)
-      case 'ArrowDown':
-        return console.log('ArrowDown key')
       case 'ArrowUp':
-        return console.log('ArrowUp key')
+        return console.log('ArrowUp key') // select suggestion up
+      case 'ArrowDown':
+        return console.log('ArrowDown key') // select suggestion down
       default:
         return console.log('key', event.key)
     }
