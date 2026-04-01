@@ -7,16 +7,14 @@ function CameraButton() {
   const setCameraContext = useContext(SetCameraContext)
   
   const onClick = async event => {
-    if (window.navigator && window.navigator.vibrate) {
-      navigator.vibrate(50)
-    }
-    return
     try {
+      navigator.vibrate(50)
+      return
       await document.getElementById('portal').requestFullscreen()
       await screen.orientation.lock('portrait')
       setCameraContext(prevContext => !prevContext)
     } catch (error) {
-      console.error('Opening camera failed: ', error)
+      console.error(`Error opening camera: ${error}`)
     }
   }
   
