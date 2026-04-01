@@ -6,12 +6,14 @@ function SearchButton() {
   const setSearchContext = useSetSearchContext()
   
   const onClick = async event => {
-    if (window.navigator && window.navigator.vibrate) {
+    try {
       navigator.vibrate(50)
+      await document.getElementById('portal').requestFullscreen()
+      await screen.orientation.lock('portrait')
+      setSearchContext(prevContext => !prevContext)
+    } catch (error) {
+      console.error(`Error using search button: ${error}`)
     }
-    await document.getElementById('portal').requestFullscreen()
-    await screen.orientation.lock('portrait')
-    setSearchContext(prevContext => !prevContext)
   }
   
   return (
