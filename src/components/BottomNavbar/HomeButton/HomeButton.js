@@ -3,8 +3,8 @@ import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './homebutton.module.css'
 
 function HomeButton() {
-  /*
-  const scrollRef = useScrollContext()
+  
+  // const scrollRef = useScrollContext()
   
   const onClick = event => {
     if (window.navigator && window.navigator.vibrate) {
@@ -18,7 +18,7 @@ function HomeButton() {
       })
     }
   }
-  */
+  
   
   return (
     <button className={styles.homeButton} onClick={onClick} type="button" aria-label="scroll to top">
