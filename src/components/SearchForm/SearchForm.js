@@ -33,10 +33,6 @@ function SearchForm() {
     }
   }
 
-  const handleVoiceRecognition = event => {
-    // set speech to searchValue
-  }
-
   const requestData = async value => {
     const request = {
       value
