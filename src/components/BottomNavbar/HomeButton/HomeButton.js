@@ -4,17 +4,16 @@ import styles from './homebutton.module.css'
 function HomeButton() {
   
   const onClick = event => {
-    if (window.navigator && window.navigator.vibrate) {
+    try {
       navigator.vibrate(50)
-    }
-    if (window.scrollY !== 0) {
       window.scrollTo({
         behavior: 'smooth',
         top: 0
       })
+    } catch (error) {
+      console.error(`Error using home button: ${error}`)
     }
   }
-  
   
   return (
     <button className={styles.homeButton} onClick={onClick} type="button" aria-label="scroll to top">
