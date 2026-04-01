@@ -7,7 +7,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const scrollRef = useScrollContext()
+  // const scrollRef = useScrollContext()
   const [data, setData] = useState([1,2,3])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -46,7 +46,7 @@ function Feed() {
   }
 
   return (
-    <section ref={scrollRef} className={styles.feed} role="feed" aria-busy={loading}>
+    <section className={styles.feed} role="feed" aria-busy={loading}>
     {/*
       <div style={{
         background: '#777',
