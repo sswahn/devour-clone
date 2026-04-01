@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useDeferredValue } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useSetSearchContext } from '../../hooks/useSearchContext'
 import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
@@ -11,7 +11,6 @@ import styles from './searchform.module.css'
 function SearchForm() {
   const setSearchContext = useSetSearchContext()
   const [searchValue, setSearchValue] = useState('')
-  const deferredValue = useDeferredValue(searchValue)
   const inputRef = useRef(null)
 
   const handleCloseSearch = event => {
@@ -86,20 +85,6 @@ function SearchForm() {
     event.preventDefault()
   }
 
-  // use searchContext to add/remove .hidden class so transition will show (or use useTransition?)
-  const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
-  const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
-
-  useEffect(() => {
-  //  if (deferredValue.trim()) {
-      console.log('defferedValue: ', deferredValue)
-      console.log('(!deferredValue.trim())', !deferredValue.trim())
-      
-      //storeLocally('searches', deferredValue)
-    //}
-  }, [deferredValue])
-
-  
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
       <button type="button" onClick={handleCloseSearch} aria-label="close search">
