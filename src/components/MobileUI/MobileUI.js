@@ -23,7 +23,7 @@ function MobileUI() {
       {getProfileContext && <BottomSheet />} {/* Change to <Profile />*/}
       {searchContext && <SearchForm />}
     </section>, 
-    document.body
+    document.querySelector('#portal')
   )
 }
 
