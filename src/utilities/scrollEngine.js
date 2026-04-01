@@ -18,7 +18,11 @@ function notify(data) {
 }
 
 function update(timestamp) {
-  const scrollY = element.scrollTop
+
+  console.log('element: ', element)
+  cosole.log('window.scrollY: ', window.scrollY)
+  
+  const scrollY = element.scrollY //.scrollTop
   
   // Calculate change in Y
   deltaY = scrollY - scrollStart 
