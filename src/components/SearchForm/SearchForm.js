@@ -87,28 +87,33 @@ function SearchForm() {
 
   return (
     <form className={styles.searchForm} onSubmit={onSubmit}>
-      <h1>Search</h1>
-      <button type="button" onClick={handleCloseSearch} aria-label="close search">
-        <XmarkIcon />
-      </button>
+      <header>
+        <h1>Search</h1>
+        <button type="button" onClick={handleCloseSearch} aria-label="close search">
+          <XmarkIcon />
+        </button>
+      </header>
+      <div>
+        <SearchIcon />
   
-      <SearchIcon />
-  
-      <input 
-        ref={inputRef}
-        type="search"
-       /* value={searchValue} */
-        onChange={onChange}
-        onKeyDown={onKeyDown}
-        placeholder="Search"
-        disabled={false}
-        aria-label="search input"  
-      />
-      
-      {/* hook should return bool to check if speechRecognition exists, if so render button: */}
-      <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
-        <MicrophoneIcon />
-      </button>
+        <input 
+          ref={inputRef}
+          type="search"
+         /* value={searchValue} */
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          placeholder="Search"
+          disabled={false}
+          aria-label="search input"  
+        />
+        
+        {/* hook should return bool to check if speechRecognition exists, if so render button: */}
+        <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
+          <MicrophoneIcon />
+        </button>
+      </div>
+            
+      <div className="suggestions"></div>
     </form>
   )
 }
