@@ -40,7 +40,7 @@ html {
   margin: 0 auto;
 
   height: 100dvh;
- /* overflow-y: auto; comment here what this changes */
+  overflow-y: scroll; /* auto expands, hidden removes scroll, scroll... comment here what this changes */
   scroll-snap-type: y mandatory;
 
   scroll-behavior: smooth;  
