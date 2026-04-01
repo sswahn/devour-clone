@@ -55,7 +55,7 @@ function SearchForm() {
     // store recent searches in locoalStorage
     const value = event.target.value
     setSearchValue(value)
-    debounce(storeLocally('searches', value), 500)
+    //storeLocally('searches', value)
     
     // debounce request, avoid multiple http requests for the same query
     // debounce(requestData, 300)
@@ -83,6 +83,12 @@ function SearchForm() {
   // use searchContext to add/remove .hidden class so transition will show (or use useTransition?)
   const setHidden = element => (!isHidden.current) && element.classList.add(styleRef.current)
   const setVisible = element => (isHidden.current) && element.classList.remove(styleRef.current)
+
+  useEffect(() => {
+    if (!deferredValue.trim()) {
+      console.log('defferedValue: ', deferredValue)
+    }
+  }, [deferredValue])
 
   
   return (
