@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useDeferredValue } from 'react'
 import { useSetSearchContext } from '../../hooks/useSearchContext'
 import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
@@ -42,26 +42,19 @@ function SearchForm() {
   }
 
   const storeLocally = (key, value) => {
-    const existing = localStorage.getItem(key) || {}
-    const data = JSON.stringify({ ...existing, value })
-    localStorage.setItem(key, data)
-  }
-
-  const debounce = (fn, delay) => {
-    let timeoutId
-    return (...args) => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => {
-        fn(...args)
-      }, delay)
+    const existing = JSON.parse(localStorage.getItem(key)) || {}
+    if (!existing.includes(value)) {
+      const data = JSON.stringify({ ...existing, value })
+      localStorage.setItem(key, data)
     }
   }
+
   
   const onChange = event => {
     // store recent searches in locoalStorage
     const value = event.target.value
     setSearchValue(value)
-    storeLocally('searches', value)
+    debounce(storeLocally('searches', value), 500)
     
     // debounce request, avoid multiple http requests for the same query
     // debounce(requestData, 300)
