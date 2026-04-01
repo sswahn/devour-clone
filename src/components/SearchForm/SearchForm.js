@@ -11,6 +11,7 @@ import styles from './searchform.module.css'
 function SearchForm() {
   const setSearchContext = useSetSearchContext()
   const [searchValue, setSearchValue] = useState('')
+  const deferredValue = useDeferredValue(searchValue)
   const inputRef = useRef(null)
 
   const handleCloseSearch = event => {
