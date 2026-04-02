@@ -97,8 +97,10 @@ function SearchForm({ closeSearch }) {
   return (
     <section className={styles.search}>
       <form onSubmit={onSubmit}>
-        <SearchIcon />
-  
+        <div>
+          <SearchIcon />
+        </div>
+    
         <input 
           ref={inputRef}
           type="search"
