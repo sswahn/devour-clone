@@ -1,4 +1,4 @@
-import BottonNavbar from '../BottomNavbar/BottomNavbar'
+import BottomNavbar from '../BottomNavbar/BottomNavbar'
 
 function Navigation({ openSearch, openCamera, openNotifications, openProfile }) {
   return (
