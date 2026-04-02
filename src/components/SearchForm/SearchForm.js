@@ -44,7 +44,7 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  export const debounce = (fn, delay) => {
+  const debounce = (fn, delay) => {
     let timeoutId
     return (...args) => {
       clearTimeout(timeoutId)
