@@ -59,18 +59,13 @@ function SearchForm({ closeSearch }) {
 
   
   const onChange = event => {
-    // store recent searches in locoalStorage
+    
     const value = event.target.value.trim()
-
-    
-    
+ 
     storeLocally('searches', value)
     
     setSearchValue(value)
     
-    
-    // debounce request, avoid multiple http requests for the same query
-    // debounce(requestData, 300)
   }
   
   const onKeyDown = event => {
