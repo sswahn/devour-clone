@@ -40,7 +40,8 @@
   padding-left: 8px;
   width: 100%;
 
-  margin: 0 -1px;
+  margin-right: -1px;
+  margin-left: -2px;
 }
 
 .search form input:focus {
