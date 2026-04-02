@@ -123,7 +123,7 @@ function SearchForm({ closeSearch }) {
       
       <div className="suggestions">
         <ul>
-        {!!recentSearches.length && recentSearches.map(search =>
+        {recentSearches?.length > 0 && recentSearches.map(search =>
           <li key={search} style={{ color: 'white' }}>{search}</li>
         )}    
         </ul>      
