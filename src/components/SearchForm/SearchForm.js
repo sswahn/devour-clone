@@ -97,7 +97,7 @@ function SearchForm({ closeSearch }) {
   }, [])
 
   return (
-    <section className={styles.search}>
+    <search className={styles.search}>
       <form onSubmit={onSubmit}>
         <div>
           <SearchIcon />
@@ -138,7 +138,7 @@ function SearchForm({ closeSearch }) {
         )}    
         </ul>      
       </div>
-    </section>
+    </search>
   )
 }
 
