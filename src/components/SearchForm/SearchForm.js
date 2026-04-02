@@ -108,16 +108,17 @@ function SearchForm({ closeSearch }) {
           onKeyDown={onKeyDown}
           aria-label="search input"  
         />
-        
-        {/* !!window.SpeechRecognition && */
-          <button type="button" onClick={speechRecognition} aria-label="voice recognition">
-            <MicrophoneIcon />
-          </button>
-        }
 
-        <button type="button" onClick={handleCloseSearch} aria-label="close search">
-          <XmarkIcon />
-        </button>
+        <div>
+          {/* !!window.SpeechRecognition && */
+            <button type="button" onClick={speechRecognition} aria-label="voice recognition">
+              <MicrophoneIcon />
+            </button>
+          }
+          <button type="button" onClick={handleCloseSearch} aria-label="close search">
+            <XmarkIcon />
+          </button>
+        </div>
       </form>
       
       <div className="suggestions"></div>
