@@ -14,7 +14,7 @@ const App = () => {
           <Header />
           <Main />
           <MobileUI />
-         {/* <BottomNavbar /> */
+         {/* <BottomNavbar /> */}
         </Providers> 
       </ErrorBoundary> 
     </React.StrictMode>
