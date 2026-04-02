@@ -43,7 +43,7 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  const debounce = useCallback(fn, delay) => {
+  const debounce = useCallback((fn, delay) => {
     let timeoutId
     return (...args) => {
       clearTimeout(timeoutId)
