@@ -45,7 +45,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \*********************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"search\":\"TYu9xxiA93dMGBlCIky5\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/SearchForm/searchform.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"search\":\"TYu9xxiA93dMGBlCIky5\",\"suggestions\":\"eCBmVsfjDWxj45EXERSQ\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/SearchForm/searchform.module.css?\n}");
 
 /***/ }
 
