@@ -132,9 +132,9 @@ function SearchForm({ closeSearch }) {
       </form>
 
       <ul role="listbox">
-      {recentSearches?.length > 0 && recentSearches.map((search, index) =>
-        <li key={index} role="option">{search}</li>
-      )}    
+        {recentSearches?.length > 0 && recentSearches.map((search, index) =>
+          <li key={index} role="option">{search}</li>
+        )}    
       </ul>      
     </search>
   )
