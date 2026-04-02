@@ -24,13 +24,12 @@
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   height: 40px;
   padding-left: 8px;
 
   stroke: var(--white);
-  fill: var(--white);
 }
 
 .TYu9xxiA93dMGBlCIky5 form input {
@@ -68,8 +67,8 @@
 
 .TYu9xxiA93dMGBlCIky5 form button:last-child {
   border-right: 1px solid #555;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .TYu9xxiA93dMGBlCIky5 form button > svg {  
