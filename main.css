@@ -444,7 +444,6 @@ body {
 }
 
 button {
-  pointer-events: none;
   touch-action: manipulation;
 }
 
