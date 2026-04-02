@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
@@ -91,12 +91,6 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => {
     event.preventDefault()
   }
-
-  useEffect(() => {
-    return () => {
-      // localStorage.removeItem('searches')
-    }
-  }, [])
 
   return (
     <search className={styles.search}>
