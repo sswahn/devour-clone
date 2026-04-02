@@ -44,7 +44,18 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  const storeLocally = (key, value) => {
+  export const debounce = (fn, delay) => {
+    let timeoutId
+    return (...args) => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        console.log('debounced function fired.')
+        fn(...args)
+      }, delay)
+    }
+  }
+
+  const storeLocally = debounce(key, value) => {
     try {
       const existing = JSON.parse(localStorage.getItem(key) || '{}')
       const data = JSON.stringify({ ...existing, value })
@@ -52,7 +63,7 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw new Error(error)
     }
-  }
+  }, 500)
 
   
   const onChange = event => {
