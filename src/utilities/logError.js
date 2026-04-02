@@ -9,7 +9,8 @@ context = {
 
 function logError(error, context = {}) {
 
-  console.error('Basic error: ', error)
+  alert(`Temp Error: ${error}`)
+  console.error('Temp error: ', error)
   return
   
   // consider dedupe method
