@@ -1,6 +1,6 @@
 /* Search Form */
 
-.searchForm {
+.search form {
   background: var(--black);
   height: 100dvh;
   left: 0;
@@ -12,30 +12,7 @@
   z-index: 200;
 }
 
-.searchForm header {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-
-.search header h1 {
-  margin-right: 50%;
-
-  border: 1px dashed red;
-}
-
-.searchForm header > button {
-  background: blue;
-  border: 0;
-  height: 26px;
-  margin-right: auto;
-}
-
-.searchForm header > button svg {
-  fill: var(--white);
-}
-
-.searchForm div > svg {
+.search form > svg {
   background-color: #eee;
   border: 1px solid #ccc;
   border-top-left-radius: 15px;
@@ -44,7 +21,7 @@
   padding: 2px;
 }
 
-.searchForm div input {
+.search form input {
   background-color: #eee;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
