@@ -38,7 +38,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _ErrorBoundary__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ErrorBoundary */ \"./src/ErrorBoundary.js\");\n/* harmony import */ var _Providers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Providers */ \"./src/Providers.js\");\n/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header/Header */ \"./src/components/Header/Header.js\");\n/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Main/Main */ \"./src/components/Main/Main.js\");\n/* harmony import */ var _components_BottomNavbar_BottomNavbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/BottomNavbar/BottomNavbar */ \"./src/components/BottomNavbar/BottomNavbar.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n\nvar App = function App() {\n  return /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(_ErrorBoundary__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null, /*#__PURE__*/React.createElement(_Providers__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null, /*#__PURE__*/React.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/React.createElement(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/React.createElement(_components_BottomNavbar_BottomNavbar__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://devour-clone/./src/App.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _ErrorBoundary__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ErrorBoundary */ \"./src/ErrorBoundary.js\");\n/* harmony import */ var _Providers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Providers */ \"./src/Providers.js\");\n/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header/Header */ \"./src/components/Header/Header.js\");\n/* harmony import */ var _components_Main_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Main/Main */ \"./src/components/Main/Main.js\");\n/* harmony import */ var _components_MobileUI_MobileUI__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/MobileUI/MobileUI */ \"./src/components/MobileUI/MobileUI.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n//import BottomNavbar from './components/BottomNavbar/BottomNavbar'\n\nvar App = function App() {\n  return /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(_ErrorBoundary__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null, /*#__PURE__*/React.createElement(_Providers__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null, /*#__PURE__*/React.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/React.createElement(_components_Main_Main__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/React.createElement(_components_MobileUI_MobileUI__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://devour-clone/./src/App.js?\n}");
 
 /***/ },
 
@@ -141,6 +141,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/BottomSheet/BottomSheet.js"
+/*!***************************************************!*\
+  !*** ./src/components/BottomSheet/BottomSheet.js ***!
+  \***************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BottomSheet)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nvar SNAP_POINTS = {\n  CLOSED: 0,\n  PEEK: 0.25,\n  HALF: 0.5,\n  FULL: 0.9\n};\nfunction BottomSheet(_ref) {\n  var isOpen = _ref.isOpen,\n    onClose = _ref.onClose,\n    _ref$initialSnap = _ref.initialSnap,\n    initialSnap = _ref$initialSnap === void 0 ? 'PEEK' : _ref$initialSnap,\n    children = _ref.children;\n  var sheetRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n  var startY = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(0);\n  var currentY = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(0);\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    translateY = _useState2[0],\n    setTranslateY = _useState2[1];\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState3, 2),\n    dragging = _useState4[0],\n    setDragging = _useState4[1];\n  var vh = typeof window !== 'undefined' ? window.innerHeight : 0;\n  var getSnapHeight = function getSnapHeight(snap) {\n    return vh * (1 - SNAP_POINTS[snap]);\n  };\n  var snapTo = function snapTo(snap) {\n    var target = getSnapHeight(snap);\n    setTranslateY(target);\n  };\n\n  // Lock background scroll\n  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {\n    if (isOpen) {\n      document.body.style.overflow = 'hidden';\n      snapTo(initialSnap);\n    } else {\n      document.body.style.overflow = '';\n      setTranslateY(vh);\n    }\n    return function () {\n      return document.body.style.overflow = '';\n    };\n  }, [isOpen]);\n\n  // Touch handlers\n  var onTouchStart = function onTouchStart(e) {\n    setDragging(true);\n    startY.current = e.touches[0].clientY;\n  };\n  var onTouchMove = function onTouchMove(e) {\n    if (!dragging) return;\n    var delta = e.touches[0].clientY - startY.current;\n    currentY.current = Math.max(0, translateY + delta);\n    setTranslateY(currentY.current);\n    startY.current = e.touches[0].clientY;\n  };\n  var onTouchEnd = function onTouchEnd() {\n    setDragging(false);\n    var snapPoints = Object.entries(SNAP_POINTS).map(function (_ref2) {\n      var _ref3 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_ref2, 2),\n        key = _ref3[0],\n        val = _ref3[1];\n      return {\n        key: key,\n        value: vh * (1 - val)\n      };\n    });\n\n    // Find closest snap\n    var closest = snapPoints.reduce(function (prev, curr) {\n      return Math.abs(curr.value - currentY.current) < Math.abs(prev.value - currentY.current) ? curr : prev;\n    });\n    if (closest.key === 'CLOSED') {\n      onClose();\n    } else {\n      snapTo(closest.key);\n    }\n  };\n  if (!isOpen) return null;\n  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(\"div\", {\n    onClick: onClose,\n    style: {\n      position: 'fixed',\n      inset: 0,\n      background: 'rgba(0,0,0,0.4)',\n      zIndex: 999\n    }\n  }), /*#__PURE__*/React.createElement(\"div\", {\n    ref: sheetRef,\n    onTouchStart: onTouchStart,\n    onTouchMove: onTouchMove,\n    onTouchEnd: onTouchEnd,\n    style: {\n      position: 'fixed',\n      left: 0,\n      right: 0,\n      bottom: 0,\n      height: '90vh',\n      background: '#fff',\n      borderTopLeftRadius: '16px',\n      borderTopRightRadius: '16px',\n      transform: \"translateY(\".concat(translateY, \"px)\"),\n      transition: dragging ? 'none' : 'transform 0.25s ease',\n      zIndex: 1000,\n      display: 'flex',\n      flexDirection: 'column',\n      touchAction: 'none'\n    }\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    style: {\n      width: 40,\n      height: 5,\n      background: '#ccc',\n      borderRadius: 999,\n      alignSelf: 'center',\n      margin: '10px 0'\n    }\n  }), /*#__PURE__*/React.createElement(\"div\", {\n    style: {\n      overflowY: 'auto',\n      flex: 1,\n      padding: 16\n    }\n  }, children)));\n}\n\n//# sourceURL=webpack://devour-clone/./src/components/BottomSheet/BottomSheet.js?\n}");
+
+/***/ },
+
 /***/ "./src/components/Header/Header.js"
 /*!*****************************************!*\
   !*** ./src/components/Header/Header.js ***!
@@ -149,6 +160,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _hooks_useScrollEffect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useScrollEffect */ \"./src/hooks/useScrollEffect.js\");\n/* harmony import */ var _Icons_HomeIcon_HomeIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Icons/HomeIcon/HomeIcon */ \"./src/components/Icons/HomeIcon/HomeIcon.js\");\n/* harmony import */ var _Icons_SearchIcon_SearchIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Icons/SearchIcon/SearchIcon */ \"./src/components/Icons/SearchIcon/SearchIcon.js\");\n/* harmony import */ var _header_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header.module.css */ \"./src/components/Header/header.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\nvar Header = function Header() {\n  var headerRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);\n  var _useScrollEffect = (0,_hooks_useScrollEffect__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(),\n    scrollEffect = _useScrollEffect.scrollEffect;\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    headerRef && scrollEffect(headerRef.current, _header_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].hidden);\n  }, []);\n  return /*#__PURE__*/React.createElement(\"header\", {\n    ref: headerRef,\n    className: _header_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].header\n  }, /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"button\", {\n    type: \"button\",\n    \"aria-label\": \"home\"\n  }, /*#__PURE__*/React.createElement(_Icons_HomeIcon_HomeIcon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://devour-clone/./src/components/Header/Header.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/Icons/ArrowLeftIcon/ArrowLeftIcon.js"
+/*!*************************************************************!*\
+  !*** ./src/components/Icons/ArrowLeftIcon/ArrowLeftIcon.js ***!
+  \*************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ArrowLeftIcon = function ArrowLeftIcon(_ref) {\n  var _ref$size = _ref.size,\n    size = _ref$size === void 0 ? 24 : _ref$size;\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    viewBox: \"0 0 448 512\",\n    width: size,\n    height: size,\n    role: \"img\",\n    \"aria-label\": \"arrow left icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ArrowLeftIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/ArrowLeftIcon/ArrowLeftIcon.js?\n}");
 
 /***/ },
 
@@ -207,6 +229,39 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/Icons/LocationIcon/LocationIcon.js"
+/*!***********************************************************!*\
+  !*** ./src/components/Icons/LocationIcon/LocationIcon.js ***!
+  \***********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar LocationIcon = function LocationIcon() {\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    height: \"1em\",\n    viewBox: \"0 0 384 512\",\n    role: \"img\",\n    \"aria-label\": \"location icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LocationIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/LocationIcon/LocationIcon.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/Icons/MicrophoneIcon/MicrophoneIcon.js"
+/*!***************************************************************!*\
+  !*** ./src/components/Icons/MicrophoneIcon/MicrophoneIcon.js ***!
+  \***************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar MicrophoneIcon = function MicrophoneIcon() {\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    height: \"1em\",\n    viewBox: \"0 0 384 512\",\n    role: \"img\",\n    \"aria-label\": \"microphone icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MicrophoneIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/MicrophoneIcon/MicrophoneIcon.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/Icons/MicrophoneIcon/MicrophoneSlashIcon.js"
+/*!********************************************************************!*\
+  !*** ./src/components/Icons/MicrophoneIcon/MicrophoneSlashIcon.js ***!
+  \********************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar MicrophoneSlashIcon = function MicrophoneSlashIcon() {\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    height: \"1em\",\n    viewBox: \"0 0 640 512\",\n    role: \"img\",\n    \"aria-label\": \"microphone slash (muted) icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L472.1 344.7c15.2-26 23.9-56.3 23.9-88.7V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 21.2-5.1 41.1-14.2 58.7L416 300.8V96c0-53-43-96-96-96s-96 43-96 96v54.3L38.8 5.1zM344 430.4c20.4-2.8 39.7-9.1 57.3-18.2l-43.1-33.9C346.1 382 333.3 384 320 384c-70.7 0-128-57.3-128-128v-8.7L144.7 210c-.5 1.9-.7 3.9-.7 6v40c0 89.1 66.2 162.7 152 174.4V464H248c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H344V430.4z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MicrophoneSlashIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/MicrophoneIcon/MicrophoneSlashIcon.js?\n}");
+
+/***/ },
+
 /***/ "./src/components/Icons/SearchIcon/SearchIcon.js"
 /*!*******************************************************!*\
   !*** ./src/components/Icons/SearchIcon/SearchIcon.js ***!
@@ -218,6 +273,28 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/Icons/SunIcon/DarkSunIcon.js"
+/*!*****************************************************!*\
+  !*** ./src/components/Icons/SunIcon/DarkSunIcon.js ***!
+  \*****************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar DarkSunIcon = function DarkSunIcon() {\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    height: \"1em\",\n    viewBox: \"0 0 512 512\",\n    role: \"img\",\n    \"aria-label\": \"dark icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DarkSunIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/SunIcon/DarkSunIcon.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/Icons/SunIcon/SunIcon.js"
+/*!*************************************************!*\
+  !*** ./src/components/Icons/SunIcon/SunIcon.js ***!
+  \*************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar SunIcon = function SunIcon() {\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    height: \"1em\",\n    viewBox: \"0 0 512 512\",\n    role: \"img\",\n    \"aria-label\": \"light icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M375.7 19.7c-1.5-8-6.9-14.7-14.4-17.8s-16.1-2.2-22.8 2.4L256 61.1 173.5 4.2c-6.7-4.6-15.3-5.5-22.8-2.4s-12.9 9.8-14.4 17.8l-18.1 98.5L19.7 136.3c-8 1.5-14.7 6.9-17.8 14.4s-2.2 16.1 2.4 22.8L61.1 256 4.2 338.5c-4.6 6.7-5.5 15.3-2.4 22.8s9.8 13 17.8 14.4l98.5 18.1 18.1 98.5c1.5 8 6.9 14.7 14.4 17.8s16.1 2.2 22.8-2.4L256 450.9l82.5 56.9c6.7 4.6 15.3 5.5 22.8 2.4s12.9-9.8 14.4-17.8l18.1-98.5 98.5-18.1c8-1.5 14.7-6.9 17.8-14.4s2.2-16.1-2.4-22.8L450.9 256l56.9-82.5c4.6-6.7 5.5-15.3 2.4-22.8s-9.8-12.9-17.8-14.4l-98.5-18.1L375.7 19.7zM269.6 110l65.6-45.2 14.4 78.3c1.8 9.8 9.5 17.5 19.3 19.3l78.3 14.4L402 242.4c-5.7 8.2-5.7 19 0 27.2l45.2 65.6-78.3 14.4c-9.8 1.8-17.5 9.5-19.3 19.3l-14.4 78.3L269.6 402c-8.2-5.7-19-5.7-27.2 0l-65.6 45.2-14.4-78.3c-1.8-9.8-9.5-17.5-19.3-19.3L64.8 335.2 110 269.6c5.7-8.2 5.7-19 0-27.2L64.8 176.8l78.3-14.4c9.8-1.8 17.5-9.5 19.3-19.3l14.4-78.3L242.4 110c8.2 5.7 19 5.7 27.2 0zM256 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224zM192 256a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SunIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/SunIcon/SunIcon.js?\n}");
+
+/***/ },
+
 /***/ "./src/components/Icons/UserIcon/UserIcon.js"
 /*!***************************************************!*\
   !*** ./src/components/Icons/UserIcon/UserIcon.js ***!
@@ -226,6 +303,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar UserIcon = function UserIcon(_ref) {\n  var _ref$size = _ref.size,\n    size = _ref$size === void 0 ? '24px' : _ref$size;\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    viewBox: \"0 0 512 512\",\n    height: size,\n    role: \"img\",\n    \"aria-label\": \"User Icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/UserIcon/UserIcon.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/Icons/XmarkIcon/XmarkIcon.js"
+/*!*****************************************************!*\
+  !*** ./src/components/Icons/XmarkIcon/XmarkIcon.js ***!
+  \*****************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nfunction XmarkIcon(_ref) {\n  var _ref$size = _ref.size,\n    size = _ref$size === void 0 ? '24px' : _ref$size;\n  return /*#__PURE__*/React.createElement(\"svg\", {\n    xmlns: \"http://www.w3.org/2000/svg\",\n    viewBox: \"0 0 640 640\",\n    height: size,\n    role: \"img\",\n    \"aria-label\": \"x icon\"\n  }, /*#__PURE__*/React.createElement(\"path\", {\n    d: \"M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z\"\n  }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (XmarkIcon);\n\n//# sourceURL=webpack://devour-clone/./src/components/Icons/XmarkIcon/XmarkIcon.js?\n}");
 
 /***/ },
 
@@ -247,7 +335,40 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Provider */ \"./src/Provider.js\");\n/* harmony import */ var _LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../LoadingSpinner/LoadingSpinner */ \"./src/components/LoadingSpinner/LoadingSpinner.js\");\n/* harmony import */ var _features_Feed_Feed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../features/Feed/Feed */ \"./src/features/Feed/Feed.js\");\n/* harmony import */ var _main_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main.module.css */ \"./src/components/Main/main.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\nvar MobileUI = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(function () {\n  return __webpack_require__.e(/*! import() */ \"src_components_MobileUI_MobileUI_js\").then(__webpack_require__.bind(__webpack_require__, /*! ../MobileUI/MobileUI */ \"./src/components/MobileUI/MobileUI.js\"));\n});\n//import MobileUI from '../MobileUI/MobileUI'\n\nfunction Main() {\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    //alert(`width: ${window.innerWidth}`) \n    //alert(`height: ${window.innerHeight}`)\n  }, []);\n  return /*#__PURE__*/React.createElement(\"main\", {\n    className: _main_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].main\n  }, /*#__PURE__*/React.createElement(_features_Feed_Feed__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {\n    fallback: null\n  }, /*#__PURE__*/React.createElement(MobileUI, null)));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/Main.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Provider */ \"./src/Provider.js\");\n/* harmony import */ var _LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../LoadingSpinner/LoadingSpinner */ \"./src/components/LoadingSpinner/LoadingSpinner.js\");\n/* harmony import */ var _features_Feed_Feed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../features/Feed/Feed */ \"./src/features/Feed/Feed.js\");\n/* harmony import */ var _main_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main.module.css */ \"./src/components/Main/main.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\nvar MobileUI = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(function () {\n  return Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ../MobileUI/MobileUI */ \"./src/components/MobileUI/MobileUI.js\"));\n});\n//import MobileUI from '../MobileUI/MobileUI'\n\nfunction Main() {\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    //alert(`width: ${window.innerWidth}`) \n    //alert(`height: ${window.innerHeight}`)\n  }, []);\n  return /*#__PURE__*/React.createElement(\"main\", {\n    className: _main_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].main\n  }, /*#__PURE__*/React.createElement(_features_Feed_Feed__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/Main.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/MobileUI/Interface.js"
+/*!**********************************************!*\
+  !*** ./src/components/MobileUI/Interface.js ***!
+  \**********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _features_Camera_Camera__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/Camera/Camera */ \"./src/features/Camera/Camera.js\");\n/* harmony import */ var _BottomSheet_BottomSheet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../BottomSheet/BottomSheet */ \"./src/components/BottomSheet/BottomSheet.js\");\n/* harmony import */ var _SearchForm_SearchForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SearchForm/SearchForm */ \"./src/components/SearchForm/SearchForm.js\");\n/* harmony import */ var _mobileui_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mobileui.module.css */ \"./src/components/MobileUI/mobileui.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n // Change to Profile Component\n\n\nfunction Interface(_ref) {\n  var search = _ref.search,\n    camera = _ref.camera,\n    notifications = _ref.notifications,\n    profile = _ref.profile,\n    closeSearch = _ref.closeSearch,\n    closeCamera = _ref.closeCamera,\n    closeNotifications = _ref.closeNotifications,\n    closeProfile = _ref.closeProfile;\n  return /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(/*#__PURE__*/React.createElement(\"section\", {\n    className: _mobileui_module_css__WEBPACK_IMPORTED_MODULE_5__[\"default\"].mobileUi\n  }, search && /*#__PURE__*/React.createElement(_SearchForm_SearchForm__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    closeSearch: closeSearch\n  }), camera && /*#__PURE__*/React.createElement(_features_Camera_Camera__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), profile && /*#__PURE__*/React.createElement(_BottomSheet_BottomSheet__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), \" \"), document.getElementById('portal'));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Interface);\n\n//# sourceURL=webpack://devour-clone/./src/components/MobileUI/Interface.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/MobileUI/MobileUI.js"
+/*!*********************************************!*\
+  !*** ./src/components/MobileUI/MobileUI.js ***!
+  \*********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Interface__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Interface */ \"./src/components/MobileUI/Interface.js\");\n/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation */ \"./src/components/MobileUI/Navigation.js\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\nfunction MobileUI() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    search = _useState2[0],\n    setSearch = _useState2[1];\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState3, 2),\n    camera = _useState4[0],\n    setCamera = _useState4[1];\n  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState6 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState5, 2),\n    notifications = _useState6[0],\n    setNotifications = _useState6[1];\n  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState8 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState7, 2),\n    profile = _useState8[0],\n    setProfile = _useState8[1];\n  var openSearch = function openSearch(event) {\n    return setSearch(true);\n  };\n  var closeSearch = function closeSearch(event) {\n    return setSearch(false);\n  };\n  var openCamera = function openCamera(event) {\n    return setCamera(true);\n  };\n  var closeCamera = function closeCamera(event) {\n    return setCamera(false);\n  };\n  var openNotifications = function openNotifications(event) {\n    return setNotifications(true);\n  };\n  var closeNotifications = function closeNotifications(event) {\n    return setNotifications(false);\n  };\n  var openProfile = function openProfile(event) {\n    return setProfile(true);\n  };\n  var closeProfile = function closeProfile(event) {\n    return setProfile(false);\n  };\n  return /*#__PURE__*/React.createElement(\"section\", null, /*#__PURE__*/React.createElement(_Interface__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    search: search,\n    camera: camera,\n    notifications: notifications,\n    profile: profile,\n    closeSearch: closeSearch,\n    closeCamera: closeCamera,\n    closeNotifications: closeNotifications,\n    closeProfile: closeProfile\n  }), /*#__PURE__*/React.createElement(_Navigation__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    openSearch: openSearch,\n    openCamera: openCamera,\n    openNotifications: openNotifications,\n    openProfile: openProfile\n  }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileUI);\n\n//# sourceURL=webpack://devour-clone/./src/components/MobileUI/MobileUI.js?\n}");
+
+/***/ },
+
+/***/ "./src/components/MobileUI/Navigation.js"
+/*!***********************************************!*\
+  !*** ./src/components/MobileUI/Navigation.js ***!
+  \***********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _BottomNavbar_BottomNavbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../BottomNavbar/BottomNavbar */ \"./src/components/BottomNavbar/BottomNavbar.js\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction Navigation(_ref) {\n  var openSearch = _ref.openSearch,\n    openCamera = _ref.openCamera,\n    openNotifications = _ref.openNotifications,\n    openProfile = _ref.openProfile;\n  return /*#__PURE__*/React.createElement(_BottomNavbar_BottomNavbar__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n    openSearch: openSearch\n  });\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navigation);\n\n//# sourceURL=webpack://devour-clone/./src/components/MobileUI/Navigation.js?\n}");
 
 /***/ },
 
@@ -284,6 +405,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/components/SearchForm/SearchForm.js"
+/*!*************************************************!*\
+  !*** ./src/components/SearchForm/SearchForm.js ***!
+  \*************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _hooks_useSearchContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../hooks/useSearchContext */ \"./src/hooks/useSearchContext.js\");\n/* harmony import */ var _utilities_server__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utilities/server */ \"./src/utilities/server.js\");\n/* harmony import */ var _Icons_XmarkIcon_XmarkIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Icons/XmarkIcon/XmarkIcon */ \"./src/components/Icons/XmarkIcon/XmarkIcon.js\");\n/* harmony import */ var _Icons_SearchIcon_SearchIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Icons/SearchIcon/SearchIcon */ \"./src/components/Icons/SearchIcon/SearchIcon.js\");\n/* harmony import */ var _Icons_MicrophoneIcon_MicrophoneIcon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Icons/MicrophoneIcon/MicrophoneIcon */ \"./src/components/Icons/MicrophoneIcon/MicrophoneIcon.js\");\n/* harmony import */ var _searchform_module_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./searchform.module.css */ \"./src/components/SearchForm/searchform.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\nfunction ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }\nfunction _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }\n\n\n\n\n\n\n\n\nfunction SearchForm() {\n  var setSearchContext = (0,_hooks_useSearchContext__WEBPACK_IMPORTED_MODULE_5__.useSetSearchContext)();\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(''),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_useState, 2),\n    searchValue = _useState2[0],\n    setSearchValue = _useState2[1];\n  var inputRef = (0,react__WEBPACK_IMPORTED_MODULE_4__.useRef)(null);\n  var handleCloseSearch = /*#__PURE__*/function () {\n    var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().mark(function _callee(event) {\n      var _t;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 1;\n            return document.exitFullscreen();\n          case 1:\n            setSearchContext(function (prevContext) {\n              return !prevContext;\n            });\n            _context.next = 3;\n            break;\n          case 2:\n            _context.prev = 2;\n            _t = _context[\"catch\"](0);\n            throw new Error(_t);\n          case 3:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee, null, [[0, 2]]);\n    }));\n    return function handleCloseSearch(_x) {\n      return _ref.apply(this, arguments);\n    };\n  }();\n\n  // make/use a custom hook\n  var speechRecognition = function speechRecognition() {\n    try {\n      var recognition = new window.SpeechRecognition(); // window.webkitSpeechRecognition\n      recognition.continuous = true;\n      recognition.interimResults = true;\n      recognition.lang = 'en-US';\n      recognition.start();\n    } catch (error) {\n      throw new Error(error);\n    }\n  };\n  var requestData = /*#__PURE__*/function () {\n    var _ref2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().mark(function _callee2(value) {\n      var request, response;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().wrap(function (_context2) {\n        while (1) switch (_context2.prev = _context2.next) {\n          case 0:\n            request = {\n              value: value\n            };\n            _context2.next = 1;\n            return _utilities_server__WEBPACK_IMPORTED_MODULE_6__[\"default\"].post(config.api.search, request);\n          case 1:\n            response = _context2.sent;\n            if (!response.error) {\n              _context2.next = 2;\n              break;\n            }\n            return _context2.abrupt(\"return\", console.error(error));\n          case 2:\n            setData(response.message);\n          case 3:\n          case \"end\":\n            return _context2.stop();\n        }\n      }, _callee2);\n    }));\n    return function requestData(_x2) {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n  var storeLocally = function storeLocally(key, value) {\n    try {\n      var existing = JSON.parse(localStorage.getItem(key) || '{}');\n      var data = JSON.stringify(_objectSpread(_objectSpread({}, existing), {}, {\n        value: value\n      }));\n      localStorage.setItem(key, data);\n    } catch (error) {\n      throw new Error(error);\n    }\n  };\n  var onChange = function onChange(event) {\n    // store recent searches in locoalStorage\n    var value = event.target.value;\n    console.log('onChange value: ', value);\n    setSearchValue(value);\n\n    // debounce request, avoid multiple http requests for the same query\n    // debounce(requestData, 300)\n  };\n  var onKeyDown = function onKeyDown(event) {\n    return;\n    // removed by dead control flow\n\n  };\n  var onSubmit = function onSubmit(event) {\n    event.preventDefault();\n  };\n  return /*#__PURE__*/React.createElement(\"form\", {\n    className: _searchform_module_css__WEBPACK_IMPORTED_MODULE_10__[\"default\"].searchForm,\n    onSubmit: onSubmit\n  }, /*#__PURE__*/React.createElement(\"header\", null, /*#__PURE__*/React.createElement(\"h1\", null, \"Search\"), /*#__PURE__*/React.createElement(\"button\", {\n    type: \"button\",\n    onClick: handleCloseSearch,\n    \"aria-label\": \"close search\"\n  }, /*#__PURE__*/React.createElement(_Icons_XmarkIcon_XmarkIcon__WEBPACK_IMPORTED_MODULE_7__[\"default\"], null))), /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(_Icons_SearchIcon_SearchIcon__WEBPACK_IMPORTED_MODULE_8__[\"default\"], null), /*#__PURE__*/React.createElement(\"input\", {\n    ref: inputRef,\n    type: \"search\"\n    /* value={searchValue} */,\n    onChange: onChange,\n    onKeyDown: onKeyDown,\n    placeholder: \"Search\",\n    disabled: false,\n    \"aria-label\": \"search input\"\n  }), /*#__PURE__*/React.createElement(\"button\", {\n    type: \"button\",\n    onClick: handleVoiceRecognition,\n    \"aria-label\": \"voice recognition\"\n  }, /*#__PURE__*/React.createElement(_Icons_MicrophoneIcon_MicrophoneIcon__WEBPACK_IMPORTED_MODULE_9__[\"default\"], null))), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"suggestions\"\n  }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchForm);\n\n//# sourceURL=webpack://devour-clone/./src/components/SearchForm/SearchForm.js?\n}");
+
+/***/ },
+
 /***/ "./src/config.js"
 /*!***********************!*\
   !*** ./src/config.js ***!
@@ -292,6 +424,94 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   config: () => (/* binding */ config)\n/* harmony export */ });\nvar config = {\n  url: {\n    login: '/login',\n    home: '/',\n    create: '/create',\n    camera: '/camera',\n    profile: '/profile',\n    settings: '/settings',\n    registration: '/register',\n    privacy: '/privacy-policy',\n    cookie: '/cookie-use',\n    terms: '/terms-and-conditions',\n    asset_cdn: 'https://d1cd149ok26yak.cloudfront.net'\n  },\n  api: {\n    user: {\n      logout: '/api/v1/logout',\n      login: '/api/v1/login',\n      register: '/api/v1/register',\n      forgot_password: '/api/v1/forgot-password',\n      confirm_forgot_password: '/api/v1/confirm-forgot-password',\n      session: '/api/v1/session'\n    },\n    turnstile: '/api/v1/turnstile',\n    log: {\n      errors: ''\n    },\n    posts: '/api/v1/posts',\n    test: '/api/v1/test',\n    likes: '',\n    shares: '',\n    views: '',\n    comments: ''\n  },\n  store: {\n    posts: {\n      index: 'posts',\n      create: 'create',\n      captions: 'captions'\n    }\n  },\n  cookie: {\n    session: 'session'\n  }\n};\n\n//# sourceURL=webpack://devour-clone/./src/config.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/BackButton/BackButton.js"
+/*!******************************************************!*\
+  !*** ./src/features/Camera/BackButton/BackButton.js ***!
+  \******************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Provider */ \"./src/Provider.js\");\n/* harmony import */ var _components_Icons_ArrowLeftIcon_ArrowLeftIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/Icons/ArrowLeftIcon/ArrowLeftIcon */ \"./src/components/Icons/ArrowLeftIcon/ArrowLeftIcon.js\");\n/* harmony import */ var _backbutton_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backbutton.module.css */ \"./src/features/Camera/BackButton/backbutton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\nfunction BackButton(_ref) {\n  var stopCamera = _ref.stopCamera;\n  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_Provider__WEBPACK_IMPORTED_MODULE_2__.Context),\n    _useContext2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useContext, 2),\n    context = _useContext2[0],\n    dispatch = _useContext2[1];\n  var handleCloseCamera = function handleCloseCamera(event) {\n    stopCamera();\n    dispatch({\n      type: 'camera',\n      payload: false\n    });\n    if (document.fullscreenElement) {\n      document.exitFullscreen();\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _backbutton_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].backButton,\n    onClick: handleCloseCamera,\n    type: \"button\",\n    \"aria-label\": \"close camera\"\n  }, /*#__PURE__*/React.createElement(_components_Icons_ArrowLeftIcon_ArrowLeftIcon__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"tooltip\",\n    role: \"tooltip\"\n  }, \"Back\"));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/BackButton/BackButton.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/Camera.js"
+/*!***************************************!*\
+  !*** ./src/features/Camera/Camera.js ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _utilities_camera__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilities/camera */ \"./src/utilities/camera.js\");\n/* harmony import */ var _ViewPort_ViewPort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ViewPort/ViewPort */ \"./src/features/Camera/ViewPort/ViewPort.js\");\n/* harmony import */ var _BackButton_BackButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./BackButton/BackButton */ \"./src/features/Camera/BackButton/BackButton.js\");\n/* harmony import */ var _RecordTimer_RecordTimer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RecordTimer/RecordTimer */ \"./src/features/Camera/RecordTimer/RecordTimer.js\");\n/* harmony import */ var _LightButton_LightButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./LightButton/LightButton */ \"./src/features/Camera/LightButton/LightButton.js\");\n/* harmony import */ var _MuteButton_MuteButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MuteButton/MuteButton */ \"./src/features/Camera/MuteButton/MuteButton.js\");\n/* harmony import */ var _RecordButton_RecordButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./RecordButton/RecordButton */ \"./src/features/Camera/RecordButton/RecordButton.js\");\n/* harmony import */ var _LocationButton_LocationButton__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./LocationButton/LocationButton */ \"./src/features/Camera/LocationButton/LocationButton.js\");\n/* harmony import */ var _camera_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./camera.module.css */ \"./src/features/Camera/camera.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n\nfunction Camera() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(60),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(_useState, 2),\n    timer = _useState2[0],\n    setTimer = _useState2[1];\n  var streamRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);\n  var videoRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);\n  var startCamera = /*#__PURE__*/function () {\n    var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n      var stream, _t;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 1;\n            return _utilities_camera__WEBPACK_IMPORTED_MODULE_4__[\"default\"].on();\n          case 1:\n            stream = _context.sent;\n            streamRef.current = stream;\n            videoRef.current.srcObject = stream;\n\n            // const caps = camera.getCapabilities(stream)\n            // alert(JSON.stringify(caps))\n            _context.next = 3;\n            break;\n          case 2:\n            _context.prev = 2;\n            _t = _context[\"catch\"](0);\n            console.error('Error accessing camera: ', _t);\n          case 3:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee, null, [[0, 2]]);\n    }));\n    return function startCamera() {\n      return _ref.apply(this, arguments);\n    };\n  }();\n  var stopCamera = function stopCamera(event) {\n    if (streamRef.current) {\n      _utilities_camera__WEBPACK_IMPORTED_MODULE_4__[\"default\"].off(streamRef.current);\n      streamRef.current = null;\n    }\n  };\n  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {\n    if (!streamRef.current) {\n      startCamera();\n    }\n    return function () {\n      stopCamera();\n    };\n  }, []);\n  return /*#__PURE__*/React.createElement(\"section\", {\n    className: _camera_module_css__WEBPACK_IMPORTED_MODULE_12__[\"default\"].camera\n  }, /*#__PURE__*/React.createElement(_BackButton_BackButton__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {\n    stopCamera: stopCamera\n  }), /*#__PURE__*/React.createElement(_RecordTimer_RecordTimer__WEBPACK_IMPORTED_MODULE_7__[\"default\"], {\n    timer: timer,\n    setTimer: setTimer\n  }), /*#__PURE__*/React.createElement(_LightButton_LightButton__WEBPACK_IMPORTED_MODULE_8__[\"default\"], {\n    streamRef: streamRef\n  }), /*#__PURE__*/React.createElement(_MuteButton_MuteButton__WEBPACK_IMPORTED_MODULE_9__[\"default\"], {\n    streamRef: streamRef\n  }), /*#__PURE__*/React.createElement(_RecordButton_RecordButton__WEBPACK_IMPORTED_MODULE_10__[\"default\"], {\n    streamRef: streamRef,\n    timer: timer\n  }), /*#__PURE__*/React.createElement(_LocationButton_LocationButton__WEBPACK_IMPORTED_MODULE_11__[\"default\"], null), /*#__PURE__*/React.createElement(_ViewPort_ViewPort__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n    videoRef: videoRef\n  }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Camera);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/Camera.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/LightButton/LightButton.js"
+/*!********************************************************!*\
+  !*** ./src/features/Camera/LightButton/LightButton.js ***!
+  \********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Icons_SunIcon_SunIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/Icons/SunIcon/SunIcon */ \"./src/components/Icons/SunIcon/SunIcon.js\");\n/* harmony import */ var _components_Icons_SunIcon_DarkSunIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/Icons/SunIcon/DarkSunIcon */ \"./src/components/Icons/SunIcon/DarkSunIcon.js\");\n/* harmony import */ var _lightbutton_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lightbutton.module.css */ \"./src/features/Camera/LightButton/lightbutton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\nfunction LightButton(_ref) {\n  var streamRef = _ref.streamRef;\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    light = _useState2[0],\n    setLight = _useState2[1];\n  var handleTurnOnLight = function handleTurnOnLight(event) {\n    light ? camera.dark(streamRef.current) : camera.light(streamRef.current);\n    setLight(!light);\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _lightbutton_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].lightButton,\n    onClick: handleTurnOnLight,\n    type: \"button\",\n    \"aria-label\": \"camera light button\"\n  }, light ? /*#__PURE__*/React.createElement(_components_Icons_SunIcon_DarkSunIcon__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null) : /*#__PURE__*/React.createElement(_components_Icons_SunIcon_SunIcon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"tooltip\",\n    role: \"tooltip\"\n  }, \"Light\"));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LightButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/LightButton/LightButton.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/LocationButton/LocationButton.js"
+/*!**************************************************************!*\
+  !*** ./src/features/Camera/LocationButton/LocationButton.js ***!
+  \**************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _components_Icons_LocationIcon_LocationIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/Icons/LocationIcon/LocationIcon */ \"./src/components/Icons/LocationIcon/LocationIcon.js\");\n/* harmony import */ var _locationbutton_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./locationbutton.module.css */ \"./src/features/Camera/LocationButton/locationbutton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nfunction LocationButton() {\n  var handleOpenLocation = function handleOpenLocation(event) {};\n\n  // onHover tool tips dont work on touch screen. consider a fix.\n\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _locationbutton_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].locationButton,\n    onClick: handleOpenLocation,\n    type: \"button\",\n    \"aria-label\": \"select your location\",\n    \"aria-haspopup\": \"dialog\"\n  }, /*#__PURE__*/React.createElement(_components_Icons_LocationIcon_LocationIcon__WEBPACK_IMPORTED_MODULE_0__[\"default\"], null), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"tooltip\",\n    role: \"tooltip\"\n  }, \"Location\"));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LocationButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/LocationButton/LocationButton.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/MuteButton/MuteButton.js"
+/*!******************************************************!*\
+  !*** ./src/features/Camera/MuteButton/MuteButton.js ***!
+  \******************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Icons_MicrophoneIcon_MicrophoneIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/Icons/MicrophoneIcon/MicrophoneIcon */ \"./src/components/Icons/MicrophoneIcon/MicrophoneIcon.js\");\n/* harmony import */ var _components_Icons_MicrophoneIcon_MicrophoneSlashIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/Icons/MicrophoneIcon/MicrophoneSlashIcon */ \"./src/components/Icons/MicrophoneIcon/MicrophoneSlashIcon.js\");\n/* harmony import */ var _mutebutton_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mutebutton.module.css */ \"./src/features/Camera/MuteButton/mutebutton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\nfunction MuteButton(_ref) {\n  var streamRef = _ref.streamRef;\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    mute = _useState2[0],\n    setMute = _useState2[1];\n  var toggleMute = function toggleMute(event) {\n    !mute ? camera.mute(streamRef.current) : camera.unmute(streamRef.current);\n    setMute(!mute);\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _mutebutton_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].muteButton,\n    onClick: toggleMute,\n    type: \"button\",\n    \"aria-label\": mute ? 'unmute' : 'mute'\n  }, mute ? /*#__PURE__*/React.createElement(_components_Icons_MicrophoneIcon_MicrophoneSlashIcon__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null) : /*#__PURE__*/React.createElement(_components_Icons_MicrophoneIcon_MicrophoneIcon__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/React.createElement(\"div\", {\n    className: \"tooltip\",\n    role: \"tooltip\"\n  }, mute ? 'Unmute' : 'Mute'));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MuteButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/MuteButton/MuteButton.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/RecordButton/RecordButton.js"
+/*!**********************************************************!*\
+  !*** ./src/features/Camera/RecordButton/RecordButton.js ***!
+  \**********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Provider */ \"./src/Provider.js\");\n/* harmony import */ var _sswahn_database__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sswahn/database */ \"./node_modules/@sswahn/database/src/index.js\");\n/* harmony import */ var _recordbutton_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./recordbutton.module.css */ \"./src/features/Camera/RecordButton/recordbutton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n\n\n\nfunction RecordButton(_ref) {\n  var streamRef = _ref.streamRef,\n    timer = _ref.timer;\n  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_4__.useContext)(_Provider__WEBPACK_IMPORTED_MODULE_5__.Context),\n    _useContext2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_useContext, 2),\n    context = _useContext2[0],\n    dispatch = _useContext2[1];\n  var framesRef = (0,react__WEBPACK_IMPORTED_MODULE_4__.useRef)([]);\n  var recorderRef = (0,react__WEBPACK_IMPORTED_MODULE_4__.useRef)(null);\n  var handleRecordVideo = function handleRecordVideo() {\n    if (timer < 1) {\n      return alert('No recording time remaining.');\n    }\n    dispatch({\n      type: 'recording',\n      payload: true\n    });\n    var recorder = camera.startRecording(streamRef.current, framesRef.current);\n    recorderRef.current = recorder;\n  };\n  var handleStopRecordVideo = /*#__PURE__*/function () {\n    var _ref2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().mark(function _callee() {\n      var blob, video, currentDuration, duration, db, _t;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            dispatch({\n              type: 'recording',\n              payload: false\n            });\n            alert('handlingStopVideo');\n            _context.next = 1;\n            return camera.stopRecording(recorderRef.current, framesRef.current);\n          case 1:\n            blob = _context.sent;\n            alert('after blob');\n            video = [].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(context.video), [blob]);\n            currentDuration = context.video_duration.reduce(function (acc, val) {\n              return acc + val;\n            }, 0);\n            alert('after currentDuration');\n            duration = [].concat((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(context.video_duration), [300 - timer - currentDuration]);\n            dispatch({\n              type: 'video_duration',\n              payload: duration\n            });\n            dispatch({\n              type: 'video',\n              payload: video\n            });\n            alert('saving the following: video: ' + JSON.stringify(video) + 'and duration: ' + duration);\n            db = (0,_sswahn_database__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n            db.put({\n              id: 'video',\n              video: video,\n              duration: duration\n            });\n            _context.next = 3;\n            break;\n          case 2:\n            _context.prev = 2;\n            _t = _context[\"catch\"](0);\n            alert(JSON.stringify(_t));\n          case 3:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee, null, [[0, 2]]);\n    }));\n    return function handleStopRecordVideo() {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n  var handleRecordButton = function handleRecordButton(event) {\n    context.recording ? handleStopRecordVideo() : handleRecordVideo();\n  };\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: _recordbutton_module_css__WEBPACK_IMPORTED_MODULE_7__[\"default\"].recordButtonContainer\n  }, /*#__PURE__*/React.createElement(\"button\", {\n    className: _recordbutton_module_css__WEBPACK_IMPORTED_MODULE_7__[\"default\"].recordButton,\n    onClick: handleRecordButton,\n    type: \"button\",\n    \"aria-label\": \"record button\",\n    style: {\n      backgroundColor: context.recording ? '#cb4154' : '#e5e4e2',\n      borderColor: context.recording ? '#eb4c42' : 'white'\n    }\n  }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RecordButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/RecordButton/RecordButton.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/RecordTimer/RecordTimer.js"
+/*!********************************************************!*\
+  !*** ./src/features/Camera/RecordTimer/RecordTimer.js ***!
+  \********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _Provider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Provider */ \"./src/Provider.js\");\n/* harmony import */ var _sswahn_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sswahn/database */ \"./node_modules/@sswahn/database/src/index.js\");\n/* harmony import */ var _recordtimer_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./recordtimer.module.css */ \"./src/features/Camera/RecordTimer/recordtimer.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n\n\nfunction RecordTimer(_ref) {\n  var timer = _ref.timer,\n    setTimer = _ref.setTimer;\n  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_3__.useContext)(_Provider__WEBPACK_IMPORTED_MODULE_4__.Context),\n    _useContext2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(_useContext, 2),\n    context = _useContext2[0],\n    provider = _useContext2[1];\n  var createInterval = function createInterval() {\n    if (context.recording) {\n      return setInterval(function () {\n        if (timer < 1) {\n          clearInterval(interval);\n          return handleStopRecordVideo(); // fix: this function is not available here, maybe dispatch recording false or modal message\n        }\n        setTimer(timer - 1);\n      }, 1000);\n    }\n  };\n  var loadFromStorage = /*#__PURE__*/function () {\n    var _ref2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n      var db, video, totalDuration;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            db = (0,_sswahn_database__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n            _context.next = 1;\n            return db.get('video');\n          case 1:\n            video = _context.sent;\n            totalDuration = video === null || video === void 0 ? void 0 : video.duration.reduce(function (acc, val) {\n              return acc + val;\n            }, 0);\n            if (totalDuration) {\n              setTimer(300 - totalDuration);\n            }\n          case 2:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee);\n    }));\n    return function loadFromStorage() {\n      return _ref2.apply(this, arguments);\n    };\n  }();\n  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {\n    var interval = createInterval();\n    return function () {\n      clearInterval(interval);\n    };\n  }, [timer, context.recording]);\n  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {\n    loadFromStorage();\n  }, []);\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: _recordtimer_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].recordTimer\n  }, \"\".concat(Math.floor(timer / 60), \":\").concat(String(timer % 60).padStart(2, \"0\")));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RecordTimer);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/RecordTimer/RecordTimer.js?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/ViewPort/ViewPort.js"
+/*!**************************************************!*\
+  !*** ./src/features/Camera/ViewPort/ViewPort.js ***!
+  \**************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _viewport_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./viewport.module.css */ \"./src/features/Camera/ViewPort/viewport.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction ViewPort(_ref) {\n  var videoRef = _ref.videoRef;\n  return /*#__PURE__*/React.createElement(\"video\", {\n    ref: videoRef,\n    className: _viewport_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].viewPort,\n    autoPlay: true,\n    muted: true,\n    playsInline: true,\n    \"aria-label\": \"camera feed\",\n    \"aria-live\": \"assertive\"\n  });\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ViewPort);\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/ViewPort/ViewPort.js?\n}");
 
 /***/ },
 
@@ -350,6 +570,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./src/hooks/useSearchContext.js"
+/*!***************************************!*\
+  !*** ./src/hooks/useSearchContext.js ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   useSearchContext: () => (/* binding */ useSearchContext),\n/* harmony export */   useSetSearchContext: () => (/* binding */ useSetSearchContext)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Providers_SearchProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Providers/SearchProvider */ \"./src/components/Providers/SearchProvider.js\");\n\n\n\nfunction useSearchContext() {\n  var context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_Providers_SearchProvider__WEBPACK_IMPORTED_MODULE_1__.GetSearchContext);\n  if (typeof context !== 'boolean') {\n    throw new Error(\"Error in useSearchContext hook. context: \".concat(context));\n  }\n  return context;\n}\nfunction useSetSearchContext() {\n  var setContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_components_Providers_SearchProvider__WEBPACK_IMPORTED_MODULE_1__.SetSearchContext);\n  if (!setContext) {\n    throw new Error(\"Error in useSetSearchContext hook. setContext: \".concat(setContext));\n  }\n  return setContext;\n}\n\n\n//# sourceURL=webpack://devour-clone/./src/hooks/useSearchContext.js?\n}");
+
+/***/ },
+
 /***/ "./src/index.js"
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -369,6 +600,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var rea
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n\n\nfunction _createForOfIteratorHelper(r, e) { var t = \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && \"number\" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t[\"return\"] || t[\"return\"](); } finally { if (u) throw o; } } }; }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\nfunction ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }\nfunction _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }\n\nvar cache = {\n  get: function get(name, request) {\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n      var _cache, response, cacheControlHeader, maxAge, cacheExpirationTime, _t;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            if (!(typeof name !== 'string')) {\n              _context.next = 1;\n              break;\n            }\n            throw new TypeError('get: first argument must be of type string.');\n          case 1:\n            if (request instanceof Request) {\n              _context.next = 2;\n              break;\n            }\n            throw new TypeError('get: second argument must be an instance of Request.');\n          case 2:\n            _context.prev = 2;\n            _context.next = 3;\n            return caches.open(name);\n          case 3:\n            _cache = _context.sent;\n            _context.next = 4;\n            return _cache.match(request);\n          case 4:\n            response = _context.sent;\n            cacheControlHeader = response.headers.get('Cache-Control');\n            maxAge = cacheControlHeader.split('max-age=')[1];\n            cacheExpirationTime = Date.now() + Number(maxAge) * 1000;\n            if (!(cacheExpirationTime < Date.now())) {\n              _context.next = 6;\n              break;\n            }\n            _context.next = 5;\n            return _cache[\"delete\"](request);\n          case 5:\n            return _context.abrupt(\"return\", null);\n          case 6:\n            return _context.abrupt(\"return\", response);\n          case 7:\n            _context.prev = 7;\n            _t = _context[\"catch\"](2);\n            throw new Error(\"Failed to retrieve from cache \".concat(name, \".\"));\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee, null, [[2, 7]]);\n    }))();\n  },\n  set: function set(name, request, response) {\n    var _arguments = arguments;\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee2() {\n      var maxAgeSeconds, _cache2, clonedBody, originalHeaders, headersWithCacheControl, responseWithCacheControl, _t2;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context2) {\n        while (1) switch (_context2.prev = _context2.next) {\n          case 0:\n            maxAgeSeconds = _arguments.length > 3 && _arguments[3] !== undefined ? _arguments[3] : 180;\n            if (!(typeof name !== 'string')) {\n              _context2.next = 1;\n              break;\n            }\n            throw new TypeError('set: first argument must be of type string.');\n          case 1:\n            if (request instanceof Request) {\n              _context2.next = 2;\n              break;\n            }\n            throw new TypeError('set: second argument must be an instance of Request.');\n          case 2:\n            if (response instanceof Response) {\n              _context2.next = 3;\n              break;\n            }\n            throw new TypeError('set: third argument must be an instance of Response.');\n          case 3:\n            _context2.prev = 3;\n            _context2.next = 4;\n            return caches.open(name);\n          case 4:\n            _cache2 = _context2.sent;\n            _context2.next = 5;\n            return response.clone().blob();\n          case 5:\n            clonedBody = _context2.sent;\n            // Merge headers safely\n            originalHeaders = Object.fromEntries(response.headers.entries());\n            headersWithCacheControl = _objectSpread(_objectSpread({}, originalHeaders), {}, {\n              'Cache-Control': \"max-age=\".concat(maxAgeSeconds)\n            });\n            responseWithCacheControl = new Response(clonedBody, {\n              status: response.status,\n              statusText: response.statusText,\n              headers: headersWithCacheControl\n            });\n            _context2.next = 6;\n            return _cache2.put(request, responseWithCacheControl);\n          case 6:\n            _context2.next = 8;\n            break;\n          case 7:\n            _context2.prev = 7;\n            _t2 = _context2[\"catch\"](3);\n            throw new Error(\"Failed to set cache entry for \".concat(name, \".\"));\n          case 8:\n          case \"end\":\n            return _context2.stop();\n        }\n      }, _callee2, null, [[3, 7]]);\n    }))();\n  },\n  \"delete\": function _delete(name, request) {\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee3() {\n      var _cache3, _t3;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context3) {\n        while (1) switch (_context3.prev = _context3.next) {\n          case 0:\n            if (!(typeof name !== 'string')) {\n              _context3.next = 1;\n              break;\n            }\n            throw new TypeError('delete: first argument must be of type string.');\n          case 1:\n            if (request instanceof Request) {\n              _context3.next = 2;\n              break;\n            }\n            throw new TypeError('delete: second argument must be an instance of Request.');\n          case 2:\n            _context3.prev = 2;\n            _context3.next = 3;\n            return caches.open(name);\n          case 3:\n            _cache3 = _context3.sent;\n            _context3.next = 4;\n            return _cache3[\"delete\"](request);\n          case 4:\n            _context3.next = 6;\n            break;\n          case 5:\n            _context3.prev = 5;\n            _t3 = _context3[\"catch\"](2);\n            throw new Error(\"Failed to delete cache entry from \".concat(name, \".\"));\n          case 6:\n          case \"end\":\n            return _context3.stop();\n        }\n      }, _callee3, null, [[2, 5]]);\n    }))();\n  },\n  clear: function clear(name) {\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee4() {\n      var _cache4, keys, _iterator, _step, key, _t4, _t5;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context4) {\n        while (1) switch (_context4.prev = _context4.next) {\n          case 0:\n            if (!(typeof name !== 'string')) {\n              _context4.next = 1;\n              break;\n            }\n            throw new TypeError('clear: argument must be of type string.');\n          case 1:\n            _context4.prev = 1;\n            _context4.next = 2;\n            return caches.open(name);\n          case 2:\n            _cache4 = _context4.sent;\n            _context4.next = 3;\n            return _cache4.keys();\n          case 3:\n            keys = _context4.sent;\n            _iterator = _createForOfIteratorHelper(keys);\n            _context4.prev = 4;\n            _iterator.s();\n          case 5:\n            if ((_step = _iterator.n()).done) {\n              _context4.next = 7;\n              break;\n            }\n            key = _step.value;\n            _context4.next = 6;\n            return _cache4[\"delete\"](key);\n          case 6:\n            _context4.next = 5;\n            break;\n          case 7:\n            _context4.next = 9;\n            break;\n          case 8:\n            _context4.prev = 8;\n            _t4 = _context4[\"catch\"](4);\n            _iterator.e(_t4);\n          case 9:\n            _context4.prev = 9;\n            _iterator.f();\n            return _context4.finish(9);\n          case 10:\n            _context4.next = 12;\n            break;\n          case 11:\n            _context4.prev = 11;\n            _t5 = _context4[\"catch\"](1);\n            throw new Error(\"Failed to clear cache \".concat(name, \".\"));\n          case 12:\n          case \"end\":\n            return _context4.stop();\n        }\n      }, _callee4, null, [[1, 11], [4, 8, 9, 10]]);\n    }))();\n  },\n  keys: function keys(name) {\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee5() {\n      var _cache5, _t6;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context5) {\n        while (1) switch (_context5.prev = _context5.next) {\n          case 0:\n            if (!(typeof name !== 'string')) {\n              _context5.next = 1;\n              break;\n            }\n            throw new TypeError('keys: argument must be of type string.');\n          case 1:\n            _context5.prev = 1;\n            _context5.next = 2;\n            return caches.open(name);\n          case 2:\n            _cache5 = _context5.sent;\n            return _context5.abrupt(\"return\", _cache5.keys());\n          case 3:\n            _context5.prev = 3;\n            _t6 = _context5[\"catch\"](1);\n            throw new Error(\"Failed to retrieve keys from cache \".concat(name, \".\"));\n          case 4:\n          case \"end\":\n            return _context5.stop();\n        }\n      }, _callee5, null, [[1, 3]]);\n    }))();\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cache);\n\n//# sourceURL=webpack://devour-clone/./src/utilities/cache.js?\n}");
+
+/***/ },
+
+/***/ "./src/utilities/camera.js"
+/*!*********************************!*\
+  !*** ./src/utilities/camera.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }\nfunction _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }\n//TODO: create a function that returns device camera capabilities\n// this will populate UI with buttons interacting with capabilities.\n\nvar camera = {\n  on: function on() {\n    var constraints = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n    if (!(constraints instanceof Object) || Array.isArray(constraints)) {\n      throw new TypeError('camera.on: argument must be an object literal.');\n    }\n    var defaultConstraints = {\n      audio: {\n        echoCancellation: false,\n        noiseSuppression: false,\n        sampleRate: 48000\n      },\n      video: {\n        facingMode: 'user',\n        // 'environment',\n        width: {\n          ideal: 3840\n        },\n        height: {\n          ideal: 2160\n        },\n        frameRate: {\n          ideal: 60\n        },\n        aspectRatio: {\n          ideal: window.innerWidth / window.innerHeight\n        }\n      }\n    };\n    var finalConstraints = {\n      audio: _objectSpread(_objectSpread({}, defaultConstraints.audio), constraints.audio || {}),\n      video: _objectSpread(_objectSpread({}, defaultConstraints.video), constraints.video || {})\n    };\n    return navigator.mediaDevices.getUserMedia(finalConstraints);\n  },\n  off: function off(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('Argument must be an instance of MediaStream.');\n    }\n    try {\n      stream.getTracks().forEach(function (track) {\n        if (track.readyState === 'live') {\n          track.stop();\n        }\n      });\n    } catch (error) {\n      throw new Error(error);\n    }\n  },\n  getCapabilities: function getCapabilities(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('Argument must be an instance of MediaStream.');\n    }\n    var track = stream.getVideoTracks().at(0);\n    return track === null || track === void 0 ? void 0 : track.getCapabilities();\n  },\n  light: function light(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('camera.light: argument must be an instance of MediaStream.');\n    }\n    var videoTracks = stream.getVideoTracks();\n    if (!videoTracks.length) {\n      throw new Error('No video tracks available.');\n    }\n    var constraints = {\n      fillLightMode: 'flash',\n      advanced: [{\n        torch: true\n      }]\n    };\n    return videoTracks[0].applyConstraints(constraints);\n  },\n  dark: function dark(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('camera.dark: argument must be an instance of MediaStream.');\n    }\n    var videoTracks = stream.getVideoTracks();\n    if (!videoTracks.length) {\n      throw new Error('No video tracks available.');\n    }\n    var constraints = {\n      fillLightMode: 'off',\n      advanced: [{\n        torch: false\n      }]\n    };\n    return videoTracks[0].applyConstraints(constraints);\n  },\n  takePhoto: function takePhoto(stream) {\n    return (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n      var track, imageCapture, capabilities, settings, options;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            if (stream instanceof MediaStream) {\n              _context.next = 1;\n              break;\n            }\n            throw new TypeError('camera.takePhoto: argument must be an instance of MediaStream.');\n          case 1:\n            track = stream.getVideoTracks()[0];\n            imageCapture = new ImageCapture(track);\n            capabilities = track.getCapabilities();\n            settings = track.getSettings();\n            options = {\n              imageWidth: capabilities.width.max || settings.width,\n              imageHeight: capabilities.height.max || settings.height\n            };\n            if (!(capabilities.hdr && !settings.hdr)) {\n              _context.next = 2;\n              break;\n            }\n            console.log(\"Enabling HDR...\");\n            _context.next = 2;\n            return track.applyConstraints({\n              advanced: [{\n                hdr: true\n              }]\n            });\n          case 2:\n            return _context.abrupt(\"return\", imageCapture.takePhoto(options));\n          case 3:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee);\n    }))();\n  },\n  mute: function mute(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('camera.mute: argument must be an instance of MediaStream.');\n    }\n    var audioTracks = stream.getAudioTracks();\n    if (audioTracks.length === 0) {\n      throw new Error('No audio tracks found.');\n    }\n    audioTracks.forEach(function (track) {\n      track.enabled = false;\n    });\n  },\n  unmute: function unmute(stream) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('camera.unmute: argument must be an instance of MediaStream.');\n    }\n    var audioTracks = stream.getAudioTracks();\n    if (audioTracks.length === 0) {\n      throw new Error('No audio tracks found.');\n    }\n    audioTracks.forEach(function (track) {\n      track.enabled = true;\n    });\n  },\n  startRecording: function startRecording(stream, frames) {\n    if (!(stream instanceof MediaStream)) {\n      throw new TypeError('camera.startRecording: first argument must be an instance of MediaStream.');\n    }\n    if (!Array.isArray(frames)) {\n      throw new TypeError('camera.startRecording: second argument must be an array.');\n    }\n    // dynamically get highest bps device is capable of\n    var options = {\n      mimeType: 'video/webm; codecs=vp9,opus',\n      videoBitsPerSecond: 10000000,\n      // High video quality\n      audioBitsPerSecond: 320000 // Force 192 kbps audio quality\n    };\n    var mediaRecorder = new MediaRecorder(stream, options);\n    mediaRecorder.addEventListener('dataavailable', function (event) {\n      frames.push(event.data);\n    });\n    mediaRecorder.start();\n    return mediaRecorder;\n  },\n  stopRecording: function stopRecording(mediaRecorder, frames) {\n    if (!(mediaRecorder instanceof MediaRecorder)) {\n      throw new TypeError('camera.stopRecording: first argument must be an instance of MediaRecorder.');\n    }\n    if (!Array.isArray(frames)) {\n      throw new TypeError('camera.stopRecording: second argument must be an array.');\n    }\n    if (mediaRecorder.state === 'inactive') {\n      throw new Error('camera.stopRecording: MediaRecorder is already stopped.');\n    }\n    return new Promise(function (resolve, reject) {\n      var settled = false;\n\n      // test this with and without settled\n      // make sure this is working.\n      var settle = function settle(fn) {\n        return function () {\n          if (settled) {\n            return;\n          }\n          settled = true;\n          fn.apply(void 0, arguments);\n        };\n      };\n      mediaRecorder.addEventListener('stop', settle(function () {\n        var blob = new Blob(frames, {\n          type: 'video/webm'\n        });\n        frames.length = 0;\n        resolve(blob);\n      }), {\n        once: true\n      });\n      mediaRecorder.addEventListener('error', settle(function (event) {\n        reject((event === null || event === void 0 ? void 0 : event.error) || new Error('Error on stopRecording'));\n      }), {\n        once: true\n      });\n      try {\n        mediaRecorder.stop();\n      } catch (error) {\n        settle(function () {\n          return reject(error);\n        })();\n      }\n    });\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (camera);\n\n//# sourceURL=webpack://devour-clone/./src/utilities/camera.js?\n}");
 
 /***/ },
 
@@ -501,6 +743,116 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"main\":\"Z5pv5a_NKshg9J2UQIDv\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/main.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/components/MobileUI/mobileui.module.css"
+/*!*****************************************************!*\
+  !*** ./src/components/MobileUI/mobileui.module.css ***!
+  \*****************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"mobileUi\":\"klx9SSD8J7YtEF5wpkeZ\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/MobileUI/mobileui.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/components/SearchForm/searchform.module.css"
+/*!*********************************************************!*\
+  !*** ./src/components/SearchForm/searchform.module.css ***!
+  \*********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"searchForm\":\"yMoa0P1h84myJgUPZbS_\",\"search\":\"TYu9xxiA93dMGBlCIky5\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/SearchForm/searchform.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/BackButton/backbutton.module.css"
+/*!**************************************************************!*\
+  !*** ./src/features/Camera/BackButton/backbutton.module.css ***!
+  \**************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"backButton\":\"gZVVsZaSeQmj5r1OIILk\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/BackButton/backbutton.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/LightButton/lightbutton.module.css"
+/*!****************************************************************!*\
+  !*** ./src/features/Camera/LightButton/lightbutton.module.css ***!
+  \****************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"lightButton\":\"MTUqodLc4vgQcRBbnX_w\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/LightButton/lightbutton.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/LocationButton/locationbutton.module.css"
+/*!**********************************************************************!*\
+  !*** ./src/features/Camera/LocationButton/locationbutton.module.css ***!
+  \**********************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"locationButton\":\"x0rVinpmgIALQbVh1IO6\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/LocationButton/locationbutton.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/MuteButton/mutebutton.module.css"
+/*!**************************************************************!*\
+  !*** ./src/features/Camera/MuteButton/mutebutton.module.css ***!
+  \**************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"muteButton\":\"AZOIeRKTIYCyq6xhU5pg\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/MuteButton/mutebutton.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/RecordButton/recordbutton.module.css"
+/*!******************************************************************!*\
+  !*** ./src/features/Camera/RecordButton/recordbutton.module.css ***!
+  \******************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"recordButtonContainer\":\"w89rbEAJsHlUCU9l6uRm\",\"recordButton\":\"a04sK3kPpe_weYYEkKGQ\",\"camera-button\":\"Elk2VUJfyKgH6N3pWbkT\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/RecordButton/recordbutton.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/RecordTimer/recordtimer.module.css"
+/*!****************************************************************!*\
+  !*** ./src/features/Camera/RecordTimer/recordtimer.module.css ***!
+  \****************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"recordTimer\":\"r0seWmD9fFTfnWs1dnL2\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/RecordTimer/recordtimer.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/ViewPort/viewport.module.css"
+/*!**********************************************************!*\
+  !*** ./src/features/Camera/ViewPort/viewport.module.css ***!
+  \**********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"viewPort\":\"grTGSKLly6qq95OQDiW2\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/ViewPort/viewport.module.css?\n}");
+
+/***/ },
+
+/***/ "./src/features/Camera/camera.module.css"
+/*!***********************************************!*\
+  !*** ./src/features/Camera/camera.module.css ***!
+  \***********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"camera\":\"NmsyPqws04RTPJm_5hR6\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Camera/camera.module.css?\n}");
 
 /***/ },
 
@@ -735,6 +1087,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js"
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
+  \**********************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayWithoutHoles)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _arrayWithoutHoles(r) {\n  if (Array.isArray(r)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(r);\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js?\n}");
+
+/***/ },
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js"
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
@@ -812,6 +1175,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js"
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _iterableToArray)\n/* harmony export */ });\nfunction _iterableToArray(r) {\n  if (\"undefined\" != typeof Symbol && null != r[Symbol.iterator] || null != r[\"@@iterator\"]) return Array.from(r);\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/iterableToArray.js?\n}");
+
+/***/ },
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js"
 /*!*************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
@@ -831,6 +1205,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableRest)\n/* harmony export */ });\nfunction _nonIterableRest() {\n  throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js"
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableSpread)\n/* harmony export */ });\nfunction _nonIterableSpread() {\n  throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js?\n}");
 
 /***/ },
 
@@ -864,6 +1249,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _slicedToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js\");\n/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js\");\n\n\n\n\nfunction _slicedToArray(r, e) {\n  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(r) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(r, e) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(r, e) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/slicedToArray.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js"
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _toConsumableArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js\");\n/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArray.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js\");\n\n\n\n\nfunction _toConsumableArray(r) {\n  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(r) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(r) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(r) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js?\n}");
 
 /***/ },
 
@@ -946,9 +1342,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -974,85 +1367,9 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/ensure chunk */
-/******/ 	(() => {
-/******/ 		__webpack_require__.f = {};
-/******/ 		// This file contains only the entry chunk.
-/******/ 		// The chunk loading function for additional chunks
-/******/ 		__webpack_require__.e = (chunkId) => {
-/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
-/******/ 				__webpack_require__.f[key](chunkId, promises);
-/******/ 				return promises;
-/******/ 			}, []));
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/get javascript chunk filename */
-/******/ 	(() => {
-/******/ 		// This function allow to reference async chunks
-/******/ 		__webpack_require__.u = (chunkId) => {
-/******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".main.js";
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/get mini-css chunk filename */
-/******/ 	(() => {
-/******/ 		// This function allow to reference async chunks
-/******/ 		__webpack_require__.miniCssF = (chunkId) => {
-/******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".css";
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/load script */
-/******/ 	(() => {
-/******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "devour-clone:";
-/******/ 		// loadScript function to load a script via script tag
-/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
-/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
-/******/ 			var script, needAttach;
-/******/ 			if(key !== undefined) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				for(var i = 0; i < scripts.length; i++) {
-/******/ 					var s = scripts[i];
-/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
-/******/ 				}
-/******/ 			}
-/******/ 			if(!script) {
-/******/ 				needAttach = true;
-/******/ 				script = document.createElement('script');
-/******/ 		
-/******/ 				script.charset = 'utf-8';
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
-/******/ 		
-/******/ 				script.src = url;
-/******/ 			}
-/******/ 			inProgress[url] = [done];
-/******/ 			var onScriptComplete = (prev, event) => {
-/******/ 				// avoid mem leaks in IE.
-/******/ 				script.onerror = script.onload = null;
-/******/ 				clearTimeout(timeout);
-/******/ 				var doneFns = inProgress[url];
-/******/ 				delete inProgress[url];
-/******/ 				script.parentNode && script.parentNode.removeChild(script);
-/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
-/******/ 				if(prev) return prev(event);
-/******/ 			}
-/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
-/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
-/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
-/******/ 			needAttach && document.head.appendChild(script);
-/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -1073,187 +1390,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "/devour-clone/";
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/css loading */
-/******/ 	(() => {
-/******/ 		if (typeof document === "undefined") return;
-/******/ 		var createStylesheet = (chunkId, fullhref, oldTag, resolve, reject) => {
-/******/ 			var linkTag = document.createElement("link");
-/******/ 		
-/******/ 			linkTag.rel = "stylesheet";
-/******/ 			linkTag.type = "text/css";
-/******/ 			if (__webpack_require__.nc) {
-/******/ 				linkTag.nonce = __webpack_require__.nc;
-/******/ 			}
-/******/ 			var onLinkComplete = (event) => {
-/******/ 				// avoid mem leaks.
-/******/ 				linkTag.onerror = linkTag.onload = null;
-/******/ 				if (event.type === 'load') {
-/******/ 					resolve();
-/******/ 				} else {
-/******/ 					var errorType = event && event.type;
-/******/ 					var realHref = event && event.target && event.target.href || fullhref;
-/******/ 					var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + errorType + ": " + realHref + ")");
-/******/ 					err.name = "ChunkLoadError";
-/******/ 					err.code = "CSS_CHUNK_LOAD_FAILED";
-/******/ 					err.type = errorType;
-/******/ 					err.request = realHref;
-/******/ 					if (linkTag.parentNode) linkTag.parentNode.removeChild(linkTag)
-/******/ 					reject(err);
-/******/ 				}
-/******/ 			}
-/******/ 			linkTag.onerror = linkTag.onload = onLinkComplete;
-/******/ 			linkTag.href = fullhref;
-/******/ 		
-/******/ 		
-/******/ 			if (oldTag) {
-/******/ 				oldTag.parentNode.insertBefore(linkTag, oldTag.nextSibling);
-/******/ 			} else {
-/******/ 				document.head.appendChild(linkTag);
-/******/ 			}
-/******/ 			return linkTag;
-/******/ 		};
-/******/ 		var findStylesheet = (href, fullhref) => {
-/******/ 			var existingLinkTags = document.getElementsByTagName("link");
-/******/ 			for(var i = 0; i < existingLinkTags.length; i++) {
-/******/ 				var tag = existingLinkTags[i];
-/******/ 				var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
-/******/ 				if(tag.rel === "stylesheet" && (dataHref === href || dataHref === fullhref)) return tag;
-/******/ 			}
-/******/ 			var existingStyleTags = document.getElementsByTagName("style");
-/******/ 			for(var i = 0; i < existingStyleTags.length; i++) {
-/******/ 				var tag = existingStyleTags[i];
-/******/ 				var dataHref = tag.getAttribute("data-href");
-/******/ 				if(dataHref === href || dataHref === fullhref) return tag;
-/******/ 			}
-/******/ 		};
-/******/ 		var loadStylesheet = (chunkId) => {
-/******/ 			return new Promise((resolve, reject) => {
-/******/ 				var href = __webpack_require__.miniCssF(chunkId);
-/******/ 				var fullhref = __webpack_require__.p + href;
-/******/ 				if(findStylesheet(href, fullhref)) return resolve();
-/******/ 				createStylesheet(chunkId, fullhref, null, resolve, reject);
-/******/ 			});
-/******/ 		}
-/******/ 		// object to store loaded CSS chunks
-/******/ 		var installedCssChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"src_components_MobileUI_MobileUI_js":1};
-/******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
-/******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
-/******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
-/******/ 					installedCssChunks[chunkId] = 0;
-/******/ 				}, (e) => {
-/******/ 					delete installedCssChunks[chunkId];
-/******/ 					throw e;
-/******/ 				}));
-/******/ 			}
-/******/ 		};
-/******/ 		
-/******/ 		// no hmr
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
-/******/ 				// JSONP chunk loading for javascript
-/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
-/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
-/******/ 		
-/******/ 					// a Promise means "currently loading".
-/******/ 					if(installedChunkData) {
-/******/ 						promises.push(installedChunkData[2]);
-/******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
-/******/ 							// setup Promise in chunk cache
-/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
-/******/ 							promises.push(installedChunkData[2] = promise);
-/******/ 		
-/******/ 							// start chunk loading
-/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
-/******/ 							// create error before stack unwound to get useful stacktrace later
-/******/ 							var error = new Error();
-/******/ 							var loadingEnded = (event) => {
-/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
-/******/ 									installedChunkData = installedChunks[chunkId];
-/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
-/******/ 									if(installedChunkData) {
-/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 										var realSrc = event && event.target && event.target.src;
-/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 										error.name = 'ChunkLoadError';
-/******/ 										error.type = errorType;
-/******/ 										error.request = realSrc;
-/******/ 										installedChunkData[1](error);
-/******/ 									}
-/******/ 								}
-/******/ 							};
-/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						}
-/******/ 					}
-/******/ 				}
-/******/ 		};
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 		
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkdevour_clone"] = self["webpackChunkdevour_clone"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /************************************************************************/
