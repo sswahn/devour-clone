@@ -32,7 +32,6 @@
 
   stroke: var(--white);
   fill: var(--white);
-  color: var(--white);
 }
 
 .TYu9xxiA93dMGBlCIky5 form input {
@@ -40,8 +39,10 @@
   border-top: 1px solid #555;
   border-bottom: 1px solid #555;
   color: var(--white);
+  font-size: 16px;
   height: 32px;
   padding-left: 8px;
+  width: 100%;
 }
 
 .TYu9xxiA93dMGBlCIky5 form input:focus {
@@ -63,10 +64,7 @@
   border-bottom-right-radius: 15px;
 }
 
-.TYu9xxiA93dMGBlCIky5 form button > svg {
-  padding: 4px;
-  
+.TYu9xxiA93dMGBlCIky5 form button > svg {  
   fill: var(--white);
-
 }
 
