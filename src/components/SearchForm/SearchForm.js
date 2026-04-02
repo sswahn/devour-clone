@@ -103,6 +103,12 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
+  useEffect(() => {
+    return () => {
+      localStorage.removeItem('searches')
+    }
+  }, [])
+
   console.log('recent searchers: ', recentSearches)
   
   return (
