@@ -26,10 +26,9 @@
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  fill: var(--white);
   height: 40px;
-  padding: 0 8px;
-
-  stroke: var(--white);
+  width: 40px; 
 }
 
 .TYu9xxiA93dMGBlCIky5 form input {
@@ -59,14 +58,12 @@
   display: flex;
   justify-content: center;
 
-  
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
   cursor: pointer;
   height: 40px;
-  padding: 0 8px;
   width: 40px;
 }
 
