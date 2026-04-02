@@ -50,7 +50,12 @@ function SearchForm({ closeSearch }) {
   const storeLocally = useDebounce((key, value) => {
     try {
         const storage = localStorage.getItem(key) || '[]'
-        const existing = JSON.parse(storage).filter(x => !x.includes(value))
+        const existing = JSON.parse(storage).filter(x => {
+          console.log('x val: ', x)
+          console.log('value: ', value)
+          console.log('!x.includes(value): ', !x.includes(value))
+          return !x.includes(value)
+        })
       
         console.log('filtered existing: ', existing)
 
