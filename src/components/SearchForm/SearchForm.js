@@ -123,6 +123,7 @@ function SearchForm({ closeSearch }) {
           type="search"
           onChange={onChange}
           onKeyDown={onKeyDown}
+          autoFocus
           aria-label="search input"  
         />
 
