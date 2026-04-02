@@ -124,7 +124,7 @@ function SearchForm({ closeSearch }) {
       <div className="suggestions">
         <ul>
         {recentSearches?.length > 0 && recentSearches.map((search, index) =>
-          <li key={index} style={{ color: 'white', fontSize: '20px' }}>{search}</li>
+          <li key={index}>{search}</li>
         )}    
         </ul>      
       </div>
