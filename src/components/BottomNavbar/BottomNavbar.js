@@ -7,7 +7,7 @@ import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
 import styles from './bottomnavbar.module.css'
 
-function BottomNavbar() {
+function BottomNavbar({ openSearch }) {
   const navRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
 
@@ -20,7 +20,7 @@ function BottomNavbar() {
       <div>
         <div>
           <HomeButton />  
-          <SearchButton />
+          <SearchButton openSearch={openSearch} />
         </div>
         <div>
           <CameraButton />
