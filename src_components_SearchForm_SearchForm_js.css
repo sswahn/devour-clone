@@ -3,7 +3,7 @@
   \***************************************************************************************************/
 /* Search Form */
 
-.yMoa0P1h84myJgUPZbS_ {
+.TYu9xxiA93dMGBlCIky5 form {
   background: var(--black);
   height: 100dvh;
   left: 0;
@@ -15,30 +15,7 @@
   z-index: 200;
 }
 
-.yMoa0P1h84myJgUPZbS_ header {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-
-.TYu9xxiA93dMGBlCIky5 header h1 {
-  margin-right: 50%;
-
-  border: 1px dashed red;
-}
-
-.yMoa0P1h84myJgUPZbS_ header > button {
-  background: blue;
-  border: 0;
-  height: 26px;
-  margin-right: auto;
-}
-
-.yMoa0P1h84myJgUPZbS_ header > button svg {
-  fill: var(--white);
-}
-
-.yMoa0P1h84myJgUPZbS_ div > svg {
+.TYu9xxiA93dMGBlCIky5 form > svg {
   background-color: #eee;
   border: 1px solid #ccc;
   border-top-left-radius: 15px;
@@ -47,7 +24,7 @@
   padding: 2px;
 }
 
-.yMoa0P1h84myJgUPZbS_ div input {
+.TYu9xxiA93dMGBlCIky5 form input {
   background-color: #eee;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
