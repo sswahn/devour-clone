@@ -19,14 +19,13 @@
   justify-content: center;
 }
 
-.TYu9xxiA93dMGBlCIky5 form > svg {
+.TYu9xxiA93dMGBlCIky5 form > div {
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  fill: var(--white);
   height: 40px;
   width: 40px; 
 }
@@ -75,7 +74,7 @@
   border-bottom-right-radius: 20px;
 }
 
-.TYu9xxiA93dMGBlCIky5 form button > svg {  
+.TYu9xxiA93dMGBlCIky5 form svg {  
   fill: var(--white);
 
   border: 1px dashed red;
