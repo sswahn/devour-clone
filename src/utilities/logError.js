@@ -9,8 +9,10 @@ context = {
 
 function logError(error, context = {}) {
 
-  return console.error('Basic error: ', error)
-
+  console.error('error.__logged: ', error.__logged)
+  console.error('Basic error: ', error)
+  return
+  
   // dedupe:
   if (error.__logged) {
     return
