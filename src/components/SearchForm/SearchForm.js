@@ -7,6 +7,10 @@ import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
+  const [recentSearches, setRecentSearches] = useState([])
+
+  const [storageSet, setStroageSet] = useState(false)
+  
   const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
@@ -88,12 +92,22 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  // search bar, remove header, 
-  // have search icon on left
-  // input in middle,
-  // right side will have mic button, then close button side by side
-  // no placeholder
+  useEffect(() => {
+    localStorage.setItem('searches', JSON.stringify([
+      'recent search one',
+      'recent search two',
+      'recent search three'
+    ]))
+    setStorageSet(true)
+  }, [])
 
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('searches'))
+    setRecentSearches(data)
+  }, [stroageSet])
+
+  
+  
   return (
     <section className={styles.search}>
       <form onSubmit={onSubmit}>
@@ -121,7 +135,13 @@ function SearchForm({ closeSearch }) {
         </div>
       </form>
       
-      <div className="suggestions"></div>
+      <div className="suggestions">
+        <ul>
+        {!!recentSearches.length && recentSearches.map(search => {
+          <li key={search} style={{ color: 'white' }}>{search}</li>
+         })}    
+        </ul>      
+      </div>
     </section>
   )
 }
