@@ -1,20 +1,18 @@
 import { useState, useRef, useEffect } from 'react'
-import { useSetSearchContext } from '../../hooks/useSearchContext'
 import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
 
-function SearchForm() {
-  const setSearchContext = useSetSearchContext()
+function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
     try {
      await document.exitFullscreen()
-     setSearchContext(prevContext => !prevContext)
+     closeSearch()
     } catch (error) {
       throw new Error(error)
     }
