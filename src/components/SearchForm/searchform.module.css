@@ -51,6 +51,7 @@
   border-left: 0;
   border-right: 0;
   height: 32px;
+  width: 32px;
 }
 
 .search form button:last-child {
