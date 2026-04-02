@@ -107,10 +107,8 @@ function SearchForm({ closeSearch }) {
           onKeyDown={onKeyDown}
           maxLength="288"
           autoFocus
-          autocomplete="on"
-          spellCheck={true}
-          
-          aria-label="search input"  
+          autoComplete="on"
+          spellCheck={true} 
         />
 
         <div>
