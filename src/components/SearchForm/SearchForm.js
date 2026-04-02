@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
@@ -43,7 +43,7 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  const debounce = (fn, delay) => {
+  const debounce = useCallback(fn, delay) => {
     let timeoutId
     return (...args) => {
       clearTimeout(timeoutId)
@@ -51,22 +51,17 @@ function SearchForm({ closeSearch }) {
         fn(...args)
       }, delay)
     }
-  }
+  }, [])
 
   // this overrides with a single value
   const storeLocally = debounce((key, value) => {
     try {
-      const existing = JSON.parse(localStorage.getItem(key) || '[]')
-      if (!existing.includes(value)) {
-        return
+        const storage = localStorage.getItem(key) || '[]'
+        const existing = JSON.parse(storage).filter(x => x !== value)
+        const data = [value, ...existing ].slice(0, 5)
+        const json = JSON.stringify(data)
+        localStorage.setItem(key, json)
       }
-      if (existing.length >= 3) {
-        const [first, ...rest] = existing
-        const data = JSON.stringify([ ...rest, value ])
-        return localStorage.setItem(key, data)
-      }
-      const data = JSON.stringify([ ...existing, value ])
-      localStorage.setItem(key, data)
     } catch (error) {
       throw new Error(error)
     }
