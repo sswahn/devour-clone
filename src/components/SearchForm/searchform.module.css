@@ -86,13 +86,13 @@
   fill: var(--white);
 }
 
-.search > div {
+.search ul {
   color: white;
   font-size: 18px;
   width: 100%;
 }
 
-.search > div li {
+.search ul li {
   margin: 16px 0;
   padding: 0 32px;
   width: 100%
