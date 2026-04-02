@@ -82,8 +82,8 @@
 .search form svg {  
   fill: var(--white);
 
-  height: 40px;
-  width: 40px;
+  height: 32px;
+  width: 32px;
 
   border: 1px dashed red;
 }
