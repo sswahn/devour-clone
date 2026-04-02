@@ -10,6 +10,12 @@ context = {
 function logError(error, context = {}) {
 
   return console.error('Basic error: ', error)
+
+  // dedupe:
+  if (error.__logged) {
+    return
+  }
+  error.__logged = true
   
   const payload = {
     message: error.message,
