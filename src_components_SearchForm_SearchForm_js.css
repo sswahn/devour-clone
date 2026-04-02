@@ -91,5 +91,12 @@
 .TYu9xxiA93dMGBlCIky5 .eCBmVsfjDWxj45EXERSQ {
   color: white;
   font-size: 18px;
+  width: 100%;
+}
+
+.TYu9xxiA93dMGBlCIky5 .eCBmVsfjDWxj45EXERSQ li {
+  margin: 8px 0;
+  padding: 0 16px;
+  width: 100%
 }
 
