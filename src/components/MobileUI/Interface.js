@@ -5,7 +5,7 @@ import BottomSheet from '../BottomSheet/BottomSheet' // Change to Profile Compon
 import SearchForm from '../SearchForm/SearchForm'
 import styles from './mobileui.module.css'
 
-function Interface({ camera, closeCamera, profile, closeProfile, search, closeSearch }) {
+function Interface({ search, camera, notifications, profile, closeSearch, closeCamera, closeNotifications, closeProfile }) {
   return createPortal(
     <section className={styles.mobileUi}>
       {camera && <Camera />}
