@@ -8,9 +8,10 @@ import styles from './mobileui.module.css'
 function Interface({ search, camera, notifications, profile, closeSearch, closeCamera, closeNotifications, closeProfile }) {
   return createPortal(
     <section className={styles.mobileUi}>
-      {camera && <Camera />}
-      {profile && <BottomSheet />} {/* Change to <Profile />*/}
       {search && <SearchForm closeSearch={closeSearch} />}
+      {camera && <Camera />}
+      {/* notifications && <Notifications closeNotifications={closeNotifications} /> */}
+      {profile && <BottomSheet />} {/* Change to <Profile />*/}
     </section>, 
     document.getElementById('portal')
   )
