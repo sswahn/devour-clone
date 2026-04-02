@@ -56,17 +56,13 @@
 .search form div:last-child {
   display: flex;
   justify-content: space-between;
-
   background-color: #444;
-  
   border: 1px solid #555;
   border-left: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 
   width: 100px;
-
-  border: 1px dashed red;
 }
 
 .search form button {
