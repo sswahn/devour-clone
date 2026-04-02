@@ -57,8 +57,8 @@ function SearchForm({ closeSearch }) {
 
   const storeLocally = debounce((key, value) => {
     try {
-      const existing = JSON.parse(localStorage.getItem(key) || '{}')
-      const data = JSON.stringify({ ...existing, value })
+      const existing = JSON.parse(localStorage.getItem(key) || '[]')
+      const data = JSON.stringify([ ...existing, value ])
       localStorage.setItem(key, data)
     } catch (error) {
       throw new Error(error)
@@ -70,7 +70,7 @@ function SearchForm({ closeSearch }) {
     // store recent searches in locoalStorage
     const value = event.target.value
 
-    console.log('onChange value: ', value)
+    
     
     storeLocally('searches', value)
     
