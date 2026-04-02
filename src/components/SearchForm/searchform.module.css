@@ -57,7 +57,7 @@
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
-  
+  cursor: pointer;
   height: 40px;
   padding: 0 8px;
   width: 40px;
@@ -71,6 +71,4 @@
 
 .search form button > svg {  
   fill: var(--white);
-
-  cursor: pointer;
 }
