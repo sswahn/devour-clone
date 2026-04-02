@@ -1,5 +1,4 @@
 import ErrorBoundary from './ErrorBoundary'
-import Providers from './Providers'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import MobileUI from './components/MobileUI/MobileUI'
