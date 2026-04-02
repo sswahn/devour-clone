@@ -2,7 +2,7 @@ import ErrorBoundary from './ErrorBoundary'
 import Providers from './Providers'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import BottomNavbar from './components/BottomNavbar/BottomNavbar'
+//import BottomNavbar from './components/BottomNavbar/BottomNavbar'
 import './index.css'
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Providers>
           <Header />
           <Main />
-          <BottomNavbar />
+         {/* <BottomNavbar /> */
         </Providers> 
       </ErrorBoundary> 
     </React.StrictMode>
