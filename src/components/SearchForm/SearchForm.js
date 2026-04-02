@@ -8,9 +8,6 @@ import styles from './searchform.module.css'
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [recentSearches, setRecentSearches] = useState([])
-
-  const [storageSet, setStorageSet] = useState(false)
-  
   const inputRef = useRef(null)
   
 
