@@ -105,7 +105,7 @@ function SearchForm({ closeSearch }) {
 
   useEffect(() => {
     return () => {
-      localStorage.removeItem('searches')
+      // localStorage.removeItem('searches')
     }
   }, [])
 
