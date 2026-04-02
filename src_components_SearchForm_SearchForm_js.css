@@ -48,6 +48,13 @@
   outline: none;
 }
 
+.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-decoration,
+.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-cancel-button,
+.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-results-button,
+.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-results-decoration {
+  display: none;
+}
+
 .TYu9xxiA93dMGBlCIky5 form button {
   background-color: #444;
   border: 1px solid #555;
