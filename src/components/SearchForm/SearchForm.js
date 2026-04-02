@@ -106,10 +106,14 @@ function SearchForm({ closeSearch }) {
         <input 
           ref={inputRef}
           type="search"
+          enterkeyhint="search"
           onChange={onChange}
           onKeyDown={onKeyDown}
+          maxLength="288"
           autoFocus
+          autocomplete="on"
           spellCheck={true}
+          
           aria-label="search input"  
         />
 
