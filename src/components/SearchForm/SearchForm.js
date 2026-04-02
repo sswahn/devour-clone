@@ -108,7 +108,7 @@ function SearchForm({ closeSearch }) {
         />
         
         {/* !!window.SpeechRecognition && */
-          <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
+          <button type="button" onClick={speechRecognition} aria-label="voice recognition">
             <MicrophoneIcon />
           </button>
         }
