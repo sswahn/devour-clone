@@ -60,7 +60,7 @@ function SearchForm({ closeSearch }) {
   
   const onChange = event => {
     
-    const value = event.target.value.trim()
+    const value = event.target.value.trim().toLowerCase()
 
     // check for empty string ''?
     
