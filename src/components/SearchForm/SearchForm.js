@@ -88,37 +88,40 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
+  // search bar, remove header, 
+  // have search icon on left
+  // input in middle,
+  // right side will have mic button, then close button side by side
+  // no placeholder
+
   return (
-    <form className={styles.searchForm} onSubmit={onSubmit}>
-      <header>
-        <h1>Search</h1>
-        <button type="button" onClick={handleCloseSearch} aria-label="close search">
-          <XmarkIcon />
-        </button>
-      </header>
+    <section className={styles.search}>
+      <form onSubmit={onSubmit}>
+        <div>
+          <SearchIcon />
+    
+          <input 
+            ref={inputRef}
+            type="search"
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            aria-label="search input"  
+          />
+          
+          {/* !!window.SpeechRecognition && */
+            <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
+              <MicrophoneIcon />
+            </button>
+          }
   
-      <div>
-        <SearchIcon />
-  
-        <input 
-          ref={inputRef}
-          type="search"
-         /* value={searchValue} */
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          placeholder="Search"
-          disabled={false}
-          aria-label="search input"  
-        />
-        
-        {/* hook should return bool to check if speechRecognition exists, if so render button: */}
-        <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
-          <MicrophoneIcon />
-        </button>
-      </div>
-            
+          <button type="button" onClick={handleCloseSearch} aria-label="close search">
+            <XmarkIcon />
+          </button>
+        </div>
+      </form>
+      
       <div className="suggestions"></div>
-    </form>
+    </section>
   )
 }
 
