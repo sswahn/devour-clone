@@ -62,6 +62,8 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
+
+  padding: 0;
 }
 
 .search form button:last-child {
