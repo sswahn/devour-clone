@@ -131,15 +131,11 @@ function SearchForm({ closeSearch }) {
         </div>
       </form>
 
-            
-      
-      <div className="suggestions">
-        <ul role="listbox">
-        {recentSearches?.length > 0 && recentSearches.map((search, index) =>
-          <li key={index} role="option">{search}</li>
-        )}    
-        </ul>      
-      </div>
+      <ul role="listbox">
+      {recentSearches?.length > 0 && recentSearches.map((search, index) =>
+        <li key={index} role="option">{search}</li>
+      )}    
+      </ul>      
     </search>
   )
 }
