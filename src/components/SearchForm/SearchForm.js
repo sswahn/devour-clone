@@ -7,7 +7,7 @@ import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
-  const [recentSearches, setRecentSearches] = useState([])
+  const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
   const inputRef = useRef(null)
   
 
@@ -89,16 +89,6 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => {
     event.preventDefault()
   }
-
-  useEffect(() => {
-    const storage = localStorage.getItem('searches')
-    if (storage) {
-      const data = JSON.parse(storage)
-      setRecentSearches(data)
-    }
-  }, [])
-
-  
   
   return (
     <section className={styles.search}>
