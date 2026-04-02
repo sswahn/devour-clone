@@ -9,7 +9,6 @@ function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
   const inputRef = useRef(null)
-  
 
   const handleCloseSearch = async event => {
     try {
