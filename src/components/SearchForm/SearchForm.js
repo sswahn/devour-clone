@@ -48,7 +48,6 @@ function SearchForm({ closeSearch }) {
     return (...args) => {
       clearTimeout(timeoutId)
       timeoutId = setTimeout(() => {
-        console.log('debounced function fired.')
         fn(...args)
       }, delay)
     }
@@ -58,11 +57,16 @@ function SearchForm({ closeSearch }) {
   const storeLocally = debounce((key, value) => {
     try {
       const existing = JSON.parse(localStorage.getItem(key) || '[]')
-      //if (!existing.includes(value)) {
+      if (!existing.includes(value)) {
+        return
+      }
+      if (existing.length >= 3) {
         const [first, ...rest] = existing
         const data = JSON.stringify([ ...rest, value ])
-        localStorage.setItem(key, data)
-      //}
+        return localStorage.setItem(key, data)
+      }
+      const data = JSON.stringify([ ...existing, value ])
+      localStorage.setItem(key, data)
     } catch (error) {
       throw new Error(error)
     }
