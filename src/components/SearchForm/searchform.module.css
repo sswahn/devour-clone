@@ -25,7 +25,7 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 32px;
-  padding: 2px;
+  padding: 4px;
 
   stroke: var(--white);
   fill: var(--white);
@@ -38,7 +38,7 @@
   border-bottom: 1px solid #555;
   color: var(--white);
   height: 32px;
- /* padding: 8px; */
+  padding-left: 8px;
 }
 
 .search form input:focus {
@@ -60,6 +60,8 @@
 }
 
 .search form button > svg {
+  padding: 4px;
+  
   fill: var(--white);
-  color: var(--white);
+
 }
