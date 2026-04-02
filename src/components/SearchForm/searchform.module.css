@@ -20,6 +20,7 @@
 .search form > svg {
   background-color: #444;
   border: 1px solid #555;
+  border-left: 0;
   border-right: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -37,8 +38,7 @@
   border-bottom: 1px solid #555;
   color: var(--white);
   height: 32px;
-  margin: 0;
-  padding: 8px;
+ /* padding: 8px; */
 }
 
 .search form input:focus {
@@ -58,7 +58,6 @@
 }
 
 .search form button:last-child {
-  background: red;
   border-right: 1px solid #555;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
