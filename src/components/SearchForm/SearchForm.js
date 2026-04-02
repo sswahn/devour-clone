@@ -8,7 +8,9 @@ import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
-  const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
+  const [recentSearches, setRecentSearches] = useState(
+    [...new Set(JSON.parse(localStorage.getItem('searches') || '[]'))]
+  )
   const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
