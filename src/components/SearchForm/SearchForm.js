@@ -61,7 +61,6 @@ function SearchForm({ closeSearch }) {
         const data = [value, ...existing ].slice(0, 5)
         const json = JSON.stringify(data)
         localStorage.setItem(key, json)
-      }
     } catch (error) {
       throw new Error(error)
     }
