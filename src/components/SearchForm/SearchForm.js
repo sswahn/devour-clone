@@ -11,7 +11,7 @@ function SearchForm({ closeSearch }) {
 
   const handleCloseSearch = async event => {
     try {
-     await document.exitFullscreen()
+    // await document.exitFullscreen()
      closeSearch()
     } catch (error) {
       throw new Error(error)
