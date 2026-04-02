@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import server from '../../utilities/server'
+import useDebounce from '../../hooks/useDebounce'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
@@ -44,7 +45,7 @@ function SearchForm({ closeSearch }) {
   }
 
   // this overrides with a single value
-  const storeLocally = debounce((key, value) => {
+  const storeLocally = useDebounce((key, value) => {
     try {
         const storage = localStorage.getItem(key) || '[]'
         const existing = JSON.parse(storage).filter(x => x !== value)
@@ -54,7 +55,7 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw new Error(error)
     }
-  }, 1500)
+  }, 1000)
 
   
   const onChange = event => {
