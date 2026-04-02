@@ -4,11 +4,10 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
 const BottomSheet = lazy(() => import('../BottomSheet/BottomSheet')) // Change to Profile Component
-const styles from './mobileui.module.css'
 
 function Interface({ search, camera, notifications, profile, closeSearch, closeCamera, closeNotifications, closeProfile }) {
   return createPortal(
-    <section className={styles.mobileUi}>
+    <div>
       <Suspense fallback={<LoadingSpinner />}>
         {search && <SearchForm closeSearch={closeSearch} />}
       </Suspense>
@@ -21,7 +20,7 @@ function Interface({ search, camera, notifications, profile, closeSearch, closeC
       <Suspense fallback={<LoadingSpinner />}>    
         {profile && <BottomSheet closeProfile={closeProfile} />} {/* Change to <Profile />*/}
       </Suspense>
-    </section>, 
+    </div>, 
     document.getElementById('portal')
   )
 }
