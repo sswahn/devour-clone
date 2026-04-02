@@ -84,3 +84,8 @@
 .search form svg {  
   fill: var(--white);
 }
+
+.search .suggestions {
+  color: white;
+  font-size: 18px;
+}
