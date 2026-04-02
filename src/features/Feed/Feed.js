@@ -6,7 +6,7 @@ import Sentinel from './Sentinel' // sentinel triggers infinite loading
 import styles from './feed.module.css'
 
 function Feed() {
-  const [data, setData] = useState([1,2,3])
+  const [data, setData] = useState([1])
   const [batchNumber, setBatchNumber] = useState(0)
   const [loading, setLoading] = useState(false)
 
