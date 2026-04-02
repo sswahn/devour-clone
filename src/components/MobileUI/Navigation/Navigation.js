@@ -35,4 +35,3 @@ function Navigation({ openSearch, openCamera, openNotifications, openProfile }) 
 }
 
 export default Navigation
-export default BottomNavbar
