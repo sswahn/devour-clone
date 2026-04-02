@@ -72,6 +72,10 @@
   padding: 0;
 }
 
+.TYu9xxiA93dMGBlCIky5 form button:active {
+  background-color: #666;
+}
+
 .TYu9xxiA93dMGBlCIky5 form button:last-child {
   border-right: 1px solid #555;
   border-top-right-radius: 20px;
