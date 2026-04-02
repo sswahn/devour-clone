@@ -89,13 +89,13 @@
   fill: var(--white);
 }
 
-.TYu9xxiA93dMGBlCIky5 > div {
+.TYu9xxiA93dMGBlCIky5 ul {
   color: white;
   font-size: 18px;
   width: 100%;
 }
 
-.TYu9xxiA93dMGBlCIky5 > div li {
+.TYu9xxiA93dMGBlCIky5 ul li {
   margin: 16px 0;
   padding: 0 32px;
   width: 100%
