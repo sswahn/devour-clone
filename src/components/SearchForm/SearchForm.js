@@ -112,7 +112,7 @@ function SearchForm({ closeSearch }) {
         <div>
           {/* !!window.SpeechRecognition && */
             <button type="button" onClick={speechRecognition} aria-label="voice recognition">
-              <MicrophoneIcon size={16} />
+              <MicrophoneIcon size={18} />
             </button>
           }
           <button type="button" onClick={handleCloseSearch} aria-label="close search">
