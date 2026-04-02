@@ -9,7 +9,7 @@ function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [recentSearches, setRecentSearches] = useState([])
 
-  const [storageSet, setStroageSet] = useState(false)
+  const [storageSet, setStorageSet] = useState(false)
   
   const inputRef = useRef(null)
 
@@ -104,7 +104,7 @@ function SearchForm({ closeSearch }) {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('searches'))
     setRecentSearches(data)
-  }, [stroageSet])
+  }, [storageSet])
 
   
   
