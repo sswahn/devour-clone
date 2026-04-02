@@ -60,7 +60,7 @@ function SearchForm({ closeSearch }) {
   
   const onChange = event => {
     // store recent searches in locoalStorage
-    const value = event.target.value
+    const value = event.target.value.trim()
 
     
     
