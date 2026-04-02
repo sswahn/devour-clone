@@ -97,27 +97,25 @@ function SearchForm({ closeSearch }) {
   return (
     <section className={styles.search}>
       <form onSubmit={onSubmit}>
-        <div>
-          <SearchIcon />
-    
-          <input 
-            ref={inputRef}
-            type="search"
-            onChange={onChange}
-            onKeyDown={onKeyDown}
-            aria-label="search input"  
-          />
-          
-          {/* !!window.SpeechRecognition && */
-            <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
-              <MicrophoneIcon />
-            </button>
-          }
+        <SearchIcon />
   
-          <button type="button" onClick={handleCloseSearch} aria-label="close search">
-            <XmarkIcon />
+        <input 
+          ref={inputRef}
+          type="search"
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          aria-label="search input"  
+        />
+        
+        {/* !!window.SpeechRecognition && */
+          <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
+            <MicrophoneIcon />
           </button>
-        </div>
+        }
+
+        <button type="button" onClick={handleCloseSearch} aria-label="close search">
+          <XmarkIcon />
+        </button>
       </form>
       
       <div className="suggestions"></div>
