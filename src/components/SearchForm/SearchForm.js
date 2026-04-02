@@ -12,13 +12,6 @@ function SearchForm({ closeSearch }) {
   const [storageSet, setStorageSet] = useState(false)
   
   const inputRef = useRef(null)
-
-  localStorage.setItem('searches', JSON.stringify([
-    'recent search one',
-    'recent search two',
-    'recent search three'
-  ]))
-  setStorageSet(true)
   
 
   const handleCloseSearch = async event => {
@@ -101,9 +94,12 @@ function SearchForm({ closeSearch }) {
   }
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('searches'))
-    setRecentSearches(data)
-  }, [storageSet])
+    const storage = localStorage.getItem('searches')
+    if (storage) {
+      const data = JSON.parse(storage)
+      setRecentSearches(data)
+    }
+  }, [])
 
   
   
