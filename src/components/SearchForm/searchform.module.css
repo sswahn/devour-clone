@@ -16,14 +16,13 @@
   justify-content: center;
 }
 
-.search form > svg {
+.search form > div {
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  fill: var(--white);
   height: 40px;
   width: 40px; 
 }
@@ -72,7 +71,7 @@
   border-bottom-right-radius: 20px;
 }
 
-.search form button > svg {  
+.search form svg {  
   fill: var(--white);
 
   border: 1px dashed red;
