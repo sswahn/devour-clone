@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Interface from './Interface'
-import Navigation from './Navigation'
+import Navigation from './Navigation/Navigation'
 
 function MobileUI() {
   const [search, setSearch] = useState(false)
