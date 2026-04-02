@@ -72,7 +72,7 @@ function SearchForm({ closeSearch }) {
 
     console.log('onChange value: ', value)
     
-    storeLocally(value)
+    storeLocally('searches', value)
     
     setSearchValue(value)
     
