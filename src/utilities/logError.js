@@ -9,7 +9,6 @@ context = {
 
 function logError(error, context = {}) {
 
-  alert(`Temp Error: ${error}`)
   console.error('Temp error: ', error)
   return
   
