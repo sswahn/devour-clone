@@ -6,11 +6,11 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
 
+// const unique_values = [...new Set(repeated_values)]
+
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
-  const [recentSearches, setRecentSearches] = useState(
-    [...new Set(JSON.parse(localStorage.getItem('searches') || '[]'))]
-  )
+  const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
   const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
@@ -51,7 +51,11 @@ function SearchForm({ closeSearch }) {
     try {
         const storage = localStorage.getItem(key) || '[]'
         const existing = JSON.parse(storage).filter(x => !x.includes(value))
+      
         console.log('filtered existing: ', existing)
+
+        // try removing repeat values with new Set()
+      
         const data = [value, ...existing ].slice(0, 5)
         const json = JSON.stringify(data)
         localStorage.setItem(key, json)
