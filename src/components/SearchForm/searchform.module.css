@@ -51,6 +51,7 @@
   border: 1px solid #555;
   border-left: 0;
   border-right: 0;
+  cursor: pointer;
   height: 32px;
   width: 32px;
 }
