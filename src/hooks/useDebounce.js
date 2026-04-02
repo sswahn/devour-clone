@@ -1,13 +1,11 @@
 import { useRef } from 'react'
 
-function useDebounce(callback, delay) {
+function useDebounce(fn, delay) {
   const timeoutRef = useRef()
-
   return (...args) => {
     clearTimeout(timeoutRef.current)
-
     timeoutRef.current = setTimeout(() => {
-      callback(...args)
+      fn(...args)
     }, delay)
   }
 }
