@@ -43,16 +43,6 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  const debounce = useCallback((fn, delay) => {
-    let timeoutId
-    return (...args) => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => {
-        fn(...args)
-      }, delay)
-    }
-  }, [])
-
   // this overrides with a single value
   const storeLocally = debounce((key, value) => {
     try {
