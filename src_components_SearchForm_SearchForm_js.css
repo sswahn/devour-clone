@@ -1,0 +1,65 @@
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/searchform.module.css ***!
+  \***************************************************************************************************/
+/* Search Form */
+
+.yMoa0P1h84myJgUPZbS_ {
+  background: var(--black);
+  height: 100dvh;
+  left: 0;
+  padding: 16px 8px 0 8px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  z-index: 200;
+}
+
+.yMoa0P1h84myJgUPZbS_ header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.TYu9xxiA93dMGBlCIky5 header h1 {
+  margin-right: 50%;
+
+  border: 1px dashed red;
+}
+
+.yMoa0P1h84myJgUPZbS_ header > button {
+  background: blue;
+  border: 0;
+  height: 26px;
+  margin-right: auto;
+}
+
+.yMoa0P1h84myJgUPZbS_ header > button svg {
+  fill: var(--white);
+}
+
+.yMoa0P1h84myJgUPZbS_ div > svg {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 26px;
+  padding: 2px;
+}
+
+.yMoa0P1h84myJgUPZbS_ div input {
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: var(--black);
+  padding: 8px;
+  margin: 0;
+
+  width: calc(100% - 16px);
+  height: 26px;
+}
+
+.yMoa0P1h84myJgUPZbS_ input:focus {
+  outline: none;
+}
+
