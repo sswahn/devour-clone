@@ -2,8 +2,7 @@ import CameraIcon from '../../../Icons/CameraIcon/CameraIcon'
 import styles from './camerabutton.module.css'
 
 function CameraButton({ openCamera }) {
-  const setCameraContext = useContext(SetCameraContext)
-  
+ 
   const onClick = async event => {
     try {
       navigator.vibrate(50)
