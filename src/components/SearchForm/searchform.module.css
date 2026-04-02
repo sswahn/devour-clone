@@ -85,13 +85,13 @@
   fill: var(--white);
 }
 
-.search .suggestions {
+.search > div {
   color: white;
   font-size: 18px;
   width: 100%;
 }
 
-.search .suggestions li {
+.search > div li {
   margin: 8px 0;
   padding: 0 16px;
   width: 100%
