@@ -89,29 +89,6 @@
 }
 */
 
-/*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/LoadingSpinner/styles.module.css ***!
-  \***************************************************************************************************/
-@keyframes hM4c7jIc3EU9mwjKA04L {
-  from {
-   transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.JSakJNmRTraPgvlafis2 {
-  animation: hM4c7jIc3EU9mwjKA04L .7s linear infinite;
-  display: block;
-  margin: 0 auto;
-  fill: var(--white);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /*!*************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Feed/feed.module.css ***!
   \*************************************************************************************/
@@ -443,12 +420,12 @@
   z-index: 9999;
 }
 
-/*!****************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/HomeButton/homebutton.module.css ***!
-  \****************************************************************************************************************/
-/* Bottom Nav Home Button */
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/HomeButton/homebutton.module.css ***!
+  \***********************************************************************************************************************/
+/* Navigation Home Button */
 
-.sTcNuBJf94dy6VffWsvE {
+._g1yd1GpohXhQQrt44LX {
   align-items: center; 
   background: none;
   border: none;
@@ -461,20 +438,20 @@
   user-select: none;
 }
 
-.sTcNuBJf94dy6VffWsvE:active {
+._g1yd1GpohXhQQrt44LX:active {
   opacity: 0.7;
 }
 
-.sTcNuBJf94dy6VffWsvE svg {
+._g1yd1GpohXhQQrt44LX svg {
   color: var(--white);
 }
 
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/SearchButton/searchbutton.module.css ***!
-  \********************************************************************************************************************/
-/* Bottom Nav Search Button */
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/SearchButton/searchbutton.module.css ***!
+  \***************************************************************************************************************************/
+/* Navigation Search Button */
 
-.QNXr3gLZIg51v1cLVlQX {
+.g3FJCL3gQgNzPV71DbYN {
   align-items: center; 
   background: none;
   border: none;
@@ -487,20 +464,20 @@
   user-select: none;
 }
 
-.QNXr3gLZIg51v1cLVlQX:active {
+.g3FJCL3gQgNzPV71DbYN:active {
   opacity: 0.7;
 }
 
-.QNXr3gLZIg51v1cLVlQX svg {
+.g3FJCL3gQgNzPV71DbYN svg {
   color: var(--white);
 }
 
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/CameraButton/camerabutton.module.css ***!
-  \********************************************************************************************************************/
-/* Camera Button Bottom Nav */
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/CameraButton/camerabutton.module.css ***!
+  \***************************************************************************************************************************/
+/* Navigation Camera Button */
 
-.ttWUEf9BWH6bUtBFQeVP {
+.G89sW5wPYTPuDAoxzFf5 {
   align-items: center; 
   background: var(--white); /* linear-gradient(to top, #663399, #8a2be2); /* #663399; */
   border: 1px solid color-mix(in srgb, var(--white) 13%, transparent);
@@ -527,17 +504,17 @@
   
 }
 
-.ttWUEf9BWH6bUtBFQeVP svg {
+.G89sW5wPYTPuDAoxzFf5 svg {
   color: var(--black);
   fill: var(--black);
 }
 
-/*!**********************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/NotificationsButton/notificationsbutton.module.css ***!
-  \**********************************************************************************************************************************/
-/* Bottom Nav Notifications Button */
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/NotificationsButton/notificationsbutton.module.css ***!
+  \*****************************************************************************************************************************************/
+/* Navigation Notifications Button */
 
-.KACZHkvAGjrBlXXWUlEQ {
+.MdWct8XEyuSDTRNKWJfJ {
   align-items: center; 
   background: none;
   border: none;
@@ -551,11 +528,11 @@
   user-select: none;
 }
 
-.KACZHkvAGjrBlXXWUlEQ:active {
+.MdWct8XEyuSDTRNKWJfJ:active {
   opacity: 0.7;
 }
 
-.KACZHkvAGjrBlXXWUlEQ div {
+.MdWct8XEyuSDTRNKWJfJ div {
   background-color: darkorange;
   border: 2px solid var(--black);
   border-radius: 50%;
@@ -567,16 +544,16 @@
   width: 10px;
 }
 
-.KACZHkvAGjrBlXXWUlEQ svg {
+.MdWct8XEyuSDTRNKWJfJ svg {
   color: var(--white);
 }
 
-/*!**********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/ProfileButton/profilebutton.module.css ***!
-  \**********************************************************************************************************************/
-/* Bottom Nav Profile Button */
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/ProfileButton/profilebutton.module.css ***!
+  \*****************************************************************************************************************************/
+/* Navigation Profile Button */
 
-.Ydz37H441RIdjEsXI7vK {
+.ARiMq3XnTwq5ivBXSzyL {
   align-items: center; 
   background: none;
   border: none;
@@ -589,20 +566,20 @@
   user-select: none;
 }
 
-.Ydz37H441RIdjEsXI7vK:active {
+.ARiMq3XnTwq5ivBXSzyL:active {
   opacity: 0.7;
 }
 
-.Ydz37H441RIdjEsXI7vK svg {
+.ARiMq3XnTwq5ivBXSzyL svg {
   color: var(--white);
 }
 
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/BottomNavbar/bottomnavbar.module.css ***!
-  \*******************************************************************************************************/
-/* Bottom Mobile Navbar */
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/navigation.module.css ***!
+  \************************************************************************************************************/
+/* Mobile UI Navigation */
 
-.B5WSjkcfdXhkN7EZp0IH {
+.KrDGLnQlqXFEIv6RHRn7 {
   position: fixed;
   left: 0;
   right: 0;
@@ -626,12 +603,12 @@
   scroll-snap-type: y mandatory;
 }
 
-.B5WSjkcfdXhkN7EZp0IH.CESBUrcMOVwrneq80h68 {
+.KrDGLnQlqXFEIv6RHRn7.LEQ3_5VvRSZDnEwmjj1K {
   transform: translateY(100%);
   opacity: 0;
 }
 
-.B5WSjkcfdXhkN7EZp0IH > div {
+.KrDGLnQlqXFEIv6RHRn7 > div {
   display: flex;
   margin: 0 auto;
   max-width: 500px;
@@ -639,28 +616,27 @@
   width: 100%;
 }
 
-.B5WSjkcfdXhkN7EZp0IH > div > div:not(:nth-of-type(2)) {
+.KrDGLnQlqXFEIv6RHRn7 > div > div:not(:nth-of-type(2)) {
   display: flex;
   flex: 1;
   justify-content: space-between;
 }
 
-.B5WSjkcfdXhkN7EZp0IH > div > div:nth-of-type(2) {
+.KrDGLnQlqXFEIv6RHRn7 > div > div:nth-of-type(2) {
   position: static;
   flex-shrink: 0;
   width: 152px;
 }
 
 @media (prefers-color-scheme: dark) {
-  .B5WSjkcfdXhkN7EZp0IH {
+  .KrDGLnQlqXFEIv6RHRn7 {
     background-color: var(--black);
   }
 
-  .B5WSjkcfdXhkN7EZp0IH button svg {
+  .KrDGLnQlqXFEIv6RHRn7 button svg {
     fill: var(--white);
   }
 }
-
 
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
