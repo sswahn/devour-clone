@@ -24,7 +24,7 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 40px;
-  padding: 4px;
+  padding-left: 8px;
 
   stroke: var(--white);
   fill: var(--white);
@@ -52,6 +52,7 @@
   border-right: 0;
   cursor: pointer;
   height: 40px;
+  padding: 0 8px;
   width: 40px;
 }
 
