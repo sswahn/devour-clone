@@ -23,6 +23,7 @@
 .TYu9xxiA93dMGBlCIky5 form > svg {
   background-color: #444;
   border: 1px solid #555;
+  border-right: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 26px;
