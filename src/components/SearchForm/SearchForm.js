@@ -89,6 +89,8 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => {
     event.preventDefault()
   }
+
+  console.log('recent searchers: ', recentSearches)
   
   return (
     <section className={styles.search}>
@@ -116,6 +118,8 @@ function SearchForm({ closeSearch }) {
           </button>
         </div>
       </form>
+
+            
       
       <div className="suggestions">
         <ul>
