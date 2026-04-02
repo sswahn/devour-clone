@@ -55,7 +55,7 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw new Error(error)
     }
-  }, 1000)
+  }, 500)
 
   
   const onChange = event => {
