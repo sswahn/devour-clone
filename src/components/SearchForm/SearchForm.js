@@ -116,8 +116,6 @@ function SearchForm({ closeSearch }) {
     }
   }, [])
 
-  console.log('recent searchers: ', recentSearches)
-  
   return (
     <section className={styles.search}>
       <form onSubmit={onSubmit}>
