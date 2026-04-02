@@ -61,7 +61,9 @@ function SearchForm({ closeSearch }) {
   const onChange = event => {
     
     const value = event.target.value.trim()
- 
+
+    // check for empty string ''?
+    
     storeLocally('searches', value)
     
     setSearchValue(value)
