@@ -53,8 +53,14 @@
 .TYu9xxiA93dMGBlCIky5 form button {
   background-color: #444;
   border: 1px solid #555;
+  border-left: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+
+.TYu9xxiA93dMGBlCIky5 form button:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .TYu9xxiA93dMGBlCIky5 form button > svg {
