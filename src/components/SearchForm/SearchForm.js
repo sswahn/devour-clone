@@ -55,7 +55,7 @@ function SearchForm({ closeSearch }) {
     }
   }
 
-  const storeLocally = debounce(key, value) => {
+  const storeLocally = debounce((key, value) => {
     try {
       const existing = JSON.parse(localStorage.getItem(key) || '{}')
       const data = JSON.stringify({ ...existing, value })
