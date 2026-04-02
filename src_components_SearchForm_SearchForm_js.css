@@ -20,6 +20,10 @@
 }
 
 .TYu9xxiA93dMGBlCIky5 form > div {
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
