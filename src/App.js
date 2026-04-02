@@ -6,7 +6,7 @@ import MobileUI from './components/MobileUI/MobileUI'
 //import BottomNavbar from './components/BottomNavbar/BottomNavbar'
 import './index.css'
 
-const App = () => {
+function App() {
   return (
     <React.StrictMode> 
       <ErrorBoundary> 
