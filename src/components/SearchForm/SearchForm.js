@@ -102,7 +102,7 @@ function SearchForm({ closeSearch }) {
         <input 
           ref={inputRef}
           type="search"
-          enterkeyhint="search"
+          enterKeyHint="search"
           onChange={onChange}
           onKeyDown={onKeyDown}
           maxLength="288"
