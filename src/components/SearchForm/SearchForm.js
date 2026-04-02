@@ -49,6 +49,9 @@ function SearchForm({ closeSearch }) {
     try {
         const storage = localStorage.getItem(key) || '[]'
         const existing = JSON.parse(storage).filter(x => x !== value)
+        if (existing.includes(value)) {
+          return
+        }
         const data = [value, ...existing ].slice(0, 5)
         const json = JSON.stringify(data)
         localStorage.setItem(key, json)
