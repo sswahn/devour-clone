@@ -52,6 +52,11 @@
 }
 
 .search form button {
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+
+  
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
@@ -70,4 +75,6 @@
 
 .search form button > svg {  
   fill: var(--white);
+
+  border: 1px dashed red;
 }
