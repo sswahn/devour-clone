@@ -23,7 +23,7 @@
   border-right: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  height: 26px;
+  height: 32px;
   padding: 2px;
 
   stroke: var(--white);
@@ -36,11 +36,9 @@
   border-top: 1px solid #555;
   border-bottom: 1px solid #555;
   color: var(--white);
-  padding: 8px;
+  height: 32px;
   margin: 0;
-
-  width: calc(100% - 16px);
-  height: 26px;
+  padding: 8px;
 }
 
 .search form input:focus {
@@ -49,13 +47,17 @@
 
 .search form button {
   background-color: #444;
-  border: 1px solid #555;
-  border-left: 0;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border: 0;
+
+/* border-radius: 0; */
+  
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 
 .search form button:last-child {
+  background: red;
+  border-right: 1px solid #555;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
