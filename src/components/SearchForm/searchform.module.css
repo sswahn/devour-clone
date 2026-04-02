@@ -39,6 +39,8 @@
   height: 40px;
   padding-left: 8px;
   width: 100%;
+
+  margin: 0 -1px;
 }
 
 .search form input:focus {
