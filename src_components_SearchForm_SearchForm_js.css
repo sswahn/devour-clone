@@ -23,10 +23,8 @@
   align-items: center; 
   display: flex;
   justify-content: center;
-
   background-color: #444;
   border: 1px solid #555;
-  border-left: 0;
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -69,7 +67,7 @@
   height: 40px;
   width: 40px;
 
-  padding: 0;
+  padding-right: 0 8px;
 }
 
 .TYu9xxiA93dMGBlCIky5 form button:active {
