@@ -54,14 +54,15 @@ function SearchForm({ closeSearch }) {
     }
   }
 
+  // this overrides with a single value
   const storeLocally = debounce((key, value) => {
     try {
       const existing = JSON.parse(localStorage.getItem(key) || '[]')
-      if (!existing.includes(value)) {
+      //if (!existing.includes(value)) {
         const [first, ...rest] = existing
         const data = JSON.stringify([ ...rest, value ])
         localStorage.setItem(key, data)
-      }
+      //}
     } catch (error) {
       throw new Error(error)
     }
@@ -126,6 +127,7 @@ function SearchForm({ closeSearch }) {
           onChange={onChange}
           onKeyDown={onKeyDown}
           autoFocus
+          spellCheck={true}
           aria-label="search input"  
         />
 
