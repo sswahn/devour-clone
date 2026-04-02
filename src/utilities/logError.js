@@ -8,6 +8,9 @@ context = {
 */
 
 function logError(error, context = {}) {
+
+  return console.error('Basic error: ', error)
+  
   const payload = {
     message: error.message,
     stack: error.stack,
