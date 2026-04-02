@@ -17,11 +17,12 @@ function Main() {
     <main className={styles.main}>
       <Feed />
 
-  {/* <div style={{ height: '8000px' }}></div> */}
+  {/* <div style={{ height: '8000px' }}></div> 
 
       <Suspense fallback={null}>
         <MobileUI />  
       </Suspense>
+      */}
       
     </main>
   )
