@@ -8,7 +8,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  
   z-index: 200;
 }
 
@@ -24,7 +23,7 @@
   border-right: 0;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  height: 32px;
+  height: 40px;
   padding: 4px;
 
   stroke: var(--white);
@@ -36,8 +35,8 @@
   border-top: 1px solid #555;
   border-bottom: 1px solid #555;
   color: var(--white);
-  font-size: 16px;
-  height: 32px;
+  font-size: 18px;
+  height: 40px;
   padding-left: 8px;
   width: 100%;
 }
@@ -52,8 +51,8 @@
   border-left: 0;
   border-right: 0;
   cursor: pointer;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
 }
 
 .search form button:last-child {
