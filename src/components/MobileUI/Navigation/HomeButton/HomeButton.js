@@ -4,7 +4,7 @@ import styles from './HomeButton.module.css'
 function HomeButton() {
   
   const onClick = event => {
-    //navigator.vibrate(50)
+    navigator.vibrate(50)
     window.scrollTo({
       behavior: 'smooth',
       top: 0
