@@ -21,6 +21,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
     if (recognition.isListening) {
       recognition.stop()
     } else {
+      recognition.reset()
       recognition.start()
     }
   }
