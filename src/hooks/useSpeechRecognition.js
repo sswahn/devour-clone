@@ -8,6 +8,7 @@ function useSpeechRecognition({
 } = {}) {
   const recognitionRef = useRef(null)
   const isListeningRef = useRef(false)
+  const shouldRestartRef = useRef(autoRestart)
   
   const [isSupported, setIsSupported] = useState(true)
   const [isListening, setIsListening] = useState(false)
@@ -41,8 +42,7 @@ function useSpeechRecognition({
       isListeningRef.current = false
       setIsListening(false)
 
-      // Auto-restart (important for real-world use)
-      if (autoRestart) {
+      if (shouldRestartRef.current) {
         recognition.start()
       }
     }
@@ -82,11 +82,15 @@ function useSpeechRecognition({
     if (!recognitionRef.current) {
       return
     }
+    shouldRestartRef.current = autoRestart
     recognitionRef.current.start()
   }, [])
 
   const stop = useCallback(() => {
-    if (!recognitionRef.current) return
+    if (!recognitionRef.current) {
+      return
+    }
+    shouldRestartRef.current = false
     recognitionRef.current.stop()
   }, [])
 
