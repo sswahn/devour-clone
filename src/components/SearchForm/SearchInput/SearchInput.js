@@ -1,6 +1,6 @@
 import useDebounce from '../../hooks/useDebounce'
 
-function SearchInput({ setSearchValue }) {
+function SearchInput({ setSearchResults }) {
 
   const requestData = async value => {
 
@@ -10,7 +10,7 @@ function SearchInput({ setSearchValue }) {
       value
     }
     const response = await server.post(config.api.search, request)
-    setData(response.message)
+    setSearchResults(response.message)
   }
 
   const storeLocally = value => {
@@ -29,7 +29,6 @@ function SearchInput({ setSearchValue }) {
     if (!value) {
       return
     }
-    setSearchValue(value) 
     storeLocally(value)
     requestData(value)
   }, 600)
