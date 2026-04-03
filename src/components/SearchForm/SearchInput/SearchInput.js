@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useDebounce from '../../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
@@ -32,6 +32,7 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
     if (!value) {
       return
     }
+    setSearchValue(value)
     storeLocally(value)
     requestData(value)
   }, 600)
@@ -53,16 +54,19 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
 
   const handleTranscript = () => {
     if (finalTranscript.length || tempTranscript) {
-      return `${finalTranscript.join(' ')} ${tempTranscript}`.trim()
+      setSearchValue(`${finalTranscript.join(' ')} ${tempTranscript}`.trim())
     }
-    return ''
   }
+
+  useEffect(() => {
+    handleTranscript()
+  }, [finalTranscript, tempTranscript])
   
   return (
     <input
       className={styles.input}
       type="search"
-      value={handleTranscript()}
+      value={searchValue}
       enterKeyHint="search"
       onChange={onChange}
       onKeyDown={onKeyDown}
