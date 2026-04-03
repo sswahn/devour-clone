@@ -14,25 +14,17 @@ function SearchForm({ closeSearch }) {
   const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
-    try {
     // await document.exitFullscreen()
-     closeSearch()
-    } catch (error) {
-      throw new Error(error)
-    }
+    closeSearch()
   }
 
   // make/use a custom hook
   const speechRecognition = () => {
-    try {
-      const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
-      recognition.continuous = true
-      recognition.interimResults = true
-      recognition.lang = 'en-US'
-      recognition.start()
-    } catch (error) {
-      throw new Error(error)
-    }
+    const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
+    recognition.continuous = true
+    recognition.interimResults = true
+    recognition.lang = 'en-US'
+    recognition.start()
   }
 
   const requestData = async value => {
@@ -40,9 +32,6 @@ function SearchForm({ closeSearch }) {
       value
     }
     const response = await server.post(config.api.search, request)
-    if (response.error) {
-      return console.error(error)
-    }
     setData(response.message)
   }
 
@@ -50,14 +39,13 @@ function SearchForm({ closeSearch }) {
     try {
         const item = localStorage.getItem(key)
         const existing = item ? JSON.parse(item) : []
-        if (existing.some(str => str.includes(value))) { // check if value is substring of data array
+        if (existing.includes(value)) {
           return
         }
         const data = [value, ...existing].slice(0, 5)
-        const json = JSON.stringify(data)
-        localStorage.setItem(key, json)
+        localStorage.setItem(key, JSON.stringify(data))
     } catch (error) {
-      throw new Error(error)
+      throw error
     }
   }, 600)
 
