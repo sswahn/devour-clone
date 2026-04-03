@@ -3,7 +3,8 @@ function SpeechRecognitionButton() {
 
   // consider using a custom hook
   const speechRecognition = () => {
-    const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+    const recognition = new SpeechRecognition()
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
