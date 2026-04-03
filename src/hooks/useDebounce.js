@@ -8,7 +8,7 @@ function useDebounce(fn, delay) {
     fnRef.current = fn
   }, [fn])
   
-  return useCallback(...args) => {
+  return useCallback((...args) => {
     clearTimeout(timeoutRef.current)
     timeoutRef.current = setTimeout(() => {
       fn(...args)
