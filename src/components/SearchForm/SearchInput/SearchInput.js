@@ -1,7 +1,7 @@
 import useDebounce from '../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ setSearchResults }) {
+function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
 
   const requestData = async value => {
 
