@@ -13,11 +13,13 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
   
+  
   const handleCloseSearch = async event => {
     // await document.exitFullscreen()
     closeSearch()
   }
 
+  
   // make/use a custom hook
   const speechRecognition = () => {
     const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
@@ -25,32 +27,6 @@ function SearchForm({ closeSearch }) {
     recognition.interimResults = true
     recognition.lang = 'en-US'
     recognition.start()
-  }
-
-  const requestData = async value => {
-    try {
-      const request = {
-        value
-      }
-      const response = await server.post(config.api.search, request)
-      setData(response.message)
-    } catch (error) {
-      throw error
-    }
-  }
-
-  const storeLocally = (key, value) => {
-    try {
-      const item = localStorage.getItem(key)
-      const existing = item ? JSON.parse(item) : []
-      if (existing.includes(value)) {
-        return
-      }
-      const data = [value, ...existing].slice(0, 5)
-      localStorage.setItem(key, JSON.stringify(data))
-    } catch (error) {
-      throw error
-    }
   }
 
   useEffect(() => {
