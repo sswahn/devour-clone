@@ -1,20 +1,16 @@
+import useDebounce from '../../hooks/useDebounce'
 
 function SearchInput({ setSearchValue }) {
 
-  // debounce this function not storeLocally
-  const onChange = event => {
+  const onChange = useDebounce(event => {
     const value = event.target.value.trim().toLowerCase()
     if (!value) {
       return
     }
-   // storeLocally('searches', value)
     setSearchValue(value) 
-  }
+  }, [600])
 
   const onKeyDown = event => {
-
-    return
-    
     switch(event.key) {
       case 'Enter':
         return console.log('Enter key') // handle for enter key (prolly ignore it)
