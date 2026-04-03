@@ -45,8 +45,8 @@ function SearchForm({ closeSearch }) {
     }
     setData(response.message)
   }
-//useDebounce(
-  const storeLocally = (key, value) => {
+
+  const storeLocally = useDebounce((key, value) => {
     try {
         const item = localStorage.getItem(key) || '[]'
         const existing = JSON.parse(item)
@@ -59,7 +59,7 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw new Error(error)
     }
-  }//, 500)
+  }, 500)
 
   
   const onChange = event => {
