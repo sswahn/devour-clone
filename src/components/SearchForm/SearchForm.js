@@ -11,7 +11,6 @@ import styles from './searchform.module.css'
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
-  const inputRef = useRef(null)
 
   const handleCloseSearch = async event => {
     // await document.exitFullscreen()
@@ -93,17 +92,7 @@ function SearchForm({ closeSearch }) {
           <SearchIcon />
         </div>
     
-        <input 
-          ref={inputRef}
-          type="search"
-          enterKeyHint="search"
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          maxLength="288"
-          autoFocus
-          autoComplete="on"
-          spellCheck={true} 
-        />
+        <SearchInput />
 
         <div>
           {/* !!window.SpeechRecognition && */
