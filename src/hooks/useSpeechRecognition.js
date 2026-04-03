@@ -76,6 +76,7 @@ function useSpeechRecognition({
     }
 
     return () => {
+      shouldRestartRef.current = false
       recognition.abort()
     }
   }, [continuous, interimResults, lang, autoRestart])
