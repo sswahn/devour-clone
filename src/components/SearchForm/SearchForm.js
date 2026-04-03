@@ -46,21 +46,13 @@ function SearchForm({ closeSearch }) {
     setData(response.message)
   }
 
-  // this overrides with a single value
   const storeLocally = useDebounce((key, value) => {
     try {
         const storage = localStorage.getItem(key) || '[]'
-        const existing = JSON.parse(storage).filter(x => {
-          console.log('x val: ', x)
-          console.log('value: ', value)
-          console.log('!x.includes(value): ', !x.includes(value))
-          return !x.includes(value)
-        })
-      
-        console.log('filtered existing: ', existing)
-
-        // try removing repeat values with new Set()
-      
+        const existing = JSON.parse(storage)
+        if (existing.some(str => !str.includes(value)) { // check if value is substring of existing
+          return
+        }
         const data = [value, ...existing ].slice(0, 5)
         const json = JSON.stringify(data)
         localStorage.setItem(key, json)
