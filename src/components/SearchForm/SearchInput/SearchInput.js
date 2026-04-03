@@ -2,12 +2,36 @@ import useDebounce from '../../hooks/useDebounce'
 
 function SearchInput({ setSearchValue }) {
 
+  const requestData = async value => {
+
+    return;
+    
+    const request = {
+      value
+    }
+    const response = await server.post(config.api.search, request)
+    setData(response.message)
+  }
+
+  const storeLocally = value => {
+    const key = 'searches'
+    const item = localStorage.getItem(key)
+    const existing = item ? JSON.parse(item) : []
+    if (existing.includes(value)) {
+      return
+    }
+    const data = [value, ...existing].slice(0, 5)
+    localStorage.setItem(key, JSON.stringify(data))
+  }
+
   const onChange = useDebounce(event => {
     const value = event.target.value.trim().toLowerCase()
     if (!value) {
       return
     }
     setSearchValue(value) 
+    storeLocally(value)
+    requestData(value)
   }, [600])
 
   const onKeyDown = event => {
