@@ -23,6 +23,10 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     recognition.onerror = event => {
       console.error('recognition error: ', event.error)
     }
+    recognition.onend = () => {
+      console.log('onend fired.')
+      // to auto restart, call recognition.start()
+    }
     
     recognition.onresult = event => { 
       let temp = ''
