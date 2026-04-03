@@ -49,6 +49,9 @@ function useSpeechRecognition({
 
     recognition.onerror = event => {
       setError(event.error)
+      if (event.error === 'not-allowed') {
+        shouldRestartRef.current = false
+      }
     }
 
     recognition.onresult = event => {
