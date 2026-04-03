@@ -14,28 +14,23 @@ stop,
 reset
 */
 
-function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
+function SpeechRecognitionButton({ setSearchValue }) {
   const recognition = useSpeechRecognition()
 
   const handleSpeechRecognition = () => {
-    
-    console.log('handleSpeechRecognition clicked!')
-    
-    recognition.start()
-
-    console.log('isListening: ', recognition.isListening)
-
-    console.log('recognition.interimTranscript: ', recognition.interimTranscript)
-    console.log('recognition.finalTranscript: ', recognition.finalTranscript)
-    
-    setTempTranscript(recognition.interimTranscript)
-    setFinalTranscript(recognition.finalTranscript)
+    if (recognition.isListening) {
+      recognition.stop()
+    } else {
+      recognition.start()
+    }
   }
 
-  useEffect(() => {
-    setFinalTranscript(recognition.finalTranscript)
-  }, [recognition.finalTranscript, setFinalTranscript])
-
+ useEffect(() => {
+    const combined = `${recognition.finalTranscript} ${recognition.interimTranscript}`.trim()
+    if (combined) {
+      setSearchValue(combined)
+    }
+  }, [recognition.finalTranscript, recognition.interimTranscript,setSearchValue])
 
   return recognition.isSupported && (
     <button 
