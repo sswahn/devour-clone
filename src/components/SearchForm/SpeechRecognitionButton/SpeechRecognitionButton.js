@@ -35,7 +35,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
 
   return recognition.isSupported && (
     <button 
-      className={`${styles.speechRecognitionButton} ${recognition.isListening ? styles.active : ''}`} 
+      className={`${styles.speechRecognitionButton} ${styles.active} ${recognition.isListening ? styles.active : ''}`} 
       onClick={handleSpeechRecognition} 
       type="button" 
       aria-label="voice recognition">
