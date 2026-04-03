@@ -12,6 +12,10 @@ function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
 
+  const onSubmit = event => {
+    event.preventDefault()
+  }
+  
   const handleCloseSearch = async event => {
     // await document.exitFullscreen()
     closeSearch()
@@ -36,28 +40,6 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw error
     }
-  }
-
-  const onKeyDown = event => {
-
-    return
-    
-    switch(event.key) {
-      case 'Enter':
-        return console.log('Enter key') // handle for enter key (prolly ignore it)
-      case 'Escape':
-        return console.log('Escape key') // escape -> clearCloseInput()
-      case 'ArrowUp':
-        return console.log('ArrowUp key') // select suggestion up
-      case 'ArrowDown':
-        return console.log('ArrowDown key') // select suggestion down
-      default:
-        return console.log('key', event.key)
-    }
-  }
-
-  const onSubmit = event => {
-    event.preventDefault()
   }
 
   return (
