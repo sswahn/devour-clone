@@ -18,3 +18,7 @@
 .speechRecognitionButton svg {  
   fill: var(--white);
 }
+
+.speechRecognitionButton.isActive svg {
+  fill: #198754;
+}
