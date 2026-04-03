@@ -50,7 +50,7 @@ function SearchForm({ closeSearch }) {
     try {
         const item = localStorage.getItem(key) || '[]'
         const existing = JSON.parse(item)
-        if (existing.some(str => !str.includes(value))) { // check if value is substring of data array
+        if (existing.some(str => str.includes(value))) { // check if value is substring of data array
           return
         }
         const data = [value, ...existing].slice(0, 5)
