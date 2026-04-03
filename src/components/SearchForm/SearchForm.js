@@ -45,26 +45,30 @@ function SearchForm({ closeSearch }) {
     }
     setData(response.message)
   }
-
-  const storeLocally = useDebounce((key, value) => {
+//useDebounce(
+  const storeLocally = (key, value) => {
     try {
-        const storage = localStorage.getItem(key) || '[]'
-        const existing = JSON.parse(storage)
-        if (existing.some(str => !str.includes(value)) { // check if value is substring of existing
+        const item = localStorage.getItem(key) || '[]'
+        const existing = JSON.parse(item)
+        if (existing.some(str => !str.includes(value)) { // check if value is substring of data array
           return
         }
-        const data = [value, ...existing ].slice(0, 5)
+        const data = [value, ...existing].slice(0, 5)
         const json = JSON.stringify(data)
         localStorage.setItem(key, json)
     } catch (error) {
       throw new Error(error)
     }
-  }, 500)
+  }//, 500)
 
   
   const onChange = event => {
-    
     const value = event.target.value.trim().toLowerCase()
+    /*
+    if (!value.length) {
+      return
+    }
+    */
 
     // check for empty string ''?
     
