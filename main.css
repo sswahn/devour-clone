@@ -166,11 +166,11 @@
 }
 
 /*!***********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/HomeButton/homebutton.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/HomeButton/HomeButton.module.css ***!
   \***********************************************************************************************************************/
 /* Navigation Home Button */
 
-._g1yd1GpohXhQQrt44LX {
+.Po4YWFPunGigktj3KOVI {
   align-items: center; 
   background: none;
   border: none;
@@ -183,11 +183,11 @@
   user-select: none;
 }
 
-._g1yd1GpohXhQQrt44LX:active {
+.Po4YWFPunGigktj3KOVI:active {
   opacity: 0.7;
 }
 
-._g1yd1GpohXhQQrt44LX svg {
+.Po4YWFPunGigktj3KOVI svg {
   color: var(--white);
 }
 
