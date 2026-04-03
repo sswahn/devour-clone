@@ -40,7 +40,7 @@ function SearchForm({ closeSearch }) {
             setTempTranscript={setTempTranscript} 
             setFinalTranscript={setFinalTranscript} 
           />
-          <CloseSearchButton />
+          <CloseSearchButton closeSearch={closeSearch} />
         </div>
       </form>
 
