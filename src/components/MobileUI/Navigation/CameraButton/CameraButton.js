@@ -4,15 +4,11 @@ import styles from './camerabutton.module.css'
 function CameraButton({ openCamera }) {
  
   const onClick = async event => {
-    try {
-      navigator.vibrate(50)
-      return
-      await document.getElementById('portal').requestFullscreen()
-      await screen.orientation.lock('portrait')
-      openCamera()
-    } catch (error) {
-      throw new Error(error)
-    }
+    navigator.vibrate(50); return;
+   
+    await document.getElementById('portal').requestFullscreen()
+    await screen.orientation.lock('portrait')
+    openCamera()
   }
   
   return (
