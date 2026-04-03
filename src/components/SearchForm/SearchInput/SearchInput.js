@@ -1,5 +1,29 @@
 
 function SearchInput({  }) {
+
+    const storeLocally = useDebounce((key, value) => {
+    try {
+      const item = localStorage.getItem(key)
+      const existing = item ? JSON.parse(item) : []
+      if (existing.includes(value)) {
+        return
+      }
+      const data = [value, ...existing].slice(0, 5)
+      localStorage.setItem(key, JSON.stringify(data))
+    } catch (error) {
+      throw error
+    }
+  }, 600)
+
+  const onChange = event => {
+    const value = event.target.value.trim().toLowerCase()
+    if (!value) {
+      return
+    }
+    storeLocally('searches', value)
+    setSearchValue(value) 
+  }
+  
   return (
     <input 
       ref={inputRef}
