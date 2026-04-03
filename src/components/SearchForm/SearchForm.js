@@ -5,10 +5,8 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './searchform.module.css'
 
-// const unique_values = [...new Set(repeated_values)]
-
 function SearchForm({ closeSearch }) {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
 
   const onSubmit = event => {
@@ -69,7 +67,7 @@ function SearchForm({ closeSearch }) {
           <SearchIcon />
         </div>
     
-        <SearchInput setSearchValue={setSearchValue} />
+        <SearchInput setSearchResults={setSearchResults} />
 
         <div>
           {/* !!window.SpeechRecognition && */
