@@ -5,13 +5,21 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
 
   // consider using a custom hook
   const speechRecognition = () => {
+
+    console.log('speechRecognition function fired.')
+    
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
     const recognition = new SpeechRecognition()
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
+
+    console.log('recognition set.')
+    
     recognition.onresult = event => { 
       let temp = ''
+
+      console.log('onresult event fired. looping: ')
       
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const segment = event.results[i][0].transcript
