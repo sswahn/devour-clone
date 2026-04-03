@@ -1,3 +1,4 @@
+import styles from './SpeechRecognitionButton.modules.css'
 
 function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
 
@@ -25,7 +26,7 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
   }
 
   return window.SpeechRecognition || window.webkitSpeechRecognition && 
-    <button type="button" onClick={speechRecognition} aria-label="voice recognition">
+    <button className={styles.speechRecognitionButton} onClick={speechRecognition} type="button" aria-label="voice recognition">
       <MicrophoneIcon size={18} />
     </button>
   )
