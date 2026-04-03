@@ -15,6 +15,9 @@ function SearchInput({ searchValue, setSearchValue, setSearchResults }) {
     setSearchResults(response.message)
   }
 
+  // store and request functions go into the Form
+  // and are passed to this and the speech recognition
+  
   const storeLocally = value => {
     const key = 'searches'
     const item = localStorage.getItem(key)
