@@ -28,6 +28,9 @@ function SpeechRecognitionButton({ setSearchValue }) {
 
   useEffect(() => {
     console.log('isListening: ', recognition.isListening)
+    return () => {
+      
+    }
   }, [recognition.isListening]) 
 
   useEffect(() => {
