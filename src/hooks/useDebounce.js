@@ -7,6 +7,12 @@ function useDebounce(fn, delay) {
   useEffect(() => {
     fnRef.current = fn
   }, [fn])
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current)
+    }
+  }, [])
   
   return useCallback((...args) => {
     clearTimeout(timeoutRef.current)
