@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 
-// move the logic to the utility
-// hook should be for component manipulation
-// tying the utility to the component.
-
-export default function useSpeechRecognition({
+function useSpeechRecognition({
   continuous = true,
   interimResults = true,
   lang = 'en-US',
@@ -51,11 +47,11 @@ export default function useSpeechRecognition({
       }
     }
 
-    recognition.onerror = (event) => {
+    recognition.onerror = event => {
       setError(event.error)
     }
 
-    recognition.onresult = (event) => {
+    recognition.onresult = event => {
       let interim = ''
       let final = ''
 
@@ -83,10 +79,10 @@ export default function useSpeechRecognition({
 
   // Controls
   const start = useCallback(() => {
-    if (!recognitionRef.current) return
-    try {
-      recognitionRef.current.start()
-    } catch {}
+    if (!recognitionRef.current) {
+      return
+    }
+    recognitionRef.current.start()
   }, [])
 
   const stop = useCallback(() => {
@@ -110,3 +106,5 @@ export default function useSpeechRecognition({
     reset
   }
 }
+
+export default useSpeechRecognition
