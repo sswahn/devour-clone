@@ -35,29 +35,6 @@
   width: 40px; 
 }
 
-.TYu9xxiA93dMGBlCIky5 form input {
-  background-color: #444;
-  border: 0;
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #555;
-  color: var(--white);
-  font-size: 18px;
-  height: 40px;
-  padding-left: 8px;
-  width: 100%;
-}
-
-.TYu9xxiA93dMGBlCIky5 form input:focus {
-  outline: none;
-}
-
-.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-decoration,
-.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-cancel-button,
-.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-results-button,
-.TYu9xxiA93dMGBlCIky5 form input::-webkit-search-results-decoration {
-  display: none;
-}
-
 .TYu9xxiA93dMGBlCIky5 form div:last-child {
   display: flex;
   justify-content: space-between;
