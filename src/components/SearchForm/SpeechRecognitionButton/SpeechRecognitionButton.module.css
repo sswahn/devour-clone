@@ -1,0 +1,20 @@
+/* Search Form Speech Recognition Button */
+
+.speechRecognitionButton {
+  align-items: center; 
+  background: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.speechRecognitionButton:active {
+  background-color: #666;
+}
+
+.speechRecognitionButton svg {  
+  fill: var(--white);
+}
