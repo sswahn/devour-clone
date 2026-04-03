@@ -26,9 +26,11 @@ function SpeechRecognitionButton({ setSearchValue }) {
     }
   }
 
- useEffect(() => {
+  useEffect(() => {
     console.log('isListening: ', recognition.isListening)
-   
+  }, [recognition.isListening]) 
+
+  useEffect(() => {
     const combined = `${recognition.finalTranscript} ${recognition.interimTranscript}`.trim()
     if (combined) {
       setSearchValue(prev => prev === combined ? prev : combined)
