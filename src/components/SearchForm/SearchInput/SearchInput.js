@@ -51,7 +51,7 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
     }
   }
 
-  const handleTranscript() {
+  const handleTranscript = () => {
     if (finalTranscript.length || tempTranscript) {
       return `${finalTranscript.join(' ')} ${tempTranscript}`.trim()
     }
