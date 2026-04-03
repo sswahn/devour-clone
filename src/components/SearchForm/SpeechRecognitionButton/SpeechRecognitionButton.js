@@ -26,7 +26,7 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     recognition.start()
   }
 
-  return window.SpeechRecognition || window.webkitSpeechRecognition && (
+  return (window.SpeechRecognition || window.webkitSpeechRecognition) && (
     <button className={styles.speechRecognitionButton} onClick={speechRecognition} type="button" aria-label="voice recognition">
       <MicrophoneIcon size={18} />
     </button>
