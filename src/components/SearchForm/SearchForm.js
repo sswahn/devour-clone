@@ -28,22 +28,26 @@ function SearchForm({ closeSearch }) {
   }
 
   const requestData = async value => {
-    const request = {
-      value
+    try {
+      const request = {
+        value
+      }
+      const response = await server.post(config.api.search, request)
+      setData(response.message)
+    } catch (error) {
+      throw error
     }
-    const response = await server.post(config.api.search, request)
-    setData(response.message)
   }
 
   const storeLocally = useDebounce((key, value) => {
     try {
-        const item = localStorage.getItem(key)
-        const existing = item ? JSON.parse(item) : []
-        if (existing.includes(value)) {
-          return
-        }
-        const data = [value, ...existing].slice(0, 5)
-        localStorage.setItem(key, JSON.stringify(data))
+      const item = localStorage.getItem(key)
+      const existing = item ? JSON.parse(item) : []
+      if (existing.includes(value)) {
+        return
+      }
+      const data = [value, ...existing].slice(0, 5)
+      localStorage.setItem(key, JSON.stringify(data))
     } catch (error) {
       throw error
     }
@@ -55,13 +59,9 @@ function SearchForm({ closeSearch }) {
     if (!value) {
       return
     }
-
-    // check for empty string ''?
     
     storeLocally('searches', value)
-    
-    setSearchValue(value)
-    
+    setSearchValue(value) 
   }
   
   const onKeyDown = event => {
