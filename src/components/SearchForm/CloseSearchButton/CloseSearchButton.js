@@ -1,5 +1,5 @@
 import XmarkIcon from '../../Icons/XmarkIcon/XmarkIcon'
-import styles from './CloseSearchButton.modules.css'
+import styles from './CloseSearchButton.module.css'
 
 function CloseSearchButton() {
  return (
