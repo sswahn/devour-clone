@@ -1,0 +1,24 @@
+/* Search Form Input */
+
+.input {
+  background-color: #444;
+  border: 0;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  color: var(--white);
+  font-size: 18px;
+  height: 40px;
+  padding-left: 8px;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-search-decoration,
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-results-button,
+.input::-webkit-search-results-decoration {
+  display: none;
+}
