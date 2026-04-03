@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
@@ -9,7 +9,7 @@ import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
-  const [recentSearches, setRecentSearches] = useState(JSON.parse(localStorage.getItem('searches') || '[]'))
+  const [recentSearches, setRecentSearches] = useState([])
 
   const onSubmit = event => {
     event.preventDefault()
@@ -55,6 +55,13 @@ function SearchForm({ closeSearch }) {
     }
   }
 
+  useEffect(() => {
+    const item = localStorage.getItem('searches')
+    if (item) {
+      setRecentSearches(JSON.parse(item) )
+    }
+  }, [])
+  
   return (
     <search className={styles.search}>
       <form onSubmit={onSubmit}>
