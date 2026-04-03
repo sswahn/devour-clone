@@ -23,6 +23,24 @@ function SearchInput({  }) {
     storeLocally('searches', value)
     setSearchValue(value) 
   }
+
+  const onKeyDown = event => {
+
+    return
+    
+    switch(event.key) {
+      case 'Enter':
+        return console.log('Enter key') // handle for enter key (prolly ignore it)
+      case 'Escape':
+        return console.log('Escape key') // escape -> clearCloseInput()
+      case 'ArrowUp':
+        return console.log('ArrowUp key') // select suggestion up
+      case 'ArrowDown':
+        return console.log('ArrowDown key') // select suggestion down
+      default:
+        return console.log('key', event.key)
+    }
+  }
   
   return (
     <input 
