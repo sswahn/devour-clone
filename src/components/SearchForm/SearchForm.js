@@ -7,11 +7,10 @@ import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
+  const [searchValue, setSearchValue] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
-  const [tempTranscript, setTempTranscript] = useState('')
-  const [finalTranscript, setFinalTranscript] = useState([])
-  
+
   const onSubmit = event => {
     event.preventDefault()
   }
@@ -29,16 +28,9 @@ function SearchForm({ closeSearch }) {
         <div>
           <SearchIcon />
         </div>
-        <SearchInput
-          tempTranscript={tempTranscript}
-          finalTranscript={finalTranscript}   
-          setSearchResults={setSearchResults}
-        />
+        <SearchInput setSearchValue={setSearchValue} setSearchResults={setSearchResults} />
         <div>
-          <SpeechRecognitionButton 
-            setTempTranscript={setTempTranscript} 
-            setFinalTranscript={setFinalTranscript} 
-          />
+          <SpeechRecognitionButton setSearchValue={setSearchValue} />
           <CloseSearchButton closeSearch={closeSearch} />
         </div>
       </form>
@@ -47,7 +39,8 @@ function SearchForm({ closeSearch }) {
         {recentSearches?.length > 0 && recentSearches.map((search, index) =>
           <li key={index} role="option">{search}</li>
         )}    
-      </ul>      
+      </ul>  
+    
     </search>
   )
 }
