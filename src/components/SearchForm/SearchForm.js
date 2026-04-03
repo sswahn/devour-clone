@@ -15,12 +15,6 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
   
-  
-  const handleCloseSearch = async event => {
-    // await document.exitFullscreen()
-    closeSearch()
-  }
-
   useEffect(() => {
     const item = localStorage.getItem('searches')
     if (item) {
@@ -46,10 +40,7 @@ function SearchForm({ closeSearch }) {
             setTempTranscript={setTempTranscript} 
             setFinalTranscript={setFinalTranscript} 
           />
-    
-          <button type="button" onClick={handleCloseSearch} aria-label="close search">
-            <XmarkIcon />
-          </button>
+          <CloseSearchButton />
         </div>
       </form>
 
