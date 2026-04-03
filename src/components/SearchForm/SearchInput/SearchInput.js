@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import useDebounce from '../../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
-  const [searchValue, setSearchValue] = useState('')
+function SearchInput({ searchValue, setSearchValue, setSearchResults }) {
   
   const requestData = async value => {
 
@@ -56,19 +55,6 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
     }
   }
 
-  const handleTranscript = () => {
-    console.log('finalTranscript: ', finalTranscript)
-    console.log('tempTranscript: ', tempTranscript)
-    
-    if (finalTranscript.length || tempTranscript) {
-      setSearchValue(`${finalTranscript.join(' ')} ${tempTranscript}`.trim())
-    }
-  }
-
-  useEffect(() => {
-    handleTranscript()
-  }, [finalTranscript, tempTranscript])
-  
   return (
     <input
       className={styles.input}
