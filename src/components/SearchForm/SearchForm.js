@@ -48,8 +48,8 @@ function SearchForm({ closeSearch }) {
 
   const storeLocally = useDebounce((key, value) => {
     try {
-        const item = localStorage.getItem(key) || '[]'
-        const existing = JSON.parse(item)
+        const item = localStorage.getItem(key)
+        const existing = item ? JSON.parse(item) : []
         if (existing.some(str => str.includes(value))) { // check if value is substring of data array
           return
         }
