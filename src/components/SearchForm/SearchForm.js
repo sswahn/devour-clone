@@ -28,7 +28,11 @@ function SearchForm({ closeSearch }) {
         <div>
           <SearchIcon />
         </div>
-        <SearchInput setSearchValue={setSearchValue} setSearchResults={setSearchResults} />
+        <SearchInput 
+          searchValue={searchValue} 
+          setSearchValue={setSearchValue} 
+          setSearchResults={setSearchResults} 
+        />
         <div>
           <SpeechRecognitionButton setSearchValue={setSearchValue} />
           <CloseSearchButton closeSearch={closeSearch} />
