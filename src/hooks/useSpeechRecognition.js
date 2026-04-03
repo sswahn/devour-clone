@@ -8,7 +8,7 @@ function useSpeechRecognition({
 } = {}) {
   const recognitionRef = useRef(null)
   const isListeningRef = useRef(false)
-  const shouldRestartRef = useRef(autoRestart)
+  
   const [isSupported, setIsSupported] = useState(true)
   const [isListening, setIsListening] = useState(false)
   const [finalTranscript, setFinalTranscript] = useState('')
@@ -49,9 +49,6 @@ function useSpeechRecognition({
 
     recognition.onerror = event => {
       setError(event.error)
-      if (event.error === 'not-allowed') {
-        shouldRestartRef.current = false
-      }
     }
 
     recognition.onresult = event => {
@@ -76,7 +73,6 @@ function useSpeechRecognition({
     }
 
     return () => {
-      shouldRestartRef.current = false
       recognition.abort()
     }
   }, [continuous, interimResults, lang, autoRestart])
