@@ -37,10 +37,6 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
 
   const onChange = event => {
     const value = event.target.value.trim().toLowerCase()
-
-    console.log('searchValue: ', searchValue)
-    console.log('value: ', value)
-    
     setSearchValue(value)
     handleData(value)
   }
@@ -61,6 +57,9 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
   }
 
   const handleTranscript = () => {
+    console.log('finalTranscript: ', finalTranscript)
+    console.log('tempTranscript: ', tempTranscript)
+    
     if (finalTranscript.length || tempTranscript) {
       setSearchValue(`${finalTranscript.join(' ')} ${tempTranscript}`.trim())
     }
