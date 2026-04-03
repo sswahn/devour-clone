@@ -32,7 +32,7 @@ function SearchInput({ setSearchValue }) {
     setSearchValue(value) 
     storeLocally(value)
     requestData(value)
-  }, [600])
+  }, 600)
 
   const onKeyDown = event => {
     switch(event.key) {
