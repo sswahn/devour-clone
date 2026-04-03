@@ -18,7 +18,12 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
   const recognition = useSpeechRecognition()
 
   const handleSpeechRecognition = () => {
+    
+    console.log('handleSpeechRecognition clicked!')
+    
     recognition.start()
+
+    console.log('isListening: ', recognition.isListening)
 
     console.log('recognition.interimTranscript: ', recognition.interimTranscript)
     console.log('recognition.finalTranscript: ', recognition.finalTranscript)
