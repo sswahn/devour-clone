@@ -8,7 +8,6 @@ function SpeechRecognitionButton() {
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
-    recognition.start()
     recognition.onresult = event => {
       let transcript = '';
       for (let i = event.resultIndex; i < event.results.length; i++) {
@@ -16,6 +15,7 @@ function SpeechRecognitionButton() {
       }
       console.log(transcript) // set state with transcript
     }
+    recognition.start()
   }
 
   return window.SpeechRecognition || window.webkitSpeechRecognition && 
