@@ -52,11 +52,9 @@ function SearchForm({ closeSearch }) {
   
   const onChange = event => {
     const value = event.target.value.trim().toLowerCase()
-    /*
-    if (!value.length) {
+    if (!value) {
       return
     }
-    */
 
     // check for empty string ''?
     
