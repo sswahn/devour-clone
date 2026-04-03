@@ -1,15 +1,16 @@
+import { useRef } from 'react'
 import MicrophoneIcon from '../../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './SpeechRecognitionButton.module.css'
 
 function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
-
+  const recognition = useRef()
   // consider using a custom hook
   const speechRecognition = () => {
 
     console.log('speechRecognition function fired.')
     
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-    const recognition = new SpeechRecognition()
+    recognition.current = new SpeechRecognition()
     recognition.continuous = true
     recognition.interimResults = true
     recognition.lang = 'en-US'
