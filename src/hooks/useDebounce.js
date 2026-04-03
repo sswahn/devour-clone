@@ -1,13 +1,19 @@
-import { useRef } from 'react'
+import { useRef, useCallback, useEffect } from 'react'
 
 function useDebounce(fn, delay) {
   const timeoutRef = useRef()
-  return (...args) => {
+  const fnRef = useRef(fn)
+  
+  useEffect(() => {
+    fnRef.current = fn
+  }, [fn])
+  
+  return useCallback(...args) => {
     clearTimeout(timeoutRef.current)
     timeoutRef.current = setTimeout(() => {
       fn(...args)
     }, delay)
-  }
+  }, [delay])
 }
 
 export default useDebounce
