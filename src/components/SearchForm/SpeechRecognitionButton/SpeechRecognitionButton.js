@@ -1,9 +1,9 @@
-import { memo } from 'react'
+import { useRef, useEffect, memo } from 'react'
 import MicrophoneIcon from '../../Icons/MicrophoneIcon/MicrophoneIcon'
 import styles from './SpeechRecognitionButton.module.css'
 
 function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
-  
+  const recognitionRef = useRef()
   // consider using a custom hook
   const speechRecognition = () => {
 
@@ -15,7 +15,14 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     recognition.interimResults = true
     recognition.lang = 'en-US'
 
+    recognitionRef.current = recognition
+    
     console.log('recognition set.')
+
+    
+    recognition.onerror = event => {
+      console.error('recognition error: ', event.error)
+    }
     
     recognition.onresult = event => { 
       let temp = ''
@@ -42,6 +49,12 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     }
     recognition.start()
   }
+
+  useEffect(() => {
+    return () => {
+      recognitionRef.current.stop()
+    }
+  }, [])
 
   return (window.SpeechRecognition || window.webkitSpeechRecognition) && (
     <button className={styles.speechRecognitionButton} onClick={speechRecognition} type="button" aria-label="voice recognition">
