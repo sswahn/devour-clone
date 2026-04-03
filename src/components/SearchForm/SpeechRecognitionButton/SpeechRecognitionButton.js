@@ -1,5 +1,8 @@
 
-function SpeechRecognitionButton() {
+function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
+  
+  // set transcript for active update
+  // set 
 
   // consider using a custom hook
   const speechRecognition = () => {
@@ -12,6 +15,11 @@ function SpeechRecognitionButton() {
       let transcript = '';
       for (let i = event.resultIndex; i < event.results.length; i++) {
         transcript += event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          setFinalTranscript(prevTranscript => [...prevTranscript, transcript])
+        } else {
+          setTempTranscript(transcript)
+        }
       }
       console.log(transcript) // set state with transcript
     }
