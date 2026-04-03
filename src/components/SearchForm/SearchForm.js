@@ -19,16 +19,6 @@ function SearchForm({ closeSearch }) {
     closeSearch()
   }
 
-  
-  // make/use a custom hook
-  const speechRecognition = () => {
-    const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
-    recognition.continuous = true
-    recognition.interimResults = true
-    recognition.lang = 'en-US'
-    recognition.start()
-  }
-
   useEffect(() => {
     const item = localStorage.getItem('searches')
     if (item) {
@@ -46,11 +36,8 @@ function SearchForm({ closeSearch }) {
         <SearchInput setSearchResults={setSearchResults} />
 
         <div>
-          {/* !!window.SpeechRecognition && */
-            <button type="button" onClick={speechRecognition} aria-label="voice recognition">
-              <MicrophoneIcon size={18} />
-            </button>
-          }
+          <SpeechRecognitionButton />
+    
           <button type="button" onClick={handleCloseSearch} aria-label="close search">
             <XmarkIcon />
           </button>
