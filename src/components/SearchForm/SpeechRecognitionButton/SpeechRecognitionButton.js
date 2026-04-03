@@ -1,7 +1,5 @@
 
 function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
-  
-  // value={`${finalTranscript.join(' ')} ${tempTranscript}`.trim()}
 
   // consider using a custom hook
   const speechRecognition = () => {
