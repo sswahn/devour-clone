@@ -1,3 +1,79 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchInput/SearchInput.module.css ***!
+  \****************************************************************************************************************/
+/* Search Form Input */
+
+.E5mhg1QQHXBJyTe4V76v {
+  background-color: #444;
+  border: 0;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  color: var(--white);
+  font-size: 18px;
+  height: 40px;
+  padding-left: 8px;
+  width: 100%;
+}
+
+.E5mhg1QQHXBJyTe4V76v:focus {
+  outline: none;
+}
+
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-decoration,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-cancel-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-decoration {
+  display: none;
+}
+
+/*!****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SpeechRecognitionButton/SpeechRecognitionButton.module.css ***!
+  \****************************************************************************************************************************************/
+/* Search Form Speech Recognition Button */
+
+.iMFEEY1YvDzgj8w_W3wI {
+  align-items: center; 
+  background: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.iMFEEY1YvDzgj8w_W3wI:active {
+  background-color: #666;
+}
+
+.iMFEEY1YvDzgj8w_W3wI svg {  
+  fill: var(--white);
+}
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/CloseSearchButton/CloseSearchButton.module.css ***!
+  \****************************************************************************************************************************/
+/* Search Form Close Search Button */
+
+.ULUID8eHhRmI5wfW5qcD {
+  align-items: center; 
+  background: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.ULUID8eHhRmI5wfW5qcD:active {
+  background-color: #666;
+}
+
+.ULUID8eHhRmI5wfW5qcD svg {  
+  fill: var(--white);
+}
+
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/searchform.module.css ***!
   \***************************************************************************************************/
