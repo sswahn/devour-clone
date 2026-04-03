@@ -12,16 +12,24 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     recognition.lang = 'en-US'
     recognition.onresult = event => { 
       let temp = ''
+      
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const segment = event.results[i][0].transcript
+
+        console.log('event.results[i]: ', event.results[i])
+        console.log('event.results[i][0].transcript: ', segment)
+        
         if (event.results[i].isFinal) {
           setFinalTranscript(prev => [...prev, segment])
           setTempTranscript('')
         } else {
           temp += segment
+          
+          console.log('tempTranscript: ', temp)
           setTempTranscript(temp)
         }
       }
+      
     }
     recognition.start()
   }
