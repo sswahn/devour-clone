@@ -27,15 +27,23 @@ function SearchInput({ tempTranscript, finalTranscript, setSearchResults }) {
     localStorage.setItem(key, JSON.stringify(data))
   }
 
-  const onChange = useDebounce(event => {
-    const value = event.target.value.trim().toLowerCase()
+  const handleData = useDebounce(value => {
     if (!value) {
       return
     }
-    setSearchValue(value)
     storeLocally(value)
     requestData(value)
   }, 600)
+
+  const onChange = event => {
+    const value = event.target.value.trim().toLowerCase()
+
+    console.log('searchValue: ', searchValue)
+    console.log('value: ', value)
+    
+    setSearchValue(value)
+    handleData(value)
+  }
 
   const onKeyDown = event => {
     switch(event.key) {
