@@ -1,4 +1,5 @@
 import useDebounce from '../../hooks/useDebounce'
+import styles from './SearchInput.module.css'
 
 function SearchInput({ setSearchResults }) {
 
@@ -50,7 +51,7 @@ function SearchInput({ setSearchResults }) {
   
   return (
     <input 
-      ref={inputRef}
+      className={styles.input}
       type="search"
       enterKeyHint="search"
       onChange={onChange}
