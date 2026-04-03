@@ -3,6 +3,11 @@ import server from '../../utilities/server'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
+
+import SearchInput from './SearchInput/SearchInput'
+import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
+import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
+
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
