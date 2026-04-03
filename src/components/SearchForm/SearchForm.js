@@ -8,7 +8,9 @@ import styles from './searchform.module.css'
 function SearchForm({ closeSearch }) {
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
-
+  const [tempTranscript, setTempTranscript] = useState('')
+  const [finalTranscript, setFinalTranscript] = useState([])
+  
   const onSubmit = event => {
     event.preventDefault()
   }
@@ -33,10 +35,17 @@ function SearchForm({ closeSearch }) {
           <SearchIcon />
         </div>
     
-        <SearchInput setSearchResults={setSearchResults} />
+        <SearchInput
+          tempTranscript={tempTranscript}
+          finalTranscript={finalTranscript}   
+          setSearchResults={setSearchResults}
+        />
 
         <div>
-          <SpeechRecognitionButton />
+          <SpeechRecognitionButton 
+            setTempTranscript={setTempTranscript} 
+            setFinalTranscript={setFinalTranscript} 
+          />
     
           <button type="button" onClick={handleCloseSearch} aria-label="close search">
             <XmarkIcon />
