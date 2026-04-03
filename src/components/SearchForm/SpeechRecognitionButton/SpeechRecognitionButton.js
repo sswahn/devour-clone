@@ -1,5 +1,5 @@
 import MicrophoneIcon from '../../Icons/MicrophoneIcon/MicrophoneIcon'
-import styles from './SpeechRecognitionButton.modules.css'
+import styles from './SpeechRecognitionButton.module.css'
 
 function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
 
