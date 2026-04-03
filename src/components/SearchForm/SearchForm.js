@@ -42,6 +42,20 @@ function SearchForm({ closeSearch }) {
     }
   }
 
+  const storeLocally = useDebounce((key, value) => {
+    try {
+      const item = localStorage.getItem(key)
+      const existing = item ? JSON.parse(item) : []
+      if (existing.includes(value)) {
+        return
+      }
+      const data = [value, ...existing].slice(0, 5)
+      localStorage.setItem(key, JSON.stringify(data))
+    } catch (error) {
+      throw error
+    }
+  }, 600)
+
   return (
     <search className={styles.search}>
       <form onSubmit={onSubmit}>
@@ -49,7 +63,7 @@ function SearchForm({ closeSearch }) {
           <SearchIcon />
         </div>
     
-        <SearchInput />
+        <SearchInput setSearchValue={setSearchValue} />
 
         <div>
           {/* !!window.SpeechRecognition && */
