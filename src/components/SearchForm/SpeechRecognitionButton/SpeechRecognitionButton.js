@@ -38,7 +38,11 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
 
 
   return recognition.isSupported && (
-    <button className={styles.speechRecognitionButton} onClick={handleSpeechRecognition} type="button" aria-label="voice recognition">
+    <button 
+      className={`${styles.speechRecognitionButton} ${recognition.isListening ? styles.active : ''}`} 
+      onClick={handleSpeechRecognition} 
+      type="button" 
+      aria-label="voice recognition">
       <MicrophoneIcon size={18} />
     </button>
   )
