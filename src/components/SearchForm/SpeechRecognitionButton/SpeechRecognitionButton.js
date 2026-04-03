@@ -32,6 +32,11 @@ function SpeechRecognitionButton({ setTempTranscript, setFinalTranscript }) {
     setFinalTranscript(recognition.finalTranscript)
   }
 
+  useEffect(() => {
+    setFinalTranscript(recognition.finalTranscript)
+  }, [recognition.finalTranscript, setFinalTranscript])
+
+
   return recognition.isSupported && (
     <button className={styles.speechRecognitionButton} onClick={handleSpeechRecognition} type="button" aria-label="voice recognition">
       <MicrophoneIcon size={18} />
