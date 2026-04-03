@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import server from '../../utilities/server'
-import useDebounce from '../../hooks/useDebounce'
 import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
@@ -42,7 +41,7 @@ function SearchForm({ closeSearch }) {
     }
   }
 
-  const storeLocally = useDebounce((key, value) => {
+  const storeLocally = (key, value) => {
     try {
       const item = localStorage.getItem(key)
       const existing = item ? JSON.parse(item) : []
@@ -54,7 +53,7 @@ function SearchForm({ closeSearch }) {
     } catch (error) {
       throw error
     }
-  }, 600)
+  }
 
   return (
     <search className={styles.search}>
