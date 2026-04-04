@@ -17,7 +17,7 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => event.preventDefault()
 
   const requestSearchResults = useDebounce(async () => {
-    if (!searchValue) {
+    if (!searchValue) { // might have to .trim() here
       return
     }
     setLoading(true)
