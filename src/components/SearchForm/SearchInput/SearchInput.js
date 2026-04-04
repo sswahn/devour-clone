@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ loading, searchValue, setSearchValue }) {
+function SearchInput({ searchValue, setSearchValue }) {
 
   const onChange = event => {
     setSearchValue(event.target.value)
@@ -14,7 +14,6 @@ function SearchInput({ loading, searchValue, setSearchValue }) {
       value={searchValue}
       enterKeyHint="search"
       onChange={onChange}
-      disabled={loading}
       maxLength="288"
       pattern="[a-zA-Z0-9 ]+" 
       title="Please use letters and numbers only."
