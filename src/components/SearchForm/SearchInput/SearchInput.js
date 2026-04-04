@@ -16,7 +16,6 @@ function SearchInput({ loading, searchValue, setSearchValue }) {
       value={searchValue}
       enterKeyHint="search"
       onChange={onChange}
-      onKeyDown={onKeyDown}
       disabled={loading}
       maxLength="288"
       autoFocus
