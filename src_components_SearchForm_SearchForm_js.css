@@ -118,6 +118,9 @@
 .TYu9xxiA93dMGBlCIky5 form {
   display: flex;
   justify-content: center;
+  width: 100%;
+
+  border: 1px dashed magenta;
 }
 
 .TYu9xxiA93dMGBlCIky5 form div:first-child {
