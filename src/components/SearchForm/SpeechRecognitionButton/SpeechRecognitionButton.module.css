@@ -9,8 +9,11 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  flex: 1;
+  /*
   height: 40px;
   width: 100%;
+  */
 
   border: 1px dashed blue;
 }
