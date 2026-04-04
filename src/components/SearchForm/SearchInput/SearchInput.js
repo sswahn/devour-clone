@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ loading, searchValue, setSearchValue, requestSearchResults }) {
+function SearchInput({ loading, searchValue, setSearchValue }) {
 
   const onChange = event => {
     const value = event.target.value
