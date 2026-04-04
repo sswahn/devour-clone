@@ -9,11 +9,8 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
-
   height: 44px;
   width: 44px;
-
-  border: 1px dashed blue;
 }
 
 .speechRecognitionButton:active {
