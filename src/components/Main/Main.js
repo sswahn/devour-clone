@@ -20,6 +20,8 @@ function Main() {
   }
 
   const btnStyle = {
+    background: 'blue',
+    border: '1px dashed red',
     width: '50px',
     height: '50px',
     margin: 'auto'
