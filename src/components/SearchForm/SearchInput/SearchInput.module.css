@@ -23,6 +23,8 @@
 .input::-webkit-search-results-button,
 .input::-webkit-search-results-decoration {
   cursor: pointer;
+  height: 24px;
   padding-right: 8px;
+  width: 24px;
 }
 
