@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import useDebounce from '../../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ searchValue, setSearchValue, setSearchResults, requestSearchResults }) {
+function SearchInput({ searchValue, setSearchValue, requestSearchResults }) {
 
   const handleSearch = value => {
     setSearchValue(value)
