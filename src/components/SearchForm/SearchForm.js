@@ -46,7 +46,7 @@ function SearchForm({ closeSearch }) {
     <search className={styles.search}>
       <form onSubmit={onSubmit}>
         <div>
-          <SearchIcon />
+          <SearchIcon size={18} />
         </div>
         <SearchInput 
           searchValue={searchValue} 
