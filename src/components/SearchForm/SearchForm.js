@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
+import { config } from '../../config'
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
 import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
-import config from '../../config'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
@@ -33,9 +33,6 @@ function SearchForm({ closeSearch }) {
   }, 600)
 
   const storeSearchTermLocally = value => {
-
-    console.log('config: ', config)
-    
     const key = config.storage.search.terms
     const item = localStorage.getItem(key)
     const existing = item ? JSON.parse(item) : []
