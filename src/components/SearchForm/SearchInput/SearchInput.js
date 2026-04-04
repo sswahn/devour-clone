@@ -5,7 +5,7 @@ function SearchInput({ searchValue, setSearchValue }) {
 
   const onChange = ({ target }) => {
     if (target.validity.patternMismatch) {
-      return target.reportValidity()
+      target.reportValidity()
     }
     setSearchValue(target.value)    
   }
