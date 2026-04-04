@@ -38,7 +38,7 @@ function SearchInput({ searchValue, setSearchValue, setSearchResults }) {
   }, 600)
 
   const onChange = event => {
-    const value = event.target.value
+    const value = event.target.value //.trim().toLowerCase()
     setSearchValue(value)
     handleData(value)
   }
