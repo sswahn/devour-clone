@@ -15,7 +15,7 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  const makeSearchRequest = async value => {
+  const requestSearchResults = async value => {
     return;
     const request = {
       user: user.data,
@@ -55,10 +55,13 @@ function SearchForm({ closeSearch }) {
           <SearchInput 
             searchValue={searchValue} 
             setSearchValue={setSearchValue} 
-            setSearchResults={setSearchResults} 
+            requestSearchResults={requestSearchResults} 
           />
           <div>
-            <SpeechRecognitionButton setSearchValue={setSearchValue} />
+            <SpeechRecognitionButton 
+              setSearchValue={setSearchValue}
+              requestSearchResults={requestSearchResults}
+            />
           </div>
         </form>
       </div>
