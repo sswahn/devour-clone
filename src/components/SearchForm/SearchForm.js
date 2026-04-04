@@ -32,7 +32,7 @@ function SearchForm({ closeSearch }) {
   }, 600)
 
   const storeSearchTermLocally = value => {
-    const key = 'searches' // config.storage.key.search.term // search.result
+    const key = config.storage.search.terms
     const item = localStorage.getItem(key)
     const existing = item ? JSON.parse(item) : []
     if (existing.includes(value)) {
@@ -55,6 +55,8 @@ function SearchForm({ closeSearch }) {
   
   useEffect(() => {
     loadRecentSearchTerms()
+    
+    localStorage.clear();
   }, [])
 
   return (
