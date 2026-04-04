@@ -8,6 +8,8 @@ function SearchInput({ searchValue, setSearchValue, setError }) {
       target.reportValidity()
       setError(true)
     } else {
+      // check if there is and error before setting
+      // error && setError(false)
       setError(false)
     }
     setSearchValue(target.value)
