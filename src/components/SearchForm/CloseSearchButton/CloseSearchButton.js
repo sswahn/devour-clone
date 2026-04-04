@@ -1,4 +1,4 @@
-import XmarkIcon from '../../Icons/XmarkIcon/XmarkIcon'
+import ArrowLeftIcon from '../../Icons/ArrowLeftIcon/ArrorLeftIcon'
 import styles from './CloseSearchButton.module.css'
 
 function CloseSearchButton({ closeSearch }) {
@@ -10,7 +10,7 @@ function CloseSearchButton({ closeSearch }) {
  
  return (
    <button className={styles.closeSearchButton} onClick={handleCloseSearch} type="button" aria-label="close search">
-     <XmarkIcon />
+     <ArrowLeftIcon />
    </button>
   )
 }
