@@ -25,7 +25,7 @@
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-cancel-button,
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-results-button,
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-results-decoration {
-
+  cursor: pointer;
   padding-right: 8px;
 }
 
