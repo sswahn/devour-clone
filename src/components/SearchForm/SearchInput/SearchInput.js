@@ -4,9 +4,7 @@ import styles from './SearchInput.module.css'
 function SearchInput({ loading, searchValue, setSearchValue }) {
 
   const onChange = event => {
-    const value = event.target.value
-    setSearchValue(value)
-    requestSearchResults(value)
+    setSearchValue(event.target.value)
   }
 
   return (
