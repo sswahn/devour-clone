@@ -20,14 +20,15 @@
   outline: none;
 }
 
-/*
-.input::-webkit-search-decoration,
-.input::-webkit-search-cancel-button,
-.input::-webkit-search-results-button,
-.input::-webkit-search-results-decoration {
-  display: none;
+
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-decoration,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-cancel-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-decoration {
+
+  padding-right: 8px;
 }
-*/
+
 
 /*!****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SpeechRecognitionButton/SpeechRecognitionButton.module.css ***!
