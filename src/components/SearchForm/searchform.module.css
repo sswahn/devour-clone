@@ -63,6 +63,7 @@
 .search ul {
   color: white;
   font-size: 18px;
+  list-style-type: none;
   margin: 8px 16px 0 16px;
   width: 100%;
 }
