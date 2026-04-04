@@ -4,12 +4,15 @@ import styles from './SearchInput.module.css'
 function SearchInput({ searchValue, setSearchValue }) {
 
   const onChange = ({ target }) => {
-    if (target.validity.patternMismatch) {
-      target.reportValidity()
-    }
     setSearchValue(target.value)    
   }
 
+  const onInput = ({ target }) => {
+    if (target.validity.patternMismatch) {
+      target.reportValidity()
+    }
+  }
+  
   return (
     <input
       className={styles.input}
@@ -17,6 +20,7 @@ function SearchInput({ searchValue, setSearchValue }) {
       value={searchValue}
       enterKeyHint="search"
       onChange={onChange}
+      onInput={onInput}
       maxLength="288"
       pattern="[a-zA-Z0-9 ]+" 
       title="Please use letters and numbers only."
