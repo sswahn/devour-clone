@@ -18,6 +18,8 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
+  // original.replace(/[^a-z0-9]/gi, '')
+
   const requestSearchResults = useDebounce(async () => {
     setLoading(true)
     const request = {
