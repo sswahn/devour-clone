@@ -18,7 +18,6 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  // 
   const requestSearchResults = useDebounce(async () => {
     if (!searchValue) {
       return
