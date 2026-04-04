@@ -38,6 +38,8 @@
   align-items: center; 
   background: none;
   border: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   justify-content: center;
   cursor: pointer;
