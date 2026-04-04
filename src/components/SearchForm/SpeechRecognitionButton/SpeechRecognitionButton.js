@@ -17,15 +17,16 @@ reset
 
 function SpeechRecognitionButton({ setSearchValue }) {
   const recognition = useSpeechRecognition()
-  const { playStart, playStop } = useSpeechChime()
-
+  const chime = useSpeechChime()
 
   const handleSpeechRecognition = () => {
     if (recognition.isListening) {
       recognition.stop()
+      chime.playStop()
     } else {
       recognition.reset()
       recognition.start()
+      chime.playStart()
     }
   }
 
