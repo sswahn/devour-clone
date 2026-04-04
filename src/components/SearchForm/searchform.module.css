@@ -10,10 +10,15 @@
   top: 0;
   width: 100%;
   z-index: 200;
+
+  border: 1px dashed blue;
 }
+
 .search div {
   display: flex;
   width: 100%;
+
+  border: 1px dashed orange;
 }
 
 .search form {
