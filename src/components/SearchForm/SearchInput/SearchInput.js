@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import useDebounce from '../../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
 function SearchInput({ searchValue, setSearchValue, requestSearchResults }) {
