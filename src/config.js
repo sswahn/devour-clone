@@ -4,10 +4,8 @@ export const config = {
   },
   storage: {
     search: {
-      terms: 'searchTerms',
-      results: 'searchResults'
+      terms: 'searchTerms'
     },
-    
   }
   //config.storage.keys.search.terms
     /*
