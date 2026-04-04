@@ -3,13 +3,11 @@ export const config = {
     search: 'https://devour.social/api/v1/search'
   },
   storage: {
-    keys: {
-      search: {
-        terms: 'searchTerms',
-        results: 'searchResults'
-      },
-      // other storage key namespaces... camera etc.
-    }
+    search: {
+      terms: 'searchTerms',
+      results: 'searchResults'
+    },
+    
   }
   //config.storage.keys.search.terms
     /*
