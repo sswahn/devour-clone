@@ -22,9 +22,9 @@ function Main() {
   const btnStyle = {
     background: 'blue',
     border: '1px dashed red',
-    width: '50px',
-    height: '50px',
-    margin: '200px auto'
+    width: '150px',
+    height: '150px',
+    margin: '200px auto 0 auto'
   }
   
   return (
