@@ -22,7 +22,7 @@ function SearchForm({ closeSearch }) {
     }
     setLoading(true)
     const request = {
-      user: user.data,
+     // user: user.data,
       message: data
       // ... additional data to improve search results, ie, prevSearch etc.
     }
