@@ -1,14 +1,21 @@
 export const config = {
-  api: {
-    search: 'https://devour.social/api/v1/search'
+  cookie: {
+    session: 'session'
   },
   storage: {
     search: {
       terms: 'searchTerms'
-    },
-  }
-  //config.storage.keys.search.terms
-    /*
+    }
+  },
+  api: {
+    search: 'https://devour.social/api/v1/search',
+    turnstile: '/api/v1/turnstile',
+    posts: '/api/v1/posts',
+    test: '/api/v1/test',
+    likes: '',
+    shares: '',
+    views: '',
+    comments: '',
     user: {
       logout: '/api/v1/logout',
       login: '/api/v1/login',
@@ -17,26 +24,8 @@ export const config = {
       confirm_forgot_password: '/api/v1/confirm-forgot-password',
       session: '/api/v1/session'
     },
-    turnstile: '/api/v1/turnstile',
     log: {
       errors: ''
-    },
-    posts: '/api/v1/posts',
-    test: '/api/v1/test',
-    likes: '',
-    shares: '',
-    views: '',
-    comments: '',
-  },
-  store: {
-    posts: {
-      index: 'posts',
-      create: 'create',
-      captions: 'captions'
     }
-  },
-  cookie: {
-    session: 'session'
   }
-  */
 }
