@@ -16,7 +16,7 @@ function SearchInput({ loading, searchValue, setSearchValue }) {
       onChange={onChange}
       disabled={loading}
       maxLength="288"
-      pattern="[a-zA-Z0-9]+" 
+      pattern="[a-zA-Z0-9 ]+" 
       title="Please use letters and numbers only."
       required
       autoFocus
