@@ -42,8 +42,6 @@ function SearchForm({ closeSearch }) {
     }
   }, [])
 
-  // remove x button from end of input, let mic be at end
-  
   return (
     <search className={styles.search}>
       <form onSubmit={onSubmit}>
