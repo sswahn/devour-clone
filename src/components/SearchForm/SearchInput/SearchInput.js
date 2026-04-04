@@ -2,53 +2,25 @@ import { useState, useEffect } from 'react'
 import useDebounce from '../../../hooks/useDebounce'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ searchValue, setSearchValue, setSearchResults }) {
-  
-  const requestData = async value => {
+function SearchInput({ searchValue, setSearchValue, setSearchResults, requestSearchResults }) {
 
-    return;
-    
-    const request = {
-      value
-    }
-    const response = await server.post(config.api.search, request)
-    setSearchResults(response.message)
-  }
-
-  // store and request functions go into the Form
-  // and are passed to this and the speech recognition
-  
-  const storeLocally = value => {
-    const key = 'searches'
-    const item = localStorage.getItem(key)
-    const existing = item ? JSON.parse(item) : []
-    if (existing.includes(value)) {
-      return
-    }
-    const data = [value, ...existing].slice(0, 5)
-    localStorage.setItem(key, JSON.stringify(data))
-  }
-
-  const handleData = useDebounce(value => {
-    if (!value) {
-      return
-    }
-    storeLocally(value)
-    requestData(value)
-  }, 600)
-
-  const onChange = event => {
-    const value = event.target.value //.trim().toLowerCase()
+  const handleSearch = value => {
     setSearchValue(value)
-    handleData(value)
+    requestSearchResults(value)
+  }
+  
+  const onChange = event => {
+    const value = event.target.value
+    handleSearch(value)
   }
 
-  const onKeyDown = event => {
+  const onKeyDown = event => { // might have to move this to parent, to focus on list items.
+    const value = event.target.value
     switch(event.key) {
       case 'Enter':
-        return console.log('Enter key') // handle for enter key (prolly ignore it)
+        return handleSearch(value)
       case 'Escape':
-        return console.log('Escape key') // escape -> clearCloseInput()
+        return setSearchValue('')
       case 'ArrowUp':
         return console.log('ArrowUp key') // select suggestion up
       case 'ArrowDown':
