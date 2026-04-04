@@ -1,6 +1,6 @@
 export const config = {
   api: {
-    search: 'devour.social/api/v1/search'
+    search: 'https://devour.social/api/v1/search'
   },
   storage: {
     keys: {
