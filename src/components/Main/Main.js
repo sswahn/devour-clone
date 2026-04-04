@@ -24,7 +24,7 @@ function Main() {
     border: '1px dashed red',
     width: '50px',
     height: '50px',
-    margin: 'auto'
+    margin: '200px auto'
   }
   
   return (
