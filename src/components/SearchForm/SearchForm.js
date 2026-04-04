@@ -5,6 +5,7 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
 import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
+import config from '../../config'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
@@ -24,14 +25,14 @@ function SearchForm({ closeSearch }) {
       message: searchValue
       // ...
     }
-    const response = await server.post(config.api.search, request)
-    setSearchResults(response.message)
+    //const response = await server.post(config.api.search, request)
+   // setSearchResults(response.message)
     storeSearchTermLocally(searchValue)
     setLoading(false)
   }, 600)
 
   const storeSearchTermLocally = value => {
-    const key = 'searches'
+    const key = 'searches' // config.storage.key.search.term // search.result
     const item = localStorage.getItem(key)
     const existing = item ? JSON.parse(item) : []
     if (existing.includes(value)) {
@@ -40,12 +41,20 @@ function SearchForm({ closeSearch }) {
     const data = [value, ...existing].slice(0, 5)
     localStorage.setItem(key, JSON.stringify(data))
   }
-  
-  useEffect(() => {
+
+  const loadRecentSearchTerms = () => {
     const item = localStorage.getItem('searches')
     if (item) {
       setRecentSearches(JSON.parse(item) )
     }
+  }
+
+  useEffect(() => {
+    requestSearchResults()
+  }, [searchValue])
+  
+  useEffect(() => {
+    loadRecentSearchTerms()
   }, [])
 
   return (
