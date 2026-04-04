@@ -68,7 +68,6 @@ function SearchForm({ closeSearch }) {
             <SearchIcon size={18} />
           </div>
           <SearchInput 
-            loading={loading}
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
           />
