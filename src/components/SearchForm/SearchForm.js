@@ -14,9 +14,7 @@ function SearchForm({ closeSearch }) {
   const [recentSearches, setRecentSearches] = useState([])
   const [loading, setLoading] = useState(false)
 
-  const onSubmit = event => {
-    event.preventDefault()
-  }
+  const onSubmit = event => event.preventDefault()
 
   const requestSearchResults = useDebounce(async () => {
     if (!searchValue) {
