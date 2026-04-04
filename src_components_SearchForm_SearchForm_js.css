@@ -119,15 +119,17 @@
 }
 
 .TYu9xxiA93dMGBlCIky5 form div:last-child {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #444;
   border: 1px solid #555;
   border-left: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 40px;
-  width: 100px;
+  padding: 0 8px;
+  width: 40px;
 }
 
 .TYu9xxiA93dMGBlCIky5 form > svg {  
