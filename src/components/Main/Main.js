@@ -13,27 +13,25 @@ function Main() {
 
   const { playStart, playStop } = useSpeechChime()
 
-  const handleStart = () => {
-    playStart()
-    startSpeechRecognition()
-  }
   
-  const handleStop = () => {
+  const stop = () => {
     playStop()
-    stopSpeechRecognition()
   }
 
-  const chime = event => {
-    
-    handleStart()
-
-    const timeout = setTimeout(() => {
-      handleStop()
-    }, 5000)
+  const start = event => {
+    playStart()
   }
 
-  const btnStyle = {
+  const btn1Style = {
     background: 'blue',
+    border: '1px dashed red',
+    width: '150px',
+    height: '150px',
+    margin: '200px auto 0 auto'
+  }
+
+  const btn2Style = {
+    background: 'red',
     border: '1px dashed red',
     width: '150px',
     height: '150px',
@@ -43,8 +41,12 @@ function Main() {
   return (
     <main className={styles.main}>
 
-     <button onClick={chime} type="button" style={btnStyle}>
-      Chime 
+     <button onClick={start} type="button" style={btn1Style}>
+      Chime 1
+     </button>
+
+      <button onClick={stop} type="button" style={btn2Style}>
+      Chime 2
      </button>
 
     
