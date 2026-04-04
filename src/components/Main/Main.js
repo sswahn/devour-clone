@@ -12,7 +12,7 @@ function Main() {
   const chime = event => {
     const audioCtx = new window.AudioContext()
     const oscillator = audioCtx.createOscillator()
-    ocillator.type = 'sine' // sine, square, sawtooth, triangle
+    oscillator.type = 'sine' // sine, square, sawtooth, triangle
     oscillator.frequency.setValueAtTime(440, audioCtx.currentTime)
     oscillator.connect(audioCtx.destination)
     oscillator.start()
