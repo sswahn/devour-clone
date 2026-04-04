@@ -11,13 +11,14 @@ function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const onSubmit = event => {
     event.preventDefault()
   }
 
   const requestSearchResults = useDebounce(async () => {
-    // setLoading() // pass loading state to input to disable
+    setLoading(true)
     const request = {
       user: user.data,
       message: searchValue
@@ -26,6 +27,7 @@ function SearchForm({ closeSearch }) {
     const response = await server.post(config.api.search, request)
     setSearchResults(response.message)
     storeSearchTermLocally(searchValue)
+    setLoading(false)
   }, 600)
 
   const storeSearchTermLocally = value => {
@@ -55,6 +57,7 @@ function SearchForm({ closeSearch }) {
             <SearchIcon size={18} />
           </div>
           <SearchInput 
+            loading={loading}
             searchValue={searchValue} 
             setSearchValue={setSearchValue} 
             requestSearchResults={requestSearchResults} 
