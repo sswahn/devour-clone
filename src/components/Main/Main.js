@@ -16,7 +16,7 @@ function Main() {
     oscillator.frequency.setValueAtTime(440, audioCtx.currentTime)
     oscillator.connect(audioCtx.destination)
     oscillator.start()
-    oscillator.stop(audioCtx.currentTime + 1)
+    oscillator.stop(audioCtx.currentTime + 0.5)
   }
 
   const btnStyle = {
