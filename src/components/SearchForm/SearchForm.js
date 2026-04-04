@@ -59,8 +59,6 @@ function SearchForm({ closeSearch }) {
   
   useEffect(() => {
     loadRecentSearchTerms()
-    
-    localStorage.clear();
   }, [])
 
   return (
