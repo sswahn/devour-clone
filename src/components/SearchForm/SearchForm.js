@@ -13,22 +13,26 @@ function SearchForm({ closeSearch }) {
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   const onSubmit = event => event.preventDefault()
 
   const requestSearchResults = useDebounce(async () => {
-    if (!searchValue) { // might have to .trim() here
+    
+    const value = searchValue.trim()
+    if (!value || error) { // might have to .trim() here
       return
     }
+    
     setLoading(true)
     const request = {
      // is this app private or public, if so no session data available; session.username etc.
-      message: searchValue
+      message: value
       // ... additional data to improve search results, ie, prevSearch etc.
     }
     //const response = await server.post(config.api.search, request)
    // setSearchResults(response.message)
-    storeSearchTermLocally(searchValue)
+    storeSearchTermLocally(value)
     setLoading(false)
   }, 600)
 
@@ -73,6 +77,7 @@ function SearchForm({ closeSearch }) {
           <SearchInput 
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
+            setError={setError}
           />
           <div>
             <SpeechRecognitionButton setSearchValue={setSearchValue} />
