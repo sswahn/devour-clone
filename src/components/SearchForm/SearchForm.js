@@ -21,6 +21,8 @@ function SearchForm({ closeSearch }) {
       setRecentSearches(JSON.parse(item) )
     }
   }, [])
+
+  // remove x button from end of input, let mic be at end
   
   return (
     <search className={styles.search}>
