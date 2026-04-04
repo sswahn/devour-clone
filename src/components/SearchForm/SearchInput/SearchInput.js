@@ -3,30 +3,10 @@ import styles from './SearchInput.module.css'
 
 function SearchInput({ loading, searchValue, setSearchValue, requestSearchResults }) {
 
-  const handleSearch = value => {
-    setSearchValue(value)
-    requestSearchResults(value)
-  }
-  
   const onChange = event => {
     const value = event.target.value
-    handleSearch(value)
-  }
-
-  const onKeyDown = event => { // might have to move this to parent, to focus on list items.
-    const value = event.target.value
-    switch(event.key) {
-      case 'Enter':
-        return handleSearch(value)
-      case 'Escape':
-        return setSearchValue('')
-      case 'ArrowUp':
-        return console.log('ArrowUp key') // select suggestion up
-      case 'ArrowDown':
-        return console.log('ArrowDown key') // select suggestion down
-      default:
-        return console.log('key', event.key)
-    }
+    setSearchValue(value)
+    requestSearchResults(value)
   }
 
   return (
