@@ -27,7 +27,7 @@ function SearchForm({ closeSearch }) {
     const request = {
       user: user.data,
       message: data
-      // ...
+      // ... additional data to improve search results, ie, prevSearch etc.
     }
     //const response = await server.post(config.api.search, request)
    // setSearchResults(response.message)
