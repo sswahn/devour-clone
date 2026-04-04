@@ -48,6 +48,8 @@
   height: 40px;
   padding: 0 8px;
   width: 40px;
+
+  border: 1px dashed red;
 }
 
 .search ul {
