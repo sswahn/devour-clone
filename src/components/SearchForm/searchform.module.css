@@ -24,6 +24,9 @@
 .search form {
   display: flex;
   justify-content: center;
+  width: 100%;
+
+  border: 1px dashed magenta;
 }
 
 .search form div:first-child {
