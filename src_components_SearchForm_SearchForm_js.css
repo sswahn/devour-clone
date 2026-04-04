@@ -128,7 +128,8 @@
   width: 100px;
 }
 
-.TYu9xxiA93dMGBlCIky5 form button {
+/*
+.search form button {
   align-items: center; 
   background: none;
   border: 0;
@@ -139,13 +140,14 @@
   width: 40px;
 }
 
-.TYu9xxiA93dMGBlCIky5 form button:active {
+.search form button:active {
   background-color: #666;
 }
 
-.TYu9xxiA93dMGBlCIky5 form svg {  
+.search form svg {  
   fill: var(--white);
 }
+*/
 
 .TYu9xxiA93dMGBlCIky5 ul {
   color: white;
