@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Feed from '../../features/Feed/Feed'
 import styles from './main.module.css'
 
-import useChime from '../../hooks/useChime'
+import useSpeechChime from '../../hooks/useSpeechChime'
 
 function Main() {
 
