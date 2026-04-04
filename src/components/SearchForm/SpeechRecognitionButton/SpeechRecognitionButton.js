@@ -17,6 +17,8 @@ reset
 
 function SpeechRecognitionButton({ setSearchValue }) {
   const recognition = useSpeechRecognition()
+  const { playStart, playStop } = useSpeechChime()
+
 
   const handleSpeechRecognition = () => {
     if (recognition.isListening) {
