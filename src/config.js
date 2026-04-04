@@ -1,18 +1,18 @@
 export const config = {
-  url: {
-    login: '/login',
-    home: '/',
-    create: '/create',
-    camera: '/camera',
-    profile: '/profile',
-    settings: '/settings',
-    registration: '/register',
-    privacy: '/privacy-policy',
-    cookie: '/cookie-use',
-    terms: '/terms-and-conditions',
-    asset_cdn: 'https://d1cd149ok26yak.cloudfront.net'
-  },
   api: {
+    search: 'devour.social/api/v1/search'
+  },
+  storage: {
+    keys: {
+      search: {
+        terms: 'searchTerms',
+        results: 'searchResults'
+      },
+      // other storage key namespaces... camera etc.
+    }
+  }
+  //config.storage.keys.search.terms
+    /*
     user: {
       logout: '/api/v1/logout',
       login: '/api/v1/login',
@@ -42,4 +42,5 @@ export const config = {
   cookie: {
     session: 'session'
   }
+  */
 }
