@@ -44,6 +44,7 @@
   width: 100px;
 }
 
+/*
 .search form button {
   align-items: center; 
   background: none;
@@ -62,6 +63,7 @@
 .search form svg {  
   fill: var(--white);
 }
+*/
 
 .search ul {
   color: white;
