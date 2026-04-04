@@ -14,6 +14,26 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => {
     event.preventDefault()
   }
+
+  const storeServerSide = async value => {
+    return;
+    const request = {
+      value
+    }
+    const response = await server.post(config.api.search, request)
+    setSearchResults(response.message)
+  }
+
+  const storeLocalSide = value => {
+    const key = 'searches'
+    const item = localStorage.getItem(key)
+    const existing = item ? JSON.parse(item) : []
+    if (existing.includes(value)) {
+      return
+    }
+    const data = [value, ...existing].slice(0, 5)
+    localStorage.setItem(key, JSON.stringify(data))
+  }
   
   useEffect(() => {
     const item = localStorage.getItem('searches')
