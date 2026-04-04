@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import Feed from '../../features/Feed/Feed'
 import styles from './main.module.css'
 
+import useChime from '../../hooks/useChime'
+
 function Main() {
 
   useEffect(() => {
@@ -9,14 +11,25 @@ function Main() {
     //alert(`height: ${window.innerHeight}`)
   }, [])
 
+  const { playStart, playStop } = useSpeechChime()
+
+  const handleStart = () => {
+    playStart()
+    startSpeechRecognition()
+  }
+  
+  const handleStop = () => {
+    playStop()
+    stopSpeechRecognition()
+  }
+
   const chime = event => {
-    const audioCtx = new window.AudioContext()
-    const oscillator = audioCtx.createOscillator()
-    oscillator.type = 'square' // sine, square, sawtooth, triangle
-    oscillator.frequency.setValueAtTime(440, audioCtx.currentTime)
-    oscillator.connect(audioCtx.destination)
-    oscillator.start()
-    oscillator.stop(audioCtx.currentTime + 0.5)
+    
+    handleStart()
+
+    const timeout = setTimeout(() => {
+      handleStop()
+    }, 5000)
   }
 
   const btnStyle = {
