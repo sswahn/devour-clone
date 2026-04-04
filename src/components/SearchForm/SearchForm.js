@@ -33,6 +33,9 @@ function SearchForm({ closeSearch }) {
   }, 600)
 
   const storeSearchTermLocally = value => {
+
+    return console.log('invalid text.')
+    
     const key = config.storage.search.terms
     const item = localStorage.getItem(key)
     const existing = item ? JSON.parse(item) : []
