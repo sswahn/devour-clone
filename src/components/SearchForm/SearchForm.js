@@ -18,13 +18,17 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  // original.replace(/[^a-z0-9]/gi, '')
-
+  // 
   const requestSearchResults = useDebounce(async () => {
+    const data = searchValue.replace(/[^a-z0-9]/gi, '').trim()
+    if (!data) {
+      return
+    }
+
     setLoading(true)
     const request = {
       user: user.data,
-      message: searchValue
+      message: data
       // ...
     }
     //const response = await server.post(config.api.search, request)
