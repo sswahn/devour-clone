@@ -120,6 +120,10 @@
   width: 40px; 
 }
 
+.TYu9xxiA93dMGBlCIky5 form div:first-child svg {  
+  fill: var(--white);
+}
+
 .TYu9xxiA93dMGBlCIky5 form div:last-child {
   align-items: center;
   display: flex;
@@ -132,10 +136,6 @@
   height: 40px;
   padding: 0 8px;
   width: 40px;
-}
-
-.TYu9xxiA93dMGBlCIky5 form > svg {  
-  fill: var(--white);
 }
 
 .TYu9xxiA93dMGBlCIky5 ul {
