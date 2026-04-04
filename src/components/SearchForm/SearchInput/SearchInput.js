@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ searchValue, setSearchValue, requestSearchResults }) {
+function SearchInput({ loading, searchValue, setSearchValue, requestSearchResults }) {
 
   const handleSearch = value => {
     setSearchValue(value)
@@ -37,6 +37,7 @@ function SearchInput({ searchValue, setSearchValue, requestSearchResults }) {
       enterKeyHint="search"
       onChange={onChange}
       onKeyDown={onKeyDown}
+      disabled={loading}
       maxLength="288"
       autoFocus
       autoComplete="on"
