@@ -19,7 +19,7 @@ function SearchInput({ searchValue, setSearchValue }) {
       onChange={onChange}
       maxLength="288"
       pattern="[a-zA-Z0-9 ]+" 
-      title="Please use letters and numbers only."
+      title="Use letters and numbers only."
       required
       autoFocus
       autoComplete="on"
