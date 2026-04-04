@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import server from '../../utilities/server'
+import useDebounce from '../../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
@@ -15,16 +16,17 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  const requestSearchResults = async value => {
-    return;
+  const requestSearchResults = useDebounce(async () => {
+    // setLoading() // pass loading state to input to disable
     const request = {
       user: user.data,
       message: searchValue
+      // ...
     }
     const response = await server.post(config.api.search, request)
     setSearchResults(response.message)
     storeSearchTermLocally(searchValue)
-  }
+  }, 600)
 
   const storeSearchTermLocally = value => {
     const key = 'searches'
