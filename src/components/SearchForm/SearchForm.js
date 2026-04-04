@@ -22,8 +22,8 @@ function SearchForm({ closeSearch }) {
     }
     setLoading(true)
     const request = {
-     // user: user.data,
-      message: data
+     // is this app private or public, if so no session data available; session.username etc.
+      message: searchValue
       // ... additional data to improve search results, ie, prevSearch etc.
     }
     //const response = await server.post(config.api.search, request)
