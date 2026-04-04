@@ -43,7 +43,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
       onClick={handleSpeechRecognition} 
       type="button" 
       aria-label="voice recognition">
-      <MicrophoneIcon />
+      <MicrophoneIcon size={18} />
     </button>
   )
 }
