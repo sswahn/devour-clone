@@ -20,11 +20,9 @@ function SearchForm({ closeSearch }) {
 
   // 
   const requestSearchResults = useDebounce(async () => {
-    const data = searchValue.replace(/[^a-z0-9]/gi, '').trim()
-    if (!data) {
+    if (!searchValue) {
       return
     }
-
     setLoading(true)
     const request = {
       user: user.data,
