@@ -1,4 +1,4 @@
-import ArrowLeftIcon from '../../Icons/ArrowLeftIcon/ArrorLeftIcon'
+import ArrowLeftIcon from '../../../Icons/ArrowLeftIcon/ArrorLeftIcon'
 import styles from './CloseSearchButton.module.css'
 
 function CloseSearchButton({ closeSearch }) {
