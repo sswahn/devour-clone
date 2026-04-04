@@ -44,6 +44,10 @@
   width: 100px;
 }
 
+.search form > svg {  
+  fill: var(--white);
+}
+
 .search ul {
   color: white;
   font-size: 18px;
