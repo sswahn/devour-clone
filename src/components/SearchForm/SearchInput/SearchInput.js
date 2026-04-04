@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
 import styles from './SearchInput.module.css'
 
-function SearchInput({ searchValue, setSearchValue }) {
+function SearchInput({ searchValue, setSearchValue, setError }) {
 
   const onChange = ({ target }) => {
     if (target.validity.patternMismatch) {
       target.reportValidity()
+      setError(true)
+    } else {
+      setError(false)
     }
-    setSearchValue(target.value)    
+    setSearchValue(target.value)
   }
   
   return (
