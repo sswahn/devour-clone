@@ -15,16 +15,17 @@ function SearchForm({ closeSearch }) {
     event.preventDefault()
   }
 
-  const storeServerSide = async value => {
+  const makeSearchRequest = async value => {
     return;
     const request = {
-      value
+      message: searchValue
     }
     const response = await server.post(config.api.search, request)
     setSearchResults(response.message)
+    storeSearchTermLocally(searchValue)
   }
 
-  const storeLocalSide = value => {
+  const storeSearchTermLocally = value => {
     const key = 'searches'
     const item = localStorage.getItem(key)
     const existing = item ? JSON.parse(item) : []
