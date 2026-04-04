@@ -44,20 +44,22 @@ function SearchForm({ closeSearch }) {
 
   return (
     <search className={styles.search}>
-      <form onSubmit={onSubmit}>
-        <div>
-          <SearchIcon size={18} />
-        </div>
-        <SearchInput 
-          searchValue={searchValue} 
-          setSearchValue={setSearchValue} 
-          setSearchResults={setSearchResults} 
-        />
-        <div>
-          <SpeechRecognitionButton setSearchValue={setSearchValue} />
-        </div>
-      </form>
-
+      <div>
+        <CloseSearchButton closeSearch={closeSearch} />
+        <form onSubmit={onSubmit}>
+          <div>
+            <SearchIcon size={18} />
+          </div>
+          <SearchInput 
+            searchValue={searchValue} 
+            setSearchValue={setSearchValue} 
+            setSearchResults={setSearchResults} 
+          />
+          <div>
+            <SpeechRecognitionButton setSearchValue={setSearchValue} />
+          </div>
+        </form>
+      </div>
       <ul role="listbox">
         {recentSearches?.length > 0 && recentSearches.map((search, index) =>
           <li key={index} role="option">{search}</li>
