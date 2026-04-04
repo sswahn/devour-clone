@@ -18,11 +18,17 @@ function Main() {
     oscillator.start()
     oscillator.stop(audioCtx.currentTime + 1)
   }
+
+  const btnStyle = {
+    width: '50px',
+    height: '50px',
+    margin: 'auto'
+  }
   
   return (
     <main className={styles.main}>
 
-     <button onClick={chime} type="button">
+     <button onClick={chime} type="button" style={btnStyle}>
       Chime 
      </button>
 
