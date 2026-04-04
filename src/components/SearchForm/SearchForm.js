@@ -41,6 +41,7 @@ function SearchForm({ closeSearch }) {
     }
     const data = [value, ...existing].slice(0, 5)
     localStorage.setItem(key, JSON.stringify(data))
+    setRecentSearches(data)
   }
 
   const loadRecentSearchTerms = () => {
