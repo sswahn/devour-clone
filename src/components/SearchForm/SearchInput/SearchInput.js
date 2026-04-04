@@ -3,8 +3,11 @@ import styles from './SearchInput.module.css'
 
 function SearchInput({ searchValue, setSearchValue }) {
 
-  const onChange = event => {
-    setSearchValue(event.target.value)
+  const onChange = ({ target }) => {
+    if (target.validity.patternMismatch) {
+      target.reportValidity()
+    }
+    setSearchValue(target.value)    
   }
 
   return (
