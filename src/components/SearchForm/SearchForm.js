@@ -57,7 +57,6 @@ function SearchForm({ closeSearch }) {
         />
         <div>
           <SpeechRecognitionButton setSearchValue={setSearchValue} />
-  {/*    <CloseSearchButton closeSearch={closeSearch} /> */}
         </div>
       </form>
 
