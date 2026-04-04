@@ -68,14 +68,10 @@ function SearchForm({ closeSearch }) {
           <SearchInput 
             loading={loading}
             searchValue={searchValue} 
-            setSearchValue={setSearchValue} 
-            requestSearchResults={requestSearchResults} 
+            setSearchValue={setSearchValue}
           />
           <div>
-            <SpeechRecognitionButton 
-              setSearchValue={setSearchValue}
-              requestSearchResults={requestSearchResults}
-            />
+            <SpeechRecognitionButton setSearchValue={setSearchValue} />
           </div>
         </form>
       </div>
