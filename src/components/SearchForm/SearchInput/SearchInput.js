@@ -16,6 +16,7 @@ function SearchInput({ loading, searchValue, setSearchValue }) {
       onChange={onChange}
       disabled={loading}
       maxLength="288"
+      pattern="[a-zA-Z0-9]+" 
       autoFocus
       autoComplete="on"
       spellCheck={true} 
