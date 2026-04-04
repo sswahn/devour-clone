@@ -18,6 +18,7 @@ function SearchForm({ closeSearch }) {
   const makeSearchRequest = async value => {
     return;
     const request = {
+      user: user.data,
       message: searchValue
     }
     const response = await server.post(config.api.search, request)
