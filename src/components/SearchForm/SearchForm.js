@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import server from '../../utilities/server'
-import useDebounce from '../../../hooks/useDebounce'
+import useDebounce from '../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
