@@ -29,7 +29,7 @@
   justify-content: center;
   background-clip: padding-box;
   background-color: var(--input);
-  border: 1px solid var(--border);
+  border: 1px solid var(--input-border);
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -48,7 +48,7 @@
   contain: paint;
   justify-content: center;
   background-color: var(--input);
-  border: 1px solid var(--border);
+  border: 1px solid var(--input-border);
   border-left: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
