@@ -1,5 +1,5 @@
 import CameraIcon from '../../../Icons/CameraIcon/CameraIcon'
-import styles from './camerabutton.module.css'
+import styles from './CameraButton.module.css'
 
 function CameraButton({ openCamera }) {
  
