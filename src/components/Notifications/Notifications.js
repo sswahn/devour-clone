@@ -13,19 +13,19 @@ function Notifications({ closeNotifications }) {
     notifications: [1, 2, 3]
   }
 
-  const pointerDown = event => {
+  const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    currentY.current = event.clientY
+   // currentY.current = event.clientY
 
     const bottomSheet = bottomSheetRef.current
 
     bottomSheet.style.animation = 'none'
     bottomSheet.style.transition = 'none'
-    bottomSheet.setPointerCapture(event.pointerId)
+   // bottomSheet.setPointerCapture(event.pointerId)
   }
 
-  const pointerMove = event => {
+  const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
@@ -36,19 +36,22 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  const pointerUp = event => {
+  const handlePointerUp = event => {
     if (!dragging.current) {
       return
     }
     dragging.current = false
-    const deltaY = currentY.current - startY.current
+    const deltaY = event.current - startY.current
     const bottomSheet = bottomSheetRef.current
+
+   sheet.style.transition = 'transform 0.2s ease'
+    
     if (deltaY > bottomSheet.offsetHeight / 2) {
       closeNotifications()
     } else {
       bottomSheet.style.transform = `translateY(0)`
     }
-    bottomSheet.releasePointerCapture(event.pointerId)
+   // bottomSheet.releasePointerCapture(event.pointerId)
   }
 
   const handleClose = event => {
@@ -57,23 +60,12 @@ function Notifications({ closeNotifications }) {
     }
   }
   
-  useEffect(() => {
-    const bottomSheet = bottomSheetRef.current
-    bottomSheet.addEventListener('pointerdown', pointerDown)
-    bottomSheet.addEventListener('pointermove', pointerMove)
-    bottomSheet.addEventListener('pointerup', pointerUp)
-    bottomSheet.addEventListener('pointercancel', pointerUp)
-    return () => {
-      bottomSheet.removeEventListener('pointerdown', pointerDown)
-      bottomSheet.removeEventListener('pointermove', pointerMove)
-      bottomSheet.removeEventListener('pointerup', pointerUp)
-      bottomSheet.removeEventListener('pointercancel', pointerUp)
-    }
-  }, [])
-  
   return (
     <div className={styles.notifications}>
-      <section ref={bottomSheetRef}>
+      <section ref={bottomSheetRef}         
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}>
         <div></div>
         <ul role="listbox">
           {context.notifications?.map((notification, index) => 
