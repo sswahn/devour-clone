@@ -29,7 +29,7 @@
   left: 0;
   padding-top: 8px;
   position: absolute;
-  transition: transform 0.2s ease;
+ /* transition: transform 0.2s ease; */
   width: 100%;
   will-change: transform; /* Optional: Ensure it doesn't flicker before starting */
 }
