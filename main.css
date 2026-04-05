@@ -398,7 +398,7 @@
   
   
   --input: light-dark(#999999, #444444);
-  --input-border: light-dark(#777777, #555555);
+  --input-border: light-dark(#888888, #555555);
 }
 
 * {
