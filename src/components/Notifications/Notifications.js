@@ -14,6 +14,7 @@ function Notifications({ closeNotifications }) {
   return (
     <div className={styles.notifications}>
       <section>
+        <div></div>
         <ul>
           {context.notifications?.map(notification => 
             <li>{notification}</li>                                                           
