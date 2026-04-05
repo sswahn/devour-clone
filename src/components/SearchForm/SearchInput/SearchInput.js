@@ -25,6 +25,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       title="Use letters and numbers only."
       spellCheck={true}
       autoFocus
+      aria-autocomplete="list"
     />
   )
 }
