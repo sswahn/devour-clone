@@ -118,7 +118,7 @@
   display: flex;
   justify-content: center;
   background-color: #444;
-  border: 1px solid #555;
+  border: 1px solid var(--border);
   border-right: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -136,7 +136,7 @@
   display: flex;
   justify-content: center;
   background-color: #444;
-  border: 1px solid #555;
+  border: 1px solid var(--border);
   border-left: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
