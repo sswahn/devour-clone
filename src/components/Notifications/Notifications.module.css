@@ -32,6 +32,10 @@
  /* transition: transform 0.2s ease; */
   width: 100%;
   will-change: transform; /* Optional: Ensure it doesn't flicker before starting */
+
+  touch-action: none;
+  cursor: grab;
+
 }
 
 /* the grabber handle */
