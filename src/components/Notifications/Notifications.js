@@ -29,6 +29,20 @@ function Notifications({ closeNotifications }) {
     }
   }
 
+  const pointerUp = event => {
+    if (!dragging.current) {
+      return
+    }
+    dragging.current = false
+    const deltaY = currentY.current - startY.current
+    const sheetHeight = bottomSheetRef.current.offsetHeight
+    if (deltaY > sheetHeight / 2) {
+      closeNotifications()
+    } else {
+      bottomSheetRef.current.style.transform = `translateY(0)`
+    }
+  }
+
   const handleClose = event => {
     if (!event.target.contains(bottomSheetRef.current)) {
       closeNotifications()
@@ -38,9 +52,11 @@ function Notifications({ closeNotifications }) {
   useEffect(() => {
     bottomSheetRef.current.addEventListener('pointerdown', pointerDown, { passive: true })
     bottomSheetRef.current.addEventListener('pointermove', pointerMove, { passive: true })
+    bottomSheetRef.current.addEventListener('pointerup', pointerUp, { passive: true })
     return () => {
       bottomSheetRef.current.removeEventListener('pointerdown', pointerDown)
       bottomSheetRef.current.removeEventListener('pointermove', pointerMove)
+      bottomSheetRef.current.removeEventListener('pointerup', pointerUp)
     }
   }, [])
   
