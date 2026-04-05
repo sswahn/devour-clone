@@ -10,7 +10,7 @@ function CloseSearchButton({ closeSearch }) {
  
  return (
    <button className={styles.closeSearchButton} onClick={handleCloseSearch} type="button" aria-label="close search">
-     <ArrowLeftIcon size={20} />
+     <ArrowLeftIcon />
    </button>
   )
 }
