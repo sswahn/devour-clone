@@ -44,7 +44,7 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
 
-   sheet.style.transition = 'transform 0.2s ease'
+  // sheet.style.transition = 'transform 0.2s ease'
     
     if (deltaY > bottomSheet.offsetHeight / 2) {
       closeNotifications()
