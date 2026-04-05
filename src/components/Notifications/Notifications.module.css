@@ -25,7 +25,6 @@
   animation: slideUp 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
   background-color: white;  /* var(--background); */
   bottom: 0;
-  cursor: grab;
   height: 50dvh;
   left: 0;
   padding-top: 8px;
