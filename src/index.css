@@ -7,8 +7,10 @@
   
   --background: light-dark(var(--white), var(--black));
   --text: light-dark(var(--black), var(--white));
-  --border: light-dark(red, #555555);
-  --input: light-dark(blue, #444444);
+  
+  
+  --input: light-dark(#999999, #444444);
+  --input-border: light-dark(#777777, #555555);
 }
 
 * {
