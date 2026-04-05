@@ -26,7 +26,8 @@
   background-color: var(--background);
   border-top: 1px solid var(--border);
   bottom: 0;
-  height: 50dvh;
+  max-height: 90dvh;
+  min-height: 50dvh;
   left: 0;
   padding-top: 8px;
   position: absolute;
