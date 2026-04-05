@@ -26,6 +26,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       spellCheck={true}
       autoFocus
       aria-autocomplete="list"
+      aria-controls="suggestions"
     />
   )
 }
