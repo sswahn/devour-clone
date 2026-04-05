@@ -42,13 +42,13 @@ function Notifications({ closeNotifications }) {
     }
     dragging.current = false
     const deltaY = currentY.current - startY.current
-    const sheetHeight = bottomSheetRef.current.offsetHeight
-    if (deltaY > sheetHeight / 2) {
+    const bottomSheet = bottomSheetRef.current
+    if (deltaY > bottomSheet.offsetHeight / 2) {
       closeNotifications()
     } else {
-      bottomSheetRef.current.style.transform = `translateY(0)`
+      bottomSheet.style.transform = `translateY(0)`
     }
-    bottomSheetRef.current.releasePointerCapture(event.pointerId)
+    bottomSheet.releasePointerCapture(event.pointerId)
   }
 
   const handleClose = event => {
