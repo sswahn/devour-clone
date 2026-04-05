@@ -23,7 +23,8 @@
 /* the bottom sheet */
 .notifications section {
   animation: slideUp 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
-  background-color: white;  /* var(--background); */
+  background-color: var(--background);
+  border-top: 1px solid var(--border);
   bottom: 0;
   height: 50dvh;
   left: 0;
