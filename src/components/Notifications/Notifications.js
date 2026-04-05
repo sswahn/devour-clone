@@ -51,9 +51,9 @@ function Notifications({ closeNotifications }) {
   
   useEffect(() => {
     const bottomSheet = bottomSheetRef.current
-    bottomSheet.addEventListener('pointerdown', pointerDown, { passive: true })
-    bottomSheet.addEventListener('pointermove', pointerMove, { passive: true })
-    bottomSheet.addEventListener('pointerup', pointerUp, { passive: true })
+    bottomSheet.addEventListener('pointerdown', pointerDown)
+    bottomSheet.addEventListener('pointermove', pointerMove)
+    bottomSheet.addEventListener('pointerup', pointerUp)
     bottomSheet.addEventListener('pointercancel', pointerUp)
     return () => {
       bottomSheet.removeEventListener('pointerdown', pointerDown)
