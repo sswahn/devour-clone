@@ -26,11 +26,11 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-    element.addEventListener('touchstart', touchStart)
-    element.addEventListener('touchend', touchEnd)
+    window.addEventListener('touchstart', touchStart)
+    window.addEventListener('touchend', touchEnd)
     return () => {
-      element.removeEventListener('touchstart', touchStart)
-      element.removeEventListener('touchend', touchEnd)
+      window.removeEventListener('touchstart', touchStart)
+      window.removeEventListener('touchend', touchEnd)
     }
   }, [])
   
