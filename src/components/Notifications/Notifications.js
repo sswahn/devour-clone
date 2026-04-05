@@ -50,7 +50,7 @@ function Notifications({ closeNotifications }) {
   }
   
   return (
-    <div className={styles.notifications} onClick={handleClose}>
+    <div className={styles.notifications} onClick={handleClose} role="presentation">
       <section ref={bottomSheetRef}         
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
