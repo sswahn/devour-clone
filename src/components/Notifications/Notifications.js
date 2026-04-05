@@ -50,7 +50,7 @@ function Notifications({ closeNotifications }) {
   }
   
   return (
-    <div className={styles.notifications} onClick={handleClose}>
+    <div className={styles.notifications} onClick={handleClose} aria-hidden="true">
       <section ref={bottomSheetRef}         
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
