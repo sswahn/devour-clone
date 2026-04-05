@@ -248,11 +248,11 @@
 }
 
 /*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/NotificationsButton/notificationsbutton.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/NotificationsButton/NotificationsButton.module.css ***!
   \*****************************************************************************************************************************************/
 /* Navigation Notifications Button */
 
-.MdWct8XEyuSDTRNKWJfJ {
+.Nya8fCo2FT3sO4TZDKg2 {
   align-items: center; 
   background: none;
   border: none;
@@ -266,11 +266,11 @@
   user-select: none;
 }
 
-.MdWct8XEyuSDTRNKWJfJ:active {
+.Nya8fCo2FT3sO4TZDKg2:active {
   opacity: 0.7;
 }
 
-.MdWct8XEyuSDTRNKWJfJ div {
+.Nya8fCo2FT3sO4TZDKg2 div {
   background-color: darkorange;
   border: 2px solid var(--black);
   border-radius: 50%;
@@ -282,7 +282,7 @@
   width: 10px;
 }
 
-.MdWct8XEyuSDTRNKWJfJ svg {
+.Nya8fCo2FT3sO4TZDKg2 svg {
   color: var(--text);
 }
 
