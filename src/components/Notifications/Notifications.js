@@ -50,13 +50,14 @@ function Notifications({ closeNotifications }) {
   }
   
   useEffect(() => {
-    bottomSheetRef.current.addEventListener('pointerdown', pointerDown, { passive: true })
-    bottomSheetRef.current.addEventListener('pointermove', pointerMove, { passive: true })
-    bottomSheetRef.current.addEventListener('pointerup', pointerUp, { passive: true })
+    const bottomSheet = bottomSheetRef.current
+    bottomSheet.addEventListener('pointerdown', pointerDown, { passive: true })
+    bottomSheet.addEventListener('pointermove', pointerMove, { passive: true })
+    bottomSheet.addEventListener('pointerup', pointerUp, { passive: true })
     return () => {
-      bottomSheetRef.current.removeEventListener('pointerdown', pointerDown)
-      bottomSheetRef.current.removeEventListener('pointermove', pointerMove)
-      bottomSheetRef.current.removeEventListener('pointerup', pointerUp)
+      bottomSheet.removeEventListener('pointerdown', pointerDown)
+      bottomSheet.removeEventListener('pointermove', pointerMove)
+      bottomSheet.removeEventListener('pointerup', pointerUp)
     }
   }, [])
   
