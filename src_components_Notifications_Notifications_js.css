@@ -5,7 +5,7 @@
 
 /* the transparent div overlay */
 .EW8UjTxcaJyjDU58ZAQw {
-  background-color: rgb(0 0 0 / 50%);
+  background-color: rgb(0 0 0 / 25%);
   height: 100dvh;
   left: 0;
   position: absolute;
@@ -15,9 +15,13 @@
 
 /* the bottom sheet */
 .EW8UjTxcaJyjDU58ZAQw section {
-  background-color: var(--background);
+  background-color: white;  /* var(--background); */
   height: 50dvh;
   width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* the grabber handle */
