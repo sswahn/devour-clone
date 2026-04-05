@@ -15,9 +15,9 @@ function Notifications({ closeNotifications }) {
     <div className={styles.notifications}>
       <section>
         <div></div>
-        <ul>
-          {context.notifications?.map(notification => 
-            <li>{notification}</li>                                                           
+        <ul role="listbox">
+          {context.notifications?.map((notification, index) => 
+            <li key={index} role="option">{notification}</li>                                                           
           )}
         </ul>
       </section>
