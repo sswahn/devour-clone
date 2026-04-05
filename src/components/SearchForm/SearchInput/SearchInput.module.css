@@ -3,8 +3,8 @@
 .input {
   background-color: var(--input);
   border: 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--input-border);
+  border-bottom: 1px solid var(--input-border);
   color: var(--white);
   font-size: 18px;
   height: 44px;
