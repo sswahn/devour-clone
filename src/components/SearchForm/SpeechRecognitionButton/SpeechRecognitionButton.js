@@ -31,7 +31,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
   }
 
   useEffect(() => {
-    const combined = `${recognition.finalTranscript} ${recognition.interimTranscript}`.trim()
+    const combined = `${recognition.finalTranscript}`.trim() //${recognition.interimTranscript}`.trim()
     if (combined) {
       setSearchValue(prev => prev === combined ? prev : combined)
     }
