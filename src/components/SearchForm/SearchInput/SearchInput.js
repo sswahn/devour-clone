@@ -24,7 +24,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       pattern="[a-zA-Z0-9 ]+" 
       title="Use letters and numbers only."
       spellCheck={true}
-      autocomplete="off"
+      autoComplete="off"
       autoFocus
       role="combobox"
       aria-autocomplete="list"
