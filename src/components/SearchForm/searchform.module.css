@@ -1,7 +1,7 @@
 /* Search Form */
 
 .search {
-  background: var(--black);
+  background-color: var(--background);
   height: 100dvh;
   left: 0;
   overflow-y: scroll;
@@ -38,7 +38,7 @@
 }
 
 .search form div:first-child svg {  
-  fill: var(--white);
+  fill: var(--text);
 }
 
 .search form div:last-child {
