@@ -26,6 +26,8 @@
 .search form div:first-child {
   align-items: center; 
   display: flex;
+  
+  contain: paint;
   justify-content: center;
   background-clip: padding-box;
   background-color: #444;
