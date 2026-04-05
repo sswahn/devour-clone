@@ -16,20 +16,14 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-   // currentY.current = event.clientY
 
-    const bottomSheet = bottomSheetRef.current
-
-    bottomSheet.style.animation = 'none'
-    bottomSheet.style.transition = 'none'
-    //bottomSheet.setPointerCapture(event.pointerId)
+    // bottomSheetRef.current.style.animation = 'none' // test without using this
   }
 
   const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
-    // currentY.current = event.clientY
     const deltaY = event.clientY - startY.current
     if (deltaY > 0) {
       bottomSheetRef.current.style.transform = `translateY(${deltaY}px)`
@@ -43,15 +37,12 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
-
-  // sheet.style.transition = 'transform 0.2s ease'
     
     if (deltaY > bottomSheet.offsetHeight / 2) {
       closeNotifications()
     } else {
       bottomSheet.style.transform = `translateY(0)`
     }
-   // bottomSheet.releasePointerCapture(event.pointerId)
   }
 
   const handleClose = event => {
