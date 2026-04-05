@@ -5,41 +5,47 @@ import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
   const bottomSheetRef = useRef(null)
-  const touchStartY = useRef()
-  const touchEndY = useRef()
+  const dragging = useRef(false)
+  const startY = useRef(0)
+  const currentY = useRef(0)
   
   const context = { 
     notifications: [1, 2, 3]
   }
 
-  function handleGesture() {
-    if (touchEndY.current > touchStartY.current + 50) {
-      closeNotifications()
+  const pointerDown = event => {
+    dragging.current = true
+    startY.current = event.clientY
+  }
+
+  const pointerMove = event => {
+    if (!dragging.current) {
+      return
+    }
+    currentY.current = event.clientY
+    const deltaY = currentY.current - startY.current
+    if (deltaY > 0) {
+      bottomSheetRef.current.style.transform = `translateY(${deltaY}px)`
     }
   }
 
-  const touchStart = event => {
-    touchStartY.current = event.changedTouches[0].screenY
+  const handleClose = event => {
+    if (!event.target.contains(bottomSheetRef.current)) {
+      closeNotifications()
+    }
   }
   
-  const touchEnd = event => {
-    touchEndY.current = event.changedTouches[0].screenY
-    handleGesture()
-  }
-
   useEffect(() => {
-    bottomSheetRef.current.addEventListener('pointerdown', touchStart, { passive: true })
-    bottomSheetRef.current.addEventListener('pointermove', touchEnd, { passive: true })
-    bottomSheetRef.current.addEventListener('pointerup', touchEnd, { passive: true })
+    bottomSheetRef.current.addEventListener('pointerdown', pointerDown, { passive: true })
+    bottomSheetRef.current.addEventListener('pointermove', pointerMove, { passive: true })
     return () => {
-      bottomSheetRef.current.removeEventListener('pointerdown', touchStart)
-      bottomSheetRef.current.removeEventListener('pointermove', touchStart)
-      bottomSheetRef.current.removeEventListener('pointerup', touchEnd)
+      bottomSheetRef.current.removeEventListener('pointerdown', pointerDown)
+      bottomSheetRef.current.removeEventListener('pointermove', pointerMove)
     }
   }, [])
   
   return (
-    <div className={styles.notifications}>
+    <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}>
         <div></div>
         <ul role="listbox">
