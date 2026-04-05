@@ -54,7 +54,10 @@ function Notifications({ closeNotifications }) {
       <section ref={bottomSheetRef}         
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}>
+        onPointerUp={handlePointerUp}
+        role="dialog" 
+        aria-modal="true" 
+        aria-label="notifications list">
         <div id="grabber"></div>
         <ul role="listbox">
           {context.notifications?.map((notification, index) => 
