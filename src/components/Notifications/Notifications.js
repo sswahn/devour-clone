@@ -28,8 +28,8 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-    bottomSheetRef.current.addEventListener('touchstart', touchStart)
-    bottomSheetRef.current.addEventListener('touchend', touchEnd)
+    bottomSheetRef.current.addEventListener('touchstart', touchStart, { passive: true })
+    bottomSheetRef.current.addEventListener('touchend', touchEnd, { passive: true })
     return () => {
       bottomSheetRef.current.removeEventListener('touchstart', touchStart)
       bottomSheetRef.current.removeEventListener('touchend', touchEnd)
