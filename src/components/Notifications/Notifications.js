@@ -64,7 +64,7 @@ function Notifications({ closeNotifications }) {
   }, [])
   
   return (
-    <div className={styles.notifications} onClick={handleClose}>
+    <div className={styles.notifications}>
       <section ref={bottomSheetRef}>
         <div></div>
         <ul role="listbox">
