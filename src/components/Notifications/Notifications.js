@@ -17,7 +17,7 @@ function Notifications({ closeNotifications }) {
     dragging.current = true
     startY.current = event.clientY
 
-    // bottomSheetRef.current.style.animation = 'none' // test without using this
+    bottomSheetRef.current.style.animation = 'none'
   }
 
   const handlePointerMove = event => {
