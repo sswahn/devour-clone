@@ -28,7 +28,7 @@
   display: flex;
   justify-content: center;
   background-clip: padding-box;
-  background-color: #444;
+  background-color: var(--input);
   border: 1px solid var(--border);
   border-right: 0;
   border-top-left-radius: 20px;
@@ -47,7 +47,7 @@
   display: flex;
   contain: paint;
   justify-content: center;
-  background-color: #444;
+  background-color: var(--input);
   border: 1px solid var(--border);
   border-left: 0;
   border-top-right-radius: 20px;
