@@ -4,7 +4,7 @@
 /* Search Form Input */
 
 .E5mhg1QQHXBJyTe4V76v {
-  background-color: #444;
+  background-color: var(--input);
   border: 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
