@@ -391,7 +391,7 @@
   --border: light-dark(
     color-mix(in srgb, var(--white), transparent 95%), 
     color-mix(in srgb, var(--black), transparent 95%)
-  )
+  );
   
   --input: light-dark(#999999, #444444);
   --input-border: light-dark(#888888, #555555);
