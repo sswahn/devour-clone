@@ -22,15 +22,15 @@ function Notifications({ closeNotifications }) {
 
     bottomSheet.style.animation = 'none'
     bottomSheet.style.transition = 'none'
-   // bottomSheet.setPointerCapture(event.pointerId)
+    //bottomSheet.setPointerCapture(event.pointerId)
   }
 
   const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
-    currentY.current = event.clientY
-    const deltaY = currentY.current - startY.current
+    // currentY.current = event.clientY
+    const deltaY = event.clientY - startY.current
     if (deltaY > 0) {
       bottomSheetRef.current.style.transform = `translateY(${deltaY}px)`
     }
