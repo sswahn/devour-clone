@@ -89,7 +89,7 @@ function SearchForm({ closeSearch }) {
   
       {/* make Suggestions component: */}
       {loading ? <LoadingSpinner /> : (
-        <ul id="suggestions" role="listbox">
+        <ul id="suggestions" role="listbox" aria-live="polite">
           {recentSearches?.length > 0 && recentSearches.map((search, index) =>
             <li key={index} role="option">{search}</li>
           )}    
