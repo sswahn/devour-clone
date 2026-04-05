@@ -29,6 +29,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       role="combobox"
       aria-autocomplete="list"
       aria-controls="suggestions"
+      aria-expanded={true}
     />
   )
 }
