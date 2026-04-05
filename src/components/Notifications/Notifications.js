@@ -59,7 +59,7 @@ function Notifications({ closeNotifications }) {
       bottomSheet.removeEventListener('pointerdown', pointerDown)
       bottomSheet.removeEventListener('pointermove', pointerMove)
       bottomSheet.removeEventListener('pointerup', pointerUp)
-      bottomSheet.addEventListener('pointercancel', pointerUp)
+      bottomSheet.removeEventListener('pointercancel', pointerUp)
     }
   }, [])
   
