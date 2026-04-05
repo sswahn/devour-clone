@@ -26,8 +26,6 @@
 .search form div:first-child {
   align-items: center; 
   display: flex;
-  
-  contain: paint;
   justify-content: center;
   background-clip: padding-box;
   background-color: #444;
@@ -47,6 +45,7 @@
 .search form div:last-child {
   align-items: center;
   display: flex;
+  contain: paint;
   justify-content: center;
   background-color: #444;
   border: 1px solid var(--border);
