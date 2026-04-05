@@ -42,7 +42,8 @@ function SpeechRecognitionButton({ setSearchValue }) {
       className={`${styles.speechRecognitionButton} ${recognition.isListening ? styles.active : ''}`} 
       onClick={handleSpeechRecognition} 
       type="button" 
-      aria-label="search by voice">
+      aria-label="speech recognition"
+      aria-description="search by voice">
       <MicrophoneIcon size={18} />
     </button>
   )
