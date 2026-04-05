@@ -29,7 +29,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       role="combobox"
       aria-autocomplete="list"
       aria-controls="suggestions"
-      aria-expanded={true}
+      aria-expanded={true} /* add something like isExpanded={searchResults.length > 0} when backend complete.[ */
     />
   )
 }
