@@ -1,5 +1,5 @@
 import UserIcon from '../../../Icons/UserIcon/UserIcon'
-import styles from './profilebutton.module.css'
+import styles from './ProfileButton.module.css'
 
 function ProfileButton({ openProfile }) {
   
