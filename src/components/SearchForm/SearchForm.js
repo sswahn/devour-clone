@@ -94,7 +94,7 @@ function SearchForm({ closeSearch }) {
             <li key={index} role="option">{search}</li>
           )}    
         </ul>  
-      )
+      )}
     
     </search>
   )
