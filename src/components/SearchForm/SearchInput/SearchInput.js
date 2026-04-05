@@ -26,6 +26,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       spellCheck={true}
       autocomplete="off"
       autoFocus
+      role="combobox"
       aria-autocomplete="list"
       aria-controls="suggestions"
     />
