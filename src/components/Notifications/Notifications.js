@@ -36,7 +36,6 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
-    
     if (deltaY > bottomSheet.offsetHeight / 2) {
       closeNotifications()
     } else {
@@ -51,7 +50,7 @@ function Notifications({ closeNotifications }) {
   }
   
   return (
-    <div className={styles.notifications}>
+    <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}         
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
