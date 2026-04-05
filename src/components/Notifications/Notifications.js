@@ -54,10 +54,12 @@ function Notifications({ closeNotifications }) {
     bottomSheet.addEventListener('pointerdown', pointerDown, { passive: true })
     bottomSheet.addEventListener('pointermove', pointerMove, { passive: true })
     bottomSheet.addEventListener('pointerup', pointerUp, { passive: true })
+    bottomSheet.addEventListener('pointercancel', pointerUp)
     return () => {
       bottomSheet.removeEventListener('pointerdown', pointerDown)
       bottomSheet.removeEventListener('pointermove', pointerMove)
       bottomSheet.removeEventListener('pointerup', pointerUp)
+      bottomSheet.addEventListener('pointercancel', pointerUp)
     }
   }, [])
   
