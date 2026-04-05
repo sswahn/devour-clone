@@ -186,11 +186,11 @@
 }
 
 /*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/SearchButton/searchbutton.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/SearchButton/SearchButton.module.css ***!
   \***************************************************************************************************************************/
 /* Navigation Search Button */
 
-.g3FJCL3gQgNzPV71DbYN {
+.ANqJHVBprWE9o5gznaUg {
   align-items: center; 
   background: none;
   border: none;
@@ -203,11 +203,11 @@
   user-select: none;
 }
 
-.g3FJCL3gQgNzPV71DbYN:active {
+.ANqJHVBprWE9o5gznaUg:active {
   opacity: 0.7;
 }
 
-.g3FJCL3gQgNzPV71DbYN svg {
+.ANqJHVBprWE9o5gznaUg svg {
   color: var(--text);
 }
 
@@ -287,11 +287,11 @@
 }
 
 /*!*****************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/ProfileButton/profilebutton.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/ProfileButton/ProfileButton.module.css ***!
   \*****************************************************************************************************************************/
 /* Navigation Profile Button */
 
-.ARiMq3XnTwq5ivBXSzyL {
+.rl5g1t4EuetH_nST5lgV {
   align-items: center; 
   background: none;
   border: none;
@@ -304,20 +304,20 @@
   user-select: none;
 }
 
-.ARiMq3XnTwq5ivBXSzyL:active {
+.rl5g1t4EuetH_nST5lgV:active {
   opacity: 0.7;
 }
 
-.ARiMq3XnTwq5ivBXSzyL svg {
+.rl5g1t4EuetH_nST5lgV svg {
   color: var(--text);
 }
 
 /*!************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/navigation.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/Navigation.module.css ***!
   \************************************************************************************************************/
 /* Mobile UI Navigation */
 
-.KrDGLnQlqXFEIv6RHRn7 {
+._EJyqkXyUnkwqjS3lhYz {
   position: fixed;
   left: 0;
   right: 0;
@@ -341,12 +341,12 @@
   scroll-snap-type: y mandatory;
 }
 
-.KrDGLnQlqXFEIv6RHRn7.LEQ3_5VvRSZDnEwmjj1K {
+._EJyqkXyUnkwqjS3lhYz.AwJtbTkrEcl8gVqjZx2U {
   transform: translateY(100%);
   opacity: 0;
 }
 
-.KrDGLnQlqXFEIv6RHRn7 > div {
+._EJyqkXyUnkwqjS3lhYz > div {
   display: flex;
   margin: 0 auto;
   max-width: 500px;
@@ -354,24 +354,24 @@
   width: 100%;
 }
 
-.KrDGLnQlqXFEIv6RHRn7 > div > div:not(:nth-of-type(2)) {
+._EJyqkXyUnkwqjS3lhYz > div > div:not(:nth-of-type(2)) {
   display: flex;
   flex: 1;
   justify-content: space-between;
 }
 
-.KrDGLnQlqXFEIv6RHRn7 > div > div:nth-of-type(2) {
+._EJyqkXyUnkwqjS3lhYz > div > div:nth-of-type(2) {
   position: static;
   flex-shrink: 0;
   width: 152px;
 }
 
 @media (prefers-color-scheme: dark) {
-  .KrDGLnQlqXFEIv6RHRn7 {
+  ._EJyqkXyUnkwqjS3lhYz {
     background-color: var(--black);
   }
 
-  .KrDGLnQlqXFEIv6RHRn7 button svg {
+  ._EJyqkXyUnkwqjS3lhYz button svg {
     fill: var(--white);
   }
 }
