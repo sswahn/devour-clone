@@ -3,10 +3,8 @@ import styles from './NotificationsButton.module.css'
 
 function NotificationsButton({ openNotifications }) {
 
-  const onClick = async event => {
+  const onClick = event => {
     navigator.vibrate(50)
-    //await document.getElementById('portal').requestFullscreen()
-    //await screen.orientation.lock('portrait')
     openNotifications()
   }
   
