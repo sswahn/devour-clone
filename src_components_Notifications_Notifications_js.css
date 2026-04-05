@@ -14,15 +14,35 @@
   z-index: 200;
 }
 
+/* 1. Define the optimized animation */
+@keyframes U2Lkr9A4lQT7Ejdc_x7r {
+  from {
+    /* Start completely off-screen below the bottom edge */
+    transform: translateY(100%);
+  }
+  to {
+    /* End at its natural position (0 displacement) */
+    transform: translateY(0);
+  }
+}
+
 /* the bottom sheet */
 .EW8UjTxcaJyjDU58ZAQw section {
   background-color: white;  /* var(--background); */
+  bottom: 0;
   height: 50dvh;
-  width: 100%;
+  
+  left: 0;
   padding-top: 8px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  
+  width: 100%;
+
+    /* Use 'forwards' to stay in the final state after animation */
+  animation: U2Lkr9A4lQT7Ejdc_x7r 0.6s ease-out forwards;
+  
+  /* Optional: Ensure it doesn't flicker before starting */
+  will-change: transform;
 }
 
 /* the grabber handle */
