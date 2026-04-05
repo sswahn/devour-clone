@@ -16,6 +16,10 @@ function Notifications({ closeNotifications }) {
   const pointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
+
+    currentY.current = event.clientY
+    bottomSheetRef.current.style.transition = 'none'
+    bottomSheetRef.current.setPointerCapture(event.pointerId)
   }
 
   const pointerMove = event => {
@@ -41,6 +45,7 @@ function Notifications({ closeNotifications }) {
     } else {
       bottomSheetRef.current.style.transform = `translateY(0)`
     }
+    bottomSheetRef.current.releasePointerCapture(event.pointerId)
   }
 
   const handleClose = event => {
