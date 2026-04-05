@@ -212,11 +212,11 @@
 }
 
 /*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/CameraButton/camerabutton.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/CameraButton/CameraButton.module.css ***!
   \***************************************************************************************************************************/
 /* Navigation Camera Button */
 
-.G89sW5wPYTPuDAoxzFf5 {
+.SlRNtUnDJefwXxJrrPyU {
   align-items: center; 
   background: var(--white); /* linear-gradient(to top, #663399, #8a2be2); /* #663399; */
   border: 1px solid color-mix(in srgb, var(--white) 13%, transparent);
@@ -243,7 +243,7 @@
   
 }
 
-.G89sW5wPYTPuDAoxzFf5 svg {
+.SlRNtUnDJefwXxJrrPyU svg {
   fill: var(--text);
 }
 
