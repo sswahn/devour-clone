@@ -20,7 +20,7 @@ function SearchInput({ searchValue, setSearchValue, setError }) {
       className={styles.input}
       type="search"
       value={searchValue}
-      enterKeyHint="search"
+     // enterKeyHint="search"
       onChange={onChange}
       maxLength="288"
       pattern="[a-zA-Z0-9 ]+" 
