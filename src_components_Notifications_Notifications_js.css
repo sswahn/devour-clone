@@ -28,17 +28,14 @@
   animation: U2Lkr9A4lQT7Ejdc_x7r 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
   background-color: white;  /* var(--background); */
   bottom: 0;
+  cursor: grab;
   height: 50dvh;
   left: 0;
   padding-top: 8px;
   position: absolute;
- /* transition: transform 0.2s ease; */
   width: 100%;
   will-change: transform; /* Optional: Ensure it doesn't flicker before starting */
-
   touch-action: none;
-  cursor: grab;
-
 }
 
 /* the grabber handle */
