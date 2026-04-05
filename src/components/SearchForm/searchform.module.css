@@ -27,6 +27,7 @@
   align-items: center; 
   display: flex;
   justify-content: center;
+  background-clip: padding-box;
   background-color: #444;
   border: 1px solid var(--border);
   border-right: 0;
