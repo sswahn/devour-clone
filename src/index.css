@@ -4,12 +4,6 @@
   color-scheme: light dark; /* mode swap */
   --black: #181818;
   --white: #f9fafb;
-
-  /*
-    darkmode input bg currently #444; border is #555
-    this is too dark for light mode. #888, border #777
-    try #888;
-  */
   
   --background: light-dark(var(--white), var(--black));
   --text: light-dark(var(--black), var(--white));
