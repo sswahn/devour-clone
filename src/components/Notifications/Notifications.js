@@ -41,7 +41,7 @@ function Notifications({ closeNotifications }) {
       return
     }
     dragging.current = false
-    const deltaY = event.current - startY.current
+    const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
 
    sheet.style.transition = 'transform 0.2s ease'
