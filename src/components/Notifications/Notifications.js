@@ -57,7 +57,7 @@ function Notifications({ closeNotifications }) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}>
-        <div></div>
+        <div id="grabber"></div>
         <ul role="listbox">
           {context.notifications?.map((notification, index) => 
             <li key={index} role="option">{notification}</li>                                                           
