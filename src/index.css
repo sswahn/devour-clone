@@ -4,8 +4,8 @@
   color-scheme: light dark;
   --black: #181818;
   --white: #f9fafb;
-  --background: light-dark(var(--white) var(--black));
-  --text: light-dark(var(--black) var(--white));
+  --background: light-dark(var(--white), var(--black));
+  --text: light-dark(var(--black), var(--white));
 }
 
 * {
