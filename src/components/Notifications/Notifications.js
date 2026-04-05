@@ -58,7 +58,7 @@ function Notifications({ closeNotifications }) {
         role="dialog" 
         aria-modal="true" 
         aria-label="notifications">
-        <div id="grabber"></div>
+        <div id="grabber" role="presentation"></div>
         <ul role="listbox" aria-label="user notifications list">
           {context.notifications?.map((notification, index) => 
             <li key={index} role="option">{notification}</li>                                                           
