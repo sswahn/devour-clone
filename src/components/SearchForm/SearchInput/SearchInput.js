@@ -7,7 +7,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
     if (target.validity.patternMismatch) {
       target.reportValidity()
       setError(true)
-    } else if error {
+    } else if (error) {
       setError(false)
     }
     setSearchValue(target.value)
