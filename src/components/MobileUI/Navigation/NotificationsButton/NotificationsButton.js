@@ -1,5 +1,5 @@
 import BellIcon from '../../../Icons/BellIcon/BellIcon'
-import styles from './notificationsbutton.module.css'
+import styles from './NotificationsButton.module.css'
 
 function NotificationsButton({ openNotifications }) {
 
