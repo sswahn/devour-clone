@@ -4,8 +4,7 @@ import styles from './NotificationsButton.module.css'
 function NotificationsButton({ openNotifications }) {
 
   const onClick = event => {
-    navigator.vibrate(50); return;
-    
+    navigator.vibrate(50);
     openNotifications()
   }
   
