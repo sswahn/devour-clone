@@ -9,7 +9,7 @@
   align-items: center; /* Vertically center */
   height: 60px;
   background-color: var(--white);
-  border-top: 1px solid #ffffff0d;
+  border-top: 1px solid var(--border);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
 
