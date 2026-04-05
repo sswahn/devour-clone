@@ -4,12 +4,14 @@ import { useRef, useEffect } from 'react'
 import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
-  const context = { 
-    notifications: [1, 2, 3]
-  }
+  const bottomSheetRef = useRef(null)
   const touchStartY = useRef()
   const touchEndY = useRef()
   
+  const context = { 
+    notifications: [1, 2, 3]
+  }
+
   function handleGesture() {
     if (touchEndY.current > touchStartY.current + 50) {
       closeNotifications()
@@ -26,17 +28,17 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-    window.addEventListener('touchstart', touchStart)
-    window.addEventListener('touchend', touchEnd)
+    bottomSheetRef.current.addEventListener('touchstart', touchStart)
+    bottomSheetRef.current.addEventListener('touchend', touchEnd)
     return () => {
-      window.removeEventListener('touchstart', touchStart)
-      window.removeEventListener('touchend', touchEnd)
+      bottomSheetRef.current.removeEventListener('touchstart', touchStart)
+      bottomSheetRef.current.removeEventListener('touchend', touchEnd)
     }
   }, [])
   
   return (
     <div className={styles.notifications}>
-      <section>
+      <section ref={bottomSheetRef}>
         <div></div>
         <ul role="listbox">
           {context.notifications?.map((notification, index) => 
