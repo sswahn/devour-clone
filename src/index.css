@@ -1,24 +1,19 @@
 /* css global classes */
 
 :root {
-  color-scheme: dark light;
-  
+  color-scheme: light dark;
   --black: #181818;
   --white: #f9fafb;
-  
-  --dark-mode-background: var(--black);
-  --dark-mode-color: var(--white);
-  --dark-mode-background-secondary: #111;
-  --dark-mode-background-tertiary: #222;
-  --dark-mode-background-quaternary: #333;
-  --dark-mode-border-color: white;
-
-  --light-mode-background: var(--white);
-  --light-mode-color: var(--black);  
+  --background: var(--white);
+  --text: var(--black);
 }
 
-@media (prefers-color-scheme: dark) {}
-@media (prefers-color-scheme: light) {}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--black);
+    --text: var(--white);
+  }
+}
 
 * {
   margin: 0;
