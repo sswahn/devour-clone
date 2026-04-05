@@ -12,14 +12,15 @@ function Notifications({ closeNotifications }) {
   // 
   
   return (
-    <section className={styles.notifications}>
-
-      <ul>
-        {context.notifications?.map(notification => 
-          <li>{notification}</li>                                                           
-        )}
-      </ul>
-    </section>
+    <div className={styles.notifications}>
+      <section>
+        <ul>
+          {context.notifications?.map(notification => 
+            <li>{notification}</li>                                                           
+          )}
+        </ul>
+      </section>
+    </div>
   )
 }
 
