@@ -6,6 +6,7 @@ import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
 import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
@@ -76,6 +77,7 @@ function SearchForm({ closeSearch }) {
           </div>
           <SearchInput 
             searchValue={searchValue} 
+            error={error}
             setSearchValue={setSearchValue}
             setError={setError}
           />
@@ -84,11 +86,15 @@ function SearchForm({ closeSearch }) {
           </div>
         </form>
       </div>
-      <ul role="listbox">
-        {recentSearches?.length > 0 && recentSearches.map((search, index) =>
-          <li key={index} role="option">{search}</li>
-        )}    
-      </ul>  
+  
+      {/* make Suggestions component: */}
+      {loading ? <LoadingSpinner /> : (
+        <ul role="listbox">
+          {recentSearches?.length > 0 && recentSearches.map((search, index) =>
+            <li key={index} role="option">{search}</li>
+          )}    
+        </ul>  
+      )
     
     </search>
   )
