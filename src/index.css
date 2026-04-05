@@ -4,10 +4,17 @@
   color-scheme: light dark; /* mode swap */
   --black: #181818;
   --white: #f9fafb;
+
+  /*
+    darkmode input bg currently #444;
+    this is too dark for light mode.
+    try #888;
+  */
   
   --background: light-dark(var(--white), var(--black));
   --text: light-dark(var(--black), var(--white));
   --border: light-dark(#333, #555);
+  --input: light-dark(#888, #444);
 }
 
 * {
