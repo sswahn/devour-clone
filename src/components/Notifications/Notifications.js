@@ -29,9 +29,11 @@ function Notifications({ closeNotifications }) {
 
   useEffect(() => {
     bottomSheetRef.current.addEventListener('pointerdown', touchStart, { passive: true })
+    bottomSheetRef.current.addEventListener('pointermove', touchEnd, { passive: true })
     bottomSheetRef.current.addEventListener('pointerup', touchEnd, { passive: true })
     return () => {
       bottomSheetRef.current.removeEventListener('pointerdown', touchStart)
+      bottomSheetRef.current.removeEventListener('pointermove', touchStart)
       bottomSheetRef.current.removeEventListener('pointerup', touchEnd)
     }
   }, [])
