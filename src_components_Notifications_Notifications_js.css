@@ -14,15 +14,12 @@
   z-index: 200;
 }
 
-/* 1. Define the optimized animation */
 @keyframes U2Lkr9A4lQT7Ejdc_x7r {
   from {
-    /* Start completely off-screen below the bottom edge */
-    transform: translateY(100%);
+    transform: translateY(100%); /* Start completely off-screen below the bottom edge */
   }
   to {
-    /* End at its natural position (0 displacement) */
-    transform: translateY(0);
+    transform: translateY(0); /* End at its natural position (0 displacement) */
   }
 }
 
@@ -39,7 +36,7 @@
   width: 100%;
 
     /* Use 'forwards' to stay in the final state after animation */
-  animation: U2Lkr9A4lQT7Ejdc_x7r 0.6s ease-out forwards;
+  animation: U2Lkr9A4lQT7Ejdc_x7r 0.3s ease-out forwards;
   
   /* Optional: Ensure it doesn't flicker before starting */
   will-change: transform;
