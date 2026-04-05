@@ -44,7 +44,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const handleClose = event => {
-    if (!event.target.contains(bottomSheetRef.current)) {
+    if (!bottomSheetRef.current.contains(event.target)) {
       closeNotifications()
     }
   }
