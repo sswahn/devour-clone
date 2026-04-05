@@ -59,7 +59,7 @@ function Notifications({ closeNotifications }) {
         aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
-        <ul aria-label="user notifications list">
+        <ul aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>{notification}</li>                                                           
           )}
