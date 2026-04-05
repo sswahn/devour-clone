@@ -3,9 +3,19 @@ import { createPortal } from 'react-dom'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
-const BottomSheet = lazy(() => import('../BottomSheet/BottomSheet')) // Change to Profile Component
+const Notifications = lazy(() => import('../Notifications/Notifications')) 
+const Profile = lazy(() => import('../Profile/Profile')) 
 
-function Interface({ search, camera, notifications, profile, closeSearch, closeCamera, closeNotifications, closeProfile }) {
+function Interface({ 
+  search, 
+  camera, 
+  notifications, 
+  profile, 
+  closeSearch, 
+  closeCamera, 
+  closeNotifications, 
+  closeProfile 
+}) {
   return createPortal(
     <div>
       <Suspense fallback={<LoadingSpinner />}>
@@ -14,11 +24,11 @@ function Interface({ search, camera, notifications, profile, closeSearch, closeC
       <Suspense fallback={<LoadingSpinner />}>
         {camera && <Camera closeCamera={closeCamera} />}
       </Suspense>
-     {/* <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<LoadingSpinner />}>
        notifications && <Notifications closeNotifications={closeNotifications} /> 
-      </Suspense> */}
+      </Suspense>
       <Suspense fallback={<LoadingSpinner />}>    
-        {profile && <BottomSheet closeProfile={closeProfile} />} {/* Change to <Profile />*/}
+        {profile && <Profile closeProfile={closeProfile} />}
       </Suspense>
     </div>, 
     document.getElementById('portal')
