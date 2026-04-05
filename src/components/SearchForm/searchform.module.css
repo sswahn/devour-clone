@@ -27,7 +27,6 @@
   align-items: center; 
   display: flex;
   justify-content: center;
-  background-clip: padding-box;
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-right: 0;
@@ -45,7 +44,6 @@
 .search form div:last-child {
   align-items: center;
   display: flex;
-  contain: paint;
   justify-content: center;
   background-color: var(--input);
   border: 1px solid var(--input-border);
