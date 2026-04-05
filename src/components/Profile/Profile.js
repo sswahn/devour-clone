@@ -1,6 +1,6 @@
 import styles from './Profile.module.css'
 
-function Profile() {
+function Profile({ closeProfile }) {
   
   return (
     <section className={styles.profile}>
