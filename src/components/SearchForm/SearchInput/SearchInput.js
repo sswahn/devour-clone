@@ -25,10 +25,9 @@ function SearchInput({ searchValue, setSearchValue, setError }) {
       maxLength="288"
       pattern="[a-zA-Z0-9 ]+" 
       title="Use letters and numbers only."
-      required
-      autoFocus
       autoComplete="on"
-      spellCheck={true} 
+      spellCheck={true}
+      autoFocus
     />
   )
 }
