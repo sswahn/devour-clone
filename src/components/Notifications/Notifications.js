@@ -18,6 +18,25 @@ function Notifications({ closeNotifications }) {
     ]
   }
 
+  const handleClose = event => {
+    if (event.target === event.currentTarget) {
+      const bottomSheet = bottomSheetRef.current
+      bottomSheet.style.transform = ''
+      bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
+      setIsOpen(false)
+    }
+  }
+
+  const snapBack = () => {
+    const bottomSheet = bottomSheetRef.current
+    if (!bottomSheet) {
+      return
+    }
+    bottomSheet.style.transition = 'transform 200ms cubic-bezier(0.25, 1, 0.5, 1), height 200ms ease'
+    bottomSheet.style.transform = 'translateY(0)'
+    bottomSheet.style.height = '' // Returns to 50dvh from CSS
+  }
+
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
@@ -76,15 +95,6 @@ function Notifications({ closeNotifications }) {
     bottomSheet.style.transition = 'transform 200ms ease, height 200ms ease'
     bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = ''
-  }
-
-  const handleClose = event => {
-    if (event.target === event.currentTarget) {
-      const bottomSheet = bottomSheetRef.current
-      bottomSheet.style.transform = ''
-      bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
-      setIsOpen(false)
-    }
   }
 
   useEffect(() => {
