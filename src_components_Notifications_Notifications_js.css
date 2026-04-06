@@ -56,7 +56,6 @@
 .EW8UjTxcaJyjDU58ZAQw ul {
   list-style-type: none;
   margin-top: 8px;
-  overflow-y: auto;
   width: 100%;
 
   border: 1px dashed blue;
@@ -69,5 +68,11 @@
   width: 100%;
 
   border: 1px dashed red;
+}
+
+@container (min-height: 80dvh) {
+  .EW8UjTxcaJyjDU58ZAQw ul {
+    overflow-y: auto;
+  }
 }
 
