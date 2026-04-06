@@ -42,7 +42,8 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
     if (deltaY > bottomSheet.offsetHeight / 2) {
-      closeNotifications()
+      setIsOpen(false)
+      bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
     } else {
       bottomSheet.style.transform = `translateY(0)`
     }
