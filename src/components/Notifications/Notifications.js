@@ -55,7 +55,7 @@ function Notifications({ closeNotifications }) {
     }
     // translate = Math.max(translate, maxDragUp)
     bottomSheet.style.transform = `translateY(${translate}px)`
-    bottomSheet.style.height = `${newHeight}px`
+    bottomSheet.style.height = `${newHeight}dvh`
   }
 
   const handlePointerUp = event => {
@@ -72,7 +72,7 @@ function Notifications({ closeNotifications }) {
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
-      bottomSheet.style.height = ``
+      bottomSheet.style.height = ''
     }
   }
 
