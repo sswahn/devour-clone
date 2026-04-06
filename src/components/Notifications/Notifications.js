@@ -22,7 +22,7 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    initialHeight.current = bottomSheetRef.current.offsetHeight // window.innerHeight * 0.5 // bottomSheetRef.current.offsetHeight
+    initialHeight.current = bottomSheetRef.current.offsetHeight
     
     lastTime.current = performance.now()
   }
