@@ -36,16 +36,21 @@ function Notifications({ closeNotifications }) {
     const deltaT = performance.now() - lastTime.current
     velocity.current = deltaY / deltaT
 
+    if (deltaY <= 0) {
+      return
+    }
+    
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
+    
     if (deltaY > height) {
       const extra = deltaY - height
       translate = height + extra * 0.35   // resistance
     }
-    if (deltaY > 0) {
+   // if (deltaY > 0) {
       bottomSheet.style.transform = `translateY(${translate}px)`
-    }
+   // }
   }
 
   const handlePointerUp = event => {
