@@ -42,7 +42,7 @@ function Notifications({ closeNotifications }) {
       console.log('setting resistance.')
       const extra = deltaY - limit; // How far past the limit we are
       // Log resistance applied only to the "extra" distance
-      const resistance = deltaY * 0.25 * Math.log10(Math.abs(extra) + 10);
+      const resistance = extra * 0.25 * Math.log10(Math.abs(extra) + 10);
       translate = limit + resistance;
     }
 
