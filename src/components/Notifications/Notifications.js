@@ -10,7 +10,11 @@ function Notifications({ closeNotifications }) {
   const currentY = useRef(0)
   
   const context = { 
-    notifications: [1, 2, 3]
+    notifications: [
+      'testing user notification section, testing user notification section',
+      'testing user notification section, testing user notification section',
+      'testing user notification section, testing user notification section',
+    ]
   }
 
   const handlePointerDown = event => {
