@@ -44,7 +44,7 @@
 }
 
 .open {
-  
+  transform: translateY(0);
 }
 
 /* the grabber handle */
