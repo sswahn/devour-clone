@@ -27,16 +27,6 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  const snapBack = () => {
-    const bottomSheet = bottomSheetRef.current
-    if (!bottomSheet) {
-      return
-    }
-    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.transform = 'translateY(0)'
-    bottomSheet.style.height = '' // Returns to 50dvh from CSS
-  }
-
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
@@ -51,14 +41,14 @@ function Notifications({ closeNotifications }) {
     event.currentTarget.setPointerCapture(event.pointerId)
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
-    const height = initialHeight.current // fixed height
+    const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
     if (deltaY < 0) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
-      bottomSheet.style.height = `${height + stretch}px` // Grow the height, but keep it pinned at the bottom
-      bottomSheet.style.transform = `translateY(0px)`  // Keeps it pinned at the bottom
+      bottomSheet.style.height = `${height + stretch}px`
+      bottomSheet.style.transform = `translateY(0px)` 
     } else {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
@@ -75,10 +65,10 @@ function Notifications({ closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' // restore CSS transition
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
-      bottomSheet.style.transform = '' // clear inline transform so class takes over
+      bottomSheet.style.transform = ''
       bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
     } else {
