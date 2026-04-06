@@ -86,7 +86,7 @@ function Notifications({ closeNotifications }) {
   return (
     <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}  
-        className={isOpen ? styles.open : styles.close}
+        className={isOpen ? styles.open : ''}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
