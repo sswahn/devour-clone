@@ -53,22 +53,18 @@ function Notifications({ closeNotifications }) {
       return
     }
     dragging.current = false
-    
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
-    
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
-
+    bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
-    //if (deltaY > bottomSheet.offsetHeight / 2) {
       bottomSheet.style.transform = '' // clear inline transform so class takes over
       bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
-      bottomSheet.style.height = ''
     }
   }
 
