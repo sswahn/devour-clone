@@ -42,13 +42,29 @@ function Notifications({ closeNotifications }) {
     }
   }
 
+  const updateTouchAction = event => {
+    const list = listRef.current;
+    if (!list) {
+      return
+    }
+    list.style.touchAction = list.scrollTop <= 0 ? 'pan-up' : 'pan-y';
+  }
+
+  useEffect(() => {
+    list.addEventListener('scroll', updateTouchAction)
+    return () => {
+      list.removeEventListener('scroll', updateTouchAction)
+    }
+  }, [])
+
   const handlePointerDown = event => {
-
-    console.log('pointerDown fired.')
+    const list = listRef.current
+    list.style.touchAction = 'pan-y'
     
-    if (listRef.current.scrollTop <= 0) {
-
-      console.log('inside pointerDown condition. dragging should proceed.')
+    if (list.scrollTop <= 0) {
+      // 1. Dynamic touch-action: 
+      // If at top, 'pan-up' allows scrolling up but lets JS handle dragging down.
+      list.style.touchAction = 'pan-up'
       
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
