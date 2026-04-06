@@ -23,6 +23,15 @@
   }
 }
 
+@keyframes CHKiCeeo3_Vnql_HxUHl {
+  from {
+    transform: translateY(100%); /* Start completely off-screen below the bottom edge */
+  }
+  to {
+    transform: translateY(0); /* End at its natural position (0 displacement) */
+  }
+}
+
 /* the bottom sheet */
 .EW8UjTxcaJyjDU58ZAQw section {
   animation: U2Lkr9A4lQT7Ejdc_x7r 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
