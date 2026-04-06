@@ -57,6 +57,8 @@
   list-style-type: none;
   margin-top: 8px;
   width: 100%;
+
+  border: 1px dashed blue;
 }
 
 .notifications ul li {
@@ -64,4 +66,6 @@
   font-size: 18px;
   padding: 12px;
   width: 100%;
+
+  border: 1px dashed red;
 }
