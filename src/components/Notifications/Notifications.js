@@ -77,7 +77,8 @@ function Notifications({ closeNotifications }) {
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
-    } else {
+    //} else {
+    } else if (deltaY > 0 && listRef.current.scrollTop === 0) {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
