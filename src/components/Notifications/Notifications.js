@@ -1,6 +1,4 @@
 import { useState, useRef, useEffect } from 'react'
-// notifications arrive from server push events
-// the button must 'know' of updates so they will be set via context
 import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
@@ -57,28 +55,6 @@ function Notifications({ closeNotifications }) {
     if (!bottomSheetRef.current.contains(event.target)) { // (event.target !== event.currentTarget) 
       bottomSheetRef.current.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
-    }
-  }
-
-  const requestPermission = async () => {
-    if (!("Notification" in window)) {
-      return console.log("This browser does not support notifications.")
-    }
-    
-    const permission = await Notification.requestPermission()
-    
-    if (permission === "granted") {
- 
-      const notification = new Notification("Hello!", {
-        body: "This is a browser notification.",
-        icon: "/path/to/icon.png" // Optional icon
-      })
-  
-      // Optional: Handle click event
-      notification.onclick = () => {
-        window.focus()
-        notification.close()
-      }
     }
   }
 
