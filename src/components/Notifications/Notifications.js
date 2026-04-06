@@ -46,7 +46,8 @@ function Notifications({ closeNotifications }) {
     }
     */
     // Elasticity when pushing above top (dragging up)
-    else if (deltaY < 0) {
+   // else 
+    if (deltaY < 0) {
       translate = deltaY * 0.5 // Resistance when dragging up
     }
 
