@@ -35,32 +35,14 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
-
-      /* UPWARD DRAG (negative) */
-    if (deltaY < 0) {
-      const maxUp = 80 // max upward pull
-      translate = deltaY * 0.35 // resistance
-  
-      if (translate < -maxUp) {
-        translate = -maxUp
-      }
-    }
-  
-    /* DOWNWARD DRAG (normal close motion) */
-    if (deltaY > 0) {
-      if (deltaY > height) {
-        const extra = deltaY - height
-        translate = height + extra * 0.35
-      }
-    }
-
-    /*
-    if (deltaY < 0) {
-      translate = deltaY * 0.5 // Resistance when dragging up
-      bottomSheet.style.transform = `translateY(${-translate}px)`
-    } */
-    bottomSheet.style.transform = `translateY(${translate}px)`
     
+    if (deltaY < 0) {
+      //translate = deltaY * 0.5 // Resistance when dragging up
+      translate = deltaY * 0.25 * Math.log10(Math.abs(deltaY) + 10)
+      bottomSheet.style.transform = `translateY(${-translate}px)`
+    } else {
+      bottomSheet.style.transform = `translateY(${translate}px)`
+    }
   }
 
   const handlePointerUp = event => {
