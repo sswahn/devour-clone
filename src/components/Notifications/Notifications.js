@@ -37,9 +37,7 @@ function Notifications({ closeNotifications }) {
     let translate = deltaY
 
     if (deltaY < 0) {
-      //translate = deltaY * 0.5 // Resistance when dragging up
-      translate = Math.abs(deltaY * 0.25 * Math.log10(Math.abs(deltaY) + 10))
-    
+      translate = deltaY * 0.5 // Resistance when dragging up   
     }
     bottomSheet.style.transform = `translateY(${translate}px)`
   }
