@@ -79,6 +79,15 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     }
+
+
+
+    //////
+      } else {
+        bottomSheet.style.transform = 'translateY(0px)'
+      }
+
+      
   }
 
   const handlePointerUp = event => {
@@ -99,12 +108,6 @@ function Notifications({ closeNotifications }) {
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
-    }
-
-    //////
-      } else {
-        bottomSheet.style.transform = 'translateY(0px)'
-      }
     }
   }
 
