@@ -51,15 +51,30 @@ function Notifications({ closeNotifications }) {
 
   function requestPermission() {
     if (!("Notification" in window)) {
-      console.log("This browser does not support notifications.");
-      return;
+      console.log("This browser does not support notifications.")
+      return
     }
   
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
-        console.log("Permission granted.");
+        console.log("Permission granted.")
       }
-    });
+    })
+  }
+
+  function showNotification() {
+    if (Notification.permission === "granted") {
+      const notification = new Notification("Hello!", {
+        body: "This is a browser notification.",
+        icon: "/path/to/icon.png" // Optional icon
+      })
+  
+      // Optional: Handle click event
+      notification.onclick = () => {
+        window.focus()
+        notification.close()
+      }
+    }
   }
   
   return (
