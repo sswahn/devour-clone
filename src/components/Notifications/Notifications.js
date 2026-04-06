@@ -30,20 +30,19 @@ function Notifications({ closeNotifications }) {
       return
     }
     const bottomSheet = bottomSheetRef.current
+    
     /* velocity calculation */
     const deltaY = event.clientY - startY.current
     const deltaT = performance.now() - lastTime.current
     velocity.current = deltaY / deltaT
 
-      /* elasticity */
+    /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
-
     if (deltaY > height) {
       const extra = deltaY - height
       translate = height + extra * 0.35   // resistance
     }
-    
     if (deltaY > 0) {
       bottomSheet.style.transform = `translateY(${translate}px)`
     }
