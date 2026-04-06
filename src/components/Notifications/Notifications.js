@@ -39,13 +39,13 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
-    
+    /* remove if does nothing:
     if (deltaY > height) {
       const extra = deltaY - height
       translate = height + extra * 0.35   // resistance
     }
-    
-    // Optionally add elasticity when pushing above top (dragging up)
+    */
+    // Elasticity when pushing above top (dragging up)
     else if (deltaY < 0) {
       translate = deltaY * 0.5 // Resistance when dragging up
     }
