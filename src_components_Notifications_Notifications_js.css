@@ -23,16 +23,7 @@
   }
 }
 
-@keyframes CHKiCeeo3_Vnql_HxUHl {
-  from {
-    transform: translateY(0); /* Start at its natural position (0 displacement) */
-  }
-  to {
-    transform: translateY(100%); /* End completely off-screen below the bottom edge */
-  }
-}
-
-.CHKiCeeo3_Vnql_HxUHl {
+.txatc1UMFm1tg1LtMLFJ {
   animation: CHKiCeeo3_Vnql_HxUHl 0.1s ease-out forwards;
 }
 
@@ -46,9 +37,17 @@
   left: 0;
   padding-top: 8px;
   position: absolute;
+
+  transform: translateY(100%);   /* start hidden */
+  transition: transform 250ms ease;
+
+  touch-action: none;
   width: 100%;
   will-change: transform; /* Ensures it doesn't flicker before starting */
-  touch-action: none;
+}
+
+.txatc1UMFm1tg1LtMLFJ {
+  
 }
 
 /* the grabber handle */
