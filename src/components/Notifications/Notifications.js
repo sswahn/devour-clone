@@ -37,7 +37,16 @@ function Notifications({ closeNotifications }) {
     let translate = deltaY
 
     if (deltaY < 0) {
-      translate = deltaY * 0.5 // Resistance when dragging up   
+      //translate = deltaY * 0.5 // Resistance when dragging up   
+      // 1. Calculate how far into the "resistance zone" we are (0 to 1)
+      // As deltaY becomes more negative (closer to maxDragUp), 
+      // resistanceFactor approaches 0.
+      const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
+      
+      // 2. Apply non-linear resistance:
+      // When deltaY is near 0, resistanceFactor is near 1 (mostly 1:1 movement).
+      // When deltaY is near maxDragUp, resistanceFactor is near 0 (hardly any movement).
+      translate = deltaY * resistanceFactor
     }
     bottomSheet.style.transform = `translateY(${translate}px)`
   }
