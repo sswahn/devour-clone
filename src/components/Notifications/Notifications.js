@@ -31,12 +31,9 @@ function Notifications({ closeNotifications }) {
     }
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
-    
-    /* elasticity */
-    let translate = deltaY
-    const maxDragUp = -200
     const height = initialHeight.current // fixed height
-  
+    const maxDragUp = -200
+    let translate = deltaY
     if (deltaY < 0) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
