@@ -20,6 +20,15 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(100%); /* Start completely off-screen below the bottom edge */
+  }
+  to {
+    transform: translateY(0); /* End at its natural position (0 displacement) */
+  }
+}
+
 /* the bottom sheet */
 .notifications section {
   animation: slideUp 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
