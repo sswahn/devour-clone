@@ -56,7 +56,7 @@ function Notifications({ closeNotifications }) {
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
   
-      bottomSheetRef.current.style.transition = 'none';
+      //bottomSheetRef.current.style.transition = 'none'
     }
   }
 
