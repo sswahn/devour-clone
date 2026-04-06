@@ -57,7 +57,7 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     
     const deltaY = event.clientY - startY.current
-    const deltaTime = Date.now() - startTime.current
+    const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     
     const bottomSheet = bottomSheetRef.current
