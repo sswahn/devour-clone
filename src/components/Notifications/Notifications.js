@@ -36,24 +36,15 @@ function Notifications({ closeNotifications }) {
     
     /* elasticity */
     let translate = deltaY
-    const maxDragUp = -300
-
-    // Use a fixed base height (50dvh in your case)
-    // It is better to capture this once in PointerDown as initialHeight.current
-    const height = initialHeight.current
+    const maxDragUp = -200
+    const height = initialHeight.current // fixed height
   
     if (deltaY < 0) {
-      /* STRETCH UP */
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
-      
-      // Grow the height, but keep it pinned at the bottom
-      bottomSheet.style.height = `${height + stretch}px`
-      // Keeps it pinned at the bottom:
-      bottomSheet.style.transform = `translateY(0px)`
+      bottomSheet.style.height = `${height + stretch}px` // Grow the height, but keep it pinned at the bottom
+      bottomSheet.style.transform = `translateY(0px)`  // Keeps it pinned at the bottom
     } else {
-      /* SLIDE DOWN */
-      // Reset height to base and slide the whole element down
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     }
