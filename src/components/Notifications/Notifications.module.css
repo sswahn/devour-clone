@@ -22,7 +22,7 @@
 
 /* the bottom sheet */
 .notifications section {
-  animation: slideUp 0.1s ease-out forwards; /* Use 'forwards' to stay in the final state after animation */
+  /*animation: slideUp 0.1s ease-out forwards; */ /* Use 'forwards' to stay in the final state after animation */
   background-color: var(--background);
   border-top: 1px solid var(--border);
   bottom: 0;
