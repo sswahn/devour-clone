@@ -7,6 +7,7 @@ function Notifications({ closeNotifications }) {
   const dragging = useRef(false)
   const startY = useRef(0)
   const velocity = useRef(0)
+  lastTime = useRef(0)
   
   const context = { 
     notifications: [
@@ -19,15 +20,33 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
+
+    lastTime.current = performance.now()
   }
 
   const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
+
+    const now = performance.now()
+
+    /* velocity calculation */
     const deltaY = event.clientY - startY.current
+    const deltaT = now - lastTime.current
+    velocity.current = deltaY / deltaT
+
+      /* elasticity */
+    const height = sheet.offsetHeight
+    let translate = deltaY
+
+    if (deltaY > height) {
+      const extra = deltaY - height
+      translate = height + extra * 0.35   // resistance
+    }
+    
     if (deltaY > 0) {
-      bottomSheetRef.current.style.transform = `translateY(${deltaY}px)`
+      bottomSheetRef.current.style.transform = `translateY(${translate}px)`
     }
   }
 
