@@ -21,7 +21,7 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    bottomSheetRef.current.style.transform = 'none'
+   // bottomSheetRef.current.style.transform = 'none'
   }
 
   const handlePointerMove = event => {
@@ -79,7 +79,6 @@ function Notifications({ closeNotifications }) {
 
   useEffect(() => {
     if (!isOpen) {
-      console.log('setting isOpen to true.')
       setIsOpen(true)
     }
   }, [])
