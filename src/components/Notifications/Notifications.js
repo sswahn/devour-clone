@@ -38,15 +38,14 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
+    bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
     if (deltaY > bottomSheet.offsetHeight / 2) {
       
-      bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
       bottomSheet.style.transform = '' // clear inline transform so class takes over
-      
       bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
     } else {
-      bottomSheet.style.transition = 'transform 100ms ease'
+
       bottomSheet.style.transform = `translateY(0)`
     }
   }
