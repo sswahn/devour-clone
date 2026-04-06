@@ -42,37 +42,13 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  const updateTouchAction = event => {
-    const list = listRef.current
-    if (!list) {
-      return
-    }
-    list.style.touchAction = list.scrollTop <= 0 ? 'pan-up' : 'pan-y';
-  }
-
-  useEffect(() => {
-    listRef.current.addEventListener('scroll', updateTouchAction)
-    return () => {
-      listRef.current.removeEventListener('scroll', updateTouchAction)
-    }
-  }, [])
-
   const handlePointerDown = event => {
-    const list = listRef.current
-    list.style.touchAction = 'pan-y'
-    
-    if (list.scrollTop <= 0) {
-      // 1. Dynamic touch-action: 
-      // If at top, 'pan-up' allows scrolling up but lets JS handle dragging down.
-      list.style.touchAction = 'pan-up'
-      
+    if (listRef.current.scrollTop <= 0) {
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
-  
-      //bottomSheetRef.current.style.transition = 'none'
     }
   }
 
@@ -80,7 +56,6 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
 
