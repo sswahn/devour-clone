@@ -57,23 +57,15 @@ function Notifications({ closeNotifications }) {
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
     
-    // const isDraggingHandle = event.target.id === 'grabber' // dont need this cause scroll doesnt reach it
-    console.log('listRef.current.scrollTop: ', listRef.current.scrollTop)
-    console.log('listRef.current.scrollTop !== 0: ', listRef.current.scrollTop !== 0)
-    console.log('deltaY: ', deltaY)
-    console.log('deltaY < 0: ', deltaY < 0)
-  
-    if (listRef.current.scrollTop !== 0 && deltaY < 0) {
-      // Prevent the list from scrolling so the sheet moves instead
-      //event.preventDefault()
-      console.log('in condition, NOT top of scroll and IS scrolling down the list.')
-      bottomSheet.style.transform = 'translateY(0px)'
-      return
-    }
 
-   // event.preventDefault()
-    console.log('past condition, should behave as desired: not scrolling but dragging.')
-    
+  
+    if (listRef.current.scrollTop === 0 && deltaY > 0) {
+      // Prevent the list from scrolling so the sheet moves instead
+      event.preventDefault()
+ 
+ 
+
+
     const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
@@ -107,6 +99,12 @@ function Notifications({ closeNotifications }) {
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
+    }
+
+    //////
+      } else {
+        bottomSheet.style.transform = 'translateY(0px)'
+      }
     }
   }
 
