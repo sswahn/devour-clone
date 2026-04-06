@@ -43,7 +43,13 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
+
+    console.log('pointerDown fired.')
+    
     if (listRef.current.scrollTop === 0) {
+
+      console.log('inside pointerDown condition. dragging should proceed.')
+      
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
