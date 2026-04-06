@@ -36,7 +36,8 @@ function Notifications({ closeNotifications }) {
     const height = bottomSheet.offsetHeight
     let translate = deltaY
     const maxDragUp = -300
-
+    let newHeight = height
+    
     if (deltaY < 0) {
       //translate = deltaY * 0.5 // Resistance when dragging up   
       // 1. Calculate how far into the "resistance zone" we are (0 to 1)
@@ -48,11 +49,10 @@ function Notifications({ closeNotifications }) {
       // When deltaY is near 0, resistanceFactor is near 1 (mostly 1:1 movement).
       // When deltaY is near maxDragUp, resistanceFactor is near 0 (hardly any movement).
       translate = deltaY * resistanceFactor
+      newHeight += Math.abs(translate)
     }
     // translate = Math.max(translate, maxDragUp)
     bottomSheet.style.transform = `translateY(${translate}px)`
-
-    const newHeight = height + Math.abs(translate)
     bottomSheet.style.height = `${newHeight}px`
   }
 
