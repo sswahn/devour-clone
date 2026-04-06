@@ -36,6 +36,9 @@ function Notifications({ closeNotifications }) {
     
     /* elasticity */
     const height = bottomSheet.offsetHeight
+
+    console.log('bottomSheet.offestHeight: ', height)
+    
     let translate = deltaY
     const maxDragUp = -300
     let newHeight = initialHeight.current // Always start from the base height
