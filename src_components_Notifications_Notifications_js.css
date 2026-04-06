@@ -35,7 +35,7 @@
   position: absolute;
 
   transform: translateY(100%);   /* start hidden */
-  transition: transform 250ms ease;
+  transition: transform 100ms ease;
 
   touch-action: none;
   width: 100%;
