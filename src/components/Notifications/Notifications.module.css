@@ -51,10 +51,14 @@
 }
 
 .notifications ul {
+  list-style-type: none;
+  margin-top: 8px;
   width: 100%;
 }
 
 .notifications ul li {
+  color: var(--text);
+  font-size: 18px;
   padding: 12px;
   width: 100%;
 }
