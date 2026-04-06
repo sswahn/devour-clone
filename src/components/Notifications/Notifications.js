@@ -7,9 +7,8 @@ function Notifications({ closeNotifications }) {
   const initialHeight = useRef(0)
   const dragging = useRef(false)
   const startY = useRef(0)
+  const startTime = useRef(0)
   const velocity = useRef(0)
-  
-  const lastTime = useRef(0)
   
   const context = { 
     notifications: [
@@ -22,9 +21,8 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
+    startTime.current = performance.now()
     initialHeight.current = bottomSheetRef.current.offsetHeight
-    
-    lastTime.current = performance.now()
   }
 
   const handlePointerMove = event => {
