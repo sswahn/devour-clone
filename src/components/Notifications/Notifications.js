@@ -37,11 +37,12 @@ function Notifications({ closeNotifications }) {
     let translate = deltaY
 
     const limit = -50; // The point where resistance starts (upward)
-
+    console.log('deltaY: ', deltaY)
     if (deltaY < limit) {
+      console.log('setting resistance.')
       const extra = deltaY - limit; // How far past the limit we are
       // Log resistance applied only to the "extra" distance
-      const resistance = extra * 0.25 * Math.log10(Math.abs(extra) + 10);
+      const resistance = deltaY * 0.25 * Math.log10(Math.abs(extra) + 10);
       translate = limit + resistance;
     }
 
