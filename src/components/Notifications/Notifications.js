@@ -58,7 +58,11 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     
     // const isDraggingHandle = event.target.id === 'grabber' // dont need this cause scroll doesnt reach it
-
+    console.log('listRef.current.scrollTop: ', listRef.current.scrollTop)
+    console.log('listRef.current.scrollTop !== 0: ', listRef.current.scrollTop !== 0)
+    console.log('deltaY: ', deltaY)
+    console.log('deltaY < 0: ', deltaY < 0)
+  
     if (listRef.current.scrollTop !== 0 && deltaY < 0) {
       // Prevent the list from scrolling so the sheet moves instead
       //event.preventDefault()
