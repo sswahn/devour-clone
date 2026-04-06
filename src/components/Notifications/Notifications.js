@@ -56,21 +56,20 @@ function Notifications({ closeNotifications }) {
     event.currentTarget.setPointerCapture(event.pointerId)
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
-    const height = initialHeight.current
-    const maxDragUp = -200
-    let translate = deltaY
-
-
-  
     
     // const isDraggingHandle = event.target.id === 'grabber' // dont need this cause scroll doesnt reach it
 
-    if (listRef.current.scrollTop === 0 && deltaY > 0) {
+    if (listRef.current.scrollTop !== 0 && deltaY < 0) {
       // Prevent the list from scrolling so the sheet moves instead
-      event.preventDefault()
-  
+      //event.preventDefault()
+      console.log('in condition top of scroll and not scrolling down the list.')
+      bottomSheet.style.transform = 'translateY(0px)'
+      return
     }
 
+    const height = initialHeight.current
+    const maxDragUp = -200
+    let translate = deltaY
     
     if (deltaY < 0) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
