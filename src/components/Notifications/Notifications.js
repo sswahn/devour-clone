@@ -49,7 +49,7 @@ function Notifications({ closeNotifications }) {
       // When deltaY is near maxDragUp, resistanceFactor is near 0 (hardly any movement).
       translate = deltaY * resistanceFactor
     }
-    translate = Math.max(translate, maxDragUp)
+    // translate = Math.max(translate, maxDragUp)
     bottomSheet.style.transform = `translateY(${translate}px)`
   }
 
