@@ -31,25 +31,15 @@ function Notifications({ closeNotifications }) {
     }
     const bottomSheet = bottomSheetRef.current
     
-    /* velocity calculation */
-    const deltaY = event.clientY - startY.current
-    const deltaT = performance.now() - lastTime.current
-    velocity.current = deltaY / deltaT
-    
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
     
     if (deltaY < 0) {
-    //if (deltaY > height) {
       translate = deltaY * 0.5 // Resistance when dragging up
-    
-      //bottomSheet.style.height = `${height + translate}px` 
       bottomSheet.style.transform = `translateY(${-translate}px)`
-    }// else { // deltaY > 0
-     // bottomSheet.style.height = '' // Reset inline CSS height
-      bottomSheet.style.transform = `translateY(${translate}px)`
-   // }
+    }
+    bottomSheet.style.transform = `translateY(${translate}px)`
   }
 
   const handlePointerUp = event => {
