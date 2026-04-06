@@ -4,6 +4,7 @@ import styles from './Notifications.module.css'
 function Notifications({ closeNotifications }) {
   const [isOpen, setIsOpen] = useState(false)
   const bottomSheetRef = useRef(null)
+  const initialHeight = useRef(0)
   const dragging = useRef(false)
   const startY = useRef(0)
   const velocity = useRef(0)
@@ -21,7 +22,8 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-
+    initialHeight.current = bottomSheetRef.current.offsetHeight
+    
     lastTime.current = performance.now()
   }
 
@@ -36,7 +38,7 @@ function Notifications({ closeNotifications }) {
     const height = bottomSheet.offsetHeight
     let translate = deltaY
     const maxDragUp = -300
-    let newHeight = height
+    let newHeight = initialHeight.current; // Always start from the base height
     
     if (deltaY < 0) {
       //translate = deltaY * 0.5 // Resistance when dragging up   
