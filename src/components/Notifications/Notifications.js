@@ -43,7 +43,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const updateTouchAction = event => {
-    const list = listRef.current;
+    const list = listRef.current
     if (!list) {
       return
     }
@@ -51,9 +51,9 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-    list.addEventListener('scroll', updateTouchAction)
+    listRef.current.addEventListener('scroll', updateTouchAction)
     return () => {
-      list.removeEventListener('scroll', updateTouchAction)
+      listRef.current.removeEventListener('scroll', updateTouchAction)
     }
   }, [])
 
