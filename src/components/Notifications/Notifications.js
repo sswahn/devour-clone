@@ -35,6 +35,7 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
+    const maxDragUp = -300
 
     if (deltaY < 0) {
       //translate = deltaY * 0.5 // Resistance when dragging up   
