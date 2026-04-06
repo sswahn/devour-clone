@@ -91,7 +91,9 @@ function Notifications({ closeNotifications }) {
       setIsOpen(true)
     }
   }, [])
-  
+
+  // need bottomsheet height to expand with list items.
+    
   return (
     <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}  
