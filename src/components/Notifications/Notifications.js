@@ -72,6 +72,7 @@ function Notifications({ closeNotifications }) {
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
+      bottomSheet.style.height = ``
     }
   }
 
