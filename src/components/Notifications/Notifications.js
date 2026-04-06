@@ -46,7 +46,7 @@ function Notifications({ closeNotifications }) {
 
     console.log('pointerDown fired.')
     
-    if (listRef.current.scrollTop === 0) {
+    if (listRef.current.scrollTop <= 0) {
 
       console.log('inside pointerDown condition. dragging should proceed.')
       
@@ -78,7 +78,7 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
     //} else {
-    } else if (deltaY > 0 && listRef.current.scrollTop === 0) {
+    } else if (deltaY > 0 && listRef.current.scrollTop <= 0) {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
