@@ -49,8 +49,13 @@ function Notifications({ closeNotifications }) {
 
   const handleClose = event => {
     if (!bottomSheetRef.current.contains(event.target)) {
-      bottomSheetRef.current.classList.add(styles.slideDown)
-      setTimeout(closeNotifications, 500)
+      const bottomSheet = bottomSheetRef.current
+      bottomSheet.classList.add(styles.slideDown)
+      const onEnd = () => {
+        bottomSheet.removeEventListener('animationend', onEnd)
+        closeNotifications()
+      }
+      bottomSheet.addEventListener('animationend', onEnd)
     }
   }
 
