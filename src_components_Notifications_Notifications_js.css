@@ -63,7 +63,7 @@
   overscroll-behavior: contain; /* Prevents scrolling the background */
   -webkit-overflow-scrolling: touch; 
   flex: 1;                   /* Takes up remaining space */
-  touch-action: none;  
+  
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li {
