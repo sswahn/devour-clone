@@ -32,7 +32,7 @@ function Notifications({ closeNotifications }) {
     if (!bottomSheet) {
       return
     }
-    bottomSheet.style.transition = 'transform 200ms cubic-bezier(0.25, 1, 0.5, 1), height 200ms ease'
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = '' // Returns to 50dvh from CSS
   }
@@ -75,7 +75,7 @@ function Notifications({ closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' // restore CSS transition
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
       bottomSheet.style.transform = '' // clear inline transform so class takes over
@@ -92,7 +92,7 @@ function Notifications({ closeNotifications }) {
     }
     dragging.current = false
     const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 200ms ease, height 200ms ease'
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = ''
   }
