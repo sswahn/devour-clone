@@ -43,28 +43,24 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    dragging.current = true
-    startY.current = event.clientY
-    startTime.current = performance.now()
-    initialHeight.current = bottomSheetRef.current.offsetHeight
+    if (listRef.current.scrollTop === 0) {
+      event.currentTarget.setPointerCapture(event.pointerId)
+      dragging.current = true
+      startY.current = event.clientY
+      startTime.current = performance.now()
+      initialHeight.current = bottomSheetRef.current.offsetHeight
+  
+      bottomSheetRef.current.style.transition = 'none';
+    }
   }
 
   const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
-    event.currentTarget.setPointerCapture(event.pointerId)
+    
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
-    
-
-  
-    if (listRef.current.scrollTop === 0 && deltaY > 0) {
-      // Prevent the list from scrolling so the sheet moves instead
-      event.preventDefault()
- 
- 
-
 
     const height = initialHeight.current
     const maxDragUp = -200
@@ -78,16 +74,7 @@ function Notifications({ closeNotifications }) {
     } else {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
-    }
-
-
-
-    //////
-      } else {
-        bottomSheet.style.transform = 'translateY(0px)'
-      }
-
-      
+    } 
   }
 
   const handlePointerUp = event => {
