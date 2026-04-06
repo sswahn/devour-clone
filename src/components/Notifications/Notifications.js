@@ -29,6 +29,7 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
+    event.currentTarget.setPointerCapture(event.pointerId)
     const bottomSheet = bottomSheetRef.current
     const deltaY = event.clientY - startY.current
     const height = initialHeight.current // fixed height
