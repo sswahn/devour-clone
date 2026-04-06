@@ -30,6 +30,7 @@ function Notifications({ closeNotifications }) {
       return
     }
     const bottomSheet = bottomSheetRef.current
+    const deltaY = event.clientY - lastY.current
     
     /* elasticity */
     const height = bottomSheet.offsetHeight
