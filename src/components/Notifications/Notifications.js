@@ -39,39 +39,24 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
-    /* remove if does nothing:
+    /* 
     if (deltaY > height) {
       const extra = deltaY - height
       translate = height + extra * 0.35   // resistance
     }
     */
-    // Elasticity when pushing above top (dragging up)
-   // else 
 
-    // 1. Calculate Elasticity
-    /*
-    if (absDeltaY > baseHeight) {
-      const extra = absDeltaY - baseHeight;
-      translate = baseHeight + (extra * 0.35); // Apply resistance
-    }
-*/
     
-    if (deltaY < 0) {
-     //translate = deltaY * 0.5 // Resistance when dragging up
+    //if (deltaY < 0) {
+    if (deltaY > height) {
+      translate = deltaY * 0.5 // Resistance when dragging up
    
-   
-      const extra = deltaY - height
-      translate = height + extra * 0.35   // resistance
-      
       bottomSheet.style.height = `${height + translate}px` 
       bottomSheet.style.transform = `translateY(${-translate}px)`
-    } else {
-
-   // if (deltaY > 0) {
+    } else { // deltaY > 0
       bottomSheet.style.height = '' // Reset inline CSS height
       bottomSheet.style.transform = `translateY(${translate}px)`
     }
-      // }
   }
 
   const handlePointerUp = event => {
