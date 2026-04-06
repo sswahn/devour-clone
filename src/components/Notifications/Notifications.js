@@ -21,7 +21,6 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    bottomSheetRef.current.style.transform = 'none'
   }
 
   const handlePointerMove = event => {
