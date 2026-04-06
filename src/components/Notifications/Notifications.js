@@ -51,7 +51,7 @@ function Notifications({ closeNotifications }) {
   const handleClose = event => {
     if (!bottomSheetRef.current.contains(event.target)) { // (event.target !== event.currentTarget) 
       setIsOpen(false)
-      closeNotifications()
+      bottomSheetRef.current.addEventListener("transitionend", closeNotifications, { once: true })
     }
   }
 
