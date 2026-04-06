@@ -48,7 +48,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const handleClose = event => {
-    if (!bottomSheetRef.current.contains(event.target)) {
+    if (event.target !== event.currentTarget) { //(!bottomSheetRef.current.contains(event.target)) {
       const bottomSheet = bottomSheetRef.current
       bottomSheet.classList.add(styles.slideDown)
       const onEnd = () => {
