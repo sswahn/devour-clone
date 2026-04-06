@@ -71,7 +71,7 @@ function Notifications({ closeNotifications }) {
       return
     }
 
-    event.preventDefault()
+   // event.preventDefault()
     console.log('past condition, should behave as desired: not scrolling but dragging.')
     
     const height = initialHeight.current
