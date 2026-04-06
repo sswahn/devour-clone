@@ -55,7 +55,11 @@ function Notifications({ closeNotifications }) {
       return
     }
     dragging.current = false
+    
     const deltaY = event.clientY - startY.current
+    const deltaTime = Date.now() - startTime.current
+    const velocity = deltaY / deltaTime
+    
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
     if (deltaY > bottomSheet.offsetHeight / 2) {
