@@ -22,9 +22,10 @@
   contain: layout paint;
   container-type: size;
   height: auto; /* Grows with content */ 
+  left: 0;
   max-height: 90dvh; 
   min-height: 50dvh;  
-  left: 0;
+  overflow-y: auto;
   padding-top: 8px;
   position: absolute;
   transform: translateY(100%);   /* start hidden */
@@ -66,11 +67,5 @@
   width: 100%;
 
   border: 1px dashed red;
-}
-
-@container (min-height: 80dvh) {
-  .EW8UjTxcaJyjDU58ZAQw ul {
-    overflow-y: auto;
-  }
 }
 
