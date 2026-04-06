@@ -35,10 +35,6 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const deltaT = performance.now() - lastTime.current
     velocity.current = deltaY / deltaT
-
-    if (deltaY <= 0) {
-      return
-    }
     
     /* elasticity */
     const height = bottomSheet.offsetHeight
@@ -48,6 +44,12 @@ function Notifications({ closeNotifications }) {
       const extra = deltaY - height
       translate = height + extra * 0.35   // resistance
     }
+    
+    // Optionally add elasticity when pushing above top (dragging up)
+    else if (deltaY < 0) {
+      translate = deltaY * 0.5 // Resistance when dragging up
+    }
+
    // if (deltaY > 0) {
       bottomSheet.style.transform = `translateY(${translate}px)`
    // }
