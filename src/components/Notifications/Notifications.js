@@ -58,6 +58,22 @@ function Notifications({ closeNotifications }) {
     const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
+
+
+    // LOGIC: Only drag the sheet if:
+    // 1. We are dragging the 'grabber' handle
+    // 2. OR the list is at the top (scrollTop === 0) and we are dragging DOWN
+    const isAtTop = list.scrollTop === 0;
+    
+    // const isDraggingHandle = event.target.id === 'grabber' // dont need this cause scroll doesnt reach it
+
+    if (isAtTop && deltaY > 0) {
+      // Prevent the list from scrolling so the sheet moves instead
+      event.preventDefault()
+  
+    }
+
+    
     if (deltaY < 0) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
