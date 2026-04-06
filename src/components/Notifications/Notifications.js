@@ -48,8 +48,6 @@ function Notifications({ closeNotifications }) {
   
     /* DOWNWARD DRAG (normal close motion) */
     if (deltaY > 0) {
-      const height = sheet.offsetHeight
-  
       if (deltaY > height) {
         const extra = deltaY - height
         translate = height + extra * 0.35
