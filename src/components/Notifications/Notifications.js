@@ -49,7 +49,7 @@ function Notifications({ closeNotifications }) {
 
   const handleClose = event => {
     if (!bottomSheetRef.current.contains(event.target)) {
-      bottomSheetRef.current.style.animation = 'slideDown 0.1s ease-out forwards'
+      bottomSheetRef.current.classList.add(styles.slideDown)
       setTimeout(closeNotifications, 500)
     }
   }
