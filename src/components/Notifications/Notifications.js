@@ -50,6 +50,7 @@ function Notifications({ closeNotifications }) {
 
   const handleClose = event => {
     if (event.target !== event.currentTarget) { //(!bottomSheetRef.current.contains(event.target)) {
+      setIsOpen(false)
       closeNotifications()
     }
   }
