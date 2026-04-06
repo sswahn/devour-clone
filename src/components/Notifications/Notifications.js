@@ -1,9 +1,10 @@
-import { useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 // notifications arrive from server push events
 // the button must 'know' of updates so they will be set via context
 import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
+  const [isOpen, setIsOpen] = useState(false)
   const bottomSheetRef = useRef(null)
   const dragging = useRef(false)
   const startY = useRef(0)
@@ -74,10 +75,17 @@ function Notifications({ closeNotifications }) {
       }
     }
   }
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsOpen(true)
+    }
+  }, [])
   
   return (
     <div className={styles.notifications} onClick={handleClose}>
-      <section ref={bottomSheetRef}         
+      <section ref={bottomSheetRef}  
+        className={isOpen ? styles.open : ''}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
