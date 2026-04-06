@@ -79,6 +79,7 @@ function Notifications({ closeNotifications }) {
 
   useEffect(() => {
     if (!isOpen) {
+      console.log('setting isOpen to true.')
       setIsOpen(true)
     }
   }, [])
