@@ -25,11 +25,15 @@
 
 @keyframes CHKiCeeo3_Vnql_HxUHl {
   from {
-    transform: translateY(100%); /* Start completely off-screen below the bottom edge */
+    transform: translateY(0); /* Start at its natural position (0 displacement) */
   }
   to {
-    transform: translateY(0); /* End at its natural position (0 displacement) */
+    transform: translateY(100%); /* End completely off-screen below the bottom edge */
   }
+}
+
+.CHKiCeeo3_Vnql_HxUHl {
+  animation: CHKiCeeo3_Vnql_HxUHl 0.1s ease-out forwards;
 }
 
 /* the bottom sheet */
