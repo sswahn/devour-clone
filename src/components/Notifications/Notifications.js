@@ -52,6 +52,7 @@ function Notifications({ closeNotifications }) {
     }
 
    // if (deltaY > 0) {
+      bottomSheet.style.height = '' // Reset inline CSS height
       bottomSheet.style.transform = `translateY(${translate}px)`
    // }
   }
