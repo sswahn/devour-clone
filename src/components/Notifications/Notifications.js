@@ -39,7 +39,7 @@ function Notifications({ closeNotifications }) {
     if (deltaY < 0) {
       //translate = deltaY * 0.5 // Resistance when dragging up
       translate = deltaY * 0.25 * Math.log10(Math.abs(deltaY) + 10)
-      bottomSheet.style.transform = `translateY(${-translate}px)`
+      bottomSheet.style.transform = `translateY(${translate}px)`
     } else {
       bottomSheet.style.transform = `translateY(${translate}px)`
     }
