@@ -69,7 +69,11 @@ function Notifications({ closeNotifications }) {
   }
 
   const handleClose = event => {
+    console.log('handleClose fired...')
     if (event.target === event.currentTarget) {
+
+      console.log('inside the closing condition.')
+      bottomSheetRef.current.style.transform = '' // clear inline transform so class takes over
       bottomSheetRef.current.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
     }
