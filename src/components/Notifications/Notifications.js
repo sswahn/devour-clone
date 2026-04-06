@@ -8,7 +8,6 @@ function Notifications({ closeNotifications }) {
   const dragging = useRef(false)
   const startY = useRef(0)
   const startTime = useRef(0)
-  const velocity = useRef(0)
   
   const context = { 
     notifications: [
