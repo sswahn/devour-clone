@@ -54,10 +54,14 @@
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul {
+  list-style-type: none;
+  margin-top: 8px;
   width: 100%;
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li {
+  color: var(--text);
+  font-size: 18px;
   padding: 12px;
   width: 100%;
 }
