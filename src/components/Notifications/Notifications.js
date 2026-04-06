@@ -22,7 +22,7 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    initialHeight.current = bottomSheetRef.current.offsetHeight
+    initialHeight.current = window.innerHeight * 0.5 // bottomSheetRef.current.offsetHeight
     
     lastTime.current = performance.now()
   }
@@ -37,10 +37,9 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
 
-    console.log('bottomSheet.offestHeight: ', height)
-    
     let translate = deltaY
     const maxDragUp = -300
+   /*
     let newHeight = initialHeight.current // Always start from the base height
     
     if (deltaY < 0) {
@@ -59,6 +58,26 @@ function Notifications({ closeNotifications }) {
     // translate = Math.max(translate, maxDragUp)
     bottomSheet.style.transform = `translateY(${translate}px)`
     bottomSheet.style.height = `${newHeight}dvh`
+*/
+
+    // Use a fixed base height (50dvh in your case)
+    // It is better to capture this once in PointerDown as initialHeight.current
+    const baseHeight = initialHeight.current
+  
+    if (deltaY < 0) {
+      /* STRETCH UP */
+      const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
+      const stretch = Math.abs(deltaY) * resistanceFactor
+      
+      // Grow the height, but keep it pinned at the bottom
+      bottomSheet.style.height = `${baseHeight + stretch}px`
+      bottomSheet.style.transform = `translateY(0px)`
+    } else {
+      /* SLIDE DOWN */
+      // Reset height to base and slide the whole element down
+      bottomSheet.style.height = `${baseHeight}px`
+      bottomSheet.style.transform = `translateY(${deltaY}px)`
+    }
   }
 
   const handlePointerUp = event => {
