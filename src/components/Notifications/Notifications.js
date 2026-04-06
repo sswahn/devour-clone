@@ -64,12 +64,13 @@ function Notifications({ closeNotifications }) {
       
       bottomSheet.style.height = `${height + translate}px` 
       bottomSheet.style.transform = `translateY(${-translate}px)`
-    }
+    } else {
 
    // if (deltaY > 0) {
       bottomSheet.style.height = '' // Reset inline CSS height
       bottomSheet.style.transform = `translateY(${translate}px)`
-   // }
+    }
+      // }
   }
 
   const handlePointerUp = event => {
