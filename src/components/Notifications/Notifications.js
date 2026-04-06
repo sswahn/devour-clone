@@ -62,11 +62,14 @@ function Notifications({ closeNotifications }) {
     if (listRef.current.scrollTop !== 0 && deltaY < 0) {
       // Prevent the list from scrolling so the sheet moves instead
       //event.preventDefault()
-      console.log('in condition top of scroll and not scrolling down the list.')
+      console.log('in condition, NOT top of scroll and IS scrolling down the list.')
       bottomSheet.style.transform = 'translateY(0px)'
       return
     }
 
+    event.preventDefault()
+    console.log('past condition, should behave as desired: not scrolling but dragging.')
+    
     const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
