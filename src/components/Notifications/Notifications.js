@@ -47,8 +47,23 @@ function Notifications({ closeNotifications }) {
     */
     // Elasticity when pushing above top (dragging up)
    // else 
+
+    // 1. Calculate Elasticity
+    /*
+    if (absDeltaY > baseHeight) {
+      const extra = absDeltaY - baseHeight;
+      translate = baseHeight + (extra * 0.35); // Apply resistance
+    }
+*/
+    
     if (deltaY < 0) {
-      translate = deltaY * 0.5 // Resistance when dragging up
+     // translate = deltaY * 0.5 // Resistance when dragging up
+      
+      const extra = deltaY - height
+      translate = height + extra * 0.35   // resistance
+      
+      // bottomSheet.style.height = `${baseHeight + translate}px` // next uncomment this and test
+      bottomSheet.style.transform = `translateY(${-translate}px)`
     }
 
    // if (deltaY > 0) {
