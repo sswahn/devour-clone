@@ -22,7 +22,7 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     dragging.current = true
     startY.current = event.clientY
-    initialHeight.current = window.innerHeight * 0.5 // bottomSheetRef.current.offsetHeight
+    initialHeight.current = bottomSheetRef.current.offsetHeight // window.innerHeight * 0.5 // bottomSheetRef.current.offsetHeight
     
     lastTime.current = performance.now()
   }
@@ -35,34 +35,12 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     
     /* elasticity */
-    const height = bottomSheet.offsetHeight
-
     let translate = deltaY
     const maxDragUp = -300
-   /*
-    let newHeight = initialHeight.current // Always start from the base height
-    
-    if (deltaY < 0) {
-      //translate = deltaY * 0.5 // Resistance when dragging up   
-      // 1. Calculate how far into the "resistance zone" we are (0 to 1)
-      // As deltaY becomes more negative (closer to maxDragUp), 
-      // resistanceFactor approaches 0.
-      const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
-      
-      // 2. Apply non-linear resistance:
-      // When deltaY is near 0, resistanceFactor is near 1 (mostly 1:1 movement).
-      // When deltaY is near maxDragUp, resistanceFactor is near 0 (hardly any movement).
-      translate = deltaY * resistanceFactor
-      newHeight = initialHeight.current + Math.abs(translate)
-    }
-    // translate = Math.max(translate, maxDragUp)
-    bottomSheet.style.transform = `translateY(${translate}px)`
-    bottomSheet.style.height = `${newHeight}dvh`
-*/
 
     // Use a fixed base height (50dvh in your case)
     // It is better to capture this once in PointerDown as initialHeight.current
-    const baseHeight = initialHeight.current
+    const height = initialHeight.current
   
     if (deltaY < 0) {
       /* STRETCH UP */
@@ -70,12 +48,13 @@ function Notifications({ closeNotifications }) {
       const stretch = Math.abs(deltaY) * resistanceFactor
       
       // Grow the height, but keep it pinned at the bottom
-      bottomSheet.style.height = `${baseHeight + stretch}px`
+      bottomSheet.style.height = `${height + stretch}px`
+      // Keeps it pinned at the bottom:
       bottomSheet.style.transform = `translateY(0px)`
     } else {
       /* SLIDE DOWN */
       // Reset height to base and slide the whole element down
-      bottomSheet.style.height = `${baseHeight}px`
+      bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     }
   }
