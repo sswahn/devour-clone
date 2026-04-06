@@ -29,16 +29,14 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-
-    const now = performance.now()
-
+    const bottomSheet = bottomSheetRef.current
     /* velocity calculation */
     const deltaY = event.clientY - startY.current
-    const deltaT = now - lastTime.current
+    const deltaT = performance.now() - lastTime.current
     velocity.current = deltaY / deltaT
 
       /* elasticity */
-    const height = sheet.offsetHeight
+    const height = bottomSheet.offsetHeight
     let translate = deltaY
 
     if (deltaY > height) {
@@ -47,7 +45,7 @@ function Notifications({ closeNotifications }) {
     }
     
     if (deltaY > 0) {
-      bottomSheetRef.current.style.transform = `translateY(${translate}px)`
+      bottomSheet.style.transform = `translateY(${translate}px)`
     }
   }
 
