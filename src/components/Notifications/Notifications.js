@@ -48,6 +48,19 @@ function Notifications({ closeNotifications }) {
       closeNotifications()
     }
   }
+
+  function requestPermission() {
+    if (!("Notification" in window)) {
+      console.log("This browser does not support notifications.");
+      return;
+    }
+  
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        console.log("Permission granted.");
+      }
+    });
+  }
   
   return (
     <div className={styles.notifications} onClick={handleClose}>
