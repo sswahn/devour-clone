@@ -11,18 +11,8 @@
   z-index: 200;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%); /* Start completely off-screen below the bottom edge */
-  }
-  to {
-    transform: translateY(0); /* End at its natural position (0 displacement) */
-  }
-}
-
 /* the bottom sheet */
 .bottomSheet {
-  /*animation: slideUp 0.1s ease-out forwards; */ /* Use 'forwards' to stay in the final state after animation */
   background-color: var(--background);
   border-top: 1px solid var(--border);
   bottom: 0;
@@ -30,10 +20,8 @@
   left: 0;
   padding-top: 8px;
   position: absolute;
-
   transform: translateY(100%);   /* start hidden */
   transition: transform 100ms ease;
-
   touch-action: none;
   width: 100%;
   will-change: transform; /* Ensures it doesn't flicker before starting */
