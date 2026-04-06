@@ -44,6 +44,9 @@ function Notifications({ closeNotifications }) {
       // Log resistance applied only to the "extra" distance
       const resistance = extra * 0.25 * Math.log10(Math.abs(extra) + 10);
       translate = limit + resistance;
+
+      console.log('resistance: ', resistance)
+      console.log('translate with resistance: ', translate)
     }
 
     /*
