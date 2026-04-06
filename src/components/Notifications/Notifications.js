@@ -62,7 +62,9 @@ function Notifications({ closeNotifications }) {
     
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms ease' // restore CSS transition
-    if (deltaY > bottomSheet.offsetHeight / 2) {
+
+    if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
+    //if (deltaY > bottomSheet.offsetHeight / 2) {
       bottomSheet.style.transform = '' // clear inline transform so class takes over
       bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
