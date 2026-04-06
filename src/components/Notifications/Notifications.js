@@ -35,14 +35,28 @@ function Notifications({ closeNotifications }) {
     /* elasticity */
     const height = bottomSheet.offsetHeight
     let translate = deltaY
-    
+
+    const limit = -50; // The point where resistance starts (upward)
+
+    if (deltaY < limit) {
+      const extra = deltaY - limit; // How far past the limit we are
+      // Log resistance applied only to the "extra" distance
+      const resistance = extra * 0.25 * Math.log10(Math.abs(extra) + 10);
+      translate = limit + resistance;
+    } else {
+      translate = deltaY; // 1:1 movement
+    }
+
+    /*
     if (deltaY < 0) {
       //translate = deltaY * 0.5 // Resistance when dragging up
       translate = deltaY * 0.25 * Math.log10(Math.abs(deltaY) + 10)
       bottomSheet.style.transform = `translateY(${translate}px)`
-    } else {
-      bottomSheet.style.transform = `translateY(${translate}px)`
     }
+    */
+      
+    bottomSheet.style.transform = `translateY(${translate}px)`
+    
   }
 
   const handlePointerUp = event => {
