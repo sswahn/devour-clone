@@ -66,6 +66,17 @@ function Notifications({ closeNotifications }) {
     }
   }
 
+  const handlePointerCancel = event => {
+    if (!dragging.current) {
+      return
+    }
+    dragging.current = false
+    const bottomSheet = bottomSheetRef.current
+    bottomSheet.style.transition = 'transform 200ms ease, height 200ms ease'
+    bottomSheet.style.transform = 'translateY(0)'
+    bottomSheet.style.height = ''
+  }
+
   const handleClose = event => {
     if (event.target === event.currentTarget) {
       const bottomSheet = bottomSheetRef.current
@@ -88,6 +99,7 @@ function Notifications({ closeNotifications }) {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
         role="dialog" 
         aria-modal="true" 
         aria-label="notifications">
