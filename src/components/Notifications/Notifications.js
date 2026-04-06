@@ -6,7 +6,7 @@ function Notifications({ closeNotifications }) {
   const bottomSheetRef = useRef(null)
   const dragging = useRef(false)
   const startY = useRef(0)
-  const currentY = useRef(0)
+  const velocity = useRef(0)
   
   const context = { 
     notifications: [
