@@ -53,6 +53,7 @@
 .notifications ul {
   list-style-type: none;
   margin-top: 8px;
+  overflow-y: auto;
   width: 100%;
 
   border: 1px dashed blue;
