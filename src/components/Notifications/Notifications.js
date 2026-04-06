@@ -4,6 +4,7 @@ import styles from './Notifications.module.css'
 function Notifications({ closeNotifications }) {
   const [isOpen, setIsOpen] = useState(false)
   const bottomSheetRef = useRef(null)
+  const listRef = useRef(null)
   const initialHeight = useRef(0)
   const dragging = useRef(false)
   const startY = useRef(0)
@@ -60,14 +61,11 @@ function Notifications({ closeNotifications }) {
     let translate = deltaY
 
 
-    // LOGIC: Only drag the sheet if:
-    // 1. We are dragging the 'grabber' handle
-    // 2. OR the list is at the top (scrollTop === 0) and we are dragging DOWN
-    const isAtTop = list.scrollTop === 0;
+  
     
     // const isDraggingHandle = event.target.id === 'grabber' // dont need this cause scroll doesnt reach it
 
-    if (isAtTop && deltaY > 0) {
+    if (listRef.current.scrollTop === 0 && deltaY > 0) {
       // Prevent the list from scrolling so the sheet moves instead
       event.preventDefault()
   
@@ -137,7 +135,7 @@ function Notifications({ closeNotifications }) {
         aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
-        <ul aria-label="user notifications">
+        <ul ref={listRef} aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>{notification}</li>                                                           
           )}
