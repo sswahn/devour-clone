@@ -62,7 +62,7 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
    // if (listRef.current.scrollTop <= 0) {
-      event.currentTarget.setPointerCapture(event.pointerId)
+      event.target.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
@@ -102,7 +102,7 @@ function Notifications({ closeNotifications }) {
       return
     }
     // close if sheet less than half height, or on fast swipe down
-    event.currentTarget.releasePointerCapture(event.pointerId)
+    event.target.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
