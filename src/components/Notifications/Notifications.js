@@ -89,20 +89,27 @@ function Notifications({ closeNotifications }) {
       return
     }
 
-    console.log('initiating drag.')
+    
     
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
-    
+
+
+    // dy > 0 scrolling down, dy < 0 scrolling up
     if (deltaY < 0) {
+      console.log('initiating drag up in if condition.')
+      
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
     } else {
     //} else if (deltaY > 0 && list.scrollTop <= 0) {
+
+      console.log('initiating drag down in else condition.')
+      
       bottomSheet.style.height = `${height}px`
       setTranslate(deltaY)
       
