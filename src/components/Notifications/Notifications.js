@@ -45,6 +45,7 @@ function Notifications({ closeNotifications }) {
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
       event.currentTarget.setPointerCapture(event.pointerId)
+      listRef.current.style.overflow = 'hidden'
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
@@ -88,6 +89,7 @@ function Notifications({ closeNotifications }) {
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
+      listRef.current.style.overflow = ''
       bottomSheet.style.transform = ''
       bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
       setIsOpen(false)
@@ -105,6 +107,7 @@ function Notifications({ closeNotifications }) {
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = ''
+    listRef.current.style.overflow = ''
   }
 
   useEffect(() => {
@@ -112,17 +115,6 @@ function Notifications({ closeNotifications }) {
       setIsOpen(true)
     }
   }, [])
-
-  // need bottomsheet height to expand with list items.
-  const handleListScroll = event => {
-    console.log('testing onScroll...')
-    event.preventDefault()
-      
-    if ((listRef.current.scrollTop <= 0) && (event.scrollY - startY.current > 0)) {
-      event.preventDefault()
-      console.log('prevented scroll inside condition...')
-    }
-  }
   
   return (
     <div className={styles.notifications} onClick={handleClose}>
