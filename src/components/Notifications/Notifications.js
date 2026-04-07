@@ -43,17 +43,6 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  // For smoother performance, removes micro-stutter during drag.
-  const setTranslate = y => {
-    if (!ticking) {
-      requestAnimationFrame(timestamp => {
-        bottomSheetRef.current.style.transform = `translateY(${y}px)`
-        ticking = false
-      })
-      ticking = true
-    }
-  }
-
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
       listRef.current.style.pointerEvents = 'none'
@@ -85,10 +74,7 @@ function Notifications({ closeNotifications }) {
       console.log('initiating drag down in else condition.')
       
       bottomSheet.style.height = `${height}px`
-      
-      setTranslate(deltaY)
-      
-      //bottomSheet.style.transform = `translateY(${deltaY}px)`
+      bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
 
