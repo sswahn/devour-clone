@@ -94,6 +94,7 @@
 
 .EW8UjTxcaJyjDU58ZAQw ul li button {
   background: none;
+  border: 0;
   border-radius: 50px;
   height:56px;
   pointer-events: auto;
