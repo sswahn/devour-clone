@@ -61,8 +61,6 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    console.log('pointer down target: ', event.target)
-
     event.target.setPointerCapture(event.pointerId)
     //event.currentTarget.setPointerCapture(event.pointerId)
     dragging.current = true
