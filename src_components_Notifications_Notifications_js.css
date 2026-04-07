@@ -71,6 +71,10 @@
   width: 100%;
 }
 
+.EW8UjTxcaJyjDU58ZAQw ul li div:first-child {
+  flex: 1;
+}
+
 .EW8UjTxcaJyjDU58ZAQw ul li img {
   height: 56px;
   width: 56px;
