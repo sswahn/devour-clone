@@ -12,7 +12,7 @@ function Notifications({ closeNotifications }) {
   const raf = useRef()
   
   const context = { 
-    notifications: [ /*
+    notifications: [
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
@@ -31,7 +31,7 @@ function Notifications({ closeNotifications }) {
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
-   */ ]
+    ]
   }
 
   const handleClose = event => {
@@ -61,13 +61,13 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-   // if (listRef.current.scrollTop <= 0) {
+    if (listRef.current.scrollTop <= 0) {
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
-  //  }
+    }
   }
 
   const handlePointerMove = event => {
