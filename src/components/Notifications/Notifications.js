@@ -53,7 +53,6 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     console.log('pointer down target: ', event.target)
-    console.log('pointer down currentTarget: ', event.currentTarget)
 
     event.target.setPointerCapture(event.pointerId)
     //event.currentTarget.setPointerCapture(event.pointerId)
@@ -71,7 +70,6 @@ function Notifications({ closeNotifications }) {
     const list = listRef.current
 
     console.log('pointer move target: ', event.target)
-    console.log('pointer move currentTarget: ', event.currentTarget)
     
     if (deltaY > 0 && list.scrollTop <= 0) {
       console.log('ready to drag. hidding overflow of list:')
@@ -80,6 +78,8 @@ function Notifications({ closeNotifications }) {
       console.log('scrolling normally.')
       return
     }
+
+    console.log('initiating drag.')
     
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
