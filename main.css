@@ -366,14 +366,8 @@
   width: 152px;
 }
 
-@media (prefers-color-scheme: dark) {
-  ._EJyqkXyUnkwqjS3lhYz {
-    background-color: var(--black);
-  }
-
-  ._EJyqkXyUnkwqjS3lhYz button svg {
-    fill: var(--white);
-  }
+._EJyqkXyUnkwqjS3lhYz button svg {
+  fill: var(--text);
 }
 
 /*!*****************************************************************!*\
