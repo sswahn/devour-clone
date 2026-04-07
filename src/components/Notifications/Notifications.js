@@ -12,7 +12,7 @@ function Notifications({ closeNotifications }) {
   const raf = useRef()
   
   const context = { 
-    notifications: [
+    notifications: [ /*
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
@@ -31,7 +31,7 @@ function Notifications({ closeNotifications }) {
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
-    ]
+   */ ]
   }
 
   const handleClose = event => {
@@ -61,28 +61,20 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    if (listRef.current.scrollTop <= 0) {
-
-      event.target.setPointerCapture(event.pointerId)
+   // if (listRef.current.scrollTop <= 0) {
+      event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
-    }
+  //  }
   }
 
   const handlePointerMove = event => {
     if (!dragging.current) {
       return
     }
-
-
-    listRef.current.style.overflow = 'hidden'
-    listRef.current.scrollTop = 0 // here or in pointerMove
-    
     const deltaY = event.clientY - startY.current
-    const list = listRef.current
-    
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
     let translate = deltaY
@@ -98,9 +90,10 @@ function Notifications({ closeNotifications }) {
       console.log('initiating drag down in else condition.')
       
       bottomSheet.style.height = `${height}px`
-      setTranslate(deltaY)
       
-      //bottomSheet.style.transform = `translateY(${deltaY}px)`
+     // setTranslate(deltaY)
+      
+      bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
 
@@ -109,7 +102,7 @@ function Notifications({ closeNotifications }) {
       return
     }
     // close if sheet less than half height, or on fast swipe down
-    event.target.releasePointerCapture(event.pointerId)
+    event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
@@ -124,10 +117,9 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerCancel = event => {
-    if (!dragging.current) {
-      return
+    if (dragging.current) {
+      resetDefaults()
     }
-    resetDefaults()
   }
 
   useEffect(() => {
