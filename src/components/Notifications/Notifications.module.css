@@ -61,6 +61,7 @@
 }
 
 .notifications ul li {
+  align-items: center;
   color: var(--text);
   display: flex;
   font-size: 18px;
