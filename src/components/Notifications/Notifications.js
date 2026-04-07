@@ -62,8 +62,7 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
-      listRef.current.style.overflow = 'hidden'
-      listRef.current.scrollTop = 0 // here or in pointerMove
+
       event.target.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
@@ -76,6 +75,11 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
+
+
+    listRef.current.style.overflow = 'hidden'
+    listRef.current.scrollTop = 0 // here or in pointerMove
+    
     const deltaY = event.clientY - startY.current
     const list = listRef.current
     
