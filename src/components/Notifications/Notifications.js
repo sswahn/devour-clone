@@ -101,8 +101,8 @@ function Notifications({ closeNotifications }) {
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
-    //} else {
-    } else if (deltaY > 0 && list.scrollTop <= 0) {
+    } else {
+    //} else if (deltaY > 0 && list.scrollTop <= 0) {
       bottomSheet.style.height = `${height}px`
       setTranslate(deltaY)
       
