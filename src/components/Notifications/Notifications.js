@@ -118,7 +118,7 @@ function Notifications({ closeNotifications }) {
                 </div>
                 <div>{notification.text}</div>
               </div>
-              {/* <button><three dot icon /></button> */}
+              <button type="button">...</button>
             </li>                                                           
           )}
         </ul>
