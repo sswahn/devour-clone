@@ -44,7 +44,7 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     console.log('listRef.current.scrollTop: ', listRef.current.scrollTop)
-    if (listRef.current.scrollTop === 0) {
+    if (listRef.current.scrollTop <= 0) {
       listRef.current.style.overflow = 'hidden'
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
