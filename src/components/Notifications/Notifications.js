@@ -123,7 +123,7 @@ function Notifications({ closeNotifications }) {
                 </div>
                 <div>{notification.text}</div>
               </div>
-              <button onClick={handleDropDown} type="button">
+              <button onClick={handleDropDown} type="button" aria-label="dropdown">
                 <EllipsisVerticalIcon />
               </button>
             </li>                                                           
