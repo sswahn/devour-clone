@@ -64,6 +64,7 @@
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li {
+  align-items: center;
   color: var(--text);
   display: flex;
   font-size: 18px;
