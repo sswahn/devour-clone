@@ -1,4 +1,3 @@
-
 function EllipsisVerticalIcon({ size = 24 }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width={size} height={size} role="img" aria-label="vertical ellipsis icon">
