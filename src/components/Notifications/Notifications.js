@@ -67,7 +67,7 @@ function Notifications({ closeNotifications }) {
       startY.current = event.clientY
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
-      list.style.overflow = 'hidden'
+      listRef.current.style.overflow = 'hidden'
     }
   }
 
