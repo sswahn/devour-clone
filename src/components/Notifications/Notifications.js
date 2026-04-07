@@ -113,7 +113,7 @@ function Notifications({ closeNotifications }) {
               <img src={notification.img} alt={notification.username} />
               <div>
                 <span>{notification.username}</span>
-                <span{notification.text}</span>
+                <span>{notification.text}</span>
               </div>
               <div>{notification.timestamp}</div>
               {/* <button><three dot icon /></button> */}
