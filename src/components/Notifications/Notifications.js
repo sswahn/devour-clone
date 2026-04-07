@@ -85,18 +85,13 @@ function Notifications({ closeNotifications }) {
     const height = initialHeight.current
     let translate = deltaY
 
-
-    // dy > 0 scrolling down, dy < 0 scrolling up
-    if (deltaY < 0) {
-      
-      console.log('initiating drag up in if condition.')
-      
+    if (deltaY < 0) { // elasticity on drag at max height:
       const maxDragUp = -200
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
-    } else {
+    } else { // drag sheet downward:
       
       console.log('initiating drag down in else condition.')
       
