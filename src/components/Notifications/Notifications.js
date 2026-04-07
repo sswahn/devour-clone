@@ -11,11 +11,11 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
     ]
   }
 
@@ -111,7 +111,10 @@ function Notifications({ closeNotifications }) {
           {context.notifications?.map((notification, index) => 
             <li key={index}>
               <img src={notification.img} alt={notification.username} />
-              <div>{notification.text}</div>
+              <div>
+                <span>{notification.username}</span>
+                <span{notification.text}</span>
+              </div>
               <div>{notification.timestamp}</div>
               {/* <button><three dot icon /></button> */}
             </li>                                                           
