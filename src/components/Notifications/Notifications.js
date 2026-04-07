@@ -49,7 +49,6 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
-    let translate = deltaY
 
     // Elasticity
     if (deltaY < 0) {
