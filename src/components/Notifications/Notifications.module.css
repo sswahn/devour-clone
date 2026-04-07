@@ -60,7 +60,7 @@
   overscroll-behavior: contain; /* Prevents scrolling the background */
   -webkit-overflow-scrolling: touch; 
   flex: 1;                   /* Takes up remaining space */
-  
+  touch-action: pan-y; 
 }
 
 .notifications ul li {
