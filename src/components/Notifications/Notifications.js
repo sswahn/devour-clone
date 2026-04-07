@@ -110,12 +110,10 @@ function Notifications({ closeNotifications }) {
         <ul aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>
-              <div>
-                <img src={notifications.img} alt={notifications.username} />
-                <div>{notification.text}</div>
-                <div>{notification.timestamp}</div>
-                {/* <button><three dot icon /></button> */}
-              </div>
+              <img src={notification.img} alt={notification.username} />
+              <div>{notification.text}</div>
+              <div>{notification.timestamp}</div>
+              {/* <button><three dot icon /></button> */}
             </li>                                                           
           )}
         </ul>
