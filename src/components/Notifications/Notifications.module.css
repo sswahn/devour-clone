@@ -60,6 +60,8 @@
   -webkit-overflow-scrolling: touch; 
   flex: 1;                   /* Takes up remaining space */
   touch-action: pan-y; 
+
+  border: 1px dashed red;
 }
 
 .notifications ul li {
