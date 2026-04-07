@@ -92,13 +92,13 @@
 .EW8UjTxcaJyjDU58ZAQw ul li button {
   background: none;
   border: 1px dashed white;
-  padding: 4px;
+  padding: 8px;
   
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button:active {
-  background: var(--active-button);
+  background-color: var(--active-button);
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button svg {
