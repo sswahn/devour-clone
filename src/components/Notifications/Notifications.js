@@ -11,16 +11,11 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      {img: '', username: '', text: 'testing user notification section, testing users' },
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
-      'testing user notification section, testing users',
+      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
     ]
   }
 
@@ -114,7 +109,14 @@ function Notifications({ closeNotifications }) {
         <div id="grabber" role="presentation"></div>
         <ul aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
-            <li key={index}>{notification}</li>                                                           
+            <li key={index}>
+              <div>
+                <img src={notifications.img} alt={notifications.username} />
+                <div>{notification.text}</div>
+                <div>{notification.timestamp}</div>
+                {/* <button><three dot icon /></button> */}
+              </div>
+            </li>                                                           
           )}
         </ul>
       </section>
