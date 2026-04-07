@@ -128,7 +128,7 @@ function Notifications({ closeNotifications }) {
         aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
-        <ul ref={listRef} onScroll={handleListScroll} aria-label="user notifications">
+        <ul ref={listRef} aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>{notification}</li>                                                           
           )}
