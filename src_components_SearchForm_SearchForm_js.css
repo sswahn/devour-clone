@@ -153,6 +153,7 @@
 .TYu9xxiA93dMGBlCIky5 ul li {
   color: var(--text);
   font-size: var(--font-size);
+  line-height: var(--line-height);
   padding: 12px;
   width: 100%;
 }
