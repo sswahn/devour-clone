@@ -92,7 +92,7 @@
 }
 
 .notifications ul li button:active {
-  background: #777;
+  background: var(--active-button);
 }
 
 .notifications ul li button svg {
