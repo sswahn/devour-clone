@@ -49,12 +49,6 @@
   width: 152px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .navigation {
-    background-color: var(--black);
-  }
-
-  .navigation button svg {
-    fill: var(--white);
-  }
+.navigation button svg {
+  fill: var(--text);
 }
