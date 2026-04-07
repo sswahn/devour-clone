@@ -51,15 +51,6 @@ function Notifications({ closeNotifications }) {
     })
   }
 
-  const resetDefaults = () => {
-    dragging.current = false
-    const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.transform = '' // 'translateY(0)'
-    bottomSheet.style.height = ''
-    listRef.current.style.overflow = ''
-  }
-
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
       event.currentTarget.setPointerCapture(event.pointerId)
@@ -102,24 +93,31 @@ function Notifications({ closeNotifications }) {
       return
     }
     // close if sheet less than half height, or on fast swipe down
+    dragging.current = false
     event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    resetDefaults()
+    const bottomSheet = bottomSheetRef.current 
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+    bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
-      // need to reset transfor here
-      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
+      bottomSheet.style.transform = '' 
+      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
       setIsOpen(false)
     } else {
-      bottomSheet.style.transform = `translateY(0)`
+      bottomSheet.style.transform = 'translateY(0)'
     }
   }
 
   const handlePointerCancel = event => {
-    if (dragging.current) {
-      resetDefaults()
+    if (dragging.current) {  
+      dragging.current = false 
+      const bottomSheet = bottomSheetRef.current 
+      bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+      bottomSheet.style.transform = 'translateY(0)' 
+      bottomSheet.style.height = '' 
     }
   }
 
