@@ -43,12 +43,11 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-      event.currentTarget.setPointerCapture(event.pointerId)
-      dragging.current = true
-      startY.current = event.clientY
-      startTime.current = performance.now()
-      initialHeight.current = bottomSheetRef.current.offsetHeight
-    }
+    event.currentTarget.setPointerCapture(event.pointerId)
+    dragging.current = true
+    startY.current = event.clientY
+    startTime.current = performance.now()
+    initialHeight.current = bottomSheetRef.current.offsetHeight
   }
 
   const handlePointerMove = event => {
