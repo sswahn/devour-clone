@@ -45,8 +45,9 @@ function Notifications({ closeNotifications }) {
 
   // For smoother performance, removes micro-stutter during drag.
   const setTranslate = y => {
-    cancelAnimationFrame(raf.current)
-    raf.current = requestAnimationFrame(()=>{
+    //cancelAnimationFrame(raf.current)
+    //raf.current = 
+    requestAnimationFrame(()=> {
       bottomSheetRef.current.style.transform = `translateY(${y}px)`
     })
   }
