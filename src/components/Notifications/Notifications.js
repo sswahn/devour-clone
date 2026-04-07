@@ -67,8 +67,10 @@ function Notifications({ closeNotifications }) {
     const list = listRef.current
     
     if (deltaY > 0 && list.scrollTop <= 0) {
+      console.log('ready to drag. hidding overflow of list:')
       list.style.overflow = 'hidden'
     } else {
+      console.log('scrolling normally.')
       return
     }
     
