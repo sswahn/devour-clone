@@ -62,7 +62,7 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     //event.target.setPointerCapture(event.pointerId)
-    event.currentTarget.setPointerCapture(event.pointerId)
+    //event.currentTarget.setPointerCapture(event.pointerId)
     dragging.current = true
     startY.current = event.clientY
     startTime.current = performance.now()
@@ -84,6 +84,7 @@ function Notifications({ closeNotifications }) {
     
     if (deltaY > 0 && list.scrollTop <= 0) {
       console.log('ready to drag. hidding overflow of list:')
+      event.currentTarget.setPointerCapture(event.pointerId)
       list.style.overflow = 'hidden'
     } else {
       console.log('scrolling normally.')
