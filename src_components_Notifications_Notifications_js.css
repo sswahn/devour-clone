@@ -95,7 +95,7 @@
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button:active {
-  background: #777;
+  background: var(--active-button);
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button svg {
