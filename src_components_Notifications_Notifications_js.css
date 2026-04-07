@@ -91,7 +91,10 @@
 
 .EW8UjTxcaJyjDU58ZAQw ul li button {
   background: none;
-  border: 0;
+  border: 1px dashed white;
+  padding: 4px;
+  
+  border-radius: 15px;
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button:active {
