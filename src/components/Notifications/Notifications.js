@@ -61,7 +61,7 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    // close if sheet less than half height, or on fast swipe down
+    // Close if sheet less than half height, or on fast swipe down.
     dragging.current = false
     event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
