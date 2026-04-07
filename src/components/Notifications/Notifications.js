@@ -105,7 +105,8 @@ function Notifications({ closeNotifications }) {
       return
     }
     dragging.current = false
-    event.currentTarget.releasePointerCapture(event.pointerId)
+    event.target.releasePointerCapture(event.pointerId)
+    //event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
