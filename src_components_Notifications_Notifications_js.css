@@ -86,5 +86,6 @@
 
 .EW8UjTxcaJyjDU58ZAQw ul li div > div {
   display: flex;
+  gap: 10px;
 }
 
