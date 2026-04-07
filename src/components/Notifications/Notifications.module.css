@@ -64,6 +64,7 @@
   color: var(--text);
   display: flex;
   font-size: 18px;
+  justify-content: space-between;
   padding: 12px;
   width: 100%;
 }
