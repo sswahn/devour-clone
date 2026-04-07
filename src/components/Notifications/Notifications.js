@@ -90,8 +90,9 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  const handleDropDown = () => {
-    
+  const handleDropDown = event => {
+    event.stopPropagation()
+    alert('Dropdown button fires.')
   }
 
   useEffect(() => {
