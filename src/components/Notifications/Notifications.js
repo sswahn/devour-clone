@@ -55,7 +55,7 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.transform = 'translateY(0)'
+    bottomSheet.style.transform = '' // 'translateY(0)'
     bottomSheet.style.height = ''
     listRef.current.style.overflow = ''
   }
@@ -109,6 +109,7 @@ function Notifications({ closeNotifications }) {
     const bottomSheet = bottomSheetRef.current
     resetDefaults()
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
+      // need to reset transfor here
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     } else {
