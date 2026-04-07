@@ -90,6 +90,10 @@ function Notifications({ closeNotifications }) {
     }
   }
 
+  const handleDropDown = () => {
+    
+  }
+
   useEffect(() => {
     if (!isOpen) {
       setIsOpen(true)
@@ -119,7 +123,9 @@ function Notifications({ closeNotifications }) {
                 </div>
                 <div>{notification.text}</div>
               </div>
-              <button type="button">...</button>
+              <button onClick={handleDropDown} type="button">
+                <EllipsisVerticalIcon />
+              </button>
             </li>                                                           
           )}
         </ul>
