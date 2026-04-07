@@ -43,7 +43,7 @@ function Notifications({ closeNotifications }) {
     }
   }
 
-  
+  // For smoother performance, removes micro-stutter during drag.
   const setTranslate = y => {
     cancelAnimationFrame(raf.current)
     raf.current = requestAnimationFrame(()=>{
@@ -81,12 +81,12 @@ function Notifications({ closeNotifications }) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
-      setTranslate(0)
-     // bottomSheet.style.transform = `translateY(0px)` 
+      bottomSheet.style.transform = `translateY(0px)` 
     //} else {
     } else if (deltaY > 0 && list.scrollTop <= 0) {
       bottomSheet.style.height = `${height}px`
       setTranslate(deltaY)
+      
       // bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
@@ -109,8 +109,7 @@ function Notifications({ closeNotifications }) {
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     } else {
-      setTranslate(0)
-      // bottomSheet.style.transform = `translateY(0)`
+      bottomSheet.style.transform = `translateY(0)`
     }
   }
 
@@ -121,8 +120,7 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    setTranslate(0)
-    // bottomSheet.style.transform = 'translateY(0)'
+    bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = ''
     listRef.current.style.overflow = ''
   }
