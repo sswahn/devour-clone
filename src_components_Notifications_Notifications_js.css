@@ -93,11 +93,13 @@
 
 .EW8UjTxcaJyjDU58ZAQw ul li button {
   background: none;
-  border: 1px dashed white;
-  padding: 8px;
   pointer-events: auto;
+
+  height:32px;
+  width: 32px;
   
   border-radius: 50px;
+  border: 1px dashed white;
 }
 
 .EW8UjTxcaJyjDU58ZAQw ul li button:active {
