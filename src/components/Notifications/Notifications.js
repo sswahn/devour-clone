@@ -59,6 +59,8 @@ function Notifications({ closeNotifications }) {
     
     if (deltaY > 0 && listRef.current.scrollTop <= 0) {
       listRef.current.style.overflow = 'hidden'
+    } else {
+      return
     }
     
     const bottomSheet = bottomSheetRef.current
