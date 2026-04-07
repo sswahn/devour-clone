@@ -92,6 +92,7 @@
   background: none;
   border: 1px dashed white;
   padding: 8px;
+  pointer-events: none;
   
   border-radius: 20px;
 }
