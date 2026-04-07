@@ -11,11 +11,11 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
-      {img: '', username: '', text: 'testing user notification section, testing users', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
+      {img: '', username: '', text: 'testing user notification section', timestamp: '5 days ago' },
     ]
   }
 
