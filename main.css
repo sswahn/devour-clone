@@ -392,7 +392,8 @@
 
   --active-button: light-dark(#777777, #444444);
 
-  --font-size: 16sp;
+  --font-size: 16px;
+  --line-height: 20px;
   
 }
 
