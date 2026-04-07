@@ -64,7 +64,7 @@
   align-items: center;
   color: var(--text);
   display: flex;
-  font-size: 18px;
+  font-size: var(--font-size);
   justify-content: space-between;
   padding: 12px;
   width: 100%;
