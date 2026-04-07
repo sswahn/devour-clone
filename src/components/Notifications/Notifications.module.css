@@ -37,7 +37,7 @@
 }
 
 /* the grabber handle */
-.notifications section div {
+.notifications section > div {
   background-color: #ccc;
   border-radius: 3px;
   height: 6px;
