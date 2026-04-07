@@ -61,13 +61,14 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    //event.target.setPointerCapture(event.pointerId)
-    //event.currentTarget.setPointerCapture(event.pointerId)
-    dragging.current = true
-    startY.current = event.clientY
-    startTime.current = performance.now()
-    initialHeight.current = bottomSheetRef.current.offsetHeight
-    
+    if (listRef.current.scrollTop <= 0) {
+      event.currentTarget.setPointerCapture(event.pointerId)
+      dragging.current = true
+      startY.current = event.clientY
+      startTime.current = performance.now()
+      initialHeight.current = bottomSheetRef.current.offsetHeight
+      list.style.overflow = 'hidden'
+    }
   }
 
   const handlePointerMove = event => {
@@ -79,20 +80,14 @@ function Notifications({ closeNotifications }) {
     
     const deltaY = event.clientY - startY.current
     const list = listRef.current
-
-    console.log('deltaY: ', deltaY)
     
     if (deltaY > 0 && list.scrollTop <= 0) {
       console.log('ready to drag. hidding overflow of list:')
-      event.currentTarget.setPointerCapture(event.pointerId)
-      list.style.overflow = 'hidden'
     } else {
       console.log('scrolling normally.')
       return
     }
 
-    
-    
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
     let translate = deltaY
