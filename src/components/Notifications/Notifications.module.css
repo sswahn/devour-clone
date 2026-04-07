@@ -76,10 +76,11 @@
 }
 
 .notifications ul li img {
+  border-radius: 50px;
   height: 56px;
   width: 56px;
 
-  border-radius: 50px;
+  /* remove the following, probably replace img with the custom "avatar" */
   border: 1px dotted white;
 }
 
@@ -90,13 +91,10 @@
 
 .notifications ul li button {
   background: none;
-  pointer-events: auto;
-
-  height:56px;
-  width: 56px;
-  
   border-radius: 50px;
-  border: 1px dashed white;
+  height:56px;
+  pointer-events: auto;
+  width: 56px;
 }
 
 .notifications ul li button:active {
