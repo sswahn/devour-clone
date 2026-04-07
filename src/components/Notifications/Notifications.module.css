@@ -80,3 +80,7 @@
 
   border: 1px dashed white;
 }
+
+.notifications ul li div > div {
+  display: flex;
+}
