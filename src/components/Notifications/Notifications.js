@@ -80,13 +80,6 @@ function Notifications({ closeNotifications }) {
     
     const deltaY = event.clientY - startY.current
     const list = listRef.current
-    
-    if (deltaY > 0 && list.scrollTop <= 0) {
-      console.log('ready to drag. hidding overflow of list:')
-    } else {
-      console.log('scrolling normally.')
-      return
-    }
 
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
@@ -95,6 +88,7 @@ function Notifications({ closeNotifications }) {
 
     // dy > 0 scrolling down, dy < 0 scrolling up
     if (deltaY < 0) {
+      
       console.log('initiating drag up in if condition.')
       
       const maxDragUp = -200
@@ -103,8 +97,7 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
     } else {
-    //} else if (deltaY > 0 && list.scrollTop <= 0) {
-
+      
       console.log('initiating drag down in else condition.')
       
       bottomSheet.style.height = `${height}px`
