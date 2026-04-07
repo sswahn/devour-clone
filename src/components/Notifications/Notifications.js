@@ -74,10 +74,13 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
+     
+    console.log('pointerMove target: ', event.target)
+    
     const deltaY = event.clientY - startY.current
     const list = listRef.current
 
-    console.log('pointer move target: ', event.target)
+    console.log('deltaY: ', deltaY)
     
     if (deltaY > 0 && list.scrollTop <= 0) {
       console.log('ready to drag. hidding overflow of list:')
@@ -91,7 +94,6 @@ function Notifications({ closeNotifications }) {
     
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
-    const maxDragUp = -200
     let translate = deltaY
 
 
@@ -99,6 +101,7 @@ function Notifications({ closeNotifications }) {
     if (deltaY < 0) {
       console.log('initiating drag up in if condition.')
       
+      const maxDragUp = -200
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
