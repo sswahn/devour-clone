@@ -9,6 +9,7 @@ function Notifications({ closeNotifications }) {
   const dragging = useRef(false)
   const startY = useRef(0)
   const startTime = useRef(0)
+  const raf = useRef()
   
   const context = { 
     notifications: [
@@ -42,6 +43,14 @@ function Notifications({ closeNotifications }) {
     }
   }
 
+  
+  const setTranslate = y => {
+    cancelAnimationFrame(raf.current)
+    raf.current = requestAnimationFrame(()=>{
+      bottomSheetRef.current.style.transform = `translateY(${y}px)`
+    })
+  }
+
   const handlePointerDown = event => {
     event.currentTarget.setPointerCapture(event.pointerId)
     dragging.current = true
@@ -72,11 +81,13 @@ function Notifications({ closeNotifications }) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
-      bottomSheet.style.transform = `translateY(0px)` 
+      setTranslate(0)
+     // bottomSheet.style.transform = `translateY(0px)` 
     //} else {
     } else if (deltaY > 0 && list.scrollTop <= 0) {
       bottomSheet.style.height = `${height}px`
-      bottomSheet.style.transform = `translateY(${deltaY}px)`
+      setTranslate(deltaY)
+      // bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
 
@@ -98,7 +109,8 @@ function Notifications({ closeNotifications }) {
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     } else {
-      bottomSheet.style.transform = `translateY(0)`
+      setTranslate(0)
+      // bottomSheet.style.transform = `translateY(0)`
     }
   }
 
@@ -109,7 +121,8 @@ function Notifications({ closeNotifications }) {
     dragging.current = false
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.transform = 'translateY(0)'
+    setTranslate(0)
+    // bottomSheet.style.transform = 'translateY(0)'
     bottomSheet.style.height = ''
     listRef.current.style.overflow = ''
   }
