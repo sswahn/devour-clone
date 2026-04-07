@@ -12,16 +12,16 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
+      'testing user notification section, testing users',
     ]
   }
 
