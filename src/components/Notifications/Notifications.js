@@ -37,7 +37,7 @@ function Notifications({ closeNotifications }) {
     if (event.target === event.currentTarget) {
       const bottomSheet = bottomSheetRef.current
       bottomSheet.style.transform = ''
-      bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
+      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     }
   }
@@ -95,7 +95,7 @@ function Notifications({ closeNotifications }) {
     listRef.current.style.overflow = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
       bottomSheet.style.transform = ''
-      bottomSheet.addEventListener("transitionend", closeNotifications, { once: true })
+      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     } else {
       bottomSheet.style.transform = `translateY(0)`
