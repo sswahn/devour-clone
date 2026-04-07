@@ -52,6 +52,9 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
+    console.log('pointer down target: ', event.target)
+    console.log('pointer down currentTarget: ', event.currentTarget)
+    
     event.currentTarget.setPointerCapture(event.pointerId)
     dragging.current = true
     startY.current = event.clientY
@@ -65,6 +68,9 @@ function Notifications({ closeNotifications }) {
     }
     const deltaY = event.clientY - startY.current
     const list = listRef.current
+
+    console.log('pointer move target: ', event.target)
+    console.log('pointer move currentTarget: ', event.currentTarget)
     
     if (deltaY > 0 && list.scrollTop <= 0) {
       console.log('ready to drag. hidding overflow of list:')
