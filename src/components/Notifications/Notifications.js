@@ -58,7 +58,8 @@ function Notifications({ closeNotifications }) {
     const list = listRef.current
     
     if (deltaY > 0 && list.scrollTop <= 0) {
-      list.style.overflow = 'hidden'
+    //  list.style.overflow = 'hidden'
+      list.style.pointerEvents = 'none'
     } else {
       return
     }
@@ -92,7 +93,8 @@ function Notifications({ closeNotifications }) {
     const bottomSheet = bottomSheetRef.current
     bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
     bottomSheet.style.height = ''
-    listRef.current.style.overflow = ''
+   // listRef.current.style.overflow = ''
+    listRef.current.style.pointerEvents = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
       bottomSheet.style.transform = ''
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
