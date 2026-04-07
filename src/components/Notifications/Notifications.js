@@ -22,8 +22,6 @@ function Notifications({ closeNotifications }) {
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
     ]
   }
 
