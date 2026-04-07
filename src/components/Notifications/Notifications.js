@@ -44,7 +44,6 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
-      event.preventDefault()
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
@@ -115,7 +114,13 @@ function Notifications({ closeNotifications }) {
   }, [])
 
   // need bottomsheet height to expand with list items.
-    
+  const handleListScroll = event => {
+    if ((listRef.current.scrollTop <= 0) && (event.scrollY - startY.current > 0)) {
+      event.preventDefault()
+      console.log('prevented scroll inside condition...')
+    }
+  }
+  
   return (
     <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}  
@@ -128,7 +133,7 @@ function Notifications({ closeNotifications }) {
         aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
-        <ul ref={listRef} aria-label="user notifications">
+        <ul ref={listRef} onScroll={handleListScroll} aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>{notification}</li>                                                           
           )}
