@@ -115,6 +115,9 @@ function Notifications({ closeNotifications }) {
 
   // need bottomsheet height to expand with list items.
   const handleListScroll = event => {
+    console.log('testing onScroll...')
+    event.preventDefault()
+      
     if ((listRef.current.scrollTop <= 0) && (event.scrollY - startY.current > 0)) {
       event.preventDefault()
       console.log('prevented scroll inside condition...')
