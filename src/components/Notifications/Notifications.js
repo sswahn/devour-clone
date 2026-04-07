@@ -112,8 +112,8 @@ function Notifications({ closeNotifications }) {
             <li key={index}>
               <img src={notification.img} alt={notification.username} />
               <div>
-                <span>{notification.username}</span>
-                <span>{notification.text}</span>
+                <div>{notification.username}</div>
+                <div>{notification.text}</div>
               </div>
               <div>{notification.timestamp}</div>
               {/* <button><three dot icon /></button> */}
