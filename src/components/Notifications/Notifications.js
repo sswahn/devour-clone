@@ -11,7 +11,7 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      'testing user notification section, testing users',
+      {img: '', username: '', text: 'testing user notification section, testing users' },
       'testing user notification section, testing users',
       'testing user notification section, testing users',
       'testing user notification section, testing users',
