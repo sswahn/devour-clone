@@ -62,12 +62,12 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
+      listRef.current.style.overflow = 'hidden'
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
       startTime.current = performance.now()
       initialHeight.current = bottomSheetRef.current.offsetHeight
-      listRef.current.style.overflow = 'hidden'
     }
   }
 
@@ -75,12 +75,9 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-     
-    console.log('pointerMove target: ', event.target)
-    
     const deltaY = event.clientY - startY.current
     const list = listRef.current
-
+    
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
     let translate = deltaY
@@ -96,9 +93,9 @@ function Notifications({ closeNotifications }) {
       console.log('initiating drag down in else condition.')
       
       bottomSheet.style.height = `${height}px`
-      //setTranslate(deltaY)
+      setTranslate(deltaY)
       
-      bottomSheet.style.transform = `translateY(${deltaY}px)`
+      //bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
 
@@ -106,7 +103,7 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    //event.target.releasePointerCapture(event.pointerId)
+    // close if sheet less than half height, or on fast swipe down
     event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
