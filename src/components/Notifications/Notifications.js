@@ -12,7 +12,7 @@ function Notifications({ closeNotifications }) {
   const raf = useRef()
   
   const context = { 
-    notifications: [ /*
+    notifications: [
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
@@ -21,17 +21,8 @@ function Notifications({ closeNotifications }) {
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-      'testing user notification section, testing user notification section',
-  */  ]
+      'testing user notification section, testing user notification section'
+    ]
   }
 
   const handleClose = event => {
