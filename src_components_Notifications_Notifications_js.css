@@ -89,6 +89,15 @@
   gap: 10px;
 }
 
+.EW8UjTxcaJyjDU58ZAQw ul li button {
+  background: none;
+  border: 0;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li button:active {
+  background: #777;
+}
+
 .EW8UjTxcaJyjDU58ZAQw ul li button svg {
   fill: var(--text);
 }
