@@ -57,7 +57,7 @@
   width: 100%;
   overflow-y: auto;          /* Enables scrolling */
   overscroll-behavior: contain; /* Prevents scrolling the background */
-  pointer-events: none;
+  /* pointer-events: none; */
   -webkit-overflow-scrolling: touch; 
   flex: 1;                   /* Takes up remaining space */
   touch-action: pan-y; 
