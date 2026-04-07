@@ -51,6 +51,15 @@ function Notifications({ closeNotifications }) {
     })
   }
 
+  const resetDefaults = () => {
+    dragging.current = false
+    const bottomSheet = bottomSheetRef.current
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
+    bottomSheet.style.transform = '' // 'translateY(0)'
+    bottomSheet.style.height = ''
+    listRef.current.style.overflow = ''
+  }
+
   const handlePointerDown = event => {
     console.log('pointer down target: ', event.target)
 
@@ -60,6 +69,7 @@ function Notifications({ closeNotifications }) {
     startY.current = event.clientY
     startTime.current = performance.now()
     initialHeight.current = bottomSheetRef.current.offsetHeight
+    
   }
 
   const handlePointerMove = event => {
@@ -104,18 +114,14 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    dragging.current = false
     event.target.releasePointerCapture(event.pointerId)
     //event.currentTarget.releasePointerCapture(event.pointerId)
     const deltaY = event.clientY - startY.current
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.height = ''
-    listRef.current.style.overflow = ''
+    resetDefaults()
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.5) {
-      bottomSheet.style.transform = ''
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
       setIsOpen(false)
     } else {
@@ -127,12 +133,7 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    dragging.current = false
-    const bottomSheet = bottomSheetRef.current
-    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease'
-    bottomSheet.style.transform = 'translateY(0)'
-    bottomSheet.style.height = ''
-    listRef.current.style.overflow = ''
+    resetDefaults()
   }
 
   useEffect(() => {
