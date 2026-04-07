@@ -4,7 +4,6 @@ import styles from './Notifications.module.css'
 function Notifications({ closeNotifications }) {
   const [isOpen, setIsOpen] = useState(false)
   const bottomSheetRef = useRef(null)
-  const listRef = useRef(null)
   const initialHeight = useRef(0)
   const dragging = useRef(false)
   const startY = useRef(0)
@@ -35,13 +34,11 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    if (listRef.current.scrollTop <= 0) {
-      event.currentTarget.setPointerCapture(event.pointerId)
-      dragging.current = true
-      startY.current = event.clientY
-      startTime.current = performance.now()
-      initialHeight.current = bottomSheetRef.current.offsetHeight
-    }
+    event.currentTarget.setPointerCapture(event.pointerId)
+    dragging.current = true
+    startY.current = event.clientY
+    startTime.current = performance.now()
+    initialHeight.current = bottomSheetRef.current.offsetHeight
   }
 
   const handlePointerMove = event => {
@@ -53,16 +50,14 @@ function Notifications({ closeNotifications }) {
     const height = initialHeight.current
     let translate = deltaY
 
-    if (deltaY < 0) { // elasticity on drag at max height:
+    // Elasticity
+    if (deltaY < 0) {
       const maxDragUp = -200
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
-    } else { // drag sheet downward:
-      
-      console.log('initiating drag down in else condition.')
-      
+    } else {
       bottomSheet.style.transform = `translateY(${deltaY}px)`
       bottomSheet.style.height = `${height}px`
     } 
@@ -104,7 +99,6 @@ function Notifications({ closeNotifications }) {
     if (!isOpen) {
       setIsOpen(true)
     }
-   // listRef.current.scrollTop = 1
   }, [])
   
   return (
@@ -119,7 +113,7 @@ function Notifications({ closeNotifications }) {
         aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
-        <ul ref={listRef} aria-label="user notifications">
+        <ul aria-label="user notifications">
           {context.notifications?.map((notification, index) => 
             <li key={index}>{notification}</li>                                                           
           )}
