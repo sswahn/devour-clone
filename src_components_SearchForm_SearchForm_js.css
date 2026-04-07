@@ -152,7 +152,7 @@
 
 .TYu9xxiA93dMGBlCIky5 ul li {
   color: var(--text);
-  font-size: 18px;
+  font-size: var(--font-size);
   padding: 12px;
   width: 100%;
 }
