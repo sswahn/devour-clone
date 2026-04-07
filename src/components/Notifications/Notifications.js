@@ -45,7 +45,6 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerDown = event => {
     if (listRef.current.scrollTop <= 0) {
-      listRef.current.style.pointerEvents = 'none'
       event.currentTarget.setPointerCapture(event.pointerId)
       dragging.current = true
       startY.current = event.clientY
