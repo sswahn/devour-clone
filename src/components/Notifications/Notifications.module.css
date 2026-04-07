@@ -67,7 +67,7 @@
   font-size: var(--font-size);
   justify-content: space-between;
   line-height: var(--line-height);
-  padding: 8px 0 8px 8px;
+  padding: 8px;
   width: 100%;
 }
 
@@ -93,9 +93,9 @@
   background: none;
   border: 0;
   border-radius: 50px;
-  height:56px;
+  height: 48px;
   pointer-events: auto;
-  width: 56px;
+  width: 48px;
 }
 
 .notifications ul li button:active {
