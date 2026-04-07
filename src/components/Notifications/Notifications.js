@@ -91,7 +91,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const handleDropDown = event => {
-    event.stopPropagation()
+    // event.stopPropagation()
     alert('Dropdown button fires.')
   }
 
