@@ -73,8 +73,8 @@ function Notifications({ closeNotifications }) {
       
       console.log('initiating drag down in else condition.')
       
-      bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
+      bottomSheet.style.height = `${height}px`
     } 
   }
 
