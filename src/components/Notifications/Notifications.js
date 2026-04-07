@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import EllipsisVerticalIcon from '../EllipsisVerticalIcon/EllipsisVerticalIcon'
+import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
