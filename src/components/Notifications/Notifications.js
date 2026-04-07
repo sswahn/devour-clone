@@ -43,7 +43,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    event.currentTarget.setPointerCapture(event.pointerId)
+    
     dragging.current = true
     startY.current = event.clientY
     startTime.current = performance.now()
@@ -61,7 +61,7 @@ function Notifications({ closeNotifications }) {
     } else {
       return
     }
-    
+    event.currentTarget.setPointerCapture(event.pointerId)
     const bottomSheet = bottomSheetRef.current
    
 
