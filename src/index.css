@@ -16,6 +16,9 @@
   --input-border: light-dark(#888888, #555555);
 
   --active-button: light-dark(#777777, #444444);
+
+  --font-size: 16sp;
+  
 }
 
 * {
