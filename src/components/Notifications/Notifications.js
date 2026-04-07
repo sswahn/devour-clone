@@ -43,7 +43,7 @@ function Notifications({ closeNotifications }) {
   }
 
   const handlePointerDown = event => {
-    
+    event.currentTarget.setPointerCapture(event.pointerId)
     dragging.current = true
     startY.current = event.clientY
     startTime.current = performance.now()
@@ -55,16 +55,15 @@ function Notifications({ closeNotifications }) {
       return
     }
     const deltaY = event.clientY - startY.current
+    const list = listRef.current
     
-    if (deltaY > 0 && listRef.current.scrollTop <= 0) {
-      listRef.current.style.overflow = 'hidden'
+    if (deltaY > 0 && list.scrollTop <= 0) {
+      list.style.overflow = 'hidden'
     } else {
       return
     }
-    event.currentTarget.setPointerCapture(event.pointerId)
+    
     const bottomSheet = bottomSheetRef.current
-   
-
     const height = initialHeight.current
     const maxDragUp = -200
     let translate = deltaY
@@ -75,7 +74,7 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0px)` 
     //} else {
-    } else if (deltaY > 0 && listRef.current.scrollTop <= 0) {
+    } else if (deltaY > 0 && list.scrollTop <= 0) {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
