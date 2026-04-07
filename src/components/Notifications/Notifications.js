@@ -12,7 +12,7 @@ function Notifications({ closeNotifications }) {
   const raf = useRef()
   
   const context = { 
-    notifications: [
+    notifications: [ /*
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
@@ -31,7 +31,7 @@ function Notifications({ closeNotifications }) {
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
       'testing user notification section, testing user notification section',
-    ]
+  */  ]
   }
 
   const handleClose = event => {
@@ -83,9 +83,9 @@ function Notifications({ closeNotifications }) {
       
       bottomSheet.style.height = `${height}px`
       
-     // setTranslate(deltaY)
+      setTranslate(deltaY)
       
-      bottomSheet.style.transform = `translateY(${deltaY}px)`
+      //bottomSheet.style.transform = `translateY(${deltaY}px)`
     } 
   }
 
@@ -125,7 +125,7 @@ function Notifications({ closeNotifications }) {
     if (!isOpen) {
       setIsOpen(true)
     }
-    listRef.current.scrollTop = 1
+   // listRef.current.scrollTop = 1
   }, [])
   
   return (
