@@ -12,7 +12,7 @@ function Notifications({ closeNotifications }) {
   
   const context = { 
     notifications: [
-      {img: '', username: 'username', text: '123456789012345678901234567', timestamp: '5 days ago' },
+      {img: '', username: 'username', text: '1234567890123456789012345', timestamp: '5 days ago' },
       {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
       {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
       {img: '', username: 'username', text: 'testing user notification section', timestamp: '5 days ago' },
