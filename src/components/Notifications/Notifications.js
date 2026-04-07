@@ -132,10 +132,10 @@ function Notifications({ closeNotifications }) {
     <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}  
         className={`${styles.bottomSheet} ${isOpen ? styles.open : ''}`}
-        onPointerDownCapture={handlePointerDown}
-        onPointerMoveCapture={handlePointerMove}
-        onPointerUpCapture={handlePointerUp}
-        onPointerCancelCapture={handlePointerCancel}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
         role="dialog" 
         aria-modal="true" 
         aria-label="notifications">
