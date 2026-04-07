@@ -125,6 +125,7 @@ function Notifications({ closeNotifications }) {
     if (!isOpen) {
       setIsOpen(true)
     }
+    listRef.current.scrollTop = 1
   }, [])
   
   return (
