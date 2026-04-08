@@ -22,6 +22,7 @@ function Profile({ closeProfile }) {
   
   return (
     <section className={styles.profile} role="dialog" aria-modal="true" aria-labelledby="profile-username">
+  
       <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
   
       <header>
@@ -31,7 +32,9 @@ function Profile({ closeProfile }) {
         </figure>
         <h1 id="profile-username">Username</h1>
       </header>
+
         {/* user.bio && <p>{user.bio}</p> */}
+
       <address>Location</address>
       
       <ul role="list" className={styles.statsList}>
@@ -46,6 +49,7 @@ function Profile({ closeProfile }) {
       </div>
         
       <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
+        
     </section>
   )
 }
