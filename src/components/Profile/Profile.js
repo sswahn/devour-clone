@@ -41,7 +41,7 @@ function Profile({ closeProfile }) {
         
       <button onClick={handleFollow} type="button">+ Follow</button>
         
-      <div>
+      <div role="feed">
         {/* feed */}
       </div>
         
