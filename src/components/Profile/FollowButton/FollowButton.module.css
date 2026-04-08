@@ -1,10 +1,13 @@
 /* Profile Follow Button */
 
 .followButton {
+  align-items: center;
   border: 0;
   background: var(--text);
   color: var(--background);
-  width: 100%;
+  display: flex;
   height: 44px;
+  justify-content: center;  
   margin: 16px auto;
+  width: 100%;
 }
