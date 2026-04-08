@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PlusIcon from '../../Icons/PlusIcon/PlusIcon'
 import MinusIcon from '../../Icons/MinusIcon/MinusIcon'
-import styles from 'FollowButton.module.css'
+import styles from './FollowButton.module.css'
 
 function FollowButton() {
   const [following, setFollowing] = useState(false)
