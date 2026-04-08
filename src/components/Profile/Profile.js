@@ -42,7 +42,7 @@ function Profile({ closeProfile }) {
       <button onClick={handleFollow} type="button">+ Follow</button>
         
       <div role="feed">
-        {/* feed */}
+        {/* feed role="feed" must have article elements as children */}
       </div>
         
       <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
