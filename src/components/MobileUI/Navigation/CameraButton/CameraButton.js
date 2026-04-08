@@ -1,7 +1,7 @@
 import CameraIcon from '../../../Icons/CameraIcon/CameraIcon'
 import styles from './CameraButton.module.css'
 
-function CameraButton({ openCamera }) {
+function CameraButton({ cameraButtonRef, openCamera }) {
  
   const onClick = async event => {
     navigator.vibrate(50); return;
@@ -12,7 +12,7 @@ function CameraButton({ openCamera }) {
   }
   
   return (
-    <button className={styles.cameraButton} onClick={onClick} type="button" aria-label="open camera" aria-haspopup="dialog">
+    <button className={styles.cameraButton} ref={cameraButtonRef} onClick={onClick} type="button" aria-label="open camera" aria-haspopup="dialog">
       <CameraIcon size={32} />  
     </button>
   )
