@@ -22,7 +22,7 @@ function Profile({ closeProfile }) {
   
   return (
     <section className={styles.profile} role="dialog" aria-modal="true" labelledby="profile-username">
-      <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0"></div>
+      <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
   
       <CloseProfileButton closeProfile={closeProfile} />
       <figure>
@@ -42,7 +42,7 @@ function Profile({ closeProfile }) {
         {/* feed */}
       </div>
         
-      <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0"></div>
+      <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
     </section>
   )
 }
