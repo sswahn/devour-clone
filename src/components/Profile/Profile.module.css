@@ -41,8 +41,13 @@
 }
 
 .profile ul {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
+  justify-content: center;
   list-style: none;
-  margin: 24px auto;
+}
+
+.profile ul li {
+  font-size: 18px;
 }
