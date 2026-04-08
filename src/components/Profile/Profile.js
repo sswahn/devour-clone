@@ -35,6 +35,7 @@ function Profile({ closeProfile }) {
       geoRef.removeEventListener('location', handleLocation
     }
   }, [])
+  
   useEffect(() => {
     closeButtonRef.current?.focus()
   }, [])
