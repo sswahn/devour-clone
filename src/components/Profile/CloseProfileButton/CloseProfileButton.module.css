@@ -13,7 +13,7 @@
 }
 
 .closeButton:active {
-  background-color: #666;
+  background-color: var(--active-button);
 }
 
 .closeButton svg {  
