@@ -59,7 +59,7 @@ function Profile({ closeProfile }) {
 
       <address>New York, NY</address>
       
-      <ul role="list">
+      <ul>
         <li><strong>600</strong> Following</li>
         <li><strong>50</strong> Followers</li>
       </ul>
