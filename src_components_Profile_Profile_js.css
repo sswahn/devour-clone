@@ -25,6 +25,20 @@
   fill: var(--text);
 }
 
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/FollowButton/FollowButton.module.css ***!
+  \***************************************************************************************************************/
+/* Profile Follow Button */
+
+.LxVk1HYZYwEEuUZ934ZA {
+  border: 0;
+  background: var(--text);
+  color: var(--background);
+  width: 100%;
+  height: 44px;
+  margin: 16px auto;
+}
+
 /*!*********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/Profile.module.css ***!
   \*********************************************************************************************/
@@ -69,7 +83,10 @@
   text-align: center;
 }
 
-.bRXXEOH49SRQPlqWmeUf div {
+.bRXXEOH49SRQPlqWmeUf ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
   
 }
 
