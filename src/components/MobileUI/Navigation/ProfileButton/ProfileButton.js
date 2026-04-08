@@ -11,7 +11,13 @@ function ProfileButton({ profileButtonRef, openProfile }) {
   }
   
   return (
-    <button className={styles.profileButton} ref={profileButtonRef} onClick={onClick} type="button" aria-label="open profile" aria-haspopup="dialog">
+    <button 
+      className={styles.profileButton} 
+      ref={profileButtonRef} 
+      onClick={onClick} 
+      type="button" 
+      aria-label="open profile" 
+      aria-haspopup="dialog">
       <UserIcon />  
     </button>
   )
