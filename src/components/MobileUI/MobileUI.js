@@ -8,6 +8,10 @@ function MobileUI() {
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
 
+  // create button refs
+  // in close functions add .focus() to respective refs
+  // example: searchButtonRef.current.focus()
+
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => setSearchIsOpen(false)
 
