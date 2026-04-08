@@ -20,12 +20,16 @@ function Notifications({ closeNotifications }) {
     ]
   }
 
+  const close = bottomSheet => {
+      bottomSheet.style.transform = '' 
+      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
+      setIsOpen(false)
+  }
+
   const handleClose = event => {
     if (event.target === event.currentTarget) {
       const bottomSheet = bottomSheetRef.current
-      bottomSheet.style.transform = ''
-      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true })
-      setIsOpen(false)
+      close(bottomSheet)
     }
   }
 
@@ -68,14 +72,9 @@ function Notifications({ closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    
-    // bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
-    
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
-      bottomSheet.style.transform = '' 
-      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
-      setIsOpen(false)
+      close(bottomSheet)
     } else {
       bottomSheet.style.transform = 'translateY(0)'
     }
@@ -85,9 +84,6 @@ function Notifications({ closeNotifications }) {
     if (dragging.current) {  
       dragging.current = false 
       const bottomSheet = bottomSheetRef.current 
-      
-      // bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
-      
       bottomSheet.style.transform = 'translateY(0)' 
       bottomSheet.style.height = '' 
     }
@@ -98,7 +94,7 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-  // Use requestAnimationFrame to wait for the next repaint
+  // Wait for the next repaint to transition:
   const timer = requestAnimationFrame(() => {
     if (!isOpen) {
       setIsOpen(true)
