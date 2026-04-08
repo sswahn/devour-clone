@@ -1,20 +1,25 @@
 /* css global classes */
 
 :root {
-  color-scheme: dark light;
-  
+  color-scheme: light dark; /* mode swap */
   --black: #181818;
   --white: #f9fafb;
   
-  --dark-mode-background: var(--black);
-  --dark-mode-color: var(--white);
-  --dark-mode-background-secondary: #111;
-  --dark-mode-background-tertiary: #222;
-  --dark-mode-background-quaternary: #333;
-  --dark-mode-border-color: white;
+  --background: light-dark(var(--white), var(--black));
+  --text: light-dark(var(--black), var(--white));
+  --border: light-dark(
+    color-mix(in srgb, var(--white), transparent 95%), 
+    color-mix(in srgb, var(--black), transparent 95%)
+  );
+  
+  --input: light-dark(#999999, #444444);
+  --input-border: light-dark(#888888, #555555);
 
-  --light-mode-background: var(--white);
-  --light-mode-color: var(--black);  
+  --active-button: light-dark(#777777, #444444);
+
+  --font-size: 18px;
+  --line-height: 1.5;
+  
 }
 
 * {

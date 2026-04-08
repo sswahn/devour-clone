@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 
-// move the logic to the utility
-// hook should be for component manipulation
-// tying the utility to the component.
-
-export default function useSpeechRecognition({
+function useSpeechRecognition({
   continuous = true,
   interimResults = true,
   lang = 'en-US',
@@ -12,7 +8,8 @@ export default function useSpeechRecognition({
 } = {}) {
   const recognitionRef = useRef(null)
   const isListeningRef = useRef(false)
-
+  const shouldRestartRef = useRef(autoRestart)
+  
   const [isSupported, setIsSupported] = useState(true)
   const [isListening, setIsListening] = useState(false)
   const [finalTranscript, setFinalTranscript] = useState('')
@@ -45,17 +42,19 @@ export default function useSpeechRecognition({
       isListeningRef.current = false
       setIsListening(false)
 
-      // Auto-restart (important for real-world use)
-      if (autoRestart) {
+      if (shouldRestartRef.current) {
         recognition.start()
       }
     }
 
-    recognition.onerror = (event) => {
+    recognition.onerror = event => {
       setError(event.error)
+      if (event.error === 'not-allowed') {
+        shouldRestartRef.current = false
+      }
     }
 
-    recognition.onresult = (event) => {
+    recognition.onresult = event => {
       let interim = ''
       let final = ''
 
@@ -77,20 +76,25 @@ export default function useSpeechRecognition({
     }
 
     return () => {
-      recognition.stop()
+      shouldRestartRef.current = false
+      recognition.abort()
     }
   }, [continuous, interimResults, lang, autoRestart])
 
   // Controls
   const start = useCallback(() => {
-    if (!recognitionRef.current) return
-    try {
-      recognitionRef.current.start()
-    } catch {}
+    if (!recognitionRef.current) {
+      return
+    }
+    shouldRestartRef.current = autoRestart
+    recognitionRef.current.start()
   }, [])
 
   const stop = useCallback(() => {
-    if (!recognitionRef.current) return
+    if (!recognitionRef.current) {
+      return
+    }
+    shouldRestartRef.current = false
     recognitionRef.current.stop()
   }, [])
 
@@ -110,3 +114,5 @@ export default function useSpeechRecognition({
     reset
   }
 }
+
+export default useSpeechRecognition

@@ -9,7 +9,10 @@ context = {
 
 function logError(error, context = {}) {
 
-  return console.error('Basic error: ', error)
+  console.error('Temp error: ', error)
+  return
+  
+  // consider dedupe method
   
   const payload = {
     message: error.message,

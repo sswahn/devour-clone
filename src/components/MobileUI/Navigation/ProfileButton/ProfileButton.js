@@ -1,18 +1,14 @@
 import UserIcon from '../../../Icons/UserIcon/UserIcon'
-import styles from './profilebutton.module.css'
+import styles from './ProfileButton.module.css'
 
 function ProfileButton({ openProfile }) {
   
   const onClick = async event => {
-    try {
-      navigator.vibrate(50)
-      return
-      await document.documentElement.requestFullscreen()
-      await screen.orientation.lock('portrait')
-      openProfile()
-    } catch (error) {
-      throw new Error(error)
-    }
+    navigator.vibrate(50); return;
+  
+    await document.documentElement.requestFullscreen()
+    await screen.orientation.lock('portrait')
+    openProfile()
   }
   
   return (

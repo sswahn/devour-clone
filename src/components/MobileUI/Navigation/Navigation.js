@@ -5,7 +5,7 @@ import SearchButton from './SearchButton/SearchButton'
 import CameraButton from './CameraButton/CameraButton'
 import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
-import styles from './navigation.module.css'
+import styles from './Navigation.module.css'
 
 function Navigation({ openSearch, openCamera, openNotifications, openProfile }) {
   const navRef = useRef(null)

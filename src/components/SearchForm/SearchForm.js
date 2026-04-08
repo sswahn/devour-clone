@@ -1,127 +1,102 @@
 import { useState, useRef, useEffect } from 'react'
+import { config } from '../../config'
 import server from '../../utilities/server'
-import XmarkIcon from '../Icons/XmarkIcon/XmarkIcon'
+import useDebounce from '../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
-import MicrophoneIcon from '../Icons/MicrophoneIcon/MicrophoneIcon'
+import SearchInput from './SearchInput/SearchInput'
+import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
+import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
   const [searchValue, setSearchValue] = useState('')
-  const inputRef = useRef(null)
+  const [searchResults, setSearchResults] = useState([])
+  const [recentSearches, setRecentSearches] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleCloseSearch = async event => {
-    try {
-     await document.exitFullscreen()
-     closeSearch()
-    } catch (error) {
-      throw new Error(error)
+  const onSubmit = event => event.preventDefault()
+
+  const requestSearchResults = useDebounce(async () => {
+    
+    const value = searchValue.trim()
+    if (!value || error) { // might have to .trim() here
+      return
     }
-  }
-
-  // make/use a custom hook
-  const speechRecognition = () => {
-    try {
-      const recognition = new window.SpeechRecognition() // window.webkitSpeechRecognition
-      recognition.continuous = true
-      recognition.interimResults = true
-      recognition.lang = 'en-US'
-      recognition.start()
-    } catch (error) {
-      throw new Error(error)
-    }
-  }
-
-  const requestData = async value => {
+    
+    setLoading(true)
     const request = {
-      value
+     // is this app private or public, if so no session data available; session.username etc.
+      message: value
+      // ... additional data to improve search results, ie, prevSearch etc.
     }
-    const response = await server.post(config.api.search, request)
-    if (response.error) {
-      return console.error(error)
+    //const response = await server.post(config.api.search, request)
+   // setSearchResults(response.message)
+    storeSearchTermLocally(value)
+    setLoading(false)
+  }, 600)
+
+  const storeSearchTermLocally = value => {
+
+    return console.log('invalid text.')
+    
+    const key = config.storage.search.terms
+    const item = localStorage.getItem(key)
+    const existing = item ? JSON.parse(item) : []
+    if (existing.includes(value)) {
+      return
     }
-    setData(response.message)
+    const data = [value, ...existing].slice(0, 5)
+    localStorage.setItem(key, JSON.stringify(data))
+    setRecentSearches(data)
   }
 
-  const storeLocally = (key, value) => {
-    try {
-      const existing = JSON.parse(localStorage.getItem(key) || '{}')
-      const data = JSON.stringify({ ...existing, value })
-      localStorage.setItem(key, data)
-    } catch (error) {
-      throw new Error(error)
+  const loadRecentSearchTerms = () => {
+    const item = localStorage.getItem('searches')
+    if (item) {
+      setRecentSearches(JSON.parse(item) )
     }
   }
 
+  useEffect(() => {
+    requestSearchResults()
+  }, [searchValue])
   
-  const onChange = event => {
-    // store recent searches in locoalStorage
-    const value = event.target.value
-
-    console.log('onChange value: ', value)
-    
-    setSearchValue(value)
-    
-    
-    // debounce request, avoid multiple http requests for the same query
-    // debounce(requestData, 300)
-  }
-  
-  const onKeyDown = event => {
-
-    return
-    
-    switch(event.key) {
-      case 'Enter':
-        return console.log('Enter key') // handle for enter key (prolly ignore it)
-      case 'Escape':
-        return console.log('Escape key') // escape -> clearCloseInput()
-      case 'ArrowUp':
-        return console.log('ArrowUp key') // select suggestion up
-      case 'ArrowDown':
-        return console.log('ArrowDown key') // select suggestion down
-      default:
-        return console.log('key', event.key)
-    }
-  }
-
-  const onSubmit = event => {
-    event.preventDefault()
-  }
-
-  // search bar, remove header, 
-  // have search icon on left
-  // input in middle,
-  // right side will have mic button, then close button side by side
-  // no placeholder
+  useEffect(() => {
+    loadRecentSearchTerms()
+  }, [])
 
   return (
-    <section className={styles.search}>
-      <form onSubmit={onSubmit}>
-        <div>
-          <SearchIcon />
-    
-          <input 
-            ref={inputRef}
-            type="search"
-            onChange={onChange}
-            onKeyDown={onKeyDown}
-            aria-label="search input"  
+    <search className={styles.search}>
+      <div>
+        <CloseSearchButton closeSearch={closeSearch} />
+        <form onSubmit={onSubmit}>
+          <div>
+            <SearchIcon size={18} />
+          </div>
+          <SearchInput 
+            searchValue={searchValue} 
+            error={error}
+            setSearchValue={setSearchValue}
+            setError={setError}
           />
-          
-          {/* !!window.SpeechRecognition && */
-            <button type="button" onClick={handleVoiceRecognition} aria-label="voice recognition">
-              <MicrophoneIcon />
-            </button>
-          }
+          <div>
+            <SpeechRecognitionButton setSearchValue={setSearchValue} />
+          </div>
+        </form>
+      </div>
   
-          <button type="button" onClick={handleCloseSearch} aria-label="close search">
-            <XmarkIcon />
-          </button>
-        </div>
-      </form>
+      {/* make Suggestions component: */}
       
-      <div className="suggestions"></div>
-    </section>
+      <ul id="suggestions" role="listbox" aria-live="polite" aria-busy={loading}>
+        {loading ? <LoadingSpinner /> : recentSearches?.map((search, index) =>
+          <li key={index} role="option">{search}</li>
+        )}    
+      </ul>  
+      
+    
+    </search>
   )
 }
 

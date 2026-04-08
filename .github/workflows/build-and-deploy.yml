@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - development
 
 
 
@@ -15,15 +15,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: development
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 24
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Run Unit Tests
+        run: npm test -- --ci --coverage
 
       - name: Build
         run: webpack --config webpack.config.js

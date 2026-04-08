@@ -2,7 +2,7 @@ import { useEffect, useRef  } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
-import styles from './header.module.css'
+import styles from './Header.module.css'
 
 const Header = () => {
   const headerRef = useRef(null)

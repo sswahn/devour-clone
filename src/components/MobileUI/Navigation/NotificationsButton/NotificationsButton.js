@@ -1,18 +1,11 @@
 import BellIcon from '../../../Icons/BellIcon/BellIcon'
-import styles from './notificationsbutton.module.css'
+import styles from './NotificationsButton.module.css'
 
 function NotificationsButton({ openNotifications }) {
 
   const onClick = event => {
-    try {
-      navigator.vibrate(50)
-   
-      return
-      
-      openNotifications()
-    } catch (error) {
-      throw new Error(error)
-    }
+    navigator.vibrate(50)
+    openNotifications()
   }
   
   return (

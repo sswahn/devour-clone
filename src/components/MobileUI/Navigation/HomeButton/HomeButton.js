@@ -1,18 +1,14 @@
 import HomeIcon from '../../../Icons/HomeIcon/HomeIcon'
-import styles from './homebutton.module.css'
+import styles from './HomeButton.module.css'
 
 function HomeButton() {
   
   const onClick = event => {
-    try {
-      navigator.vibrate(50)
-      window.scrollTo({
-        behavior: 'smooth',
-        top: 0
-      })
-    } catch (error) {
-      throw new Error(error)
-    }
+    navigator.vibrate(50)
+    window.scrollTo({
+      behavior: 'smooth',
+      top: 0
+    })
   }
   
   return (

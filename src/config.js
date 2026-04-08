@@ -1,18 +1,21 @@
 export const config = {
-  url: {
-    login: '/login',
-    home: '/',
-    create: '/create',
-    camera: '/camera',
-    profile: '/profile',
-    settings: '/settings',
-    registration: '/register',
-    privacy: '/privacy-policy',
-    cookie: '/cookie-use',
-    terms: '/terms-and-conditions',
-    asset_cdn: 'https://d1cd149ok26yak.cloudfront.net'
+  cookie: {
+    session: 'session'
+  },
+  storage: {
+    search: {
+      terms: 'searchTerms'
+    }
   },
   api: {
+    search: 'https://devour.social/api/v1/search',
+    turnstile: '/api/v1/turnstile',
+    posts: '/api/v1/posts',
+    test: '/api/v1/test',
+    likes: '',
+    shares: '',
+    views: '',
+    comments: '',
     user: {
       logout: '/api/v1/logout',
       login: '/api/v1/login',
@@ -21,25 +24,8 @@ export const config = {
       confirm_forgot_password: '/api/v1/confirm-forgot-password',
       session: '/api/v1/session'
     },
-    turnstile: '/api/v1/turnstile',
     log: {
       errors: ''
-    },
-    posts: '/api/v1/posts',
-    test: '/api/v1/test',
-    likes: '',
-    shares: '',
-    views: '',
-    comments: '',
-  },
-  store: {
-    posts: {
-      index: 'posts',
-      create: 'create',
-      captions: 'captions'
     }
-  },
-  cookie: {
-    session: 'session'
   }
 }
