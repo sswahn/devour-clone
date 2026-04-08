@@ -43,6 +43,8 @@ function Profile({ closeProfile }) {
         <li><strong>600</strong> Following</li>
         <li><strong>50</strong> Followers</li>
       </ul>
+
+      <geolocation></geolocation>
         
       <button onClick={handleFollow} type="button">+ Follow</button>
         
