@@ -16,17 +16,14 @@
   
 }
 
-.profile header figure {
-  margin-left: 48px;
-  
-  border: 1px dashed orange;
-}
+.profile header figure {}
 
 .profile header figure img {
   display: block;
+  height: 400px;
   margin: 0 auto;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  
   
 
   border-radius: 50px;
