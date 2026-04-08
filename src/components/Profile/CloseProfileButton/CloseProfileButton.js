@@ -1,9 +1,9 @@
 import ArrowLeftIcon from '../../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './CloseProfileButton.module.css'
 
-function CloseProfileButton({ name, ref, close }) {
+function CloseProfileButton({ name, closeButtonRef, close }) {
  return (
-   <button className={styles.closeProfileButton} ref={ref} onClick={close} type="button" aria-label={`close ${name}`}>
+   <button className={styles.closeProfileButton} ref={closeButtonRef} onClick={close} type="button" aria-label={`close ${name}`}>
      <ArrowLeftIcon />
    </button>
   )
