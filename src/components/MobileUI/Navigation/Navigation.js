@@ -8,6 +8,10 @@ import ProfileButton from './ProfileButton/ProfileButton'
 import styles from './Navigation.module.css'
 
 function Navigation({ 
+  searchButtonRef,
+  cameraButtonRef,
+  notificationsButtonRef,
+  profileButtonRef,
   openSearch,
   openCamera, 
   openNotifications, 
@@ -25,14 +29,14 @@ function Navigation({
       <div>
         <div>
           <HomeButton />  
-          <SearchButton openSearch={openSearch} />
+          <SearchButton searchButtonRef={searchButtonRef} openSearch={openSearch} />
         </div>
         <div>
-          <CameraButton openCamera={openCamera} />
+          <CameraButton cameraButtonRef={cameraButtonRef} openCamera={openCamera} />
         </div>
         <div>
-          <NotificationsButton openNotifications={openNotifications} />
-          <ProfileButton openProfile={openProfile} />
+          <NotificationsButton notificationsButtonRef={notificationsButtonRef} openNotifications={openNotifications} />
+          <ProfileButton profileButtonRef={profileButtonRef} openProfile={openProfile} />
         </div>
       </div>
     </nav>
