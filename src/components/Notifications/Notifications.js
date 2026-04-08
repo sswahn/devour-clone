@@ -69,8 +69,8 @@ function Notifications({ closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    // why?
-    //bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+    // consider removing transition
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
       bottomSheet.style.transform = '' 
@@ -85,7 +85,8 @@ function Notifications({ closeNotifications }) {
     if (dragging.current) {  
       dragging.current = false 
       const bottomSheet = bottomSheetRef.current 
-      //bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+      // consider removin transition
+      bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
       bottomSheet.style.transform = 'translateY(0)' 
       bottomSheet.style.height = '' 
     }
