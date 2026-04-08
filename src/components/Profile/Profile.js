@@ -7,11 +7,13 @@ function Profile({ closeProfile }) {
   const sentinelEndRef = useRef(null)
   const closeButtonRef = useRef(null)
   
-  // use sentinel focus trap pattern
-  // use useEffect to load initial focus on load, (header or close btn)
-
-  const focusLast = event => {}
-  const focusFirst = event => {}
+  const focusLast = event => {
+    // focus on last focusable element between sentinels
+  }
+  
+  const focusFirst = event => {
+    closeButtonRef.current.focus()
+  }
 
   const handleFollow = event => {}
   const handleUnFollow = event => {}
