@@ -14,16 +14,21 @@ function Profile({ closeProfile }) {
   const handleClose = event => {
     closeProfile()
   }
-  
+
+  const handleFollow = event => {}
   
   return (
     <section className={styles.profile} role="dialog" aria-modal="true">
       <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0"></div>
       <header>
         <button onClick={handleClose} type="button">
-          
+          Close button
         </button>
-        {/* close button, profile image, username, location, and follow button */}
+        <img src="" alt="" />
+        <h1>Username</h1>
+        {/* user.bio && <p>{user.bio}</p> */}
+        <address>Location</address>
+        <button onClick={handleFollow} type="button">Follow</button>
       </header>
       <div>
         {/* feed */}
