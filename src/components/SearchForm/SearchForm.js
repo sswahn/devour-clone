@@ -68,7 +68,7 @@ function SearchForm({ closeSearch }) {
   }, [])
 
   return (
-    <search className={styles.search}>
+    <search className={styles.search} role="dialog" aria-modal="true">
       <div>
         <CloseSearchButton closeSearch={closeSearch} />
         <form onSubmit={onSubmit}>
