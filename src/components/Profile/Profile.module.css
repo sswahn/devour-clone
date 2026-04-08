@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+.profile address {
+  
+}
+
 .profile ul {
   align-items: center;
   display: flex;
