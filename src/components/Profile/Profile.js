@@ -32,7 +32,7 @@ function Profile({ closeProfile }) {
   useEffect(() => {
     geoRef.addEventListener('location', handleLocation)
     return () => {
-      geoRef.removeEventListener('location', handleLocation
+      geoRef.removeEventListener('location', handleLocation)
     }
   }, [])
   
