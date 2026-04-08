@@ -44,8 +44,7 @@ function Notifications({ notifications, closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
-
-    // Elasticity
+    // Elasticity:
     if (deltaY < 0) {
       const maxDragUp = -200
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
@@ -62,7 +61,6 @@ function Notifications({ notifications, closeNotifications }) {
     if (!dragging.current) {
       return
     }
-    console.log('pointer up fired, inline transition set.')
     // Close if sheet less than half height, or on fast swipe down.
     dragging.current = false
     event.currentTarget.releasePointerCapture(event.pointerId)
@@ -70,12 +68,12 @@ function Notifications({ notifications, closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
-    // consider removing transition
-    // bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+    
+    bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+    
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
       bottomSheet.style.transform = '' 
-      // consider using the prop "notifications" bool instead of isOpen
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
       setIsOpen(false)
     } else {
@@ -85,18 +83,17 @@ function Notifications({ notifications, closeNotifications }) {
 
   const handlePointerCancel = event => {
     if (dragging.current) {  
-      console.log('pointer cancel fired, inline transition set.')
       dragging.current = false 
       const bottomSheet = bottomSheetRef.current 
-      // consider removin transition
-      // bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+      
+      bottomSheet.style.transition = 'transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease' 
+      
       bottomSheet.style.transform = 'translateY(0)' 
       bottomSheet.style.height = '' 
     }
   }
 
   const handleDropDown = event => {
-    // event.stopPropagation()
     alert('Dropdown button fires.')
   }
 
@@ -109,7 +106,7 @@ function Notifications({ notifications, closeNotifications }) {
   return (
     <div className={styles.notifications} onClick={handleClose}>
       <section ref={bottomSheetRef}  
-        className={`${styles.bottomSheet} ${notifications ? styles.open : ''}`}
+        className={`${styles.bottomSheet} ${isOpen ? styles.open : ''}`}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
