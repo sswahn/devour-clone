@@ -11,10 +11,6 @@ function MobileUI() {
   const cameraButtonRef = useRef(null)
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
-  
-  // create button refs
-  // in close functions add .focus() to respective refs
-  // example: searchButtonRef.current.focus()
 
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
