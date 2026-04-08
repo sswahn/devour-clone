@@ -16,7 +16,7 @@
 }
 
 .MKWMzDOjE5Xa2PuqhUCA:active {
-  background-color: #666;
+  background-color: var(--active-button);
 }
 
 .MKWMzDOjE5Xa2PuqhUCA svg {  
