@@ -6,6 +6,8 @@ function Profile({ closeProfile }) {
   const sentinelStartRef = useRef(null)
   const sentinelEndRef = useRef(null)
   const closeButtonRef = useRef(null)
+
+  const geoRef = useRef(null)
   
   const focusLast = event => {
     // focus on last focusable element between sentinels
@@ -18,6 +20,21 @@ function Profile({ closeProfile }) {
   const handleFollow = event => {}
   const handleUnFollow = event => {}
 
+  const handleLocation = event => {
+    if (event.target.position) {
+      const { latitude, longitude } = event.target.position.coords
+      alert(`Coordinates: ${latitude}, ${longitude}`)
+    } else if (event.target.error) {
+      alert(`Error: ${geo.error.message}`)
+    }
+  }
+
+  useEffect() => {
+    geoRef.addEventListener('location', handleLocation)
+    return () => {
+      geoRef.removeEventListener('location', handleLocation
+    }
+  }, [])
   useEffect(() => {
     closeButtonRef.current?.focus()
   }, [])
@@ -44,7 +61,7 @@ function Profile({ closeProfile }) {
         <li><strong>50</strong> Followers</li>
       </ul>
 
-      <geolocation></geolocation>
+      <geolocation ref={geoRef}></geolocation>
         
       <button onClick={handleFollow} type="button">+ Follow</button>
         
