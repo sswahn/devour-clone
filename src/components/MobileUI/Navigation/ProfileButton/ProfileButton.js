@@ -4,10 +4,9 @@ import styles from './ProfileButton.module.css'
 function ProfileButton({ openProfile }) {
   
   const onClick = async event => {
-    navigator.vibrate(50); return;
-  
-    await document.documentElement.requestFullscreen()
-    await screen.orientation.lock('portrait')
+    navigator.vibrate(50)
+    // await document.documentElement.requestFullscreen()
+    // await screen.orientation.lock('portrait')
     openProfile()
   }
   
