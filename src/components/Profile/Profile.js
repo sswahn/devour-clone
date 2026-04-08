@@ -2,14 +2,8 @@ import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
 
-  const handleBlur = event => {
-    // Ensure relatedTarget exists and check if focus left the container
-    if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) {
-      // Focus has left the container; refocus a specific element
-      // actually instead of currentTarget, focus on the closeButton
-      event.currentTarget.focus()
-    }
-  }
+  // use sentinel focus trap pattern
+  // use useEffect to load initial focus on load,
 
   const handleClose = event => {
     closeProfile()
