@@ -4,7 +4,7 @@ import MinusIcon from '../../Icons/MinusIcon/MinusIcon'
 import styles from 'FollowButton.module.css'
 
 function FollowButton() {
-  use [following, setFollowing] = useState(false)
+  const [following, setFollowing] = useState(false)
 
   const handleFollow = event => {
     setFollowing(prevState => !prevState)
