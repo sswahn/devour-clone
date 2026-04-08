@@ -15,7 +15,7 @@ function MobileUI() {
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
-    searchButtonRef.current?.focus()
+    searchButtonRef.current.focus()
   }
 
   const openCamera = event => setCameraIsOpen(true)
