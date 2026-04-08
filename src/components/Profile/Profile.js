@@ -12,10 +12,6 @@ function Profile({ closeProfile }) {
 
   const focusLast = event => {}
   const focusFirst = event => {}
-  
-  const handleClose = event => {
-    closeProfile()
-  }
 
   const handleFollow = event => {}
   const handleUnFollow = event => {}
@@ -25,17 +21,23 @@ function Profile({ closeProfile }) {
   }, [])
   
   return (
-    <section className={styles.profile} role="dialog" aria-modal="true">
+    <section className={styles.profile} role="dialog" aria-modal="true" labelledby="profile-username">
       <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0"></div>
   
-      <button ref={closeButtonRef} onClick={handleClose} type="button">
-        Close button
-      </button>
-      <img src="" alt="" />
-      <h1>Username</h1>
+      <CloseProfileButton closeProfile={closeProfile} />
+      <figure>
+        <img src="" alt="" />
+      </figure>
+      <h1 id="profile-username">Username</h1>
         {/* user.bio && <p>{user.bio}</p> */}
       <address>Location</address>
-      <button onClick={handleFollow} type="button">Follow Username</button>
+      
+      <div>
+        <div>600 Following</div>
+        <div>50 Followers</div>
+      </div>
+      <button onClick={handleFollow} type="button">+ Follow</button>
+        
       <div>
         {/* feed */}
       </div>
