@@ -11,7 +11,7 @@ function SearchButton({ openSearch }) {
   }
   
   return (
-    <button className={styles.searchButton} onClick={onClick} type="button" aria-label="search">
+    <button className={styles.searchButton} onClick={onClick} type="button" aria-label="search" aria-haspopup="dialog">
       <SearchIcon />  
     </button>
   )
