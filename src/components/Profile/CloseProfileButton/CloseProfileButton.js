@@ -3,7 +3,7 @@ import styles from './CloseProfileButton.module.css'
 
 function CloseProfileButton({ name, ref, close }) {
  return (
-   <button className={styles.closeProfileButton} ref={ref}  onClick={close} type="button" aria-label={`close ${name}`}>
+   <button className={styles.closeProfileButton} ref={ref} onClick={close} type="button" aria-label={`close ${name}`}>
      <ArrowLeftIcon />
    </button>
   )
