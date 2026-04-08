@@ -53,6 +53,9 @@
 .bRXXEOH49SRQPlqWmeUf header figure img {
   display: block;
   margin: 0 auto;
+  width: 128px;
+  height: 128px;
+  
 
   border-radius: 50px;
   border: 1px dashed red;
