@@ -25,7 +25,7 @@ function Profile({ closeProfile }) {
       const { latitude, longitude } = event.target.position.coords
       alert(`Coordinates: ${latitude}, ${longitude}`)
     } else if (event.target.error) {
-      alert(`Error: ${geo.error.message}`)
+      alert(`Error: ${event.target.error.message}`)
     }
   }
 
