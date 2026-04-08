@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Interface from './Interface'
 import Navigation from './Navigation/Navigation'
 
@@ -7,22 +7,38 @@ function MobileUI() {
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
-
+  const searchButtonRef = useRef(null)
+  const cameraButtonRef = useRef(null)
+  const notificationsButtonRef = useRef(null)
+  const profileButtonRef = useRef(null)
+  
   // create button refs
   // in close functions add .focus() to respective refs
   // example: searchButtonRef.current.focus()
 
   const openSearch = event => setSearchIsOpen(true)
-  const closeSearch = event => setSearchIsOpen(false)
+  const closeSearch = event => {
+    setSearchIsOpen(false)
+    searchButtonRef.current.focus()
+  }
 
   const openCamera = event => setCameraIsOpen(true)
-  const closeCamera = event => setCameraIsOpen(false)
+  const closeCamera = event => {
+    setCameraIsOpen(false)
+    cameraButtonRef.current.focus()
+  }
 
   const openNotifications = event => setNotificationsIsOpen(true)
-  const closeNotifications = event => setNotificationsIsOpen(false)
+  const closeNotifications = event => {
+    setNotificationsIsOpen(false)
+    notificationsButtonRef.current.focus()
+  }
 
   const openProfile = event => setProfileIsOpen(true)
-  const closeProfile = event => setProfileIsOpen(false)
+  const closeProfile = event => {
+    setProfileIsOpen(false)
+    profileButtonRef.current.focus()
+  }
 
   return (
     <section>
@@ -37,6 +53,10 @@ function MobileUI() {
         closeProfile={closeProfile}
       />
       <Navigation 
+        searchButtonRef={searchButtonRef}
+        cameraButtonRef={cameraButtonRef}
+        notificationsButtonRef={notificationsButtonRef}
+        profileButtonRef={profileButtonRef}
         openSearch={openSearch}
         openCamera={openCamera}
         openNotifications={openNotifications}
