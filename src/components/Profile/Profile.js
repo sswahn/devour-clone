@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import CloseProfileButton from './CloseProfileButton/CloseProfileButton'
+import FollowButton from './FollowButton/FollowButton'
 import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
@@ -56,7 +57,7 @@ function Profile({ closeProfile }) {
 
       {/* user.bio && <p>{user.bio}</p> */}
 
-      <address>Location</address>
+      <address>New York, NY</address>
       
       <ul role="list">
         <li><strong>600</strong> Following</li>
@@ -64,8 +65,8 @@ function Profile({ closeProfile }) {
       </ul>
 
       <geolocation ref={geoRef}></geolocation>
-        
-      <button onClick={handleFollow} type="button">+ Follow</button>
+
+      <FollowButton />
         
       <div role="feed">
         {/* feed role="feed" must have article elements as children */}
