@@ -62,6 +62,7 @@ function Notifications({ closeNotifications }) {
     if (!dragging.current) {
       return
     }
+    console.log('pointer up fired, inline transition set.')
     // Close if sheet less than half height, or on fast swipe down.
     dragging.current = false
     event.currentTarget.releasePointerCapture(event.pointerId)
@@ -83,6 +84,7 @@ function Notifications({ closeNotifications }) {
 
   const handlePointerCancel = event => {
     if (dragging.current) {  
+      console.log('pointer cancel fired, inline transition set.')
       dragging.current = false 
       const bottomSheet = bottomSheetRef.current 
       // consider removin transition
