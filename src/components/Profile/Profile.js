@@ -26,7 +26,7 @@ function Profile({ closeProfile }) {
       <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
   
       <header>
-        <CloseProfileButton name="profile" ref={closeButtonRef} close={closeProfile} />
+        <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
         <figure>
           <img src="" alt={`{''}'s profile`} />
         </figure>
