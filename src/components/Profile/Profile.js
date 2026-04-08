@@ -30,9 +30,10 @@ function Profile({ closeProfile }) {
   }
 
   useEffect(() => {
-    geoRef.current.addEventListener('location', handleLocation)
+    const geo = geoRef.current
+    geo.addEventListener('location', handleLocation)
     return () => {
-      geoRef.current.removeEventListener('location', handleLocation)
+      geo.removeEventListener('location', handleLocation)
     }
   }, [])
   
