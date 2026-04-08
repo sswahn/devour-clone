@@ -7,10 +7,10 @@ const Notifications = lazy(() => import('../Notifications/Notifications'))
 const Profile = lazy(() => import('../Profile/Profile')) 
 
 function Interface({ 
-  search, 
-  camera, 
-  notifications, 
-  profile, 
+  searchIsOpen, 
+  cameraIsOpen, 
+  notificationsIsOpen, 
+  profileIsOpen, 
   closeSearch, 
   closeCamera, 
   closeNotifications, 
@@ -19,16 +19,16 @@ function Interface({
   return createPortal(
     <div>
       <Suspense fallback={<LoadingSpinner />}>
-        {search && <SearchForm closeSearch={closeSearch} />}
+        {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
-        {camera && <Camera closeCamera={closeCamera} />}
+        {cameraIsOpen && <Camera closeCamera={closeCamera} />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
-        {notifications && <Notifications closeNotifications={closeNotifications} />}
+        {notificationsIsOpen && <Notifications closeNotifications={closeNotifications} />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>    
-        {profile && <Profile closeProfile={closeProfile} />}
+        {profileIsOpen && <Profile closeProfile={closeProfile} />}
       </Suspense>
     </div>, 
     document.getElementById('portal')
