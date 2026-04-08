@@ -106,7 +106,7 @@ function Notifications({ closeNotifications }) {
   }, [])
   
   return (
-    <div className={styles.notifications} onClick={handleClose} tabIndex={-1}>
+    <div className={styles.notifications} onClick={handleClose} tabIndex={-1} role="dialog" aria-modal="true">
       <section ref={bottomSheetRef}  
         className={`${styles.bottomSheet} ${isOpen ? styles.open : ''}`}
         onPointerDown={handlePointerDown}
