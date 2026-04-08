@@ -12,6 +12,10 @@
   z-index: 200;
 }
 
+.profile * {
+  border: 1px dashed red;
+}
+
 .profile header {
   
 }
