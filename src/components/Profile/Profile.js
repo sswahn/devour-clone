@@ -44,7 +44,7 @@ function Profile({ closeProfile }) {
   return (
     <section className={styles.profile} role="dialog" aria-modal="true" aria-labelledby="profile-username">
   
-      <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
+      <div className={styles.sentinel} ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
   
       <header>
         <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
