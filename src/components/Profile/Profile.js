@@ -29,7 +29,7 @@ function Profile({ closeProfile }) {
     }
   }
 
-  useEffect() => {
+  useEffect(() => {
     geoRef.addEventListener('location', handleLocation)
     return () => {
       geoRef.removeEventListener('location', handleLocation
