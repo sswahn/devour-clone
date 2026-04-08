@@ -1,7 +1,7 @@
 import UserIcon from '../../../Icons/UserIcon/UserIcon'
 import styles from './ProfileButton.module.css'
 
-function ProfileButton({ profile, openProfile }) {
+function ProfileButton({ profileIsOpen, openProfile }) {
   
   const onClick = async event => {
     navigator.vibrate(50)
@@ -15,7 +15,7 @@ function ProfileButton({ profile, openProfile }) {
       type="button" 
       aria-label="open profile"
       aria-haspopup="dialog" 
-      aria-expanded={profile}
+      aria-expanded={profileIsOpen}
       aria-controls="profile">
       <UserIcon />  
     </button>
