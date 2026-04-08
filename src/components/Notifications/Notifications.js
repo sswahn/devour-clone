@@ -28,8 +28,7 @@ function Notifications({ closeNotifications }) {
 
   const handleClose = event => {
     if (event.target === event.currentTarget) {
-      const bottomSheet = bottomSheetRef.current
-      close(bottomSheet)
+      close(bottomSheetRef.current)
     }
   }
 
