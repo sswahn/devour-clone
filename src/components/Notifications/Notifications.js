@@ -75,6 +75,7 @@ function Notifications({ closeNotifications }) {
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
       bottomSheet.style.transform = '' 
+      // consider using the prop "notifications" bool instead of isOpen
       bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
       setIsOpen(false)
     } else {
