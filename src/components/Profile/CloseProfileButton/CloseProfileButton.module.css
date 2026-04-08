@@ -1,6 +1,6 @@
 /* Search Form Close Profile Button */
 
-.closeSearchButton {
+.closeButton {
   align-items: center; 
   background: none;
   border: 0;
@@ -12,10 +12,10 @@
   width: 44px;
 }
 
-.closeSearchButton:active {
+.closeButton:active {
   background-color: #666;
 }
 
-.closeSearchButton svg {  
+.closeButton svg {  
   fill: var(--text);
 }
