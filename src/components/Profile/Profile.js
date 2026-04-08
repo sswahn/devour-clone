@@ -5,7 +5,7 @@ import styles from './Profile.module.css'
 function Profile({ closeProfile }) {
   const sentinelStartRef = useRef(null)
   const sentinelEndRef = useRef(null)
-  const headerRef = useRef(null)
+  const closeButtonRef = useRef(null)
   
   // use sentinel focus trap pattern
   // use useEffect to load initial focus on load, (header or close btn)
