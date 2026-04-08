@@ -35,11 +35,11 @@ function Profile({ closeProfile }) {
         <h1 id="profile-username">Username</h1>
       </header>
 
-        {/* user.bio && <p>{user.bio}</p> */}
+      {/* user.bio && <p>{user.bio}</p> */}
 
       <address>Location</address>
       
-      <ul role="list" className={styles.statsList}>
+      <ul role="list">
         <li><strong>600</strong> Following</li>
         <li><strong>50</strong> Followers</li>
       </ul>
@@ -49,7 +49,7 @@ function Profile({ closeProfile }) {
       <div role="feed">
         {/* feed role="feed" must have article elements as children */}
       </div>
-        
+      
       <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
         
     </section>
