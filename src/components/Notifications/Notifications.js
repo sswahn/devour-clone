@@ -98,9 +98,15 @@ function Notifications({ notifications, closeNotifications }) {
   }
 
   useEffect(() => {
+  // Use requestAnimationFrame to wait for the next repaint
+  const timer = requestAnimationFrame(() => {
     if (!isOpen) {
       setIsOpen(true)
     }
+  })
+  return () => {
+    cancelAnimationFrame(timer)
+  }
   }, [])
   
   return (
