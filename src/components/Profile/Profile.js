@@ -16,7 +16,7 @@ function Profile({ closeProfile }) {
   }
   
   return (
-    <section className={styles.profile} onBlur={handleBlur} role="dialog" aria-modal="true">
+    <section className={styles.profile} role="dialog" aria-modal="true">
       <header>
         <button onClick={handleClose} type="button">
           
