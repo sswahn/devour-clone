@@ -16,6 +16,10 @@
   
 }
 
+.profile header figure img {
+  margin: 0 auto;
+}
+
 .profile header h1 {
   font-size: 24px;
   text-align: center;
