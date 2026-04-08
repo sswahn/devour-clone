@@ -97,6 +97,7 @@ function Notifications({ closeNotifications }) {
   const timer = requestAnimationFrame(() => {
     if (!isOpen) {
       setIsOpen(true)
+      bottomSheetRef.current.focus()
     }
   })
   return () => {
