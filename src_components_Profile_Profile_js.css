@@ -1,3 +1,28 @@
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/CloseProfileButton/CloseProfileButton.module.css ***!
+  \***************************************************************************************************************************/
+/* Search Form Close Profile Button */
+
+.z64vZcYbYKY5hmvEe6wd {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+
+.z64vZcYbYKY5hmvEe6wd:active {
+  background-color: #666;
+}
+
+.z64vZcYbYKY5hmvEe6wd svg {  
+  fill: var(--text);
+}
+
 /*!*********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/Profile.module.css ***!
   \*********************************************************************************************/
