@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './Notifications.module.css'
 
-function Notifications({ closeNotifications }) {
+function Notifications({ notifications, closeNotifications }) {
   const [isOpen, setIsOpen] = useState(false)
   const bottomSheetRef = useRef(null)
   const initialHeight = useRef(0)
