@@ -5,7 +5,8 @@ function Profile({ closeProfile }) {
   return (
     <section className={styles.profile} role="dialog" aria-modal="true">
       <header>
-        {/* profile image, username, location, and follow button */}
+      
+        {/* close button, profile image, username, location, and follow button */}
       </header>
       <div>
         {/* feed */}
