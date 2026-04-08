@@ -15,25 +15,25 @@ function MobileUI() {
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
-    searchButtonRef.current.focus()
+    searchButtonRef.current?.focus()
   }
 
   const openCamera = event => setCameraIsOpen(true)
   const closeCamera = event => {
     setCameraIsOpen(false)
-    cameraButtonRef.current.focus()
+    cameraButtonRef.current?.focus()
   }
 
   const openNotifications = event => setNotificationsIsOpen(true)
   const closeNotifications = event => {
     setNotificationsIsOpen(false)
-    notificationsButtonRef.current.focus()
+    notificationsButtonRef.current?.focus()
   }
 
   const openProfile = event => setProfileIsOpen(true)
   const closeProfile = event => {
     setProfileIsOpen(false)
-    profileButtonRef.current.focus()
+    profileButtonRef.current?.focus()
   }
 
   return (
