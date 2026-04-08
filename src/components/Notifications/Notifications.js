@@ -21,9 +21,9 @@ function Notifications({ closeNotifications }) {
   }
 
   const close = bottomSheet => {
-      bottomSheet.style.transform = '' 
-      bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
-      setIsOpen(false)
+    bottomSheet.style.transform = '' 
+    bottomSheet.addEventListener('transitionend', closeNotifications, { once: true }) 
+    setIsOpen(false)
   }
 
   const handleClose = event => {
