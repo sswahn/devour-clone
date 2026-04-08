@@ -33,9 +33,13 @@
 .LxVk1HYZYwEEuUZ934ZA {
   align-items: center;
   border: 0;
+  border-radius: 20px;
   background: var(--text);
   color: var(--background);
   display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  gap: 10px;
   height: 44px;
   justify-content: center;  
   margin: 16px auto;
