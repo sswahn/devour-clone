@@ -64,7 +64,7 @@ function Profile({ closeProfile }) {
         <li><strong>50</strong> Followers</li>
       </ul>
 
-      <geolocation ref={geoRef}></geolocation>
+      {/* <geolocation ref={geoRef}></geolocation> */}
 
       <FollowButton />
         
