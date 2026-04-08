@@ -32,10 +32,11 @@ function Profile({ closeProfile }) {
         {/* user.bio && <p>{user.bio}</p> */}
       <address>Location</address>
       
-      <div>
-        <div>600 Following</div>
-        <div>50 Followers</div>
-      </div>
+      <ul role="list" className={styles.statsList}>
+        <li><strong>600</strong> Following</li>
+        <li><strong>50</strong> Followers</li>
+      </ul>
+        
       <button onClick={handleFollow} type="button">+ Follow</button>
         
       <div>
