@@ -9,7 +9,13 @@ function NotificationsButton({ notificationsButtonRef, openNotifications }) {
   }
   
   return (
-    <button className={styles.notificationsButton} ref={notificationsButtonRef} onClick={onClick} type="button" aria-label="open notifications" aria-haspopup="dialog">
+    <button 
+      className={styles.notificationsButton} 
+      ref={notificationsButtonRef} 
+      onClick={onClick} 
+      type="button" 
+      aria-label="open notifications" 
+      aria-haspopup="dialog">
       <BellIcon />
       <div role="status" aria-label="notification indicator" aria-hidden="false"></div>
     </button>
