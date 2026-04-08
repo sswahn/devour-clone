@@ -7,7 +7,16 @@ import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
 import styles from './Navigation.module.css'
 
-function Navigation({ openSearch, openCamera, openNotifications, openProfile }) {
+function Navigation({ 
+  searchIsOpen,
+  cameraIsOpen,
+  notificationsIsOpen,
+  profileIsOpen,
+  openSearch,
+  openCamera, 
+  openNotifications, 
+  openProfile 
+}) {
   const navRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
 
@@ -20,14 +29,14 @@ function Navigation({ openSearch, openCamera, openNotifications, openProfile }) 
       <div>
         <div>
           <HomeButton />  
-          <SearchButton openSearch={openSearch} />
+          <SearchButton searchIsOpen={searchIsOpen} openSearch={openSearch} />
         </div>
         <div>
-          <CameraButton openCamera={openCamera} />
+          <CameraButton cameraIsOpen={cameraIsOpen} openCamera={openCamera} />
         </div>
         <div>
-          <NotificationsButton openNotifications={openNotifications} />
-          <ProfileButton openProfile={openProfile} />
+          <NotificationsButton notificationsIsOpen={notificationsIsOpen} openNotifications={openNotifications} />
+          <ProfileButton profileIsOpen={profileIsOpen} openProfile={openProfile} />
         </div>
       </div>
     </nav>
