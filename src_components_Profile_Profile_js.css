@@ -47,9 +47,7 @@
 }
 
 .bRXXEOH49SRQPlqWmeUf header {
-  left: 0;
-  position: absolute;
-  top: 0;
+
 }
 
 .bRXXEOH49SRQPlqWmeUf header figure {}
@@ -61,7 +59,7 @@
   width: 100%;
   
   background: white;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .bRXXEOH49SRQPlqWmeUf header h1 {
