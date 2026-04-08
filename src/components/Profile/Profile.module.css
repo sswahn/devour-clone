@@ -17,9 +17,7 @@
 }
 
 .profile header {
-  left: 0;
-  position: absolute;
-  top: 0;
+
 }
 
 .profile header figure {}
@@ -31,7 +29,7 @@
   width: 100%;
   
   background: white;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .profile header h1 {
