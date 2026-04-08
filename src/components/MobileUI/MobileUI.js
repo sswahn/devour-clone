@@ -3,36 +3,40 @@ import Interface from './Interface'
 import Navigation from './Navigation/Navigation'
 
 function MobileUI() {
-  const [search, setSearch] = useState(false)
-  const [camera, setCamera] = useState(false)
-  const [notifications, setNotifications] = useState(false)
-  const [profile, setProfile] = useState(false)
+  const [searchIsOpen, setSearchIsOpen] = useState(false)
+  const [cameraIsOpen, setCameraIsOpen] = useState(false)
+  const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
+  const [profileIsOpen, setProfileIsOpen] = useState(false)
 
-  const openSearch = event => setSearch(true)
-  const closeSearch = event => setSearch(false)
+  const openSearch = event => setSearchIsOpen(true)
+  const closeSearch = event => setSearchIsOpen(false)
 
-  const openCamera = event => setCamera(true)
-  const closeCamera = event => setCamera(false)
+  const openCamera = event => setCameraIsOpen(true)
+  const closeCamera = event => setCameraIsOpen(false)
 
-  const openNotifications = event => setNotifications(true)
-  const closeNotifications = event => setNotifications(false)
+  const openNotifications = event => setNotificationsIsOpen(true)
+  const closeNotifications = event => setNotificationsIsOpen(false)
 
-  const openProfile = event => setProfile(true)
-  const closeProfile = event => setProfile(false)
+  const openProfile = event => setProfileIsOpen(true)
+  const closeProfile = event => setProfileIsOpen(false)
 
   return (
     <section>
       <Interface 
-        search={search} 
-        camera={camera}
-        notifications={notifications}
-        profile={profile}
+        searchIsOpen={searchIsOpen} 
+        cameraIsOpen={cameraIsOpen}
+        notificationsIsOpen={notificationsIsOpen}
+        profileIsOpen={profileIsOpen}
         closeSearch={closeSearch}
         closeCamera={closeCamera}
         closeNotifications={closeNotifications}
         closeProfile={closeProfile}
-    />
+      />
       <Navigation 
+        searchIsOpen={searchIsOpen} 
+        cameraIsOpen={cameraIsOpen}
+        notificationsIsOpen={notificationsIsOpen}
+        profileIsOpen={profileIsOpen}
         openSearch={openSearch}
         openCamera={openCamera}
         openNotifications={openNotifications}
