@@ -33,10 +33,6 @@ function MobileUI() {
         closeProfile={closeProfile}
       />
       <Navigation 
-        searchIsOpen={searchIsOpen} 
-        cameraIsOpen={cameraIsOpen}
-        notificationsIsOpen={notificationsIsOpen}
-        profileIsOpen={profileIsOpen}
         openSearch={openSearch}
         openCamera={openCamera}
         openNotifications={openNotifications}
