@@ -17,14 +17,14 @@ function Profile({ closeProfile }) {
   const handleUnFollow = event => {}
 
   useEffect(() => {
-    headerRef.current.focus()
+    closeButtonRef.current.focus()
   }, [])
   
   return (
     <section className={styles.profile} role="dialog" aria-modal="true" aria-labelledby="profile-username">
       <div className="sentinel" ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       <header ref={headerRef}>
-        <CloseProfileButton closeProfile={closeProfile} />
+        <CloseProfileButton name="profile" ref={closeButtonRef} close={closeProfile} />
         <figure>
           <img src="" alt={`{''}'s profile`} />
         </figure>
