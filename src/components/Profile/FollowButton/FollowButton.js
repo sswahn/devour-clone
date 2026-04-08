@@ -17,7 +17,7 @@ function FollowButton() {
       type="button" 
       aria-label={`{following ? ${'unfollow'} : ${'follow'}}`} 
       aria-pressed={following}>
-      {following ? <><PlusIcon /> Follow</> : <><MinusIcon /> Unfollow</>
+      {following ? <><PlusIcon /> Follow</> : <><MinusIcon /> Unfollow</>}
     </button>
   )
 }
