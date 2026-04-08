@@ -25,7 +25,7 @@ function Interface({
         {camera && <Camera closeCamera={closeCamera} />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
-        {notifications && <Notifications closeNotifications={closeNotifications} />}
+        {notifications && <Notifications notifications={notifications} closeNotifications={closeNotifications} />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>    
         {profile && <Profile closeProfile={closeProfile} />}
