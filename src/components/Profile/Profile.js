@@ -17,7 +17,7 @@ function Profile({ closeProfile }) {
   const handleUnFollow = event => {}
 
   useEffect(() => {
-    closeButtonRef.current.focus()
+    closeButtonRef.current?.focus()
   }, [])
   
   return (
