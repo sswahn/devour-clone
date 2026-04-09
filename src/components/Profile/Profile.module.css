@@ -27,7 +27,7 @@
 
 .profile header div {
   flex: 1;
-  text-align: center;
+  padding-left: 24px;
 }
 
 .profile header img {
