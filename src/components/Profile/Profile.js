@@ -12,7 +12,6 @@ function Profile({ closeProfile }) {
   // const geoRef = useRef(null)
   
   const focusLast = event => {
-    // focus on last focusable element between sentinels
     profileRef.current.children.at(-1).focus()
   }
   
