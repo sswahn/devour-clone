@@ -9,9 +9,8 @@ function FocusTrapProvider({ children }) {
     if (node !== null) {
       node.focus()
       focusedRef.current = node
-    } else { 
-      // 2. Cleanup logic (unmount)
-      focusedRef.current = null
+    } else {  
+      focusedRef.current = null // 2. Cleanup logic (unmount)
     }
   }, [])
 
