@@ -42,7 +42,14 @@ function Profile({ closeProfile }) {
   }, [])
   
   return (
-    <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="username" aria-describedby="biography">
+    <section 
+      className={styles.profile} 
+      ref={profileRef} 
+      tabIndex={-1} 
+      role="dialog" 
+      aria-modal="true" 
+      aria-labelledby="username" 
+      aria-describedby="biography">
       <div ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       
       <CloseButton name="profile" close={closeProfile} />
