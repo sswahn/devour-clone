@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react'
 import { createPortal } from 'react-dom'
-import { FocusTrapProvider } from './FocusTrapProvider'
+import { FocusTrapProvider } from '../Providers/FocusTrapProvider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
