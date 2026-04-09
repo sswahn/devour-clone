@@ -25,7 +25,7 @@
   min-height: 50dvh;  
   padding-top: 8px;
   position: absolute;
-  transform: translate3d(0, 100%, 0);   /* start hidden */
+  transform: translateY(100%);   /* start hidden */
   transition: transform 100ms cubic-bezier(0.25, 1, 0.5, 1), height 100ms ease;
   touch-action: none;
   width: 100%;
@@ -33,7 +33,7 @@
 }
 
 .open {
-  transform: translate3d(0, 0, 0);
+  transform: translateY(0);
 }
 
 /* the grabber handle */
