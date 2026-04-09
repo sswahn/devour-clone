@@ -71,6 +71,7 @@
   justify-content: space-between;
   line-height: var(--line-height);
   padding: 8px;
+  pointer-events: none;
   width: 100%;
 }
 
