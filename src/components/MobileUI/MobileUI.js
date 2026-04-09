@@ -15,7 +15,7 @@ function MobileUI() {
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
-    searchButtonRef.current.focus()
+    searchButtonRef.current.focus() // test this with a delay, setTimeout, currently everything focuses on profile button
   }
 
   const openCamera = event => setCameraIsOpen(true)
