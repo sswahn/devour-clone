@@ -30,6 +30,7 @@ function Profile({ closeProfile }) {
   
   return (
     <section 
+      id="profile"
       className={styles.profile} 
       ref={overlayRef} 
       tabIndex={-1} 
