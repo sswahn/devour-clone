@@ -55,8 +55,8 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translate3d(0, 0, 0)` 
     } else {
-      bottomSheet.style.transform = `translate3d(0, ${deltaY}px, 0)`
       bottomSheet.style.height = `${height}px`
+      bottomSheet.style.transform = `translate3d(0, ${deltaY}px, 0)`
     } 
   }
 
