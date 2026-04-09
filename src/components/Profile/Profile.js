@@ -59,11 +59,7 @@ function Profile({ closeProfile }) {
           <address>New York, NY</address>
           <FollowButton />
         </div>
-      </header>
-
-      {/* user.bio && <p>{user.bio}</p> */}
-
-      
+      </header>      
       
       <ul>
         <li><strong>600</strong> Following</li>
