@@ -65,7 +65,7 @@
 }
 
 .bRXXEOH49SRQPlqWmeUf * {
-  /* border: 1px dashed red; */
+  border: 1px dashed red;
 }
 
 .bRXXEOH49SRQPlqWmeUf header {
@@ -94,11 +94,17 @@
 .bRXXEOH49SRQPlqWmeUf header h1 {
   font-size: 24px;
   font-weight: normal;
-  margin-top: 24px;
+  margin-top: 8px;
 }
 
 .bRXXEOH49SRQPlqWmeUf address {
   font-size: var(--font-size);
+  margin-top: 8px;
+}
+
+.bRXXEOH49SRQPlqWmeUf p {
+  font-size: var(--font-size);
+  margin-top: 8px;
 }
 
 .bRXXEOH49SRQPlqWmeUf ul {
