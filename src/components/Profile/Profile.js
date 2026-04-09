@@ -51,9 +51,9 @@ function Profile({ closeProfile }) {
   
       <header>
         <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
-        <figure>
-          <img src="" alt={`{''}'s profile`} />
-        </figure>
+        
+        <img src="" alt={`{''}'s profile`} />
+        
         <h1 id="profile-username">Username</h1>
       </header>
 
