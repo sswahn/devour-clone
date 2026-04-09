@@ -1,4 +1,4 @@
-import { useContext, Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import { createPortal } from 'react-dom'
 import { FocusTrapProvider } from './FocusTrapProvider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
