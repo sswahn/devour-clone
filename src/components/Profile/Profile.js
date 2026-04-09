@@ -47,10 +47,12 @@ function Profile({ closeProfile }) {
   }, [])
   <geolocation ref={geoRef}></geolocation>
   */
-  
+
+  /*
   useEffect(() => {
     profileRef.current?.focus()
   }, [])
+  */
   
   return (
     <section 
