@@ -24,6 +24,11 @@
   display: flex;
 }
 
+.profile header div {
+  flex: 1;
+  text-align: center;
+}
+
 .profile header img {
   display: block;
   height: 128px;
