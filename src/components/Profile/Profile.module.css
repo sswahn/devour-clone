@@ -20,9 +20,11 @@
 
 }
 
-.profile header figure {}
+.profile header {
+  display: flex;
+}
 
-.profile header figure img {
+.profile header img {
   display: block;
   height: 200px;
   width: 200px;
