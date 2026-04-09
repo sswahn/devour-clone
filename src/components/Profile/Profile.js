@@ -56,11 +56,13 @@ function Profile({ closeProfile }) {
 
         <div>
           <h1 id="profile-username">Username</h1>
+          <p id="bio">Some biographical information about Username.</p>
           <address>New York, NY</address>
-          <FollowButton />
         </div>
-      </header>      
-      
+      </header>
+  
+      <FollowButton />
+  
       <ul>
         <li><strong>600</strong> Following</li>
         <li><strong>50</strong> Followers</li>
