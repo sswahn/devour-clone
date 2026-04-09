@@ -75,6 +75,11 @@
   display: flex;
 }
 
+.bRXXEOH49SRQPlqWmeUf header div {
+  flex: 1;
+  text-align: center;
+}
+
 .bRXXEOH49SRQPlqWmeUf header img {
   display: block;
   height: 128px;
