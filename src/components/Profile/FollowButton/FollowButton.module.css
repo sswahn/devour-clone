@@ -3,7 +3,7 @@
 .followButton {
   align-items: center;
   border: 0;
-  border-radius: 20px;
+  border-radius: 8px;
   background: var(--text);
   color: var(--background);
   display: flex;
