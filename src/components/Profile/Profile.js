@@ -48,18 +48,22 @@ function Profile({ closeProfile }) {
     <section className={styles.profile} role="dialog" aria-modal="true" aria-labelledby="profile-username">
   
       <div className={styles.sentinel} ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
-  
+      
+      <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
+        
       <header>
-        <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
-        
         <img src="" alt={`{''}'s profile picture`} />
-        
-        <h1 id="profile-username">Username</h1>
+
+        <div>
+          <h1 id="profile-username">Username</h1>
+          <address>New York, NY</address>
+          <FollowButton />
+        </div>
       </header>
 
       {/* user.bio && <p>{user.bio}</p> */}
 
-      <address>New York, NY</address>
+      
       
       <ul>
         <li><strong>600</strong> Following</li>
@@ -67,8 +71,6 @@ function Profile({ closeProfile }) {
       </ul>
 
       {/* <geolocation ref={geoRef}></geolocation> */}
-
-      <FollowButton />
         
       <div role="feed">
         {/* feed role="feed" must have article elements as children */}
