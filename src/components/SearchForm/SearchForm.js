@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useContext, useRef, useEffect } from 'react'
 import { config } from '../../config'
+import { FocusTrapContext } from '../Providers/FocusTrapProvider'
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
