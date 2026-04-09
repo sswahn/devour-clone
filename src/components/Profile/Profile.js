@@ -8,8 +8,6 @@ function Profile({ closeProfile }) {
   const sentinelStartRef = useRef(null)
   const sentinelEndRef = useRef(null)
   const profileRef = useRef(null)
-
-
   
   const focusLast = event => {
     profileRef.current.children.at(-1).focus()
