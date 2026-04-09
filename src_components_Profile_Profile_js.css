@@ -66,6 +66,7 @@
 .nhqSoBloQwWMoUudU1C4 li button {
   background: none;
   border: 0;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
   padding: 8px 16px;
