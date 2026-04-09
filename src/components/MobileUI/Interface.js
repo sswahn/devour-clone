@@ -16,6 +16,9 @@ function Interface({
   closeNotifications, 
   closeProfile 
 }) {
+
+  // consider putting the focus trap sentinels in here
+  
   return createPortal(
     <div>
       <Suspense fallback={<LoadingSpinner />}>
