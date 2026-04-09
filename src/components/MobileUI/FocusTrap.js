@@ -1,28 +1,57 @@
-import { useRef } from 'react'
+import { useRef, createContext } from 'react'
 
-function FocusTrap({ children }) {
+const FocusTrapContext = createContext(null)
+
+function FocusTrapProvider({ children }) {
   const startRef = useRef(null)
   const endRef = useRef(null)
   const overlayRef = useRef(null)
 
   const focusLast = event => {
+    
     console.log('first sentinel triggered!')
+    
     const { length } = profileRef.current.children
-    profileRef.current.children[length - 2].focus()
+    overlayRef.current.children[length - 2].focus()
   }
   
   const focusFirst = event => {
+    
     console.log('last sentinel triggered!')
-    profileRef.current.children[1].focus()
+    
+    overlayRef.current.children[1].focus()
   }
   
   return (
-    <>
+    <FocusTrapContext.Provider value={overlayRef}>
       <div></div>
       {children}
       <div></div>
-    </>
+    </FocusTrapContext.Provider>
   )
 }
 
-export default FocusTrap
+export { FocusTrapContext, FocusTrapProvider }
+
+
+    const GetProfileContext = createContext(null)
+const SetProfileContext = createContext(null)
+
+function ProfileProvider({ children }) {
+  const [state, setState] = useState(false)
+
+  const context = useMemo(() => state, [state])
+  const setContext = useCallback(() => {
+    setState(prevState => !prevState)
+  }, [])
+
+  return (
+    <GetProfileContext.Provider value={context}>
+      <SetProfileContext.Provider value={setContext}>
+        {children}
+      </SetProfileContext.Provider>
+    </GetProfileContext.Provider>
+  )
+}
+
+export { GetProfileContext, SetProfileContext, ProfileProvider }
