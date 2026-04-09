@@ -70,7 +70,7 @@ function SearchForm({ closeSearch }) {
   }, [])
 
   return (
-    <search className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
+    <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <CloseButton name="search" close={closeSearch} />
       <form onSubmit={onSubmit}>
         <div>
