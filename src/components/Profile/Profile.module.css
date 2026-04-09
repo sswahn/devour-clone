@@ -47,7 +47,7 @@
 }
 
 .profile address {
-  
+  font-size: var(--font-size);
 }
 
 .profile ul {
