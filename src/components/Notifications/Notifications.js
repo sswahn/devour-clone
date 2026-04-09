@@ -46,7 +46,7 @@ function Notifications({ closeNotifications }) {
     }
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
-    const height = bottomSheetRef.current.offsetHeight //initialHeight.current
+    const height = initialHeight.current
     // Elasticity:
     if (deltaY < 0) {
       const resistance = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(-200))
