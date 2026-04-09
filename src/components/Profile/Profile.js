@@ -8,8 +8,6 @@ import styles from './Profile.module.css'
 function Profile({ closeProfile }) {
   const overlayRef = useContext(FocusTrapContext)
   
-  console.log('context: ', context)
-  
  // const sentinelStartRef = useRef(null)
  // const sentinelEndRef = useRef(null)
   const profileRef = useRef(null)
