@@ -1,4 +1,4 @@
-import { useRef, createContext } from 'react'
+import { useRef, useEffect, createContext } from 'react'
 
 const FocusTrapContext = createContext(null)
 
@@ -21,6 +21,11 @@ function FocusTrapProvider({ children }) {
     
     overlayRef.current.children[1].focus()
   }
+
+    
+  useEffect(() => {
+    overlayRef.current?.focus()
+  }, [])
   
   return (
     <FocusTrapContext.Provider value={overlayRef}>
