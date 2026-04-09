@@ -15,9 +15,6 @@ function MobileUI() {
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
-
-    console.log('searchButtonRef.current: ', searchButtonRef.current)
-    
     searchButtonRef.current.focus()
   }
 
