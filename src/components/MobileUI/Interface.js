@@ -19,6 +19,9 @@ function Interface({
 }) {
 
   const handleKeyDown = event => {
+    
+    console.log('in keyDown, event.target: ', event.target)
+    
     if (event.key === 'Escape') {
 
       // how to get the correct close function? 
