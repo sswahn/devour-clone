@@ -3,8 +3,6 @@ import { useRef, useEffect, createContext } from 'react'
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
-  const startRef = useRef(null)
-  const endRef = useRef(null)
   const overlayRef = useRef(null)
 
   const focusLast = event => {
@@ -30,9 +28,9 @@ function FocusTrapProvider({ children }) {
   
   return (
     <FocusTrapContext.Provider value={overlayRef}>
-      <div ref={startRef} onFocus={focusLast} tabIndex={0}></div>
+      <div onFocus={focusLast} tabIndex={0}></div>
         {children}
-      <div ref={endRef} onFocus={focusFirst} tabIndex={0}></div>
+      <div onFocus={focusFirst} tabIndex={0}></div>
     </FocusTrapContext.Provider>
   )
 }
