@@ -10,10 +10,12 @@ function Profile({ closeProfile }) {
   const profileRef = useRef(null)
   
   const focusLast = event => {
+    console.log('first sentinel triggered!')
     profileRef.current.children.at(-1).focus()
   }
   
   const focusFirst = event => {
+    console.log('last sentinel triggered!')
     profileRef.current.children.at(0).focus()
   }
 
