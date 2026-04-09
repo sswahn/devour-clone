@@ -49,7 +49,7 @@ function Profile({ closeProfile }) {
     <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="username" aria-describedby="biography">
       <div ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       
-      <CloseProfileButton name="profile" close={closeProfile} />
+      <CloseButton name="profile" close={closeProfile} />
         
       <header>
         <img src="" alt={`{''}'s profile picture`} />
