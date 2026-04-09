@@ -7,24 +7,6 @@ import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
   const overlayRef = useContext(FocusTrapContext)
-  
- // const sentinelStartRef = useRef(null)
- // const sentinelEndRef = useRef(null)
- // const profileRef = useRef(null)
-
-  /*
-  const focusLast = event => {
-    console.log('first sentinel triggered!')
-    const { length } = profileRef.current.children
-    profileRef.current.children[length - 2].focus()
-  }
-  
-  const focusFirst = event => {
-    console.log('last sentinel triggered!')
-    profileRef.current.children[1].focus()
-  }
-  */
-
 
   /* 
   const geoRef = useRef(null)
@@ -45,12 +27,6 @@ function Profile({ closeProfile }) {
   }, [])
   <geolocation ref={geoRef}></geolocation>
   */
-
-  /*
-  useEffect(() => {
-    profileRef.current?.focus()
-  }, [])
-  */
   
   return (
     <section 
@@ -62,8 +38,6 @@ function Profile({ closeProfile }) {
       aria-labelledby="username" 
       aria-describedby="biography">
         
-      {/*  <div ref={sentinelStartRef} onFocus={focusLast} tabIndex={0}></div> */}
-      
       <CloseButton name="profile" close={closeProfile} />
         
       <header>
@@ -81,8 +55,7 @@ function Profile({ closeProfile }) {
       <div role="feed">
         {/* feed role="feed" must have article elements as children */}
       </div>
-      
-{/* <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex={0}></div> */}
+
     </section>
   )
 }
