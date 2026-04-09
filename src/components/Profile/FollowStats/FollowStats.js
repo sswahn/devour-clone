@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import styles from './FollowStats.module.css'
 
 function FollowStats() {
   const [following, setFollowing] = useState(600)
@@ -10,7 +11,7 @@ function FollowStats() {
   // get live websocket updates on counts
   
   return (
-    <ul>
+    <ul className={styles.followStats}>
       <li>
         <button onClick={handleShowFollowing} type="button"><strong>{following}</strong> Following</button>
       </li>
