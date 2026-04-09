@@ -3,30 +3,36 @@ import { useRef, useCallback, createContext } from 'react'
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
+  const focusedRef = useRef(null)
+  
   const overlayRef = useCallback(node => {
     if (node !== null) {
       console.log('ref in focustrap provider: ', node)
       node.focus()
-    }
+    } else { 
+    // 2. Cleanup logic (unmount)
+    focusedRef.current = null
+  }
+    focusedRef.current = node
   }, [])
 
   const focusLast = event => {
     
     console.log('first sentinel triggered!')
     
-    console.log('overlayRef: ', overlayRef)
+    console.log('overlayRef: ', focusedRef)
     
-    const { length } = overlayRef.children
-    overlayRef.children[length - 1].focus()
+    const { length } = focusedRef.children
+    focusedRef.current.children[length - 1].focus()
   }
   
   const focusFirst = event => {
     
     console.log('last sentinel triggered!')
 
-    console.log('overlayRef: ', overlayRef)
+    console.log('overlayRef: ', focusedRef)
     
-    overlayRef.children[0].focus()
+    focusedRef.current.children[0].focus()
   }
     
   return (
