@@ -57,7 +57,7 @@
   gap: 32px;
   justify-content: center;
   list-style: none;
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 .nhqSoBloQwWMoUudU1C4 li {
@@ -68,7 +68,7 @@
   background: none;
   border: 0;
   cursor: pointer;
-  font-size: 24px;
+  font-size: var(--font-size);
   padding: 8px 16px;
 }
 
