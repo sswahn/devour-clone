@@ -1,0 +1,14 @@
+/* Follow Stats List */
+
+.profile ul {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  list-style: none;
+  margin: 24px 0;
+}
+
+.profile ul li {
+  font-size: 24px;
+}
