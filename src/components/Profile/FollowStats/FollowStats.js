@@ -13,10 +13,10 @@ function FollowStats() {
   return (
     <ul className={styles.followStats}>
       <li>
-        <button onClick={handleShowFollowing} type="button"><strong>{following}</strong> Following</button>
+        <button onClick={handleClickFollowing} type="button"><strong>{following}</strong> Following</button>
       </li>
       <li>
-        <button onClick={handleShowFollowers} type="button"><strong>{followers}</strong> Followers</button>
+        <button onClick={handleClickFollowers} type="button"><strong>{followers}</strong> Followers</button>
       </li>
     </ul>
   )
