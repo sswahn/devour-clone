@@ -53,9 +53,9 @@ function Notifications({ closeNotifications }) {
       const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
       const stretch = Math.abs(deltaY) * resistanceFactor
       bottomSheet.style.height = `${height + stretch}px`
-      bottomSheet.style.transform = `translateY(0px)` 
+      bottomSheet.style.transform = `translate3d(0, 0, 0)` 
     } else {
-      bottomSheet.style.transform = `translateY(${deltaY}px)`
+      bottomSheet.style.transform = `translate3d(0, ${deltaY}px, 0)`
       bottomSheet.style.height = `${height}px`
     } 
   }
@@ -75,7 +75,7 @@ function Notifications({ closeNotifications }) {
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
       close(bottomSheet)
     } else {
-      bottomSheet.style.transform = 'translateY(0)'
+      bottomSheet.style.transform = 'translate3d(0, 0, 0)'
     }
   }
 
@@ -83,7 +83,7 @@ function Notifications({ closeNotifications }) {
     if (dragging.current) {  
       dragging.current = false 
       const bottomSheet = bottomSheetRef.current 
-      bottomSheet.style.transform = 'translateY(0)' 
+      bottomSheet.style.transform = 'translate3d(0, 0, 0)' 
       bottomSheet.style.height = '' 
     }
   }
