@@ -46,12 +46,11 @@ function Notifications({ closeNotifications }) {
     }
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
-    const height = initialHeight.current
+    const height = bottomSheetRef.current.offsetHeight //initialHeight.current
     // Elasticity:
     if (deltaY < 0) {
-      const maxDragUp = -200
-      const resistanceFactor = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(maxDragUp))
-      const stretch = Math.abs(deltaY) * resistanceFactor
+      const resistance = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(-200))
+      const stretch = Math.abs(deltaY) * resistance
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translate3d(0, 0, 0)` 
     } else {
