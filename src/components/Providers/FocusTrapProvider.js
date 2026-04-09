@@ -14,6 +14,8 @@ function FocusTrapProvider({ children }) {
     
     console.log('first sentinel triggered!')
     
+    console.log('overlayRef: ', overlayRef)
+    
     const { length } = overlayRef.children
     overlayRef.children[length - 1].focus()
   }
@@ -22,7 +24,7 @@ function FocusTrapProvider({ children }) {
     
     console.log('last sentinel triggered!')
 
-    console.log('overlayRef.children: ', overlayRef.children)
+    console.log('overlayRef: ', overlayRef)
     
     overlayRef.children[0].focus()
   }
