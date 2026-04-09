@@ -9,7 +9,7 @@ function Profile({ closeProfile }) {
   const sentinelEndRef = useRef(null)
   const profileRef = useRef(null)
 
-  // const geoRef = useRef(null)
+
   
   const focusLast = event => {
     profileRef.current.children.at(-1).focus()
@@ -19,9 +19,9 @@ function Profile({ closeProfile }) {
     profileRef.current.children[0].focus()
   }
 
-  const handleFollow = event => {}
-  const handleUnFollow = event => {}
 
+  /* 
+  const geoRef = useRef(null)
   const handleLocation = event => {
     if (event.target.position) {
       const { latitude, longitude } = event.target.position.coords
@@ -30,8 +30,6 @@ function Profile({ closeProfile }) {
       alert(`Error: ${event.target.error.message}`)
     }
   }
-
-  /*
   useEffect(() => {
     const geo = geoRef.current
     geo.addEventListener('location', handleLocation)
