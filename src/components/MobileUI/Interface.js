@@ -22,12 +22,7 @@ function Interface({
     if (event.key !== 'Escape') {
       return 
     }
-    console.log('Escape key pressed')
-    
-    const modal = event.target.closest('[role="dialog"]') //.id
-    
-    console.log('should be the overlay element: ', modal)
-
+    const modal = event.target.closest('[role="dialog"]')
     switch(modal.id) {
       case 'search':
         closeSearch()
