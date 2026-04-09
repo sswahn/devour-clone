@@ -24,7 +24,7 @@ function FocusTrapProvider({ children }) {
   useEffect(() => {
     console.log('ref in focustrap provider: ', overlayRef.current)
     overlayRef.current?.focus()
-  }, [overlayRef])
+  }, [overlayRef.current])
   
   return (
     <FocusTrapContext.Provider value={overlayRef}>
