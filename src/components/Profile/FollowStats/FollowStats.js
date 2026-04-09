@@ -5,8 +5,8 @@ function FollowStats() {
   const [following, setFollowing] = useState(600)
   const [followers, setFollowers] = useState(50)
 
-  const handleShowFollowing = event => {}
-  const handleShowFollowers = event => {}
+  const handleClickFollowing = event => {}
+  const handleClickFollowers = event => {}
   
   // get live websocket updates on counts
   
