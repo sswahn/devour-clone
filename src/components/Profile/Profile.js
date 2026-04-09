@@ -52,7 +52,7 @@ function Profile({ closeProfile }) {
       <header>
         <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
         
-        <img src="" alt={`{''}'s profile`} />
+        <img src="" alt={`{''}'s profile picture`} />
         
         <h1 id="profile-username">Username</h1>
       </header>
