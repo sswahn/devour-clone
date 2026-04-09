@@ -1,10 +1,15 @@
-import { useRef, useEffect } from 'react'
+import { useContext, useRef, useEffect } from 'react'
+import { FocusTrapContext } from '../Providers/FocusTrapProvider'
 import CloseButton from './CloseButton/CloseButton'
 import FollowButton from './FollowButton/FollowButton'
 import FollowStats from './FollowStats/FollowStats'
 import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
+  const context = useContext(FocusTrapContext)
+  
+  console.log('context: ', context)
+  
   const sentinelStartRef = useRef(null)
   const sentinelEndRef = useRef(null)
   const profileRef = useRef(null)
