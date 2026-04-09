@@ -6,14 +6,15 @@ import FollowStats from './FollowStats/FollowStats'
 import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
-  const context = useContext(FocusTrapContext)
+  const overlayRef = useContext(FocusTrapContext)
   
   console.log('context: ', context)
   
-  const sentinelStartRef = useRef(null)
-  const sentinelEndRef = useRef(null)
+ // const sentinelStartRef = useRef(null)
+ // const sentinelEndRef = useRef(null)
   const profileRef = useRef(null)
-  
+
+  /*
   const focusLast = event => {
     console.log('first sentinel triggered!')
     const { length } = profileRef.current.children
@@ -24,6 +25,7 @@ function Profile({ closeProfile }) {
     console.log('last sentinel triggered!')
     profileRef.current.children[1].focus()
   }
+  */
 
 
   /* 
@@ -53,13 +55,14 @@ function Profile({ closeProfile }) {
   return (
     <section 
       className={styles.profile} 
-      ref={profileRef} 
+      ref={overlayRef} 
       tabIndex={-1} 
       role="dialog" 
       aria-modal="true" 
       aria-labelledby="username" 
       aria-describedby="biography">
-      <div ref={sentinelStartRef} onFocus={focusLast} tabIndex={0}></div>
+        
+      {/*  <div ref={sentinelStartRef} onFocus={focusLast} tabIndex={0}></div> */}
       
       <CloseButton name="profile" close={closeProfile} />
         
@@ -79,7 +82,7 @@ function Profile({ closeProfile }) {
         {/* feed role="feed" must have article elements as children */}
       </div>
       
-      <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex={0}></div>
+{/* <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex={0}></div> */}
     </section>
   )
 }
