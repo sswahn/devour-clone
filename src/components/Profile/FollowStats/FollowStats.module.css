@@ -10,5 +10,13 @@
 }
 
 .followStats li {
+  
+}
+
+.followStats li button {
+  background: none;
+  border: 0;
+  cursor: pointer;
   font-size: 24px;
+  padding: 8px 16px;
 }
