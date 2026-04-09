@@ -54,7 +54,7 @@ function Profile({ closeProfile }) {
       aria-modal="true" 
       aria-labelledby="username" 
       aria-describedby="biography">
-      <div ref={sentinelStartRef} onFocus={focusLast} tabIndex={0} aria-hidden="true"></div>
+      <div ref={sentinelStartRef} onFocus={focusLast} tabIndex={0}></div>
       
       <CloseButton name="profile" close={closeProfile} />
         
@@ -74,7 +74,7 @@ function Profile({ closeProfile }) {
         {/* feed role="feed" must have article elements as children */}
       </div>
       
-      <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex={0} aria-hidden="true"></div>
+      <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex={0}></div>
     </section>
   )
 }
