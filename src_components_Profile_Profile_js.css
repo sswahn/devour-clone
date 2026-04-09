@@ -42,7 +42,7 @@
   gap: 10px;
   height: 44px;
   justify-content: center;  
-  margin: 16px auto;
+  margin: 24px auto 0 auto;
   width: calc(100% - 48px);
 }
 
