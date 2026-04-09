@@ -47,18 +47,16 @@ function Profile({ closeProfile }) {
   
   return (
     <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="profile-username">
-  
-      <div className={styles.sentinel} ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
+      <div ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       
       <CloseProfileButton name="profile" close={closeProfile} />
         
       <header>
         <img src="" alt={`{''}'s profile picture`} />
-
         <div>
           <h1 id="profile-username">Username</h1>
-          <p id="bio">Some biographical information about Username.</p>
           <address>New York, NY</address>
+          <p id="bio">Some biographical information about Username.</p>
         </div>
       </header>
   
@@ -71,8 +69,7 @@ function Profile({ closeProfile }) {
         {/* feed role="feed" must have article elements as children */}
       </div>
       
-      <div className="sentinel" ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
-        
+      <div ref={sentinelEndRef} onFocus={focusFirst} tabIndex="0" aria-hidden="true"></div>
     </section>
   )
 }
