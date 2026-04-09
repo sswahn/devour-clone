@@ -9,7 +9,7 @@ function FocusTrapProvider({ children }) {
     
     console.log('first sentinel triggered!')
     
-    const { length } = profileRef.current.children
+    const { length } = overlayRef.current.children
     overlayRef.current.children[length - 1].focus()
   }
   
