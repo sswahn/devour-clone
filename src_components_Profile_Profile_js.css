@@ -42,8 +42,8 @@
   gap: 10px;
   height: 44px;
   justify-content: center;  
-  margin: 16px 24px;
-  width: auto;
+  margin: 16px auto;
+  width: calc(100% - 48px);
 }
 
 /*!*************************************************************************************************************!*\
