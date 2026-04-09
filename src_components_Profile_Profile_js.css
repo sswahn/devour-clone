@@ -95,7 +95,7 @@
 }
 
 .bRXXEOH49SRQPlqWmeUf * {
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 
 .bRXXEOH49SRQPlqWmeUf header {
@@ -137,16 +137,4 @@
   margin-top: 8px;
 }
 
-.bRXXEOH49SRQPlqWmeUf ul {
-  align-items: center;
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  list-style: none;
-  margin: 24px 0;
-}
-
-.bRXXEOH49SRQPlqWmeUf ul li {
-  font-size: 24px;
-}
 
