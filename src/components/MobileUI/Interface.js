@@ -1,5 +1,6 @@
-import { Suspense, lazy } from 'react'
+import { useContext, Suspense, lazy } from 'react'
 import { createPortal } from 'react-dom'
+import { FocusTrapProvider } from './FocusTrapProvider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
@@ -16,11 +17,11 @@ function Interface({
   closeNotifications, 
   closeProfile 
 }) {
-
+  
   // consider putting the focus trap sentinels in here
   
   return createPortal(
-    <div>
+    <FocusTrapProvider>
       <Suspense fallback={<LoadingSpinner />}>
         {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
       </Suspense>
@@ -33,7 +34,7 @@ function Interface({
       <Suspense fallback={<LoadingSpinner />}>    
         {profileIsOpen && <Profile closeProfile={closeProfile} />}
       </Suspense>
-    </div>, 
+    </FocusTrapProvider>, 
     document.getElementById('portal')
   )
 }
