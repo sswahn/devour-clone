@@ -19,14 +19,23 @@ function Interface({
 }) {
 
   const handleKeyDown = event => {
+    if (event.key !== 'Escape') {
+      return 
+    }
+    console.log('Escape key pressed')
     
-    console.log('in keyDown, event.target: ', event.target)
+    const modal = event.target.closest('[role="dialog"]') //.id
     
-    if (event.key === 'Escape') {
+    console.log('should be the overlay element: ', modal)
 
-      // how to get the correct close function? 
-      
-      console.log('Escape key pressed')
+    switch(modal.id) {
+      case 'search':
+        closeSearch()
+      case 'camera':
+        closeCamera()
+      case 'profile':
+        closeProfile()
+      default:
     }
   }
   
