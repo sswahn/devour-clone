@@ -35,7 +35,7 @@ function Profile({ closeProfile }) {
       geo.removeEventListener('location', handleLocation)
     }
   }, [])
-  {/* <geolocation ref={geoRef}></geolocation> */}
+  <geolocation ref={geoRef}></geolocation>
   */
   
   useEffect(() => {
