@@ -1,9 +1,14 @@
-import { useRef, useEffect, createContext } from 'react'
+import { useRef, useCallback, createContext } from 'react'
 
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
-  const overlayRef = useRef(null)
+  const overlayRef = useCallback(node => {
+    if (node !== null) {
+      console.log('ref in focustrap provider: ', node)
+      node.focus()
+    }
+  }, [])
 
   const focusLast = event => {
     
@@ -19,13 +24,7 @@ function FocusTrapProvider({ children }) {
     
     overlayRef.current.children[0].focus()
   }
-
     
-  useEffect(() => {
-    console.log('ref in focustrap provider: ', overlayRef.current)
-    overlayRef.current?.focus()
-  }, [overlayRef.current])
-  
   return (
     <FocusTrapContext.Provider value={overlayRef}>
       <div onFocus={focusLast} tabIndex={0}></div>
