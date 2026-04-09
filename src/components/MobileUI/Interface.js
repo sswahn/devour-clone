@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react'
+import { useEffect, Suspense, lazy } from 'react'
 import { createPortal } from 'react-dom'
 import { FocusTrapProvider } from '../Providers/FocusTrapProvider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
@@ -17,8 +17,22 @@ function Interface({
   closeNotifications, 
   closeProfile 
 }) {
+
+  const handleKeyDown = event => {
+    if (event.key === 'Escape') {
+
+      // how to get the correct close function? 
+      
+      console.log('Escape key pressed')
+    }
+  }
   
-  // consider putting the focus trap sentinels in here
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
   
   return createPortal(
     <FocusTrapProvider>
