@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import CloseProfileButton from './CloseProfileButton/CloseProfileButton'
 import FollowButton from './FollowButton/FollowButton'
+import FollowStats from './FollowStats/FollowStats'
 import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
@@ -62,11 +63,7 @@ function Profile({ closeProfile }) {
       </header>
   
       <FollowButton />
-  
-      <ul>
-        <li><strong>600</strong> Following</li>
-        <li><strong>50</strong> Followers</li>
-      </ul>
+      <FollowStats />
 
       {/* <geolocation ref={geoRef}></geolocation> */}
         
