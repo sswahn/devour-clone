@@ -7,16 +7,17 @@ import styles from './Profile.module.css'
 function Profile({ closeProfile }) {
   const sentinelStartRef = useRef(null)
   const sentinelEndRef = useRef(null)
-  const closeButtonRef = useRef(null)
+  const profileRef = useRef(null)
 
-  const geoRef = useRef(null)
+  // const geoRef = useRef(null)
   
   const focusLast = event => {
     // focus on last focusable element between sentinels
+    profileRef.current.children.at(-1).focus()
   }
   
   const focusFirst = event => {
-    closeButtonRef.current.focus()
+    profileRef.current.children[0].focus()
   }
 
   const handleFollow = event => {}
@@ -42,15 +43,15 @@ function Profile({ closeProfile }) {
   */
   
   useEffect(() => {
-    closeButtonRef.current?.focus()
+    profileRef.current?.focus()
   }, [])
   
   return (
-    <section className={styles.profile} role="dialog" aria-modal="true" aria-labelledby="profile-username">
+    <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="profile-username">
   
       <div className={styles.sentinel} ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       
-      <CloseProfileButton name="profile" closeButtonRef={closeButtonRef} close={closeProfile} />
+      <CloseProfileButton name="profile" close={closeProfile} />
         
       <header>
         <img src="" alt={`{''}'s profile picture`} />
