@@ -11,9 +11,8 @@ function Profile({ closeProfile }) {
   
   const focusLast = event => {
     console.log('first sentinel triggered!')
-    profileRef.current.children[
-      profileRef.current.children.length - 1
-    ].focus()
+    const { length } = profileRef.current.children
+    profileRef.current.children[length - 1].focus()
   }
   
   const focusFirst = event => {
