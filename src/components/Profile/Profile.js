@@ -46,7 +46,7 @@ function Profile({ closeProfile }) {
   }, [])
   
   return (
-    <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="profile-username">
+    <section className={styles.profile} ref={profileRef} role="dialog" aria-modal="true" aria-labelledby="username" aria-describedby="biography">
       <div ref={sentinelStartRef} onFocus={focusLast} tabIndex="0" aria-hidden="true"></div>
       
       <CloseProfileButton name="profile" close={closeProfile} />
@@ -54,9 +54,9 @@ function Profile({ closeProfile }) {
       <header>
         <img src="" alt={`{''}'s profile picture`} />
         <div>
-          <h1 id="profile-username">Username</h1>
+          <h1 id="username">Username</h1>
           <address>New York, NY</address>
-          <p id="bio">Some biographical information about Username.</p>
+          <p id="biography">Some biographical information about Username.</p>
         </div>
       </header>
   
