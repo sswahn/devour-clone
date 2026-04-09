@@ -24,14 +24,15 @@ function FocusTrapProvider({ children }) {
 
     
   useEffect(() => {
+    console.log('ref in focustrap provider: ', overlayRef.current)
     overlayRef.current?.focus()
   }, [])
   
   return (
     <FocusTrapContext.Provider value={overlayRef}>
-      {overlayRef.current && <div ref={overlayRef} onFocus={focusLast} tabIndex={0}></div>}
+      <div ref={startRef} onFocus={focusLast} tabIndex={0}></div>
         {children}
-      {overlayRef.current &&  <div ref={overlayRef} onFocus={focusFirst} tabIndex={0}></div>}
+      <div ref={endRef} onFocus={focusFirst} tabIndex={0}></div>
     </FocusTrapContext.Provider>
   )
 }
