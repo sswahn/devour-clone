@@ -71,9 +71,11 @@
 
 }
 
-.bRXXEOH49SRQPlqWmeUf header figure {}
+.bRXXEOH49SRQPlqWmeUf header {
+  display: flex;
+}
 
-.bRXXEOH49SRQPlqWmeUf header figure img {
+.bRXXEOH49SRQPlqWmeUf header img {
   display: block;
   height: 200px;
   width: 200px;
