@@ -7,7 +7,6 @@ function FocusTrapProvider({ children }) {
   
   const overlayRef = useCallback(node => {
     if (node !== null) {
-      console.log('ref in focustrap provider: ', node)
       node.focus()
       focusedRef.current = node
     } else { 
@@ -17,21 +16,11 @@ function FocusTrapProvider({ children }) {
   }, [])
 
   const focusLast = event => {
-    
-    console.log('first sentinel triggered!')
-    
-    console.log('overlayRef: ', focusedRef)
-    
     const { length } = focusedRef.children
     focusedRef.current.children[length - 1].focus()
   }
   
   const focusFirst = event => {
-    
-    console.log('last sentinel triggered!')
-
-    console.log('overlayRef: ', focusedRef)
-    
     focusedRef.current.children[0].focus()
   }
     
