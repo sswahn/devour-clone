@@ -1,4 +1,4 @@
-import ArrowLeftIcon from '../../Icons/ArrowLeftIcon/ArrowLeftIcon'
+import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './CloseButton.module.css'
 
 function CloseButton({ name, close }) {
