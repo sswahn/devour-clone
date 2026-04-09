@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import CloseProfileButton from './CloseProfileButton/CloseProfileButton'
+import CloseButton from './CloseButton/CloseButton'
 import FollowButton from './FollowButton/FollowButton'
 import FollowStats from './FollowStats/FollowStats'
 import styles from './Profile.module.css'
