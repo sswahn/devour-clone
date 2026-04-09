@@ -9,11 +9,11 @@ function FocusTrapProvider({ children }) {
     if (node !== null) {
       console.log('ref in focustrap provider: ', node)
       node.focus()
+      focusedRef.current = node
     } else { 
-    // 2. Cleanup logic (unmount)
-    focusedRef.current = null
-  }
-    focusedRef.current = node
+      // 2. Cleanup logic (unmount)
+      focusedRef.current = null
+    }
   }, [])
 
   const focusLast = event => {
