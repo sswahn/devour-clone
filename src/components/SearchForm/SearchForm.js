@@ -6,7 +6,7 @@ import useDebounce from '../../hooks/useDebounce'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
-import CloseSearchButton from './CloseSearchButton/CloseSearchButton'
+import CloseButton from '../CloseButton/CloseButton'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './searchform.module.css'
 
@@ -71,24 +71,22 @@ function SearchForm({ closeSearch }) {
 
   return (
     <search className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
-      <div>
-        <CloseSearchButton closeSearch={closeSearch} />
-        <form onSubmit={onSubmit}>
-          <div>
-            <SearchIcon size={18} />
-          </div>
-          <SearchInput 
-            searchValue={searchValue} 
-            error={error}
-            setSearchValue={setSearchValue}
-            setError={setError}
-          />
-          <div>
-            <SpeechRecognitionButton setSearchValue={setSearchValue} />
-          </div>
-        </form>
-      </div>
-  
+      <CloseButton name="search" close={closeSearch} />
+      <form onSubmit={onSubmit}>
+        <div>
+          <SearchIcon size={18} />
+        </div>
+        <SearchInput 
+          searchValue={searchValue} 
+          error={error}
+          setSearchValue={setSearchValue}
+          setError={setError}
+        />
+        <div>
+          <SpeechRecognitionButton setSearchValue={setSearchValue} />
+        </div>
+      </form>
+      
       {/* make Suggestions component: */}
       
       <ul id="suggestions" role="listbox" aria-live="polite" aria-busy={loading}>
@@ -96,7 +94,6 @@ function SearchForm({ closeSearch }) {
           <li key={index} role="option">{search}</li>
         )}    
       </ul>  
-      
     
     </search>
   )
