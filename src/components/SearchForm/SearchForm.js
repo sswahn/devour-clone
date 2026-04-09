@@ -11,6 +11,7 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './searchform.module.css'
 
 function SearchForm({ closeSearch }) {
+  const overlayRef = useContext(FocusTrapContext)
   const [searchValue, setSearchValue] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
@@ -69,7 +70,7 @@ function SearchForm({ closeSearch }) {
   }, [])
 
   return (
-    <search className={styles.search} role="dialog" aria-modal="true">
+    <search className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <div>
         <CloseSearchButton closeSearch={closeSearch} />
         <form onSubmit={onSubmit}>
