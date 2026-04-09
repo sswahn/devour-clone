@@ -35,6 +35,7 @@ function Profile({ closeProfile }) {
       geo.removeEventListener('location', handleLocation)
     }
   }, [])
+  {/* <geolocation ref={geoRef}></geolocation> */}
   */
   
   useEffect(() => {
@@ -65,8 +66,6 @@ function Profile({ closeProfile }) {
   
       <FollowButton />
       <FollowStats />
-
-      {/* <geolocation ref={geoRef}></geolocation> */}
         
       <div role="feed">
         {/* feed role="feed" must have article elements as children */}
