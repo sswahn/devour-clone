@@ -20,7 +20,8 @@ function FocusTrapProvider({ children }) {
   const focusLast = event => {
 
     console.log('focusLast fired!')
-    console.log('focusedRef: ', focusedRef)
+    console.log('focusRef.current.children: ', focusRef.current.children)
+    console.log('focusing on: ', focusedRef.current.children[length - 1])
     
     const { length } = focusedRef.children
     focusedRef.current.children[length - 1].focus()
@@ -29,7 +30,8 @@ function FocusTrapProvider({ children }) {
   const focusFirst = event => {
 
     console.log('focusFirst fired!')
-    console.log('focusedRef: ', focusedRef)
+    console.log('focusRef.current.children: ', focusRef.current.children)
+    console.log('focusing on: ', focusedRef.current.children[0])
     
     focusedRef.current.children[0].focus()
   }
