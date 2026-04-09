@@ -14,7 +14,7 @@ function Profile({ closeProfile }) {
   }
   
   const focusFirst = event => {
-    profileRef.current.children[0].focus()
+    profileRef.current.children.at(0).focus()
   }
 
 
