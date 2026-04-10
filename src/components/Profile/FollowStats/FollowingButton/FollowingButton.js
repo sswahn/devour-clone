@@ -19,6 +19,7 @@ function FollowingButton({ username, count }) {
       action()
     }
   }
+  
   return (
     <button 
       className={styles.followingButton}
