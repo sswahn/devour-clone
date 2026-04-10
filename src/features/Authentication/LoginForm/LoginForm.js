@@ -1,4 +1,5 @@
-import { setState } from 'react'
+import { setState, useContext } from 'react'
+import { SetSessionContext } from '../Providers/SessionProvider'
 import UserIcon from '../../../components/UserIcon/UserIcon'
 import LockIcon from '../../../components/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
@@ -7,6 +8,7 @@ import SubmitButton from './SubmitButton/SubmitButton'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
+  const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   
   const handleCheckbox = event => {
