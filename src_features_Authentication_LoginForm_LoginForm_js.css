@@ -1,0 +1,49 @@
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Checkbox/Checkbox.module.css ***!
+  \***********************************************************************************************/
+/* Checkbox */
+
+.sy8lKVWP56AlOR7ys_9A {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.sy8lKVWP56AlOR7ys_9A svg {
+ /* position icon on top of checkbox */
+  display: block;
+  font-size: 20px;
+  left: 15px;
+  position: absolute;
+  z-index: 9999;
+}
+
+.sy8lKVWP56AlOR7ys_9A label {
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.sy8lKVWP56AlOR7ys_9A input {
+ /* make checkbox small enough to hide behind icon*/
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.mxKv9GsNwFl8FMJJFnJg {
+  cursor: pointer;
+}
+
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/LoginForm/LoginForm.module.css ***!
+  \**************************************************************************************************************/
+/* Authentication Login Form */
+
+.DZ0S8wRAGVyW9Xa9BSBu {
+  
+}
+
