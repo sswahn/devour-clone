@@ -3,7 +3,7 @@ import styles from './ProfileButton.module.css'
 
 function ProfileButton({ profileButtonRef, openProfile }) {
 
-  cost action = async () => {
+  const action = async () => {
     navigator.vibrate(50)
     // await document.documentElement.requestFullscreen()
     // await screen.orientation.lock('portrait')
