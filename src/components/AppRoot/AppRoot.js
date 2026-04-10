@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { GetSessionContext } from '../Providers/SessionProvider'
 import Authentif
 
-function Root() {
+function AppRoot() {
   const session = useContext(GetSessionContext)
   
   return (
@@ -16,3 +16,4 @@ function Root() {
   )
 }
 
+export default AppRoot
