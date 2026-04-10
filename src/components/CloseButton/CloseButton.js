@@ -8,9 +8,7 @@ function CloseButton({ name, close }) {
   }
 
   const onKeyDown = event => {
-    console.log('close button onKeyDown fired.')
     if (event.key === 'Enter') {
-      console.log('Enter key pressed.')
       close()
     }
   }
