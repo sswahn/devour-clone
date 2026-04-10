@@ -8,6 +8,8 @@ function FollowersButton({ username, count }) {
 
   const action = () => {
     setViewFollowers(prevState => !prevState)
+
+    alert('Followers button fired!')
   }
   
   const onClick = event => {
