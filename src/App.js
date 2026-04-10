@@ -1,5 +1,5 @@
 import ErrorBoundary from './ErrorBoundary'
-import SessionProvider from './components/Providers/SessionProvider'
+import { SessionProvider } from './components/Providers/SessionProvider'
 import AppRoot from './components/AppRoot/AppRoot'
 import './index.css'
 
