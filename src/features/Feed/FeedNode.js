@@ -7,6 +7,8 @@ function FeedNode({ onClick, item, index, count }) {
     videoUrl: item.videoUrl || '',
     caption: item.caption || ''
   }
+
+  // this tabIndex etc. breaks the natural flow of the page, header gets skipped...
   
   return (
     <article onClick={onClick} tabIndex={index} aria-posinset={index} aria-setsize={count}>
