@@ -11,11 +11,11 @@ const Checkbox = memo(({ className, label, checked, onChange }) => {
   }
   
   return (
-    <div className={`${styles.container} ${className || ''}`}>
-      <label className={styles.label} onClick={handleClick}>{label}</label>
-      <input className={styles.checkbox} ref={checkboxRef} type="checkbox" checked={checked} onChange={onChange} />
-      {checked ? <CheckedIcon className={styles.icon} onClick={handleClick} /> : <UncheckedIcon className={styles.icon} onClick={handleClick} />}
-    </div>
+    <button className={`${styles.checkbox} ${className || ''}`}>
+      <label onClick={handleClick}>{label}</label>
+      <input ref={checkboxRef} type="checkbox" checked={checked} onChange={onChange} />
+      {checked ? <CheckedIcon /> : <UncheckedIcon />}
+    </button>
   )
 })
 
