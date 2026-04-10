@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import styles from './FollowersButton.module.css'
 
+// consider sharing state with FollowersStats to immediately update followersCount (up or down, follow unfollow)
+
 function FollowersButton({ username, count }) {
   const [viewFollowers, setViewFollowers] = useState(false)
 
