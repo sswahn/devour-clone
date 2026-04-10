@@ -14,7 +14,7 @@ function AppRoot() {
         <Header />
         <Main />
         <MobileUI />
-      <>}
+      </>}
     </>
   )
 }
