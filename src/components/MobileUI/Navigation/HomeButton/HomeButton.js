@@ -3,7 +3,7 @@ import styles from './HomeButton.module.css'
 
 function HomeButton() {
 
-  const action = event => {
+  const action = () => {
     navigator.vibrate(50)
     window.scrollTo({
       behavior: 'smooth',
