@@ -6,9 +6,8 @@ function FollowingButton({ username, count }) {
   
   const action = () => {
     setViewFollowing(prevState => !prevState)
-    // request users being followed by user
-    // request should be in parent so list populates
-    // just need function call here: requestFollowing()
+
+    alert('Following button fired!')
   }
   
   const onClick = event => {
