@@ -28,7 +28,7 @@ function LoginForm() {
       </div>
       <div>
         <input id="password" type="password" placeholder="Password" required minLength={8} maxLength={130} autoComplete="off" aria-label="password" />
-        <PasswordIcon />
+        <LockIcon />
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
       {loading && <LoadingSpinner />}
