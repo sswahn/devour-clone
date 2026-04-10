@@ -1,14 +1,21 @@
-import { useReducer, createContext } from 'react'
+import { useState, createContext } from 'react'
 
-const SessionContext = createContext()
+const GetSessionContext = createContext()
+const SetSessionContext = createContext()
 
 function SessionProvider({ children }) {
+  const [session, setSession] = useState({})
   
+  // login sets session (setSession)
+  // app gets session
+
   return (
-    <SessionContext.Provider>
-      {children}
-    </SessionContext.Provider>
+    <GetSessionContext.Provider value={session}>
+      <SetSessionContext.Provider value={setSession}>
+        {children}
+    </SetSessionContext.Provider>
+    </GetSessionContext.Provider>
   )
 }
 
-export { SessionContext, SessionProvider }
+export { GetSessionContext, SetSessionContext, SessionProvider }
