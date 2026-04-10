@@ -2,8 +2,24 @@ import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './CloseButton.module.css'
 
 function CloseButton({ name, close }) {
+  
+  const onClick = event => {
+    close()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      close()
+    }
+  }
+ 
  return (
-   <button className={styles.closeButton} onClick={close} type="button" aria-label={`close ${name}`}>
+   <button 
+     className={styles.closeButton} 
+     onClick={onClick} 
+     onKeyDown={onKeyDown}
+     type="button" 
+     aria-label={`close ${name}`}>
      <ArrowLeftIcon />
    </button>
   )
