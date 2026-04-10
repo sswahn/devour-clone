@@ -17,7 +17,7 @@ function Login() {
   
   return (
     <form className={styles.login} onSubmit={onSubmit} aria-label="login form">
-      <h2>Sign In</h2>
+      <h1>Sign In</h1>
       <div>
         <input id="username" type="text" placeholder="Username" required minLength={2} maxLength={50} autoComplete="off" aria-label="username" />
         <UserIcon />
