@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import LoginButton from './LoginButton/LoginButton'
-import styles from './LoginUI.module.css'
+import styles from './AuthUI.module.css'
 
-function LoginUI() {
+function AuthUI() {
   const [openLogin, setOpenLogin] = useState(false)
   const [openRegistration, setOpenRegistration] = useState(false)
   
   return (
-    <section className={styles.loginUI}>
+    <section className={styles.AuthUI}>
       <LoginButton text="Sign In" action={setOpenLogin} aria={{label: 'sign in'}} />
       <LoginButton text="Sign Up" action={setOpenRegistration} aria={{label: 'sign up'}} />
       <hr />
@@ -17,4 +17,4 @@ function LoginUI() {
   )
 }
 
-export default LandingUI
+export default AuthUI
