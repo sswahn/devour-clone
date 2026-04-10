@@ -2,12 +2,22 @@ import UserIcon from '../../../Icons/UserIcon/UserIcon'
 import styles from './ProfileButton.module.css'
 
 function ProfileButton({ profileButtonRef, openProfile }) {
-  
-  const onClick = async event => {
+
+  cost action = async () => {
     navigator.vibrate(50)
     // await document.documentElement.requestFullscreen()
     // await screen.orientation.lock('portrait')
     openProfile()
+  }
+  
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
   }
   
   return (
@@ -15,6 +25,7 @@ function ProfileButton({ profileButtonRef, openProfile }) {
       className={styles.profileButton} 
       ref={profileButtonRef} 
       onClick={onClick} 
+      onKeyDown={onKeyDown}
       type="button" 
       aria-label="open profile" 
       aria-haspopup="dialog">
