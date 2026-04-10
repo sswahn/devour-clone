@@ -15,6 +15,8 @@ function MobileUI() {
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
+
+    console.log('return focus to searchButton.current: ', searchButton.current)
     searchButtonRef.current.focus() // test this with a delay, setTimeout, currently everything focuses on profile button
   }
 
