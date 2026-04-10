@@ -3,7 +3,7 @@ import styles from './CameraButton.module.css'
 
 function CameraButton({ cameraButtonRef, openCamera }) {
 
-  const action = () => {
+  const action = async () => {
     navigator.vibrate(50); return;
    
     // await document.getElementById('portal').requestFullscreen()
@@ -11,7 +11,7 @@ function CameraButton({ cameraButtonRef, openCamera }) {
     openCamera()
   }
  
-  const onClick = async event => {
+  const onClick = event => {
     action()
   }
 
