@@ -1,22 +1,18 @@
 import { useContext } from 'react'
-// useContext or
-// useSession custom hook
-/*
-function Root() {
+import { GetSessionContext } from '../Providers/SessionProvider'
+import Authentif
 
+function Root() {
+  const session = useContext(GetSessionContext)
+  
   return (
-    <SessionProvider>
-      {session 
-      ?
-        <Authentication /> 
-      : 
-        <>
-          <Header />
-          <Main />
-          <MobileUI />
-        <>
-      }
-    </SessionProvider>
+    <>
+      {session ? <Authentication /> : <>
+        <Header />
+        <Main />
+        <MobileUI />
+      <>}
+    </>
   )
 }
-  */
+
