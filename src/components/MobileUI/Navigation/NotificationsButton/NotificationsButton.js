@@ -3,9 +3,19 @@ import styles from './NotificationsButton.module.css'
 
 function NotificationsButton({ notificationsButtonRef, openNotifications }) {
 
-  const onClick = event => {
+  const action = () => {
     navigator.vibrate(50)
     openNotifications()
+  }
+  
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
   }
   
   return (
@@ -13,6 +23,7 @@ function NotificationsButton({ notificationsButtonRef, openNotifications }) {
       className={styles.notificationsButton} 
       ref={notificationsButtonRef} 
       onClick={onClick} 
+      onKeyDown={onKeyDown}
       type="button" 
       aria-label="open notifications" 
       aria-haspopup="dialog">
