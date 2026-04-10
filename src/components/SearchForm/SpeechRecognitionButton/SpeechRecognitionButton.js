@@ -19,7 +19,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
   const recognition = useSpeechRecognition()
   const chime = useSpeechChime()
 
-  const handleSpeechRecognition = () => {
+  const action = () => {
     if (recognition.isListening) {
       recognition.stop()
       chime.playStop()
@@ -27,6 +27,16 @@ function SpeechRecognitionButton({ setSearchValue }) {
       recognition.reset()
       recognition.start()
       chime.playStart()
+    }
+  }
+
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
     }
   }
 
@@ -40,7 +50,8 @@ function SpeechRecognitionButton({ setSearchValue }) {
   return recognition.isSupported && (
     <button 
       className={`${styles.speechRecognitionButton} ${recognition.isListening ? styles.active : ''}`} 
-      onClick={handleSpeechRecognition} 
+      onClick={onClick}
+      onKeyDown={onKeyDown}
       type="button" 
       aria-label="speech recognition"
       aria-description="search by voice">
