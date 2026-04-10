@@ -28,6 +28,8 @@ function Interface({
         closeSearch()
       case 'camera':
         closeCamera()
+      case 'notifications':
+        closeNotifications()
       case 'profile':
         closeProfile()
       default:
