@@ -1,0 +1,36 @@
+/* Checkbox */
+
+.container {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.container svg {
+ /* position icon on top of checkbox */
+  display: block;
+  font-size: 20px;
+  left: 15px;
+  position: absolute;
+  z-index: 9999;
+}
+
+.label {
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.checkbox {
+ /* make checkbox small enough to hide behind icon*/
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.icon {
+  cursor: pointer;
+}
