@@ -112,8 +112,6 @@ function Notifications({ closeNotifications }) {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerCancel}
-        role="dialog" 
-        aria-modal="true" 
         aria-label="notifications">
         <div id="grabber" role="presentation"></div>
         <ul aria-label="user notifications">
