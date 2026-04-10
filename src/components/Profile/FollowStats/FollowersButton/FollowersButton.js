@@ -14,7 +14,7 @@ function FollowersButton({ username, count }) {
     action()
   }
   
-  const onKeyPress = event => {
+  const onKeyDown = event => {
     if (event.key === 'Enter') {
       action()
     }
