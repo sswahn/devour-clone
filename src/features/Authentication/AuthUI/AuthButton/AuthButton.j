@@ -1,6 +1,6 @@
-import styles from './LoginButton.module.css'
+import styles from './AuthButton.module.css'
 
-function LoginButton({ text, action, aria }) {
+function AuthButton({ text, action, aria }) {
   
   const onClick = event => {
     action()
@@ -17,4 +17,4 @@ function LoginButton({ text, action, aria }) {
   )
 }
 
-export default LoginButton
+export default AuthButton
