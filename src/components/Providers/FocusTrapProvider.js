@@ -32,6 +32,8 @@ function FocusTrapProvider({ children }) {
     
     focusedRef.current.children[0].focus()
   }
+
+  console.log('children of focusTrap: ', children)
     
   return (
     <FocusTrapContext.Provider value={overlayRef}>
