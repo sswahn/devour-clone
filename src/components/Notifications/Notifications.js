@@ -92,16 +92,16 @@ function Notifications({ closeNotifications }) {
   }
 
   useEffect(() => {
-  // Wait for the next repaint to transition:
-  const timer = requestAnimationFrame(() => {
-    if (!isOpen) {
-      setIsOpen(true)
-      bottomSheetRef.current.focus()
+    // Wait for the next repaint to transition:
+    const timer = requestAnimationFrame(() => {
+      if (!isOpen) {
+        setIsOpen(true)
+        bottomSheetRef.current.focus()
+      }
+    })
+    return () => {
+      cancelAnimationFrame(timer)
     }
-  })
-  return () => {
-    cancelAnimationFrame(timer)
-  }
   }, [])
   
   return (
