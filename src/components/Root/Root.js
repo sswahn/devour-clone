@@ -7,7 +7,7 @@ function Root() {
   
   return (
     <>
-      {session ? <Authentication /> : <>
+      {!session.isAuthenticated ? <Authentication /> : <>
         <Header />
         <Main />
         <MobileUI />
