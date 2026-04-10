@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import FollowingButton from './FollowingButton/FollowingButton'
 import styles from './FollowStats.module.css'
 
 function FollowStats() {
@@ -19,7 +20,7 @@ function FollowStats() {
   return (
     <ul className={styles.followStats}>
       <li>
-        <button onClick={handleClickFollowing} type="button"><strong>{following}</strong> Following</button>
+        <FollowingButton username={'username'} count={600} />
       </li>
       <li>
         <button onClick={handleClickFollowers} type="button"><strong>{followers}</strong> Followers</button>
