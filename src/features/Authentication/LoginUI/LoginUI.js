@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import LoginButton from './LoginButton/LoginButton'
 import styles from './LoginUI.module.css'
 
 function LoginUI() {
+  const [openLogin, setOpenLogin] = useState(false)
+  const [openRegistration, setOpenRegistration] = useState(false)
+  
   return (
     <section className={styles.loginUI}>
       <LoginButton text="Sign In" action={setOpenLogin} aria={{label: 'sign in'}} />
