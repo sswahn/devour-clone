@@ -53,7 +53,7 @@ function Profile({ closeProfile }) {
       <FollowButton />
       <FollowStats />
         
-      <div role="feed">
+      <div id="profile-feed" role="feed">
         {/* feed role="feed" must have article elements as children */}
       </div>
 
