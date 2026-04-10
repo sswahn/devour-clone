@@ -1,5 +1,6 @@
+import styles from './FollowingButton.module.css'
 
-function FollowingButton({ following }) {
+function FollowingButton({ username, count }) {
 
   const action = () => {
     // request users being followed by user
@@ -15,8 +16,14 @@ function FollowingButton({ following }) {
     }
   }
   return (
-    <button onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="view following">
-      <strong>{following}</strong> Following
+    <button 
+      className={styles.followingButton}
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label={`view users followed by ${username}`}
+      >
+      <strong>{count}</strong> Following
     </button>
   )
 }
