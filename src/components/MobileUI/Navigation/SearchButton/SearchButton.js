@@ -3,15 +3,32 @@ import styles from './SearchButton.module.css'
 
 function SearchButton({ searchButtonRef, openSearch }) {
 
-  const onClick = async event => {
+  const action = async () => {
     navigator.vibrate(50)
     //await document.getElementById('portal').requestFullscreen()
     //await screen.orientation.lock('portrait')
     openSearch()
   }
   
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
+  }
+  
   return (
-    <button className={styles.searchButton} ref={searchButtonRef} onClick={onClick} type="button" aria-label="search" aria-haspopup="dialog">
+    <button 
+      className={styles.searchButton} 
+      ref={searchButtonRef} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label="search" 
+      aria-haspopup="dialog">
       <SearchIcon />  
     </button>
   )
