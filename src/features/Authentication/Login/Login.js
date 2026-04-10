@@ -1,4 +1,5 @@
 import { setState } from 'react'
+import UserIcon from '../../../components/UserIcon/UserIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
 import SubmitButton from './SubmitButton/SubmitButton'
