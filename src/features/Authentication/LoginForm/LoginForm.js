@@ -4,9 +4,9 @@ import LockIcon from '../../../components/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
 import SubmitButton from './SubmitButton/SubmitButton'
-import styles from './Login.module.css'
+import styles from './LoginForm.module.css'
 
-function Login() {
+function LoginForm() {
   const [checked, setChecked] = useState(false)
   
   const handleCheckbox = event => {
@@ -18,7 +18,7 @@ function Login() {
   const registerUser = event => {}
   
   return (
-    <form className={styles.login} onSubmit={onSubmit} aria-label="login form">
+    <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
       <h1>Sign In</h1>
       <div>
         <input id="username" type="text" placeholder="Username" required minLength={2} maxLength={50} autoComplete="off" aria-label="username" />
@@ -40,4 +40,4 @@ function Login() {
   )
 }
 
-export default Login
+export default LoginForm
