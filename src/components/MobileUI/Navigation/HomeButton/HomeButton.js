@@ -2,8 +2,8 @@ import HomeIcon from '../../../Icons/HomeIcon/HomeIcon'
 import styles from './HomeButton.module.css'
 
 function HomeButton() {
-  
-  const onClick = event => {
+
+  const action = event => {
     navigator.vibrate(50)
     window.scrollTo({
       behavior: 'smooth',
@@ -11,8 +11,18 @@ function HomeButton() {
     })
   }
   
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
+  }
+  
   return (
-    <button className={styles.homeButton} onClick={onClick} type="button" aria-label="scroll to top">
+    <button className={styles.homeButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="scroll to top">
       <HomeIcon />  
     </button>
   )
