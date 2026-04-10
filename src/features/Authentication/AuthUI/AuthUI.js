@@ -7,7 +7,7 @@ function AuthUI() {
   const [openRegistration, setOpenRegistration] = useState(false)
   
   return (
-    <section className={styles.AuthUI}>
+    <section className={styles.authUI}>
       <AuthButton text="Sign In" action={setOpenLogin} aria={{label: 'sign in'}} />
       <AuthButton text="Sign Up" action={setOpenRegistration} aria={{label: 'sign up'}} />
       <hr />
