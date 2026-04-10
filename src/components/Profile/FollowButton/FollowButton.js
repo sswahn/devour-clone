@@ -6,16 +6,27 @@ import styles from './FollowButton.module.css'
 function FollowButton() {
   const [following, setFollowing] = useState(false)
 
-  const handleFollow = event => {
+  const action = () => {
     setFollowing(prevState => !prevState)
+  }
+  
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
   }
   
   return (
     <button 
       className={styles.followButton} 
-      onClick={handleFollow} 
+      onClick={onClick}
+      onKeyDown={onKeyDown}
       type="button" 
-      aria-label={`{following ? ${'unfollow'} : ${'follow'}}`} 
+      aria-label={`{${following ? 'unfollow' : 'follow'}`} 
       aria-pressed={following}>
       {following ? <><MinusIcon /> Unfollow</> : <><PlusIcon /> Follow</>}
     </button>
