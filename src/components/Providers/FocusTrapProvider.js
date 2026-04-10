@@ -7,9 +7,6 @@ function FocusTrapProvider({ children }) {
   
   const overlayRef = useCallback(node => {
     if (node !== null) {
-
-      console.log('node: ', node)
-      
       node.focus()
       focusedRef.current = node
     } else {  
