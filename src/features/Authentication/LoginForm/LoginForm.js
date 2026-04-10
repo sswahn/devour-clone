@@ -1,5 +1,5 @@
 import { setState, useContext } from 'react'
-import { SetSessionContext } from '../Providers/SessionProvider'
+import { SetSessionContext } from '../../../components/Providers/SessionProvider'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
