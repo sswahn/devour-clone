@@ -1,29 +1,31 @@
 import { useState, useEffect } from 'react'
 import FollowingButton from './FollowingButton/FollowingButton'
+import FollowersButton from './FollowersButton/FollowersButton'
 import styles from './FollowStats.module.css'
 
 function FollowStats() {
-  const [following, setFollowing] = useState(600)
-  const [followers, setFollowers] = useState(50)
+  const [followingCount, setFollowingCount] = useState(600)
+  const [followersCount, setFollowersCount] = useState(50)
 
-  const handleClickFollowing = event => {
-    alert('following: 600')
+  const liveUpdateFollowing = () => {
+    const response = followingCount + 1
+    setFollowingCount(response)
   }
-  const handleClickFollowers = event => {
-    alert('followers 50')
+
+  const liveUpdateFollowers = () => {
+    const response = followersCount + 1
+    setFollowersCount(response)
   }
   
   // get live websocket updates on counts
   
-  // break the buttons out into components
-  
   return (
     <ul className={styles.followStats}>
       <li>
-        <FollowingButton username={'username'} count={600} />
+        <FollowingButton username={'username'} count={followingCount} />
       </li>
       <li>
-        <button onClick={handleClickFollowers} type="button"><strong>{followers}</strong> Followers</button>
+        <FollowersButton username={'username'} count={followersCount} />
       </li>
     </ul>
   )
