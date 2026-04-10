@@ -1,6 +1,6 @@
 import { memo } from 'react'
-import SuccessIcon from './SuccessIcon.js'
-import ErrorIcon from './ErrorIcon.js'
+import CheckIcon from '../../../../components/Icons/CheckIcon/CheckIcon''
+import ExclamationIcon from '../../../../components/Icons/ExclamationIcon/ExclamationIcon'
 import styles from './styles.module.css'
 
 const SubmitButton = memo(({ text, message, error, disabled }) => {
@@ -8,13 +8,13 @@ const SubmitButton = memo(({ text, message, error, disabled }) => {
     <div>
       {message && (
         <div className={styles.success}>
-          <SuccessIcon />
+          <CheckIcon />
           <span>{message}</span>
         </div>
       )}
       {error && (
         <div className={styles.error}>
-          <ErrorIcon />
+          <ExclamationIcon />
           <span>{error}</span>
         </div>
       )}
