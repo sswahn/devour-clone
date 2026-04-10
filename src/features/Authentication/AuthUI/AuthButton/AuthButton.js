@@ -13,7 +13,7 @@ function AuthButton({ text, action, aria }) {
   }
   
   return (
-    <button className={styles.loginButton} onClick={onClick} onKeyDown={onKeyDown} type="text" aria-label={aria.label}>{text}</button>
+    <button className={styles.authButton} onClick={onClick} onKeyDown={onKeyDown} type="text" aria-label={aria.label}>{text}</button>
   )
 }
 
