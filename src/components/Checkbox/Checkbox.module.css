@@ -1,13 +1,13 @@
 /* Checkbox */
 
-.container {
+.checkbox {
   align-items: center;
   display: flex;
   margin-bottom: 5px;
   position: relative;
 }
 
-.container svg {
+.checkbox svg {
  /* position icon on top of checkbox */
   display: block;
   font-size: 20px;
@@ -16,14 +16,14 @@
   z-index: 9999;
 }
 
-.label {
+.checkbox label {
   cursor: pointer;
   display: block;
   font-size: 16px;
   margin-left: 40px;
 }
 
-.checkbox {
+.checkbox input {
  /* make checkbox small enough to hide behind icon*/
   height: 1px;
   left: 0;
