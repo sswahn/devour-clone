@@ -14,6 +14,8 @@ function FollowStats() {
   
   // get live websocket updates on counts
   
+  // break the buttons out into components
+  
   return (
     <ul className={styles.followStats}>
       <li>
