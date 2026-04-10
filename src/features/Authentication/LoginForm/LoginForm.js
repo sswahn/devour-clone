@@ -4,7 +4,6 @@ import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
-import SubmitButton from './SubmitButton/SubmitButton'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
