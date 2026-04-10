@@ -22,7 +22,12 @@ function HomeButton() {
   }
   
   return (
-    <button className={styles.homeButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="scroll to top">
+    <button 
+      className={styles.homeButton} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label="scroll to top">
       <HomeIcon />  
     </button>
   )
