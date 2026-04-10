@@ -2,13 +2,23 @@ import CameraIcon from '../../../Icons/CameraIcon/CameraIcon'
 import styles from './CameraButton.module.css'
 
 function CameraButton({ cameraButtonRef, openCamera }) {
- 
-  const onClick = async event => {
+
+  const action = () => {
     navigator.vibrate(50); return;
    
     // await document.getElementById('portal').requestFullscreen()
     // await screen.orientation.lock('portrait')
     openCamera()
+  }
+ 
+  const onClick = async event => {
+    action()
+  }
+
+   const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
   }
   
   return (
@@ -16,6 +26,7 @@ function CameraButton({ cameraButtonRef, openCamera }) {
       className={styles.cameraButton} 
       ref={cameraButtonRef} 
       onClick={onClick} 
+      onKeyDown={onKeyDown}
       type="button" 
       aria-label="open camera" 
       aria-haspopup="dialog">
