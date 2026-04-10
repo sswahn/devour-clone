@@ -1,7 +1,7 @@
 import { useRef, memo } from 'react'
 import CheckedIcon from '../Icons/CheckboxIcon/CheckedIcon.js'
 import UncheckedIcon from '../Icons/CheckboxIcon/UncheckedIcon.js'
-import styles from './styles.module.css'
+import styles from './Checkbox.module.css'
 
 const Checkbox = memo(({ label, checked, onChange }) => {
   const checkboxRef = useRef(null)
