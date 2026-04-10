@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import LoginUI from './LoginUI/LoginUI'
+import AuthUI from './AuthUI/AuthUI'
 // import LoginForm from './LoginForm/LoginForm'
 // import RegistrationForm from './RegistrationForm/RegistrationForm'
 
@@ -9,9 +9,7 @@ function Authentication() {
   
   // all primary render logic goes here
   return (
-    {openLogin && <LoginForm /> }
-    {openRegistration && <RegistrationForm />}
-    {(!openLogin && !openRegistration) && <LoginUI />}
+    {(!openLogin && !openRegistration) && <AuthUI />}
   )
 }
 
