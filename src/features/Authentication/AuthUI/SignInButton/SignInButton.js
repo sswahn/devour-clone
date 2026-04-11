@@ -17,7 +17,7 @@ function SignInButton() {
   }
   
   return (
-    <button className={styles.signInButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="sign in">SignIn</button>
+    <button className={styles.signInButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="sign in">Sign In</button>
   )
 }
 
