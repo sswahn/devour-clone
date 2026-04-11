@@ -13,7 +13,7 @@ function Authentication() {
   }
 
   const openRegistrationForm = () => {
-    
+    setRegistrationIsOpen(true)
   }
 
   return (
