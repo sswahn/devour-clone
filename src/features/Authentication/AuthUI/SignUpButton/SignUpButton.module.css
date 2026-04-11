@@ -12,5 +12,5 @@
 }
 
 .signUpButton:active {
-  background-color: var(--text);
+  background-color: var(--active-button);
 }
