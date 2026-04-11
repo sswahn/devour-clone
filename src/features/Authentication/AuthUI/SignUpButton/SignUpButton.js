@@ -17,7 +17,7 @@ function SignUpButton() {
   }
   
   return (
-    <button className={styles.signUpButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="sign up">SignUp</button>
+    <button className={styles.signUpButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="sign up">Sign Up</button>
   )
 }
 
