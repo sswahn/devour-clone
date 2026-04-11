@@ -4,8 +4,13 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 50dvh 16px 0 16px;
+  padding: 16px;
   width: 100%;
+}
+
+/* Logo placeholder */
+.authUI p {
+  height: 50dvh;
 }
 
 .authUI hr {
