@@ -4,7 +4,7 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 8px;
+  padding: 8px auto;
   width: 100%;
 }
 
