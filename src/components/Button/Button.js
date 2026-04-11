@@ -1,5 +1,5 @@
 
-function Button({ Icon, action, attributes }) {
+function Button({ icon, action, attributes }) {
   
   const onClick = event => {
     action()
@@ -12,7 +12,7 @@ function Button({ Icon, action, attributes }) {
   }
   
   return (
-    <button type="button" onClick={onClick} onKeyDown={onKeyDown}  {...attributes}>{<Icon />}</button>
+    <button type="button" onClick={onClick} onKeyDown={onKeyDown}  {...attributes}>{icon}</button>
   )
 }
 
