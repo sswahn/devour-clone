@@ -36,8 +36,7 @@ function LoginForm() {
         <LockIcon />
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
-      {loading && <LoadingSpinner />}
-      {!loading && <button onClick="" onKeyDown="" type="submit" disabled={!!message}>Sign In</button>}
+      <button onClick="" onKeyDown="" type="submit" aria-label="sign in">Sign In</button>
       <div>
         <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
         <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
