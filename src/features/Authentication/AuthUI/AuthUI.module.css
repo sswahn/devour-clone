@@ -10,7 +10,11 @@
 
 /* Logo placeholder */
 .authUI p {
+  display: block;
   height: 50dvh;
+  text-align: center;
+
+  border: 1px dashed red;
 }
 
 .authUI hr {
