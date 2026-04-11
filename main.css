@@ -60,7 +60,7 @@
   color: var(--text);
   display: flex;
   font-size: 18px;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 32px;
   padding: 16px;
   text-transform: uppercase;
@@ -70,6 +70,10 @@
 
 .ZsOq7amNfwFUdaYpIvea:active {
   background-color: var(--active-button);
+}
+
+.ZsOq7amNfwFUdaYpIvea svg {
+  fill: var(--text);
 }
 
 /*!*************************************************************************************************************************!*\
