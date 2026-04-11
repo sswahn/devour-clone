@@ -86,11 +86,12 @@
 .rFCBFRsdbE06ojIiIfgS {
   align-items: center;
   background: none;
-  border: 1px solid var(--text);
+  border: 2px solid var(--text);
   border-radius: 10px;
   color: var(--text);
   display: flex;
   font-size: 18px;
+  font-weight: bold;
   justify-content: space-around;
   padding: 16px;
   text-transform: uppercase;
