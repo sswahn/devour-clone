@@ -14,7 +14,7 @@ function AuthUI() {
   return (
     <section className={styles.authUI}>
       <div>
-        <HomeIcon />
+        <HomeIcon size={40} />
       </div>
       <SignInButton />
       <SignUpButton />
