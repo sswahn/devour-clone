@@ -30,10 +30,10 @@
 
 .FS2VxdS7o1wCz4mD8Nvp {
   align-items: center;
-  background: none;
-  border: 1px solid var(--text);
+  background: var(--text);
+  border: 1px solid var(--background);
   border-radius: 10px;
-  color: var(--text);
+  color: var(--background);
   display: flex;
   font-size: 18px;
   justify-content: center;
