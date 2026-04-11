@@ -4,5 +4,7 @@
   background: none;
   border-radius: 10px;
   color: var(--text);
+  font-size: 18px;
+  padding: 8px;
   width: 100%;
 }
