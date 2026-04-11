@@ -5,6 +5,8 @@ import GoogleButton from './GoogleButton/GoogleButton'
 import AppleButton from './AppleButton/AppleButton'
 import styles from './AuthUI.module.css'
 
+import HomeIcon from '../../../components/Icons/HomeIcon/HomeIcon'
+
 function AuthUI() {
   const [openLogin, setOpenLogin] = useState(false)
   const [openRegistration, setOpenRegistration] = useState(false)
@@ -12,7 +14,7 @@ function AuthUI() {
   return (
     <section className={styles.authUI}>
       <div>
-        <p>Logo</p>
+        <HomeIcon />
       </div>
       <SignInButton />
       <SignUpButton />
