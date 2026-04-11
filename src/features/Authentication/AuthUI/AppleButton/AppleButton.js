@@ -1,3 +1,4 @@
+import AppleIcon from '../../components/Icons/AppleIcon/AppleIcon'
 import styles from './AppleButton.module.css'
 
 function AppleButton() {
@@ -17,7 +18,15 @@ function AppleButton() {
   }
   
   return (
-    <button className={styles.appleButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="continue with apple">Continue with Apple</button>
+    <button 
+      className={styles.appleButton} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label="continue with apple">
+      <AppleIcon /> 
+      <span>Continue with Apple</span>
+    </button>
   )
 }
 
