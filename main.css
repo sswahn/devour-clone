@@ -21,6 +21,7 @@
 
 .FS2VxdS7o1wCz4mD8Nvp {
   background: none;
+  border: 1px solid var(--text);
   border-radius: 10px;
   color: var(--text);
   font-size: 18px;
