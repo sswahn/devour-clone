@@ -56,7 +56,7 @@
   width: 100%;
 }
 
-.ZsOq7amNfwFUdaYpIvea::active {
+.ZsOq7amNfwFUdaYpIvea:active {
   background-color: var(--active-button);
 }
 
