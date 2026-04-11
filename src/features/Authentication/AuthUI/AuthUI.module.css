@@ -18,6 +18,10 @@
   border: 1px dashed red;
 }
 
+.authUI p {
+  display: block;
+}
+
 .authUI hr {
   margin: 0 16px 16px 16px;
 }
