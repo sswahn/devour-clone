@@ -12,7 +12,7 @@ function Button({ text, action, attributes }) {
   }
   
   return (
-    <button {...attributes}>{text}</button>
+    <button onClick={onClick} onKeyDown={onKeyDown} {...attributes}>{text}</button>
   )
 }
 
