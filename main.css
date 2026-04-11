@@ -80,7 +80,11 @@
 
 /* Logo placeholder */
 .Cj5Se3URnP_BrX6OsbWY p {
+  display: block;
   height: 50dvh;
+  text-align: center;
+
+  border: 1px dashed red;
 }
 
 .Cj5Se3URnP_BrX6OsbWY hr {
