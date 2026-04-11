@@ -1,3 +1,4 @@
+import styles from './Button.module.css'
 
 function Button({ icon, action, attributes }) {
   
@@ -12,7 +13,14 @@ function Button({ icon, action, attributes }) {
   }
   
   return (
-    <button type="button" onClick={onClick} onKeyDown={onKeyDown}  {...attributes}>{icon}</button>
+    <button 
+      type="button" 
+      className={`${styles.button} ${attributes.className || ''}`} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      {...attributes}>
+      {icon}
+    </button>
   )
 }
 
