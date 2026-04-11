@@ -1,4 +1,4 @@
-import GoogleIcon from '../../../components/Icons/GoogleIcon/GoogleIcon'
+import GoogleIcon from '../../../../components/Icons/GoogleIcon/GoogleIcon'
 import styles from './GoogleButton.module.css'
 
 function GoogleButton() {
