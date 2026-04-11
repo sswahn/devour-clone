@@ -8,6 +8,7 @@
   color: var(--background);
   display: flex;
   font-size: 18px;
+  font-weight: bold;
   justify-content: center;
   padding: 16px;
   text-transform: uppercase;
