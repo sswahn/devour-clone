@@ -19,11 +19,6 @@
   fill: var(--text);
 }
 
-.authUI div p {
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
 .authUI hr {
-  margin: 60px 72px;
+  margin: 48px 72px;
 }
