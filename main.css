@@ -60,7 +60,7 @@
   color: var(--text);
   display: flex;
   font-size: 18px;
-  justify-content: ceter;
+  justify-content: center;
   margin-bottom: 32px;
   padding: 16px;
   text-transform: uppercase;
