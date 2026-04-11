@@ -15,7 +15,7 @@ function Authentication() {
         {openLogin && <LoginForm />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
-        {openRegistration && <RegistrationForm />} />}
+        {openRegistration && <RegistrationForm />}
       </Suspense>
     </>
   )
