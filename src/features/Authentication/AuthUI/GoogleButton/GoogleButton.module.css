@@ -12,6 +12,6 @@
   width: 100%;
 }
 
-.googleButton::active {
+.googleButton:active {
   background-color: var(--active-button);
 }
