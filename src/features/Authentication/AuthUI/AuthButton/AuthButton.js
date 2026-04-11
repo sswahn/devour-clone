@@ -13,7 +13,7 @@ function AuthButton({ text, action, attributes }) {
   }
   
   return (
-    <button className={styles.authButton} onClick={onClick} onKeyDown={onKeyDown} type="button" {...attributes}>{text}</button>
+    <button type="button" className={styles.authButton} onClick={onClick} onKeyDown={onKeyDown} {...attributes}>{text}</button>
   )
 }
 
