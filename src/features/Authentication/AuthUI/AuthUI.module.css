@@ -10,16 +10,12 @@
 
 /* Logo placeholder */
 .authUI div {
-  align-center: center;
+  align-items: center;
   display: flex;
-  justify-content: center;
   height: 50dvh;
-
+  justify-content: center;
+  
   border: 1px dashed red;
-}
-
-.authUI p {
-  display: block;
 }
 
 .authUI hr {
