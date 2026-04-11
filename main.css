@@ -79,10 +79,11 @@
 }
 
 /* Logo placeholder */
-.Cj5Se3URnP_BrX6OsbWY p {
-  display: block;
+.Cj5Se3URnP_BrX6OsbWY div {
+  align-center: center;
+  display: flex;
+  justify-content: center;
   height: 50dvh;
-  text-align: center;
 
   border: 1px dashed red;
 }
