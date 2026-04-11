@@ -8,11 +8,11 @@ function AuthUI() {
   
   return (
     <section className={styles.authUI}>
-      <AuthButton text="Sign In" action={setOpenLogin} aria={{label: 'sign in'}} />
-      <AuthButton text="Sign Up" action={setOpenRegistration} aria={{label: 'sign up'}} />
+      <AuthButton text="Sign In" action={setOpenLogin} attributes={{'aria-label': 'sign in'}} />
+      <AuthButton text="Sign Up" action={setOpenRegistration} attributes={{'aria-label': 'sign up'}} />
       <hr />
-      <AuthButton text="Continue with Google" action="" aria={{label: 'continue with Google'}} />
-      <AuthButton text="Continue with Apple" action="" aria={{label: 'continue with Apple'}} />
+      <AuthButton text="Continue with Google" action="" attributes={{'aria-label': 'continue with Google'}} />
+      <AuthButton text="Continue with Apple" action="" attributes={{'aria-label': 'continue with Apple'}} />
     </section>    
   )
 }
