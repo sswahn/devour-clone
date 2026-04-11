@@ -9,6 +9,7 @@ import styles from './LoginForm.module.css'
 function LoginForm() {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
+  const [loading, setLoading] = useState(false)
   
   const handleCheckbox = event => {
     setChecked(prevState => !prevState)
