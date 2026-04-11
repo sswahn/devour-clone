@@ -4,7 +4,10 @@
 /* Auth UI Sign In Button */
 
 .gjKkc_4Bbeh6dnCrrdCl {
-  
+  background: none;
+  border-radius: 10px;
+  color: var(--text);
+  width: 100%;
 }
 
 /*!***************************************************************************************************************************!*\
