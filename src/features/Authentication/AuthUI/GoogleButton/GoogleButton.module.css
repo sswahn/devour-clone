@@ -8,7 +8,7 @@
   color: var(--text);
   display: flex;
   font-size: 18px;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 32px;
   padding: 16px;
   text-transform: uppercase;
@@ -18,4 +18,8 @@
 
 .googleButton:active {
   background-color: var(--active-button);
+}
+
+.googleButton svg {
+  fill: var(--text);
 }
