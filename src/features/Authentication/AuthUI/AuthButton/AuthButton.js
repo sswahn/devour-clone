@@ -1,6 +1,10 @@
-import styles from './AuthButton.module.css'
+import styles from './SignInButton.module.css'
 
-function AuthButton({ text, action, attributes }) {
+function SignInButton() {
+
+  const action = () => {
+    // open sign in form
+  }
   
   const onClick = event => {
     action()
@@ -14,14 +18,14 @@ function AuthButton({ text, action, attributes }) {
   
   return (
     <button 
-      type="button" 
-      className={styles.authButton} 
+      className={styles.signInButton} 
       onClick={onClick} 
       onKeyDown={onKeyDown} 
-      {...attributes}>
-        {text}
+      type="button" 
+      aria-label="sign in">
+        SignIn
     </button>
   )
 }
 
-export default AuthButton
+export default SignInButton
