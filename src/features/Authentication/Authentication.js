@@ -1,5 +1,6 @@
 import { useState, Suspense, lazy } from 'react'
 import AuthUI from './AuthUI/AuthUI'
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 const LoginForm = lazy(() => import('./LoginForm/LoginForm'))
 const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'))
 
