@@ -5,17 +5,27 @@ const LoginForm = lazy(() => import('./LoginForm/LoginForm'))
 const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'))
 
 function Authentication() {
-  const [openLogin, setOpenLogin] = useState(false)
-  const [openRegistration, setOpenRegistration] = useState(false)
+  const [loginIsOpen, setLoginIsOpen] = useState(false)
+  const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
+
+  const openLoginForm = () => {
+    setLoginIsOpen(true)
+  }
+
+  const openRegistrationForm = () => {
+    
+  }
 
   return (
     <>
-      {(!openLogin && !openRegistration) && <AuthUI />}
+      {(!loginIsOpen && !registrationIsOpen) && 
+        <AuthUI openLoginForm={openLoginForm} openRegistrationForm={openRegistrationForm} />
+      }
       <Suspense fallback={<LoadingSpinner />}>
-        {openLogin && <LoginForm />}
+        {loginIsOpen && <LoginForm />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
-        {openRegistration && <RegistrationForm />}
+        {registrationIsOpen && <RegistrationForm />}
       </Suspense>
     </>
   )
