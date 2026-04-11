@@ -4,11 +4,14 @@
 /* Auth UI Sign In Button */
 
 .gjKkc_4Bbeh6dnCrrdCl {
+  align-items: center;
   background: none;
   border: 1px solid var(--text);
   border-radius: 10px;
   color: var(--text);
+  display: flex;
   font-size: 18px;
+  justify-content: center;
   margin-bottom: 32px;
   padding: 16px;
   text-transform: uppercase;
