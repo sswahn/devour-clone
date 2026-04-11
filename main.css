@@ -73,7 +73,7 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 16px;
+  padding: 16px 24px;
   width: 100%;
 }
 
