@@ -9,10 +9,11 @@
 }
 
 /* Logo placeholder */
-.authUI p {
-  display: block;
+.authUI div {
+  align-center: center;
+  display: flex;
+  justify-content: center;
   height: 50dvh;
-  text-align: center;
 
   border: 1px dashed red;
 }
