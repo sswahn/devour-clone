@@ -302,7 +302,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _AuthButton_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AuthButton.module.css */ \"./src/features/Authentication/AuthUI/AuthButton/AuthButton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction AuthButton(_ref) {\n  var text = _ref.text,\n    action = _ref.action,\n    aria = _ref.aria;\n  var onClick = function onClick(event) {\n    action();\n  };\n  var onKeyDown = function onKeyDown(event) {\n    if (event.key === 'Enter') {\n      action();\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _AuthButton_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].authButton,\n    onClick: onClick,\n    onKeyDown: onKeyDown,\n    type: \"text\",\n    \"aria-label\": aria.label\n  }, text);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/AuthButton/AuthButton.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ \"./node_modules/@babel/runtime/helpers/esm/extends.js\");\n/* harmony import */ var _AuthButton_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AuthButton.module.css */ \"./src/features/Authentication/AuthUI/AuthButton/AuthButton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\nfunction AuthButton(_ref) {\n  var text = _ref.text,\n    action = _ref.action,\n    attributes = _ref.attributes;\n  var onClick = function onClick(event) {\n    action();\n  };\n  var onKeyDown = function onKeyDown(event) {\n    if (event.key === 'Enter') {\n      action();\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"button\", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    className: _AuthButton_module_css__WEBPACK_IMPORTED_MODULE_1__[\"default\"].authButton,\n    onClick: onClick,\n    onKeyDown: onKeyDown,\n    type: \"button\"\n  }, attributes), text);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/AuthButton/AuthButton.js?\n}");
 
 /***/ },
 
@@ -842,6 +842,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _defineProperty)\n/* harmony export */ });\n/* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ \"./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js\");\n\nfunction _defineProperty(e, r, t) {\n  return (r = (0,_toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(r)) in e ? Object.defineProperty(e, r, {\n    value: t,\n    enumerable: !0,\n    configurable: !0,\n    writable: !0\n  }) : e[r] = t, e;\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/defineProperty.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js"
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _extends)\n/* harmony export */ });\nfunction _extends() {\n  return _extends = Object.assign ? Object.assign.bind() : function (n) {\n    for (var e = 1; e < arguments.length; e++) {\n      var t = arguments[e];\n      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);\n    }\n    return n;\n  }, _extends.apply(null, arguments);\n}\n\n\n//# sourceURL=webpack://devour-clone/./node_modules/@babel/runtime/helpers/esm/extends.js?\n}");
 
 /***/ },
 
