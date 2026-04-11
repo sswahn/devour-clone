@@ -4,10 +4,11 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 8px auto;
+  padding: 8px;
   width: 100%;
 }
 
 .authUI hr {
   margin-bottom: 16px;
+  padding: 8px;
 }
