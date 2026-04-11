@@ -1,5 +1,9 @@
 import { useState } from 'react'
-import AuthButton from './AuthButton/AuthButton'
+import SignInButton from './SignInButton/SignInButton'
+import SignUpButton from './SignUpButton/SignUpButton'
+import GoogleButton from './GoogleButton/GoogleButton'
+import AppleButton from './AppleButton/AppleButton'
+import Appl from './SignIn/SignIn'
 import styles from './AuthUI.module.css'
 
 function AuthUI() {
@@ -8,11 +12,11 @@ function AuthUI() {
   
   return (
     <section className={styles.authUI}>
-      <AuthButton text="Sign In" action={setOpenLogin} attributes={{'aria-label': 'sign in'}} />
-      <AuthButton text="Sign Up" action={setOpenRegistration} attributes={{'aria-label': 'sign up'}} />
+      <SignInButton />
+      <SignUpButton />
       <hr />
-      <AuthButton text="Continue with Google" action="" attributes={{'aria-label': 'continue with Google'}} />
-      <AuthButton text="Continue with Apple" action="" attributes={{'aria-label': 'continue with Apple'}} />
+      <GoogleButton />
+      <AppleButton />
     </section>    
   )
 }
