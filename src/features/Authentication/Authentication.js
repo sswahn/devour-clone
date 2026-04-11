@@ -12,7 +12,7 @@ function Authentication() {
     <>
       {(!openLogin && !openRegistration) && <AuthUI />}
       <Suspense fallback={<LoadingSpinner />}>
-        {openLogin && <LoginForm closeSearch={closeSearch} />}
+        {openLogin && <LoginForm />}
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         {openRegistration && <RegistrationForm />} />}
