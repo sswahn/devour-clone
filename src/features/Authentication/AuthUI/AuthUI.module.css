@@ -15,6 +15,9 @@
   height: 32dvh;
   justify-content: center;
 }
+.authUI div svg {
+  fill: var(--text);
+}
 
 .authUI div p {
   font-size: 24px;
