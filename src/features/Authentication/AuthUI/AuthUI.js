@@ -16,8 +16,8 @@ function AuthUI({ openLoginForm, openRegistrationForm }) {
       <div>
         <HomeIcon size={40} />
       </div>
-      <SignInButton open={openLoginForm} />
-      <SignUpButton open={openRegistration} />
+      <SignInButton openLoginForm={openLoginForm} />
+      <SignUpButton openRegistrationForm={openRegistration} />
       <hr />
       <GoogleButton />
       <AppleButton />
