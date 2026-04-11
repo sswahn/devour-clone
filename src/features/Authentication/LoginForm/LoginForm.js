@@ -19,7 +19,10 @@ function LoginForm() {
   const forgotPassword = event => {}
   const registerUser = event => {}
 
-  const onSubmit = event => {}
+  const onSubmit = event => {
+    event.preventDefault()
+    
+  }
   
   return (
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
