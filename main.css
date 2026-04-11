@@ -96,6 +96,10 @@
   background-color: var(--active-button);
 }
 
+.rFCBFRsdbE06ojIiIfgS svg {
+  fill: var(--text);
+}
+
 /*!********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/AuthUI.module.css ***!
   \********************************************************************************************************/
