@@ -1,9 +1,9 @@
 import styles from './SignUpButton.module.css'
 
-function SignUpButton() {
+function SignUpButton({ openRegistrationForm }) {
 
   const action = () => {
-    // open sign in form
+    openRegistrationForm()
   }
   
   const onClick = event => {
