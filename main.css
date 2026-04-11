@@ -74,8 +74,13 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 50dvh 16px 0 16px;
+  padding: 16px;
   width: 100%;
+}
+
+/* Logo placeholder */
+.Cj5Se3URnP_BrX6OsbWY p {
+  height: 50dvh;
 }
 
 .Cj5Se3URnP_BrX6OsbWY hr {
