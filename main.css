@@ -1,9 +1,36 @@
-/*!***********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/AuthButton/AuthButton.module.css ***!
-  \***********************************************************************************************************************/
-/* Authentication AuthUI AuthButton */
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css ***!
+  \***************************************************************************************************************************/
+/* Auth UI Sign In Button */
 
-.n5gNf3srpxri0ZgcCuxU {
+.gjKkc_4Bbeh6dnCrrdCl {
+  
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css ***!
+  \***************************************************************************************************************************/
+/* Auth UI Sign In Button */
+
+.FS2VxdS7o1wCz4mD8Nvp {
+  
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.module.css ***!
+  \***************************************************************************************************************************/
+/* Federated Access with Google Button */
+
+.ZsOq7amNfwFUdaYpIvea {
+  
+}
+
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/AppleButton/AppleButton.module.css ***!
+  \*************************************************************************************************************************/
+/* Federated Access with Apple Button */
+
+.rFCBFRsdbE06ojIiIfgS {
   
 }
 
