@@ -1,9 +1,9 @@
 import styles from './SignInButton.module.css'
 
-function SignInButton() {
+function SignInButton({ openLoginForm }) {
 
   const action = () => {
-    // open sign in form
+    openLoginForm()
   }
   
   const onClick = event => {
