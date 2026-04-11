@@ -55,7 +55,15 @@
 /* Federated Access with Apple Button */
 
 .rFCBFRsdbE06ojIiIfgS {
-  
+  background: none;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding: 8px;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 /*!********************************************************************************************************!*\
