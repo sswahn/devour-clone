@@ -85,7 +85,7 @@
   color: var(--text);
   display: flex;
   font-size: 18px;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 16px;
   text-transform: uppercase;
   user-select: none;
