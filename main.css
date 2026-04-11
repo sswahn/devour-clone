@@ -74,7 +74,7 @@
   background-color: var(--background);
   height: 100dvh;
   max-width: 500px;
-  padding: 8px;
+  padding: 40% 8px 0 8px;
   width: 100%;
 }
 
