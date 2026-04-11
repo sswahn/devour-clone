@@ -78,11 +78,14 @@
 /* Federated Access with Apple Button */
 
 .rFCBFRsdbE06ojIiIfgS {
+  align-items: center;
   background: none;
   border: 1px solid var(--text);
   border-radius: 10px;
   color: var(--text);
+  display: flex;
   font-size: 18px;
+  justify-content: center;
   padding: 16px;
   text-transform: uppercase;
   user-select: none;
