@@ -84,8 +84,11 @@
   display: flex;
   height: 50dvh;
   justify-content: center;
-  
-  border: 1px dashed red;
+}
+
+.Cj5Se3URnP_BrX6OsbWY div p {
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 .Cj5Se3URnP_BrX6OsbWY hr {
