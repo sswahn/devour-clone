@@ -7,3 +7,7 @@
   padding: 8px;
   width: 100%;
 }
+
+.authUI hr {
+  margin-bottom: 16px;
+}
