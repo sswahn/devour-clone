@@ -3,7 +3,7 @@ import { SetSessionContext } from '../../../components/Providers/SessionProvider
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
-import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
+//import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
@@ -31,7 +31,7 @@ function LoginForm() {
         <LockIcon />
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
-      {loading && <LoadingSpinner />}
+      {/* loading && <LoadingSpinner /> */}
       {!loading && <button onClick="" onKeyDown="" type="submit" disabled={!!message}>Sign In</button>}
       <div>
         <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
