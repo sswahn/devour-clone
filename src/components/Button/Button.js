@@ -1,6 +1,6 @@
 import styles from './Button.module.css'
 
-// if you find yourself rewriting html, you found a code smell
+// if you find yourself rewriting html, perhaps you found a code smell
 
 function Button({ icon, action, attributes }) {
   
