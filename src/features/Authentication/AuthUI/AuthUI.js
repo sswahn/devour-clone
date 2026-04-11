@@ -11,7 +11,9 @@ function AuthUI() {
   
   return (
     <section className={styles.authUI}>
-      <p>Logo</p>
+      <div>
+        <p>Logo</p>
+      </div>
       <SignInButton />
       <SignUpButton />
       <hr />
