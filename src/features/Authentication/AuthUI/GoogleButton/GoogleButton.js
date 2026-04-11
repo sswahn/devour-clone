@@ -1,3 +1,4 @@
+import GoogleIcon from '../../components/Icons/GoogleIcon/GoogleIcon'
 import styles from './GoogleButton.module.css'
 
 function GoogleButton() {
@@ -17,7 +18,15 @@ function GoogleButton() {
   }
   
   return (
-    <button className={styles.googleButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="continue with google">Continue with Google</button>
+    <button 
+      className={styles.googleButton} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label="continue with google">
+      <GoogleIcon /> 
+      <span>Continue with Google</span>
+    </button>
   )
 }
 
