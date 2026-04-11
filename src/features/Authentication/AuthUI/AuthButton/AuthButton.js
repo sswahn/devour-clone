@@ -1,6 +1,6 @@
 import styles from './AuthButton.module.css'
 
-function AuthButton({ text, action, aria }) {
+function AuthButton({ text, action, attributes }) {
   
   const onClick = event => {
     action()
@@ -13,7 +13,7 @@ function AuthButton({ text, action, aria }) {
   }
   
   return (
-    <button className={styles.authButton} onClick={onClick} onKeyDown={onKeyDown} type="text" aria-label={aria.label}>{text}</button>
+    <button className={styles.authButton} onClick={onClick} onKeyDown={onKeyDown} type="button" {...attributes}>{text}</button>
   )
 }
 
