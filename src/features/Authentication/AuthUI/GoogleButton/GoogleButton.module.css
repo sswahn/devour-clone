@@ -1,7 +1,7 @@
 /* Federated Access with Google Button */
 
 .googleButton {
-  align-items: ceter;
+  align-items: center;
   background: none;
   border: 1px solid var(--text);
   border-radius: 10px;
