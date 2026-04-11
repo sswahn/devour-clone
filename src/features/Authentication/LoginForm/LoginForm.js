@@ -18,6 +18,8 @@ function LoginForm() {
   // buttons should go to their own componenets
   const forgotPassword = event => {}
   const registerUser = event => {}
+
+  const onSubmit = event => {}
   
   return (
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
