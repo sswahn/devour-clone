@@ -6,7 +6,7 @@ function AuthButton({ text, action, aria }) {
     action()
   }
   
-  const onKeyPress = event => {
+  const onKeyDown = event => {
     if (event.key === 'Enter') {
       action()
     }
