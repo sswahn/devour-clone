@@ -1,12 +1,15 @@
 /* Federated Access with Google Button */
 
 .googleButton {
+  align-items: ceter;
   background: none;
   border: 1px solid var(--text);
   border-radius: 10px;
   color: var(--text);
+  display: flex;
   font-size: 18px;
-  margin-bottom: 40px;
+  justify-content: ceter;
+  margin-bottom: 32px;
   padding: 16px;
   text-transform: uppercase;
   user-select: none;
