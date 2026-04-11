@@ -56,6 +56,10 @@
   width: 100%;
 }
 
+.ZsOq7amNfwFUdaYpIvea::active {
+  background-color: var(--active-button);
+}
+
 /*!*************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/AppleButton/AppleButton.module.css ***!
   \*************************************************************************************************************************/
