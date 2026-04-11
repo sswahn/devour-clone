@@ -16,6 +16,6 @@
   width: 100%;
 }
 
-.signUpButton:active {
+.signInButton:active {
   background-color: var(--active-button);
 }
