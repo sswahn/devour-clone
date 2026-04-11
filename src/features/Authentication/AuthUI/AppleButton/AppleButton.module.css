@@ -10,3 +10,7 @@
   text-transform: uppercase;
   width: 100%;
 }
+
+.appleButton:active {
+  background-color: var(--active-button);
+}
