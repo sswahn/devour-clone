@@ -44,6 +44,9 @@
 /* Authentication Login Form */
 
 .DZ0S8wRAGVyW9Xa9BSBu {
-  
+  background: var(--background);
+  color: var(--text);
+  height: 100dvh;
+  width: 100%;
 }
 
