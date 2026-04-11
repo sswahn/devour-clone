@@ -610,7 +610,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"signInButton\":\"gjKkc_4Bbeh6dnCrrdCl\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"signInButton\":\"gjKkc_4Bbeh6dnCrrdCl\",\"signUpButton\":\"MTEa8njInWbgLfqIuM0P\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css?\n}");
 
 /***/ },
 

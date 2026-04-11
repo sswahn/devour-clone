@@ -15,6 +15,10 @@
   width: 100%;
 }
 
+.MTEa8njInWbgLfqIuM0P:active {
+  background-color: var(--active-button);
+}
+
 /*!***************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css ***!
   \***************************************************************************************************************************/
