@@ -14,7 +14,7 @@
   cursor: pointer;
   display: block;
   font-size: var(--font-size);
-  margin-left: 64px;
+  margin-left: 56px;
 }
 
 .checkbox input {
