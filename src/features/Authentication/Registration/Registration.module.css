@@ -24,6 +24,10 @@
   width: 100%;
 }
 
+.registration > div:last-child {
+  margin-bottom: 0;
+}
+
 .registration > div > input:focus {
   outline: none;
 }
@@ -40,6 +44,30 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+.registration details {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.registration summary {
+  cursor: pointer;
+  font-size: 12px;
+  width: 160px;
+}
+
+.registration ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 5px 0 0 0;
+}
+
+.registration li {
+  margin-left: 12px;
+}
+
 
 .registration button[type="submit"] {
   align-items: center;
