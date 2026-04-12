@@ -24,7 +24,7 @@ const Checkbox = memo(({ label, checked, onChange }) => {
     <button className={styles.checkbox}>
       <label onClick={onClick} onKeyDown={onKeyDown}>{label}</label>
       <input ref={checkboxRef} type="checkbox" checked={checked} onChange={onChange} />
-      {checked ? <CheckedIcon /> : <UncheckedIcon />}
+      {checked ? <CheckedIcon size={20} /> : <UncheckedIcon size={20} />}
     </button>
   )
 })
