@@ -88,11 +88,11 @@
 }
 
 /*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/searchform.module.css ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchForm.module.css ***!
   \***************************************************************************************************/
 /* Search Form */
 
-.TYu9xxiA93dMGBlCIky5 {
+.SLy02R_oWPksADBQiBuZ {
   background-color: var(--background);
   height: 100dvh;
   left: 0;
@@ -104,18 +104,18 @@
   z-index: 200;
 }
 
-.TYu9xxiA93dMGBlCIky5 div {
+.SLy02R_oWPksADBQiBuZ div {
   display: flex;
   width: 100%;
 }
 
-.TYu9xxiA93dMGBlCIky5 form {
+.SLy02R_oWPksADBQiBuZ form {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.TYu9xxiA93dMGBlCIky5 form div:first-child {
+.SLy02R_oWPksADBQiBuZ form div:first-child {
   align-items: center; 
   display: flex;
   justify-content: center;
@@ -129,11 +129,11 @@
   width: 44px; 
 }
 
-.TYu9xxiA93dMGBlCIky5 form div:first-child svg {  
+.SLy02R_oWPksADBQiBuZ form div:first-child svg {  
   fill: var(--text);
 }
 
-.TYu9xxiA93dMGBlCIky5 form div:last-child {
+.SLy02R_oWPksADBQiBuZ form div:last-child {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -146,13 +146,13 @@
   width: 44px;
 }
 
-.TYu9xxiA93dMGBlCIky5 ul {
+.SLy02R_oWPksADBQiBuZ ul {
   list-style-type: none;
   margin-top: 8px;
   width: 100%;
 }
 
-.TYu9xxiA93dMGBlCIky5 ul li {
+.SLy02R_oWPksADBQiBuZ ul li {
   color: var(--text);
   font-size: var(--font-size);
   line-height: var(--line-height);
