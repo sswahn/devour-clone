@@ -9,12 +9,6 @@ import styles from './Authentication.module.css'
 
 function Authentication() {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
-  
-  /*
-  const openLoginForm = () => {
-    setLoginIsOpen(true)
-  }
-  */
 
   const openRegistration = () => {
     setRegistrationIsOpen(true)
@@ -24,12 +18,11 @@ function Authentication() {
     setRegistrationIsOpen(false)
   }
   
-
   return (
     <section className={styles.authentication}>
       {!registrationIsOpen && <Login openRegistration={openRegistration} />}
       <Suspense fallback={<LoadingSpinner />}>
-        {registrationIsOpen && <RegistrationForm closeRegistration={closeRegistration} />}
+        {registrationIsOpen && <Registration closeRegistration={closeRegistration} />}
       </Suspense>
     </section>
   )
