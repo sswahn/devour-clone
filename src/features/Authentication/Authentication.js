@@ -40,7 +40,7 @@ function Authentication() {
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <RegistrationForm closeRegistrationForm={closeRegistrationForm} />}
       </Suspense>
-    </>
+    </section>
   )
 }
 
