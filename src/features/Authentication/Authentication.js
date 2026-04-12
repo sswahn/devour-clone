@@ -1,7 +1,8 @@
 import { useState, Suspense, lazy } from 'react'
 import AuthUI from './AuthUI/AuthUI'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
-const LoginForm = lazy(() => import('./LoginForm/LoginForm'))
+// const LoginForm = lazy(() => import('./LoginForm/LoginForm'))
+import LoginForm from './LoginForm/LoginForm'
 const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'))
 
 function Authentication() {
@@ -18,12 +19,10 @@ function Authentication() {
 
   return (
     <>
-      {(!loginIsOpen && !registrationIsOpen) && 
+      {/*(!loginIsOpen && !registrationIsOpen) && 
         <AuthUI openLoginForm={openLoginForm} openRegistrationForm={openRegistrationForm} />
-      }
-      <Suspense fallback={<LoadingSpinner />}>
-        {loginIsOpen && <LoginForm />}
-      </Suspense>
+     */}
+      <LoginForm />
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <RegistrationForm />}
       </Suspense>
