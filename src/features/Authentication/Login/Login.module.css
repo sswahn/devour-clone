@@ -86,8 +86,3 @@
   cursor: pointer;
   font-size: 18px;
 }
-
-.login > div:last-child {
-  padding: 0 40px;
-}
-
