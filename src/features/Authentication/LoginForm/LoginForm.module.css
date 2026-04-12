@@ -60,3 +60,7 @@
   user-select: none;
   width: 100%;
 }
+
+.loginForm > div:last-child button {
+  
+}
