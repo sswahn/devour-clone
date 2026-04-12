@@ -4,6 +4,8 @@ import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
+import GoogleButton from './AuthUI/GoogleButton/GoogleButton'
+import AppleButton from './AuthUI/AppleButton/AppleButton'
 import styles from './LoginForm.module.css'
 
 function LoginForm({ openRegistrationForm }) {
@@ -43,8 +45,8 @@ function LoginForm({ openRegistrationForm }) {
       </div>
     </form>
     <p>Or continue with:</p>
-    <button></button>
-    <button></button>
+    <GoogleButton />
+    <AppleButton />
   </>
   )
 }
