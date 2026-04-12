@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import OpenEmailIcon from './OpenEmailIcon.js'
-import UserIcon from '../Icons/UserIcon.js'
-import PasswordIcon from '../Icons/PasswordIcon.js'
-import SubmitButton from '../SubmitButton/SubmitButton.js'
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
+import LockIcon from '../Icons/PasswordIcon.js'
 import styles from './styles.module.css'
 
-const ConfirmForgotPassword = () => {
+function ConfirmForgotPassword() {
   const [state, setState] = useState({
     confirmation_code: '',
     username: '',
@@ -92,8 +90,7 @@ const ConfirmForgotPassword = () => {
         <input id="confirm_password" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" />
         <PasswordIcon />
       </div>
-      {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Reset Password" message={message} error={error} disabled={!!message} />}
+      <button type="submit" aria-label="confirm reset password">Confirm Reset Password</button>}
     </form>
   )
 }
