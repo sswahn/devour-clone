@@ -3,7 +3,7 @@ import CloseButton from '../../../components/CloseButton/CloseButton'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import styles from './ForgotPassword.module.css'
 
-function ForgotPassword() {
+function ForgotPassword({ closeForgotPassword }) {
   const [username, setUsername] = useState('')
   const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
