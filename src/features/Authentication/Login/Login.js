@@ -46,7 +46,7 @@ function Login({ openRegistration }) {
         <button type="submit" aria-label="sign in">Sign In</button>
         <div>
           <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
-          <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
+          <button onClick={openRegistration} type="button" aria-label="open registration form">Create an account</button>
         </div>
       </form>
       <div>
