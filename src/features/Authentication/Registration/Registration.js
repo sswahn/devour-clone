@@ -54,7 +54,7 @@ const Registration = ({ closeRegistration }) => {
     }
   }
   
-  const handleOnSubmit = async event => {
+  const onSubmit = async event => {
     event.preventDefault()
     try {
       await validatePassword()
@@ -72,7 +72,7 @@ const Registration = ({ closeRegistration }) => {
   // pattern attributes need title attributes.
   
   return (
-    <form className={styles.registrationForm} onSubmit={handleOnSubmit} aria-label="registration form">
+    <form className={styles.registration} onSubmit={onSubmit} aria-label="registration form">
       <h1>Create an account</h1>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
