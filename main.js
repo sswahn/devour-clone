@@ -372,17 +372,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
-/***/ "./src/features/Authentication/AuthUI/AuthUI.js"
-/*!******************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/AuthUI.js ***!
-  \******************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _SignInButton_SignInButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SignInButton/SignInButton */ \"./src/features/Authentication/AuthUI/SignInButton/SignInButton.js\");\n/* harmony import */ var _SignUpButton_SignUpButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SignUpButton/SignUpButton */ \"./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.js\");\n/* harmony import */ var _GoogleButton_GoogleButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GoogleButton/GoogleButton */ \"./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.js\");\n/* harmony import */ var _AppleButton_AppleButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AppleButton/AppleButton */ \"./src/features/Authentication/AuthUI/AppleButton/AppleButton.js\");\n/* harmony import */ var _AuthUI_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AuthUI.module.css */ \"./src/features/Authentication/AuthUI/AuthUI.module.css\");\n/* harmony import */ var _components_Icons_HomeIcon_HomeIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../components/Icons/HomeIcon/HomeIcon */ \"./src/components/Icons/HomeIcon/HomeIcon.js\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\n\n\n\nfunction AuthUI(_ref) {\n  var openLoginForm = _ref.openLoginForm,\n    openRegistrationForm = _ref.openRegistrationForm;\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    openLogin = _useState2[0],\n    setOpenLogin = _useState2[1];\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState3, 2),\n    openRegistration = _useState4[0],\n    setOpenRegistration = _useState4[1];\n  return /*#__PURE__*/React.createElement(\"section\", {\n    className: _AuthUI_module_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].authUI\n  }, /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(_components_Icons_HomeIcon_HomeIcon__WEBPACK_IMPORTED_MODULE_7__[\"default\"], {\n    size: 40\n  })), /*#__PURE__*/React.createElement(_SignInButton_SignInButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    openLoginForm: openLoginForm\n  }), /*#__PURE__*/React.createElement(_SignUpButton_SignUpButton__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    openRegistrationForm: openRegistration\n  }), /*#__PURE__*/React.createElement(\"hr\", null), /*#__PURE__*/React.createElement(_GoogleButton_GoogleButton__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null), /*#__PURE__*/React.createElement(_AppleButton_AppleButton__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthUI);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/AuthUI.js?\n}");
-
-/***/ },
-
 /***/ "./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.js"
 /*!*************************************************************************!*\
   !*** ./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.js ***!
@@ -394,28 +383,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
-/***/ "./src/features/Authentication/AuthUI/SignInButton/SignInButton.js"
-/*!*************************************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/SignInButton/SignInButton.js ***!
-  \*************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _SignInButton_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SignInButton.module.css */ \"./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction SignInButton(_ref) {\n  var openLoginForm = _ref.openLoginForm;\n  var action = function action() {\n    openLoginForm();\n  };\n  var onClick = function onClick(event) {\n    action();\n  };\n  var onKeyDown = function onKeyDown(event) {\n    if (event.key === 'Enter') {\n      action();\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _SignInButton_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].signInButton,\n    onClick: onClick,\n    onKeyDown: onKeyDown,\n    type: \"button\",\n    \"aria-label\": \"sign in\"\n  }, \"Sign In\");\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SignInButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignInButton/SignInButton.js?\n}");
-
-/***/ },
-
-/***/ "./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.js"
-/*!*************************************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.js ***!
-  \*************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _SignUpButton_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SignUpButton.module.css */ \"./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction SignUpButton(_ref) {\n  var openRegistrationForm = _ref.openRegistrationForm;\n  var action = function action() {\n    openRegistrationForm();\n  };\n  var onClick = function onClick(event) {\n    action();\n  };\n  var onKeyDown = function onKeyDown(event) {\n    if (event.key === 'Enter') {\n      action();\n    }\n  };\n  return /*#__PURE__*/React.createElement(\"button\", {\n    className: _SignUpButton_module_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"].signUpButton,\n    onClick: onClick,\n    onKeyDown: onKeyDown,\n    type: \"button\",\n    \"aria-label\": \"sign up\"\n  }, \"Sign Up\");\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SignUpButton);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.js?\n}");
-
-/***/ },
-
 /***/ "./src/features/Authentication/Authentication.js"
 /*!*******************************************************!*\
   !*** ./src/features/Authentication/Authentication.js ***!
@@ -423,7 +390,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _AuthUI_AuthUI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AuthUI/AuthUI */ \"./src/features/Authentication/AuthUI/AuthUI.js\");\n/* harmony import */ var _components_LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/LoadingSpinner/LoadingSpinner */ \"./src/components/LoadingSpinner/LoadingSpinner.js\");\n/* harmony import */ var _Login_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Login/Login */ \"./src/features/Authentication/Login/Login.js\");\n/* harmony import */ var _Authentication_module_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Authentication.module.css */ \"./src/features/Authentication/Authentication.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\n\nvar Registration = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {\n  return __webpack_require__.e(/*! import() */ \"src_features_Authentication_Registration_Registration_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./Registration/Registration */ \"./src/features/Authentication/Registration/Registration.js\"));\n});\n\n\n//import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'\n\nfunction Authentication() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    registrationIsOpen = _useState2[0],\n    setRegistrationIsOpen = _useState2[1];\n  var openRegistration = function openRegistration() {\n    setRegistrationIsOpen(true);\n  };\n  var closeRegistration = function closeRegistration() {\n    setRegistrationIsOpen(false);\n  };\n  return /*#__PURE__*/React.createElement(\"section\", {\n    className: _Authentication_module_css__WEBPACK_IMPORTED_MODULE_5__[\"default\"].authentication\n  }, !registrationIsOpen && /*#__PURE__*/React.createElement(_Login_Login__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    openRegistration: openRegistration\n  }), /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, {\n    fallback: /*#__PURE__*/React.createElement(_components_LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)\n  }, registrationIsOpen && /*#__PURE__*/React.createElement(Registration, {\n    closeRegistration: closeRegistration\n  })));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Authentication);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/Authentication.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/LoadingSpinner/LoadingSpinner */ \"./src/components/LoadingSpinner/LoadingSpinner.js\");\n/* harmony import */ var _Login_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Login/Login */ \"./src/features/Authentication/Login/Login.js\");\n/* harmony import */ var _Authentication_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Authentication.module.css */ \"./src/features/Authentication/Authentication.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\n\nvar Registration = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {\n  return __webpack_require__.e(/*! import() */ \"src_features_Authentication_Registration_Registration_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./Registration/Registration */ \"./src/features/Authentication/Registration/Registration.js\"));\n});\nvar ForgotPassword = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.lazy)(function () {\n  return __webpack_require__.e(/*! import() */ \"src_features_Authentication_ForgotPassword_ForgotPassword_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./ForgotPassword/ForgotPassword */ \"./src/features/Authentication/ForgotPassword/ForgotPassword.js\"));\n});\n\nfunction Authentication() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState, 2),\n    registrationIsOpen = _useState2[0],\n    setRegistrationIsOpen = _useState2[1];\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),\n    _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_useState3, 2),\n    forgotPasswordIsOpen = _useState4[0],\n    setForgotPasswordIsOpen = _useState4[1];\n  var openRegistration = function openRegistration() {\n    return setRegistrationIsOpen(true);\n  };\n  var closeRegistration = function closeRegistration() {\n    return setRegistrationIsOpen(false);\n  };\n  var openForgotPassword = function openForgotPassword() {\n    return setForgotPasswordIsOpen(true);\n  };\n  var closeForgotPassword = function closeForgotPassword() {\n    return setForgotPasswordIsOpen(false);\n  };\n  return /*#__PURE__*/React.createElement(\"section\", {\n    className: _Authentication_module_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"].authentication\n  }, !registrationIsOpen && /*#__PURE__*/React.createElement(_Login_Login__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    openRegistration: openRegistration\n  }), /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, {\n    fallback: /*#__PURE__*/React.createElement(_components_LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n  }, registrationIsOpen && /*#__PURE__*/React.createElement(Registration, {\n    closeRegistration: closeRegistration\n  })), /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Suspense, {\n    fallback: /*#__PURE__*/React.createElement(_components_LoadingSpinner_LoadingSpinner__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n  }, forgotPasswordIsOpen && /*#__PURE__*/React.createElement(ForgotPassword, {\n    closeForgotPassword: closeForgotPassword\n  })));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Authentication);\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/Authentication.js?\n}");
 
 /***/ },
 
@@ -669,17 +636,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
-/***/ "./src/features/Authentication/AuthUI/AuthUI.module.css"
-/*!**************************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/AuthUI.module.css ***!
-  \**************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"authUI\":\"Cj5Se3URnP_BrX6OsbWY\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/AuthUI.module.css?\n}");
-
-/***/ },
-
 /***/ "./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.module.css"
 /*!*********************************************************************************!*\
   !*** ./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.module.css ***!
@@ -688,28 +644,6 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 "use strict";
 eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"googleButton\":\"ZsOq7amNfwFUdaYpIvea\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.module.css?\n}");
-
-/***/ },
-
-/***/ "./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css"
-/*!*********************************************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css ***!
-  \*********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"signInButton\":\"gjKkc_4Bbeh6dnCrrdCl\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignInButton/SignInButton.module.css?\n}");
-
-/***/ },
-
-/***/ "./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css"
-/*!*********************************************************************************!*\
-  !*** ./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css ***!
-  \*********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"signUpButton\":\"FS2VxdS7o1wCz4mD8Nvp\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/AuthUI/SignUpButton/SignUpButton.module.css?\n}");
 
 /***/ },
 
@@ -1378,7 +1312,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"src_features_Authentication_Registration_Registration_js":1,"src_components_SearchForm_SearchForm_js":1,"src_features_Camera_Camera_js":1,"src_components_Notifications_Notifications_js":1,"src_components_Profile_Profile_js":1};
+/******/ 			var cssChunks = {"src_features_Authentication_Registration_Registration_js":1,"src_features_Authentication_ForgotPassword_ForgotPassword_js":1,"src_components_SearchForm_SearchForm_js":1,"src_features_Camera_Camera_js":1,"src_components_Notifications_Notifications_js":1,"src_components_Profile_Profile_js":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
