@@ -9,6 +9,11 @@
   width: 100%;
 }
 
+.YI7kjk9TyPudyOt3n29I h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 .YI7kjk9TyPudyOt3n29I > div {
   position: relative;
 }
@@ -27,7 +32,7 @@
   width: 100%;
 }
 
-.YI7kjk9TyPudyOt3n29I > div:last-child {
+.YI7kjk9TyPudyOt3n29I > div {
   margin-bottom: 0;
 
   border: 1px dashed red;
