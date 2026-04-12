@@ -17,7 +17,9 @@ function Authentication() {
   
   return (
     <section className={styles.authentication}>
-      {!registrationIsOpen && <Login openRegistration={openRegistration} />}
+      {!registrationIsOpen && 
+        <Login openRegistration={openRegistration} openForgotPassword={openForgotPassword} />
+      }
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <Registration closeRegistration={closeRegistration} />}
       </Suspense>
