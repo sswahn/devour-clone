@@ -669,7 +669,7 @@
     color-mix(in srgb, var(--black), transparent 95%)
   );
   
-  --input: light-dark(#999999, #444444);
+  --input: light-dark(#999999, #777777); /* light-dark(#999999, #444444); */
   --input-border: light-dark(#888888, #555555);
 
   --active-button: light-dark(#777777, #444444);
