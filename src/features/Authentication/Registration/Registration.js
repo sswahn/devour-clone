@@ -21,7 +21,7 @@ const Registration = ({ closeRegistration }) => {
   
   const validatePassword = () => {
     return new Promise((resolve, reject) => {
-      state.password !== state.confirm_password
+      state.password !== state.confirmPassword
         ? reject('Passwords do not match.')
         : resolve()
     })
@@ -87,7 +87,7 @@ const Registration = ({ closeRegistration }) => {
         <PasswordIcon />
       </div>
       <div>
-        <input id="confirm_password" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" />
+        <input id="confirmPassword" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" />
         <PasswordIcon />
       </div>
       <details aria-label="password requirements">
