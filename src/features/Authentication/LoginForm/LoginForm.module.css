@@ -36,6 +36,7 @@
 
 .loginForm > div > input::placeholder {
   color: var(--text);
+  opacity: 0.5;
 }
 
 .loginForm > div > svg {
