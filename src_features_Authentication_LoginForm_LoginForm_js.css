@@ -64,6 +64,11 @@
   outline: none;
 }
 
+.DZ0S8wRAGVyW9Xa9BSBu svg {
+  
+  fill: var(--text);
+}
+
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
   background: var(--text);
