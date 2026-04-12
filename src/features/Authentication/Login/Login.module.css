@@ -18,11 +18,6 @@
   fill: var(--text);
 }
 
-.login form {
-  margin-bottom: 32px;
-}
-
-
 .login form > div {
   position: relative;
 }
@@ -89,4 +84,8 @@
   color: var(--text);
   cursor: pointer;
   font-size: 18px;
+}
+
+.login > div:last-child {
+  margin-top: 64px;
 }
