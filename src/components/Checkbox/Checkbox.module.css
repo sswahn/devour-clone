@@ -2,8 +2,10 @@
 
 .checkbox {
   align-items: center;
+  background: none;
+  border: 0;
   display: flex;
-  margin-bottom: 5px;
+  padding: 8px 0;
   position: relative;
 }
 
