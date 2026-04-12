@@ -270,6 +270,14 @@
   \*********************************************************************************************************/
 /* Authentication Flow */
 
+.kXofMQa6vzuWGHvhoZSw {
+  background-color: var(--background);
+  height: 100dvh;
+  max-width: 500px;
+  padding: 16px;
+  width: 100%;
+}
+
 /* Logo placeholder */
 .kXofMQa6vzuWGHvhoZSw div {
   align-items: center;
