@@ -49,7 +49,7 @@ function Login({ openRegistration }) {
           <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
         </div>
       </form>
-      <hr />
+      <p>Or</p>
       <div>
         <GoogleButton />
         <AppleButton />
