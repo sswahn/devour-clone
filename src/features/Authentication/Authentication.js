@@ -29,9 +29,6 @@ function Authentication() {
 
   return (
     <section className={styles.authentication}>
-      <div>
-        <HomeIcon size={40} />
-      </div>
 
       {/*(!loginIsOpen && !registrationIsOpen) && 
         <AuthUI openLoginForm={openLoginForm} openRegistrationForm={openRegistrationForm} />
