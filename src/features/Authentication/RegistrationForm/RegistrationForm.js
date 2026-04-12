@@ -6,7 +6,7 @@ import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
 import styles from './RegistrationForm.module.css'
 
-const Register = ({ className, onSubmit }) => {
+const RegistrationForm = ({ className, onSubmit }) => {
   const [state, setState] = useState({ 
     username: '',
     email: '',
@@ -72,8 +72,8 @@ const Register = ({ className, onSubmit }) => {
   }
   
   return (
-    <form className={`${styles.register} ${className || ''}`} onSubmit={handleOnSubmit} aria-label="registration form">
-      <h2>Create an account</h2>
+    <form className={styles.registrationForm} onSubmit={handleOnSubmit} aria-label="registration form">
+      <h1>Create an account</h1>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
         <UserIcon />
@@ -106,4 +106,4 @@ const Register = ({ className, onSubmit }) => {
   )
 }
 
-export default Register
+export default RegistrationForm
