@@ -1,0 +1,90 @@
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Registration/Registration.module.css ***!
+  \********************************************************************************************************************/
+/* Authentication Registration Form */
+
+.YI7kjk9TyPudyOt3n29I {
+  color: var(--text);
+  padding: 16px;
+  width: 100%;
+}
+
+/* Logo placeholder */
+.YI7kjk9TyPudyOt3n29I > div:first-child {
+  align-items: center;
+  display: flex;
+  height: 24dvh;
+  justify-content: center;
+}
+.YI7kjk9TyPudyOt3n29I > div:first-child > svg {
+  fill: var(--text);
+}
+
+.YI7kjk9TyPudyOt3n29I form > div {
+  position: relative;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div:first-child {
+  margin-bottom: 32px;
+} 
+
+.YI7kjk9TyPudyOt3n29I form > div:last-child { 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div > input {
+  background-color: var(--input);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 18px;
+  height: 44px;
+  padding-left: 48px;
+  width: 100%;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div > input:focus {
+  outline: none;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div > input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div > svg {
+  fill: var(--text);
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.YI7kjk9TyPudyOt3n29I form button[type="submit"] {
+  align-items: center;
+  background: var(--text);
+  border: 1px solid var(--background);
+  border-radius: 10px;
+  color: var(--background);
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  height: 44px;
+  justify-content: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  user-select: none;
+  width: 100%;
+}
+
+.YI7kjk9TyPudyOt3n29I form > div:last-child button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--text);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+}
+
