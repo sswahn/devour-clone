@@ -50,7 +50,7 @@ function Login({ openRegistration }) {
         </div>
       </form>
       <div>
-        <p>Or continue with:</p>
+        <p>Or</p>
         <GoogleButton />
         <AppleButton />
       </div>
