@@ -8,7 +8,7 @@ import GoogleButton from '../AuthUI/GoogleButton/GoogleButton'
 import AppleButton from '../AuthUI/AppleButton/AppleButton'
 import styles from './LoginForm.module.css'
 
-function LoginForm({ openRegistrationForm }) {
+function Login({ openRegistration }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -27,28 +27,30 @@ function LoginForm({ openRegistrationForm }) {
   }
   
   return (
-  <>
-    <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
+    <section className={styles.login}>
+      <form onSubmit={onSubmit} aria-label="login form">
+        <div>
+          <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
+          <UserIcon size={20} />
+        </div>
+        <div>
+          <input id="password" type="password" placeholder="Password" required maxLength={130} aria-label="password" />
+          <LockIcon size={20} />
+        </div>
+        <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
+        <button type="submit" aria-label="sign in">Sign In</button>
+        <div>
+          <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
+          <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
+        </div>
+      </form>
       <div>
-        <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
-        <UserIcon size={20} />
+        <p>Or continue with:</p>
+        <GoogleButton />
+        <AppleButton />
       </div>
-      <div>
-        <input id="password" type="password" placeholder="Password" required maxLength={130} aria-label="password" />
-        <LockIcon size={20} />
-      </div>
-      <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
-      <button type="submit" aria-label="sign in">Sign In</button>
-      <div>
-        <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
-        <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
-      </div>
-    </form>
-    <p>Or continue with:</p>
-    <GoogleButton />
-    <AppleButton />
-  </>
+    </section>
   )
 }
 
-export default LoginForm
+export default Login
