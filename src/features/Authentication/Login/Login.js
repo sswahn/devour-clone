@@ -10,7 +10,7 @@ import styles from './Login.module.css'
 
 import HomeIcon from '../../../components/Icons/HomeIcon/HomeIcon'
 
-function Login({ openRegistration }) {
+function Login({ openRegistration, openForgotPassword }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -45,7 +45,7 @@ function Login({ openRegistration }) {
         <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
         <button type="submit" aria-label="sign in">Sign In</button>
         <div>
-          <button onClick={forgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
+          <button onClick={openForgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
           <button onClick={openRegistration} type="button" aria-label="open registration form">Create an account</button>
         </div>
       </form>
