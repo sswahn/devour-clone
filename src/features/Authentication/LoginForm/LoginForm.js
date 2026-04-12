@@ -26,7 +26,6 @@ function LoginForm({ openRegistrationForm }) {
   
   return (
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
-      <h1>Sign In</h1>
       <div>
         <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
         <UserIcon />
