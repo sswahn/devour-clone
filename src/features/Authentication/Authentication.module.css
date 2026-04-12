@@ -8,12 +8,12 @@
 }
 
 /* Logo placeholder */
-.authentication div {
+.authentication > div {
   align-items: center;
   display: flex;
   height: 32dvh;
   justify-content: center;
 }
-.authentication div svg {
+.authentication > div > svg {
   fill: var(--text);
 }
