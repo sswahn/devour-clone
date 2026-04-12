@@ -8,7 +8,7 @@ import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
 import CloseButton from '../CloseButton/CloseButton'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
-import styles from './searchform.module.css'
+import styles from './SearchForm.module.css'
 
 function SearchForm({ closeSearch }) {
   const overlayRef = useContext(FocusTrapContext)
