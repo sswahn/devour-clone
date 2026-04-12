@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import UserIcon from '../Icons/UserIcon.js'
-import SubmitButton from '../SubmitButton/SubmitButton.js'
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import styles from './styles.module.css'
 
-const ForgotPassword = () => {
+function ForgotPassword() {
   const [username, setUsername] = useState('')
   const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
@@ -55,13 +53,12 @@ const ForgotPassword = () => {
   
   return (
     <form className={styles.forgotPassword} onSubmit={onSubmit} aria-label="forgot password">
-      <h2>Forgot password</h2>
+      <h1>Forgot password</h1>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
         <UserIcon />
       </div>
-      {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Reset Password" message={message} error={error} disabled={!!message} />}
+      <button type="submit" aria-label="reset password">Reset Password</button>
     </form>
   )
 }
