@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
-import styles from './styles.module.css'
+import styles from './ForgotPassword.module.css'
 
 function ForgotPassword() {
   const [username, setUsername] = useState('')
