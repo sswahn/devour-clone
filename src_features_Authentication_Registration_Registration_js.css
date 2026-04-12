@@ -29,6 +29,8 @@
 
 .YI7kjk9TyPudyOt3n29I > div:last-child {
   margin-bottom: 0;
+
+  border: 1px dashed red;
 }
 
 .YI7kjk9TyPudyOt3n29I > div > input:focus {
@@ -53,7 +55,7 @@
   color: var(--text);
   font-size: 12px;
   line-height: 1.6;
-  margin-top: 5px;
+  margin: 16px 0;
 }
 
 .YI7kjk9TyPudyOt3n29I summary {
