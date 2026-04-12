@@ -223,6 +223,8 @@
 
 .C61Q59ZsjRxy_QQHUQf8 > div {
   position: relative;
+
+  border: 1px dashed red;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu > div > input {
@@ -269,13 +271,13 @@
 /* Authentication Flow */
 
 /* Logo placeholder */
-.dQAXtggQzTwydxV1FsoZ div {
+.kXofMQa6vzuWGHvhoZSw div {
   align-items: center;
   display: flex;
   height: 32dvh;
   justify-content: center;
 }
-.dQAXtggQzTwydxV1FsoZ div svg {
+.kXofMQa6vzuWGHvhoZSw div svg {
   fill: var(--text);
 }
 
