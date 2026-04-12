@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CloseButton from '../../../components/CloseButton/CloseButton'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import styles from './ForgotPassword.module.css'
 
@@ -52,7 +53,8 @@ function ForgotPassword() {
   // pattern needs title
   
   return (
-    <form className={styles.forgotPassword} onSubmit={onSubmit} aria-label="forgot password">
+    <form className={styles.forgotPassword} onSubmit={onSubmit} aria-label="forgot password form">
+      <CloseButton name="forgot password form" close={closeForgotPassword} />
       <h1>Forgot password</h1>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
