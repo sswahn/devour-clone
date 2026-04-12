@@ -11,7 +11,7 @@
 .login > div:first-child {
   align-items: center;
   display: flex;
-  height: 32dvh;
+  height: 16dvh;
   justify-content: center;
 }
 .login > div:first-child > svg {
