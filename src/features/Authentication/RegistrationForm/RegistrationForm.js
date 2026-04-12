@@ -2,7 +2,6 @@ import { useState } from 'react'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
-import SubmitButton from '../SubmitButton/SubmitButton'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './RegistrationForm.module.css'
 
@@ -101,7 +100,7 @@ const RegistrationForm = ({ className, onSubmit }) => {
         </ul>
       </details>
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Sign Up" message={message} error={error} disabled={!!message} />}
+      <button type="submit" aria-label="sign up">Sign Up</button>
     </form>
   )
 }
