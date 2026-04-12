@@ -212,13 +212,13 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu > div {
-  position: relative;
-  
+
   border: 1px dashed red;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu > div:first-of-type,
 .C61Q59ZsjRxy_QQHUQf8 > div:nth-of-type(2) {
+  position: relative;
   margin-bottom: 32px;
 }
 
