@@ -15,5 +15,17 @@
 }
 
 .loginForm button[type="submit"] {
-  width: 100%;
+  align-items: center;
+  background: var(--text);
+  border: 1px solid var(--background);
+  border-radius: 10px;
+  color: var(--background);
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 32px;
+  padding: 16px;
+  text-transform: uppercase;
+  user-select: none;
 }
