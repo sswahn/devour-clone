@@ -185,6 +185,7 @@
  /* make checkbox small enough to hide behind icon*/
   height: 1px;
   left: 0;
+  margin-left: 24px;
   position: absolute;
   width: 1px;
 }
