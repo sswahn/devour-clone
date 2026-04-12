@@ -64,7 +64,7 @@
   position: relative;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu input {
+.DZ0S8wRAGVyW9Xa9BSBu > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -73,7 +73,7 @@
   width: 100%;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu input:focus {
+.DZ0S8wRAGVyW9Xa9BSBu > div > input:focus {
   outline: none;
 }
 
