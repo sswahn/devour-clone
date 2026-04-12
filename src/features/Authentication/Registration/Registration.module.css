@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.registration > div {
+.registration > div:last-child {
   margin-bottom: 0;
 
   border: 1px dashed red;
