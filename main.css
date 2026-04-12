@@ -230,6 +230,7 @@
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
+  font-size: 18px;
   height: 44px;
   padding-left: 48px;
   width: 100%;
