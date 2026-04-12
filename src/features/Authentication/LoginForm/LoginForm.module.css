@@ -9,8 +9,6 @@
 
 .loginForm > div {
   position: relative;
-  
-  border: 1px dashed red;
 }
 
 .loginForm > div:first-child {
