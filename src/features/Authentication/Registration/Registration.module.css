@@ -6,32 +6,15 @@
   width: 100%;
 }
 
-/* Logo placeholder */
-.registration > div:first-child {
-  align-items: center;
-  display: flex;
-  height: 24dvh;
-  justify-content: center;
-}
-.registration > div:first-child > svg {
-  fill: var(--text);
-}
-
-.registration form > div {
+.registration > div {
   position: relative;
 }
 
-.registration form > div:first-child {
+.registration > div {
   margin-bottom: 32px;
 } 
 
-.registration form > div:last-child { 
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-}
-
-.registration form > div > input {
+.registration > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -41,16 +24,16 @@
   width: 100%;
 }
 
-.registration form > div > input:focus {
+.registration > div > input:focus {
   outline: none;
 }
 
-.registration form > div > input::placeholder {
+.registration > div > input::placeholder {
   color: var(--text);
   opacity: 0.6;
 }
 
-.registration form > div > svg {
+.registration > div > svg {
   fill: var(--text);
   left: 15px;
   position: absolute;
@@ -58,7 +41,7 @@
   transform: translateY(-50%);
 }
 
-.registration form button[type="submit"] {
+.registration button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
@@ -74,13 +57,4 @@
   text-transform: uppercase;
   user-select: none;
   width: 100%;
-}
-
-.registration form > div:last-child button {
-  background: none;
-  border: 0;
-  border-bottom: 1px solid var(--text);
-  color: var(--text);
-  cursor: pointer;
-  font-size: 18px;
 }
