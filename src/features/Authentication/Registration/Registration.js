@@ -4,7 +4,7 @@ import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import styles from './RegistrationForm.module.css'
 
-const Registration = ({  }) => {
+const Registration = ({ closeRegistration }) => {
   const [state, setState] = useState({ 
     username: '',
     email: '',
