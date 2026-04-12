@@ -4,6 +4,7 @@ import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 // const LoginForm = lazy(() => import('./LoginForm/LoginForm'))
 import LoginForm from './LoginForm/LoginForm'
 const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'))
+import styles from './Authentication.module.css'
 
 function Authentication() {
   // const [loginIsOpen, setLoginIsOpen] = useState(false)
