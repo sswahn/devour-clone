@@ -65,4 +65,5 @@
   background-color: none;
   border: 0;
   color: var(--text);
+  font-size: var(--font-size);
 }
