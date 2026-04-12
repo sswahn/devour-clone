@@ -65,8 +65,11 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu svg {
-  
   fill: var(--text);
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
