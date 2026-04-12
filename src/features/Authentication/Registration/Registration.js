@@ -4,7 +4,7 @@ import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import styles from './RegistrationForm.module.css'
 
-const RegistrationForm = ({ className, onSubmit }) => {
+const Registration = ({  }) => {
   const [state, setState] = useState({ 
     username: '',
     email: '',
@@ -103,4 +103,4 @@ const RegistrationForm = ({ className, onSubmit }) => {
   )
 }
 
-export default RegistrationForm
+export default Registration
