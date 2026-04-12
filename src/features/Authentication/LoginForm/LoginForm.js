@@ -25,6 +25,7 @@ function LoginForm({ openRegistrationForm }) {
   }
   
   return (
+  <>
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
       <div>
         <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
@@ -41,6 +42,10 @@ function LoginForm({ openRegistrationForm }) {
         <button onClick={registerUser} type="button" aria-label="open registration form">Create an account</button>
       </div>
     </form>
+    <p>Or continue with:</p>
+    <button></button>
+    <button></button>
+  </>
   )
 }
 
