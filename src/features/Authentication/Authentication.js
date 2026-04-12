@@ -3,12 +3,12 @@ import AuthUI from './AuthUI/AuthUI'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import Login from './Login/Login'
 const Registration = lazy(() => import('./Registration/Registration'))
+const ForgotPassword = lazy(() => import('./ForgotPassword/ForgotPassword'))
 import styles from './Authentication.module.css'
-
-//import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'
 
 function Authentication() {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
+  const [forgotPasswordIsOpen, setForgotPasswordIsOpen] = useState(false)
 
   const openRegistration = () => {
     setRegistrationIsOpen(true)
@@ -23,6 +23,9 @@ function Authentication() {
       {!registrationIsOpen && <Login openRegistration={openRegistration} />}
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <Registration closeRegistration={closeRegistration} />}
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        {forgotPasswordIsOpen && <ForgotPassword closeForgotPassword={closeForgotPassword} />}
       </Suspense>
     </section>
   )
