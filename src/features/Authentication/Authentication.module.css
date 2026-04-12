@@ -1,5 +1,13 @@
 /* Authentication Flow */
 
+.authentication {
+  background-color: var(--background);
+  height: 100dvh;
+  max-width: 500px;
+  padding: 16px;
+  width: 100%;
+}
+
 /* Logo placeholder */
 .authentication div {
   align-items: center;
