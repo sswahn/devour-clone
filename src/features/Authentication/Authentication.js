@@ -10,13 +10,12 @@ function Authentication() {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
   const [forgotPasswordIsOpen, setForgotPasswordIsOpen] = useState(false)
 
-  const openRegistration = () => {
-    setRegistrationIsOpen(true)
-  }
-
-  const closeRegistration = () => {
-    setRegistrationIsOpen(false)
-  }
+  const openRegistration = () => setRegistrationIsOpen(true)
+  const closeRegistration = () => setRegistrationIsOpen(false)
+  
+  const openForgotPassword = () => setForgotPasswordIsOpen(true)
+  const closeForgotPassword = () => setForgotPasswordIsOpen(false)
+  
   
   return (
     <section className={styles.authentication}>
