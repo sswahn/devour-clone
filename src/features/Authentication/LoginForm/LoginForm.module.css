@@ -24,7 +24,8 @@
   padding: 0 15px;
 }
 
-.loginForm > div > input {
+.loginForm > div > input:first-of-type,
+.login > div > input:nth-of-type(2) {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
