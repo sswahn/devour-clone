@@ -1,3 +1,30 @@
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/CloseButton/CloseButton.module.css ***!
+  \*****************************************************************************************************/
+/* Close Overlay Button */
+
+.nRmVNOUPXPt07q2izPkS {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+
+  border: 1px dashed red;
+}
+
+.nRmVNOUPXPt07q2izPkS:active {
+  background-color: var(--active-button);
+}
+
+.nRmVNOUPXPt07q2izPkS svg {  
+  fill: var(--text);
+}
+
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Registration/Registration.module.css ***!
   \********************************************************************************************************************/
