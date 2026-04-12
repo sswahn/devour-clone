@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
+import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
-import EmailIcon from '../Icons/EmailIcon.js'
-import SubmitButton from '../SubmitButton/SubmitButton.js'
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import SubmitButton from '../SubmitButton/SubmitButton'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './RegistrationForm.module.css'
 
 const RegistrationForm = ({ className, onSubmit }) => {
