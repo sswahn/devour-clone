@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.registration h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 .registration > div {
   position: relative;
 }
@@ -24,7 +29,7 @@
   width: 100%;
 }
 
-.registration > div:last-child {
+.registration > div {
   margin-bottom: 0;
 
   border: 1px dashed red;
