@@ -168,6 +168,7 @@
   align-items: center;
   background: none;
   border: 0;
+  cursor: pointer;
   display: flex;
   padding: 8px 0;
   position: relative;
@@ -176,6 +177,7 @@
 .sy8lKVWP56AlOR7ys_9A svg {
  /* position icon on top of checkbox */
   display: block;
+  fill: var(--text);
   font-size: 20px;
   left: 15px;
   position: absolute;
@@ -185,7 +187,7 @@
 .sy8lKVWP56AlOR7ys_9A label {
   cursor: pointer;
   display: block;
-  font-size: 16px;
+  font-size: var(--font-size);
   margin-left: 40px;
 }
 
@@ -195,10 +197,6 @@
   left: 0;
   position: absolute;
   width: 1px;
-}
-
-.mxKv9GsNwFl8FMJJFnJg {
-  cursor: pointer;
 }
 
 /*!**************************************************************************************************************!*\
