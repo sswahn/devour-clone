@@ -263,6 +263,22 @@
   width: 100%;
 }
 
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Authentication.module.css ***!
+  \*********************************************************************************************************/
+/* Authentication Flow */
+
+/* Logo placeholder */
+.dQAXtggQzTwydxV1FsoZ div {
+  align-items: center;
+  display: flex;
+  height: 32dvh;
+  justify-content: center;
+}
+.dQAXtggQzTwydxV1FsoZ div svg {
+  fill: var(--text);
+}
+
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
   \*******************************************************************************************/
