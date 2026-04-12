@@ -193,7 +193,6 @@
  /* position icon on top of checkbox */
   display: block;
   fill: var(--text);
-  font-size: 20px;
   left: 15px;
   position: absolute;
   z-index: 9999;
