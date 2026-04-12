@@ -26,6 +26,10 @@ function Authentication() {
 
   return (
     <>
+      <div>
+        <HomeIcon size={40} />
+      </div>
+
       {/*(!loginIsOpen && !registrationIsOpen) && 
         <AuthUI openLoginForm={openLoginForm} openRegistrationForm={openRegistrationForm} />
      */}
