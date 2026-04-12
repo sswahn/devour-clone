@@ -1,0 +1,12 @@
+/* Authentication Flow */
+
+/* Logo placeholder */
+.authUI div {
+  align-items: center;
+  display: flex;
+  height: 32dvh;
+  justify-content: center;
+}
+.authUI div svg {
+  fill: var(--text);
+}
