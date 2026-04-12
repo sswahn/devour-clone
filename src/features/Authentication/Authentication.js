@@ -6,6 +6,8 @@ import LoginForm from './LoginForm/LoginForm'
 const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'))
 import styles from './Authentication.module.css'
 
+import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'
+
 function Authentication() {
   // const [loginIsOpen, setLoginIsOpen] = useState(false)
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
