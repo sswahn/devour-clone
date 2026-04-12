@@ -8,6 +8,8 @@ import GoogleButton from '../AuthUI/GoogleButton/GoogleButton'
 import AppleButton from '../AuthUI/AppleButton/AppleButton'
 import styles from './Login.module.css'
 
+import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'
+
 function Login({ openRegistration }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
