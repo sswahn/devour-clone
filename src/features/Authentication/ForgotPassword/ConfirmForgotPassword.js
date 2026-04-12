@@ -2,7 +2,7 @@ import { useState } from 'react'
 import EnvelopeOpenIcon from '../../../components/Icons/EnvelopeOpenIcon/EnvelopeOpenIcon'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
-import styles from './ForgotPassword.module.css'
+import styles from './ConfirmForgotPassword.module.css'
 
 function ConfirmForgotPassword() {
   const [state, setState] = useState({
