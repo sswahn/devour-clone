@@ -8,6 +8,14 @@
   width: 100%;
 }
 
+.loginForm h1 {
+  color: var(--text);
+  font-size: 24px; 
+  font-weight: normal;
+  margin: 16px 0;
+  text-align: center;
+}
+
 .loginForm input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
