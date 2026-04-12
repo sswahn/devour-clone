@@ -21,6 +21,11 @@
   outline: none;
 }
 
+.loginForm svg {
+  
+  fill: var(--text);
+}
+
 .loginForm button[type="submit"] {
   align-items: center;
   background: var(--text);
