@@ -50,6 +50,7 @@
   border: 1px solid var(--background);
   border-radius: 10px;
   color: var(--background);
+  cursor: pointer;
   display: flex;
   font-size: 18px;
   font-weight: bold;
@@ -66,5 +67,6 @@
   border: 0;
   border-bottom: 1px solid var(--text);
   color: var(--text);
+  cursor: pointer;
   font-size: 18px;
 }
