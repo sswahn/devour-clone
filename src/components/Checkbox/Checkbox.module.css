@@ -6,6 +6,7 @@
   border: 0;
   cursor: pointer;
   display: flex;
+  gap: 40px;
   padding: 8px 0;
   position: relative;
 }
@@ -14,7 +15,6 @@
   cursor: pointer;
   display: block;
   font-size: var(--font-size);
-  margin-left: 40px;
 }
 
 .checkbox input {
