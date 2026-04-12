@@ -28,7 +28,7 @@ function Authentication() {
   
 
   return (
-    <>
+    <section className={styles.authentication}>
       <div>
         <HomeIcon size={40} />
       </div>
