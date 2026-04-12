@@ -6,7 +6,7 @@ import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
 import styles from './LoginForm.module.css'
 
-function LoginForm() {
+function LoginForm({ openRegistrationForm }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   const [loading, setLoading] = useState(false)
