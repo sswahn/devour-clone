@@ -51,6 +51,8 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu input {
+  background-color: var(--input);
+  border: 1px solid var(--input-border);
   width: 100%;
 }
 
