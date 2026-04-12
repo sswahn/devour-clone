@@ -68,6 +68,8 @@ const Registration = ({ closeRegistration }) => {
       setError(err)
     }
   }
+
+  // pattern attributes need title attributes.
   
   return (
     <form className={styles.registrationForm} onSubmit={handleOnSubmit} aria-label="registration form">
