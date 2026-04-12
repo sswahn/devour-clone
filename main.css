@@ -213,7 +213,7 @@
 
 .DZ0S8wRAGVyW9Xa9BSBu > div {
   position: relative;
-
+  margin-bottom: 32px;
   border: 1px dashed red;
 }
 
@@ -222,7 +222,6 @@
   border: 1px solid var(--input-border);
   border-radius: 10px;
   height: 44px;
-  margin-bottom: 32px;
   padding-left: 48px;
   width: 100%;
 }
