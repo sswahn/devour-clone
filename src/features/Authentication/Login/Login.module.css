@@ -87,11 +87,11 @@
   font-size: 18px;
 }
 
+.login hr {
+  margin: 48px 72px;
+}
+
 .login > div:last-child {
   padding: 24px 32px;
 }
 
-.login p {
-  text-align: center;
-  padding: 16px 0 32px 0;
-}
