@@ -216,22 +216,13 @@
   border: 1px dashed red;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div:first-of-type,
-.C61Q59ZsjRxy_QQHUQf8 > div:nth-of-type(2) {
-
-  margin-bottom: 32px;
-
-  border: 1px dashed orange;
-}
-
 .DZ0S8wRAGVyW9Xa9BSBu > div:last-child { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div > input:first-of-type,
-.C61Q59ZsjRxy_QQHUQf8 > div > input:nth-of-type(2) {
+.DZ0S8wRAGVyW9Xa9BSBu > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
