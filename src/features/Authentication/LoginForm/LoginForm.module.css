@@ -4,11 +4,16 @@
   background-color: var(--background);
   color: var(--text);
   height: 100dvh;
+  max-width: 500px;
   width: 100%;
 }
 
 .loginForm input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
+  width: 100%;
+}
+
+.loginForm button[type="submit"] {
   width: 100%;
 }
