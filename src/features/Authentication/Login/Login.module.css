@@ -18,6 +18,10 @@
   fill: var(--text);
 }
 
+.login form {
+  margin-bottom: 32px;
+}
+
 
 .login form > div {
   position: relative;
