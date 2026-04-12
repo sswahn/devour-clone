@@ -240,6 +240,7 @@
 
 .DZ0S8wRAGVyW9Xa9BSBu > div > input::placeholder {
   color: var(--text);
+  opacity: 0.5;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu > div > svg {
