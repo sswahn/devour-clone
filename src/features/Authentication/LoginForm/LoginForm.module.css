@@ -34,6 +34,10 @@
   outline: none;
 }
 
+.loginForm > div > input::placeholder {
+  color: var(--text);
+}
+
 .loginForm > div > svg {
   fill: var(--text);
   left: 15px;
