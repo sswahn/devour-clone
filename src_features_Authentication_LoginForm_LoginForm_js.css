@@ -55,7 +55,12 @@
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
+  height: 44px;
   width: 100%;
+}
+
+.DZ0S8wRAGVyW9Xa9BSBu input:focus {
+  outline: none;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
