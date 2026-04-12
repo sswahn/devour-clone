@@ -99,7 +99,6 @@ const RegistrationForm = ({ className, onSubmit }) => {
           <li>Contains at least 1 lowercase letter.</li>
         </ul>
       </details>
-      {loading && <LoadingSpinner />}
       <button type="submit" aria-label="sign up">Sign Up</button>
     </form>
   )
