@@ -274,13 +274,11 @@
 .DZ0S8wRAGVyW9Xa9BSBu > div:last-child button {
   background: none;
   border: 0;
-  border: 1px solid var(--text);
-  border-radius: 10px;
+  border-bottom: 1px solid var(--text);
   color: var(--text);
   cursor: pointer;
   font-size: 18px;
   height: 44px;
-  padding: 0 16px;
 }
 
 /*!*********************************************************************************************************!*\
