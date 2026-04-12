@@ -7,13 +7,3 @@
   width: 100%;
 }
 
-/* Logo placeholder */
-.authentication > div {
-  align-items: center;
-  display: flex;
-  height: 32dvh;
-  justify-content: center;
-}
-.authentication > div > svg {
-  fill: var(--text);
-}
