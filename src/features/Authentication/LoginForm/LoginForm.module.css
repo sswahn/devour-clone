@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.loginForm input {
+.loginForm > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.loginForm input:focus {
+.loginForm > div > input:focus {
   outline: none;
 }
 
