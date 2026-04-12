@@ -8,14 +8,17 @@
 }
 
 .loginForm > div {
-
+  position: relative;
+  
   border: 1px dashed red;
 }
 
 .loginForm > div:first-of-type,
 .login > div:nth-of-type(2) {
-  position: relative;
+
   margin-bottom: 32px;
+
+  border: 1px dashed orange;
 }
 
 .loginForm > div:last-child { 
