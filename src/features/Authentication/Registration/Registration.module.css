@@ -26,6 +26,8 @@
 
 .registration > div:last-child {
   margin-bottom: 0;
+
+  border: 1px dashed red;
 }
 
 .registration > div > input:focus {
@@ -50,7 +52,7 @@
   color: var(--text);
   font-size: 12px;
   line-height: 1.6;
-  margin-top: 5px;
+  margin: 16px 0;
 }
 
 .registration summary {
