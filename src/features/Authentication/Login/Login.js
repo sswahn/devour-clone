@@ -6,7 +6,7 @@ import Checkbox from '../../../components/Checkbox/Checkbox'
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner'
 import GoogleButton from '../AuthUI/GoogleButton/GoogleButton'
 import AppleButton from '../AuthUI/AppleButton/AppleButton'
-import styles from './LoginForm.module.css'
+import styles from './Login.module.css'
 
 function Login({ openRegistration }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
