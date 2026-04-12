@@ -28,11 +28,11 @@ function LoginForm({ openRegistrationForm }) {
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
       <h1>Sign In</h1>
       <div>
-        <input id="username" type="text" placeholder="Username" required minLength={2} maxLength={50} autoComplete="off" aria-label="username" />
+        <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
         <UserIcon />
       </div>
       <div>
-        <input id="password" type="password" placeholder="Password" required minLength={8} maxLength={130} autoComplete="off" aria-label="password" />
+        <input id="password" type="password" placeholder="Password" required maxLength={130} aria-label="password" />
         <LockIcon />
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
