@@ -16,7 +16,6 @@ function Authentication() {
   const openForgotPassword = () => setForgotPasswordIsOpen(true)
   const closeForgotPassword = () => setForgotPasswordIsOpen(false)
   
-  
   return (
     <section className={styles.authentication}>
       {!registrationIsOpen && <Login openRegistration={openRegistration} />}
