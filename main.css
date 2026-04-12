@@ -174,16 +174,6 @@
   position: relative;
 }
 
-.sy8lKVWP56AlOR7ys_9A svg {
- /* position icon on top of checkbox */
-  display: block;
-  fill: var(--text);
-  font-size: 20px;
-  left: 15px;
-  position: absolute;
-  z-index: 9999;
-}
-
 .sy8lKVWP56AlOR7ys_9A label {
   cursor: pointer;
   display: block;
@@ -197,6 +187,16 @@
   left: 0;
   position: absolute;
   width: 1px;
+}
+
+.sy8lKVWP56AlOR7ys_9A svg {
+ /* position icon on top of checkbox */
+  display: block;
+  fill: var(--text);
+  font-size: 20px;
+  left: 15px;
+  position: absolute;
+  z-index: 9999;
 }
 
 /*!**************************************************************************************************************!*\
