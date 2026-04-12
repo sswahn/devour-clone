@@ -200,33 +200,45 @@
   z-index: 9999;
 }
 
-/*!**************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/LoginForm/LoginForm.module.css ***!
-  \**************************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/Login.module.css ***!
+  \******************************************************************************************************/
 /* Authentication Login Form */
 
-.DZ0S8wRAGVyW9Xa9BSBu {
+.uAX12_MQ8mZ1gR6rjg68 {
   color: var(--text);
 
   padding: 16px;
   width: 100%;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div {
+/* Logo placeholder */
+.FbciK8jeLWEl7Xm8L_45 > div:first-child {
+  align-items: center;
+  display: flex;
+  height: 32dvh;
+  justify-content: center;
+}
+.FbciK8jeLWEl7Xm8L_45 > div:first-child > svg {
+  fill: var(--text);
+}
+
+
+.uAX12_MQ8mZ1gR6rjg68 form > div {
   position: relative;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div:first-child {
+.uAX12_MQ8mZ1gR6rjg68 form > div:first-child {
   margin-bottom: 32px;
 } 
 
-.DZ0S8wRAGVyW9Xa9BSBu > div:last-child { 
+.uAX12_MQ8mZ1gR6rjg68 form > div:last-child { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div > input {
+.uAX12_MQ8mZ1gR6rjg68 form > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -236,16 +248,16 @@
   width: 100%;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div > input:focus {
+.uAX12_MQ8mZ1gR6rjg68 form > div > input:focus {
   outline: none;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div > input::placeholder {
+.uAX12_MQ8mZ1gR6rjg68 form > div > input::placeholder {
   color: var(--text);
   opacity: 0.6;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div > svg {
+.uAX12_MQ8mZ1gR6rjg68 form > div > svg {
   fill: var(--text);
   left: 15px;
   position: absolute;
@@ -253,7 +265,7 @@
   transform: translateY(-50%);
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
+.uAX12_MQ8mZ1gR6rjg68 form button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
@@ -271,13 +283,18 @@
   width: 100%;
 }
 
-.DZ0S8wRAGVyW9Xa9BSBu > div:last-child button {
+.uAX12_MQ8mZ1gR6rjg68 form > div:last-child button {
   background: none;
   border: 0;
   border-bottom: 1px solid var(--text);
   color: var(--text);
   cursor: pointer;
   font-size: 18px;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 p {
+  text-align: center;
+  padding: 16px 0;
 }
 
 /*!*********************************************************************************************************!*\
@@ -292,16 +309,6 @@
   width: 100%;
 }
 
-/* Logo placeholder */
-.kXofMQa6vzuWGHvhoZSw > div {
-  align-items: center;
-  display: flex;
-  height: 32dvh;
-  justify-content: center;
-}
-.kXofMQa6vzuWGHvhoZSw > div > svg {
-  fill: var(--text);
-}
 
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
