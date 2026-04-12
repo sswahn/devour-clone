@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.login > div {
+.loginForm > div {
   position: relative;
 
   border: 1px dashed red;
