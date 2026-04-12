@@ -20,16 +20,11 @@ const Checkbox = memo(({ label, checked, onChange }) => {
     }
   }
 
-  // the icons should be conditionally rendered in a button
-  // it should receive the onClick and onKeyDown methods as props
-  
   return (
     <button className={styles.checkbox}>
       <label onClick={onClick} onKeyDown={onKeyDown}>{label}</label>
       <input ref={checkboxRef} type="checkbox" checked={checked} onChange={onChange} />
-  
       {checked ? <CheckedIcon /> : <UncheckedIcon />}
-  
     </button>
   )
 })
