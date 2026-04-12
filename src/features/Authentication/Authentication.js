@@ -33,7 +33,7 @@ function Authentication() {
       {/*(!loginIsOpen && !registrationIsOpen) && 
         <AuthUI openLoginForm={openLoginForm} openRegistrationForm={openRegistrationForm} />
      */}
-      {!registrationIsOpen && <LoginForm openRegistration={openRegistration} />}
+      {!registrationIsOpen && <Login openRegistration={openRegistration} />}
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <RegistrationForm closeRegistration={closeRegistration} />}
       </Suspense>
