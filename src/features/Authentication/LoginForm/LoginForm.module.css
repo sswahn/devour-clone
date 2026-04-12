@@ -57,9 +57,9 @@
   display: flex;
   font-size: 18px;
   font-weight: bold;
+  height: 44px;
   justify-content: center;
   margin-bottom: 32px;
-  padding: 16px;
   text-transform: uppercase;
   user-select: none;
   width: 100%;
