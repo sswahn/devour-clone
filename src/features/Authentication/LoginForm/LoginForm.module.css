@@ -1,11 +1,8 @@
 /* Authentication Login Form */
 
 .loginForm {
-  background-color: var(--background);
   color: var(--text);
   height: 100dvh;
-  max-width: 500px;
-  padding: 16px;
   width: 100%;
 }
 
