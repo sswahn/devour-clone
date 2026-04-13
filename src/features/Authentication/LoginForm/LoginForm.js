@@ -25,6 +25,7 @@ function LoginForm({ openRegistration, openForgotPassword }) {
     function Login() {
       return (
         <section>
+          {<CloseButton  />} for all but Login
           <Logo />
           <LoginForm />
           <FederatedLoginButtons />
