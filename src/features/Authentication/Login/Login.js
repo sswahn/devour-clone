@@ -27,6 +27,11 @@ function Login({ openRegistration, openForgotPassword }) {
     event.preventDefault()
     
   }
+
+  // for better organization
+  // only use forms in login components
+  // move home icon to Authentication component
+  // conditionally render google/apple buttons in authentication
   
   return (
     <section className={styles.login}>
