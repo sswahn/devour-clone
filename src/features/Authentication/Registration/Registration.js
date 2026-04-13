@@ -1,4 +1,5 @@
 import styles from './Registration.module.css'
+import CloseButton from '../../../components/CloseButton/CloseButton'
 import Logo from '../../../components/Logo/Logo'
 import RegistrationForm from './RegistrationForm/RegistrationForm'
 
