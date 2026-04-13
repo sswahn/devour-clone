@@ -36,12 +36,12 @@ function Login({ openRegistration, openForgotPassword }) {
       <form onSubmit={onSubmit} aria-label="login form">
         <label htmlFor="username">Username:</label>
         <div>
-          <input id="username" type="text" placeholder="Username" required maxLength={50} aria-label="username" />
+          <input id="username" type="text" placeholder="Username" required maxLength={50} autoComplete="username" aria-label="username" />
           <UserIcon size={20} />
         </div>
         <label htmlFor="password">Password:</label>
         <div>
-          <input id="password" type="password" placeholder="Password" required maxLength={130} aria-label="password" />
+          <input id="password" type="password" placeholder="Password" required maxLength={130} autoComplete="current-password" aria-label="password" />
           <LockIcon size={20} />
         </div>
         <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
