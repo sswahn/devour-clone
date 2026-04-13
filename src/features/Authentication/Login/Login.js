@@ -35,6 +35,7 @@ function Login({ openRegistration, openForgotPassword }) {
   
   return (
     <section className={styles.login}>
+    
       <form onSubmit={onSubmit} aria-label="login form">
         <div>
           <input id="username" type="text" placeholder="Username" required maxLength={50} autoComplete="username" aria-label="username" />
@@ -51,10 +52,7 @@ function Login({ openRegistration, openForgotPassword }) {
           <button onClick={openRegistration} type="button" aria-label="open registration form">Create an account</button>
         </div>
       </form>
-      <div>
-        <GoogleButton />
-        <AppleButton />
-      </div>
+
     </section>
   )
 }
