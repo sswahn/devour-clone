@@ -9,13 +9,13 @@ function RegistrationForm() {
     username: '',
     email: '',
     password: '',
-    confirm_password: ''
+    confirmPassword: ''
   })
   const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
   const [loading, setLoading] = useState(false)
   
-  const handleOnChange = ({ target }) => {
+  const handleOnChange = ({ target }) => { // not using onChange, using onSubmit, fix this
     setState({ ...state, [target.id]: target.value })
   }
   
