@@ -20,9 +20,13 @@ function Authentication() {
       <div>
         <HomeIcon size={40} />
       </div>
-      {(!registrationIsOpen && !forgotPasswordIsOpen) &&
+      {(!registrationIsOpen && !forgotPasswordIsOpen) && <>
         <Login openRegistration={openRegistration} openForgotPassword={openForgotPassword} />
-      }
+        <div>
+          <GoogleButton />
+          <AppleButton />
+        </div>
+      </>}
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <Registration closeRegistration={closeRegistration} />}
       </Suspense>
