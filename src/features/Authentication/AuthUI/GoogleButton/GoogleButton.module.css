@@ -10,7 +10,7 @@
   font-size: var(--font-size);
   font-weight: bold;
   height: 44px;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 32px;
   text-transform: uppercase;
   user-select: none;
