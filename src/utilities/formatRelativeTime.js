@@ -5,10 +5,10 @@
  * @param {string} locale - User's locale (defaults to navigator.language)
  */
 export default function formatRelativeTime(input, locale = navigator?.language || 'en') {
-  const date = input instanceof Date ? input : new Date(input);
-  const now = new Date();
-  const diffInSeconds = Math.floor((date - now) / 1000);
-  const diffInDays = Math.abs(Math.floor(diffInSeconds / 86400));
+  const date = input instanceof Date ? input : new Date(input)
+  const now = new Date()
+  const diffInSeconds = Math.floor((date - now) / 1000)
+  const diffInDays = Math.abs(Math.floor(diffInSeconds / 86400))
 
   // Best practice: switch to absolute date after 30 days
   if (diffInDays > 30) {
@@ -16,10 +16,10 @@ export default function formatRelativeTime(input, locale = navigator?.language |
       day: 'numeric', 
       month: 'short', 
       year: 'numeric' 
-    }).format(date);
+    }).format(date)
   }
 
-  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' });
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' })
   
   const units = [
     { unit: 'year', seconds: 31536000 },
@@ -28,16 +28,16 @@ export default function formatRelativeTime(input, locale = navigator?.language |
     { unit: 'hour', seconds: 3600 },
     { unit: 'minute', seconds: 60 },
     { unit: 'second', seconds: 1 }
-  ];
+  ]
 
   for (const { unit, seconds } of units) {
     if (Math.abs(diffInSeconds) >= seconds || unit === 'second') {
-      return rtf.format(Math.floor(diffInSeconds / seconds), unit);
+      return rtf.format(Math.floor(diffInSeconds / seconds), unit)
     }
   }
 }
 
 // Examples:
-console.log(formatRelativeTime(Date.now() - 300000)); // "5 minutes ago"
-console.log(formatRelativeTime(Date.now() - 86400000)); // "yesterday"
-console.log(formatRelativeTime(Date.now() - 35 * 86400000)); // "Mar 9, 2026" (Absolute date)
+console.log(formatRelativeTime(Date.now() - 300000)) // "5 minutes ago"
+console.log(formatRelativeTime(Date.now() - 86400000)) // "yesterday"
+console.log(formatRelativeTime(Date.now() - 35 * 86400000)) // "Mar 9, 2026" (Absolute date)
