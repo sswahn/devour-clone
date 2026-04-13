@@ -3,9 +3,9 @@ import CloseButton from '../../../components/CloseButton/CloseButton'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
-import styles from './Registration.module.css'
+import styles from './RegistrationForm.module.css'
 
-const Registration = ({ closeRegistration }) => {
+const RegistrationForm = ({ closeRegistration }) => {
   const [state, setState] = useState({ 
     username: '',
     email: '',
@@ -74,7 +74,7 @@ const Registration = ({ closeRegistration }) => {
   // needs closeButton()
   
   return (
-    <form className={styles.registration} onSubmit={onSubmit} aria-label="registration form">
+    <form className={styles.registrationForm} onSubmit={onSubmit} aria-label="registration form">
       <CloseButton name="registration form" close={closeRegistration} />
       <h1>Create an account</h1>
       <div>
@@ -108,4 +108,4 @@ const Registration = ({ closeRegistration }) => {
   )
 }
 
-export default Registration
+export default RegistrationForm
