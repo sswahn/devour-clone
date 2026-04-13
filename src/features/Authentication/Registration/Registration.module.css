@@ -63,7 +63,9 @@
 
 .registration summary {
   cursor: pointer;
-  /* width: 160px; */
+  width: 200px;
+
+  border: 1px dashed red;
 }
 
 .registration ul {
