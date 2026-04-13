@@ -35,9 +35,6 @@ function Login({ openRegistration, openForgotPassword }) {
   
   return (
     <section className={styles.login}>
-      <div>
-        <HomeIcon size={40} />
-      </div>
       <form onSubmit={onSubmit} aria-label="login form">
         <div>
           <input id="username" type="text" placeholder="Username" required maxLength={50} autoComplete="username" aria-label="username" />
