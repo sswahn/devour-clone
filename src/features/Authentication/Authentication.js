@@ -17,6 +17,9 @@ function Authentication() {
   
   return (
     <section className={styles.authentication}>
+      <div>
+        <HomeIcon size={40} />
+      </div>
       {(!registrationIsOpen && !forgotPasswordIsOpen) &&
         <Login openRegistration={openRegistration} openForgotPassword={openForgotPassword} />
       }
