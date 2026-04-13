@@ -76,19 +76,19 @@ function RegistrationForm() {
     <form className={styles.registrationForm} onSubmit={onSubmit} aria-label="registration form">
       <h1>Create an account</h1>
       <div>
-        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="username" aria-label="username" />
+        <input id="username" type="text" placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="username" aria-label="username" />
         <UserIcon />
       </div>
       <div>
-        <input id="email" type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} autoComplete="email" aria-label="email" />
+        <input id="email" type="email" placeholder="Email" required minLength={7} maxLength={254} autoComplete="email" aria-label="email" />
         <EnvelopeIcon />
       </div>
       <div>
-        <input id="password" type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" autoComplete="new-password" aria-label="password" />
+        <input id="password" type="password" placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" autoComplete="new-password" aria-label="password" />
         <LockIcon />
       </div>
       <div>
-        <input id="confirmPassword" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="new-password" aria-label="confirm password" />
+        <input id="confirmPassword" type="password" required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="new-password" aria-label="confirm password" />
         <LockIcon />
       </div>
       <details aria-label="password requirements">
