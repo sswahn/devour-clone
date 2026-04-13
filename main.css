@@ -655,6 +655,10 @@ button {
   touch-action: manipulation;
 }
 
+svg {
+  color: var(--text);
+}
+
 img, video {
   max-width: 100%;
   height: auto;
