@@ -243,7 +243,7 @@
 }
 
   /* Logo placeholder */
-.uAX12_MQ8mZ1gR6rjg68 div:first-child {
+.uAX12_MQ8mZ1gR6rjg68 div:first-of-type {
   align-items: center;
   display: flex;
   height: 32px;
