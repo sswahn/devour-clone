@@ -1,24 +1,24 @@
 /* Authentication Login Form */
 
-.login {
+.loginForm {
   width: 100%;
 }
 
-.login div {
+.loginForm div {
   position: relative;
 }
 
-.login div:first-child {
+.loginForm div:first-child {
   margin-bottom: 32px;
 } 
 
-.login div:last-child { 
+.loginForm div:last-child { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
 }
 
-.login > div input {
+.loginForm > div input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -28,16 +28,16 @@
   width: 100%;
 }
 
-.login > div input:focus {
+.loginForm > div input:focus {
   outline: none;
 }
 
-.login > div input::placeholder {
+.loginForm > div input::placeholder {
   color: var(--text);
   opacity: 0.6;
 }
 
-.login > div > svg {
+.loginForm > div > svg {
   fill: var(--text);
   left: 15px;
   position: absolute;
@@ -45,7 +45,7 @@
   transform: translateY(-50%);
 }
 
-.login button[type="submit"] {
+.loginForm button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
@@ -63,7 +63,7 @@
   width: 100%;
 }
 
-.login div:last-child button {
+.loginForm div:last-child button {
   background: none;
   border: 0;
   border-bottom: 1px solid var(--text);
