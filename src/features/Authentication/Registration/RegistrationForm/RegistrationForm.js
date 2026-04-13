@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import CloseButton from '../../../components/CloseButton/CloseButton'
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import styles from './RegistrationForm.module.css'
 
-const RegistrationForm = ({ closeRegistration }) => {
+function RegistrationForm() {
   const [state, setState] = useState({ 
     username: '',
     email: '',
@@ -75,7 +74,6 @@ const RegistrationForm = ({ closeRegistration }) => {
   
   return (
     <form className={styles.registrationForm} onSubmit={onSubmit} aria-label="registration form">
-      <CloseButton name="registration form" close={closeRegistration} />
       <h1>Create an account</h1>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="username" aria-label="username" />
