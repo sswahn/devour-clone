@@ -50,6 +50,12 @@
   margin-bottom: 32px;
 } 
 
+.YI7kjk9TyPudyOt3n29I > div:last-child {
+  margin-bottom: 0;
+
+  border: 1px dashed red;
+}
+
 .YI7kjk9TyPudyOt3n29I > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
@@ -58,12 +64,6 @@
   height: 44px;
   padding-left: 48px;
   width: 100%;
-}
-
-.YI7kjk9TyPudyOt3n29I > div:last-child {
-  margin-bottom: 0;
-
-  border: 1px dashed red;
 }
 
 .YI7kjk9TyPudyOt3n29I > div > input:focus {
