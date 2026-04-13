@@ -1,6 +1,11 @@
 /* Authentication Login Flow */
 
-.login {}
+.login {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
   /* Logo placeholder */
 .login div:first-child {
