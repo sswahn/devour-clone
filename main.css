@@ -236,6 +236,16 @@
   width: 100%;
 }
 
+/* Logo placeholder */
+.urg1fgnYLeruK15rLeti > div:first-child {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+}
+.urg1fgnYLeruK15rLeti > div:first-child > svg {
+  fill: var(--text);
+}
 
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
