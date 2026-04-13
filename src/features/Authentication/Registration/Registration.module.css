@@ -63,7 +63,7 @@
 
 .registration summary {
   cursor: pointer;
-  width: 160px;
+  /* width: 160px; */
 }
 
 .registration ul {
