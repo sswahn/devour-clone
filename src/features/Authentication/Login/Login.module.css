@@ -1,0 +1,14 @@
+/* Authentication Login Flow */
+
+.login {}
+
+  /* Logo placeholder */
+.login div:first-child {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+}
+.login div:first-child svg {
+  fill: var(--text);
+}
