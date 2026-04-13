@@ -31,13 +31,14 @@
 /* Authentication Registration Form */
 
 .YI7kjk9TyPudyOt3n29I {
-  color: var(--text);
+  background-color: var(--background); 
   height: 100dvh;
   padding: 16px;
   width: 100%;
 }
 
 .YI7kjk9TyPudyOt3n29I h1 {
+  color: var(--text);
   font-size: 24px;
   font-weight: normal;
   padding: 16px 0;
