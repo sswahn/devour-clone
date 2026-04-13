@@ -93,7 +93,9 @@
 
 .YI7kjk9TyPudyOt3n29I summary {
   cursor: pointer;
-  /* width: 160px; */
+  width: 200px;
+
+  border: 1px dashed red;
 }
 
 .YI7kjk9TyPudyOt3n29I ul {
