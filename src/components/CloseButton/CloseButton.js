@@ -1,7 +1,7 @@
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './CloseButton.module.css'
 
-function CloseButton({ name, close }) {
+function CloseButton({ name, close }) { // should use "text" instead of name
   
   const onClick = event => {
     close()
