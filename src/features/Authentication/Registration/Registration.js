@@ -86,11 +86,11 @@ const Registration = ({ closeRegistration }) => {
         <EnvelopeIcon />
       </div>
       <div>
-        <input id="password" type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" autoComplete="off" aria-label="password" />
+        <input id="password" type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" autocomplete="new-password" aria-label="password" />
         <LockIcon />
       </div>
       <div>
-        <input id="confirmPassword" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" />
+        <input id="confirmPassword" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autocomplete="new-password" aria-label="confirm password" />
         <LockIcon />
       </div>
       <details aria-label="password requirements">
