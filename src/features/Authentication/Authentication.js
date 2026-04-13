@@ -7,7 +7,7 @@ const Registration = lazy(() => import('./Registration/Registration'))
 const ForgotPassword = lazy(() => import('./ForgotPassword/ForgotPassword'))
 import styles from './Authentication.module.css'
 
-import HomeIcon from '../../../components/Icons/HomeIcon/HomeIcon'
+import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'
 
 function Authentication() {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
