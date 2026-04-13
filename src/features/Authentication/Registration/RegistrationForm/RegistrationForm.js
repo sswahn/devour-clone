@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
-import EnvelopeIcon from '../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
-import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
+import UserIcon from '../../../../components/Icons/UserIcon/UserIcon'
+import EnvelopeIcon from '../../../../components/Icons/EnvelopeIcon/EnvelopeIcon'
+import LockIcon from '../../../../components/Icons/LockIcon/LockIcon'
 import styles from './RegistrationForm.module.css'
 
 function RegistrationForm() {
