@@ -62,6 +62,87 @@
   z-index: 9999;
 }
 
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/Login.module.css ***!
+  \******************************************************************************************************/
+/* Authentication Login Form */
+
+.uAX12_MQ8mZ1gR6rjg68 {
+  width: 100%;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 div {
+  position: relative;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 div:first-child {
+  margin-bottom: 32px;
+} 
+
+.uAX12_MQ8mZ1gR6rjg68 div:last-child { 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 > div input {
+  background-color: var(--input);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 18px;
+  height: 44px;
+  padding-left: 48px;
+  width: 100%;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 > div input:focus {
+  outline: none;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 > div input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 > div > svg {
+  fill: var(--text);
+  left: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.uAX12_MQ8mZ1gR6rjg68 button[type="submit"] {
+  align-items: center;
+  background: var(--text);
+  border: 1px solid var(--background);
+  border-radius: 10px;
+  color: var(--background);
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  height: 44px;
+  justify-content: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  user-select: none;
+  width: 100%;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 div:last-child button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--text);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.uAX12_MQ8mZ1gR6rjg68 > div:last-child {
+  margin-top: 32px;
+}
+
 /*!***************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AuthUI/GoogleButton/GoogleButton.module.css ***!
   \***************************************************************************************************************************/
@@ -125,105 +206,6 @@
   fill: var(--text);
 }
 
-/*!******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/Login.module.css ***!
-  \******************************************************************************************************/
-/* Authentication Login Form */
-
-.uAX12_MQ8mZ1gR6rjg68 {
-  color: var(--text);  
-  height: 100dvh;
-  padding: 16px;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-/* Logo placeholder */
-.uAX12_MQ8mZ1gR6rjg68 > div:first-child {
-  align-items: center;
-  display: flex;
-  height: 32px;
-  justify-content: center;
-}
-.uAX12_MQ8mZ1gR6rjg68 > div:first-child > svg {
-  fill: var(--text);
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div {
-  position: relative;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div:first-child {
-  margin-bottom: 32px;
-} 
-
-.uAX12_MQ8mZ1gR6rjg68 form > div:last-child { 
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div > input {
-  background-color: var(--input);
-  border: 1px solid var(--input-border);
-  border-radius: 10px;
-  font-size: 18px;
-  height: 44px;
-  padding-left: 48px;
-  width: 100%;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div > input:focus {
-  outline: none;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div > input::placeholder {
-  color: var(--text);
-  opacity: 0.6;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div > svg {
-  fill: var(--text);
-  left: 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form button[type="submit"] {
-  align-items: center;
-  background: var(--text);
-  border: 1px solid var(--background);
-  border-radius: 10px;
-  color: var(--background);
-  cursor: pointer;
-  display: flex;
-  font-size: 18px;
-  font-weight: bold;
-  height: 44px;
-  justify-content: center;
-  margin-bottom: 32px;
-  text-transform: uppercase;
-  user-select: none;
-  width: 100%;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 form > div:last-child button {
-  background: none;
-  border: 0;
-  border-bottom: 1px solid var(--text);
-  color: var(--text);
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.uAX12_MQ8mZ1gR6rjg68 > div:last-child {
-  margin-top: 32px;
-}
-
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Authentication.module.css ***!
   \*********************************************************************************************************/
@@ -231,9 +213,16 @@
 
 .kXofMQa6vzuWGHvhoZSw {
   background-color: var(--background);
+  height: 100dvh;
   margin: 0 auto;
   max-width: 500px;
+  padding: 16px;
   width: 100%;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* Logo placeholder */
