@@ -107,7 +107,7 @@
   font-size: var(--font-size);
   font-weight: bold;
   height: 44px;
-  justify-content: space-around;
+  justify-content: center;
   text-transform: uppercase;
   user-select: none;
   width: 100%;
