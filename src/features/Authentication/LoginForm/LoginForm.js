@@ -3,9 +3,9 @@ import { SetSessionContext } from '../../../components/Providers/SessionProvider
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
-import styles from './Login.module.css'
+import styles from './LoginForm.module.css'
 
-function Login({ openRegistration, openForgotPassword }) {
+function LoginForm({ openRegistration, openForgotPassword }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -18,13 +18,23 @@ function Login({ openRegistration, openForgotPassword }) {
     event.preventDefault()
   }
 
-  // for better organization
-  // only use forms in login components
-  // move home icon to Authentication component
-  // conditionally render google/apple buttons in authentication
+  // Make this component LoginForm
+  // Then make a top level for Login dir called Login
+  // it should contain Logo, LoginForm, FederatedLogin components:
+  /*
+    function Login() {
+      return (
+        <section>
+          <Logo />
+          <LoginForm />
+          <FederatedLoginButtons />
+        </section>
+      )
+    }
+  */
   
   return (
-    <form className={styles.login} onSubmit={onSubmit} aria-label="login form">
+    <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
       <div>
         <input id="username" type="text" placeholder="Username" required maxLength={50} autoComplete="username" aria-label="username" />
         <UserIcon size={20} />
@@ -43,4 +53,4 @@ function Login({ openRegistration, openForgotPassword }) {
   )
 }
 
-export default Login
+export default LoginForm
