@@ -1,6 +1,8 @@
 import { useState, Suspense, lazy } from 'react'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import Login from './Login/Login'
+import GoogleButton from './AuthUI/GoogleButton/GoogleButton'
+import AppleButton from './AuthUI/AppleButton/AppleButton'
 const Registration = lazy(() => import('./Registration/Registration'))
 const ForgotPassword = lazy(() => import('./ForgotPassword/ForgotPassword'))
 import styles from './Authentication.module.css'
