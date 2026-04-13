@@ -108,8 +108,10 @@
   display: flex;
   font-size: var(--font-size);
   font-weight: bold;
+  gap: 16px;
   height: 44px;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 40px;
   text-transform: uppercase;
   user-select: none;
   width: 100%;
