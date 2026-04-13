@@ -22,12 +22,6 @@
   fill: var(--text);
 }
 
-.login form label {
-  margin: 16px 0;
-  font-size: var(--font-size);
-  text-transform: uppercase;
-}
-
 .login form > div {
   position: relative;
 }
