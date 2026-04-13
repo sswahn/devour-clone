@@ -57,7 +57,7 @@ function ForgotPassword({ closeForgotPassword }) {
       <CloseButton name="forgot password form" close={closeForgotPassword} />
       <h1>Forgot password</h1>
       <div>
-        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
+        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="username" aria-label="username" />
         <UserIcon />
       </div>
       <button type="submit" aria-label="reset password">Reset Password</button>
