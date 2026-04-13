@@ -655,10 +655,6 @@ button {
   touch-action: manipulation;
 }
 
-button svg {
-  color: var(--text);
-}
-
 svg {
   fill: var(--text);
 }
