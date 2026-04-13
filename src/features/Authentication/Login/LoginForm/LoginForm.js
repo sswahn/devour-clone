@@ -3,6 +3,7 @@ import { SetSessionContext } from '../../../components/Providers/SessionProvider
 import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
+import ForgotPasswordButton from './ForgotPasswordButton/ForgotPasswordButton'
 import styles from './LoginForm.module.css'
 
 function LoginForm({ openRegistration, openForgotPassword }) {
@@ -47,7 +48,7 @@ function LoginForm({ openRegistration, openForgotPassword }) {
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
       <button type="submit" aria-label="sign in">Sign In</button>
       <div>
-        <button onClick={openForgotPassword} type="button" aria-label="open forgot password form">Forgot password?</button>
+        <ForgotPasswordButton openForgotPassword={openForgotPassword} />
         <button onClick={openRegistration} type="button" aria-label="open registration form">Create an account</button>
       </div>
     </form>
