@@ -2,6 +2,7 @@
 
 .registration {
   color: var(--text);
+  height: 100dvh;
   padding: 16px;
   width: 100%;
 }
