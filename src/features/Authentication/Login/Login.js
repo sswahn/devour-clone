@@ -8,7 +8,7 @@ function Login({ openForgotPassword, openRegistration }) {
   return (
     <section className={styles.login}>
       <Logo size={40} />
-      <LoginForm openRegistration={openRegistration} openForgotPassword={openForgotPassword} />
+      <LoginForm openForgotPassword={openForgotPassword} openRegistration={openRegistration} />
       <div>
         <GoogleButton />
         <AppleButton />
