@@ -13,7 +13,7 @@
 }
 
   /* Logo placeholder */
-.registration div:first-of-type {
+.registration > div:first-of-type {
   align-items: center;
   display: flex;
   height: 32px;
