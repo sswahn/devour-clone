@@ -24,8 +24,10 @@ function AppleButton() {
       onKeyDown={onKeyDown} 
       type="button" 
       aria-label="continue with apple">
-      <AppleIcon /> 
-      <span>Continue with Apple</span>
+      <div>
+        <AppleIcon /> 
+        <span>Continue with Apple</span>
+      </div>
     </button>
   )
 }
