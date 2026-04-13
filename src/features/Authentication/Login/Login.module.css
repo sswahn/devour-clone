@@ -4,32 +4,21 @@
   width: 100%;
 }
 
-/* Logo placeholder */
-.login > div:first-child {
-  align-items: center;
-  display: flex;
-  height: 32px;
-  justify-content: center;
-}
-.login > div:first-child > svg {
-  fill: var(--text);
-}
-
-.login form > div {
+.login div {
   position: relative;
 }
 
-.login form > div:first-child {
+.login div:first-child {
   margin-bottom: 32px;
 } 
 
-.login form > div:last-child { 
+.login div:last-child { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
 }
 
-.login form > div > input {
+.login > div input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -39,16 +28,16 @@
   width: 100%;
 }
 
-.login form > div > input:focus {
+.login > div input:focus {
   outline: none;
 }
 
-.login form > div > input::placeholder {
+.login > div input::placeholder {
   color: var(--text);
   opacity: 0.6;
 }
 
-.login form > div > svg {
+.login > div > svg {
   fill: var(--text);
   left: 15px;
   position: absolute;
@@ -56,7 +45,7 @@
   transform: translateY(-50%);
 }
 
-.login form button[type="submit"] {
+.login button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
@@ -74,7 +63,7 @@
   width: 100%;
 }
 
-.login form > div:last-child button {
+.login div:last-child button {
   background: none;
   border: 0;
   border-bottom: 1px solid var(--text);
