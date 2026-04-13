@@ -1,13 +1,14 @@
 /* Authentication Registration Form */
 
 .registration {
-  color: var(--text);
+  background-color: var(--background); 
   height: 100dvh;
   padding: 16px;
   width: 100%;
 }
 
 .registration h1 {
+  color: var(--text);
   font-size: 24px;
   font-weight: normal;
   padding: 16px 0;
