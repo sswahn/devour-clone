@@ -1,10 +1,14 @@
 /* Authentication Login Form */
 
 .login {
-  color: var(--text);
-
+  color: var(--text);  
+  height: 100dvh;
   padding: 16px;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Logo placeholder */
