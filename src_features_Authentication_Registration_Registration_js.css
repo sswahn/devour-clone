@@ -16,7 +16,7 @@
 }
 
   /* Logo placeholder */
-.YI7kjk9TyPudyOt3n29I div:first-of-type {
+.YI7kjk9TyPudyOt3n29I > div:first-of-type {
   align-items: center;
   display: flex;
   height: 32px;
