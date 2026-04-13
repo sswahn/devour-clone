@@ -225,6 +225,34 @@
   fill: var(--text);
 }
 
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/Login.module.css ***!
+  \******************************************************************************************************/
+/* Authentication Login Flow */
+
+.uAX12_MQ8mZ1gR6rjg68 {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 16px;
+  width: 100%;
+}
+
+  /* Logo placeholder */
+.uAX12_MQ8mZ1gR6rjg68 div:first-child {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+}
+.uAX12_MQ8mZ1gR6rjg68 div:first-child svg {
+  fill: var(--text);
+}
+
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Authentication.module.css ***!
   \*********************************************************************************************************/
