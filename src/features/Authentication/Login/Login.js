@@ -1,4 +1,4 @@
-import Logo from '../../components/Logo/Logo'
+import Logo from '../../../components/Logo/Logo'
 import LoginForm from './LoginForm'
 import GoogleButton from './GoogleButton/GoogleButton'
 import AppleButton from './AppleButton/AppleButton'
