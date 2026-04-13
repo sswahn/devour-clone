@@ -103,11 +103,11 @@
   position: relative;
 }
 
-.YdN4FrYXnW8bD9aeq0kF div:first-child {
+.YdN4FrYXnW8bD9aeq0kF div:first-of-type {
   margin-bottom: 32px;
 } 
 
-.YdN4FrYXnW8bD9aeq0kF div:last-child { 
+.YdN4FrYXnW8bD9aeq0kF div:last-of-type { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
@@ -158,7 +158,7 @@
   width: 100%;
 }
 
-.y1o9Q11tFYybw_5XLM0R > div:last-child {
+.y1o9Q11tFYybw_5XLM0R div:last-of-type {
   margin-top: 32px;
 }
 
