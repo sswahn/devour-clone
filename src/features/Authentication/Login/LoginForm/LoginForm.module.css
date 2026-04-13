@@ -8,11 +8,11 @@
   position: relative;
 }
 
-.loginForm div:first-child {
+.loginForm div:first-of-type {
   margin-bottom: 32px;
 } 
 
-.loginForm div:last-child { 
+.loginForm div:last-of-type { 
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
@@ -63,6 +63,6 @@
   width: 100%;
 }
 
-.login > div:last-child {
+.login div:last-of-type {
   margin-top: 32px;
 }
