@@ -6,7 +6,7 @@ import RegistrationForm from './RegistrationForm/RegistrationForm'
 function Registration({ closeRegistration }) {
   return (
     <section className={styles.registration}>
-      <CloseButton text="registration form" close={closeRegistration} />
+      <CloseButton name="registration form" close={closeRegistration} />
       <Logo size={40} />
       <RegistrationForm />
     </section>
