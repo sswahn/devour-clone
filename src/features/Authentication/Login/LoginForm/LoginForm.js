@@ -4,9 +4,10 @@ import UserIcon from '../../../components/Icons/UserIcon/UserIcon'
 import LockIcon from '../../../components/Icons/LockIcon/LockIcon'
 import Checkbox from '../../../components/Checkbox/Checkbox'
 import ForgotPasswordButton from './ForgotPasswordButton/ForgotPasswordButton'
+import OpenRegistrationButton from './OpenRegistrationButton/OpenRegistrationButton'
 import styles from './LoginForm.module.css'
 
-function LoginForm({ openRegistration, openForgotPassword }) {
+function LoginForm({ openForgotPassword, openRegistration }) {
   const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
   const [checked, setChecked] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -18,22 +19,6 @@ function LoginForm({ openRegistration, openForgotPassword }) {
   const onSubmit = event => {
     event.preventDefault()
   }
-
-  // Make this component LoginForm
-  // Then make a top level for Login dir called Login
-  // it should contain Logo, LoginForm, FederatedLogin components:
-  /*
-    function Login() {
-      return (
-        <section>
-          {<CloseButton  />} for all but Login
-          <Logo />
-          <LoginForm />
-          <FederatedLoginButtons />
-        </section>
-      )
-    }
-  */
   
   return (
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
@@ -49,7 +34,7 @@ function LoginForm({ openRegistration, openForgotPassword }) {
       <button type="submit" aria-label="sign in">Sign In</button>
       <div>
         <ForgotPasswordButton openForgotPassword={openForgotPassword} />
-        <button onClick={openRegistration} type="button" aria-label="open registration form">Create an account</button>
+        <OpenRegistrationButton openRegistration={openRegistration} />
       </div>
     </form>
   )
