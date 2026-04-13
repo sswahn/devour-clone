@@ -1,13 +1,9 @@
 import { useState, Suspense, lazy } from 'react'
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import Login from './Login/Login'
-import GoogleButton from './AuthUI/GoogleButton/GoogleButton'
-import AppleButton from './AuthUI/AppleButton/AppleButton'
 const Registration = lazy(() => import('./Registration/Registration'))
 const ForgotPassword = lazy(() => import('./ForgotPassword/ForgotPassword'))
 import styles from './Authentication.module.css'
-
-import HomeIcon from '../../components/Icons/HomeIcon/HomeIcon'
 
 function Authentication() {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
@@ -23,10 +19,6 @@ function Authentication() {
     <section className={styles.authentication}>
       {(!registrationIsOpen && !forgotPasswordIsOpen) && <>
         <Login openRegistration={openRegistration} openForgotPassword={openForgotPassword} />
-        <div>
-          <GoogleButton />
-          <AppleButton />
-        </div>
       </>}
       <Suspense fallback={<LoadingSpinner />}>
         {registrationIsOpen && <Registration closeRegistration={closeRegistration} />}
