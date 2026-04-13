@@ -65,7 +65,7 @@ button {
 }
 
 svg {
-  color: var(--text);
+  fill: var(--text);
 }
 
 img, video {
