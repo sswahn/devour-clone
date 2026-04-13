@@ -78,11 +78,11 @@ const Registration = ({ closeRegistration }) => {
       <CloseButton name="registration form" close={closeRegistration} />
       <h1>Create an account</h1>
       <div>
-        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
+        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="username" aria-label="username" />
         <UserIcon />
       </div>
       <div>
-        <input id="email" type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} autoComplete="off" aria-label="email" />
+        <input id="email" type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} autoComplete="email" aria-label="email" />
         <EnvelopeIcon />
       </div>
       <div>
