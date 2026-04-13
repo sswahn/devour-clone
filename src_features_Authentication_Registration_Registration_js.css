@@ -1,3 +1,28 @@
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Registration/Registration.module.css ***!
+  \********************************************************************************************************************/
+/* Authentication Registration Flow */
+
+.YI7kjk9TyPudyOt3n29I {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 16px;
+  width: 100%;
+}
+
+  /* Logo placeholder */
+.YI7kjk9TyPudyOt3n29I div:first-child {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+}
+
 /*!*****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/CloseButton/CloseButton.module.css ***!
   \*****************************************************************************************************/
@@ -25,19 +50,19 @@
   fill: var(--text);
 }
 
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Registration/Registration.module.css ***!
-  \********************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Registration/RegistrationForm/RegistrationForm.module.css ***!
+  \*****************************************************************************************************************************************/
 /* Authentication Registration Form */
 
-.YI7kjk9TyPudyOt3n29I {
+.w7hNpZlVuqjzaVtvMlHw {
   background-color: var(--background); 
   height: 100dvh;
   padding: 16px;
   width: 100%;
 }
 
-.YI7kjk9TyPudyOt3n29I h1 {
+.w7hNpZlVuqjzaVtvMlHw h1 {
   color: var(--text);
   font-size: 24px;
   font-weight: normal;
@@ -45,16 +70,16 @@
   text-align: center;
 }
 
-.YI7kjk9TyPudyOt3n29I > div {
+.w7hNpZlVuqjzaVtvMlHw > div {
   position: relative;
   margin-bottom: 32px;
 } 
 
-.YI7kjk9TyPudyOt3n29I > div:last-of-type {
+.w7hNpZlVuqjzaVtvMlHw > div:last-of-type {
   margin-bottom: 0;
 }
 
-.YI7kjk9TyPudyOt3n29I > div > input {
+.w7hNpZlVuqjzaVtvMlHw > div > input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -64,16 +89,16 @@
   width: 100%;
 }
 
-.YI7kjk9TyPudyOt3n29I > div > input:focus {
+.w7hNpZlVuqjzaVtvMlHw > div > input:focus {
   outline: none;
 }
 
-.YI7kjk9TyPudyOt3n29I > div > input::placeholder {
+.w7hNpZlVuqjzaVtvMlHw > div > input::placeholder {
   color: var(--text);
   opacity: 0.6;
 }
 
-.YI7kjk9TyPudyOt3n29I > div > svg {
+.w7hNpZlVuqjzaVtvMlHw > div > svg {
   fill: var(--text);
   left: 15px;
   position: absolute;
@@ -81,29 +106,29 @@
   transform: translateY(-50%);
 }
 
-.YI7kjk9TyPudyOt3n29I details {
+.w7hNpZlVuqjzaVtvMlHw details {
   color: var(--text);
   font-size: 14px;
   line-height: 1.6;
   margin: 16px 0;
 }
 
-.YI7kjk9TyPudyOt3n29I summary {
+.w7hNpZlVuqjzaVtvMlHw summary {
   cursor: pointer;
   width: 192px;
 }
 
-.YI7kjk9TyPudyOt3n29I ul {
+.w7hNpZlVuqjzaVtvMlHw ul {
   list-style-type: none;
   padding-left: 0;
   margin: 5px 0 0 0;
 }
 
-.YI7kjk9TyPudyOt3n29I li {
+.w7hNpZlVuqjzaVtvMlHw li {
   margin-left: 12px;
 }
 
-.YI7kjk9TyPudyOt3n29I button[type="submit"] {
+.w7hNpZlVuqjzaVtvMlHw button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
