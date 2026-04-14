@@ -545,8 +545,8 @@
   
   --bg-primary: Canvas;
   --bg-secondary: light-dark(
-    color-mix(in oklch, Canvas 92%, white),
-    color-mix(in oklch, Canvas 85%, black)
+    color-mix(in oklch, Canvas 92%, CanvasText),
+    color-mix(in oklch, Canvas 85%, CanvasText)
   );
   
   --text-primary: CanvasText;
