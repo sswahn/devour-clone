@@ -1,6 +1,6 @@
-import styles from './OpenRegistrationButton.module.css'
+import styles from './RegistrationButton.module.css'
 
-function OpenRegistrationButton({ openRegistration }) {
+function RegistrationButton({ openRegistration }) {
 
   const action = () => {
     openRegistration()
@@ -17,7 +17,7 @@ function OpenRegistrationButton({ openRegistration }) {
   }
   return (
     <button 
-      className={styles.openRegistrationButton} 
+      className={styles.registrationButton} 
       onClick={onClick} 
       onKeyDown={onKeyDown} 
       type="button" 
@@ -27,4 +27,4 @@ function OpenRegistrationButton({ openRegistration }) {
   )
 }
 
-export default OpenRegistrationButton
+export default RegistrationButton
