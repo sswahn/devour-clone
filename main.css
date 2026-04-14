@@ -77,6 +77,7 @@
 
 .__CuXY8dgC7rbEFNNkzg {
   background-color: var(--accent);
+  border: 1px solid var(--button-border);
   border-radius: 5px;
   color: var(--accent-text);
   cursor: pointer;
