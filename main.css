@@ -108,7 +108,7 @@
   justify-content: center;
 }
 
-.kXofMQa6vzuWGHvhoZSw a {
+.kXofMQa6vzuWGHvhoZSw a:link {
   color: var(--link-text);
   display: block;
   margin-top: 24px;
