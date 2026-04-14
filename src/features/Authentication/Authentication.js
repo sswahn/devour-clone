@@ -9,6 +9,7 @@ function Authentication() {
     <section className={styles.authentication}>
       {/* Logo */}
       <LoginForm />
+      <a href="https://fidoalliance.org/passkeys/" target="_blank" rel="noopener noreferrer" aria-label="Read about passkeys">About passkeys</a>
       <RegistrationButton />
     </section>
   )
