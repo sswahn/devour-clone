@@ -27,7 +27,7 @@
 
 .loginForm button[type="submit"] {
   align-items: center;
-  background: var(--text-primary);
+  background: var(--button);
   border-radius: 5px;
   color: var(--background-primary);
   cursor: pointer;
