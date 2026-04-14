@@ -26,6 +26,7 @@
 
 :root {
   color-scheme: light dark;
+  --brand: oklch(65% 0.18 260);
   
   --neutral-0: oklch(99% 0.01 260);
   --neutral-50: oklch(99% 0.01 260);
