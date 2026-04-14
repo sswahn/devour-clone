@@ -522,6 +522,11 @@
 
   --font-size: 16px;
   --line-height: 1.5;
+
+  /* Status Colors */
+  --success: oklch(65% 0.18 calc(260 - 120));
+  --warning: oklch(70% 0.18 calc(260 - 200));
+  --danger: oklch(65% 0.18 calc(260 - 260));
 }
 
 
