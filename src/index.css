@@ -91,6 +91,7 @@
   
   --input-bg: Field;
   --input-text: FieldText;
+  --input-border: FieldBorder;
 
   --active-button: light-dark(#777777, #444444);
 
