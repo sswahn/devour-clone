@@ -491,7 +491,7 @@
 }
 
 */
-
+/*
 :root {
   color-scheme: light dark;
   --brand: oklch(65% 0.18 260);
@@ -522,12 +522,35 @@
   --font-size: 16px;
   --line-height: 1.5;
 
-  /* Status Colors */
   --success: oklch(65% 0.18 calc(260 - 120));
   --warning: oklch(70% 0.18 calc(260 - 200));
   --danger: oklch(65% 0.18 calc(260 - 260));
 }
 
+*/
+
+:root {
+  color-scheme: light dark;
+  
+  --black: #181818;
+  --white: #f9fafb;
+  
+  --background: light-dark(var(--white), var(--black));
+  --text: light-dark(var(--black), var(--white));
+  --border: light-dark(
+    color-mix(in srgb, var(--white), transparent 95%), 
+    color-mix(in srgb, var(--black), transparent 95%)
+  );
+  
+  --input: light-dark(#999999, #444444);
+  --input-border: light-dark(#888888, #555555);
+
+  --active-button: light-dark(#777777, #444444);
+
+  --font-size: 16px;
+  --line-height: 1.5;
+  
+}
 
 
 
