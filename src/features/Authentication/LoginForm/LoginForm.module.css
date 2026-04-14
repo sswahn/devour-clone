@@ -13,6 +13,7 @@
 .loginForm input {
   background-color: white;
   border: 1px solid var(--input-border);
+  color: var(--text);
   font-size: 18px;
   height: 44px;
   margin-bottom: 40px;
