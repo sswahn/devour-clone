@@ -558,6 +558,7 @@
 
   --link-text: LinkText;
   --link-text-visited: VisitedText;
+  --link-text-active: ActiveText;
   
   --input-bg: Field;
   --input-text: FieldText;
