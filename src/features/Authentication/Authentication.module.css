@@ -21,20 +21,3 @@
   justify-content: center;
   margin-bottom: 56px;
 }
-
-.authentication p {
-  color: var(--text-primary);
-  margin-top: 24px;
-}
-
-.authentication a:link {
-  color: var(--link-text);
-}
-
-.authentication a:visited {
-  color: var(--link-text-visited);
-}
-
-.authentication a:active {
-  color: var(--link-text-active);
-}
