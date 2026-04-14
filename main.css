@@ -106,7 +106,7 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw > div {
-  margin-top: -56px
+  transform: translateY(-56px);
 }
 
 .kXofMQa6vzuWGHvhoZSw div > div:first-of-type {
