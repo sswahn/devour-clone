@@ -29,7 +29,7 @@
   align-items: center;
   background-color: var(--button);
   border-radius: 5px;
-  color: var(--background-primary);
+  color: var(--text-primary);
   cursor: pointer;
   display: flex;
   font-size: 18px;
