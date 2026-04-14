@@ -588,7 +588,8 @@
 }
 
 html {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
   font-feature-settings: "cv11", "ss01";
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -621,7 +622,7 @@ button {
 }
 
 svg {
-  fill: var(--text);
+  fill: var(--text-primary);
 }
 
 img, video {
@@ -638,6 +639,9 @@ img, video {
 
 
 
+
+/*
+
 .tooltip {
   background-color: #575a62;
   border-radius: 5px;
@@ -653,10 +657,6 @@ img, video {
 
 
 
-
-
-
-/*
 .sidebar-user {
   padding-top: 4px;
 }
