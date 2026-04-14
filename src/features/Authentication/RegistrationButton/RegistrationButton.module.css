@@ -1,10 +1,10 @@
 /* Auth Login Flow Forgot Password Button */
 
 .registrationButton {
-  background: none;
-  border: 2px solid var(--border);
-  border-radius: 50%;
-  color: var(--text);
+  background: var(--text);
+  border: 2px solid var(--background);
+  border-radius: 5px;
+  color: var(--background);
   cursor: pointer;
   font-size: 24px;
   height: 44px;
