@@ -117,23 +117,6 @@
   margin-bottom: 56px;
 }
 
-.kXofMQa6vzuWGHvhoZSw p {
-  color: var(--text-primary);
-  margin-top: 24px;
-}
-
-.kXofMQa6vzuWGHvhoZSw a:link {
-  color: var(--link-text);
-}
-
-.kXofMQa6vzuWGHvhoZSw a:visited {
-  color: var(--link-text-visited);
-}
-
-.kXofMQa6vzuWGHvhoZSw a:active {
-  color: var(--link-text-active);
-}
-
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
   \*******************************************************************************************/
