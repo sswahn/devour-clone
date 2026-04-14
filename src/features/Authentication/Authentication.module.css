@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.authentication p {
+  color: var(--text-primary);
+}
+
 .authentication a:link {
   color: var(--link-text);
   display: block;
