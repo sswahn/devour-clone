@@ -18,7 +18,7 @@ function LoginForm() {
   return (
     <form className={styles.loginForm} onSubmit={onSubmit} aria-label="login form">
       <label htmlFor="email">Email:</label>
-      <input id="email" type="text" required maxLength={50} autoComplete="email" aria-label="email" />
+      <input id="email" type="text" required maxLength={50} autoComplete="username webauthn" aria-label="email" />
       <button type="submit" aria-label="sign in">Continue</button>
     </form>
   )
