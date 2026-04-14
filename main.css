@@ -76,10 +76,10 @@
 /* Auth Login Flow Forgot Password Button */
 
 .__CuXY8dgC7rbEFNNkzg {
-  background-color: var(--accent);
+  background-color: var(--button-bg);
   border: 1px solid var(--button-border);
   border-radius: 5px;
-  color: var(--accent-text);
+  color: var(--button-text);
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
@@ -89,7 +89,7 @@
 }
 
 .__CuXY8dgC7rbEFNNkzg:active {
-  background: var(--active-button);
+  background: var(--button-active);
 }
 
 /*!*********************************************************************************************************!*\
