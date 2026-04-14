@@ -75,9 +75,9 @@
 /* Auth Login Flow Forgot Password Button */
 
 .__CuXY8dgC7rbEFNNkzg {
-  background-color: var(--button-bg);
+  background-color: var(--accent);
   border-radius: 5px;
-  color: var(--button-text);
+  color: var(--accent-text);
   cursor: pointer;
   font-size: 18px;
   height: 44px;
