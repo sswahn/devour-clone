@@ -54,12 +54,6 @@
   --font-size: 16px;
   --line-height: 1.5;
 
-  --button: linear-gradient(
-    to top, 
-    light-dark(var(--neutral-50), var(--neutral-900)),
-    light-dark(var(--neutral-0), var(--neutral-800))
-  );
-
   /* Status Colors */
   --success: oklch(65% 0.18 calc(260 - 120));
   --warning: oklch(70% 0.18 calc(260 - 200));
