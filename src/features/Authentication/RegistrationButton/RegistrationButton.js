@@ -25,8 +25,8 @@ function RegistrationButton() {
       onClick={onClick} 
       onKeyDown={onKeyDown} 
       type="button" 
-      aria-label="create an account">
-      Create an account
+      aria-label="sign up">
+      Sign Up
     </button>
   )
 }
