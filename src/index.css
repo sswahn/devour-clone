@@ -91,8 +91,8 @@
   */
 
   /* Custom Button */
-  --button-bg: light-dark(black, Field);
-  --button-text: light-dark(white, FieldText);
+  --button-bg: light-dark(Canvas, CanvasText);
+  --button-text: light-dark(CanvasText, Canvas);
   --button-border: ButtonBorder;
   --button-active: color-mix(in oklch, CanvasText 80%, Canvas);
   
