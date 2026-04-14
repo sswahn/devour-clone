@@ -83,6 +83,9 @@
   --button-text: ButtonText;
   
   --border: GrayText;
+
+  --link-text: LinkText;
+  --link-text-visited: VisitedText;
   
   --input-bg: Field;
   --input-text: FieldText;
