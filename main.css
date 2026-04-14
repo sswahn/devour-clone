@@ -559,7 +559,7 @@
   --button-text: ButtonText;
   --button-border: ButtonBorder;
   
-  --border: GrayText;
+  --border: CanvasText;
 
   --link-text: LinkText;
   --link-text-visited: VisitedText;
