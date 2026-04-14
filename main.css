@@ -54,7 +54,7 @@
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
   background-color: var(--button-bg);
-  border: 0;
+  border: 1px solid var(--button-border);
   border-radius: 5px;
   color: var(--button-text);
   cursor: pointer;
