@@ -25,6 +25,8 @@
 */
 
 :root {
+  color-scheme: light dark;
+  
   --neutral-0: oklch(99% 0.01 260);
   --neutral-50: oklch(99% 0.01 260);
   --neutral-100: oklch(99% 0.01 260);
@@ -36,7 +38,21 @@
   --neutral-700: oklch(99% 0.01 260);
   --neutral-800: oklch(99% 0.01 260);
   --neutral-900: oklch(99% 0.01 260);
+
+
+  --background-primary: light-dark(var(--neutral-0), var(--neutral-900));
+  --background-secondary: light-dark(var(--neutral-50), var(--neutral-800));
+  --background-tertiary: light-dark(var(--neutral-100), var(--neutral-700));
   
+  --text-primary: light-dark(var(--neutral-900), var(--neutral-0));
+  --text-secondary: light-dark(var(--neutral-500), var(--neutral-300));
+  
+  --border: light-dark(var(--neutral-200), var(--neutral-700));
+  
+  --active-button: var(--neutral-500);
+
+  --font-size: 16px;
+  --line-height: 1.5;
 }
 
 
