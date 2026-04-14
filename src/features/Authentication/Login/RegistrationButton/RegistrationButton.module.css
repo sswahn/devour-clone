@@ -1,6 +1,6 @@
 /* Auth Login Flow Forgot Password Button */
 
-.openRegistrationButton {
+.registrationButton {
   background: none;
   border: 0;
   border-bottom: 1px solid var(--text);
