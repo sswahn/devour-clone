@@ -8,5 +8,9 @@
 }
 
 .authentication div:first-of-type {
-  padding: 50px auto;
+  margin: 56px auto;
+}
+
+.authentication a {
+  margin-top: 24px;
 }
