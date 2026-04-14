@@ -72,6 +72,10 @@
     color-mix(in oklch, Canvas 92%, CanvasText),
     color-mix(in oklch, Canvas 85%, CanvasText)
   );
+  --bg-tertiary: light-dark(
+    color-mix(in oklch, Canvas 88%, CanvasText),
+    color-mix(in oklch, Canvas 80%, CanvasText)
+  );
   
   --text-primary: CanvasText;
   --text-secondary: GrayText;
