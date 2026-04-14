@@ -19,12 +19,12 @@
 
 .authentication p {
   color: var(--text-primary);
+  margin-top: 24px;
 }
 
 .authentication a:link {
   color: var(--link-text);
   display: block;
-  margin-top: 24px;
 }
 
 .authentication a:visited {
