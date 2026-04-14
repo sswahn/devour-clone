@@ -1,6 +1,7 @@
 /* Authentication Flow */
 
 .authentication {
+  background: var(--background-primary);
   height: 100dvh;
   max-width: 500px;
   padding: 16px;
