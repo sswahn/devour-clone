@@ -12,7 +12,7 @@
 }
 
 .authentication > div {
-  margin-top: -56px
+  transform: translateY(-56px);
 }
 
 .authentication div > div:first-of-type {
