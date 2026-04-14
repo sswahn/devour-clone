@@ -557,25 +557,32 @@
   --accent: AccentColor;
   --accent-text: AccentColorText;
 
+  /* Native:
   --button-bg: ButtonFace;
   --button-text: ButtonText;
   --button-border: ButtonBorder;
   --button-active: color-mix(in oklch, AccentColor 80%, Canvas);
+  */
+
+  /* Custom Button */
+  --button-bg: light-dark(black, Field);
+  --button-text: light-dark(white, FieldText);
+  --button-border: ButtonBorder;
+  --button-active: color-mix(in oklch, CanvasText 80%, Canvas);
   
   --border: CanvasText;
 
-  --link-text: LinkText;
-  --link-text-visited: VisitedText;
-  --link-text-active: ActiveText;
-  
   --input-bg: Field;
   --input-text: FieldText;
   --input-border: ButtonBorder;
 
- 
-
   --font-size: 16px;
   --line-height: 1.5;
+
+  
+  --link-text: LinkText;
+  --link-text-visited: VisitedText;
+  --link-text-active: ActiveText;
   
 }
 
