@@ -85,6 +85,10 @@
   width: 100%;
 }
 
+.__CuXY8dgC7rbEFNNkzg:active {
+  background: var(--active-button);
+}
+
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Authentication.module.css ***!
   \*********************************************************************************************************/
