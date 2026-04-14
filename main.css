@@ -103,7 +103,10 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw div:first-of-type {
-  margin: 56px auto;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: center;
 }
 
 .kXofMQa6vzuWGHvhoZSw a {
