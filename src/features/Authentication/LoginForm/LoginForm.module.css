@@ -5,15 +5,15 @@
 }
 
 .loginForm label {
-  color: var(--text);
+  color: var(--text-primary);
   font-size: 18px;
   margin-bottom: 8px;
 }
 
 .loginForm input {
   background-color: white;
-  border: 1px solid var(--input-border);
-  color: var(--text);
+  border: 1px solid var(--border);
+  color: black;
   font-size: 18px;
   height: 44px;
   margin-bottom: 40px;
@@ -27,10 +27,9 @@
 
 .loginForm button[type="submit"] {
   align-items: center;
-  background: var(--text);
-  border: 1px solid var(--background);
+  background: var(--text-primary);
   border-radius: 5px;
-  color: var(--background);
+  color: var(--background-primary);
   cursor: pointer;
   display: flex;
   font-size: 18px;
