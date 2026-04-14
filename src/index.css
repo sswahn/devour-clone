@@ -93,7 +93,7 @@
   --input-text: FieldText;
   --input-border: FieldBorder;
 
-  --active-button: light-dark(#777777, #444444);
+  --active-button: color-mix(in oklch, AccentColor 80%, Canvas);
 
   --font-size: 16px;
   --line-height: 1.5;
