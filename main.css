@@ -95,14 +95,16 @@
 /* Authentication Flow */
 
 .kXofMQa6vzuWGHvhoZSw {
+  align-items: center;
   background: var(--background-primary);
+  display: flex;
   height: 100dvh;
   max-width: 500px;
   padding: 16px;
   width: 100%;
 }
 
-.kXofMQa6vzuWGHvhoZSw div:first-of-type {
+.kXofMQa6vzuWGHvhoZSw div > div:first-of-type {
   align-items: center;
   display: flex;
   height: 184px;
