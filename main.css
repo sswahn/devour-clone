@@ -53,7 +53,7 @@
 
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
-  background: var(--text-primary);
+  background: var(--button);
   border-radius: 5px;
   color: var(--background-primary);
   cursor: pointer;
