@@ -75,6 +75,9 @@
   
   --text-primary: CanvasText;
   --text-secondary: GrayText;
+
+  --accent: AccentColor;
+  --accent-text: AccentColorText;
   
   --border: GrayText;
   
