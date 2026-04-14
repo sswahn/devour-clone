@@ -643,7 +643,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"loginForm\":\"YdN4FrYXnW8bD9aeq0kF\",\"login\":\"y1o9Q11tFYybw_5XLM0R\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/Login/LoginForm/LoginForm.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"loginForm\":\"YdN4FrYXnW8bD9aeq0kF\"});\n\n//# sourceURL=webpack://devour-clone/./src/features/Authentication/Login/LoginForm/LoginForm.module.css?\n}");
 
 /***/ },
 
