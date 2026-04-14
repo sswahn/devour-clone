@@ -109,6 +109,10 @@
   justify-content: center;
 }
 
+.kXofMQa6vzuWGHvhoZSw p {
+  color: var(--text-primary);
+}
+
 .kXofMQa6vzuWGHvhoZSw a:link {
   color: var(--link-text);
   display: block;
