@@ -1,9 +1,9 @@
 import styles from './RegistrationButton.module.css'
 
-function RegistrationButton({ openRegistration }) {
+function RegistrationButton() {
 
   const action = () => {
-    openRegistration()
+    // navigation.credentials.create()
   }
   
   const onClick = event => {
@@ -15,13 +15,17 @@ function RegistrationButton({ openRegistration }) {
       action()
     }
   }
+
+  // probably needs a registration success page.
+  
   return (
     <button 
+      id="register-passkey"
       className={styles.registrationButton} 
       onClick={onClick} 
       onKeyDown={onKeyDown} 
       type="button" 
-      aria-label="open registration form">
+      aria-label="create an account">
       Create an account
     </button>
   )
