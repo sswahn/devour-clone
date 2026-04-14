@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import { SetSessionContext } from '../../../../components/Providers/SessionProvider'
+import { SetSessionContext } from '../../../components/Providers/SessionProvider'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
