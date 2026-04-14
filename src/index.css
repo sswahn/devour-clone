@@ -82,6 +82,7 @@
   --button-bg: ButtonFace;
   --button-text: ButtonText;
   --button-border: ButtonBorder;
+  --button-active: color-mix(in oklch, AccentColor 80%, Canvas);
   
   --border: CanvasText;
 
@@ -93,7 +94,7 @@
   --input-text: FieldText;
   --input-border: FieldBorder;
 
-  --active-button: color-mix(in oklch, AccentColor 80%, Canvas);
+ 
 
   --font-size: 16px;
   --line-height: 1.5;
