@@ -30,7 +30,6 @@
 
 .authentication a:link {
   color: var(--link-text);
-  display: block;
 }
 
 .authentication a:visited {
