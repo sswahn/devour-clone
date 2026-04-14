@@ -28,17 +28,17 @@
   color-scheme: light dark;
   --brand: oklch(65% 0.18 260);
   
-  --neutral-0: oklch(99% 0.01 260);
-  --neutral-50: oklch(99% 0.01 260);
-  --neutral-100: oklch(99% 0.01 260);
-  --neutral-200: oklch(99% 0.01 260);
-  --neutral-300: oklch(99% 0.01 260);
-  --neutral-400: oklch(99% 0.01 260);
-  --neutral-500: oklch(99% 0.01 260);
-  --neutral-600: oklch(99% 0.01 260);
-  --neutral-700: oklch(99% 0.01 260);
-  --neutral-800: oklch(99% 0.01 260);
-  --neutral-900: oklch(99% 0.01 260);
+  --neutral-0: oklch(from var(--brand) 99% 0.01 h);
+  --neutral-50: oklch(from var(--brand) 96% 0.01 h);
+  --neutral-100: oklch(from var(--brand) 92% 0.01 h);
+  --neutral-200: oklch(from var(--brand) 85% 0.01 h);
+  --neutral-300: oklch(from var(--brand) 75% 0.01 h);
+  --neutral-400: oklch(from var(--brand) 60% 0.01 h);
+  --neutral-500: oklch(from var(--brand) 45% 0.01 h);
+  --neutral-600: oklch(from var(--brand) 32% 0.01 h);
+  --neutral-700: oklch(from var(--brand) 24% 0.01 h);
+  --neutral-800: oklch(from var(--brand) 18% 0.01 h);
+  --neutral-900: oklch(from var(--brand) 12% 0.01 h);
 
 
   --background-primary: light-dark(var(--neutral-0), var(--neutral-900));
