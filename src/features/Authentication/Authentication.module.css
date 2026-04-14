@@ -16,6 +16,11 @@
 }
 
 .authentication a {
+  color: var(--link-text);
   display: block;
   margin-top: 24px;
+}
+
+.authentication a:visited {
+  color: var(--link-text-visited);
 }
