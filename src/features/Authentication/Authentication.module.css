@@ -19,7 +19,7 @@
 .authentication div > div:first-of-type {
   align-items: center;
   display: flex;
-  height: 184px;
+  /* height: 184px; */
   justify-content: center;
 }
 
