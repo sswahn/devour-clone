@@ -13,9 +13,11 @@ function LoginForm() {
 
   const onSubmit = event => {
     event.preventDefault()
-    // send username to cognito for credentials
-    // pass credentials to device:
-    // navigator.credentials.get()
+    // initiate auth call to backend
+    // response returns challenge
+    // challenge is signed by browser/device:
+    // (call navigator.credentials.get() for signature)
+    // send signature to backend for verification and tokens
   }
   
   return (
