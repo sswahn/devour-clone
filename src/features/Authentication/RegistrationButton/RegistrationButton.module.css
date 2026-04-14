@@ -7,7 +7,9 @@
   color: var(--accent-text);
   cursor: pointer;
   font-size: 18px;
+  font-weight: bold;
   height: 44px;
+  text-transform: uppercase;
   width: 100%;
 }
 
