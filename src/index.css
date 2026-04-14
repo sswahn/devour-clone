@@ -67,8 +67,8 @@
   --black: #181818;
   --white: #f9fafb;
   
-  --background-primary: Canvas;
-  --background-secondary: light-dark(
+  --bg-primary: Canvas;
+  --bg-secondary: light-dark(
     color-mix(in oklch, Canvas 92%, white),
     color-mix(in oklch, Canvas 85%, black)
   );
@@ -81,8 +81,8 @@
   
   --border: GrayText;
   
-  --input: light-dark(#999999, #444444);
-  --input-border: light-dark(#888888, #555555);
+  --input-bg: Field;
+  --input-text: FieldText;
 
   --active-button: light-dark(#777777, #444444);
 
