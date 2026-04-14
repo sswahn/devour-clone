@@ -24,3 +24,7 @@
 .authentication a:visited {
   color: var(--link-text-visited);
 }
+
+.authentication a:active {
+  color: var(--link-text-active);
+}
