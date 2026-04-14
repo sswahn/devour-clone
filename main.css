@@ -118,6 +118,10 @@
   color: var(--link-text-visited);
 }
 
+.kXofMQa6vzuWGHvhoZSw a:active {
+  color: var(--link-text-active);
+}
+
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
   \*******************************************************************************************/
