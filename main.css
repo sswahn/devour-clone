@@ -113,12 +113,12 @@
 
 .kXofMQa6vzuWGHvhoZSw p {
   color: var(--text-primary);
+  margin-top: 24px;
 }
 
 .kXofMQa6vzuWGHvhoZSw a:link {
   color: var(--link-text);
   display: block;
-  margin-top: 24px;
 }
 
 .kXofMQa6vzuWGHvhoZSw a:visited {
