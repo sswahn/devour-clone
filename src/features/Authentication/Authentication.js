@@ -12,8 +12,7 @@ function Authentication() {
         <Logo size={40} />
         <LoginForm />
         <RegistrationButton />
-        <p>This app uses passkeys. With passkeys, users no longer need passwords, instead, users sign in with the same process they use to unlock their device (for example, biometrics, PIN, pattern).</p>
-        <p>Read more about passkeys here: <a href="https://fidoalliance.org/passkeys/" target="_blank" rel="noopener noreferrer" aria-label="Read about passkeys">About passkeys</a></p>
+        {/* <FederatedAccess /> */}
       </div>
     </section>
   )
