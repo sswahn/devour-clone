@@ -35,12 +35,12 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu input {
-  background-color: var(--input);
+  background-color: white;
   border: 1px solid var(--input-border);
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 18px;
   height: 44px;
-  padding-left: 48px;
+  padding: 0 8px;
   width: 100%;
 }
 
@@ -52,7 +52,7 @@
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
-  border-radius: 10px;
+  border-radius: 5px;
   color: var(--background);
   cursor: pointer;
   display: flex;
@@ -62,7 +62,7 @@
   justify-content: center;
   margin-bottom: 32px;
   text-transform: uppercase;
-  user-select: none;
+  user-select: none; /* add to global button selector */
   width: 100%;
 }
 
