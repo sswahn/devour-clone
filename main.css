@@ -21,20 +21,20 @@
   transform: translate(-50%, -50%);
 }
 
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/LoginForm/LoginForm.module.css ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/LoginForm/LoginForm.module.css ***!
+  \**************************************************************************************************************/
 /* Authentication Login Form */
 
-.YdN4FrYXnW8bD9aeq0kF {
+.DZ0S8wRAGVyW9Xa9BSBu {
   width: 100%;
 }
 
-.YdN4FrYXnW8bD9aeq0kF label {
+.DZ0S8wRAGVyW9Xa9BSBu label {
   color: var(--text);
 }
 
-.YdN4FrYXnW8bD9aeq0kF input {
+.DZ0S8wRAGVyW9Xa9BSBu input {
   background-color: var(--input);
   border: 1px solid var(--input-border);
   border-radius: 10px;
@@ -44,11 +44,11 @@
   width: 100%;
 }
 
-.YdN4FrYXnW8bD9aeq0kF input:focus {
+.DZ0S8wRAGVyW9Xa9BSBu input:focus {
   outline: none;
 }
 
-.YdN4FrYXnW8bD9aeq0kF button[type="submit"] {
+.DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
   background: var(--text);
   border: 1px solid var(--background);
@@ -67,92 +67,18 @@
 }
 
 
-/*!**************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/GoogleButton/GoogleButton.module.css ***!
-  \**************************************************************************************************************************/
-/* Federated Access with Google Button */
+/*!********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/RegistrationButton/RegistrationButton.module.css ***!
+  \********************************************************************************************************************************/
+/* Auth Login Flow Forgot Password Button */
 
-.Pa_PtCXZ94tjuTYQ7Xss {
-  align-items: center;
+.__CuXY8dgC7rbEFNNkzg {
   background: none;
-  border: 2px solid var(--text);
-  border-radius: 10px;
+  border: 0;
+  border-bottom: 1px solid var(--text);
   color: var(--text);
-  display: flex;
-  font-size: var(--font-size);
-  font-weight: bold;
-  gap: 16px;
-  height: 44px;
-  justify-content: flex-start;
-  margin-bottom: 32px;
-  padding-left: 64px;
-  text-transform: uppercase;
-  user-select: none;
-  width: 100%;
-}
-
-.Pa_PtCXZ94tjuTYQ7Xss:active {
-  background-color: var(--active-button);
-}
-
-.Pa_PtCXZ94tjuTYQ7Xss svg {
-  fill: var(--text);
-}
-
-/*!************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/AppleButton/AppleButton.module.css ***!
-  \************************************************************************************************************************/
-/* Federated Access with Apple Button */
-
-.TVb8XBPzICz2A6ZR7Nq6 {
-  align-items: center;
-  background: none;
-  border: 2px solid var(--text);
-  border-radius: 10px;
-  color: var(--text);
-  display: flex;
-  font-size: var(--font-size);
-  font-weight: bold;
-  gap: 16px;
-  height: 44px;
-  justify-content: flex-start;
-  padding-left: 64px;
-  text-transform: uppercase;
-  user-select: none;
-  width: 100%;
-}
-
-.TVb8XBPzICz2A6ZR7Nq6:active {
-  background-color: var(--active-button);
-}
-
-.TVb8XBPzICz2A6ZR7Nq6 svg {
-  fill: var(--text);
-}
-
-/*!******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Login/Login.module.css ***!
-  \******************************************************************************************************/
-/* Authentication Login Flow */
-
-.uAX12_MQ8mZ1gR6rjg68 {
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 16px;
-  width: 100%;
-}
-
-  /* Logo placeholder */
-.uAX12_MQ8mZ1gR6rjg68 div:first-of-type {
-  align-items: center;
-  display: flex;
-  height: 32px;
-  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 /*!*********************************************************************************************************!*\
