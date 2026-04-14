@@ -54,9 +54,10 @@
   --font-size: 16px;
   --line-height: 1.5;
 
-  --button: light-dark(
-    linear-gradient(to top, var(--neutral-0), var(--neutral-50)),
-    linear-gradient(to top, var(--neutral-800), var(--neutral-900))
+  --button: linear-gradient(
+    to top, 
+    light-dark(var(--neutral-0), var(--neutral-800)),
+    light-dark(var(--neutral-50), var(--neutral-900))
   );
 
   /* Status Colors */
