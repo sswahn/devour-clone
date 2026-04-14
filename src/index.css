@@ -78,6 +78,9 @@
 
   --accent: AccentColor;
   --accent-text: AccentColorText;
+
+  --button-bg: ButtonFace;
+  --button-text: ButtonText;
   
   --border: GrayText;
   
