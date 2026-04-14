@@ -13,6 +13,9 @@ function LoginForm() {
 
   const onSubmit = event => {
     event.preventDefault()
+    // send username to cognito for credentials
+    // pass credentials to device:
+    // navigator.credentials.get()
   }
   
   return (
