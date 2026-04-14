@@ -96,6 +96,9 @@
 
 .kXofMQa6vzuWGHvhoZSw {
   background: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 100dvh;
   max-width: 500px;
   padding: 16px;
