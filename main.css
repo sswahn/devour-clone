@@ -524,8 +524,8 @@
 
   --button: linear-gradient(
     to top, 
-    light-dark(var(--neutral-0), var(--neutral-800)),
-    light-dark(var(--neutral-50), var(--neutral-900))
+    light-dark(var(--neutral-50), var(--neutral-900)),
+    light-dark(var(--neutral-0), var(--neutral-800))
   );
 
   /* Status Colors */
