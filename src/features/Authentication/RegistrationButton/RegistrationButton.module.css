@@ -10,3 +10,7 @@
   height: 44px;
   width: 100%;
 }
+
+.registrationButton:active {
+  background: var(--active-button);
+}
