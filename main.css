@@ -109,8 +109,13 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw a {
+  color: var(--link-text);
   display: block;
   margin-top: 24px;
+}
+
+.kXofMQa6vzuWGHvhoZSw a:visited {
+  color: var(--link-text-visited);
 }
 
 /*!*******************************************************************************************!*\
