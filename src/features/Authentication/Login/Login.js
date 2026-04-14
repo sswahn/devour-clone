@@ -1,18 +1,14 @@
 import Logo from '../../../components/Logo/Logo'
 import LoginForm from './LoginForm/LoginForm'
-import GoogleButton from './GoogleButton/GoogleButton'
-import AppleButton from './AppleButton/AppleButton'
+import RegistrationButton from './RegistrationButton/RegistrationButton'
 import styles from './Login.module.css'
 
-function Login({ openForgotPassword, openRegistration }) {
+function Login({ openRegistration }) {
   return (
     <section className={styles.login}>
       <Logo size={40} />
-      <LoginForm openForgotPassword={openForgotPassword} openRegistration={openRegistration} />
-      <div>
-        <GoogleButton />
-        <AppleButton />
-      </div>
+      <LoginForm />
+      <RegistrationButton openRegistration={openRegistration} />
     </section>
   )
 }
