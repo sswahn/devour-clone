@@ -15,5 +15,6 @@
 }
 
 .authentication a {
+  display: block;
   margin-top: 24px;
 }
