@@ -26,10 +26,10 @@
 
 .loginForm button[type="submit"] {
   align-items: center;
-  background-color: var(--text-primary);
+  background-color: var(--accent);
   border: 0;
   border-radius: 5px;
-  color: var(--background-primary);
+  color: var(--accent-text);
   cursor: pointer;
   display: flex;
   font-size: 18px;
