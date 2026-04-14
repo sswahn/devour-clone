@@ -1,7 +1,7 @@
 /* css global classes */
-
+/*
 :root {
-  color-scheme: light dark; /* mode swap */
+  color-scheme: light dark;
   --black: #181818;
   --white: #f9fafb;
   
@@ -21,6 +21,26 @@
   --line-height: 1.5;
   
 }
+
+*/
+
+:root {
+  --neutral-0: oklch(99% 0.01 260);
+  --neutral-50: oklch(99% 0.01 260);
+  --neutral-100: oklch(99% 0.01 260);
+  --neutral-200: oklch(99% 0.01 260);
+  --neutral-300: oklch(99% 0.01 260);
+  --neutral-400: oklch(99% 0.01 260);
+  --neutral-500: oklch(99% 0.01 260);
+  --neutral-600: oklch(99% 0.01 260);
+  --neutral-700: oklch(99% 0.01 260);
+  --neutral-800: oklch(99% 0.01 260);
+  --neutral-900: oklch(99% 0.01 260);
+  
+}
+
+
+
 
 * {
   margin: 0;
