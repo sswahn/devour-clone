@@ -97,11 +97,16 @@
   \*********************************************************************************************************/
 /* Authentication Flow */
 
+.kXofMQa6vzuWGHvhoZSw * {
+  border: 1px dashed red;
+}
+
+
 .kXofMQa6vzuWGHvhoZSw {
   align-items: center;
   background: var(--background-primary);
   display: flex;
-  min-height: 100dvh;
+  height: 100dvh;
   margin: 0 auto;
   max-width: 500px;
   padding: 16px;
