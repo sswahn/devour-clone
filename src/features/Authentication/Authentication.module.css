@@ -17,8 +17,8 @@
 }
 
 .authentication > div {
-  width: 100%;
   transform: translateY(-56px);
+  width: 100%;
 }
 
 .authentication div > div:first-of-type {
