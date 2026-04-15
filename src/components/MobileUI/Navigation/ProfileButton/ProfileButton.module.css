@@ -16,7 +16,3 @@
 .profileButton:active {
   opacity: 0.7;
 }
-
-.profileButton svg {
-  color: var(--text);
-}
