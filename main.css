@@ -561,7 +561,7 @@
   
   --accent: #663399;
   --accent-text: white;
-  --accent-gradient: linear-gradient(to top, #var(--accent), #8a2be2);
+  --accent-gradient: linear-gradient(to top, var(--accent), #8a2be2);
 
   --border: var(--text-muted);
 
