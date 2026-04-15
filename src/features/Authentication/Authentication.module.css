@@ -15,11 +15,11 @@
   width: 100%;
 }
 
-/*
-.authentication div > div:first-of-type {
-  align-items: center;
-  display: flex;
-  height: 150px;
-  justify-content: center;
+
+.authentication div:first-of-type {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-*/
+
