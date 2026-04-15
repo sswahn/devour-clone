@@ -13,16 +13,10 @@
   cursor: pointer;
   height: 44px;
   width: 44px;
-
-  border: 1px dashed red;
 }
 
 .nRmVNOUPXPt07q2izPkS:active {
-  background-color: var(--active-button);
-}
-
-.nRmVNOUPXPt07q2izPkS svg {  
-  fill: var(--text);
+  background: var(--button--active);
 }
 
 /*!***************************************************************************************************************!*\
