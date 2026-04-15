@@ -557,8 +557,10 @@
   --text-primary: CanvasText;
   --text-secondary: GrayText;
 
-  --accent: AccentColor;
-  --accent-text: AccentColorText;
+  --accent: #663399;
+  --accent-text: white;
+
+  --accent-gradient: linear-gradient(to top, #var(--accent), #8a2be2);
 
   /* Native:
   --button-bg: ButtonFace;
