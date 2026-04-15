@@ -16,7 +16,3 @@
 .homeButton:active {
   opacity: 0.7;
 }
-
-.homeButton svg {
-  color: var(--text);
-}
