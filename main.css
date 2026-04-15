@@ -119,15 +119,15 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw > div {
-  transform: translateY(-56px);
+  transform: translateY(-100px);
   width: 100%;
 }
 
 .kXofMQa6vzuWGHvhoZSw div > div:first-of-type {
   align-items: center;
   display: flex;
+  height: 300px;
   justify-content: center;
-  margin-bottom: 56px;
 }
 
 /*!*******************************************************************************************!*\
