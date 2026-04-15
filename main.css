@@ -584,6 +584,12 @@
       var(--accent-alt)
     );
 
+  --accent-surface: color-mix(
+    in oklch,
+    var(--accent) 10%,
+    var(--surface)
+  );
+
   /* Borders */
 
   --border: oklch(from var(--text) 70% 0.01 h);
