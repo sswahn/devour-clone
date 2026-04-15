@@ -547,7 +547,7 @@
   --text: light-dark(var(--black), var(--white));
   --text-muted: oklch(from var(--text) 60% 0.01 h);
   
-  --surface: var(--black);
+  --surface: light-dark(var(--white), var(--black));
   
   --surface-raised: light-dark(
     color-mix(in oklch, var(--black) 92%, var(--text)),
