@@ -1,14 +1,17 @@
 /* Auth Login Flow Forgot Password Button */
 
 .registrationButton {
+  align-items: center;
   background: none;
   border: 3px solid #121212;
   border-radius: 50px;
-  color: #121212;
+  color: #ffffff;
   cursor: pointer;
+  display: flex;
   font-size: 18px;
   font-weight: bold;
   height: 44px;
+  justify-content: center;
   text-transform: uppercase;
   width: 100%;
 }
