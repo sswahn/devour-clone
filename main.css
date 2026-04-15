@@ -184,10 +184,11 @@
 .kXofMQa6vzuWGHvhoZSw h1 {
   color: var(--text);
   display: block;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: normal;
   letter-spacing: 1px;
   margin-bottom: 64px;
+  text-transform: uppercase;
 }
 
 /*
