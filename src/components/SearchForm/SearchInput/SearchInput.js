@@ -12,6 +12,8 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
     }
     setSearchValue(target.value)
   }
+
+  // make the search icon absolutely positioned over the input instead of before it
   
   return (
     <input
