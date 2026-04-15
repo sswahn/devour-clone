@@ -610,6 +610,8 @@
   
   --button-border: var(--border);
 
+  --button-active: var(--accent-surface);
+
   /* Typography Sizing */
 
   --font-size: 16px;
