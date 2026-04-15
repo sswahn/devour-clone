@@ -4,11 +4,11 @@
 /* Search Form Input */
 
 .E5mhg1QQHXBJyTe4V76v {
-  background-color: var(--input);
+  background-color: var(--input-bg);
   border: 0;
   border-top: 1px solid var(--input-border);
   border-bottom: 1px solid var(--input-border);
-  color: var(--text);
+  color: var(--input-text);
   font-size: 18px;
   height: 44px;
   width: 100%;
@@ -17,7 +17,6 @@
 .E5mhg1QQHXBJyTe4V76v:focus {
   outline: none;
 }
-
 
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-decoration,
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-cancel-button,
