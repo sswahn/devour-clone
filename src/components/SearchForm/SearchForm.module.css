@@ -1,7 +1,7 @@
 /* Search Form */
 
 .search {
-  background-color: var(--background);
+  background-color: var(--surface);
   height: 100dvh;
   left: 0;
   overflow-y: scroll;
@@ -27,7 +27,7 @@
   align-items: center; 
   display: flex;
   justify-content: center;
-  background-color: var(--input);
+  background-color: var(--input-bg);
   border: 1px solid var(--input-border);
   border-right: 0;
   border-top-left-radius: 20px;
@@ -38,14 +38,14 @@
 }
 
 .search form div:first-child svg {  
-  fill: var(--text);
+  fill: var(--input-text);
 }
 
 .search form div:last-child {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: var(--input);
+  background-color: var(--input-bg);
   border: 1px solid var(--input-border);
   border-left: 0;
   border-top-right-radius: 20px;
