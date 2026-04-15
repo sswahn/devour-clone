@@ -23,7 +23,7 @@ function AppleButton() {
       onClick={onClick} 
       onKeyDown={onKeyDown} 
       type="button" 
-      aria-label="sign in with apple account">
+      aria-label="sign in with your apple account">
       <AppleIcon /> 
       <span>Continue with Apple</span>
     </button>
