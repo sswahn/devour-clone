@@ -88,7 +88,7 @@
   display: flex;
   font-size: 18px;
   font-weight: bold;
-  height: 44px;
+  min-height: 44px;
   justify-content: center;
   text-transform: uppercase;
   width: 100%;
@@ -145,7 +145,7 @@
   font-size: var(--font-size);
   font-weight: bold;
   gap: 12px;
-  height: 44px;
+  min-height: 44px;
   justify-content: flex-start;
   padding-left: 64px;
   text-transform: uppercase;
