@@ -20,6 +20,6 @@
 }
 
 .googleButton:active {
-  background-: var(--button-active);
+  background: var(--button-active);
 }
 
