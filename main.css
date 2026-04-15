@@ -584,7 +584,7 @@
 
   /* Borders */
 
-  --border: light-dark(#ffffff26, #ffffff0d);
+  --border: light-dark(#ffffff0d, #ffffff26);
 
   /* Inputs */
 
