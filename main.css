@@ -35,7 +35,6 @@
   display: block;
   font-size: var(--font-size);
   margin: 0 0 8px 8px;
-  text-transform: uppercase;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu input {
@@ -65,7 +64,7 @@
   font-weight: bold;
   height: 44px;
   justify-content: center;
-  margin: 40px 0;
+  margin: 32px 0;
   text-transform: uppercase;
   width: 100%;
 }
