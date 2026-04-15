@@ -1,7 +1,7 @@
 /* User Profile */
 
 .profile {
-  background-color: var(--background);
+  background-color: var(--surface);
   height: 100dvh;
   left: 0;
   outline: none;
