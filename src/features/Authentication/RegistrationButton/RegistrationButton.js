@@ -16,7 +16,9 @@ function RegistrationButton() {
     }
   }
 
-  // probably needs a registration success page.
+  // Need to register username or email, with backend.
+  // That means another UI.
+  // Probably needs a registration success page too.
   
   return (
     <button 
