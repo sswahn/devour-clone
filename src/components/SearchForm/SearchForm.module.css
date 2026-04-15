@@ -37,10 +37,6 @@
   width: 44px; 
 }
 
-.search form div:first-child svg {  
-  fill: var(--input-text);
-}
-
 .search form div:last-child {
   align-items: center;
   display: flex;
