@@ -151,6 +151,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+#root {
+  background-color: var(--surface);
+}
+
 button {
   touch-action: manipulation;
   user-select: none;
