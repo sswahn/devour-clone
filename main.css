@@ -590,7 +590,8 @@
 
   --light-black: #303030;
   --dark-black: #181818;
-  --white: #f9fafb;
+  --white: white; /* #f9fafb; */
+  --gray: #cccccc;
   --purple: #663399; 
   --purple-alt: #8a2be2;
 
@@ -602,9 +603,9 @@
 
   /* Surfaces */
 
-  --surface: light-dark(white, var(--light-black));
+  --surface: light-dark(var(--white), var(--light-black));
 
-  --surface-raised: light-dark(#ccc, var(--dark-black));
+  --surface-raised: light-dark(var(--gray), var(--dark-black));
 
   /* Accent */
 
