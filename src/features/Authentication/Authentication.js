@@ -10,14 +10,12 @@ import styles from './Authentication.module.css'
 function Authentication() {
   return (
     <section className={styles.authentication}>
-      <div>
-        {/* <Logo size={40} /> */}
-        <h1>Sign In or Sign Up</h1>
-        <LoginForm />
-        <RegistrationButton />
-        <GoogleButton />
-        <AppleButton />
-      </div>
+      {/* <Logo size={40} /> */}
+      <h1>Sign In or Sign Up</h1>
+      <LoginForm />
+      <RegistrationButton />
+      <GoogleButton />
+      <AppleButton />
     </section>
   )
 }
