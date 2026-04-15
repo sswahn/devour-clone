@@ -14,7 +14,7 @@
 }
 
 .speechRecognitionButton:active {
-  background: #666;
+  background: var(--button-active); /* was #666 */
 }
 
 .speechRecognitionButton.active svg {
