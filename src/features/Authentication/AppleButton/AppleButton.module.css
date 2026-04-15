@@ -4,7 +4,7 @@
   align-items: center;
   background: none;
   border: 2px solid var(--text);
-  border-radius: 10px;
+  border-radius: 50px;
   color: var(--text);
   display: flex;
   font-size: var(--font-size);
