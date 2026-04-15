@@ -601,6 +601,8 @@
   --purple: #663399; 
   --purple-alt: #8a2be2;
 
+  --complementary: orange;
+
   /* Typography */
 
   --text: light-dark(black, white);
@@ -615,17 +617,9 @@
 
   /* Accent */
 
-  --accent: var(--purple);
-
-  --accent-alt: var(--purple-alt);
+  --accent: var(--complementary);
 
   --accent-text: var(--white);
-
-  --accent-gradient: linear-gradient(
-      to top,
-      var(--accent),
-      var(--accent-alt)
-    );
 
   --accent-surface: color-mix(
     in oklch,
