@@ -66,52 +66,30 @@
   
   --black: #181818;
   --white: #f9fafb;
-  
-  --bg-primary: Canvas;
-  --bg-secondary: light-dark(
-    color-mix(in oklch, Canvas 92%, CanvasText),
-    color-mix(in oklch, Canvas 85%, CanvasText)
-  );
-  --bg-tertiary: light-dark(
-    color-mix(in oklch, Canvas 88%, CanvasText),
-    color-mix(in oklch, Canvas 80%, CanvasText)
-  );
-  
-  --text-primary: CanvasText;
-  --text-secondary: GrayText;
 
+  --text: light-dark(var(--black), var(--white));
+  --text-muted: oklch(from var(--text) 60% 0.01 h);
+  
+  --surface: var(--black);
+  
+  --surface-raised: light-dark(
+    color-mix(in oklch, var(--black) 92%, var(--text)),
+    color-mix(in oklch, var(--black) 85%, var(--text))
+  );
+  
+  --surface-overlay: light-dark(
+    color-mix(in oklch, var(--black) 88%, var(--text)),
+    color-mix(in oklch, var(--black) 80%, var(--text))
+  );
+  
   --accent: #663399;
   --accent-text: white;
-
   --accent-gradient: linear-gradient(to top, #var(--accent), #8a2be2);
 
-  /* Native:
-  --button-bg: ButtonFace;
-  --button-text: ButtonText;
-  --button-border: ButtonBorder;
-  --button-active: color-mix(in oklch, AccentColor 80%, Canvas);
-  */
-
-  /* Custom Button */
-  --button-bg: light-dark(Canvas, CanvasText);
-  --button-text: light-dark(CanvasText, Canvas);
-  --button-border: ButtonBorder;
-  --button-active: color-mix(in oklch, CanvasText 80%, Canvas);
-  
-  --border: CanvasText;
-
-  --input-bg: Field;
-  --input-text: FieldText;
-  --input-border: ButtonBorder;
+  --border: var(--text-muted);
 
   --font-size: 16px;
   --line-height: 1.5;
-
-  
-  --link-text: LinkText;
-  --link-text-visited: VisitedText;
-  --link-text-active: ActiveText;
-  
 }
 
 
