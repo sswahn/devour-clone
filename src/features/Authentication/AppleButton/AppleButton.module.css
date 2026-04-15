@@ -5,7 +5,7 @@
   background: none;
   border: 4px solid var(--button-bg);
   border-radius: 50px;
-  color: #414141;
+  color: var(--button-text);
   display: flex;
   font-size: var(--font-size);
   font-weight: bold;
@@ -23,5 +23,5 @@
 }
 
 .appleButton svg {
-  fill: var(--button-bg);
+  fill: var(--button-text);
 }
