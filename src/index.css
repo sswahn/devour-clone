@@ -118,13 +118,13 @@
   
   /* Buttons */
 
-  --button-bg: var(--accent);
+  --button-bg: var(--surface-raised);
   
-  --button-text: var(--accent-text);
+  --button-text: var(--text);
   
   --button-border: var(--border);
 
-  --button-active: var(--accent-surface);
+  --button-active: var(--surface);
 
   --button-alt: light-dark(
     oklch(from var(--black) 10% 0.01 h),
