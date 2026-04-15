@@ -98,6 +98,63 @@
   background: var(--button-active);
 }
 
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/GoogleButton/GoogleButton.module.css ***!
+  \********************************************************************************************************************/
+/* Federated Access with Google Button */
+
+.prckt0265mpeiXlE3kxP {
+  align-items: center;
+  background: none;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  color: var(--text);
+  display: flex;
+  font-size: var(--font-size);
+  font-weight: bold;
+  gap: 16px;
+  height: 44px;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+  padding-left: 64px;
+  text-transform: uppercase;
+  user-select: none;
+  width: 100%;
+}
+
+.prckt0265mpeiXlE3kxP:active {
+  background-: var(--button-active);
+}
+
+
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/AppleButton/AppleButton.module.css ***!
+  \******************************************************************************************************************/
+/* Federated Access with Apple Button */
+
+.gd0SLQU_H_0LYCyhuG1y {
+  align-items: center;
+  background: none;
+  border: 2px solid var(--text);
+  border-radius: 10px;
+  color: var(--text);
+  display: flex;
+  font-size: var(--font-size);
+  font-weight: bold;
+  gap: 16px;
+  height: 44px;
+  justify-content: flex-start;
+  padding-left: 64px;
+  text-transform: uppercase;
+  user-select: none;
+  width: 100%;
+}
+
+.gd0SLQU_H_0LYCyhuG1y:active {
+  background: var(--button-active);
+}
+
+
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Authentication/Authentication.module.css ***!
   \*********************************************************************************************************/
