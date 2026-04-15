@@ -15,10 +15,9 @@
   width: 100%;
 }
 
-
 .authentication div:first-of-type {
   position: absolute;
-  top: 32px;
+  top: 64px;
   left: 50%;
   transform: translateX(-50%);
 }
