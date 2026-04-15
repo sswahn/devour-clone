@@ -15,11 +15,6 @@
   width: 100%;
 }
 
-.authentication > div {
-  transform: translateY(-50px);
-  width: 100%;
-}
-
 .authentication h1 {
   margin-bottom: 40px;
 }
