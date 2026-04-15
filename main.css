@@ -593,7 +593,10 @@
 
   /* Borders */
 
-  --border: oklch(from var(--text) 40% 0.01 h);
+  --border: light-dark(
+    oklch(from var(--black) 10% 0.01 h),
+    oklch(from var(--white) 90% 0.01 h)
+  ); /* oklch(from var(--text) 40% 0.01 h); */
 
   /* Inputs */
 
