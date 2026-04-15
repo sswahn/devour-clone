@@ -19,9 +19,6 @@
 }
 
 .appleButton:active {
-  background-color: var(--active-button);
+  background: var(--button-active);
 }
 
-.appleButton svg {
-  fill: var(--text);
-}
