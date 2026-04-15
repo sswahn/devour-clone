@@ -102,7 +102,7 @@
 
 .kXofMQa6vzuWGHvhoZSw {
   align-items: center;
-  background: var(--surface);
+  background-color: var(--surface);
   display: flex;
   height: 100dvh;
   margin: 0 auto;
