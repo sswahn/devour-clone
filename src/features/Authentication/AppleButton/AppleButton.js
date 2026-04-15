@@ -1,4 +1,4 @@
-import AppleIcon from '../../../../components/Icons/AppleIcon/AppleIcon'
+import AppleIcon from '../../../components/Icons/AppleIcon/AppleIcon'
 import styles from './AppleButton.module.css'
 
 function AppleButton() {
