@@ -55,8 +55,8 @@
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
   background: var(--button-bg);
-  border: 0;
-  border-radius: 5px;
+  border: var(--button-border);
+  border-radius: 20%;
   color: var(--button-text);
   cursor: pointer;
   display: flex;
