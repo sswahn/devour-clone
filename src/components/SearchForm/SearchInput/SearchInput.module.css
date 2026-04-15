@@ -1,11 +1,11 @@
 /* Search Form Input */
 
 .input {
-  background-color: var(--input);
+  background-color: var(--input-bg);
   border: 0;
   border-top: 1px solid var(--input-border);
   border-bottom: 1px solid var(--input-border);
-  color: var(--text);
+  color: var(--input-text);
   font-size: 18px;
   height: 44px;
   width: 100%;
@@ -14,7 +14,6 @@
 .input:focus {
   outline: none;
 }
-
 
 .input::-webkit-search-decoration,
 .input::-webkit-search-cancel-button,
