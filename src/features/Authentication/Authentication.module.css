@@ -16,6 +16,7 @@
 }
 
 .authentication h1 {
+  display: block;
   font-weight: normal;
   margin-bottom: 64px;
 }
