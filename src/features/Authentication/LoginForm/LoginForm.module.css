@@ -40,7 +40,6 @@
   justify-content: center;
   margin: 40px 0;
   text-transform: uppercase;
-  user-select: none; /* add to global button selector */
   width: 100%;
 }
 
