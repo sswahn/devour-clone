@@ -8,8 +8,8 @@ import styles from './Authentication.module.css'
 function Authentication() {
   return (
     <section className={styles.authentication}>
+      <Logo size={40} />
       <div>
-        <Logo size={40} />
         <LoginForm />
         <RegistrationButton />
         {/* <FederatedAccess /> */}
