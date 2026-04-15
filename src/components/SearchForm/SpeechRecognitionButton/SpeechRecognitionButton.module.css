@@ -14,7 +14,7 @@
 }
 
 .speechRecognitionButton:active {
-  background-color: #666;
+  background: #666;
 }
 
 .speechRecognitionButton.active svg {
