@@ -181,14 +181,14 @@
   width: 100%;
 }
 
-/*
-.authentication div > div:first-of-type {
-  align-items: center;
-  display: flex;
-  height: 150px;
-  justify-content: center;
+
+.kXofMQa6vzuWGHvhoZSw div:first-of-type {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-*/
+
 
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Header/Header.module.css ***!
