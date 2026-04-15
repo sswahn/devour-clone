@@ -182,10 +182,15 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw h1 {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
   display: block;
   font-weight: normal;
   letter-spacing: 1px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
+  padding: 24px 0;
 }
 
 /*
