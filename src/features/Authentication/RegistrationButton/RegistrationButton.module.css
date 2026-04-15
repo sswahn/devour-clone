@@ -3,7 +3,7 @@
 .registrationButton {
   background: var(--button-bg);
   border: 2px solid var(--button-border);
-  border-radius: 5px;
+  border-radius: 50px;
   color: var(--button-text);
   cursor: pointer;
   font-size: 18px;
