@@ -10,7 +10,7 @@ import styles from './Authentication.module.css'
 function Authentication() {
   return (
     <section className={styles.authentication}>
-      {/* <Logo size={40} /> */}
+      <Logo size={40} />
       <LoginForm />
       <RegistrationButton />
       <GoogleButton />
