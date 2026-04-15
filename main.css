@@ -550,13 +550,13 @@
   --surface: light-dark(var(--white), var(--black));
   
   --surface-raised: light-dark(
-    color-mix(in oklch, var(--black) 92%, var(--text)),
-    color-mix(in oklch, var(--black) 85%, var(--text))
+    color-mix(in oklch, var(--surface) 92%, var(--text)),
+    color-mix(in oklch, var(--surface) 85%, var(--text))
   );
   
   --surface-overlay: light-dark(
-    color-mix(in oklch, var(--black) 88%, var(--text)),
-    color-mix(in oklch, var(--black) 80%, var(--text))
+    color-mix(in oklch, var(--surface) 88%, var(--text)),
+    color-mix(in oklch, var(--surface) 80%, var(--text))
   );
   
   --accent: #663399;
