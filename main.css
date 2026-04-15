@@ -31,16 +31,16 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu label {
-  color: var(--text-primary);
+  color: var(--text);
   display: block;
   font-size: 18px;
   margin-bottom: 8px;
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu input {
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border);
-  color: var(--input-text);
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-size: 18px;
   height: 44px;
   padding: 0 8px;
@@ -53,10 +53,10 @@
 
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-border);
+  background-color: var(--accent);
+  border: 1px solid var(--border);
   border-radius: 5px;
-  color: var(--button-text);
+  color: var(--accent-text);
   cursor: pointer;
   display: flex;
   font-size: 18px;
