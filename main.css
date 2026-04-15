@@ -38,9 +38,9 @@
 }
 
 .DZ0S8wRAGVyW9Xa9BSBu input {
-  background-color: var(--surface-raised);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
   font-size: 18px;
   height: 44px;
   padding: 0 8px;
@@ -53,10 +53,10 @@
 
 .DZ0S8wRAGVyW9Xa9BSBu button[type="submit"] {
   align-items: center;
-  background-color: var(--accent);
-  border: 1px solid var(--border);
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
   border-radius: 5px;
-  color: var(--accent-text);
+  color: var(--button-text);
   cursor: pointer;
   display: flex;
   font-size: 18px;
