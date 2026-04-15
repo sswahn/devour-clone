@@ -65,32 +65,23 @@
 
   color-scheme: light dark;
 
-  --black: #181818;
+  --light-black: #303030;
+  --dark-black: #181818;
   --white: #f9fafb;
-  --purple: #663399;
+  --purple: #663399; 
   --purple-alt: #8a2be2;
 
   /* Typography */
 
-  --text: light-dark(var(--black), var(--white));
+  --text: light-dark(black, white);
   
   --text-muted: oklch(from var(--text) 60% 0.01 h);
 
   /* Surfaces */
 
-  --surface: light-dark(var(--white), var(--black));
+  --surface: light-dark(white, var(--light-black));
 
-  --surface-raised: color-mix(
-    in oklch,
-    var(--surface) 92%,
-    var(--text)
-  );
-
-  --surface-overlay: color-mix(
-    in oklch,
-    var(--surface) 85%,
-    var(--text)
-  );
+  --surface-raised: light-dark(#ccc, var(--dark-black));
 
   /* Accent */
 
@@ -115,10 +106,7 @@
 
   /* Borders */
 
-  --border: light-dark(
-    oklch(from var(--black) 65% 0.01 h),
-    oklch(from var(--white) 35% 0.01 h)
-  ); /* oklch(from var(--text) 40% 0.01 h); */
+  --border: light-dark(#ffffff26, #ffffff0d);
 
   /* Inputs */
 
