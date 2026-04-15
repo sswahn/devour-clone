@@ -2,7 +2,7 @@
 
 .authentication {
   align-items: center;
-  background: var(--background-primary);
+  background: var(--surface);
   display: flex;
   height: 100dvh;
   margin: 0 auto;
