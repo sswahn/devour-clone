@@ -613,7 +613,7 @@
 
   --button-active: var(--accent-surface);
 
-  --button-alt: light-dark(var(--purple), var(--purple-alt));
+  --button-alt: var(--text-muted);
 
   /* Typography Sizing */
 
