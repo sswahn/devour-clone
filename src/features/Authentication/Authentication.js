@@ -11,7 +11,7 @@ function Authentication() {
   return (
     <section className={styles.authentication}>
       <div>
-        <Logo size={40} />
+        {/* <Logo size={40} /> */}
         <h1>Sign In or Sign Up</h1>
         <LoginForm />
         <RegistrationButton />
