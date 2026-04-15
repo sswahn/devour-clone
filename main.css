@@ -613,7 +613,10 @@
 
   --button-active: var(--accent-surface);
 
-  --button-alt: oklch(from var(--text) 80% 0.01 h);
+  --button-alt: light-dark(
+    oklch(from var(--text) 10% 0.01 h),
+    oklch(from var(--text) 90% 0.01 h),
+  );
 
   /* Typography Sizing */
 
