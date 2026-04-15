@@ -20,9 +20,6 @@
 }
 
 .googleButton:active {
-  background-color: var(--active-button);
+  background-: var(--button-active);
 }
 
-.googleButton svg {
-  fill: var(--text);
-}
