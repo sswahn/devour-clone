@@ -17,10 +17,6 @@
   background-color: #666;
 }
 
-.speechRecognitionButton svg {  
-  fill: var(--text);
-}
-
 .speechRecognitionButton.active svg {
   fill: #00C853;
 }
