@@ -3,7 +3,7 @@ import server from '../../utilities/server'
 import database from '@sswahn/database'
 import FeedNode from './FeedNode'
 import Sentinel from './Sentinel' // sentinel triggers infinite loading
-import styles from './feed.module.css'
+import styles from './Feed.module.css'
 
 function Feed() {
   const [data, setData] = useState([1])
