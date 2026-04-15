@@ -119,14 +119,14 @@
 }
 
 .kXofMQa6vzuWGHvhoZSw > div {
-  transform: translateY(-100px);
+  transform: translateY(-50px);
   width: 100%;
 }
 
 .kXofMQa6vzuWGHvhoZSw div > div:first-of-type {
   align-items: center;
   display: flex;
-  height: 300px;
+  height: 150px;
   justify-content: center;
 }
 
