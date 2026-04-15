@@ -11,5 +11,5 @@
 }
 
 .followingButton:active {
-  background: var(--active-button);
+  background: var(--button-active);
 }
