@@ -89,6 +89,7 @@
   font-weight: bold;
   height: 44px;
   text-transform: uppercase;
+  user-select: none;
   width: 100%;
 }
 
