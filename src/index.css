@@ -62,37 +62,61 @@
 */
 
 :root {
+
   color-scheme: light dark;
-  
+
   --black: #181818;
   --white: #f9fafb;
+  --purple: #663399;
+  --purple-alt: #8a2be2;
+
+  /* Typography */
 
   --text: light-dark(var(--black), var(--white));
+  
   --text-muted: oklch(from var(--text) 60% 0.01 h);
-  
-  --surface: light-dark(var(--white), var(--black));
-  
-  --surface-raised: light-dark(
-    color-mix(in oklch, var(--surface) 92%, var(--text)),
-    color-mix(in oklch, var(--surface) 85%, var(--text))
-  );
-  
-  --surface-overlay: light-dark(
-    color-mix(in oklch, var(--surface) 88%, var(--text)),
-    color-mix(in oklch, var(--surface) 80%, var(--text))
-  );
-  
-  --accent: #663399;
-  --accent-text: white;
-  --accent-gradient: linear-gradient(to top, var(--accent), #8a2be2);
 
-  --border: var(--text-muted);
+  /* Surfaces */
+
+  --surface: light-dark(var(--white), var(--black));
+
+  --surface-raised: color-mix(
+    in oklch,
+    var(--surface) 92%,
+    var(--text)
+  );
+
+  --surface-overlay: color-mix(
+    in oklch,
+    var(--surface) 85%,
+    var(--text)
+  );
+
+  /* Accent */
+
+  --accent: var(--purple);
+
+  --accent-alt: var(--purple-alt);
+
+  --accent-text: var(--white);
+
+  --accent-gradient:
+    linear-gradient(
+      to top,
+      var(--accent),
+      var(--accent-alt)
+    );
+
+  /* Borders */
+
+  --border: oklch(from var(--text) 70% 0.01 h);
+
+  /* Typography */
 
   --font-size: 16px;
   --line-height: 1.5;
+
 }
-
-
 
 * {
   margin: 0;
