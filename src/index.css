@@ -116,8 +116,8 @@
   /* Borders */
 
   --border: light-dark(
-    oklch(from var(--black) 60% 0.01 h),
-    oklch(from var(--white) 40% 0.01 h)
+    oklch(from var(--black) 65% 0.01 h),
+    oklch(from var(--white) 35% 0.01 h)
   ); /* oklch(from var(--text) 40% 0.01 h); */
 
   /* Inputs */
