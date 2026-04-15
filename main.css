@@ -82,9 +82,9 @@
 .__CuXY8dgC7rbEFNNkzg {
   align-items: center;
   background: none;
-  border: 4px solid #121212;
+  border: 4px solid var(--border-bg);
   border-radius: 50px;
-  color: #ffffff;
+  color: var(--border-text);
   cursor: pointer;
   display: flex;
   font-size: 18px;
