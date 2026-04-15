@@ -2,9 +2,9 @@
 
 .registrationButton {
   background: none;
-  border: 1px solid var(--button-bg);
+  border: 1px solid var(--purple);
   border-radius: 5px;
-  color: var(--button-bg);
+  color: var(--purple);
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
