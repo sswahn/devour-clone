@@ -10,7 +10,7 @@
   display: flex;
   font-size: 18px;
   font-weight: bold;
-  height: 44px;
+  min-height: 44px;
   justify-content: center;
   text-transform: uppercase;
   width: 100%;
