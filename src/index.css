@@ -178,6 +178,7 @@ body {
 
 button {
   touch-action: manipulation;
+  user-select: none;
 }
 
 svg {
