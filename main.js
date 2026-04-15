@@ -192,7 +192,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _features_Feed_Feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../features/Feed/Feed */ \"./src/features/Feed/Feed.js\");\n/* harmony import */ var _main_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.module.css */ \"./src/components/Main/main.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\nfunction Main() {\n  return /*#__PURE__*/React.createElement(\"main\", {\n    className: _main_module_css__WEBPACK_IMPORTED_MODULE_2__[\"default\"].main\n  }, /*#__PURE__*/React.createElement(_features_Feed_Feed__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/Main.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _features_Feed_Feed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../features/Feed/Feed */ \"./src/features/Feed/Feed.js\");\n/* harmony import */ var _Main_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Main.module.css */ \"./src/components/Main/Main.module.css\");\n/* provided dependency */ var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\nfunction Main() {\n  return /*#__PURE__*/React.createElement(\"main\", {\n    className: _Main_module_css__WEBPACK_IMPORTED_MODULE_2__[\"default\"].main\n  }, /*#__PURE__*/React.createElement(_features_Feed_Feed__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/Main.js?\n}");
 
 /***/ },
 
@@ -504,14 +504,14 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 
 /***/ },
 
-/***/ "./src/components/Main/main.module.css"
+/***/ "./src/components/Main/Main.module.css"
 /*!*********************************************!*\
-  !*** ./src/components/Main/main.module.css ***!
+  !*** ./src/components/Main/Main.module.css ***!
   \*********************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"main\":\"Z5pv5a_NKshg9J2UQIDv\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/main.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"main\":\"ZYvmIXad4zI5lNYgAWld\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Main/Main.module.css?\n}");
 
 /***/ },
 
