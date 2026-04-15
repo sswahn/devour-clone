@@ -1,5 +1,9 @@
 /* Authentication Flow */
 
+.authentication * {
+  border: 1px dashed red;
+}
+
 .authentication {
   align-items: center;
   background-color: var(--surface);
