@@ -9,7 +9,7 @@
   display: flex;
   font-size: var(--font-size);
   font-weight: bold;
-  gap: 16px;
+  gap: 12px;
   height: 44px;
   justify-content: flex-start;
   margin: 32px 0;
