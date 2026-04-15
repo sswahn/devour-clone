@@ -127,7 +127,7 @@
   
   /* Buttons */
 
-  --button-bg: var(--accent-gradient);
+  --button-bg: var(--accent);
   
   --button-text: var(--accent-text);
   
