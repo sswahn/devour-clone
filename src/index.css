@@ -137,7 +137,7 @@
 
   --button-alt: light-dark(
     oklch(from var(--black) 10% 0.01 h),
-    oklch(from var(--white) 90% 0.01 h),
+    oklch(from var(--white) 90% 0.01 h)
   );
 
   /* Typography Sizing */
