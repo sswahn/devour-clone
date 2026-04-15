@@ -8,7 +8,7 @@ function LikeButton({ likedByUser }) {
   const [liked, setLiked] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const action = () => {
+  const action = async () => {
     setLiked(prevState => !prevState)
     return
     
