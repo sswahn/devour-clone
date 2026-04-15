@@ -115,7 +115,7 @@
 
   /* Borders */
 
-  --border: oklch(from var(--text) 90% 0.01 h);
+  --border: oklch(from var(--text) 50% 0.01 h);
 
   /* Inputs */
 
