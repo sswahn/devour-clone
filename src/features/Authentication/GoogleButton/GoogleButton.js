@@ -23,7 +23,7 @@ function GoogleButton() {
       onClick={onClick} 
       onKeyDown={onKeyDown} 
       type="button" 
-      aria-label="sign in with google">
+      aria-label="sign in with your google account">
       <GoogleIcon /> 
       <span>Continue with Google</span>
     </button>
