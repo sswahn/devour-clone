@@ -40,6 +40,7 @@
 .DZ0S8wRAGVyW9Xa9BSBu input {
   background-color: var(--input-bg);
   border: 1px solid var(--input-border);
+  border-radius: 5px;
   color: var(--input-text);
   font-size: 18px;
   height: 44px;
