@@ -2,9 +2,9 @@
 
 .registrationButton {
   background: none;
-  border: 3px solid black;
+  border: 3px solid #121212;
   border-radius: 50px;
-  color: black;
+  color: #121212;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
