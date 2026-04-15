@@ -10,14 +10,8 @@
   cursor: pointer;
   height: 44px;
   width: 44px;
-
-  border: 1px dashed red;
 }
 
 .closeButton:active {
-  background-color: var(--active-button);
-}
-
-.closeButton svg {  
-  fill: var(--text);
+  background: var(--button--active);
 }
