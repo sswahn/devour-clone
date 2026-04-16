@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './Dropdown.module.css'
 
@@ -9,7 +9,6 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   
   const action = () => {
     setIsOpen(prevState => !prevState)
-    listRef.current.children[0].focus() 
   }
   
   const onClick = event => {
@@ -17,7 +16,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   }
   
   const onKeyDown = event => {
-    const menuItems = Array.from(menuRef.current?.children || [])
+    const menuItems = Array.from(listRef.current?.children || [])
     const currentIndex = menuItems.indexOf(document.activeElement)
 
     switch (event.key) {
@@ -39,17 +38,23 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         return
 
       case 'Escape':
-        setIsOpen(false)
+        action()
         buttonRef.current?.focus() // 2. Return focus to button on close
         return
 
       case 'Tab':
-        return setIsOpen(false)  // Standard behavior: Close menu if user tabs out
+        return action()  // Standard behavior: Close menu if user tabs out
 
       default:
         return
     }
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      listRef.current?.children[0].focus() 
+    }
+  }, [isOpen])
 
   // break list item button into its own component
   // same with main button, 
