@@ -2,9 +2,7 @@
 
 /*
 :root {
-  color-scheme: light dark;
   --brand: oklch(65% 0.18 260);
-  
   --neutral-0: oklch(from var(--brand) 99% 0.01 h);
   --neutral-50: oklch(from var(--brand) 96% 0.01 h);
   --neutral-100: oklch(from var(--brand) 92% 0.01 h);
@@ -16,24 +14,6 @@
   --neutral-700: oklch(from var(--brand) 24% 0.01 h);
   --neutral-800: oklch(from var(--brand) 18% 0.01 h);
   --neutral-900: oklch(from var(--brand) 12% 0.01 h);
-
-  --background-primary: light-dark(var(--neutral-0), var(--neutral-900));
-  --background-secondary: light-dark(var(--neutral-50), var(--neutral-800));
-  --background-tertiary: light-dark(var(--neutral-100), var(--neutral-700));
-  
-  --text-primary: light-dark(var(--neutral-900), var(--neutral-0));
-  --text-secondary: light-dark(var(--neutral-500), var(--neutral-300));
-  
-  --border: light-dark(var(--neutral-200), var(--neutral-700));
-  
-  --active-button: var(--neutral-500);
-
-  --font-size: 16px;
-  --line-height: 1.5;
-
-  --success: oklch(65% 0.18 calc(260 - 120));
-  --warning: oklch(70% 0.18 calc(260 - 200));
-  --danger: oklch(65% 0.18 calc(260 - 260));
 }
 */
 
