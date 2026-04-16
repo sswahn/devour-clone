@@ -583,7 +583,13 @@
     oklch(from var(--white) 90% 0.01 h)
   );
 
-  --dropdown-bg: var(--surface-elevated)
+  /* Dropdown */
+  
+  --dropdown-bg: var(--surface-elevated);
+
+  --dropdown-text: var(--text);
+
+  --dropdown-border: var(--border-raised);
 
   /* Typography Sizing */
 
