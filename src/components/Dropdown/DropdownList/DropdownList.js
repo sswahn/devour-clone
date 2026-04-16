@@ -1,4 +1,5 @@
 import { useRef, useEffect } from  'react'
+import ListItemButton from './ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
 function DropdownList({ id, isOpen, close, items }) {
@@ -20,7 +21,7 @@ function DropdownList({ id, isOpen, close, items }) {
       hidden={!isOpen}>
       {items?.map((item, index) => 
         <li key={index} role="none">
-          <button onClick={item.method} onKeyDown={item.method} type="button" role="menuitem" tabIndex="-1">{item.text}</button>
+          <ListItemButton buttonRef={buttonRef} listRef={listRef} text={item.text} method={item.method} close={close} />
         </li>
       )}
     </ul>
