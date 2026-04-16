@@ -11,7 +11,7 @@ function DropdownList({ id, isOpen, close, items, buttonRef }) {
     }
   }, [isOpen])
   
-  return (
+  return isOpen && (
     <ul 
       id={`dropdown-list-${id}`} 
       className={styles.dropdownList} 
