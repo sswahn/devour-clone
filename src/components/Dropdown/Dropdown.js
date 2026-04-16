@@ -5,6 +5,10 @@ import styles from './Dropdown.module.css'
 function Dropdown({ id = 0, label = 'dropdown', items }) {
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef(null)
+
+  const close = () => {
+    setIsOpen(false)
+  }
   
   const action = () => {
     setIsOpen(prevState => !prevState)
@@ -19,16 +23,6 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
       action()
     }
   }
-
-  const close = () => {
-    setIsOpen(false)
-  }
-
-  useEffect(() => {
-    if (isOpen) {
-      listRef.current.firstElementChild.firstElementChild.focus()
-    }
-  }, [isOpen])
 
   return (
     <div　className={styles.dropdown}>
