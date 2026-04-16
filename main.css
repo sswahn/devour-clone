@@ -639,16 +639,16 @@ button {
   user-select: none;
 }
 
+button:focus {
+  background: initial;
+}
+
 button:hover {
   background: var(--gray);
 }
 
 button:active {
   background: var(--light-gray);
-}
-
-button:focus {
-  background: initial;
 }
 
 svg {
