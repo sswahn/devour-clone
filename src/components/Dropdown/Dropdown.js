@@ -7,10 +7,6 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef(null)
 
-  const close = () => {
-    setIsOpen(false)
-  }
-
   useEffect(() => {
     return () => {
       setIsOpen(false)
@@ -20,7 +16,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   return (
     <div　className={styles.dropdown}>
       <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
-      {isOpen && <DropdownList id={id} isOpen={isOpen} close={close} items={items} buttonRef={buttonRef} />}
+      {isOpen && <DropdownList id={id} isOpen={isOpen} setIsOpen={setIsOpen} items={items} buttonRef={buttonRef} />}
     </div>
   )
 }
