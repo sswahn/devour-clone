@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
 function DropdownButton({ id, data }) {
-
+  const [isOpen, setIsOpen] = useState(false)
+  
   const action = () => {
-    // open dropdown list
+    setIsOpen(prevState => !prevState)
   }
   
   const onClick = event => {
@@ -27,7 +29,7 @@ function DropdownButton({ id, data }) {
         type="button" 
         aria-label="open dropdown" 
         aria-haspopup="menu" 
-        aria-expanded="false" 
+        aria-expanded={isOpen} 
         aria-controls={`dropdown-list-${id}`}>
         <EllipsisVerticalIcon />
       </button>
