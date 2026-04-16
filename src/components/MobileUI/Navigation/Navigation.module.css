@@ -1,28 +1,25 @@
 /* Mobile UI Navigation */
 
 .navigation {
-  position: fixed;
-  left: 0;
-  right: 0;
+  align-items: center;
   background-color: var(--surface-raised);
   border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   bottom: 0;
   display: flex;
-  align-items: center; /* Vertically center */
   height: 60px;
-  
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  scroll-snap-type: y mandatory;
   /* Smooth, buttery transitions */
   transform: translateY(0);
-  opacity: 1;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none; 
   will-change: transform, opacity;
-
-  scroll-snap-type: y mandatory;
+  z-index: 100;
 }
 
 .navigation.hidden {
@@ -48,8 +45,4 @@
   position: static;
   flex-shrink: 0;
   width: 152px;
-}
-
-.navigation button svg {
-  fill: var(--text);
 }
