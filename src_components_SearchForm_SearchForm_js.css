@@ -25,10 +25,19 @@
 /* Ellipsis Vertical Button for opening Dropdown List */
 
 .vSJCR6tNZ73ERe1bdT14 {
+  align-items: center; 
   background: none;
   border: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
   height: 44px;
   width: 44px;
+}
+
+.vSJCR6tNZ73ERe1bdT14:active {
+  background: var(--button--active);
 }
 
 /*!****************************************************************************************************************!*\
