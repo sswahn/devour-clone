@@ -4,8 +4,8 @@
   align-items: center; 
   background: none;
   border: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   display: flex;
   justify-content: center;
   cursor: pointer;
