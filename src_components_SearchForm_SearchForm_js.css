@@ -56,10 +56,6 @@
   border: 1px dashed yellow;
 }
 
-.OGbMvckCuIXNF7ZaS8mY:active {
-  background: var(--button-active);
-}
-
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/DropdownList/DropdownList.module.css ***!
   \****************************************************************************************************************/
