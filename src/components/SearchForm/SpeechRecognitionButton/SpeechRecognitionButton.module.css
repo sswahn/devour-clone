@@ -21,10 +21,6 @@
   border-bottom-right-radius: 20px;
 }
 
-.speechRecognitionButton:active {
-  background: var(--button-active); /* was #666 */
-}
-
 .speechRecognitionButton.active svg {
   fill: #00C853;
 }
