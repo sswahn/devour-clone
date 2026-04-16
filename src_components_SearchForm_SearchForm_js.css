@@ -124,6 +124,11 @@
   z-index: 200;
 }
 
+.SLy02R_oWPksADBQiBuZ nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .SLy02R_oWPksADBQiBuZ form {
   position: relative;
 }
