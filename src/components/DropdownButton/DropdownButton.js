@@ -18,7 +18,7 @@ function DropdownButton() {
   }
   
   return (
-    <button className={styles.dropdownButton} onClick={onClick} onKeyDown={onKeyDown} type="button">
+    <button className={styles.dropdownButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="open dropdown">
       <EllipsisVerticalIcon />
     </button>
   )
