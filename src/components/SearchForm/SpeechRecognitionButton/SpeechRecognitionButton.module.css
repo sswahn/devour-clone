@@ -17,8 +17,6 @@
 }
 
 .speechRecognitionButton svg {
-  border: 2px dashed pink;
-  border-radius: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
