@@ -17,6 +17,9 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .dropdown button:active {
