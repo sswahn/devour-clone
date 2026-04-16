@@ -32,18 +32,6 @@
   position: relative;
 }
 
-.fsRjQsePCOqWh1LwmMMg > button {
-  align-items: center; 
-  background: none;
-  border: 0;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  height: 44px;
-  width: 44px;
-}
-
 .fsRjQsePCOqWh1LwmMMg ul {
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
