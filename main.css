@@ -659,11 +659,11 @@ button {
 }
 
 button:hover {
-  background: var(--light-gray);
+  background: var(--gray);
 }
 
 button:active {
-  background: var(--gray);
+  background: var(--light-gray);
 }
 
 svg {
