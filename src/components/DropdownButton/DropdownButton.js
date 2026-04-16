@@ -1,7 +1,7 @@
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
-import styles from './EllipsisVerticalButton.module.css'
+import styles from './DropdownButton.module.css'
 
-function EllipsisVerticalButton() {
+function DropdownButton() {
 
   const action = () => {
     // open dropdown list
@@ -18,10 +18,10 @@ function EllipsisVerticalButton() {
   }
   
   return (
-    <button className={styles.ellipsisVerticalButton} onClick={onClick} onKeyDown={onKeyDown} type="button">
+    <button className={styles.dropdownButton} onClick={onClick} onKeyDown={onKeyDown} type="button">
       <EllipsisVerticalIcon />
     </button>
   )
 }
 
-export default EllipsisVerticalButton
+export default DropdownButton
