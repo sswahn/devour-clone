@@ -14,28 +14,34 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   const onClick = event => {
     action()
   }
+
+  const focusPrevButton = target => {
+    const button = target.previousElementSibling.firstElementChild
+    if (button.tagName === 'BUTTON') {
+      button.focus()
+    }
+  }
+
+  const focusNextButton = target => {
+    const button = target.nextElementSibling.firstElementChild
+    if (button.tagName === 'BUTTON') {
+      button.focus()
+    }
+  }
   
   const onKeyDown = event => {
-    const menuItems = Array.from(listRef.current?.children || [])
-    const currentIndex = menuItems.indexOf(document.activeElement.parentElement)
-
     switch (event.key) {
       case 'Enter':
         return action()
         
       case 'ArrowDown':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        // Move to next item or loop to start
-        const nextIndex = (currentIndex + 1) % menuItems.length
-        menuItems[nextIndex]?.firstElementChild.focus()
-        return
+        focusNextButton(event.target) // Move to next item or loop to start
 
       case 'ArrowUp':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
         // Move to previous item or loop to end
-        const prevIndex = (currentIndex - 1 + menuItems.length) % menuItems.length
-        menuItems[prevIndex]?.firstElementChild.focus()
-        return
+        focusPrevButton(event.target)
 
       case 'Escape':
         action()
