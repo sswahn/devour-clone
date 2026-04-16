@@ -16,9 +16,9 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   }
 
   useEffect(() => {
-    document.addEventListener('click', offClickClose)
+    document.addEventListener('mousedown', offClickClose)
     return () => {
-      document.removeEventListener('click', offClickClose)
+      document.removeEventListener('mousedown', offClickClose)
     }
   }, [])
 
