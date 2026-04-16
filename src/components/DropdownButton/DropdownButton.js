@@ -15,6 +15,12 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     action()
   }
 
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      action()
+    }
+  }
+
   const focusPrevButton = target => {
     const button = target.parentElement.previousElementSibling.firstElementChild
     button ? button.focus() : listRef.current.lastElementChild.firstElementChild.focus()
@@ -24,8 +30,9 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     const button = target.parentElement.nextElementSibling.firstElementChild
     button ? button.focus() : listRef.current.firstElementChild.firstElementChild.focus()
   }
-  
-  const onKeyDown = event => {
+
+  // move this to the ul component
+  const onKeyDownForListButtons = event => {
     switch (event.key) {
       case 'Enter':
         return action()
@@ -39,12 +46,12 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         return focusPrevButton(event.target)
 
       case 'Escape':
-        action()
+        close()
         buttonRef.current?.focus() // 2. Return focus to button on close
         return
 
       case 'Tab':
-        return action()  // Standard behavior: Close menu if user tabs out
+        return close()  // Standard behavior: Close menu if user tabs out
 
       default:
         return
