@@ -65,10 +65,9 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   }, [isOpen])
 
   return (
-    <>
+    <div　className={styles.dropdown}>
       <button 
         id={`dropdown-button-${id}`}
-        className={styles.dropdown}
         ref={buttonRef}
         onClick={onClick} 
         onKeyDown={onKeyDown} 
@@ -86,7 +85,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
           </li>
         )}
       </ul>
-    </>
+    </div>
   )
 }
 
