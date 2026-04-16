@@ -75,7 +75,7 @@ function SearchForm({ closeSearch }) {
       <nav>
         <CloseButton overlay="search" close={closeSearch} />
         <Dropdown items={[{ 
-          text: 'alert message', method: () => alert('dropdown item clicked.') 
+          text: 'alert message', method: () => alert('dropdown item clicked.'),
           text: 'console log message', method: () => console.log('dropdown item clicked.')
         }]} />
       </nav>
