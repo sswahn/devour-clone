@@ -32,3 +32,5 @@ function DropdownButton({ id, label, isOpen, setIsOpen, buttonRef }) {
     </button>
   )
 }
+
+export default DropdownButton
