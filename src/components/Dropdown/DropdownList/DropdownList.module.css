@@ -9,6 +9,6 @@
   position: absolute;
   top: 48px;
   right: 0;
-  width: 200px;
+  min-width: 300px;
   z-index: 400;
 }
