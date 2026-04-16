@@ -60,7 +60,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
   useEffect(() => {
     if (isOpen) {
-      listRef.current?.children[0]?.firstElementChild.focus() 
+      listRef.current.firstElementChild.firstElementChild.focus()
     }
   }, [isOpen])
 
