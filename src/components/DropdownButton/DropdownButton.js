@@ -19,6 +19,9 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     const button = target.previousElementSibling.firstElementChild
     if (button.tagName === 'BUTTON') {
       button.focus()
+    } else {
+      const items = listRef.current.children
+      items[items.length - 1].focus()
     }
   }
 
@@ -26,6 +29,8 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     const button = target.nextElementSibling.firstElementChild
     if (button.tagName === 'BUTTON') {
       button.focus()
+    } else {
+      listRef.current.children[0].focus()
     }
   }
   
@@ -36,11 +41,11 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         
       case 'ArrowDown':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        focusNextButton(event.target) // Move to next item or loop to start
+        focusNextButton(event.target)
 
       case 'ArrowUp':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        focusPrevButton(event.target) // Move to previous item or loop to end
+        focusPrevButton(event.target)
 
       case 'Escape':
         action()
@@ -61,11 +66,6 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     }
   }, [isOpen])
 
-  // break list item button into its own component
-  // same with main button, 
-  // same with <ul> itself.
-  // combine in <Dropdown /> component
-  
   return (
     <>
       <button 
