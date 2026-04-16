@@ -1,6 +1,6 @@
 /* Dropdown Button */
 
-.dropdownButton {
+.dropdown {
   align-items: center; 
   background: none;
   border: 0;
@@ -12,6 +12,13 @@
   width: 44px;
 }
 
-.dropdownButton:active {
+.dropdown ul {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  list-style: none;
+}
+
+.dropdown button:active {
   background: var(--button--active);
 }
