@@ -50,6 +50,13 @@
   width: 44px;
 }
 
+.iMFEEY1YvDzgj8w_W3wI svg {
+  border: 1px dashed orange;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .iMFEEY1YvDzgj8w_W3wI:active {
   background: var(--button-active); /* was #666 */
 }
