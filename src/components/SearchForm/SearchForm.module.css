@@ -12,6 +12,11 @@
   z-index: 200;
 }
 
+.search nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .search form {
   position: relative;
 }
