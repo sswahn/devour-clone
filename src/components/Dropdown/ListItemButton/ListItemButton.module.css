@@ -14,7 +14,3 @@
 
   border: 1px dashed yellow;
 }
-
-.listItemButton:active {
-  background: var(--button-active);
-}
