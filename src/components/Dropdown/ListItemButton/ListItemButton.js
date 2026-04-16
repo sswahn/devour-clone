@@ -1,3 +1,4 @@
+import styles from './ListItemButton.module.css'
 
 function ListItemButton({ buttonRef, listRef, text, method, close }) {
   
@@ -32,7 +33,7 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
   }
   
   return (
-    <button onClick={onClick} onKeyDown={onKeyDown} type="button" role="menuitem" tabIndex="-1">{text}</button>
+    <button className={styles.listItemButton} onClick={onClick} onKeyDown={onKeyDown} type="button" role="menuitem" tabIndex="-1">{text}</button>
   )
 }
 
