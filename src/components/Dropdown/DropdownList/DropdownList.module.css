@@ -2,7 +2,7 @@
 
 .dropdownList {
   background-color: var(--surface-raised);
-  border: 1px solid var(--border-raised);
+  border: 1px solid var(--border);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
