@@ -1,6 +1,10 @@
 /* Dropdown Button */
 
 .dropdown {
+  position: relative;
+}
+
+.dropdown button {
   align-items: center; 
   background: none;
   border: 0;
@@ -18,7 +22,7 @@
   border-radius: 10px;
   list-style: none;
   position: absolute;
-  top: 0;
+  top: 48px;
   right: 0;
 }
 
