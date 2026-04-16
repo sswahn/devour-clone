@@ -20,7 +20,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   return (
     <div　className={styles.dropdown}>
       <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
-      <DropdownList id={id} isOpen={isOpen} close={close} items={items} buttonRef={buttonRef} />
+      {isOpen && <DropdownList id={id} isOpen={isOpen} close={close} items={items} buttonRef={buttonRef} />}
     </div>
   )
 }
