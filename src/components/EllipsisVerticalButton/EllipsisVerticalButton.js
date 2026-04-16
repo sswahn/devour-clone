@@ -1,4 +1,4 @@
-import EllipsisVerticalIcon from './Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
+import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './EllipsisVerticalButton.module.css'
 
 function EllipsisVerticalButton() {
