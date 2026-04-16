@@ -17,9 +17,9 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
   
   return (
     <input
-      id="search"
       className={styles.input}
       type="search"
+      name="search"
       value={searchValue}
       onChange={onChange}
       maxLength="288"
