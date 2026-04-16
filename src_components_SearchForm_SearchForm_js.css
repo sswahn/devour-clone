@@ -52,6 +52,7 @@
   position: absolute;
   top: 48px;
   right: 0;
+  z-index: 400;
 }
 
 .fsRjQsePCOqWh1LwmMMg button:active {
