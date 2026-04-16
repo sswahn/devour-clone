@@ -5,6 +5,7 @@
   background: none;
   border: 0;
   border-radius: 50px;
+  color: var(--dropdown-text);
   display: flex;
   justify-content: center;
   cursor: pointer;
