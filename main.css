@@ -516,6 +516,7 @@
 
   color-scheme: light dark;
 
+  --lighter-black: #404040;
   --light-black: #303030;
   --dark-black: #181818;
   --white: white; /* #f9fafb; */
@@ -538,6 +539,8 @@
   --surface: light-dark(var(--lighter-gray), var(--dark-black));
 
   --surface-raised: light-dark(var(--white), var(--light-black));
+
+  --surface-elevated: light-dark(var(--white), var(--lighter-black));
 
   /* Accent */
 
@@ -579,6 +582,8 @@
     oklch(from var(--black) 10% 0.01 h),
     oklch(from var(--white) 90% 0.01 h)
   );
+
+  --dropdown-bg: var(--surface-elevated)
 
   /* Typography Sizing */
 
