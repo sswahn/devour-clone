@@ -72,7 +72,7 @@ function SearchForm({ closeSearch }) {
 
   return (
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
-      <CloseButton name="search" close={closeSearch} />
+      <CloseButton overlay="search" close={closeSearch} />
       <EllipsisVerticalButton />
       <form onSubmit={onSubmit}>
         <SearchIcon size={18} />
