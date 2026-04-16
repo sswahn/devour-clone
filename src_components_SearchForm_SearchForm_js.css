@@ -62,6 +62,10 @@
   \****************************************************************************************************************/
 /* Dropdown List */
 
+.SaGbxhcxIln6hpTb0Klg * {
+  border: 1px dashed red;
+}
+
 .SaGbxhcxIln6hpTb0Klg {
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
