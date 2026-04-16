@@ -28,12 +28,12 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
       case 'Tab':
         return close()  // Standard behavior: Close menu if user tabs out
       case 'Escape':
-        return escape() // 2. Return focus to button on close
+        return escape() // Return focus to button on close
       case 'ArrowDown':
-        event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
+        event.preventDefault() // Prevents scrolling
         return focusNext(event.target)
       case 'ArrowUp':
-        event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
+        event.preventDefault() // Prevents scrolling
         return focusPrev(event.target)
       default:
         return
