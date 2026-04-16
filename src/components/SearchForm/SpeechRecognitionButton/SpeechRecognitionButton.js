@@ -54,7 +54,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
       onKeyDown={onKeyDown}
       type="button" 
       aria-label="speech recognition"
-      aria-description="search by voice">
+      aria-description="search using your voice">
       <MicrophoneIcon size={12} />
     </button>
   )
