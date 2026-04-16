@@ -2,19 +2,23 @@ import { useRef, useEffect } from  'react'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
-function DropdownList({ id, isOpen, close, items, buttonRef }) {
+function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   const listRef = useRef(null)
 
-   const clickToClose = event => {
-    if (!listRef.current.contains(event.target) && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false)
+  const close = () => {
+    setIsOpen(false)
+  }
+
+   const offClickClose = event => {
+    if (!listRef.current.contains(event.target)) {
+      close(false)
     }
   }
 
   useEffect(() => {
-    document.addEventListener('mousedown', clickToClose)
+    document.addEventListener('click', offClickClose)
     return () => {
-      document.removeEventListener('mousedown', clickToClose)
+      document.removeEventListener('click', offClickClose)
     }
   }, [])
 
