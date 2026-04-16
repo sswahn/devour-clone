@@ -5,13 +5,26 @@ import styles from './DropdownList.module.css'
 function DropdownList({ id, isOpen, close, items, buttonRef }) {
   const listRef = useRef(null)
 
+   const clickToClose = event => {
+    if (!listRef.current.contains(event.target) && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', clickToClose)
+    return () => {
+      document.removeEventListener('mousedown', clickToClose)
+    }
+  }, [])
+
   useEffect(() => {
     if (isOpen) {
       listRef.current.firstElementChild.firstElementChild.focus()
     }
   }, [isOpen])
   
-  return isOpen && (
+  return (
     <ul 
       id={`dropdown-list-${id}`} 
       className={styles.dropdownList} 
