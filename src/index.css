@@ -40,9 +40,9 @@
 
   /* Surfaces */
 
-  --surface: light-dark(var(--white), var(--light-black));
+  --surface: light-dark(var(--lighter-gray), var(--dark-black));
 
-  --surface-raised: light-dark(var(--lighter-gray), var(--dark-black));
+  --surface-raised: light-dark(var(--white), var(--light-black));
 
   /* Accent */
 
