@@ -1,7 +1,7 @@
 import ArrowLeftIcon from '../Icons/ArrowLeftIcon/ArrowLeftIcon'
 import styles from './CloseButton.module.css'
 
-function CloseButton({ name, close }) { // should use "text" instead of name
+function CloseButton({ overlay, close }) {
 
   const action = () => {
     close()
@@ -23,7 +23,7 @@ function CloseButton({ name, close }) { // should use "text" instead of name
      onClick={onClick} 
      onKeyDown={onKeyDown}
      type="button" 
-     aria-label={`close ${name}`}>
+     aria-label={`close ${overlay}`}>
      <ArrowLeftIcon />
    </button>
   )
