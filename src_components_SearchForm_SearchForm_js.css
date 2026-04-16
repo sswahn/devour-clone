@@ -24,7 +24,7 @@
   \***********************************************************************************************/
 /* Dropdown Button */
 
-.zB09Fwy2mcqdWYX_BlYZ {
+.fsRjQsePCOqWh1LwmMMg {
   align-items: center; 
   background: none;
   border: 0;
@@ -36,7 +36,14 @@
   width: 44px;
 }
 
-.zB09Fwy2mcqdWYX_BlYZ:active {
+.fsRjQsePCOqWh1LwmMMg ul {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  list-style: none;
+}
+
+.fsRjQsePCOqWh1LwmMMg button:active {
   background: var(--button--active);
 }
 
