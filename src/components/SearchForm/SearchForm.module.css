@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.search form svg:first-of-type {
+.search form > svg:first-of-type {
   align-items: center; 
   display: flex;
   justify-content: center;
