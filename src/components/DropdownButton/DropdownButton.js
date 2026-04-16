@@ -16,7 +16,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   }
 
   const focusPrevButton = target => {
-    const button = target.previousElementSibling.firstElementChild
+    const button = target.parentElement.previousElementSibling.firstElementChild
     if (button.tagName === 'BUTTON') {
       button.focus()
     } else {
@@ -26,7 +26,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   }
 
   const focusNextButton = target => {
-    const button = target.nextElementSibling.firstElementChild
+    const button = target.parentElement.nextElementSibling.firstElementChild
     if (button.tagName === 'BUTTON') {
       button.focus()
     } else {
