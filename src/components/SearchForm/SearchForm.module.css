@@ -18,12 +18,11 @@
 }
 
 .search form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: block;
+  position: relative;
 }
 
-.search form div:first-child {
+.search form svg {
   align-items: center; 
   display: flex;
   justify-content: center;
@@ -37,7 +36,7 @@
   width: 44px; 
 }
 
-.search form:last-child {
+.search form button {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -47,6 +46,9 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 44px;
 }
 
