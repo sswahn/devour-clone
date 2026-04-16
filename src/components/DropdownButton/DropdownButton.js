@@ -17,20 +17,12 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
   const focusPrevButton = target => {
     const button = target.parentElement.previousElementSibling.firstElementChild
-    if (button.tagName === 'BUTTON') {
-      button.focus()
-    } else {
-      listRef.current.lastElementChild.firstElement.focus()
-    }
+    button ? button.focus() : listRef.current.lastElementChild.firstElement.focus()
   }
 
   const focusNextButton = target => {
     const button = target.parentElement.nextElementSibling.firstElementChild
-    if (button.tagName === 'BUTTON') {
-      button.focus()
-    } else {
-      listRef.current.firstElementChild.firstElement.focus()
-    }
+    button ? button.focus() : listRef.current.firstElementChild.firstElement.focus()
   }
   
   const onKeyDown = event => {
