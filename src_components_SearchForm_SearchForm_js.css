@@ -74,8 +74,16 @@
 
 .SaGbxhcxIln6hpTb0Klg li {
   display: flex;
-  
-  border: 1px dashed orange;
+}
+
+.SaGbxhcxIln6hpTb0Klg li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.SaGbxhcxIln6hpTb0Klg li:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /*!***********************************************************************************************!*\
