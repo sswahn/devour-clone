@@ -41,7 +41,7 @@
 
   --surface: light-dark(var(--white), var(--light-black));
 
-  --surface-raised: light-dark(var(--gray), var(--dark-black));
+  --surface-raised: light-dark(var(--light-gray), var(--dark-black));
 
   /* Accent */
 
