@@ -73,18 +73,14 @@ function SearchForm({ closeSearch }) {
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <CloseButton name="search" close={closeSearch} />
       <form onSubmit={onSubmit}>
-        <div>
-          <SearchIcon size={18} />
-        </div>
+        <SearchIcon size={18} />
         <SearchInput 
           searchValue={searchValue} 
           error={error}
           setSearchValue={setSearchValue}
           setError={setError}
         />
-        <div>
-          <SpeechRecognitionButton setSearchValue={setSearchValue} />
-        </div>
+        <SpeechRecognitionButton setSearchValue={setSearchValue} />
       </form>
       
       {/* make Suggestions component: */}
