@@ -24,6 +24,7 @@
   --light-black: #303030;
   --dark-black: #181818;
   --white: white; /* #f9fafb; */
+  --lighter-gray: #e8e8e8;
   --light-gray: #606060;
   --gray: #484848;
   --purple: #663399; 
@@ -41,7 +42,7 @@
 
   --surface: light-dark(var(--white), var(--light-black));
 
-  --surface-raised: light-dark(var(--light-gray), var(--dark-black));
+  --surface-raised: light-dark(var(--lighter-gray), var(--dark-black));
 
   /* Accent */
 
