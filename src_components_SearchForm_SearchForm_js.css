@@ -134,7 +134,7 @@
   position: relative;
 }
 
-.SLy02R_oWPksADBQiBuZ form svg:first-of-type {
+.SLy02R_oWPksADBQiBuZ form > svg:first-of-type {
   align-items: center; 
   display: flex;
   justify-content: center;
