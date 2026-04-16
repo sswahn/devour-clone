@@ -34,7 +34,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
         // Move to previous item or loop to end
         const prevIndex = (currentIndex - 1 + menuItems.length) % menuItems.length
-        menuItems[prevIndex]?.focus()
+        menuItems[prevIndex]?.firstElementChild.focus()
         return
 
       case 'Escape':
