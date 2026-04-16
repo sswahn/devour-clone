@@ -12,6 +12,10 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
     button ? button.focus() : listRef.current.firstElementChild.firstElementChild.focus()
   }
 
+  const onClick = event => {
+    method()
+  }
+
   const onKeyDown = event => {
     switch (event.key) {
       case 'Enter':
