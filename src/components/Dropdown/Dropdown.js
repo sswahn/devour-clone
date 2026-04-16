@@ -9,20 +9,6 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   const close = () => {
     setIsOpen(false)
   }
-  
-  const action = () => {
-    setIsOpen(prevState => !prevState)
-  }
-  
-  const onClick = event => {
-    action()
-  }
-
-  const onKeyDown = event => {
-    if (event.key === 'Enter') {
-      action()
-    }
-  }
 
   return (
     <div　className={styles.dropdown}>
@@ -38,7 +24,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         aria-controls={`dropdown-list-${id}`}>
         <EllipsisVerticalIcon />
       </button>
-      
+      <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
       <DropdownList id={id} isOpen={isOpen} close={close} items={items} />
     </div>
   )
