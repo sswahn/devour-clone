@@ -18,7 +18,15 @@ function DropdownButton() {
   }
   
   return (
-    <button className={styles.dropdownButton} onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="open dropdown">
+    <button 
+      className={styles.dropdownButton} 
+      onClick={onClick} 
+      onKeyDown={onKeyDown} 
+      type="button" 
+      aria-label="open dropdown" 
+      aria-haspopup="menu" 
+      aria-expanded="false" 
+      aria-controls="dropdown-list">
       <EllipsisVerticalIcon />
     </button>
   )
