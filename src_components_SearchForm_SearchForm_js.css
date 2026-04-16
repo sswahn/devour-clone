@@ -52,7 +52,8 @@
   cursor: pointer;
   display: flex;
   height: 44px;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 8px;
   width: 100%;
 }
 
