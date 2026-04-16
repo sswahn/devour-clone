@@ -655,7 +655,7 @@ body {
 
 button {
   touch-action: manipulation;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.2s ease-in-out;
   user-select: none;
 }
 
