@@ -39,7 +39,7 @@ function MobileUI() {
   }
 
   return (
-    <section>
+    <>
       <Interface 
         searchIsOpen={searchIsOpen} 
         cameraIsOpen={cameraIsOpen}
@@ -60,7 +60,7 @@ function MobileUI() {
         openNotifications={openNotifications}
         openProfile={openProfile}
       />
-    </section>
+    </>
   )
 }
 
