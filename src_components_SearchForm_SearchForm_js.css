@@ -51,7 +51,9 @@
   border: 0;
   cursor: pointer;
   display: flex;
+  height: 44px;
   justify-content: center;
+  width: 100%;
 }
 
 .OGbMvckCuIXNF7ZaS8mY:active {
