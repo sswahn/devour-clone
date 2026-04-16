@@ -41,11 +41,11 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         
       case 'ArrowDown':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        focusNextButton(event.target)
+        return focusNextButton(event.target)
 
       case 'ArrowUp':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        focusPrevButton(event.target)
+        return focusPrevButton(event.target)
 
       case 'Escape':
         action()
