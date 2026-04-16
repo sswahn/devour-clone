@@ -99,12 +99,11 @@
 }
 
 .SLy02R_oWPksADBQiBuZ form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: block;
+  position: relative;
 }
 
-.SLy02R_oWPksADBQiBuZ form div:first-child {
+.SLy02R_oWPksADBQiBuZ form svg {
   align-items: center; 
   display: flex;
   justify-content: center;
@@ -118,7 +117,7 @@
   width: 44px; 
 }
 
-.SLy02R_oWPksADBQiBuZ form:last-child {
+.SLy02R_oWPksADBQiBuZ form button {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -128,6 +127,9 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 44px;
 }
 
