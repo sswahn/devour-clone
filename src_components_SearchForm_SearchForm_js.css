@@ -19,12 +19,12 @@
   background: var(--button--active);
 }
 
-/*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/EllipsisVerticalButton/EllipsisVerticalButton.module.css ***!
-  \***************************************************************************************************************************/
-/* Ellipsis Vertical Button for opening Dropdown List */
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/DropdownButton/DropdownButton.module.css ***!
+  \***********************************************************************************************************/
+/* Dropdown Button */
 
-.vSJCR6tNZ73ERe1bdT14 {
+.vnHfO_yvnvaXYbMACEFt {
   align-items: center; 
   background: none;
   border: 0;
@@ -36,7 +36,7 @@
   width: 44px;
 }
 
-.vSJCR6tNZ73ERe1bdT14:active {
+.vnHfO_yvnvaXYbMACEFt:active {
   background: var(--button--active);
 }
 
