@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   background-color: var(--surface-raised);
-  border-top: 1px solid var(--border-raised);
+  border-top: 1px solid var(--border);
   bottom: 0;
   display: flex;
   align-items: center; /* Vertically center */
