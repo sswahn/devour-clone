@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect, Suspense, lazy } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import DropdownButton from './DropdownButton/DropdownButton'
-const DropdownList = lazy(() => import('./DropdownList/DropdownList'))
+import DropdownList from './DropdownList/DropdownList'
 import styles from './Dropdown.module.css'
 
 function Dropdown({ id = 0, label = 'dropdown', items }) {
@@ -20,9 +20,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   return (
     <div　className={styles.dropdown}>
       <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
-      <Suspense fallback={null}>
-        {isOpen && <DropdownList id={id} isOpen={isOpen} close={close} items={items} buttonRef={buttonRef} />}
-      </Suspense>
+      {isOpen && <DropdownList id={id} isOpen={isOpen} close={close} items={items} buttonRef={buttonRef} />}
     </div>
   )
 }
