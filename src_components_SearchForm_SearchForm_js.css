@@ -117,7 +117,7 @@
   height: 100dvh;
   left: 0;
   overflow-y: scroll;
-  padding: 42px 8px 0 8px;
+  padding: 40px 8px 0 8px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -127,6 +127,7 @@
 .SLy02R_oWPksADBQiBuZ nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .SLy02R_oWPksADBQiBuZ form {
