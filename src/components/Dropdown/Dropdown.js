@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
+import DropdownButton from './DropdownButton/DropdownButton'
+import DropdownList from './DropdownList/DropdownList'
 import styles from './Dropdown.module.css'
 
 function Dropdown({ id = 0, label = 'dropdown', items }) {
