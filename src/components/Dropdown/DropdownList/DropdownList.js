@@ -2,7 +2,7 @@ import { useRef, useEffect } from  'react'
 import ListItemButton from './ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
-function DropdownList({ id, isOpen, close, items }) {
+function DropdownList({ id, isOpen, close, items, buttonRef }) {
   const listRef = useRef(null)
 
   useEffect(() => {
