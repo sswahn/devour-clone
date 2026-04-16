@@ -1,8 +1,17 @@
 /* Ellipsis Vertical Button for opening Dropdown List */
 
 .ellipsisVerticalButton {
+  align-items: center; 
   background: none;
   border: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
   height: 44px;
   width: 44px;
+}
+
+.ellipsisVerticalButton:active {
+  background: var(--button--active);
 }
