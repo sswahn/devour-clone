@@ -4,11 +4,17 @@
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   height: auto;
   list-style: none;
   position: absolute;
   top: 48px;
   right: 0;
-  min-width: 300px;
+  min-width: 250px;
   z-index: 400;
+}
+
+.dropdownList li {
+  width: 100%;
 }
