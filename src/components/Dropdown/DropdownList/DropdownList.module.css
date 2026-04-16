@@ -1,5 +1,14 @@
 /* Dropdown List */
 
 .dropdownList {
-  
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  height: auto;
+  list-style: none;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 200px;
+  z-index: 400;
 }
