@@ -553,6 +553,8 @@
 
   --border: light-dark(#ffffff0d, #ffffff26);
 
+  --border-raised: light-dark(#0000000d, #00000026);
+
   /* Inputs */
 
   --input-bg: var(--surface-raised);
