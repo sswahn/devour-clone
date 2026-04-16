@@ -81,7 +81,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
       <ul id={`dropdown-list-${id}`} ref={listRef} role="menu" aria-labelledby={`dropdown-button-${id}`} hidden={!isOpen}>
         {items?.map((item, index) => 
           <li key={index} role="none">
-            <button onClick={item.action} onKeyDown={item.action} type="button" role="menuitem" tabIndex="-1">{item.text}</button>
+            <button onClick={item.method} onKeyDown={item.method} type="button" role="menuitem" tabIndex="-1">{item.text}</button>
           </li>
         )}
       </ul>
