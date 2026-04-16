@@ -4,7 +4,7 @@ import { FocusTrapContext } from '../Providers/FocusTrapProvider' // use custom 
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import CloseButton from '../CloseButton/CloseButton'
-import VerticalEllipsisButton from '../VerticalEllipsisButton/VerticalEllipsisButton'
+import EllipsisVerticalButton from '../EllipsisVerticalButton/EllipsisVerticalButton'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
@@ -73,7 +73,7 @@ function SearchForm({ closeSearch }) {
   return (
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <CloseButton name="search" close={closeSearch} />
-      <VerticalEllipsisButton />
+      <EllipsisVerticalButton />
       <form onSubmit={onSubmit}>
         <SearchIcon size={18} />
         <SearchInput 
