@@ -11,6 +11,12 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     setIsOpen(false)
   }
 
+  useEffect(() => {
+    return () => {
+      setIsOpen(false)
+    }
+  }, [])
+
   return (
     <div　className={styles.dropdown}>
       <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
