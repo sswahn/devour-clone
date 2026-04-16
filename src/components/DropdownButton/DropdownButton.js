@@ -1,7 +1,7 @@
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
-function DropdownButton({ data }) {
+function DropdownButton({ id, data }) {
 
   const action = () => {
     // open dropdown list
@@ -18,20 +18,23 @@ function DropdownButton({ data }) {
   }
   
   return (
-    <button 
-      className={styles.dropdownButton} 
-      onClick={onClick} 
-      onKeyDown={onKeyDown} 
-      type="button" 
-      aria-label="open dropdown" 
-      aria-haspopup="menu" 
-      aria-expanded="false" 
-      aria-controls="dropdown-list">
-      <EllipsisVerticalIcon />
-    </button>
-    <ul id="menu-list" role="menu" aria-labelledby="menu-button" hidden>
-      {data?.map((item, index) => <li key={index} role="menuitem">{item}</li>}
-    </ul>
+    <>
+      <button 
+        id={`dropdown-button-${id}`}
+        className={styles.dropdownButton} 
+        onClick={onClick} 
+        onKeyDown={onKeyDown} 
+        type="button" 
+        aria-label="open dropdown" 
+        aria-haspopup="menu" 
+        aria-expanded="false" 
+        aria-controls={`dropdown-list-${id}`}>
+        <EllipsisVerticalIcon />
+      </button>
+      <ul id={`dropdown-list-${id}`} role="menu" aria-labelledby={`dropdown-button-${id}`} hidden>
+        {data?.map((item, index) => <li key={index} role="menuitem">{item}</li>}
+      </ul>
+    </>
   )
 }
 
