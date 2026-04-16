@@ -667,6 +667,10 @@ button:active {
   background: var(--light-gray);
 }
 
+button:focus {
+  background: initial;
+}
+
 svg {
   fill: var(--text);
 }
