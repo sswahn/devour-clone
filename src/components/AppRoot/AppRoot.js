@@ -10,7 +10,7 @@ function AppRoot() {
   
   return (
     <>
-      {!session.isAuthenticated ? <Authentication /> : <>
+      {session.isAuthenticated ? <Authentication /> : <>
         <Header />
         <Main />
         <MobileUI />
