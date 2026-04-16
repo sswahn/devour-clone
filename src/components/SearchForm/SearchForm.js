@@ -74,7 +74,7 @@ function SearchForm({ closeSearch }) {
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <nav>
         <CloseButton overlay="search" close={closeSearch} />
-        <Dropdown />
+        <Dropdown items={{ text: 'info', method: () => alert('dropdown item clicked') } />
       </nav>
       <form onSubmit={onSubmit}>
         <SearchIcon size={18} />
