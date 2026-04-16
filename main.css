@@ -559,11 +559,11 @@
 
   /* Inputs */
 
-  --input-bg: var(--surface-raised);
+  --input-bg: var(--surface);
   
   --input-text: var(--text);
   
-  --input-border: var(--border-inset);
+  --input-border: var(--border);
   
   /* Buttons */
 
