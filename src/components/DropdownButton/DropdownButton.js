@@ -20,8 +20,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     if (button.tagName === 'BUTTON') {
       button.focus()
     } else {
-      const items = listRef.current.children
-      items[items.length - 1].focus()
+      listRef.current.lastElementChild.firstElement.focus()
     }
   }
 
@@ -30,7 +29,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     if (button.tagName === 'BUTTON') {
       button.focus()
     } else {
-      listRef.current.children[0].focus()
+      listRef.current.firstElementChild.firstElement.focus()
     }
   }
   
