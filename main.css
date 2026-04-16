@@ -538,6 +538,7 @@
   --light-black: #303030;
   --dark-black: #181818;
   --white: white; /* #f9fafb; */
+  --light-gray: #eeeeee;
   --gray: #cccccc;
   --purple: #663399; 
   --purple-alt: #8a2be2;
@@ -655,6 +656,14 @@ body {
 button {
   touch-action: manipulation;
   user-select: none;
+}
+
+button:hover {
+  background: var(--light-gray);
+}
+
+button:active {
+  background: var(--gray);
 }
 
 svg {
