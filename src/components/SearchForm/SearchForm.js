@@ -4,7 +4,7 @@ import { FocusTrapContext } from '../Providers/FocusTrapProvider' // instead, us
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import CloseButton from '../CloseButton/CloseButton'
-import DropdownButton from '../DropdownButton/DropdownButton'
+import Dropdown from '../Dropdown/Dropdown'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
@@ -74,7 +74,7 @@ function SearchForm({ closeSearch }) {
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <nav>
         <CloseButton overlay="search" close={closeSearch} />
-        <DropdownButton />
+        <Dropdown />
       </nav>
       <form onSubmit={onSubmit}>
         <SearchIcon size={18} />
