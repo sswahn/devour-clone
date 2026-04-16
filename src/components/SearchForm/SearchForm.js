@@ -1,6 +1,6 @@
 import { useState, useContext, useRef, useEffect } from 'react'
 import { config } from '../../config'
-import { FocusTrapContext } from '../Providers/FocusTrapProvider' // use custom hook pattern, always.
+import { FocusTrapContext } from '../Providers/FocusTrapProvider' // instead, use custom hook pattern, always.
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import CloseButton from '../CloseButton/CloseButton'
