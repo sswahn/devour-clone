@@ -1,3 +1,33 @@
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/CloseButton/CloseButton.module.css ***!
+  \*****************************************************************************************************/
+/* Close Overlay Button */
+
+.nRmVNOUPXPt07q2izPkS {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+
+.nRmVNOUPXPt07q2izPkS:active {
+  background: var(--button--active);
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/EllipsisVerticalButton/EllipsisVerticalButton.module.css ***!
+  \***************************************************************************************************************************/
+/* Ellipsis Vertical Button for opening Dropdown List */
+
+.vSJCR6tNZ73ERe1bdT14 {
+  
+}
+
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchInput/SearchInput.module.css ***!
   \****************************************************************************************************************/
@@ -63,27 +93,6 @@
 
 .iMFEEY1YvDzgj8w_W3wI.mDwrKHdH0eu7Q2AAX1Yr svg {
   fill: #00C853;
-}
-
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/CloseButton/CloseButton.module.css ***!
-  \*****************************************************************************************************/
-/* Close Overlay Button */
-
-.nRmVNOUPXPt07q2izPkS {
-  align-items: center; 
-  background: none;
-  border: 0;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  height: 44px;
-  width: 44px;
-}
-
-.nRmVNOUPXPt07q2izPkS:active {
-  background: var(--button--active);
 }
 
 /*!***************************************************************************************************!*\
