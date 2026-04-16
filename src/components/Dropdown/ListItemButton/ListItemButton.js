@@ -12,6 +12,11 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
     nextButton ? nextButton.focus() : listRef.current.firstElementChild.firstElementChild.focus()
   }
 
+  const escape = () => {
+    close()
+    buttonRef.current.focus()
+  }
+
   const onClick = event => {
     method()
   }
@@ -23,8 +28,7 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
       case 'Tab':
         return close()  // Standard behavior: Close menu if user tabs out
       case 'Escape':
-        close()
-        return buttonRef.current?.focus() // 2. Return focus to button on close
+        return escape() // 2. Return focus to button on close
       case 'ArrowDown':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
         return focusNext(event.target)
