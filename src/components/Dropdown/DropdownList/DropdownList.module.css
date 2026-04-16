@@ -1,9 +1,5 @@
 /* Dropdown List */
 
-.dropdownList * {
-  border: 1px dashed red;
-}
-
 .dropdownList {
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
@@ -17,6 +13,10 @@
   right: 0;
   min-width: 250px;
   z-index: 400;
+
+  margin: 0;
+  padding: 0;
+  border: 1px dashed red;
 }
 
 .dropdownList li {
@@ -24,4 +24,5 @@
 
   margin: 0;
   padding: 0;
+  border: 1px dashed orange;
 }
