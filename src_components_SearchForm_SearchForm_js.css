@@ -69,6 +69,7 @@
 /* Dropdown List */
 
 .SaGbxhcxIln6hpTb0Klg {
+  align-items: stretch;
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -84,10 +85,7 @@
 }
 
 .SaGbxhcxIln6hpTb0Klg li {
-  width: 100%;
 
-  margin: 0;
-  padding: 0;
   border: 1px dashed orange;
 }
 
