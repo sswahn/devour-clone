@@ -69,7 +69,6 @@
 /* Dropdown List */
 
 .SaGbxhcxIln6hpTb0Klg {
-  align-items: stretch;
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -85,7 +84,8 @@
 }
 
 .SaGbxhcxIln6hpTb0Klg li {
-
+  display: flex;
+  
   border: 1px dashed orange;
 }
 
