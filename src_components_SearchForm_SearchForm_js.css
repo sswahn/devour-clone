@@ -32,22 +32,6 @@
   position: relative;
 }
 
-.fsRjQsePCOqWh1LwmMMg ul {
-  background-color: var(--surface-raised);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  height: auto;
-  list-style: none;
-  position: absolute;
-  top: 48px;
-  right: 0;
-  width: 200px;
-  z-index: 400;
-}
-
-.fsRjQsePCOqWh1LwmMMg button:active {
-  background: var(--button--active);
-}
 
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchInput/SearchInput.module.css ***!
