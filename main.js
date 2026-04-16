@@ -1279,7 +1279,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"src_components_SearchForm_SearchForm_js":1,"src_features_Camera_Camera_js":1,"src_components_Notifications_Notifications_js":1,"src_components_Profile_Profile_js":1,"src_components_Dropdown_DropdownList_DropdownList_js":1};
+/******/ 			var cssChunks = {"src_components_SearchForm_SearchForm_js":1,"src_features_Camera_Camera_js":1,"src_components_Notifications_Notifications_js":1,"src_components_Profile_Profile_js":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
