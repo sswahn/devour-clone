@@ -1,14 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 
-function useSpeechRecognition({
-  continuous = true,
-  interimResults = true,
-  lang = 'en-US',
-  autoRestart = true
-} = {}) {
+function useSpeechRecognition({ continuous = true, interimResults = true, lang = 'en-US' } = {}) {
   const recognitionRef = useRef(null)
   const isListeningRef = useRef(false)
-  const shouldRestartRef = useRef(autoRestart)
   
   const [isSupported, setIsSupported] = useState(true)
   const [isListening, setIsListening] = useState(false)
@@ -41,17 +35,10 @@ function useSpeechRecognition({
     recognition.onend = () => {
       isListeningRef.current = false
       setIsListening(false)
-
-      if (shouldRestartRef.current) {
-        recognition.start()
-      }
     }
 
     recognition.onerror = event => {
       setError(event.error)
-      if (event.error === 'not-allowed') {
-        shouldRestartRef.current = false
-      }
     }
 
     recognition.onresult = event => {
@@ -76,26 +63,21 @@ function useSpeechRecognition({
     }
 
     return () => {
-      shouldRestartRef.current = false
       recognition.abort()
     }
-  }, [continuous, interimResults, lang, autoRestart])
+  }, [continuous, interimResults, lang])
 
   // Controls
   const start = useCallback(() => {
-    if (!recognitionRef.current) {
-      return
+    if (recognitionRef.current) {
+      recognitionRef.current.start()
     }
-    shouldRestartRef.current = autoRestart
-    recognitionRef.current.start()
   }, [])
 
   const stop = useCallback(() => {
-    if (!recognitionRef.current) {
-      return
+    if (recognitionRef.current) {
+      recognitionRef.current.stop()
     }
-    shouldRestartRef.current = false
-    recognitionRef.current.stop()
   }, [])
 
   const reset = useCallback(() => {
