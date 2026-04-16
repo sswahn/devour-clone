@@ -2,7 +2,7 @@ import { useState } from 'react'
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
-function DropdownButton({ id, data }) {
+function DropdownButton({ id = 0, data }) {
   const [isOpen, setIsOpen] = useState(false)
   
   const action = () => {
