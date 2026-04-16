@@ -203,7 +203,7 @@
   height: 60px;
   background-color: var(--surface-raised);
   border-bottom: 1px solid var(--border-raised);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   
   /* Smooth, buttery transitions */
