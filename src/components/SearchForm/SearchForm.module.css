@@ -37,7 +37,7 @@
   width: 44px; 
 }
 
-.search form div:last-child {
+.search form:last-child {
   align-items: center;
   display: flex;
   justify-content: center;
