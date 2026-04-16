@@ -1,4 +1,4 @@
-import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
+import EllipsisVerticalIcon from '../../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
 function DropdownButton({ id, label, isOpen, setIsOpen, buttonRef }) {
