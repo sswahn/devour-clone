@@ -1,7 +1,6 @@
 /* Dropdown List */
 
 .dropdownList {
-  align-items: stretch;
   background-color: var(--surface-raised);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -17,6 +16,7 @@
 }
 
 .dropdownList li {
-
+  display: flex;
+  
   border: 1px dashed orange;
 }
