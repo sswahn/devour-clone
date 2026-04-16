@@ -39,7 +39,7 @@ function Profile({ closeProfile }) {
       aria-labelledby="username" 
       aria-describedby="biography">
         
-      <CloseButton name="profile" close={closeProfile} />
+      <CloseButton overlay="profile" close={closeProfile} />
         
       <header>
         <img src="" alt={`{''}'s profile picture`} />
