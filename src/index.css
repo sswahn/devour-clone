@@ -60,7 +60,7 @@
 
   --border: light-dark(#ffffff0d, #ffffff26);
 
-  --border-raised: light-dark(#0000000d, #00000026);
+  --border-inset: light-dark(#0000000d, #00000026);
 
   /* Inputs */
 
@@ -68,7 +68,7 @@
   
   --input-text: var(--text);
   
-  --input-border: var(--border);
+  --input-border: var(--border-inset);
   
   /* Buttons */
 
