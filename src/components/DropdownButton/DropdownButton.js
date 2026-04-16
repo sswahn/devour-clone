@@ -40,8 +40,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
       case 'ArrowUp':
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
-        // Move to previous item or loop to end
-        focusPrevButton(event.target)
+        focusPrevButton(event.target) // Move to previous item or loop to end
 
       case 'Escape':
         action()
