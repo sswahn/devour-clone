@@ -1,7 +1,7 @@
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
-function DropdownButton() {
+function DropdownButton({ data }) {
 
   const action = () => {
     // open dropdown list
@@ -29,6 +29,9 @@ function DropdownButton() {
       aria-controls="dropdown-list">
       <EllipsisVerticalIcon />
     </button>
+    <ul id="menu-list" role="menu" aria-labelledby="menu-button" hidden>
+      {data?.map((item, index) => <li key={index} role="menuitem">{item}</li>}
+    </ul>
   )
 }
 
