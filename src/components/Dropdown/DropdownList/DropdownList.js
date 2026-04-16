@@ -1,5 +1,5 @@
 import { useRef, useEffect } from  'react'
-import ListItemButton from './ListItemButton/ListItemButton'
+import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
 function DropdownList({ id, isOpen, close, items, buttonRef }) {
