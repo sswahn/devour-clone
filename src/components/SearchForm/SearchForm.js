@@ -1,12 +1,13 @@
 import { useState, useContext, useRef, useEffect } from 'react'
-import { FocusTrapContext } from '../Providers/FocusTrapProvider'
 import { config } from '../../config'
+import { FocusTrapContext } from '../Providers/FocusTrapProvider' // use custom hook pattern, always.
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
+import CloseButton from '../CloseButton/CloseButton'
+import VerticalEllipsisButton from '../VerticalEllipsisButton/VerticalEllipsisButton'
 import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import SearchInput from './SearchInput/SearchInput'
 import SpeechRecognitionButton from './SpeechRecognitionButton/SpeechRecognitionButton'
-import CloseButton from '../CloseButton/CloseButton'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './SearchForm.module.css'
 
@@ -72,6 +73,7 @@ function SearchForm({ closeSearch }) {
   return (
     <search id="search" className={styles.search} ref={overlayRef} role="dialog" aria-modal="true">
       <CloseButton name="search" close={closeSearch} />
+      <VerticalEllipsisButton />
       <form onSubmit={onSubmit}>
         <SearchIcon size={18} />
         <SearchInput 
