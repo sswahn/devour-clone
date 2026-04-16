@@ -27,7 +27,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
         event.preventDefault() // test with and without this (supposedly it keeps the screen from scrolling)
         // Move to next item or loop to start
         const nextIndex = (currentIndex + 1) % menuItems.length
-        menuItems[nextIndex]?.focus()
+        menuItems[nextIndex]?.firstElementChild.focus()
         return
 
       case 'ArrowUp':
@@ -52,7 +52,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
   useEffect(() => {
     if (isOpen) {
-      listRef.current?.children[0].focus() 
+      listRef.current?.children[0]?.firstElementChild.focus() 
     }
   }, [isOpen])
 
