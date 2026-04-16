@@ -17,7 +17,7 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   
   const onKeyDown = event => {
     const menuItems = Array.from(listRef.current?.children || [])
-    const currentIndex = menuItems.indexOf(document.activeElement)
+    const currentIndex = menuItems.indexOf(document.activeElement.parentElement)
 
     switch (event.key) {
       case 'Enter':
