@@ -123,8 +123,10 @@
   z-index: 200;
 }
 
-.bRXXEOH49SRQPlqWmeUf * {
-  /* border: 1px dashed red; */
+.WMUjEeFRanmV9SHehMGp nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .bRXXEOH49SRQPlqWmeUf header {

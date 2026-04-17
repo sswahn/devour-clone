@@ -155,7 +155,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \***************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"profile\":\"bRXXEOH49SRQPlqWmeUf\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Profile/Profile.module.css?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// extracted by mini-css-extract-plugin\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\"profile\":\"bRXXEOH49SRQPlqWmeUf\",\"search\":\"WMUjEeFRanmV9SHehMGp\"});\n\n//# sourceURL=webpack://devour-clone/./src/components/Profile/Profile.module.css?\n}");
 
 /***/ }
 
