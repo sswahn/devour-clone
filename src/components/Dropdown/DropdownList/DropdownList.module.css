@@ -18,6 +18,8 @@
   z-index: 400;
 }
 
+/* not just opacity, but transition height and width to grow from right to left */
+
 .open {
   opacity: 1;
 }
