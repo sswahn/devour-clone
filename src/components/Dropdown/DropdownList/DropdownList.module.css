@@ -14,7 +14,7 @@
   position: absolute;
   right: 0;
   top: 48px;
-  transition: opacity 0.5s ease-in-out; /* should be < 0.5 */
+  transition: opacity 0.5s ease-in-out;
   z-index: 400;
 }
 
