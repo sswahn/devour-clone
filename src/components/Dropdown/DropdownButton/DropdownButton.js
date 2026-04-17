@@ -12,7 +12,6 @@ function DropdownButton({ id, label, isOpen, open, close, buttonRef }) {
   }
 
   const onKeyDown = event => {
-    event.stopPropagation()
     if (event.key === 'Enter') {
       action()
     }
