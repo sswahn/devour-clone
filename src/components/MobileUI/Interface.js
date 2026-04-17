@@ -21,7 +21,7 @@ function Interface({
   // Use 'Escape' key to break out of overlays:
   const closeOverlay = event => {
     console.log('Fired!')
-    if (!searchIsOpen && !cameraIsOpen && !notificationsIsOpen && !profileIsOpen) {
+    if (!(searchIsOpen || cameraIsOpen || notificationsIsOpen || profileIsOpen)) {
       return
     }
 
