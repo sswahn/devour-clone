@@ -3,37 +3,37 @@ import { useRef, useCallback, createContext } from 'react'
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
-  const focusedRef = useRef(null)
+  const ref = useRef(null)
   
-  const overlayRef = useCallback(node => {
+  const focusRef = useCallback(node => {
     if (node !== null) {
-      focusedRef.current = node
-      focusRef.current.focus()
+      ref.current = node
+      ref.current.focus()
     } else {  
       console.log('focusRef cleanup fired. focusRef.current = null')
-      focusedRef.current = null // 2. Cleanup logic (unmount)
+      ref.current = null // 2. Cleanup logic (unmount)
     }
   }, [])
 
   const focusLast = event => {
     console.log('focusLast fired!')
-    console.log('focusing on focusedRef.current.lastElementChild: ', focusedRef.current.lastElementChild) 
+    console.log('focusing on focusRef.current.lastElementChild: ', focusRef.current.lastElementChild) 
     
-    focusedRef.current.lastElementChild.focus()
+    focusRef.current.lastElementChild.focus()
   }
   
   const focusFirst = event => {
     console.log('focusFirst fired!')
-    console.log('focusing on focusedRef.current.firstElementChild: ', focusedRef.current.firstElementChild)
+    console.log('focusing on focusRef.current.firstElementChild: ', focusRef.current.firstElementChild)
     
-    focusedRef.current.firstElementChild.focus()
+    focusRef.current.firstElementChild.focus()
   }
     
   return (
-    <FocusTrapContext.Provider value={overlayRef}>
-      {focusedRef.current && <div onFocus={focusLast} tabIndex={0}></div>}
+    <FocusTrapContext.Provider value={focusRef}>
+      {focusRef.current && <div onFocus={focusLast} tabIndex={0}></div>}
         {children}
-      {focusedRef.current && <div onFocus={focusFirst} tabIndex={0}></div>}
+      {focusRef.current && <div onFocus={focusFirst} tabIndex={0}></div>}
     </FocusTrapContext.Provider>
   )
 }
