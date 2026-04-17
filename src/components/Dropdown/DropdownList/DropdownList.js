@@ -2,16 +2,7 @@ import { useState, useRef, useEffect } from  'react'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
-function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
-  
-  const close = () => {
-    listRef.current.addEventListener(
-      'transitionend', 
-      () => setIsOpen(false), 
-      { once: true }
-    )
-    setIsMounted(false)
-  }
+function DropdownList({ id, items, isOpen, open, close, buttonRef, listRef }) {
 
    const offClickClose = event => {
     if (!listRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
@@ -25,14 +16,6 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
       document.removeEventListener('click', offClickClose)
     }
   }, [])
-
-  /*
-  useEffect(() => {
-    if (isOpen) {
-      listRef.current.firstElementChild.firstElementChild.focus()
-    }
-  }, [isOpen])
-  */
 
   useEffect(() => {
     // Wait for the next repaint to transition:
