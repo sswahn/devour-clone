@@ -16,6 +16,7 @@ function ProfileButton({ profileButtonRef, openProfile }) {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
