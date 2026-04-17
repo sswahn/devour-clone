@@ -1,6 +1,6 @@
 import { useState, useContext, useRef, useEffect } from 'react'
 import { config } from '../../config'
-import { FocusTrapContext } from '../Providers/FocusTrapProvider' // instead, use custom hook pattern, always.
+import useFocusTrap from '../../hooks/useFocusTrap' // instead, use custom hook pattern, always.
 import server from '../../utilities/server'
 import useDebounce from '../../hooks/useDebounce'
 import CloseButton from '../CloseButton/CloseButton'
@@ -12,7 +12,7 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 import styles from './SearchForm.module.css'
 
 function SearchForm({ closeSearch }) {
-  const overlayRef = useContext(FocusTrapContext)
+  const overlayRef = useFocusTrap()
   const [searchValue, setSearchValue] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [recentSearches, setRecentSearches] = useState([])
