@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styles from './SearchInput.module.css'
 
 function SearchInput({ searchValue, error, setSearchValue, setError }) {
-
+  const inputRef = useRef(null)
+  
   const onChange = ({ target }) => {
     if (target.validity.patternMismatch) {
       target.reportValidity()
@@ -13,11 +14,15 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
     setSearchValue(target.value)
   }
 
+  useEffect(() => {
+    inpuRef.current.scrollLeft = inputRef.current.scrollWidth
+  }, [searchValue])
+ 
+
   return (
     <input
       className={styles.input}
-      type="search"
-      name="search"
+      ref={inputRef}
       value={searchValue}
       onChange={onChange}
       maxLength="288"
@@ -26,6 +31,8 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       spellCheck={true}
       autoComplete="off"
       autoFocus
+      type="search"
+      name="search"
       role="combobox"
       aria-autocomplete="list"
       aria-controls="suggestions"
