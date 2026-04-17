@@ -20,7 +20,7 @@ function FocusTrapProvider({ children }) {
   }, [])
 
   const focusLast = event => {
-    const elements = containerRef.current.querySelectorAll(selector)
+    const elements = ref.current.querySelectorAll(selector)
     console.log('focusLast: ', elements)
     console.log('elements.length: ', elements.length)
     console.log('elements.at(-1): ', elements.at(-1))
@@ -30,7 +30,7 @@ function FocusTrapProvider({ children }) {
   }
   
   const focusFirst = event => {
-    const elements = containerRef.current.querySelectorAll(selector)
+    const elements = ref.current.querySelectorAll(selector)
     console.log('focusFirst: ', elements)
     console.log('elements.length: ', elements.length)
     console.log('elements.at(0): ', elements.at(0))
