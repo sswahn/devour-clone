@@ -27,7 +27,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       value={searchValue}
       onChange={onChange}
       maxLength="288"
-      pattern="[a-zA-Z0-9 .,_]+" 
+      pattern="^[a-zA-Z0-9 .,_]+$" 
       title="Only use alphanumeric characters, spaces, periods, commas, or underscores."
       spellCheck="true"
       autoFocus
