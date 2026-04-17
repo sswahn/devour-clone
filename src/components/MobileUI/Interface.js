@@ -20,6 +20,10 @@ function Interface({
   
   // Use 'Escape' key to break out of overlays:
   const closeOverlay = event => {
+    if (!searchIsOpen && !cameraIsOpen && !notificationsIsOpen && !profileIsOpen) {
+      return
+    }
+    
     if (event.key !== 'Escape') {
       return 
     }
