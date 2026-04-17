@@ -16,6 +16,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
 
   useEffect(() => {
     inputRef.current.scrollLeft = inputRef.current.scrollWidth
+    inputRef.current.focus()
   }, [searchValue])
  
 
