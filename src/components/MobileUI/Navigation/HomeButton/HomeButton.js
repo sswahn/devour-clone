@@ -17,6 +17,7 @@ function HomeButton() {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
