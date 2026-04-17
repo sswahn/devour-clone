@@ -23,13 +23,8 @@ function Interface({
     if (event.key !== 'Escape') {
       return 
     }
-
     event.preventDefault()
-    
     const modal = event.target.closest('[role="dialog"]')
-
-    console.log('modal: ', modal)
-    
     switch(modal?.id) {
       case 'search':
         closeSearch()
