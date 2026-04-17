@@ -14,6 +14,7 @@ function NotificationsButton({ notificationsButtonRef, openNotifications }) {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
