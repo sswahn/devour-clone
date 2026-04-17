@@ -55,7 +55,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
       type="button" 
       aria-label="speech recognition"
       aria-description="search using your voice">
-      <MicrophoneIcon size={16} />
+      <MicrophoneIcon size={17} />
     </button>
   )
 }
