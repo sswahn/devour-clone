@@ -1,24 +1,21 @@
-import { useState, useRef, useCallback, createContext } from 'react'
+import { useRef, useCallback, createContext } from 'react'
 
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false)
   const focusedRef = useRef(null)
   
   const overlayRef = useCallback(node => {
     if (node !== null) {
-      node.focus()
       focusedRef.current = node
-      setIsOpen(true)
+      focusRef.current.focus()
     } else {  
+      console.log('focusRef cleanup fired. focusRef.current = null')
       focusedRef.current = null // 2. Cleanup logic (unmount)
-      setIsOpen(false)
     }
   }, [])
 
   const focusLast = event => {
-
     console.log('focusLast fired!')
     console.log('focusing on focusedRef.current.lastElementChild: ', focusedRef.current.lastElementChild) 
     
@@ -26,7 +23,6 @@ function FocusTrapProvider({ children }) {
   }
   
   const focusFirst = event => {
-
     console.log('focusFirst fired!')
     console.log('focusing on focusedRef.current.firstElementChild: ', focusedRef.current.firstElementChild)
     
