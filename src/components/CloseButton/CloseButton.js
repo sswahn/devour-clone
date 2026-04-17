@@ -12,8 +12,8 @@ function CloseButton({ overlay, close }) {
   }
 
   const onKeyDown = event => {
-    event.preventDefault()
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
