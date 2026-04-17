@@ -5,8 +5,10 @@ import styles from './Dropdown.module.css'
 
 function Dropdown({ id = 0, label = 'dropdown', items }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const buttonRef = useRef(null)
-
+  const listRef = useRef(null)
+  
   const open = () => {
     setIsOpen(true)
   }
