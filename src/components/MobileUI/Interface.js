@@ -30,7 +30,7 @@ function Interface({
 
     console.log('modal: ', modal)
     
-    switch(modal.id) {
+    switch(modal?.id) {
       case 'search':
         closeSearch()
       case 'camera':
