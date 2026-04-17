@@ -21,12 +21,11 @@ function Interface({
   
   // Use 'Escape' key to break out of overlays:
   const closeOverlay = event => {
-    
-    console.log('global key fires...')
-    
     if (event.key !== 'Escape') {
       return 
     }
+
+    event.preventDefault()
     
     const modal = event.target.closest('[role="dialog"]')
     switch(modal.id) {
