@@ -21,21 +21,26 @@ function FocusTrapProvider({ children }) {
 
   const focusLast = event => {
     const elements = ref.current.querySelectorAll(selector)
+    const { length } = elements
+    
     console.log('focusLast: ', elements)
-    console.log('elements.length: ', elements.length)
-    console.log('elements.at(-1): ', elements.at(-1))
-    if (elements.length > 0) {
-      elements.at(-1).focus()
+    console.log('elements.length: ', length)
+    console.log('elements[length - 1]: ', elements[length - 1])
+    
+    if (length > 0) {
+      elements[length - 1].focus()
     }
   }
   
   const focusFirst = event => {
     const elements = ref.current.querySelectorAll(selector)
+    
     console.log('focusFirst: ', elements)
     console.log('elements.length: ', elements.length)
-    console.log('elements.at(0): ', elements.at(0))
+    console.log('elements[0]: ', elements[0])
+    
     if (elements.length > 0) {
-      elements.at(0).focus()
+      elements[0].focus()
     }
   }
     
