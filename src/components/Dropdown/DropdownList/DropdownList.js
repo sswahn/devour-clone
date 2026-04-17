@@ -7,11 +7,12 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   const [isMounted, setIsMounted] = useState(false)
 
   const close = () => {
-    listRef.addEventListener(
+    listRef.current.addEventListener(
       'transitionend', 
       () => setIsOpen(false), 
       { once: true }
     )
+    setIsMounted(false)
   }
 
    const offClickClose = event => {
