@@ -1,5 +1,5 @@
-import { useContext, useRef, useEffect } from 'react'
-import { FocusTrapContext } from '../Providers/FocusTrapProvider'
+import { useRef, useEffect } from 'react'
+import useFocusTrap from '../../hooks/useFocusTrap'
 import CloseButton from '../CloseButton/CloseButton'
 import Dropdown from '../Dropdown/Dropdown'
 import FollowButton from './FollowButton/FollowButton'
@@ -7,7 +7,7 @@ import FollowStats from './FollowStats/FollowStats'
 import styles from './Profile.module.css'
 
 function Profile({ closeProfile }) {
-  const overlayRef = useContext(FocusTrapContext)
+  const focusRef = useFocusTrap()
 
   /* 
   const geoRef = useRef(null)
@@ -33,7 +33,7 @@ function Profile({ closeProfile }) {
     <section 
       id="profile"
       className={styles.profile} 
-      ref={overlayRef} 
+      ref={focusRef} 
       tabIndex={-1} 
       role="dialog" 
       aria-modal="true" 
