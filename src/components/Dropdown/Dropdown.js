@@ -7,6 +7,14 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   const [isOpen, setIsOpen] = useState(false)
   const buttonRef = useRef(null)
 
+  const open = () => {
+    setIsOpen(true)
+  }
+
+  const close = () => {
+    
+  }
+  
   useEffect(() => {
     return () => {
       setIsOpen(false)
