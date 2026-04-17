@@ -5,7 +5,9 @@ import styles from './DropdownList.module.css'
 function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, buttonRef, listRef }) {
 
    const onMount = () => {
+      console.log('onMount fired! isMounted: ', isMounted)
       if (!isMounted) {
+         console.log('firing mountList!')
         mountList()
         listRef.current.firstElementChild.firstElementChild.focus()
       }
