@@ -22,6 +22,9 @@ function Interface({
     if (event.key !== 'Escape') {
       return 
     }
+    
+    console.log('global onKeyDown is firing why?')
+    
     const modal = event.target.closest('[role="dialog"]')
     switch(modal.id) {
       case 'search':
