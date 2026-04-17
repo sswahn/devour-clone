@@ -129,8 +129,7 @@
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-results-button,
 .E5mhg1QQHXBJyTe4V76v::-webkit-search-results-decoration {
   cursor: pointer;
-  height: 44px; /*24px;*/
-  width: 44px; /*24px;*/
+  padding-left: 8px;
 }
 
 
