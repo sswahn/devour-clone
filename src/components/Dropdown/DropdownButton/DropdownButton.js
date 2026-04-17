@@ -1,10 +1,10 @@
 import EllipsisVerticalIcon from '../../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './DropdownButton.module.css'
 
-function DropdownButton({ id, label, isOpen, setIsOpen, buttonRef }) {
+function DropdownButton({ id, label, isOpen, open, close, buttonRef }) {
 
   const action = () => {
-    setIsOpen(prevState => !prevState)
+    isOpen ? close() : open()
   }
   
   const onClick = event => {
