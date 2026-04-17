@@ -80,7 +80,7 @@ function SearchForm({ closeSearch }) {
         ]} />
       </nav>
       <form onSubmit={onSubmit}>
-        <SearchIcon size={16} />
+        <SearchIcon size={15} />
         <SearchInput 
           searchValue={searchValue} 
           error={error}
