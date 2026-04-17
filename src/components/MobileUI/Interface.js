@@ -18,12 +18,11 @@ function Interface({
   closeProfile 
 }) {
 
+  // Use 'Escape' key to break out of overlays:
   const handleKeyDown = event => {
     if (event.key !== 'Escape') {
       return 
     }
-    
-    console.log('global onKeyDown is firing why?')
     
     const modal = event.target.closest('[role="dialog"]')
     switch(modal.id) {
