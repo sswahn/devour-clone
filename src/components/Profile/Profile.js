@@ -38,9 +38,13 @@ function Profile({ closeProfile }) {
       aria-modal="true" 
       aria-labelledby="username" 
       aria-describedby="biography">
-        
-      <CloseButton overlay="profile" close={closeProfile} />
-        
+      <nav>
+        <CloseButton overlay="profile" close={closeProfile} />
+        <Dropdown items={[
+          { text: 'alert message', method: () => alert('dropdown item clicked.') },
+          { text: 'console log message', method: () => console.log('dropdown item clicked.') }
+        ]} />
+      </nav>
       <header>
         <img src="" alt={`{''}'s profile picture`} />
         <div>
