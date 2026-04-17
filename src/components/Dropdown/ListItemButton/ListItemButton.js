@@ -14,8 +14,13 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
   }
 
   const focusNext = button => {
-    const nextButton = button.parentElement.nextElementSibling.firstElementChild
-    nextButton ? nextButton.focus() : listRef.current.firstElementChild.firstElementChild.focus()
+    const nextButton = button.parentElement
+    console.log('parentElement: ', nextButton)
+    let nextSibling = nextButton.nextElementSibling
+    console.log('nextElementSibling: ', nextSibling)
+    let first = nextSibling.firstElementChild
+    console.log('firstElementChild', first)
+    first ? first.focus() : listRef.current.firstElementChild.firstElementChild.focus()
   }
 
   const escape = () => {
