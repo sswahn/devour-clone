@@ -4,6 +4,7 @@
   background-color: var(--dropdown-bg);
   border: 1px solid var(--dropdown-border);
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: auto;
