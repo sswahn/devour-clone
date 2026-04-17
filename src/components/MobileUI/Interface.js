@@ -20,6 +20,9 @@ function Interface({
 
   // Use 'Escape' key to break out of overlays:
   const handleKeyDown = event => {
+    
+    console.log('global key fires...')
+    
     if (event.key !== 'Escape') {
       return 
     }
