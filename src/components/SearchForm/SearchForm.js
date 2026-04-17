@@ -1,4 +1,4 @@
-import { useState, useContext, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { config } from '../../config'
 import useFocusTrap from '../../hooks/useFocusTrap'
 import server from '../../utilities/server'
