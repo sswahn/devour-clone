@@ -2,6 +2,8 @@ import { useState, useRef, useCallback, createContext } from 'react'
 
 const FocusTrapContext = createContext(null)
 
+const selector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
 function FocusTrapProvider({ children }) {
   const [isMounted, setIsMounted] = useState(false)
   const ref = useRef(null)
