@@ -17,7 +17,6 @@ function Interface({
   closeNotifications, 
   closeProfile 
 }) {
-
   
   // Use 'Escape' key to break out of overlays:
   const closeOverlay = event => {
@@ -48,7 +47,6 @@ function Interface({
     }
   }, [])
 
-  
   return createPortal(
     <FocusTrapProvider>
       <Suspense fallback={<LoadingSpinner />}>
