@@ -1,9 +1,10 @@
-import { useRef, useEffect } from  'react'
+import { useState, useRef, useEffect } from  'react'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
 function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   const listRef = useRef(null)
+  const [isMounted, setIsMounted] = useState(false)
 
   const close = () => {
     listRef.addEventListener(
@@ -26,16 +27,31 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
     }
   }, [])
 
+  /*
   useEffect(() => {
     if (isOpen) {
       listRef.current.firstElementChild.firstElementChild.focus()
     }
   }, [isOpen])
+  */
+
+  useEffect(() => {
+    // Wait for the next repaint to transition:
+    const timer = requestAnimationFrame(() => {
+      if (!isMounted) {
+        setIsMounted(true)
+        listRef.current.firstElementChild.firstElementChild.focus()
+      }
+    })
+    return () => {
+      cancelAnimationFrame(timer)
+    }
+  }, [])
   
   return (
     <ul 
       id={`dropdown-list-${id}`} 
-      className={`${styles.dropdownList} ${isOpen ? styles.open : ''}`} 
+      className={`${styles.dropdownList} ${isMounted ? styles.open : ''}`} 
       ref={listRef} 
       role="menu" 
       aria-labelledby={`dropdown-button-${id}`} 
