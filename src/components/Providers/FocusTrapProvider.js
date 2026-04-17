@@ -27,10 +27,11 @@ function FocusTrapProvider({ children }) {
   }
   
   const focusFirst = event => {
-    console.log('focusFirst fired!')
-    console.log('focusing on ref.current.firstElementChild: ', ref.current.firstElementChild)
-    
-    ref.current.firstElementChild.focus()
+    const focusableElements = containerRef.current.querySelectorAll(selector)
+    // 3. Focus the first found element if it exists
+    if (focusableElements.length > 0) {
+      focusableElements[0].focus();
+    }
   }
     
   return (
