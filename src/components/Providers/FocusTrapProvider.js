@@ -35,9 +35,9 @@ function FocusTrapProvider({ children }) {
     
   return (
     <FocusTrapContext.Provider value={overlayRef}>
-      {isOpen && <div onFocus={focusLast} tabIndex={0}></div>}
+      {focusedRef.current && <div onFocus={focusLast} tabIndex={0}></div>}
         {children}
-      {isOpen && <div onFocus={focusFirst} tabIndex={0}></div>}
+      {focusedRef.current && <div onFocus={focusFirst} tabIndex={0}></div>}
     </FocusTrapContext.Provider>
   )
 }
