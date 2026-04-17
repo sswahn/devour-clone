@@ -17,6 +17,38 @@ function Interface({
   closeNotifications, 
   closeProfile 
 }) {
+
+  
+  // Use 'Escape' key to break out of overlays:
+  const closeOverlay = event => {
+    
+    console.log('global key fires...')
+    
+    if (event.key !== 'Escape') {
+      return 
+    }
+    
+    const modal = event.target.closest('[role="dialog"]')
+    switch(modal.id) {
+      case 'search':
+        closeSearch()
+      case 'camera':
+        closeCamera()
+      case 'notifications':
+        closeNotifications()
+      case 'profile':
+        closeProfile()
+      default:
+    }
+  }
+  
+  useEffect(() => {
+    document.addEventListener('keyup', closeOverlay)
+    return () => {
+      document.removeEventListener('keyup', closeOverlay)
+    }
+  }, [])
+
   
   return createPortal(
     <FocusTrapProvider>
