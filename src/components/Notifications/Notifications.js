@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
+import useFocusTrap from '../../hooks/useFocusTrap'
 import EllipsisVerticalIcon from '../Icons/EllipsisVerticalIcon/EllipsisVerticalIcon'
 import styles from './Notifications.module.css'
 
 function Notifications({ closeNotifications }) {
   const [isOpen, setIsOpen] = useState(false)
+  const focusRef = useFocusTrap()
   const bottomSheetRef = useRef(null)
   const initialHeight = useRef(0)
   const dragging = useRef(false)
@@ -105,7 +107,7 @@ function Notifications({ closeNotifications }) {
   }, [])
   
   return (
-    <div id="notifications" className={styles.notifications} onClick={handleClose} tabIndex={-1} role="dialog" aria-modal="true">
+    <div id="notifications" className={styles.notifications} ref={focusRef} onClick={handleClose} tabIndex={-1} role="dialog" aria-modal="true">
       <section ref={bottomSheetRef}  
         className={`${styles.bottomSheet} ${isOpen ? styles.open : ''}`}
         onPointerDown={handlePointerDown}
