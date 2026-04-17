@@ -118,7 +118,7 @@
   color: var(--input-text);
   font-size: 18px;
   height: 44px;
-  padding: 0 44px;
+  padding: 0 52px 0 44px;
   width: 100%;
 }
 
