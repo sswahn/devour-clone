@@ -6,5 +6,4 @@ function SearchIcon({ size = 24 }) {
     </svg>
   )
 }
-
 export default SearchIcon
