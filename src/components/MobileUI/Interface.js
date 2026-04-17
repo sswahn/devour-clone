@@ -20,13 +20,6 @@ function Interface({
   
   // Use 'Escape' key to break out of overlays:
   const closeOverlay = event => {
-    console.log('Fired!')
-    if (searchIsOpen || cameraIsOpen || notificationsIsOpen || profileIsOpen) {
-      
-    
-
-    console.log('IN!')
-    
     if (event.key !== 'Escape') {
       return 
     }
@@ -34,6 +27,9 @@ function Interface({
     event.preventDefault()
     
     const modal = event.target.closest('[role="dialog"]')
+
+    console.log('modal: ', modal)
+    
     switch(modal.id) {
       case 'search':
         closeSearch()
@@ -44,8 +40,6 @@ function Interface({
       case 'profile':
         closeProfile()
       default:
-    }
-
     }
   }
   
