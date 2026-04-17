@@ -19,7 +19,7 @@ function Interface({
 }) {
 
   // Use 'Escape' key to break out of overlays:
-  const handleKeyDown = event => {
+  const closeOverlay = event => {
     
     console.log('global key fires...')
     
@@ -42,9 +42,9 @@ function Interface({
   }
   
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keyup', closeOverlay)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keyup', closeOverlay)
     }
   }, [])
   
