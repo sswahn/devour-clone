@@ -22,9 +22,10 @@ function SearchForm({ closeSearch }) {
   const onSubmit = event => event.preventDefault()
 
   const requestSearchResults = useDebounce(async () => {
-    
+
+    // break validation out into another function
     const value = searchValue.trim()
-    if (!value || error) { // might have to .trim() here
+    if (value.length <= 3 || error) {
       return
     }
     
