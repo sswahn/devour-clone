@@ -6,7 +6,11 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   const listRef = useRef(null)
 
   const close = () => {
-    setIsOpen(false)
+    listRef.addEventListener(
+      'transitionend', 
+      () => setIsOpen(false), 
+      { once: true }
+    )
   }
 
    const offClickClose = event => {
@@ -31,7 +35,7 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   return (
     <ul 
       id={`dropdown-list-${id}`} 
-      className={styles.dropdownList} 
+      className={`${styles.dropdownList} ${isOpen && styles.open}`} 
       ref={listRef} 
       role="menu" 
       aria-labelledby={`dropdown-button-${id}`} 
