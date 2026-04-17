@@ -49,14 +49,14 @@ function useSpeechRecognition({ continuous = true, interimResults = true, lang =
         const transcript = event.results[i][0].transcript
 
         if (event.results[i].isFinal) {
-          final += transcript
+          final += `${transcript} `
         } else {
           interim += transcript
         }
       }
 
       if (final) {
-        setFinalTranscript(prev => prev + final + ' ')
+        setFinalTranscript(final.trim())
       }
 
       setInterimTranscript(interim)
