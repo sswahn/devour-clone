@@ -5,7 +5,7 @@ function useFocusTrap() {
   const focusRef = useContext(FocusTrapContext)
   
   if (!focusRef) {
-    
+    // -->
   }
   
   return focusRef
