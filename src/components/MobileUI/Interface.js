@@ -42,9 +42,9 @@ function Interface({
   }
   
   useEffect(() => {
-   // document.addEventListener('keydown', closeOverlay)
+    document.addEventListener('keydown', closeOverlay)
     return () => {
-    //  document.removeEventListener('keydown', closeOverlay)
+      document.removeEventListener('keydown', closeOverlay)
     }
   }, [])
 
