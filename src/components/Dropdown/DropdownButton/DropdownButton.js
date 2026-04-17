@@ -13,6 +13,7 @@ function DropdownButton({ id, label, isOpen, open, close, buttonRef }) {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
