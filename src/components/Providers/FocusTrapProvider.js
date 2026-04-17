@@ -20,17 +20,22 @@ function FocusTrapProvider({ children }) {
   }, [])
 
   const focusLast = event => {
-    console.log('focusLast fired!')
-    console.log('focusing on ref.current.lastElementChild: ', ref.current.lastElementChild) 
-    
-    ref.current.lastElementChild.focus()
+    const elements = containerRef.current.querySelectorAll(selector)
+    console.log('focusLast: ', elements)
+    console.log('elements.length: ', elements.length)
+    console.log('elements.at(-1): ', elements.at(-1))
+    if (elements.length > 0) {
+      elements.at(-1).focus()
+    }
   }
   
   const focusFirst = event => {
-    const focusableElements = containerRef.current.querySelectorAll(selector)
-    // 3. Focus the first found element if it exists
-    if (focusableElements.length > 0) {
-      focusableElements[0].focus();
+    const elements = containerRef.current.querySelectorAll(selector)
+    console.log('focusFirst: ', elements)
+    console.log('elements.length: ', elements.length)
+    console.log('elements.at(0): ', elements.at(0))
+    if (elements.length > 0) {
+      elements.at(0).focus()
     }
   }
     
