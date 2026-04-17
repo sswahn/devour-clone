@@ -43,9 +43,9 @@ function Interface({
   }
   
   useEffect(() => {
-    document.addEventListener('keyup', closeOverlay)
+    document.addEventListener('keydown', closeOverlay)
     return () => {
-      document.removeEventListener('keyup', closeOverlay)
+      document.removeEventListener('keydown', closeOverlay)
     }
   }, [])
 
