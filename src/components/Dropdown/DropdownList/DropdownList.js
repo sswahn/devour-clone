@@ -2,8 +2,15 @@ import { useState, useRef, useEffect } from  'react'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
-function DropdownList({ id, items, isOpen, open, close, buttonRef, listRef }) {
+function DropdownList({ id, items, isOpen, open, close, mountList, buttonRef, listRef }) {
 
+   const onMount = () => {
+      if (!isMounted) {
+        mountList()
+        listRef.current.firstElementChild.firstElementChild.focus()
+      }
+    }
+   
    const offClickClose = event => {
     if (!listRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
       close(false)
@@ -19,12 +26,7 @@ function DropdownList({ id, items, isOpen, open, close, buttonRef, listRef }) {
 
   useEffect(() => {
     // Wait for the next repaint to transition:
-    const timer = requestAnimationFrame(() => {
-      if (!isMounted) {
-        setIsMounted(true)
-        listRef.current.firstElementChild.firstElementChild.focus()
-      }
-    })
+    const timer = requestAnimationFrame(onMount)
     return () => {
       cancelAnimationFrame(timer)
     }
