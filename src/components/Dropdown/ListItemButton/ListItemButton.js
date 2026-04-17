@@ -24,16 +24,17 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
   const onKeyDown = event => {
     switch (event.key) {
       case 'Enter':
+        event.preventDefault()
         return method()
       case 'Tab':
         return close()  // Standard behavior: Close menu if user tabs out
       case 'Escape':
         return escape() // Return focus to button on close
       case 'ArrowDown':
-        event.preventDefault() // Prevents scrolling
+        event.preventDefault()
         return focusNext(event.target)
       case 'ArrowUp':
-        event.preventDefault() // Prevents scrolling
+        event.preventDefault()
         return focusPrev(event.target)
       default:
         return
