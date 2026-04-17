@@ -3,8 +3,14 @@ import styles from './ListItemButton.module.css'
 function ListItemButton({ buttonRef, listRef, text, method, close }) {
   
   const focusPrev = button => {
-    const prevButton = button.parentElement.previousElementSibling.firstElementChild
-    prevButton ? prevButton.focus() : listRef.current.lastElementChild.firstElementChild.focus()
+    const prevButton = button.parentElement
+    console.log('parentElement: ', prevButton)
+    let prevSibling = prevButton.previousElementSibling
+    console.log('previousElementSibling: ', prevSibling)
+    let first = prevSibling.firstElementChild
+    console.log('firstElementChild: ', first)
+    
+    first ? first.focus() : listRef.current.lastElementChild.firstElementChild.focus()
   }
 
   const focusNext = button => {
