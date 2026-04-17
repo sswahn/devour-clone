@@ -14,7 +14,12 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
   }
 
   const close = () => {
-    
+    listRef.current.addEventListener(
+      'transitionend', 
+      () => setIsOpen(false), 
+      { once: true }
+    )
+    setIsMounted(false)
   }
   
   useEffect(() => {
@@ -25,8 +30,8 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
   return (
     <div　className={styles.dropdown}>
-      <DropdownButton id={id} label={label} isOpen={isOpen} setIsOpen={setIsOpen} buttonRef={buttonRef} /> 
-      {isOpen && <DropdownList id={id} isOpen={isOpen} setIsOpen={setIsOpen} items={items} buttonRef={buttonRef} />}
+      <DropdownButton id={id} label={label} isOpen={isOpen} open={open} close={close} buttonRef={buttonRef} /> 
+      {isOpen && <DropdownList id={id} items={items} isOpen={isOpen} open={open} close={close} buttonRef={buttonRef} listRef={listRef} />}
     </div>
   )
 }
