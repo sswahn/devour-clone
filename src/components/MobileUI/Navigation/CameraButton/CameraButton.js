@@ -17,6 +17,7 @@ function CameraButton({ cameraButtonRef, openCamera }) {
 
    const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
