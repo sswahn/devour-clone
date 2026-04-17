@@ -21,7 +21,6 @@
 .input::-webkit-search-results-decoration {
   cursor: pointer;
   height: 24px;
-  padding-right: 48px; /* try margin if doesnt work. */
   width: 24px;
 }
 
