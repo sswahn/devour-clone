@@ -32,6 +32,7 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
         return close()  // Standard behavior: Close menu if user tabs out
       case 'Escape':
         event.preventDefault()
+        event.stopPropagation()
         return escape() // Return focus to button on close
       case 'ArrowDown':
         event.preventDefault()
