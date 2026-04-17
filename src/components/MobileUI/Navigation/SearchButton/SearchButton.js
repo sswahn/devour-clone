@@ -16,6 +16,7 @@ function SearchButton({ searchButtonRef, openSearch }) {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
