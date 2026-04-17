@@ -3,6 +3,8 @@ import styles from './SearchInput.module.css'
 
 function SearchInput({ searchValue, error, setSearchValue, setError }) {
   const inputRef = useRef(null)
+
+  // for js input validation: ^[\p{L}\p{N}\p{Sc} .,_]+$
   
   const onChange = ({ target }) => {
     if (target.validity.patternMismatch) {
