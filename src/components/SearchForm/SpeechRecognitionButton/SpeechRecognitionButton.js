@@ -36,6 +36,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault()
       action()
     }
   }
