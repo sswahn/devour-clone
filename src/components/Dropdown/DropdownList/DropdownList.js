@@ -35,7 +35,7 @@ function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
   return (
     <ul 
       id={`dropdown-list-${id}`} 
-      className={`${styles.dropdownList} ${isOpen && styles.open}`} 
+      className={`${styles.dropdownList} ${isOpen ? styles.open : ''}`} 
       ref={listRef} 
       role="menu" 
       aria-labelledby={`dropdown-button-${id}`} 
