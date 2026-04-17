@@ -21,6 +21,10 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
     )
     setIsMounted(false)
   }
+
+  const mountList = () => {
+    setIsMounted(true)
+  }
   
   useEffect(() => {
     return () => {
@@ -30,8 +34,24 @@ function Dropdown({ id = 0, label = 'dropdown', items }) {
 
   return (
     <div　className={styles.dropdown}>
-      <DropdownButton id={id} label={label} isOpen={isOpen} open={open} close={close} buttonRef={buttonRef} /> 
-      {isOpen && <DropdownList id={id} items={items} isOpen={isOpen} open={open} close={close} buttonRef={buttonRef} listRef={listRef} />}
+      <DropdownButton 
+        id={id} 
+        label={label} 
+        isOpen={isOpen} 
+        open={open} 
+        close={close} 
+        buttonRef={buttonRef}
+      /> 
+      {isOpen && <DropdownList 
+        id={id} 
+        items={items} 
+        isOpen={isOpen}
+        open={open} 
+        close={close} 
+        mountList={mountList} 
+        buttonRef={buttonRef} 
+        listRef={listRef}
+      />}
     </div>
   )
 }
