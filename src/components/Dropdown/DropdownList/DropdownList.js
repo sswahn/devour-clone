@@ -3,9 +3,7 @@ import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
 function DropdownList({ id, isOpen, setIsOpen, items, buttonRef }) {
-  const listRef = useRef(null)
-  const [isMounted, setIsMounted] = useState(false)
-
+  
   const close = () => {
     listRef.current.addEventListener(
       'transitionend', 
