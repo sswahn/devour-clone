@@ -45,7 +45,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
     if (combined) {
       setSearchValue(combined)
     }
-  }, [recognition.finalTranscript, recognition.interimTranscript,setSearchValue])
+  }, [recognition.finalTranscript, recognition.interimTranscript, setSearchValue])
 
   return recognition.isSupported && (
     <button 
