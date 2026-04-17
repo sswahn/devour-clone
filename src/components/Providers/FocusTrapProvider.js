@@ -3,7 +3,7 @@ import { useState, useRef, useCallback, createContext } from 'react'
 const FocusTrapContext = createContext(null)
 
 function FocusTrapProvider({ children }) {
-  cont [isMounted, setIsMounted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const ref = useRef(null)
   
   const focusRef = useCallback(node => {
