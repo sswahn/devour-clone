@@ -195,7 +195,14 @@
 /* Header Login Button to Open Auth Flow */
 
 .f0DR3GXaCwh0Tt2bx2NG {
-  
+  align-items: center; 
+  background: none;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /*!*******************************************************************************************!*\
