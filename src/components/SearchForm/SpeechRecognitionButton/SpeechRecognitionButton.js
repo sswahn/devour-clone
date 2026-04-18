@@ -20,6 +20,7 @@ function SpeechRecognitionButton({ setSearchValue }) {
   const chime = useSpeechChime()
 
   const action = () => {
+    navigator.vibrate(50)
     if (recognition.isListening) {
       recognition.stop()
       chime.playStop()
