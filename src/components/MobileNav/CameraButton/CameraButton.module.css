@@ -3,13 +3,9 @@
 .cameraButton {
   align-items: center; 
   background: none;
-  border: 0;
-  border-radius: 50%;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  border: none;
   display: flex;
-  height: 64px;
   justify-content: center;
-  left: 50%;
-  z-index: 9999;
+  cursor: pointer;
+  padding: 5px;
 }
