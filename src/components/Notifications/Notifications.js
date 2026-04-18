@@ -91,29 +91,29 @@ function Notifications({ closeNotifications }) {
     */
 
   // KEY FIX: Check if we started dragging while at full screen
-  const isCurrentlyFull = bottomSheet.style.height === '100vh';
+  const isCurrentlyFull = bottomSheet.style.height === '100vh'
 
   if (deltaY > 0) {
     // Swiping DOWN
     // If we were full screen, we close on a smaller threshold or any fast swipe
-      const closeThreshold = isCurrentlyFull ? 50 : bottomSheet.offsetHeight / 2;
+      const closeThreshold = isCurrentlyFull ? 50 : bottomSheet.offsetHeight / 2
       
       if (deltaY > closeThreshold || velocity > 0.8) {
-        close(bottomSheet);
+        close(bottomSheet)
       } else {
         // Snap back to previous state (resetting height allows CSS to take over)
-        bottomSheet.style.height = isCurrentlyFull ? '100vh' : ''; 
-        bottomSheet.style.transform = 'translateY(0)';
+        bottomSheet.style.height = isCurrentlyFull ? '100vh' : ''
+        bottomSheet.style.transform = 'translateY(0)'
       }
     } else {
       // Swiping UP
-      const expandThreshold = -100;
+      const expandThreshold = -100
       if (deltaY < expandThreshold || velocity < -0.8) {
-        bottomSheet.style.height = '100vh';
-        bottomSheet.style.transform = 'translateY(0)';
+        bottomSheet.style.height = '100vh'
+        bottomSheet.style.transform = 'translateY(0)'
       } else {
-        bottomSheet.style.height = isCurrentlyFull ? '100vh' : '';
-        bottomSheet.style.transform = 'translateY(0)';
+        bottomSheet.style.height = isCurrentlyFull ? '100vh' : ''
+        bottomSheet.style.transform = 'translateY(0)'
       }
     }
   }
