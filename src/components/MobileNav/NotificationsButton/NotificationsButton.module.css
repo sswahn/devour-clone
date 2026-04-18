@@ -4,18 +4,12 @@
   align-items: center; 
   background: none;
   border: none;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   position: relative;
-  /* Optional: subtle touch feedback */
-  transition: opacity 0.15s ease;
-  user-select: none;
-}
-
-.notificationsButton:active {
-  opacity: 0.7;
 }
 
 .notificationsButton div {
