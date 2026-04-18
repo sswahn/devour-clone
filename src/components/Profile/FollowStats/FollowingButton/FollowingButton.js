@@ -5,6 +5,7 @@ function FollowingButton({ username, count }) {
   const [viewFollowing, setViewFollowing] = useState(false)
   
   const action = () => {
+    navigator.vibrate(50)
     setViewFollowing(prevState => !prevState)
 
     alert('Following button fired!')
