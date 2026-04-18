@@ -13,16 +13,17 @@ function useListControlKeys(list, methods) {
       : button.parentElement.nextElementSibling.firstElementChild.focus()
   }
 
+  // 3 methods: enter(), close(), escape()
+
   const onKeyDown = event => {
-    // event.stopPropagation() <-- consider placing here.
+    event.stopPropagation()
     switch (event.key) {
       case 'Enter':
         event.preventDefault()
         return methods.enter()
       case 'Tab':
-        return close()  // Standard behavior: Close menu if user tabs out
+        return close()  // Standard behavior (no preventDefault): Close menu if user tabs out
       case 'Escape':
-        event.stopPropagation()
         event.preventDefault()
         return methods.escape() // Return focus to button on close
       case 'ArrowDown':
