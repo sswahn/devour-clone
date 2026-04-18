@@ -2,7 +2,6 @@ import { useEffect, useRef  } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
-import SearchIcon from '../Icons/SearchIcon/SearchIcon'
 import styles from './Header.module.css'
 
 const Header = () => {
