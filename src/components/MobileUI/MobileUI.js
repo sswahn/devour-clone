@@ -3,14 +3,22 @@ import Interface from './Interface'
 import Navigation from './Navigation/Navigation'
 
 function MobileUI() {
+  const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
   const [searchIsOpen, setSearchIsOpen] = useState(false)
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
+  const authenticationButtonRef = useRef(null)
   const searchButtonRef = useRef(null)
   const cameraButtonRef = useRef(null)
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
+
+  const openAuthentication = event => setAuthenticationIsOpen(true)
+  const closeAuthentication = event => {
+    setAuthenticationIsOpen(false)
+    authenticationButtonRef.current.focus()
+  }
 
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
@@ -51,10 +59,12 @@ function MobileUI() {
         closeProfile={closeProfile}
       />
       <Navigation 
+        authenticationButtonRef={authenticationButtonRef}
         searchButtonRef={searchButtonRef}
         cameraButtonRef={cameraButtonRef}
         notificationsButtonRef={notificationsButtonRef}
         profileButtonRef={profileButtonRef}
+        openAuthentication={openAuthentication}
         openSearch={openSearch}
         openCamera={openCamera}
         openNotifications={openNotifications}
