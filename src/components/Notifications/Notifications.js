@@ -80,12 +80,37 @@ function Notifications({ closeNotifications }) {
     const deltaTime = performance.now() - startTime.current
     const velocity = deltaY / deltaTime
     const bottomSheet = bottomSheetRef.current
+    /*
     bottomSheet.style.height = ''
     if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
       close(bottomSheet)
     } else {
       bottomSheet.style.transform = 'translateY(0)'
     }
+    */
+    // 1. Swiping DOWN: Close or snap back
+  if (deltaY > 0) {
+    if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
+      close(bottomSheet);
+    } else {
+      // Snap back to initial position
+      bottomSheet.style.height = ''; 
+      bottomSheet.style.transform = 'translateY(0)';
+    }
+  } 
+  // 2. Swiping UP: Expand to full screen or snap back
+  else {
+    const threshold = -100; // Pixels pulled up to trigger full screen
+    if (deltaY < threshold || velocity < -0.8) {
+      // Snap to full screen
+      bottomSheet.style.height = '100dvh';
+      bottomSheet.style.transform = 'translateY(0)';
+    } else {
+      // Snap back to initial position if pull wasn't high enough
+      bottomSheet.style.height = '';
+      bottomSheet.style.transform = 'translateY(0)';
+    }
+  }
   }
 
   const handlePointerCancel = event => {
