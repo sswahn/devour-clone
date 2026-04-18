@@ -4,7 +4,7 @@ import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header = ({ openAuth }) => {
   const headerRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
 
