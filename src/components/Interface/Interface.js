@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
-import Interface from './Interface'
-import Navigation from './Navigation/Navigation'
+import Overlays from './Overlays'
+import MobileNav from '../MobileNav/MobileNav'
 
 function Interface() {
   const [searchIsOpen, setSearchIsOpen] = useState(false)
@@ -48,7 +48,7 @@ function Interface() {
 
   return (
     <>
-      <Interface 
+      <Overlays 
         searchIsOpen={searchIsOpen} 
         cameraIsOpen={cameraIsOpen}
         notificationsIsOpen={notificationsIsOpen}
@@ -58,7 +58,7 @@ function Interface() {
         closeNotifications={closeNotifications}
         closeProfile={closeProfile}
       />
-      <Navigation 
+      <MobileNav 
         searchButtonRef={searchButtonRef}
         cameraButtonRef={cameraButtonRef}
         notificationsButtonRef={notificationsButtonRef}
