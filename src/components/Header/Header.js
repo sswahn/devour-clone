@@ -14,12 +14,14 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
 
   // move nav button(s) to their own components
   const action = () => {
+    console.log('openAuth fired!')
     openAuthentication()  
   }
   
   const onClick = event => {
     action()
   }
+  
   const onKeyDown = event => {
     if (event.key === 'Enter') {
       event.preventDefault()
