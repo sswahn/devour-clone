@@ -3,7 +3,7 @@
 .cameraButton {
   align-items: center; 
   background: var(--surface-raised);
-  border: 1px solid color-mix(in srgb, var(--white) 13%, transparent);
+  border: 1px solid color-mix(in srgb, white 13%, transparent);
   border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
