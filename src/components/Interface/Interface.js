@@ -6,15 +6,23 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
 const Overlays = lazy(() => import('../Overlays/Overlays'))
 
 function Interface() {
+  const [authenticationIsOpen, setAuthenticationIsOpen] = useState(false)
   const [searchIsOpen, setSearchIsOpen] = useState(false)
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
+  const authenticationButtonRef = useRef(null)
   const searchButtonRef = useRef(null)
   const cameraButtonRef = useRef(null)
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
 
+  const openAuthentication = event => setAuthenticationIsOpen(true)
+  const closeAuthentication = () => {
+    setAuthenticationIsOpen(false)
+    authenticationButtonRef.current.focus()
+  }
+  
   const openSearch = event => setSearchIsOpen(true)
   const closeSearch = event => {
     setSearchIsOpen(false)
@@ -51,7 +59,10 @@ function Interface() {
 
   return (
     <>
-      <Header />
+      <Header 
+        authenticationButtonRef={authenticationButtonRef}
+        openAuthentication={openAuthentication}
+      />
       <Main />
       <MobileNav 
         searchButtonRef={searchButtonRef}
@@ -65,10 +76,12 @@ function Interface() {
       />
       <Suspense fallback={<LoadingSpinner />}>
         <Overlays 
+          authenticationIsOpen={authenticationIsOpen}
           searchIsOpen={searchIsOpen} 
           cameraIsOpen={cameraIsOpen}
           notificationsIsOpen={notificationsIsOpen}
           profileIsOpen={profileIsOpen}
+          closeAuthentication={closeAuthentication}
           closeSearch={closeSearch}
           closeCamera={closeCamera}
           closeNotifications={closeNotifications}
