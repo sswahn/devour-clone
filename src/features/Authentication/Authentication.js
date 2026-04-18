@@ -6,7 +6,7 @@ import GoogleButton from './GoogleButton/GoogleButton'
 import AppleButton from './AppleButton/AppleButton'
 import styles from './Authentication.module.css'
 
-function Authentication() {
+function Authentication({ closeAuthentication }) {
   return (
     <section className={styles.authentication}>
       <LoginForm />
