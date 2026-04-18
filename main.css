@@ -367,18 +367,12 @@
   align-items: center; 
   background: none;
   border: none;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   position: relative;
-  /* Optional: subtle touch feedback */
-  transition: opacity 0.15s ease;
-  user-select: none;
-}
-
-.jyDxw9Gc_5ANGYSwwcqw:active {
-  opacity: 0.7;
 }
 
 .jyDxw9Gc_5ANGYSwwcqw div {
