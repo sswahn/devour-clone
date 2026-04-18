@@ -1,4 +1,4 @@
-import HomeIcon from '../../../Icons/HomeIcon/HomeIcon'
+import HomeIcon from '../../Icons/HomeIcon/HomeIcon'
 import styles from './HomeButton.module.css'
 
 function HomeButton() {
