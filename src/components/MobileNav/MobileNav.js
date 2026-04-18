@@ -5,7 +5,7 @@ import SearchButton from './SearchButton/SearchButton'
 import CameraButton from './CameraButton/CameraButton'
 import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
-import styles from './Navigation.module.css'
+import styles from './MobileNav.module.css'
 
 function MobileNav({ 
   searchButtonRef,
