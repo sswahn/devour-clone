@@ -17,6 +17,6 @@
   top: 0; /* 16px; */
   transform: translateX(-50%);
   user-select: none; 
-  width: 72px;
+  width: 64px;
   z-index: 9999;
 }
