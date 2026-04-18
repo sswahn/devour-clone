@@ -15,6 +15,8 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
   // move nav button(s) to their own components
   const action = () => {
     console.log('openAuth fired!')
+    
+    navigator.vibrate(50)
     openAuthentication()  
   }
   
