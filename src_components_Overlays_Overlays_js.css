@@ -637,7 +637,7 @@
   outline: none;
   overflow-y: scroll;
   overscroll-behavior-y: contain;
-  padding: 42px 8px 0 8px;
+  padding: 8px;
   position: absolute;
   top: 0;
   width: 100%;
