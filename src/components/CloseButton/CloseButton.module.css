@@ -3,11 +3,10 @@
 .closeButton {
   align-items: center; 
   background: none;
-  border: 0;
-  border-radius: 50px;
+  border: none;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  height: 44px;
-  width: 44px;
+  padding: 10px;
 }
