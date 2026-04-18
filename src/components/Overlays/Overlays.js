@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { FocusTrapProvider } from '../Providers/FocusTrapProvider'
+import Authentication from '../../features/Authentication/Authentication'
 import SearchForm from '../SearchForm/SearchForm'
 import Camera from '../../features/Camera/Camera'
 import Notifications from '../Notifications/Notifications'
 import Profile from '../Profile/Profile'
 
 function Overlays({ 
+  authenticationIsOpen,
   searchIsOpen, 
   cameraIsOpen, 
   notificationsIsOpen, 
@@ -47,6 +49,7 @@ function Overlays({
 
   return createPortal(
     <FocusTrapProvider>
+      {authenticationIsOpen && <Authentication closeAuthentication={closeAuthentication} />}
       {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
       {cameraIsOpen && <Camera closeCamera={closeCamera} />}
       {notificationsIsOpen && <Notifications closeNotifications={closeNotifications} />}
