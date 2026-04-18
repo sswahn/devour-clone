@@ -1,4 +1,4 @@
-import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
+import RightToBracketIcon from '../../Icons/RightToBracketIcon/RightToBracketIcon'
 import styles from './LoginButton.module.css'
 
 function LoginButton({ authenticationButtonRef, openAuthentication }) {
