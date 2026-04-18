@@ -1,6 +1,9 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-function useListControlKeys(list, methods) {
+function useListControlKeys() {
+  const [list, setList] = useState(null)
+  const [methods, setMethods] = useState({})
+  
   const focusPrev = button => {
     button === list.firstElementChild.firstElementChild
       ? list.lastElementChild.firstElementChild.focus()
@@ -37,12 +40,19 @@ function useListControlKeys(list, methods) {
     }
   }
 
+  const applyListControls = (list, methods) {
+    setList(list)
+    setMethods(methods)
+  }
+
   useEffect(() => {
     list.addEventListener('keydown', onKeyDown)
     return () => {
       list.removeEventListener('keydown', onKeyDown)
     }
   }, [])
+
+  return applyListControls
 }
 
 export default useListControlKeys
