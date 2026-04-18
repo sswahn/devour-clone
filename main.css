@@ -375,12 +375,13 @@
 .jyDxw9Gc_5ANGYSwwcqw {
   align-items: center; 
   background: none;
-  border: none;
+  border: 0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   cursor: pointer;
   padding: 10px;
+  position: relative;
   height: 44px;
   width: 44px;
 }
