@@ -45,8 +45,8 @@ function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, bu
       {items?.map((item, index) => 
         <li key={index} role="none">
           <ListItemButton 
-          /* buttonRef={buttonRef} 
-           listRef={listRef} */
+           buttonRef={buttonRef} 
+           listRef={listRef}
            text={item.text} 
            method={item.method} 
            close={close} 
