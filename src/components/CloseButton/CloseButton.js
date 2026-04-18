@@ -4,6 +4,7 @@ import styles from './CloseButton.module.css'
 function CloseButton({ overlay, close }) {
 
   const action = () => {
+    navigator.vibrate(50)
     close()
   }
   
