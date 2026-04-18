@@ -38,6 +38,14 @@ function MobileUI() {
     profileButtonRef.current.focus()
   }
 
+  // change this component name to something global/universal
+  // conditionally render the navigation, either with css or js
+
+  // Interface will contain all overlays, whether header or footer
+  // this component should probably contain the app
+  // this is appRoot.
+  // header, main, mobilNav go in here
+
   return (
     <>
       <Interface 
