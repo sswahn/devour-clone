@@ -8,11 +8,4 @@
   justify-content: center;
   cursor: pointer;
   padding: 5px;
-  /* Optional: subtle touch feedback */
-  transition: opacity 0.15s ease;
-  user-select: none;
-}
-
-.profileButton:active {
-  opacity: 0.7;
 }
