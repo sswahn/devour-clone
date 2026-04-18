@@ -648,6 +648,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  width: 100%;
+
+  border: 1px dashed red;
 }
 
 .bRXXEOH49SRQPlqWmeUf header {
