@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import Interface from './Interface'
 import Navigation from './Navigation/Navigation'
 
-function MobileUI() {
+function Interface() {
   const [searchIsOpen, setSearchIsOpen] = useState(false)
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
@@ -72,4 +72,4 @@ function MobileUI() {
   )
 }
 
-export default MobileUI
+export default Interface
