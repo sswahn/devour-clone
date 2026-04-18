@@ -88,29 +88,33 @@ function Notifications({ closeNotifications }) {
       bottomSheet.style.transform = 'translateY(0)'
     }
     */
-    // 1. Swiping DOWN: Close or snap back
+
+  // KEY FIX: Check if we started dragging while at full screen
+  const isCurrentlyFull = bottomSheet.style.height === '100vh';
+
   if (deltaY > 0) {
-    if (deltaY > bottomSheet.offsetHeight / 2 || velocity > 0.8) {
-      close(bottomSheet);
+    // Swiping DOWN
+    // If we were full screen, we close on a smaller threshold or any fast swipe
+      const closeThreshold = isCurrentlyFull ? 50 : bottomSheet.offsetHeight / 2;
+      
+      if (deltaY > closeThreshold || velocity > 0.8) {
+        close(bottomSheet);
+      } else {
+        // Snap back to previous state (resetting height allows CSS to take over)
+        bottomSheet.style.height = isCurrentlyFull ? '100vh' : ''; 
+        bottomSheet.style.transform = 'translateY(0)';
+      }
     } else {
-      // Snap back to initial position
-      bottomSheet.style.height = ''; 
-      bottomSheet.style.transform = 'translateY(0)';
+      // Swiping UP
+      const expandThreshold = -100;
+      if (deltaY < expandThreshold || velocity < -0.8) {
+        bottomSheet.style.height = '100vh';
+        bottomSheet.style.transform = 'translateY(0)';
+      } else {
+        bottomSheet.style.height = isCurrentlyFull ? '100vh' : '';
+        bottomSheet.style.transform = 'translateY(0)';
+      }
     }
-  } 
-  // 2. Swiping UP: Expand to full screen or snap back
-  else {
-    const threshold = -100; // Pixels pulled up to trigger full screen
-    if (deltaY < threshold || velocity < -0.8) {
-      // Snap to full screen
-      bottomSheet.style.height = '100dvh';
-      bottomSheet.style.transform = 'translateY(0)';
-    } else {
-      // Snap back to initial position if pull wasn't high enough
-      bottomSheet.style.height = '';
-      bottomSheet.style.transform = 'translateY(0)';
-    }
-  }
   }
 
   const handlePointerCancel = event => {
