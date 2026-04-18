@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
-import Overlays from '../Overlays/Overlays'
+import Header from '../Header/Header'
 import MobileNav from '../MobileNav/MobileNav'
+import Overlays from '../Overlays/Overlays'
 
 function Interface() {
   const [searchIsOpen, setSearchIsOpen] = useState(false)
@@ -48,16 +49,8 @@ function Interface() {
 
   return (
     <>
-      <Overlays 
-        searchIsOpen={searchIsOpen} 
-        cameraIsOpen={cameraIsOpen}
-        notificationsIsOpen={notificationsIsOpen}
-        profileIsOpen={profileIsOpen}
-        closeSearch={closeSearch}
-        closeCamera={closeCamera}
-        closeNotifications={closeNotifications}
-        closeProfile={closeProfile}
-      />
+      <Header />
+
       <MobileNav 
         searchButtonRef={searchButtonRef}
         cameraButtonRef={cameraButtonRef}
@@ -67,6 +60,17 @@ function Interface() {
         openCamera={openCamera}
         openNotifications={openNotifications}
         openProfile={openProfile}
+      />
+      {/* lazy load and conditionally render overlays? */}
+      <Overlays 
+        searchIsOpen={searchIsOpen} 
+        cameraIsOpen={cameraIsOpen}
+        notificationsIsOpen={notificationsIsOpen}
+        profileIsOpen={profileIsOpen}
+        closeSearch={closeSearch}
+        closeCamera={closeCamera}
+        closeNotifications={closeNotifications}
+        closeProfile={closeProfile}
       />
     </>
   )
