@@ -19,15 +19,19 @@ function ListItemButton({ buttonRef, listRef, text, method, close }) {
     buttonRef.current.focus()
   }
 
-  const onClick = event => {
+  const action = () => {
     method()
+  }
+
+  const onClick = event => {
+    action()
   }
 
   const onKeyDown = event => {
     switch (event.key) {
       case 'Enter':
         event.preventDefault()
-        return method()
+        return action()
       case 'Tab':
         return close()  // Standard behavior: Close menu if user tabs out
       case 'Escape':
