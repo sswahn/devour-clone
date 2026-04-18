@@ -23,12 +23,12 @@ function useListControlKeys() {
     switch (event.key) {
       case 'Enter':
         event.preventDefault()
-        return methods.enter()
+        return methods?.enter()
       case 'Tab':
-        return close()  // Standard behavior (no preventDefault): Close menu if user tabs out
+        return methods?.close()  // Standard behavior (no preventDefault): Close menu if user tabs out
       case 'Escape':
         event.preventDefault()
-        return methods.escape() // Return focus to button on close
+        return methods?.escape()
       case 'ArrowDown':
         event.preventDefault()
         return focusNext(event.target)
