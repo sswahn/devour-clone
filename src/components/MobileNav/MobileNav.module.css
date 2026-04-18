@@ -28,3 +28,13 @@
   opacity: 0;
 }
 
+.navigation div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 16px;
+  width: 100%;
+}
+
