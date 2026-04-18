@@ -34,16 +34,7 @@
   width: 100%;
 }
 
-.header button {
-  align-items: center;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-}
-
-
-.header nav button {
+.header > button {
   align-items: center;
   background: none;
   border: 0;
