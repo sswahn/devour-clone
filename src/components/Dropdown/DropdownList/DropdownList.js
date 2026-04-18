@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from  'react'
+import useListControlKeys from '../../../hooks/useListControlKeys'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
 function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, buttonRef, listRef }) {
-
+   
    const onMount = () => {
       if (!isMounted) {
         mountList()
@@ -27,6 +28,7 @@ function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, bu
   useEffect(() => {
     // Wait for the next repaint to transition:
     const timer = requestAnimationFrame(onMount)
+   useListControlKeys(listRef.current, { enter, escape, close })
     return () => {
       cancelAnimationFrame(timer)
     }
@@ -42,7 +44,13 @@ function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, bu
       hidden={!isOpen}>
       {items?.map((item, index) => 
         <li key={index} role="none">
-          <ListItemButton buttonRef={buttonRef} listRef={listRef} text={item.text} method={item.method} close={close} />
+          <ListItemButton 
+          /* buttonRef={buttonRef} 
+           listRef={listRef} */
+           text={item.text} 
+           method={item.method} 
+           close={close} 
+         />
         </li>
       )}
     </ul>
