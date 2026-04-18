@@ -2,7 +2,8 @@ import { useState, useRef, Suspense, lazy } from 'react'
 import Header from '../Header/Header'
 import Main from '../Main/Main'
 import MobileNav from '../MobileNav/MobileNav'
-import Overlays from '../Overlays/Overlays'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
+const Overlays = lazy(() => import('../Overlays/Overlays'))
 
 function Interface() {
   const [searchIsOpen, setSearchIsOpen] = useState(false)
@@ -62,17 +63,18 @@ function Interface() {
         openNotifications={openNotifications}
         openProfile={openProfile}
       />
-      {/* lazy load and conditionally render overlays? */}
-      <Overlays 
-        searchIsOpen={searchIsOpen} 
-        cameraIsOpen={cameraIsOpen}
-        notificationsIsOpen={notificationsIsOpen}
-        profileIsOpen={profileIsOpen}
-        closeSearch={closeSearch}
-        closeCamera={closeCamera}
-        closeNotifications={closeNotifications}
-        closeProfile={closeProfile}
-      />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Overlays 
+          searchIsOpen={searchIsOpen} 
+          cameraIsOpen={cameraIsOpen}
+          notificationsIsOpen={notificationsIsOpen}
+          profileIsOpen={profileIsOpen}
+          closeSearch={closeSearch}
+          closeCamera={closeCamera}
+          closeNotifications={closeNotifications}
+          closeProfile={closeProfile}
+        />
+      </Suspense>
     </>
   )
 }
