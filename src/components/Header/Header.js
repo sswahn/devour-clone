@@ -4,7 +4,7 @@ import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
 import styles from './Header.module.css'
 
-const Header = ({ openAuth }) => {
+const Header = ({ openAuthentication }) => {
   const headerRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
 
@@ -13,7 +13,10 @@ const Header = ({ openAuth }) => {
   }, [])
 
   // move nav button(s) to their own components
-  const action = () => {}
+  const action = () => {
+    openAuthentication()  
+  }
+  
   const onClick = event => {
     action()
   }
