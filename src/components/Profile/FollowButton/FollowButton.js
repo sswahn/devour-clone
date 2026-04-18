@@ -7,6 +7,7 @@ function FollowButton() {
   const [following, setFollowing] = useState(false)
 
   const action = () => {
+    navigator.vibrate(50)
     setFollowing(prevState => !prevState)
   }
   
