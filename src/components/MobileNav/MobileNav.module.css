@@ -28,7 +28,7 @@
   opacity: 0;
 }
 
-.navigation div {
+.navigation > div {
   align-items: center;
   display: flex;
   justify-content: space-between;
