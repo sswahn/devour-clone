@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import HomeButton from './HomeButton'
 
 // mock the icon so the test focuses only on HomeButton
-jest.mock('../../../Icons/HomeIcon/HomeIcon', () => () => <svg data-testid="home-icon" />)
+jest.mock('../../Icons/HomeIcon/HomeIcon', () => () => <svg data-testid="home-icon" />)
 
 describe('HomeButton', () => {
 
