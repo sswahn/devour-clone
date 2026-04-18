@@ -11,9 +11,12 @@
 }
 
 .searchButton div {
-  background: white;
+  background: light-dark(var(--light-black), white);
+  border-radius: 50%;
+  padding: 10px;
+
 }
 
 .searchButton svg {
-  fill: var(--black);
+  fill: light-dark(white, var(--light-black));
 }
