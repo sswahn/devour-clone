@@ -236,14 +236,17 @@
 }
 
 .Qp5xkmMJGKUSGJdCNCHD nav {
-  width: auto;
+  width: 44px;
+  
   border: 1px dashed red;
 }
 
 .Qp5xkmMJGKUSGJdCNCHD nav button {
+  align-items: center;
   background: none;
   border: 0;
   cursor: pointer;
+  display: flex;
 
   border: 1px dashed orange;
 }
