@@ -244,16 +244,7 @@
   width: 100%;
 }
 
-.Qp5xkmMJGKUSGJdCNCHD button {
-  align-items: center;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-}
-
-
-.Qp5xkmMJGKUSGJdCNCHD nav button {
+.Qp5xkmMJGKUSGJdCNCHD > button {
   align-items: center;
   background: none;
   border: 0;
