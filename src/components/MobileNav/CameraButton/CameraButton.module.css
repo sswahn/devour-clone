@@ -8,4 +8,6 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
+  height: 44px;
+  width: 44px;
 }
