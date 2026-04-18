@@ -15,7 +15,7 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
   return (
     <header ref={headerRef} className={styles.header}>
       <div>
-        <button type="button" aria-label="home">
+        <button onClick={() => navigator.vibrate(50)} type="button" aria-label="home">
           <HomeIcon />
         </button>
     
