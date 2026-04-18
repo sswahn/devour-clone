@@ -20,4 +20,5 @@
 
 .searchButton svg {
   fill: light-dark(white, var(--light-black));
+  font-weight: bold;
 }
