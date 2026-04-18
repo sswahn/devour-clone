@@ -5,8 +5,6 @@ function SearchButton({ searchButtonRef, openSearch }) {
 
   const action = async () => {
     navigator.vibrate(50)
-    //await document.getElementById('portal').requestFullscreen()
-    //await screen.orientation.lock('portrait')
     openSearch()
   }
   
