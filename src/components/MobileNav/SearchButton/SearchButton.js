@@ -31,7 +31,7 @@ function SearchButton({ searchButtonRef, openSearch }) {
       aria-label="search" 
       aria-haspopup="dialog">
       <div>
-        <SearchIcon size={18} />  
+        <SearchIcon />  
       </div>
     </button>
   )
