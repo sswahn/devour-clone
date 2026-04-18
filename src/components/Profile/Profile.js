@@ -51,7 +51,7 @@ function Profile({ closeProfile }) {
         <div>
           <h1 id="username">Username</h1>
           <address>New York, NY</address>
-          <p id="biography">Some biographical information about Username.</p>
+           {/* <p id="biography">Some biographical information about Username.</p> */}
         </div>
       </header>
   
