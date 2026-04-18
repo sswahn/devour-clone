@@ -1,11 +1,10 @@
-import { useEffect, Suspense, lazy } from 'react'
+import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { FocusTrapProvider } from '../Providers/FocusTrapProvider'
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
-const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
-const Camera = lazy(() => import('../../features/Camera/Camera'))
-const Notifications = lazy(() => import('../Notifications/Notifications')) 
-const Profile = lazy(() => import('../Profile/Profile')) 
+import SearchForm from '../SearchForm/SearchForm'
+import Camera from '../../features/Camera/Camera'
+import Notifications from '../Notifications/Notifications'
+import Profile from '../Profile/Profile'
 
 function Overlays({ 
   searchIsOpen, 
@@ -48,18 +47,10 @@ function Overlays({
 
   return createPortal(
     <FocusTrapProvider>
-      <Suspense fallback={<LoadingSpinner />}>
-        {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        {cameraIsOpen && <Camera closeCamera={closeCamera} />}
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
-        {notificationsIsOpen && <Notifications closeNotifications={closeNotifications} />}
-      </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>    
-        {profileIsOpen && <Profile closeProfile={closeProfile} />}
-      </Suspense>
+      {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
+      {cameraIsOpen && <Camera closeCamera={closeCamera} />}
+      {notificationsIsOpen && <Notifications closeNotifications={closeNotifications} />}
+      {profileIsOpen && <Profile closeProfile={closeProfile} />}
     </FocusTrapProvider>, 
     document.getElementById('portal')
   )
