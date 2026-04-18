@@ -5,8 +5,6 @@ function ProfileButton({ profileButtonRef, openProfile }) {
 
   const action = async () => {
     navigator.vibrate(50)
-    // await document.documentElement.requestFullscreen()
-    // await screen.orientation.lock('portrait')
     openProfile()
   }
   
