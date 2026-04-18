@@ -61,6 +61,7 @@ function Notifications({ closeNotifications }) {
     if (deltaY < 0) {
       // stretch increases as deltaY becomes more negative
       const newHeight = height + Math.abs(deltaY) 
+      initialHeight.current = `${newHeight}px`
       bottomSheet.style.height = `${newHeight}px`
       bottomSheet.style.transform = `translateY(0)` // Keep anchored to bottom
     } else {
