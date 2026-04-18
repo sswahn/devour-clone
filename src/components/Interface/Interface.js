@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import Overlays from './Overlays'
+import Overlays from '../Overlays/Overlays'
 import MobileNav from '../MobileNav/MobileNav'
 
 function Interface() {
