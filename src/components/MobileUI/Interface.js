@@ -2,14 +2,12 @@ import { useEffect, Suspense, lazy } from 'react'
 import { createPortal } from 'react-dom'
 import { FocusTrapProvider } from '../Providers/FocusTrapProvider'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner'
-const Authentication = lazy(() => import('../../features/Authentication/Authentication')) 
 const SearchForm = lazy(() => import('../SearchForm/SearchForm'))
 const Camera = lazy(() => import('../../features/Camera/Camera'))
 const Notifications = lazy(() => import('../Notifications/Notifications')) 
 const Profile = lazy(() => import('../Profile/Profile')) 
 
 function Interface({ 
-  authenticationIsOpen,
   searchIsOpen, 
   cameraIsOpen, 
   notificationsIsOpen, 
@@ -29,8 +27,6 @@ function Interface({
     event.preventDefault()
     const modal = event.target.closest('[role="dialog"]')
     switch(modal?.id) {
-      case 'authentication':
-        return closeAuthentication()
       case 'search':
         return closeSearch()
       case 'camera':
@@ -52,9 +48,6 @@ function Interface({
 
   return createPortal(
     <FocusTrapProvider>
-      <Suspense fallback={<LoadingSpinner />}>
-        {authenticationIsOpen && <Authentication closeAuthentication={closeAuthentication} />}
-      </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         {searchIsOpen && <SearchForm closeSearch={closeSearch} />}
       </Suspense>
