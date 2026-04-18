@@ -13,7 +13,8 @@
 .searchButton div {
   background: light-dark(var(--light-black), white);
   border-radius: 50%;
-  padding: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .searchButton svg {
