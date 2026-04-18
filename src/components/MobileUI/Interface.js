@@ -7,7 +7,7 @@ const Camera = lazy(() => import('../../features/Camera/Camera'))
 const Notifications = lazy(() => import('../Notifications/Notifications')) 
 const Profile = lazy(() => import('../Profile/Profile')) 
 
-function Interface({ 
+function Overlays({ 
   searchIsOpen, 
   cameraIsOpen, 
   notificationsIsOpen, 
@@ -65,4 +65,4 @@ function Interface({
   )
 }
 
-export default Interface
+export default Overlays
