@@ -370,13 +370,13 @@
   background: none;
   border: 0;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   padding: 10px;
   position: relative;
-  height: 44px;
-  width: 44px;
+/*  height: 44px;
+  width: 44px; */
 }
 
 .jyDxw9Gc_5ANGYSwwcqw div {
