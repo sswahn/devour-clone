@@ -411,7 +411,8 @@
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   bottom: 0;
   display: flex;
-  height: 60px;
+  height: 64px;
+  justify-content: space-evenly;
   left: 0;
   opacity: 1;
   position: fixed;
@@ -431,25 +432,6 @@
   opacity: 0;
 }
 
-.UAUS7uG3u3pzkuV10IMH > div {
-  display: flex;
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 0 16px;
-  width: 100%;
-}
-
-.UAUS7uG3u3pzkuV10IMH > div > div:not(:nth-of-type(2)) {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.UAUS7uG3u3pzkuV10IMH > div > div:nth-of-type(2) {
-  position: static;
-  flex-shrink: 0;
-  width: 152px;
-}
 
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
