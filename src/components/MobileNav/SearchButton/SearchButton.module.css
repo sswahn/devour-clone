@@ -9,16 +9,3 @@
   cursor: pointer;
   padding: 5px;
 }
-
-.searchButton div {
-  background: light-dark(var(--light-black), white);
-  border-radius: 50%;
-  padding: 5px;
-  width: 24px;
-  height: 24px;
-}
-
-.searchButton svg {
-  fill: light-dark(white, var(--light-black));
-  font-weight: bold;
-}
