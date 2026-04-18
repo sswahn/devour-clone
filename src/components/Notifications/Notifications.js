@@ -49,12 +49,20 @@ function Notifications({ closeNotifications }) {
     const deltaY = event.clientY - startY.current
     const bottomSheet = bottomSheetRef.current
     const height = initialHeight.current
+    /*
     // Elasticity:
     if (deltaY < 0) {
       const resistance = Math.max(0, 1 - Math.abs(deltaY) / Math.abs(-200))
       const stretch = Math.abs(deltaY) * resistance
       bottomSheet.style.height = `${height + stretch}px`
       bottomSheet.style.transform = `translateY(0)` 
+      */
+      // No resistance: Map pull-up (negative deltaY) directly to height increase
+    if (deltaY < 0) {
+      // stretch increases as deltaY becomes more negative
+      const newHeight = height + Math.abs(deltaY) 
+      bottomSheet.style.height = `${newHeight}px`
+      bottomSheet.style.transform = `translateY(0)` // Keep anchored to bottom
     } else {
       bottomSheet.style.height = `${height}px`
       bottomSheet.style.transform = `translateY(${deltaY}px)`
