@@ -27,7 +27,7 @@ function SearchInput({ searchValue, error, setSearchValue, setError }) {
       value={searchValue}
       onChange={onChange}
       maxLength="288"
-      pattern="[^<>{}\[\]\\\/|;=~`%^]+" 
+      pattern="[^<>\(\)\{\}\[\]\\\/\|;=~%^]+"
       title="Special characters are not allowed."
       spellCheck="true"
       autoFocus
