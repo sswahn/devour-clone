@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from  'react'
-import useListControlKeys from '../../../hooks/useListControlKeys'
 import ListItemButton from '../ListItemButton/ListItemButton'
 import styles from './DropdownList.module.css'
 
@@ -28,7 +27,6 @@ function DropdownList({ id, items, isOpen, open, close, isMounted, mountList, bu
   useEffect(() => {
     // Wait for the next repaint to transition:
     const timer = requestAnimationFrame(onMount)
-   useListControlKeys(listRef.current, { enter, escape, close })
     return () => {
       cancelAnimationFrame(timer)
     }
