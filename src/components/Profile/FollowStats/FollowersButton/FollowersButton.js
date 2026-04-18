@@ -7,6 +7,7 @@ function FollowersButton({ username, count }) {
   const [viewFollowers, setViewFollowers] = useState(false)
 
   const action = () => {
+    navigator.vibrate(50)
     setViewFollowers(prevState => !prevState)
 
     alert('Followers button fired!')
