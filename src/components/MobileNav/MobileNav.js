@@ -26,11 +26,13 @@ function MobileNav({
   
   return (
     <nav ref={navRef} className={styles.navigation} aria-label="primary navigation">
-      <HomeButton />  
-      <SearchButton searchButtonRef={searchButtonRef} openSearch={openSearch} />
-      <CameraButton cameraButtonRef={cameraButtonRef} openCamera={openCamera} />
-      <NotificationsButton notificationsButtonRef={notificationsButtonRef} openNotifications={openNotifications} />
-      <ProfileButton profileButtonRef={profileButtonRef} openProfile={openProfile} />
+      <div>
+        <HomeButton />  
+        <SearchButton searchButtonRef={searchButtonRef} openSearch={openSearch} />
+        <CameraButton cameraButtonRef={cameraButtonRef} openCamera={openCamera} />
+        <NotificationsButton notificationsButtonRef={notificationsButtonRef} openNotifications={openNotifications} />
+        <ProfileButton profileButtonRef={profileButtonRef} openProfile={openProfile} />
+      </div>
     </nav>
   )
 }
