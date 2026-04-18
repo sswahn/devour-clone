@@ -33,7 +33,7 @@ const Header = () => {
         </button>
     
         <nav>
-          <button onClick={onClick} onKeyDown={onKeyDown} type="text" aria-label="sign in">
+          <button onClick={onClick} onKeyDown={onKeyDown} type="button" aria-label="sign in">
             <RightToBracketIcon />
           </button>
         </nav>
