@@ -1,0 +1,692 @@
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/CloseButton/CloseButton.module.css ***!
+  \*****************************************************************************************************/
+/* Close Overlay Button */
+
+.nRmVNOUPXPt07q2izPkS {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/DropdownButton/DropdownButton.module.css ***!
+  \********************************************************************************************************************/
+/* Dropdown Button */
+
+.abpuI_3Na2ydJj24PSqD {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-radius: 50px;
+  color: var(--dropdown-text);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/ListItemButton/ListItemButton.module.css ***!
+  \********************************************************************************************************************/
+/* Dropdown List Item Button */
+
+.OGbMvckCuIXNF7ZaS8mY {
+  align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  height: 44px;
+  justify-content: flex-start;
+  padding: 0 8px;
+  width: 100%;
+
+  border: 1px dashed yellow;
+}
+
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/DropdownList/DropdownList.module.css ***!
+  \****************************************************************************************************************/
+/* Dropdown List */
+
+.SaGbxhcxIln6hpTb0Klg {
+  background-color: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  list-style: none;
+  min-width: 250px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 400;
+}
+
+/* not just opacity, but transition height and width to grow from right to left */
+
+.ANLuoq2GOx9WvRvddcjR {
+  opacity: 1;
+}
+
+.SaGbxhcxIln6hpTb0Klg li {
+  display: flex;
+}
+
+.SaGbxhcxIln6hpTb0Klg li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.SaGbxhcxIln6hpTb0Klg li:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Dropdown/Dropdown.module.css ***!
+  \***********************************************************************************************/
+/* Dropdown Button */
+
+.fsRjQsePCOqWh1LwmMMg {
+  position: relative;
+}
+
+
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchInput/SearchInput.module.css ***!
+  \****************************************************************************************************************/
+/* Search Form Input */
+
+.E5mhg1QQHXBJyTe4V76v {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 50px;
+  color: var(--input-text);
+  font-size: 18px;
+  height: 44px;
+  padding: 0 52px 0 44px;
+  width: 100%;
+}
+
+.E5mhg1QQHXBJyTe4V76v:focus {
+  outline: none;
+}
+
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-decoration,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-cancel-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-button,
+.E5mhg1QQHXBJyTe4V76v::-webkit-search-results-decoration {
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+
+/*!****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SpeechRecognitionButton/SpeechRecognitionButton.module.css ***!
+  \****************************************************************************************************************************************/
+/* Search Form Speech Recognition Button */
+
+.iMFEEY1YvDzgj8w_W3wI {
+  align-items: center; 
+  background: none;
+  border: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+}
+
+.iMFEEY1YvDzgj8w_W3wI svg {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.iMFEEY1YvDzgj8w_W3wI.mDwrKHdH0eu7Q2AAX1Yr svg {
+  fill: #00C853;
+}
+
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/SearchForm/SearchForm.module.css ***!
+  \***************************************************************************************************/
+/* Search Form */
+
+.SLy02R_oWPksADBQiBuZ {
+  background-color: var(--surface-raised);
+  height: 100dvh;
+  left: 0;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.SLy02R_oWPksADBQiBuZ nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.SLy02R_oWPksADBQiBuZ form {
+  position: relative;
+}
+
+.SLy02R_oWPksADBQiBuZ form > svg:first-of-type {
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  border: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 44px;
+  padding: 0 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px; 
+}
+
+.SLy02R_oWPksADBQiBuZ ul {
+  list-style: none;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.SLy02R_oWPksADBQiBuZ ul li {
+  color: var(--text);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding: 12px;
+  width: 100%;
+}
+
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/ViewPort/viewport.module.css ***!
+  \****************************************************************************************************/
+/* Camera View Port CSS Module */
+
+.grTGSKLly6qq95OQDiW2 { 
+  object-fit: cover;
+  height: 100%;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  width: 100%;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  z-index: 3;
+}
+
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/BackButton/backbutton.module.css ***!
+  \********************************************************************************************************/
+/* Camera BackButton CSS Module */
+
+.gZVVsZaSeQmj5r1OIILk {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  left: 0px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-size: 22px; 
+  height: 45px;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+  z-index: 4;
+}
+
+.gZVVsZaSeQmj5r1OIILk svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/RecordTimer/recordtimer.module.css ***!
+  \**********************************************************************************************************/
+/* Camera Record Timer CSS Module */
+
+.r0seWmD9fFTfnWs1dnL2 {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white; 
+  font-size: 24px;
+  font-weight: bold;
+  left: 50%;
+  top: 0;
+  padding: 5px 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/LightButton/lightbutton.module.css ***!
+  \**********************************************************************************************************/
+/* Camera Light Button CSS Module */
+
+.MTUqodLc4vgQcRBbnX_w {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  cursor: pointer;
+  font-size: 18px;
+  height: 45px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 45px;
+  z-index: 4;
+}
+
+.MTUqodLc4vgQcRBbnX_w svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/MuteButton/mutebutton.module.css ***!
+  \********************************************************************************************************/
+/* Camera Mute Button CSS Module */
+
+.AZOIeRKTIYCyq6xhU5pg {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  bottom: 0; /* 20px */
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  height: 45px;
+  /* padding: 5px 10px; */
+  position: absolute;
+  right: 0;
+  width: 45px; 
+  z-index: 4;
+}
+
+.AZOIeRKTIYCyq6xhU5pg svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/RecordButton/recordbutton.module.css ***!
+  \************************************************************************************************************/
+/* Camera Record Button CSS Module */
+
+.w89rbEAJsHlUCU9l6uRm { 
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  padding: 10px;
+  width: 78px;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.a04sK3kPpe_weYYEkKGQ {
+  background-color: #e5e4e2;
+  border: 3px solid white;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  height: 56px;
+  padding: 0 26px; 
+}
+
+.a04sK3kPpe_weYYEkKGQ:hover {
+  background-color: #f2f3f4;
+}
+
+.Elk2VUJfyKgH6N3pWbkT:active {
+  background-color: #cb4154;
+}
+
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/LocationButton/locationbutton.module.css ***!
+  \****************************************************************************************************************/
+/* Camera Location Button CSS Module*/
+
+.x0rVinpmgIALQbVh1IO6 {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 22px; 
+  height: 45px;
+  left: 0;
+  position: absolute;
+  width: 45px; 
+  z-index: 4;
+}
+
+.x0rVinpmgIALQbVh1IO6 svg {
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*!*****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/features/Camera/camera.module.css ***!
+  \*****************************************************************************************/
+/* camera */
+
+.NmsyPqws04RTPJm_5hR6 {
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 500px; 
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Notifications/Notifications.module.css ***!
+  \*********************************************************************************************************/
+/* User Notifications */
+
+/* the transparent div overlay */
+.EW8UjTxcaJyjDU58ZAQw {
+  backdrop-filter: blur(1px);
+  background-color: rgb(0 0 0 / 50%);
+  height: 100dvh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* the bottom sheet */
+.Y0AUW1KZg3XuDWSjnSiH {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  bottom: 0;
+  contain: layout paint;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Grows with content */ 
+  left: 0;
+  max-height: 90dvh; 
+  min-height: 50dvh;  
+  padding-top: 8px;
+  position: absolute;
+  transform: translateY(100%);   /* start hidden */
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), height 0.2s ease;
+  touch-action: none;
+  width: 100%;
+  will-change: transform; /* Ensures it doesn't flicker before starting */
+}
+
+.txatc1UMFm1tg1LtMLFJ {
+  transform: translateY(0);
+}
+
+/* the grabber handle */
+.EW8UjTxcaJyjDU58ZAQw section > div {
+  background-color: #ccc;
+  border-radius: 3px;
+  height: 6px;
+  margin: 0 auto;
+  touch-action: none;
+  width: 40px;
+}
+
+/* the grabber handle active */
+.EW8UjTxcaJyjDU58ZAQw section div:active {
+  background-color: #888;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul {
+  list-style-type: none;
+  margin-top: 8px;
+  width: 100%;
+  padding-bottom: 12px;
+  pointer-events: none;
+  flex: 1; /* Takes up remaining space */
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li {
+  align-items: center;
+  color: var(--text);
+  display: flex;
+  font-size: var(--font-size);
+  justify-content: space-between;
+  line-height: var(--line-height);
+  padding: 8px;
+  pointer-events: none;
+  width: 100%;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li div:first-child {
+  flex: 1;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li img {
+  border-radius: 50px;
+  height: 56px;
+  width: 56px;
+
+  /* remove the following, probably replace img with the custom "avatar" */
+  border: 1px dotted white;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li div > div {
+  display: flex;
+  gap: 10px;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li button {
+  background: none;
+  border: 0;
+  border-radius: 50px;
+  height: 48px;
+  pointer-events: auto;
+  width: 48px;
+}
+
+.EW8UjTxcaJyjDU58ZAQw ul li button:active {
+  background: var(--button-active);
+}
+
+
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/FollowButton/FollowButton.module.css ***!
+  \***************************************************************************************************************/
+/* Profile Follow Button */
+
+.LxVk1HYZYwEEuUZ934ZA {
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--background);
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  gap: 10px;
+  height: 44px;
+  justify-content: center;  
+  margin: 24px auto 0 auto;
+  width: calc(100% - 48px);
+}
+
+/*!*********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/FollowStats/FollowingButton/FollowingButton.module.css ***!
+  \*********************************************************************************************************************************/
+/* Profile User Stat Following Button */
+
+.s2g8IVHQcXdzvp0yLgzf {
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 16px;
+  user-select: none;
+}
+
+.s2g8IVHQcXdzvp0yLgzf:active {
+  background: var(--button-active);
+}
+
+/*!*********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/FollowStats/FollowersButton/FollowersButton.module.css ***!
+  \*********************************************************************************************************************************/
+/* Profile User Stat Following Button */
+
+.TdNADfbRmDXUlRkNMYRO {
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 16px;
+  user-select: none;
+}
+
+.TdNADfbRmDXUlRkNMYRO:active {
+  background: var(--button-active);
+}
+
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/FollowStats/FollowStats.module.css ***!
+  \*************************************************************************************************************/
+/* Follow Stats List */
+
+.nhqSoBloQwWMoUudU1C4 {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 24px;
+}
+
+.nhqSoBloQwWMoUudU1C4 li {
+  
+}
+
+.nhqSoBloQwWMoUudU1C4 li button {
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 16px;
+  user-select: none;
+}
+
+.nhqSoBloQwWMoUudU1C4 li button:active {
+  background: var(--button-active);
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Profile/Profile.module.css ***!
+  \*********************************************************************************************/
+/* User Profile */
+
+.bRXXEOH49SRQPlqWmeUf {
+  background-color: var(--surface-raised);
+  height: 100dvh;
+  left: 0;
+  outline: none;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  padding: 42px 8px 0 8px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.WMUjEeFRanmV9SHehMGp nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.bRXXEOH49SRQPlqWmeUf header {
+
+}
+
+.bRXXEOH49SRQPlqWmeUf header {
+  align-items: center;
+  display: flex;
+}
+
+.bRXXEOH49SRQPlqWmeUf header div {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.bRXXEOH49SRQPlqWmeUf header img {
+  display: block;
+  height: 128px;
+  width: 128px;
+  
+  background: white;
+  border-radius: 50%;
+}
+
+.bRXXEOH49SRQPlqWmeUf header h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.bRXXEOH49SRQPlqWmeUf address {
+  font-size: var(--font-size);
+  margin-top: 8px;
+}
+
+.bRXXEOH49SRQPlqWmeUf p {
+  font-size: var(--font-size);
+  margin-top: 8px;
+}
+
+

@@ -301,12 +301,12 @@
   }
 }
 
-/*!***********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/HomeButton/HomeButton.module.css ***!
-  \***********************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/HomeButton/HomeButton.module.css ***!
+  \*************************************************************************************************************/
 /* Navigation Home Button */
 
-.Po4YWFPunGigktj3KOVI {
+.y95ixwKpz9zik3aNbQQn {
   align-items: center; 
   background: none;
   border: none;
@@ -319,16 +319,16 @@
   user-select: none;
 }
 
-.Po4YWFPunGigktj3KOVI:active {
+.y95ixwKpz9zik3aNbQQn:active {
   opacity: 0.7;
 }
 
-/*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/SearchButton/SearchButton.module.css ***!
-  \***************************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/SearchButton/SearchButton.module.css ***!
+  \*****************************************************************************************************************/
 /* Navigation Search Button */
 
-.ANqJHVBprWE9o5gznaUg {
+.iouS73xSycZpVOshef37 {
   align-items: center; 
   background: none;
   border: none;
@@ -341,17 +341,17 @@
   user-select: none;
 }
 
-.ANqJHVBprWE9o5gznaUg:active {
+.iouS73xSycZpVOshef37:active {
   opacity: 0.7;
 }
 
 
-/*!***************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/CameraButton/CameraButton.module.css ***!
-  \***************************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/CameraButton/CameraButton.module.css ***!
+  \*****************************************************************************************************************/
 /* Navigation Camera Button */
 
-.SlRNtUnDJefwXxJrrPyU {
+.QxIKV6eTzw1tBn0VK2ZN {
   align-items: center; 
   background: var(--white); /* linear-gradient(to top, #663399, #8a2be2); /* #663399; */
   border: 1px solid color-mix(in srgb, var(--white) 13%, transparent);
@@ -377,12 +377,12 @@
   z-index: 9999;
 }
 
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/NotificationsButton/NotificationsButton.module.css ***!
-  \*****************************************************************************************************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/NotificationsButton/NotificationsButton.module.css ***!
+  \*******************************************************************************************************************************/
 /* Navigation Notifications Button */
 
-.Nya8fCo2FT3sO4TZDKg2 {
+.jyDxw9Gc_5ANGYSwwcqw {
   align-items: center; 
   background: none;
   border: none;
@@ -396,11 +396,11 @@
   user-select: none;
 }
 
-.Nya8fCo2FT3sO4TZDKg2:active {
+.jyDxw9Gc_5ANGYSwwcqw:active {
   opacity: 0.7;
 }
 
-.Nya8fCo2FT3sO4TZDKg2 div {
+.jyDxw9Gc_5ANGYSwwcqw div {
   background-color: darkorange;
   border: 2px solid var(--black);
   border-radius: 50%;
@@ -412,12 +412,12 @@
   width: 10px;
 }
 
-/*!*****************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/ProfileButton/ProfileButton.module.css ***!
-  \*****************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/ProfileButton/ProfileButton.module.css ***!
+  \*******************************************************************************************************************/
 /* Navigation Profile Button */
 
-.rl5g1t4EuetH_nST5lgV {
+.vYH84xE9dFALX47vYg5q {
   align-items: center; 
   background: none;
   border: none;
@@ -430,16 +430,16 @@
   user-select: none;
 }
 
-.rl5g1t4EuetH_nST5lgV:active {
+.vYH84xE9dFALX47vYg5q:active {
   opacity: 0.7;
 }
 
-/*!************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileUI/Navigation/Navigation.module.css ***!
-  \************************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/MobileNav.module.css ***!
+  \*************************************************************************************************/
 /* Mobile UI Navigation */
 
-._EJyqkXyUnkwqjS3lhYz {
+.UAUS7uG3u3pzkuV10IMH {
   align-items: center;
   background-color: var(--surface-raised);
   border-top: 1px solid var(--border);
@@ -461,12 +461,12 @@
   z-index: 100;
 }
 
-._EJyqkXyUnkwqjS3lhYz.AwJtbTkrEcl8gVqjZx2U {
+.UAUS7uG3u3pzkuV10IMH.v1tq2Cmlw7JsA0T_1Kfr {
   transform: translateY(100%);
   opacity: 0;
 }
 
-._EJyqkXyUnkwqjS3lhYz > div {
+.UAUS7uG3u3pzkuV10IMH > div {
   display: flex;
   margin: 0 auto;
   max-width: 500px;
@@ -474,13 +474,13 @@
   width: 100%;
 }
 
-._EJyqkXyUnkwqjS3lhYz > div > div:not(:nth-of-type(2)) {
+.UAUS7uG3u3pzkuV10IMH > div > div:not(:nth-of-type(2)) {
   display: flex;
   flex: 1;
   justify-content: space-between;
 }
 
-._EJyqkXyUnkwqjS3lhYz > div > div:nth-of-type(2) {
+.UAUS7uG3u3pzkuV10IMH > div > div:nth-of-type(2) {
   position: static;
   flex-shrink: 0;
   width: 152px;
