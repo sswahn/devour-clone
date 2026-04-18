@@ -1220,7 +1220,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/devour-clone/";
+/******/ 		__webpack_require__.p = "/devour-frontend/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/css loading */
