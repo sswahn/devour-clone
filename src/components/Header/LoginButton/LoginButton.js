@@ -1,4 +1,5 @@
-
+import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
+import styles from './LoginButton.module.css'
 
 function LoginButton() {
 
@@ -21,7 +22,7 @@ function LoginButton() {
   }
   
   return (
-    <button onClick={onClick} onKeyDown={onKeyDown} ref={authenticationButtonRef} type="button" aria-label="sign in">
+    <button className={styles.loginButton} onClick={onClick} onKeyDown={onKeyDown} ref={authenticationButtonRef} type="button" aria-label="sign in">
       <RightToBracketIcon />
     </button>
   )
