@@ -1,4 +1,4 @@
-import SearchIcon from '../../../Icons/SearchIcon/SearchIcon'
+import SearchIcon from '../../Icons/SearchIcon/SearchIcon'
 import styles from './SearchButton.module.css'
 
 function SearchButton({ searchButtonRef, openSearch }) {
