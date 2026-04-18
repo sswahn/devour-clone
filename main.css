@@ -361,11 +361,11 @@
   display: flex;
   height: 72px;
   justify-content: center;
+  left: 50%;
   outline: 1px solid color-mix(in srgb, black 24%, transparent);
   padding: 0;
   position: absolute;
-  top: 16px;
-  right: 50%;
+  top: 0; /* 16px; */
  /* transform: translateX(-50%); */
   user-select: none; 
   width: 72px;
