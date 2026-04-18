@@ -7,7 +7,7 @@ import NotificationsButton from './NotificationsButton/NotificationsButton'
 import ProfileButton from './ProfileButton/ProfileButton'
 import styles from './Navigation.module.css'
 
-function Navigation({ 
+function MobileNav({ 
   searchButtonRef,
   cameraButtonRef,
   notificationsButtonRef,
@@ -43,4 +43,4 @@ function Navigation({
   )
 }
 
-export default Navigation
+export default MobileNav
