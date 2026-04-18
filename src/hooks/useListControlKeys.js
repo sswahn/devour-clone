@@ -40,7 +40,7 @@ function useListControlKeys() {
     }
   }
 
-  const applyListControls = (list, methods) {
+  const applyListControls = (list, methods) => {
     setList(list)
     setMethods(methods)
   }
