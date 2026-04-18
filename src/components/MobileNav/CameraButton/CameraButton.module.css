@@ -2,8 +2,8 @@
 
 .cameraButton {
   align-items: center; 
-  background: var(--surface-raised);
-  border: 1px solid color-mix(in srgb, white 13%, transparent);
+  background: none;
+  border: 0;
   border-radius: 50%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -11,19 +11,5 @@
   height: 64px;
   justify-content: center;
   left: 50%;
-  outline: 1px solid color-mix(in srgb, black 24%, transparent);
-  padding: 0;
-  position: absolute;
-  top: 0; /* 16px; */
-  transform: translateX(-50%);
-  user-select: none; 
-  width: 64px;
   z-index: 9999;
-}
-
-.cameraButton svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
