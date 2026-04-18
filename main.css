@@ -218,7 +218,7 @@
   transform: translateY(-100%);
 }
 
-.Qp5xkmMJGKUSGJdCNCHD > div {
+.Qp5xkmMJGKUSGJdCNCHD div {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -228,21 +228,14 @@
   width: 100%;
 }
 
-.Qp5xkmMJGKUSGJdCNCHD > button {
+.Qp5xkmMJGKUSGJdCNCHD button {
+  align-items: center;
   background: none;
-  border: none;
-  padding: 0;
+  border: 0;
   cursor: pointer;
+  display: flex;
 }
 
-
-.Qp5xkmMJGKUSGJdCNCHD nav {
-  /*
-  height: 44px;
-  width: 44px;
-  */
-  border: 1px dashed red;
-}
 
 .Qp5xkmMJGKUSGJdCNCHD nav button {
   align-items: center;
@@ -250,8 +243,6 @@
   border: 0;
   cursor: pointer;
   display: flex;
-
-  border: 1px dashed orange;
 }
 
 
