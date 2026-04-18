@@ -359,10 +359,11 @@
   align-items: center; 
   background: none;
   border: none;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
 }
 
 /*!*******************************************************************************************************************************!*\
