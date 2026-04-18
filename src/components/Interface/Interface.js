@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, Suspense, lazy } from 'react'
 import Header from '../Header/Header'
+import Main from '../Main/Main'
 import MobileNav from '../MobileNav/MobileNav'
 import Overlays from '../Overlays/Overlays'
 
@@ -50,7 +51,7 @@ function Interface() {
   return (
     <>
       <Header />
-
+      <Main />
       <MobileNav 
         searchButtonRef={searchButtonRef}
         cameraButtonRef={cameraButtonRef}
