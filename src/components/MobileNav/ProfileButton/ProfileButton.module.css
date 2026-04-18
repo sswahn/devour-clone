@@ -5,8 +5,8 @@
   background: none;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   padding: 10px;
 }
