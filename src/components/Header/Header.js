@@ -1,7 +1,7 @@
 import { useEffect, useRef  } from 'react'
 import useScrollEffect from '../../hooks/useScrollEffect'
 import HomeIcon from '../Icons/HomeIcon/HomeIcon'
-import RightToBracketIcon from '../Icons/RightToBracketIcon/RightToBracketIcon'
+import LoginButton from './LoginButton/LoginButton'
 import styles from './Header.module.css'
 
 const Header = ({ authenticationButtonRef, openAuthentication }) => {
@@ -12,25 +12,6 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
     headerRef && scrollEffect(headerRef.current, styles.hidden)
   }, [])
 
-  // move nav button(s) to their own components
-  const action = () => {
-    console.log('openAuth fired!')
-    
-    navigator.vibrate(50)
-    openAuthentication()  
-  }
-  
-  const onClick = event => {
-    action()
-  }
-  
-  const onKeyDown = event => {
-    if (event.key === 'Enter') {
-      event.preventDefault()
-      action()
-    }
-  }
-  
   return (
     <header ref={headerRef} className={styles.header}>
       <div>
@@ -41,9 +22,10 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
     
-          <button onClick={onClick} onKeyDown={onKeyDown} ref={authenticationButtonRef} type="button" aria-label="sign in">
-            <RightToBracketIcon />
-          </button>
+          <LoginButton 
+            authenticationButtonRef={authenticationButtonRef} 
+            openAuthentication={openAuthentication} 
+          />
         </nav>
       </div>
     </header>
