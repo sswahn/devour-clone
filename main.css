@@ -372,6 +372,12 @@
   z-index: 9999;
 }
 
+.QxIKV6eTzw1tBn0VK2ZN svg {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 /*!*******************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/NotificationsButton/NotificationsButton.module.css ***!
   \*******************************************************************************************************************************/
