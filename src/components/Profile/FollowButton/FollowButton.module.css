@@ -4,7 +4,7 @@
   align-items: center;
   border: 0;
   border-radius: 8px;
-  background: var(--button-bg);
+  background: var(--button-bar-bg);
   color: var(--button-text);
   display: flex;
   font-weight: bold;
