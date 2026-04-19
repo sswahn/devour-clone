@@ -12,20 +12,21 @@ function FocusStackProvider() {
   }
 
   const onClick = event => {
-    action()
+    action(event)
   }
 
   const onKeyDown = event => {
     if (event.key === 'Enter') {
       event.preventDefault()
-      action()
+      action(event)
     }
   }
   
   const resoreFocus = () => {
     for (let i = stack.current.length - 1; i >= 0; i--) {
-      if (document.body.contains(stack.current[i])) {
-        stack.current[i].focus()
+      const element = stack.current[i]
+      if (document.body.contains(element)) {
+        element.focus()
         stack.current = []
       }
     }
