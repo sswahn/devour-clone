@@ -25,11 +25,10 @@
   border: 0;
   border-radius: 50px;
   color: var(--dropdown-text);
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  cursor: pointer;
-  height: 44px;
-  width: 44px;
+  padding: 10px;
 }
 
 /*!********************************************************************************************************************!*\
