@@ -11,6 +11,7 @@ function Interface() {
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
+  const [profileUsername, setProfileUsername] = userState('')
   const authenticationButtonRef = useRef(null)
   const searchButtonRef = useRef(null)
   const cameraButtonRef = useRef(null)
@@ -47,7 +48,7 @@ function Interface() {
   // overlays needs it (notifications, and possibly profile)
   // Main needs it for FeedItems
   const openProfile = username => {
-    // setUserProfile(username)
+    setProfileUsername(username)
     setProfileIsOpen(true)
   }
   const closeProfile = () => {
