@@ -4,6 +4,8 @@ import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import LoginButton from './LoginButton/LoginButton'
 import styles from './Header.module.css'
 
+import generateAvatarSVG from '../../utilities/generateAvatarSVG'
+
 const Header = ({ authenticationButtonRef, openAuthentication }) => {
   const headerRef = useRef(null)
   const { scrollEffect } = useScrollEffect()
@@ -18,7 +20,9 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
         <button onClick={() => navigator.vibrate(50)} type="button" aria-label="home">
           <HomeIcon />
         </button>
-    
+        <button>
+          {generateAvatarSVG()}
+        </button>
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
     
