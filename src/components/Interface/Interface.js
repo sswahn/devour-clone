@@ -43,7 +43,13 @@ function Interface() {
     notificationsButtonRef.current.focus()
   }
 
-  const openProfile = event => setProfileIsOpen(true)
+  // get this function to Avatar component...
+  // overlays needs it (notifications, and possibly profile)
+  // Main needs it for FeedItems
+  const openProfile = event => {
+    // pass username to profile component: event.target.username
+    setProfileIsOpen(true)
+  }
   const closeProfile = event => {
     setProfileIsOpen(false)
     profileButtonRef.current.focus()
