@@ -2,8 +2,12 @@ import { useState } from 'react'
 import Identicon from '../Identicon/Identicon'
 import styles from './styles.module.css'
 
-const Avatar = ({ image, username, onClick, size = 24 }) => {
-  // should onClick be a prop or defined here?
+const Avatar = ({ username, image, size = 24 }) => {
+
+  const onClick = event => {
+    // open usernames profile
+  }
+  
   return (
     <div className={styles.avatar} onClick={onClick} aria-label={`${username}'s avatar`}>
       {image 
