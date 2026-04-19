@@ -173,6 +173,7 @@ button:active {
 
 svg {
   fill: var(--text);
+  flex-shrink: 0;
 }
 
 img, video {
