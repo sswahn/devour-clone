@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 const Avatar = ({ username, image, openProfile, size = 24 }) => {
 
   const action = () => {
-    openProfile(username)
+    // openProfile(username)
   }
   
   const onClick = event => {
