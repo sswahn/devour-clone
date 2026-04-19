@@ -363,10 +363,6 @@
   width: 44px;
 }
 
-.QxIKV6eTzw1tBn0VK2ZN svg {
-  flex-shrink: 0;
-}
-
 /* Override defaults: */
 .QxIKV6eTzw1tBn0VK2ZN:focus {
   background: var(--surface);
