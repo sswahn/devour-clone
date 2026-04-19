@@ -2,14 +2,11 @@ import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
 
-// Buttons that open overlays:
-const BUTTON_WHITELIST = ['avatar', 'open-profile', 'open-notifications']
-
 function FocusStackProvider() {
   const stack = useRef([])
 
   const action = event => {
-    if (BUTTON_WHITELIST.contains(event.target.id)) {
+    if (event.target.tagName === 'BUTTON')) {
       stack.current.push(event.target)
     }
   }
@@ -26,9 +23,9 @@ function FocusStackProvider() {
   }
   
   const resoreFocus = () => {
-    for (const element of stack.current) {
-      if (document.body.contains(element)) {
-        element.focus()
+    for (let i = stack.current.length - 1; i >= 0; i--) {
+      if (document.body.contains(stack.current[i])) {
+        stack.current[i].focus()
         stack.current = []
       }
     }
