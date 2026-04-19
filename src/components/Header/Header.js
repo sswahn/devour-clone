@@ -21,7 +21,7 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
           <HomeIcon />
         </button>
         
-        <DefaultAvatar seed={'exampleUsername'} />
+        <DefaultAvatar seed={Math.random().toString(36).substring(2, 7)} />
         
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
