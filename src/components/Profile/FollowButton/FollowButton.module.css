@@ -5,7 +5,7 @@
   border: 0;
   border-radius: 8px;
   background: var(--button-bar-bg);
-  color: var(--button-text);
+  color: var(--button-bar-text);
   display: flex;
   font-weight: bold;
   font-size: 18px;
