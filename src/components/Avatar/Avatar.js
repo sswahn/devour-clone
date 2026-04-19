@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import useProfile from '../../hooks/useProfile'
 import Identicon from '../Identicon/Identicon'
 import styles from './styles.module.css'
 
 const Avatar = ({ username, image, openProfile, size = 24 }) => {
-
+  const { setProfile } = useProfile()
+  
   const action = () => {
-    // openProfile(username)
+    setProfile(username)
   }
   
   const onClick = event => {
