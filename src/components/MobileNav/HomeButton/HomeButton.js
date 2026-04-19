@@ -15,14 +15,12 @@ function HomeButton() {
     action()
   }
 
-  /*
   const onKeyDown = event => {
     if (event.key === 'Enter') {
       event.preventDefault()
       action()
     }
   }
-  */
   
   return (
     <button 
