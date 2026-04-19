@@ -17,10 +17,6 @@ function Interface() {
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
   
-  // if button opens overlay, storeFocus.current = button.current
-  // if button closes overlay restore focus, storedFocus.current.focus()
-  const storeFocus = useRef(null) 
-  
   const openAuthentication = () => setAuthenticationIsOpen(true)
   const closeAuthentication = () => {
     setAuthenticationIsOpen(false)
@@ -70,12 +66,13 @@ function Interface() {
     
     profileButtonRef.current.focus() 
   }
-
+/*
   useEffect(() => {
     if (username) {
       openProfile()
     }
   }, [username])
+  */
 
   // change this component name to something global/universal
   // conditionally render the navigation, either with css or js
