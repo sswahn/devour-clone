@@ -3,7 +3,7 @@ import UserIcon from '../../Icons/UserIcon/UserIcon'
 import styles from './ProfileButton.module.css'
 
 function ProfileButton({ profileButtonRef, openProfile }) {
-  const session = useSession()
+  const { session } = useSession()
   
   const action = async () => {
     navigator.vibrate(50)
