@@ -28,6 +28,7 @@ function FocusStackProvider({ children }) {
       if (document.body.contains(element)) {
         element.focus()
         stack.current = []
+        return
       }
     }
   }
