@@ -77,7 +77,7 @@
 
   --button-bar-bg: light-dark(var(--dark-black), var(--lighter-black));
 
-  --button-bar-text: light-dark(var(--white), var(--white));
+  --button-bar-text: var(--white);
 
   --button-bg: var(--surface-raised);
   
