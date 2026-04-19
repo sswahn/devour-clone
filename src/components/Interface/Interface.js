@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense, lazy } from 'react'
+import { useState, useRef, useEffect, Suspense, lazy } from 'react'
 import Header from '../Header/Header'
 import Main from '../Main/Main'
 import MobileNav from '../MobileNav/MobileNav'
@@ -11,7 +11,6 @@ function Interface() {
   const [cameraIsOpen, setCameraIsOpen] = useState(false)
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false)
   const [profileIsOpen, setProfileIsOpen] = useState(false)
-  const [profileUsername, setProfileUsername] = userState('')
   const authenticationButtonRef = useRef(null)
   const searchButtonRef = useRef(null)
   const cameraButtonRef = useRef(null)
@@ -44,17 +43,19 @@ function Interface() {
     notificationsButtonRef.current.focus()
   }
 
-  // get this function to Avatar component...
-  // overlays needs it (notifications, and possibly profile)
-  // Main needs it for FeedItems
-  const openProfile = username => {
-    setProfileUsername(username)
-    setProfileIsOpen(true)
-  }
+  // open profile will fire in context username update
+  // using useEffect, with openProfile()
+  const openProfile = () => setProfileIsOpen(true)
   const closeProfile = () => {
     setProfileIsOpen(false)
-    profileButtonRef.current.focus()
+    profileButtonRef.current.focus() // could be avatar, could be profileButton, need a reliable source
   }
+
+  useEffect(() => {
+    if (username) {
+      openProfile()
+    }
+  }, [username])
 
   // change this component name to something global/universal
   // conditionally render the navigation, either with css or js
@@ -79,7 +80,7 @@ function Interface() {
         openSearch={openSearch}
         openCamera={openCamera}
         openNotifications={openNotifications}
-        openProfile={openProfile}
+        //openProfile={openProfile}
       />
       <Suspense fallback={<LoadingSpinner />}>
         <Overlays 
