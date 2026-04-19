@@ -1,4 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, createContext } from 'react'
+
+const FocusStackContext = createContext(null)
 
 function FocusStackProvider() {
   let stack = []
@@ -17,10 +19,10 @@ function FocusStackProvider() {
   }, [document.ActiveElement])
 
   return (
-    <GetProfileContext.Provider value={username}>
-      <SetProfileContext.Provider value={setUsername}>
-        {children}
-      </SetProfileContext.Provider>
-    </GetProfileContext.Provider>
+    <FocusStackContext.Provider value={restoreFocus}>
+      {children}
+    </FocusStackContext.Provider>
   )
 }
+
+export { FocusStackContext, FocusStackProvider }
