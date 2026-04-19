@@ -1,13 +1,15 @@
 import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
-const BUTTON_WHITELIST = ['avatar', 'profile']
+
+// Buttons that open overlays:
+const BUTTON_WHITELIST = ['avatar', 'profile', 'notifications']
 
 function FocusStackProvider() {
   const stack = useRef([])
 
   const action = event => {
-    if (BUTTON_WHITELIST.contains(event.target.id) {
+    if (BUTTON_WHITELIST.contains(event.target.id)) {
       stack.current.push(event.target)
     }
   }
