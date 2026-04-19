@@ -1,15 +1,25 @@
 import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
-
-const buttonWhiteList = ['avatar', 'profile']
+const BUTTON_WHITELIST = ['avatar', 'profile']
 
 function FocusStackProvider() {
   const stack = useRef([])
 
-  const addToStack = event => {
-    if (buttonWhiteList.contains(event.target.id) {
+  const action = event => {
+    if (BUTTON_WHITELIST.contains(event.target.id) {
       stack.current.push(event.target)
+    }
+  }
+
+  const onClick = event => {
+    action()
+  }
+
+  const onKeyDown = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      action()
     }
   }
   
@@ -23,11 +33,11 @@ function FocusStackProvider() {
   }
 
   useEffect(() => {
-    document.addEventListener('click', addToStack)
-    document.addEventListener('keydown', addToStack)
+    document.addEventListener('click', onClick)
+    document.addEventListener('keydown', onKeyDown)
     return () => {
-      document.removeEventListener('click', addToStack)
-      document.removeEventListener('keydown', addToStack)
+      document.removeEventListener('click', onClick)
+      document.removeEventListener('keydown', onKeyDown)
     }
   }, [])
 
