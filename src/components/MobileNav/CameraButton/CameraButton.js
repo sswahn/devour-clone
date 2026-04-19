@@ -1,4 +1,4 @@
-import CameraIcon from '../../Icons/CameraIcon/CameraIcon'
+import PlusIcon from '../../Icons/PlusIcon/PlusIcon'
 import styles from './CameraButton.module.css'
 
 function CameraButton({ cameraButtonRef, openCamera }) {
@@ -31,7 +31,7 @@ function CameraButton({ cameraButtonRef, openCamera }) {
       type="button" 
       aria-label="open camera" 
       aria-haspopup="dialog">
-      <CameraIcon size={32} />  
+      <PlusIcon size={32} />  
     </button>
   )
 }
