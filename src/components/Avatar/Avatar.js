@@ -2,10 +2,10 @@ import { useState } from 'react'
 import Identicon from '../Identicon/Identicon'
 import styles from './styles.module.css'
 
-const Avatar = ({ username, image, size = 24 }) => {
+const Avatar = ({ username, image, openProfile, size = 24 }) => {
 
   const action = () => {
-    // open usernames profile
+    openProfile(username)
   }
   
   const onClick = event => {
