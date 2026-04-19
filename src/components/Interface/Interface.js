@@ -51,7 +51,14 @@ function Interface() {
   const closeProfile = () => {
     setProfileIsOpen(false)
     // return focus to source, which could be closed.
-    profileButtonRef.current.focus() // could be avatar, could be profileButton, need a reliable source
+    // could be avatar, could be profileButton, need a reliable source
+    // the focus 'rule' is: whatever the last main interace button was clicked
+    // return to that button.
+    // so if Notifications button opens notifications ->
+    // avatar in notifications opens profile ->
+    // profile closes to main interface ->
+    // notifications button should regain focus...
+    profileButtonRef.current.focus() 
   }
 
   useEffect(() => {
