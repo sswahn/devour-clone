@@ -15,18 +15,20 @@ function HomeButton() {
     action()
   }
 
+  /*
   const onKeyDown = event => {
     if (event.key === 'Enter') {
       event.preventDefault()
       action()
     }
   }
+  */
   
   return (
     <button 
       className={styles.homeButton} 
       onClick={onClick} 
-      onKeyDown={onKeyDown} 
+     // onKeyDown={onKeyDown} 
       type="button" 
       aria-label="scroll to top">
       <HomeIcon />  
