@@ -75,6 +75,8 @@
   
   /* Buttons */
 
+  --button-bar-bg: light-dark(var(--dark-black), var(--lighter-black));
+
   --button-bg: var(--surface-raised);
   
   --button-text: var(--text);
