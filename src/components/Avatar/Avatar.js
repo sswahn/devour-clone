@@ -20,7 +20,7 @@ const Avatar = ({ username, image, openProfile, size = 24 }) => {
   }
   
   return (
-    <div className={styles.avatar} onClick={onClick} onKeyDown={onKeyDown} data-username={username} aria-label={`${username}'s avatar`}>
+    <div className={styles.avatar} onClick={onClick} onKeyDown={onKeyDown} aria-label={`${username}'s avatar`}>
       {image 
         ? <img src={image} alt={`${username}'s avatar`} loading="lazy" width={size} height={size} />
         : <Identicon seed={username} />
