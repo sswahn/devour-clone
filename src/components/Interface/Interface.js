@@ -16,7 +16,11 @@ function Interface() {
   const cameraButtonRef = useRef(null)
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
-
+  
+  // if button opens overlay, storeFocus.current = button.current
+  // if button closes overlay restore focus, storedFocus.current.focus()
+  const storeFocus = useRef(null) 
+  
   const openAuthentication = () => setAuthenticationIsOpen(true)
   const closeAuthentication = () => {
     setAuthenticationIsOpen(false)
@@ -50,6 +54,7 @@ function Interface() {
   }
   const closeProfile = () => {
     setProfileIsOpen(false)
+    
     // return focus to source, which could be closed.
     // could be avatar, could be profileButton, need a reliable source
     // the focus 'rule' is: whatever the last main interace button was clicked
