@@ -352,8 +352,8 @@
 
 .QxIKV6eTzw1tBn0VK2ZN {
   align-items: center; 
-  background: none;
-  border: none;
+  background: var(--surface);
+  border: 0;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
