@@ -23,22 +23,22 @@ function Interface() {
     authenticationButtonRef.current.focus()
   }
   
-  const openSearch = event => setSearchIsOpen(true)
-  const closeSearch = event => {
+  const openSearch = () => setSearchIsOpen(true)
+  const closeSearch = () => {
     setSearchIsOpen(false)
 
     console.log('return focus to searchButton.current: ', searchButtonRef.current)
     searchButtonRef.current.focus() // test this with a delay, setTimeout, currently everything focuses on profile button
   }
 
-  const openCamera = event => setCameraIsOpen(true)
-  const closeCamera = event => {
+  const openCamera = () => setCameraIsOpen(true)
+  const closeCamera = () => {
     setCameraIsOpen(false)
     cameraButtonRef.current.focus()
   }
 
-  const openNotifications = event => setNotificationsIsOpen(true)
-  const closeNotifications = event => {
+  const openNotifications = () => setNotificationsIsOpen(true)
+  const closeNotifications = () => {
     setNotificationsIsOpen(false)
     notificationsButtonRef.current.focus()
   }
@@ -46,11 +46,11 @@ function Interface() {
   // get this function to Avatar component...
   // overlays needs it (notifications, and possibly profile)
   // Main needs it for FeedItems
-  const openProfile = event => {
-    // pass username to profile component: event.target.dataset.username
+  const openProfile = username => {
+    // setUserProfile(username)
     setProfileIsOpen(true)
   }
-  const closeProfile = event => {
+  const closeProfile = () => {
     setProfileIsOpen(false)
     profileButtonRef.current.focus()
   }
