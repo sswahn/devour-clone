@@ -1,4 +1,4 @@
-function DefaultAvatar({ seed = "user", size = 48 }) {
+function Identicon({ seed = "user", size = 48 }) {
 
   // hash
   let hash = 0
@@ -58,4 +58,4 @@ function DefaultAvatar({ seed = "user", size = 48 }) {
   )
 }
 
-export default DefaultAvatar
+export default Identicon
