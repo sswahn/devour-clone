@@ -4,7 +4,7 @@ import HomeIcon from '../Icons/HomeIcon/HomeIcon'
 import LoginButton from './LoginButton/LoginButton'
 import styles from './Header.module.css'
 
-import DefaultAvatar from '../DefaultAvatar/DefaultAvatar'
+import Avatar from '../Avatar/Avatar'
 
 const Header = ({ authenticationButtonRef, openAuthentication }) => {
   const headerRef = useRef(null)
@@ -21,7 +21,7 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
           <HomeIcon />
         </button>
         
-        <DefaultAvatar seed={Math.random().toString(36)} />
+        <Avatar username={Math.random().toString(36)} />
         
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
