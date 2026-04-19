@@ -14,17 +14,13 @@
   z-index: 200;
 }
 
-.search nav {
+.profile nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
   width: 100%;
 
   border: 1px dashed red;
-}
-
-.profile header {
-
 }
 
 .profile header div {
