@@ -19,10 +19,14 @@
 */
 
 /* Override defaults: */
-.cameraButton:active {
-  background: var(--surface);
+.cameraButton:focus {
+  background: initial;
 }
 
-.cameraButton:focus {
-  background: var(--surface);
+.cameraButton:hover {
+  background: var(--gray);
+}
+
+.cameraButton:active {
+  background: var(--light-gray);
 }
