@@ -16,7 +16,6 @@ function createSeededRandom(seed) {
   }
 }
 
-
 function DefaultAvatar({ seed, size = 200 }) {
 
   const rand = createSeededRandom(seed)
@@ -41,13 +40,21 @@ function DefaultAvatar({ seed, size = 200 }) {
 
     if (type === 0) {
       shapes.push(
-        `<circle cx="${x}" cy="${y}" r="${s/2}" fill="${color}" opacity=".9"/>`
+        <circle key={i} cx={x} cy={y} r={s/2} fill={color} opacity=".9" />
       )
     }
 
     if (type === 1) {
       shapes.push(
-        `<rect x="${x}" y="${y}" width="${s}" height="${s}" fill="${color}" transform="rotate(${rand()*360} ${x} ${y})"/>`
+        <rect
+          key={i}
+          x={x}
+          y={y}
+          width={s}
+          height={s}
+          fill={color}
+          transform={`rotate(${rand()*360} ${x} ${y})`}
+        />
       )
     }
 
@@ -58,15 +65,19 @@ function DefaultAvatar({ seed, size = 200 }) {
       const y3 = y + rand()*s
 
       shapes.push(
-        `<polygon points="${x},${y} ${x2},${y2} ${x3},${y3}" fill="${color}" />`
+        <polygon
+          key={i}
+          points={`${x},${y} ${x2},${y2} ${x3},${y3}`}
+          fill={color}
+        />
       )
     }
   }
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">
-      <rect width="100%" height="100%" fill="${colors[0]}" />
-      ${shapes.join("")}
+    <svg width={size} height={size}>
+      <rect width="100%" height="100%" fill={colors[0]} />
+      {shapes}
     </svg>
   )
 }
