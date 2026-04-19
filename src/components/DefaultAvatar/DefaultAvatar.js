@@ -1,4 +1,4 @@
-function createSeededRandom(seed) {
+function createSeededRandom(seed = "default") {
   let h = 2166136261 >>> 0
 
   for (let i = 0; i < seed.length; i++) {
@@ -16,7 +16,7 @@ function createSeededRandom(seed) {
   }
 }
 
-function DefaultAvatar({ seed, size = 200 }) {
+function DefaultAvatar({ seed = "default", size = 200 }) {
 
   const rand = createSeededRandom(seed)
 
@@ -29,18 +29,35 @@ function DefaultAvatar({ seed, size = 200 }) {
 
   const shapes = []
 
+  // Grid system for better composition
+  const grid = 4
+  const cell = size / grid
+
+  const rotations = [0, 45, 90]
+
   for (let i = 0; i < 6; i++) {
 
-    const x = rand() * size
-    const y = rand() * size
-    const s = rand() * size * .5
-    const color = colors[Math.floor(rand()*colors.length)]
+    const gx = Math.floor(rand() * grid)
+    const gy = Math.floor(rand() * grid)
 
-    const type = Math.floor(rand()*3)
+    const x = gx * cell
+    const y = gy * cell
+
+    const s = cell * (0.5 + rand() * 0.5)
+    const color = colors[Math.floor(rand() * colors.length)]
+    const type = Math.floor(rand() * 3)
+    const rotation = rotations[Math.floor(rand() * rotations.length)]
 
     if (type === 0) {
       shapes.push(
-        <circle key={i} cx={x} cy={y} r={s/2} fill={color} opacity=".9" />
+        <circle
+          key={i}
+          cx={x + s/2}
+          cy={y + s/2}
+          r={s/2}
+          fill={color}
+          opacity="0.9"
+        />
       )
     }
 
@@ -53,21 +70,23 @@ function DefaultAvatar({ seed, size = 200 }) {
           width={s}
           height={s}
           fill={color}
-          transform={`rotate(${rand()*360} ${x} ${y})`}
+          transform={`rotate(${rotation} ${x + s/2} ${y + s/2})`}
         />
       )
     }
 
     if (type === 2) {
-      const x2 = x + rand()*s
-      const y2 = y + rand()*s
-      const x3 = x - rand()*s
-      const y3 = y + rand()*s
+      const x1 = x + s / 2
+      const y1 = y
+      const x2 = x + s
+      const y2 = y + s
+      const x3 = x
+      const y3 = y + s
 
       shapes.push(
         <polygon
           key={i}
-          points={`${x},${y} ${x2},${y2} ${x3},${y3}`}
+          points={`${x1},${y1} ${x2},${y2} ${x3},${y3}`}
           fill={color}
         />
       )
@@ -75,7 +94,12 @@ function DefaultAvatar({ seed, size = 200 }) {
   }
 
   return (
-    <svg width={size} height={size}>
+    <svg
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="100%" height="100%" fill={colors[0]} />
       {shapes}
     </svg>
