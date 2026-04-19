@@ -3,7 +3,7 @@ import { useRef, useEffect, createContext } from 'react'
 const FocusStackContext = createContext(null)
 
 // Buttons that open overlays:
-const BUTTON_WHITELIST = ['avatar', 'profile', 'notifications']
+const BUTTON_WHITELIST = ['avatar', 'open-profile', 'open-notifications']
 
 function FocusStackProvider() {
   const stack = useRef([])
