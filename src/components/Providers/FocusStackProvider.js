@@ -14,13 +14,6 @@ function FocusStackProvider({ children }) {
   const onClick = event => {
     action(event)
   }
-
-  const onKeyDown = event => {
-    if (event.key === 'Enter') {
-      event.preventDefault()
-      action(event)
-    }
-  }
   
   const restoreFocus = () => {
     for (let i = stack.current.length - 1; i >= 0; i--) {
@@ -35,10 +28,8 @@ function FocusStackProvider({ children }) {
 
   useEffect(() => {
     document.addEventListener('click', onClick)
-    document.addEventListener('keydown', onKeyDown)
     return () => {
       document.removeEventListener('click', onClick)
-      document.removeEventListener('keydown', onKeyDown)
     }
   }, [])
 
