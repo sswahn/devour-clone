@@ -21,7 +21,7 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
           <HomeIcon />
         </button>
         <button>
-          {generateAvatarSVG()}
+          {generateAvatarSVG('exampleUsernam')}
         </button>
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
