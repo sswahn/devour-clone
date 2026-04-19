@@ -10,7 +10,7 @@ import Interface from '../Interface/Interface'
 
 function AppRoot() {
   const session = useContext(GetSessionContext)
-  return session.isAuthenticated ? <Authentication /> : <Interface />
+  return session.isAuthenticated ? <Interface /> : <Authentication />
 }
 
 export default AppRoot
