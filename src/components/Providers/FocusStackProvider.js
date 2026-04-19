@@ -6,7 +6,7 @@ function FocusStackProvider() {
   const stack = useRef([])
 
   const action = event => {
-    if (event.target.tagName === 'BUTTON')) {
+    if (event.target.tagName === 'BUTTON') {
       stack.current.push(event.target)
     }
   }
@@ -22,7 +22,7 @@ function FocusStackProvider() {
     }
   }
   
-  const resoreFocus = () => {
+  const restoreFocus = () => {
     for (let i = stack.current.length - 1; i >= 0; i--) {
       const element = stack.current[i]
       if (document.body.contains(element)) {
