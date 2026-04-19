@@ -369,12 +369,16 @@
 */
 
 /* Override defaults: */
-.QxIKV6eTzw1tBn0VK2ZN:active {
-  background: var(--surface);
+.QxIKV6eTzw1tBn0VK2ZN:focus {
+  background: initial;
 }
 
-.QxIKV6eTzw1tBn0VK2ZN:focus {
-  background: var(--surface);
+.QxIKV6eTzw1tBn0VK2ZN:hover {
+  background: var(--gray);
+}
+
+.QxIKV6eTzw1tBn0VK2ZN:active {
+  background: var(--light-gray);
 }
 
 /*!*******************************************************************************************************************************!*\
