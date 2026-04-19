@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react'
-import { SetSessionContext } from '../../../components/Providers/SessionProvider'
+import { useState } from 'react'
+import useSession from '../../../hooks/useSession'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
-  const setSession = useContext(SetSessionContext) // onSubmit, setSession({isAuthenticated: true, ...user_data})
+  const setSession = useSession() 
   const [loading, setLoading] = useState(false)
 
   // Perform validation checks in javascript and return alert if violated.
@@ -16,6 +16,8 @@ function LoginForm() {
     // challenge is signed by browser/device:
     // (call navigator.credentials.get() for signature)
     // send signature to backend for verification and tokens
+    
+    // setSession({ isAuthenticated: true, ...response.message.userData})
   }
   
   return (
