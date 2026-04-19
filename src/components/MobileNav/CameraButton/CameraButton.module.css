@@ -12,9 +12,15 @@
   height: 44px;
   width: 44px;
 }
-
+/*
 .cameraButton svg {
   flex-shrink: 0;
+}
+*/
+
+/* Override defaults: */
+.cameraButton:active {
+  background: var(--surface);
 }
 
 .cameraButton:focus {
