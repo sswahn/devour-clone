@@ -1,4 +1,3 @@
-
 import { useContext } from 'react'
 import { GetProfileContext, SetProfileContext } from '../components/Providers/ProfileProvider'
 
