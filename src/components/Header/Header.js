@@ -20,9 +20,9 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
         <button onClick={() => navigator.vibrate(50)} type="button" aria-label="home">
           <HomeIcon />
         </button>
-        <button>
-          <DefaultAvatar seed={'exampleUsername'} />
-        </button>
+        
+        <DefaultAvatar seed={'exampleUsername'} />
+        
         <nav>
         {/* Needs desktop navigation in header (basically the mobile nav buttons, no camera, and a download option. */}
     
