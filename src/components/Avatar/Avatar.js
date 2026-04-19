@@ -23,7 +23,7 @@ const Avatar = ({ username, image, size = 24 }) => {
     <div className={styles.avatar} onClick={onClick} onKeyDown={onKeyDown} aria-label={`${username}'s avatar`}>
       {image 
         ? <img src={image} alt={`${username}'s avatar`} loading="lazy" width={size} height={size} />
-        : <Identicon size={size} />
+        : <Identicon seed={username} />
       }
     </div>
   )
