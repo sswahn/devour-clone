@@ -47,7 +47,7 @@ function Interface() {
   // overlays needs it (notifications, and possibly profile)
   // Main needs it for FeedItems
   const openProfile = event => {
-    // pass username to profile component: event.target.username
+    // pass username to profile component: event.target.dataset.username
     setProfileIsOpen(true)
   }
   const closeProfile = event => {
