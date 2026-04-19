@@ -1,11 +1,13 @@
+import useSession from '../../../hooks/useSession'
 import UserIcon from '../../Icons/UserIcon/UserIcon'
 import styles from './ProfileButton.module.css'
 
 function ProfileButton({ profileButtonRef, openProfile }) {
-
+  const session = useSession()
+  
   const action = async () => {
     navigator.vibrate(50)
-    openProfile()
+    openProfile(session.username)
   }
   
   const onClick = event => {
