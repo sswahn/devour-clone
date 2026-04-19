@@ -17,6 +17,10 @@ function FocusStackProvider() {
   }, [document.ActiveElement])
 
   return (
-    <></>
+    <GetProfileContext.Provider value={username}>
+      <SetProfileContext.Provider value={setUsername}>
+        {children}
+      </SetProfileContext.Provider>
+    </GetProfileContext.Provider>
   )
 }
