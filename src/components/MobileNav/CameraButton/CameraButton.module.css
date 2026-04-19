@@ -3,7 +3,7 @@
 .cameraButton {
   align-items: center; 
   background: var(--surface);
-  border: 0;
+  border: var(--border);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
