@@ -2,7 +2,7 @@ import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
 
-function FocusStackProvider() {
+function FocusStackProvider({ children }) {
   const stack = useRef([])
 
   const action = event => {
