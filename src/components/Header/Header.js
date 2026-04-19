@@ -31,11 +31,9 @@ const Header = ({ authenticationButtonRef, openAuthentication }) => {
         {session.isAuthenticated 
           ? <LoginButton 
               authenticationButtonRef={authenticationButtonRef} 
-              openAuthentication={openAuthentication} 
-            />
+              openAuthentication={openAuthentication} />
           : <Avatar username={session.username} />
-              
-              }
+        }
         </nav>
       </div>
     </header>
