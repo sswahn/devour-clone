@@ -58,6 +58,11 @@ function Interface() {
     // avatar in notifications opens profile ->
     // profile closes to main interface ->
     // notifications button should regain focus...
+
+    // implementation: FocusProvider - LIFO (last in first out)
+    // every overlay opening push the element to the stack.
+    // every close overlay pop from the stack until that element is revealed.
+    
     profileButtonRef.current.focus() 
   }
 
