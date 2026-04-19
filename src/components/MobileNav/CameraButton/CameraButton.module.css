@@ -16,3 +16,7 @@
 .cameraButton svg {
   flex-shrink: 0;
 }
+
+button:focus {
+  background: var(--surface);
+}
