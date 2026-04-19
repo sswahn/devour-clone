@@ -367,6 +367,10 @@
   flex-shrink: 0;
 }
 
+button:focus {
+  background: var(--surface);
+}
+
 /*!*******************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/MobileNav/NotificationsButton/NotificationsButton.module.css ***!
   \*******************************************************************************************************************************/
