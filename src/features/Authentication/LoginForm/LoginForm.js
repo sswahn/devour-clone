@@ -3,7 +3,7 @@ import useSession from '../../../hooks/useSession'
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
-  const setSession = useSession() 
+  const { setSession } = useSession() 
   const [loading, setLoading] = useState(false)
 
   // Perform validation checks in javascript and return alert if violated.
