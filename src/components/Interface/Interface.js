@@ -17,7 +17,7 @@ function Interface() {
   const notificationsButtonRef = useRef(null)
   const profileButtonRef = useRef(null)
 
-  const openAuthentication = event => setAuthenticationIsOpen(true)
+  const openAuthentication = () => setAuthenticationIsOpen(true)
   const closeAuthentication = () => {
     setAuthenticationIsOpen(false)
     authenticationButtonRef.current.focus()
@@ -45,9 +45,12 @@ function Interface() {
 
   // open profile will fire in context username update
   // using useEffect, with openProfile()
-  const openProfile = () => setProfileIsOpen(true)
+  const openProfile = () => { 
+    setProfileIsOpen(true)
+  }
   const closeProfile = () => {
     setProfileIsOpen(false)
+    // return focus to source, which could be closed.
     profileButtonRef.current.focus() // could be avatar, could be profileButton, need a reliable source
   }
 
