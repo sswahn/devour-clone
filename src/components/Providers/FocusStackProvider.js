@@ -1,15 +1,15 @@
-import { useEffect, createContext } from 'react'
+import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
 
 function FocusStackProvider() {
-  let stack = []
+  const stack = useRef([])
   
   const resoreFocus = () => {
-    for (const element of stack) {
+    for (const element of stack.current) {
       if (document.body.contains(element)) {
         element.focus()
-        stack = []
+        stack.current = []
       }
     }
   }
