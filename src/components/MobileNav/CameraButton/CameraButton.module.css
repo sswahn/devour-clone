@@ -17,6 +17,6 @@
   flex-shrink: 0;
 }
 
-button:focus {
+.cameraButton:focus {
   background: var(--surface);
 }
