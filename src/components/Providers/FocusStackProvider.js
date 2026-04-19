@@ -2,8 +2,16 @@ import { useRef, useEffect, createContext } from 'react'
 
 const FocusStackContext = createContext(null)
 
+const buttonWhiteList = ['avatar', 'profile']
+
 function FocusStackProvider() {
   const stack = useRef([])
+
+  const addToStack = event => {
+    if (buttonWhiteList.contains(event.target.id) {
+      stack.current.push(event.target)
+    }
+  }
   
   const resoreFocus = () => {
     for (const element of stack.current) {
@@ -13,10 +21,15 @@ function FocusStackProvider() {
       }
     }
   }
-  
+
   useEffect(() => {
-    stack.push(document.ActiveElement)
-  }, [document.ActiveElement])
+    document.addEventListener('click', addToStack)
+    document.addEventListener('keydown', addToStack)
+    return () => {
+      document.removeEventListener('click', addToStack)
+      document.removeEventListener('keydown', addToStack)
+    }
+  }, [])
 
   return (
     <FocusStackContext.Provider value={restoreFocus}>
