@@ -2,13 +2,13 @@ import { useState } from 'react'
 import Identicon from '../Identicon/Identicon'
 import styles from './styles.module.css'
 
-const Avatar = ({ className, image, username, onClick, size }) => {
+const Avatar = ({ image, username, onClick, size = 24 }) => {
   // should onClick be a prop or defined here?
   return (
-    <div className={`${styles.avatar} ${className || ''}`} onClick={onClick} aria-label={`${username}'s avatar`}>
+    <div className={styles.avatar} onClick={onClick} aria-label={`${username}'s avatar`}>
       {image 
-        ? <img src={image} alt={`${username}'s avatar`} loading="lazy" width={size || '24px'} height={size || '24px'} />
-        : <UserIcon size={size} />
+        ? <img src={image} alt={`${username}'s avatar`} loading="lazy" width={size} height={size} />
+        : <Identicon size={size} />
       }
     </div>
   )
