@@ -163,10 +163,6 @@ button {
   user-select: none;
 }
 
-button > * {
-  pointer-events: none;
-}
-
 button:focus {
   background: initial;
 }
@@ -182,6 +178,7 @@ button:active {
 svg {
   fill: var(--text);
   flex-shrink: 0;
+  pointer-events: none;
 }
 
 img, video {
