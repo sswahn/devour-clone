@@ -362,15 +362,14 @@
   height: 44px;
   width: 44px;
 }
-/*
-.cameraButton svg {
+
+.QxIKV6eTzw1tBn0VK2ZN svg {
   flex-shrink: 0;
 }
-*/
 
 /* Override defaults: */
 .QxIKV6eTzw1tBn0VK2ZN:focus {
-  background: initial;
+  background: var(--surface);
 }
 
 .QxIKV6eTzw1tBn0VK2ZN:hover {
