@@ -17,7 +17,7 @@ function createSeededRandom(seed) {
 }
 
 
-function DefaultAvatar(seed, size = 200) {
+function DefaultAvatar({ seed, size = 200 }) {
 
   const rand = createSeededRandom(seed)
 
